@@ -46,7 +46,7 @@ body::before {
   background-image: radial-gradient(circle, var(--parchment) 0%, var(--parchment-dark) 100%);
   border: 1px solid var(--ink-light);
   border-radius: 4px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 20px rgba(139, 69, 19, 0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 20px rgba(46, 139, 87, 0.1);
   padding: 2.5rem;
   text-align: center;
   position: relative;
@@ -56,13 +56,13 @@ body::before {
 
 .card::-webkit-scrollbar { width: 6px; }
 .card::-webkit-scrollbar-track { background: transparent; }
-.card::-webkit-scrollbar-thumb { background: rgba(58, 46, 36, 0.3); border-radius: 3px; }
+.card::-webkit-scrollbar-thumb { background: rgba(30, 59, 38, 0.3); border-radius: 3px; }
 
 .card::after {
   content: "";
   position: absolute;
   top: 6px; left: 6px; right: 6px; bottom: 6px;
-  border: 1px solid rgba(58, 46, 36, 0.2);
+  border: 1px solid rgba(30, 59, 38, 0.2);
   pointer-events: none;
 }
 
@@ -149,7 +149,7 @@ input[type="text"]::placeholder {
   display: inline-block;
   width: 40px;
   height: 40px;
-  border: 3px solid rgba(58, 46, 36, 0.3);
+  border: 3px solid rgba(30, 59, 38, 0.3);
   border-radius: 50%;
   border-top-color: var(--ink);
   animation: spin 1s ease-in-out infinite;

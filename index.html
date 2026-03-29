@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="global.css">
   <style>
     body {
-      background: linear-gradient(to right, #2b1d14, #3e2723, #2b1d14);
+      background: linear-gradient(to right, #162e1c, #1e3b26, #162e1c);
     }
     .login-plaque {
-      background: linear-gradient(135deg, #3e2723, #1f1109);
-      border: 2px solid #5c4b3a;
+      background: linear-gradient(135deg, #1e3b26, #0f2115);
+      border: 2px solid #426b52;
       border-radius: 8px;
       box-shadow: 0 15px 35px rgba(0,0,0,0.8), inset 0 0 10px rgba(0,0,0,0.5);
       position: relative;
@@ -23,7 +23,7 @@
     }
     .logo { 
       font-size: 3.5rem; 
-      color: #190f09;
+      color: #0a1710;
       text-shadow: 0px 1px 1px rgba(255,255,255,0.1), 0px -1px 2px rgba(0,0,0,0.9);
       letter-spacing: 2px; 
     }
@@ -38,12 +38,12 @@
       opacity: 0.5;
     }
     .classic-btn {
-      background: #190f09;
+      background: #0a1710;
       color: var(--parchment);
-      border: 1px solid #5c4b3a;
+      border: 1px solid #426b52;
     }
     .classic-btn:hover:not(:disabled) {
-      background: #2b1d14;
+      background: #162e1c;
       color: var(--parchment);
     }
     
@@ -54,7 +54,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: linear-gradient(135deg, #3e2723, #1f1109);
+      background: linear-gradient(135deg, #1e3b26, #0f2115);
       color: var(--parchment);
       font-family: var(--font-serif);
       font-size: 2.5rem;
@@ -87,6 +87,16 @@
         <h2>Enter the Library</h2>
         <input type="text" id="username-input" placeholder="Your Name" autocomplete="off">
         <button id="login-btn" class="classic-btn">Continue</button>
+      </div>
+      <div id="welcome-back-content" style="display: none; text-align: center;">
+        <h1 class="logo">Osmosis</h1>
+        <p class="tagline">Absorb knowledge through the ages.</p>
+        <h2 id="welcome-back-title" style="margin-bottom: 30px;">Welcome back</h2>
+        <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+          <button id="continue-saved-btn" class="classic-btn" style="width: 80%; padding: 10px;">Continue as Saved</button>
+          <button id="continue-guest-btn" class="classic-btn" style="width: 80%; background: transparent; border-color: var(--parchment-dark); padding: 10px;">Continue as Guest</button>
+          <a href="#" id="switch-user-link" style="color: var(--parchment-dark); font-size: 0.9em; margin-top: 10px; cursor: pointer;">Login as a different user</a>
+        </div>
       </div>
       <div id="akwaaba-screen"></div>
     </div>
