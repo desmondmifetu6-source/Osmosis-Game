@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Dictionary Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style>
+    .search-bar { display: flex; gap: 1rem; margin-bottom: 2rem; align-items: stretch; }
+    .search-bar input { margin-bottom: 0; text-align: left; background: rgba(58, 46, 36, 0.05); border-radius: 4px; border: 1px solid var(--ink-light); }
+    .search-bar button { width: auto; margin-bottom: 0; padding: 0 1.5rem; }
+    
+    .definition-box { text-align: left; background: rgba(0,0,0,0.05); padding: 1.5rem; border-radius: 4px; display: none; margin-bottom: 2rem; }
+    .dict-word { font-family: var(--font-serif); font-size: 2rem; color: var(--gold); margin-bottom: 0.5rem; border-bottom: 1px solid var(--ink-light); padding-bottom: 0.5rem; text-shadow: 1px 1px 0px var(--ink); text-transform: capitalize; }
+    .dict-phonetic { font-style: italic; color: var(--ink-light); margin-bottom: 1rem; display: block; }
+    .dict-meaning { font-size: 1.1rem; line-height: 1.6; }
+    .dict-error { color: var(--accent-red); font-style: italic; text-align: center; margin: 2rem 0; display: none; }
+    
+    @media (max-width: 480px) {
+      .search-bar { flex-direction: column; gap: 0.5rem; }
+      .search-bar button { width: 100%; padding: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="card">
+      <h2 style="text-align:center;">Grand Dictionary</h2>
+      <p style="text-align:center; margin-bottom: 2rem; color:var(--ink-light);">Consult the open archives for any word.</p>
+      
+      <div class="search-bar">
+        <input type="text" id="dict-input" placeholder="Search a word..." autocomplete="off">
+        <button id="dict-search-btn" class="classic-btn">Search</button>
+      </div>
+      
+      <div id="dict-loading" class="hidden" style="text-align:center;">
+        <div class="spinner"></div>
+      </div>
+      
+      <div id="dict-error" class="dict-error">
+        Word not found in the archives. It may be too esoteric or misspelled.
+      </div>
+      
+      <div id="dict-result" class="definition-box">
+        <div class="dict-word" id="res-word">Word</div>
+        <span class="dict-phonetic" id="res-phonetic">/wɜːd/</span>
+        <div class="dict-meaning" id="res-meaning">Meaning goes here.</div>
+      </div>
+      
+      <button id="go-home-btn" class="classic-btn secondary" style="margin-top:1rem;">Return to Menu</button>
+    </div>
+  </div>
+  <script src="shared.js"></script>
+  <script src="library.js"></script>
+</body>
+</html>

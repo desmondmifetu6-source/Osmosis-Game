@@ -1,0 +1,184 @@
+:root {
+  --wood-bg: #1A2A3A; /* Deep Navy Blue */
+  --wood-dark: #0B131D; /* Very Dark Navy */
+  --parchment: #F4EFE6; /* Cream/Off-white */
+  --parchment-dark: #E3D9C9; /* Darker Cream */
+  --ink: #152238; /* Deep Blue/Navy for text */
+  --ink-light: #324B69; /* Lighter Blue */
+  --accent-red: #8B3A3A;
+  --accent-green: #4A6B4A;
+  --gold: #D4AF37; /* Soft Gold Accent */
+  --font-serif: 'Playfair Display', serif;
+  --font-body: 'Lora', serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: radial-gradient(circle at center, var(--wood-bg), var(--wood-dark));
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 4px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.card {
+  background-color: var(--parchment);
+  background-image: radial-gradient(circle, var(--parchment) 0%, var(--parchment-dark) 100%);
+  border: 1px solid var(--ink-light);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 20px rgba(139, 69, 19, 0.1);
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.card::-webkit-scrollbar { width: 6px; }
+.card::-webkit-scrollbar-track { background: transparent; }
+.card::-webkit-scrollbar-thumb { background: rgba(58, 46, 36, 0.3); border-radius: 3px; }
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 6px; left: 6px; right: 6px; bottom: 6px;
+  border: 1px solid rgba(58, 46, 36, 0.2);
+  pointer-events: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--ink);
+  color: var(--ink);
+  margin-bottom: 2rem;
+  outline: none;
+  text-align: center;
+}
+
+input[type="text"]::placeholder {
+  color: var(--ink-light);
+  opacity: 0.6;
+}
+
+.classic-btn {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  background: var(--ink);
+  color: var(--parchment);
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.classic-btn::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+  transition: transform 0.5s ease;
+}
+
+.classic-btn:hover:not(:disabled) {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+}
+
+.classic-btn:hover:not(:disabled)::before {
+  transform: translateX(300%);
+}
+
+.classic-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--ink-light);
+  border-color: var(--ink-light);
+}
+
+.classic-btn.secondary {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.classic-btn.secondary:hover {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+}
+
+.spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(58, 46, 36, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--ink);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Modals */
+#modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6); z-index: 100;
+  display: flex; justify-content: center; align-items: center;
+  backdrop-filter: blur(2px);
+}
+#modal-overlay.hidden { display: none; }
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .app-container { padding: 0.5rem; }
+  .card { padding: 1.5rem; }
+  h1.logo { font-size: 2.5rem; }
+  .classic-btn { padding: 0.6rem 1.5rem; font-size: 1rem; }
+  .generated-code { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  input[type="text"] { font-size: 1rem; padding: 0.8rem; }
+  .timer { font-size: 1.4rem; }
+  .highlight-word { font-size: 1.8rem; }
+  .meaning-text { font-size: 1.1rem; }
+  .dict-word { font-size: 1.5rem; }
+}

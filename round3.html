@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Stage 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style>
+    .stage3-card { padding: 2rem; max-width: 600px; margin: auto; }
+    .s3-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed var(--ink-light); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+    .s3-header h2 { margin: 0; }
+    
+    .alarming-timer { font-size: 2rem; font-weight: bold; font-family: monospace; background: #190f09; color: var(--parchment); padding: 0.5rem 1rem; border-radius: 4px; text-shadow: 0 0 5px rgba(255,255,255,0.5); }
+    .pulse-red { color: #ff5252; animation: pulseRed 0.8s infinite alternate; background: #3e0b0b; border: 1px solid #ff5252; }
+    @keyframes pulseRed { from { box-shadow: 0 0 5px red; } to { box-shadow: 0 0 20px red; } }
+    
+    .revision-list { max-height: 40vh; overflow-y: auto; margin-bottom: 2rem; text-align: left; padding-right: 1rem; }
+    .revision-item { margin-bottom: 1rem; padding: 1rem; background: rgba(0,0,0,0.05); border-left: 4px solid var(--gold); border-radius: 4px;}
+    .revision-item strong { display: block; font-size: 1.5rem; margin-bottom: 0.3rem; color: var(--ink); text-transform: uppercase; letter-spacing: 2px; }
+    .revision-item p { margin: 0; font-style: italic; color: var(--ink-light); }
+    
+    .test-area { text-align: center; margin-bottom: 2rem; }
+    .masked-word { font-family: monospace; font-size: 3rem; letter-spacing: 0.5rem; text-align: center; margin-bottom: 2rem; color: var(--ink); text-shadow: 1px 1px 0 rgba(255,255,255,0.8); }
+    .s3-input { width: 80%; font-size: 1.5rem; text-align: center; font-weight: bold; letter-spacing: 2px; border-bottom: 3px solid var(--ink); border-radius:0; }
+    
+    .feedback { height: 2rem; font-weight: bold; margin-bottom: 1rem; font-size: 1.2rem; }
+    .feedback.success { color: #2e7d32; }
+    .feedback.error { color: #c62828; }
+    
+    .welcome-lap2 { font-size: 3rem; color: var(--accent-red); margin-bottom: 1rem; text-shadow: 0px 2px 4px rgba(0,0,0,0.3); }
+    
+    /* Memory Recall specific */
+    .red-alert-theme { background: linear-gradient(135deg, #f4ecd8, #ffcdd2) !important; border-color: #c62828 !important; }
+    
+    /* Reused from stage2 */
+    .word-tile { display: inline-block; background: #fdfbf7; color: #2b1d14; padding: 0.4rem 1rem; border: 1px solid #d3cbb8; box-shadow: 1px 2px 3px rgba(0,0,0,0.2); font-family: var(--font-serif); font-size: 1.1rem; font-weight: bold; margin: 0.3rem; }
+    
+    /* Scoreboard & Floating Text */
+    .scoreboard { position: fixed; top: 1rem; left: 1rem; background: var(--ink); color: var(--gold); padding: 0.5rem 1rem; border-radius: 4px; font-family: monospace; font-size: 1.5rem; font-weight: bold; z-index: 100; box-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+    .floating-point { position: absolute; color: #4caf50; font-weight: bold; font-family: monospace; font-size: 2rem; pointer-events: none; animation: floatUp 1s ease-out forwards; z-index: 200; text-shadow: 1px 1px 2px #000; }
+    @keyframes floatUp {
+      0% { opacity: 1; transform: translateY(0) scale(1.5); }
+      100% { opacity: 0; transform: translateY(-50px) scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="scoreboard" id="scoreboard" style="display:none;">Score: <span id="current-score">0</span></div>
+  <div class="app-container">
+    
+    <!-- Loading Container -->
+    <div class="card stage3-card" id="loading-container">
+      <h2 style="text-align:center;">Preparing Examination...</h2>
+      <div style="text-align:center;"><span class="spinner"></span></div>
+    </div>
+
+    <!-- Revision Container -->
+    <div id="revision-container" class="card stage3-card" style="display: none;">
+      <div class="s3-header">
+        <h2>Revision Phase</h2>
+        <div id="rev-timer" class="alarming-timer">00:00</div>
+      </div>
+      <p style="font-style:italic; margin-bottom:1rem;">Memorize these words and meanings. Time is scarce.</p>
+      <div id="rev-list" class="revision-list"></div>
+      <button id="start-test-early-btn" class="classic-btn secondary" style="width:auto; float:right;">Start Test Early</button>
+      <div style="clear:both;"></div>
+    </div>
+
+    <!-- Lap 1 Container -->
+    <div id="lap1-container" class="card stage3-card" style="display: none;">
+      <div class="s3-header">
+        <h2>Lap 1: Restoration</h2>
+        <div id="lap1-progress" style="font-size:1.5rem; font-weight:bold;">1/5</div>
+      </div>
+      <p style="font-style:italic; margin-bottom:2rem;">Fill in the missing letters to reconstruct the word.</p>
+      <div class="test-area">
+        <h1 id="lap1-word-display" class="masked-word">A _ O M</h1>
+        <input type="text" id="lap1-input" class="s3-input" autocomplete="off">
+        <div id="lap1-feedback" class="feedback"></div>
+      </div>
+      <button id="lap1-submit" class="classic-btn">Submit Answer</button>
+    </div>
+
+    <!-- Transition Container -->
+    <div id="transition-container" class="card stage3-card" style="display: none; text-align: center;">
+      <h2 class="welcome-lap2">Welcome to Lap 2</h2>
+      <p style="font-size:1.2rem; margin-bottom:2rem;">You survived Lap 1. Now, under immense pressure, type as many of your original words as you can remember.</p>
+      <button id="start-lap2-btn" class="classic-btn">Begin Lap 2</button>
+    </div>
+
+    <!-- Lap 2 Container -->
+    <div id="lap2-container" class="card stage3-card red-alert-theme" style="display: none;">
+      <div class="s3-header">
+        <h2 style="color: #c62828;">Lap 2: Total Recall</h2>
+        <div id="lap2-timer" class="alarming-timer pulse-red">00:30</div>
+      </div>
+      <p style="font-weight:bold; margin-bottom:1rem;">Type a word and press Enter!</p>
+      <div class="test-area" style="margin-bottom:1rem;">
+        <input type="text" id="lap2-input" class="s3-input" autocomplete="off" style="border-color:#c62828;">
+        <div id="lap2-feedback" class="feedback" style="font-size:1rem; margin-top:0.5rem; height:1.5rem;"></div>
+      </div>
+      <div id="lap2-words-list" style="display:flex; flex-wrap:wrap; justify-content:center; gap:5px; min-height:100px; padding:1rem; background:rgba(255,255,255,0.3); border-radius:4px;"></div>
+    </div>
+
+  </div>
+  <script src="shared.js"></script>
+  <script src="round3.js"></script>
+</body>
+</html>

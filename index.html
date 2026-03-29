@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #2b1d14, #3e2723, #2b1d14);
+    }
+    .login-plaque {
+      background: linear-gradient(135deg, #3e2723, #1f1109);
+      border: 2px solid #5c4b3a;
+      border-radius: 8px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.8), inset 0 0 10px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .login-plaque::after {
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .logo { 
+      font-size: 3.5rem; 
+      color: #190f09;
+      text-shadow: 0px 1px 1px rgba(255,255,255,0.1), 0px -1px 2px rgba(0,0,0,0.9);
+      letter-spacing: 2px; 
+    }
+    .tagline { font-style: italic; color: var(--parchment-dark); margin-bottom: 2rem; opacity: 0.8; }
+    h2 { color: var(--parchment); }
+    input[type="text"] {
+      color: var(--parchment);
+      border-bottom: 2px solid var(--parchment-dark);
+    }
+    input[type="text"]::placeholder {
+      color: var(--parchment-dark);
+      opacity: 0.5;
+    }
+    .classic-btn {
+      background: #190f09;
+      color: var(--parchment);
+      border: 1px solid #5c4b3a;
+    }
+    .classic-btn:hover:not(:disabled) {
+      background: #2b1d14;
+      color: var(--parchment);
+    }
+    
+    #akwaaba-screen {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #3e2723, #1f1109);
+      color: var(--parchment);
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1s ease;
+      z-index: 10;
+      text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+    }
+    #akwaaba-screen.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    #login-content {
+      transition: opacity 0.5s ease;
+    }
+    #login-content.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="card login-plaque">
+      <div id="login-content">
+        <h1 class="logo">Osmosis</h1>
+        <p class="tagline">Absorb knowledge through the ages.</p>
+        <h2>Enter the Library</h2>
+        <input type="text" id="username-input" placeholder="Your Name" autocomplete="off">
+        <button id="login-btn" class="classic-btn">Continue</button>
+      </div>
+      <div id="akwaaba-screen"></div>
+    </div>
+  </div>
+  <script src="shared.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

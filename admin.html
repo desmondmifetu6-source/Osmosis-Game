@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Developer Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style>
+    .admin-card { max-width: 1000px; margin: auto; padding: 3rem; text-align: left; }
+    .admin-header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px dashed var(--ink-light); padding-bottom: 1rem; margin-bottom: 2rem; }
+    .admin-header h2 { font-size: 2.5rem; margin: 0; color: var(--ink); text-transform: uppercase; letter-spacing: 2px; }
+    
+    .stats-bar { display: flex; gap: 2rem; margin-bottom: 2rem; }
+    .stat-box { background: rgba(0,0,0,0.05); border-left: 4px solid var(--gold); padding: 1.5rem; border-radius: 4px; flex: 1; }
+    .stat-box h4 { margin: 0; font-size: 1rem; color: var(--ink-light); text-transform: uppercase; letter-spacing: 1px; }
+    .stat-box .num { font-size: 3rem; font-family: monospace; font-weight: bold; color: var(--ink); margin-top: 0.5rem; }
+    
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: rgba(255,255,255,0.3); }
+    th { text-align: left; padding: 1rem; background: var(--ink); color: var(--gold); font-family: var(--font-serif); font-size: 1.2rem; }
+    td { padding: 1rem; border-bottom: 1px solid rgba(0,0,0,0.1); font-size: 1.1rem; color: #3e2723; }
+    tr:hover td { background: rgba(255,255,255,0.5); }
+    
+    .rank-badge { font-weight: bold; font-style: italic; }
+    .rank-omni { color: #2e7d32; }
+    .rank-adv { color: #1565c0; }
+    .rank-adept { color: #e65100; }
+    .rank-novice { color: #5d4037; }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="card admin-card parchment-large">
+      <div class="admin-header">
+        <h2>Developer Archives</h2>
+        <button onclick="window.location.href='home.html'" class="classic-btn secondary outline" style="width:auto; padding: 0.5rem 1.5rem;">Exit</button>
+      </div>
+      
+      <div class="stats-bar">
+        <div class="stat-box">
+          <h4>Total Candidates</h4>
+          <div class="num" id="total-users">0</div>
+        </div>
+        <div class="stat-box">
+          <h4>Highest Intel-Score</h4>
+          <div class="num" id="highest-score">0</div>
+        </div>
+      </div>
+      
+      <h3>Global Leaderboard</h3>
+      <table id="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Scholar Name</th>
+            <th>Score</th>
+            <th>Accuracy</th>
+            <th>Classification</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body">
+          <tr><td colspan="5" style="text-align:center;">Intercepting database signals...</td></tr>
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Stage 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style>
+    .stage4-card { padding: 2rem; max-width: 800px; margin: auto; }
+    .s4-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed var(--ink-light); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+    .s4-header h2 { margin: 0; }
+    
+    .alarming-timer { font-size: 2rem; font-weight: bold; font-family: monospace; background: #190f09; color: var(--parchment); padding: 0.5rem 1rem; border-radius: 4px; text-shadow: 0 0 5px rgba(255,255,255,0.5); }
+    
+    .revision-list { max-height: 50vh; overflow-y: auto; margin-bottom: 2rem; text-align: left; padding-right: 1rem; }
+    .revision-item { margin-bottom: 1.5rem; padding: 1.5rem; background: rgba(0,0,0,0.05); border-left: 6px solid var(--gold); border-radius: 4px;}
+    .revision-item strong { display: block; font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--ink); text-transform: uppercase; letter-spacing: 2px; }
+    .revision-item p { margin: 0; font-size: 1.2rem; font-style: italic; color: #3e2723; line-height:1.6; }
+    
+    .highlight-word { font-size: 3rem; color: var(--ink); text-align: center; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 2rem; border-bottom: 1px solid var(--ink-light); display: inline-block; padding-bottom: 0.5rem; }
+    
+    .meaning-fill-area { font-size: 1.5rem; line-height: 2.2; text-align: justify; font-family: var(--font-serif); }
+    .meaning-input { 
+      font-size: 1.3rem; 
+      font-family: inherit; 
+      text-align: center; 
+      font-weight: bold; 
+      color: var(--ink); 
+      border: none; 
+      border-bottom: 3px solid var(--ink); 
+      background: rgba(255,255,255,0.4); 
+      border-radius: 4px; 
+      margin: 0 0.3rem;
+      padding: 0.2rem 0;
+      transition: all 0.3s ease;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .meaning-input:focus { outline: none; background: rgba(255,255,255,0.9); border-color: var(--gold); }
+    .meaning-input.wrong { background: #ffebee; border-color: #c62828; color: #c62828; animation: shake 0.4s ease; }
+    .meaning-input.correct { background: #e8f5e9; border-color: #2e7d32; color: #2e7d32; }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-4px); }
+      75% { transform: translateX(4px); }
+      100% { transform: translateX(0); }
+    }
+    
+    .feedback { height: 2rem; font-weight: bold; margin-bottom: 1rem; font-size: 1.2rem; text-align: center; }
+    .feedback.success { color: #2e7d32; }
+    .feedback.error { color: #c62828; }
+    
+    /* Scoreboard & Floating Text */
+    .scoreboard { position: fixed; top: 1rem; left: 1rem; background: var(--ink); color: var(--gold); padding: 0.5rem 1rem; border-radius: 4px; font-family: monospace; font-size: 1.5rem; font-weight: bold; z-index: 100; box-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+    .floating-point { position: absolute; color: #4caf50; font-weight: bold; font-family: monospace; font-size: 2rem; pointer-events: none; animation: floatUp 1s ease-out forwards; z-index: 200; text-shadow: 1px 1px 2px #000; }
+    @keyframes floatUp { 0% { opacity: 1; transform: translateY(0) scale(1.5); } 100% { opacity: 0; transform: translateY(-50px) scale(1); } }
+  </style>
+</head>
+<body>
+  <div class="scoreboard" id="scoreboard" style="display:none;">Score: <span id="current-score">0</span></div>
+  <div class="app-container">
+    
+    <!-- Loading Container -->
+    <div class="card stage4-card" id="loading-container">
+      <h2 style="text-align:center;">Preparing The Final Test...</h2>
+      <div style="text-align:center;"><span class="spinner"></span></div>
+    </div>
+
+    <!-- Revision Container -->
+    <div id="revision-container" class="card stage4-card parchment-large" style="display: none;">
+      <div class="s4-header">
+        <h2>Phase IV: Final Revision</h2>
+        <div id="rev-timer" class="alarming-timer">00:00</div>
+      </div>
+      <p style="font-style:italic; margin-bottom:1rem; font-size: 1.2rem;">Commit the exact phrasing of these definitions to your memory.</p>
+      <div id="rev-list" class="revision-list"></div>
+      <button id="start-test-btn" class="classic-btn secondary" style="width:auto; float:right;">Begin Mastery Test</button>
+      <div style="clear:both;"></div>
+    </div>
+
+    <!-- Mastery Test Container -->
+    <div id="test-container" class="card stage4-card parchment-large" style="display: none;">
+      <div class="s4-header">
+        <h2>Mastery Phase</h2>
+        <div id="test-progress" style="font-size:1.5rem; font-weight:bold;">1/5</div>
+      </div>
+      <p style="font-style:italic; margin-bottom:2rem; text-align:center;">Fill in the missing key terminology within the definition.</p>
+      
+      <div style="text-align:center;">
+        <h1 id="test-word" class="highlight-word">WORD</h1>
+      </div>
+      <div id="test-meaning-container" class="meaning-fill-area"></div>
+      
+      <div id="test-feedback" class="feedback" style="margin-top:2rem;"></div>
+      
+      <div style="display:flex; justify-content:space-between; margin-top:1rem;">
+        <button id="skip-btn" class="classic-btn secondary" style="width:48%;">Skip / Forfeit (0 pts)</button>
+        <button id="submit-btn" class="classic-btn" style="width:48%;">Submit Findings</button>
+      </div>
+    </div>
+    
+  </div>
+  <script src="shared.js"></script>
+  <script src="round4.js"></script>
+</body>
+</html>

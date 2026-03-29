@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Stage 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style>
+    .stage2-container { max-width: 800px; margin: auto; padding: 1.5rem; background: linear-gradient(135deg, #f4ecd8, #e3d5b8); border: 2px solid #5c4b3a; }
+    .s2-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed #5c4b3a; padding-bottom: 1rem; margin-bottom: 1rem; }
+    .s2-target-info { font-size: 1.5rem; font-family: var(--font-serif); color: var(--ink); }
+    .s2-counter { font-size: 1.2rem; font-weight: bold; background: var(--ink); color: var(--parchment); padding: 0.5rem 1rem; border-radius: 4px; text-align: center; }
+    
+    .s2-workspace { display: flex; flex-direction: column; gap: 2rem; }
+    
+    .word-pool { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; min-height: 100px; padding: 1rem; border: 1px solid rgba(0,0,0,0.1); border-radius: 4px; background: rgba(255,255,255,0.2); }
+    
+    .wooden-board {
+      background: linear-gradient(to right, #4e342e, #3e2723, #4e342e);
+      border: 6px solid #2b1d14;
+      border-radius: 8px;
+      min-height: 250px;
+      padding: 1.5rem;
+      box-shadow: inset 0 0 25px rgba(0,0,0,0.9), 0 10px 20px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .wooden-board::before {
+      content: ""; position: absolute; top:0; left:0; right:0; bottom:0;
+      background: repeating-linear-gradient(90deg, transparent 0px, transparent 15px, rgba(0,0,0,0.15) 15px, rgba(0,0,0,0.15) 30px);
+      pointer-events: none;
+    }
+    .board-title { color: #d3cbb8; text-align: center; margin-bottom: 1rem; text-shadow: 1px 1px 2px #000; letter-spacing: 2px; }
+    .pasted-words-container { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; position: relative; z-index: 2; }
+    
+    .word-tile {
+      display: inline-block;
+      background: #fdfbf7;
+      color: #2b1d14;
+      padding: 0.6rem 1.2rem;
+      border: 1px solid #d3cbb8;
+      box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: transform 0.2s, opacity 0.2s;
+      position: relative;
+    }
+    .word-tile:hover { transform: translateY(-3px) scale(1.05); box-shadow: 2px 6px 10px rgba(0,0,0,0.3); z-index: 5; }
+    
+    .word-tile.wrong { animation: glowWrong 0.5s ease; }
+    @keyframes glowWrong {
+      0% { box-shadow: 0 0 5px red; background: #ffebee; transform: scale(1); }
+      50% { box-shadow: 0 0 20px red; background: #ffcdd2; transform: scale(1.1); color: #c62828; }
+      100% { box-shadow: 2px 3px 5px rgba(0,0,0,0.2); background: #fdfbf7; transform: scale(1); }
+    }
+    
+    .pasted-word {
+      animation: pasteIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      transform-origin: center;
+      box-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+      cursor: default;
+    }
+    .pasted-word:hover { transform: none; box-shadow: 1px 2px 4px rgba(0,0,0,0.5); z-index: 2; }
+    .pasted-word::after {
+      content: ""; position: absolute; top: -5px; left: 50%; width: 25px; height: 12px;
+      background: rgba(255,255,255,0.5); border: 1px solid rgba(0,0,0,0.15);
+      transform: translateX(-50%) rotate(-5deg); pointer-events: none;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    @keyframes pasteIn {
+      0% { opacity: 0; transform: scale(1.8) translateY(-20px); filter: brightness(1.5); }
+      100% { opacity: 1; transform: scale(1) translateY(0); filter: brightness(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="card stage2-container">
+       <div class="s2-header">
+         <div class="s2-target-info">Target: <strong id="s2-letter" style="color:var(--gold);">_</strong> <br><span style="font-size: 1rem; font-style: italic; color:var(--ink-light);">Length: <strong id="s2-length">_</strong> letters</span></div>
+         <div class="s2-counter">Selected: <span id="s2-count">0</span> / 10 <br><span style="font-size:0.8rem; opacity:0.8; font-weight:normal;">(Min 3 required)</span></div>
+       </div>
+       
+       <div class="s2-workspace">
+          <div class="word-pool" id="word-pool">
+            <!-- Render words here -->
+          </div>
+          
+          <div class="wooden-board" id="wooden-board">
+             <h3 class="board-title">Your Collection</h3>
+             <div class="pasted-words-container" id="pasted-words"></div>
+          </div>
+       </div>
+       
+       <button id="s2-finish-btn" class="classic-btn" disabled style="margin-top: 2rem;">Confirm Collection</button>
+    </div>
+  </div>
+  <script src="shared.js"></script>
+  <script src="wordBank.js"></script>
+  <script src="round2.js"></script>
+</body>
+</html>

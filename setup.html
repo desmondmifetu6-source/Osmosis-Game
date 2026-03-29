@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Setup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style>
+    .generated-code { font-size: 3.5rem; font-family: var(--font-serif); font-weight: bold; letter-spacing: 4px; margin: 2rem 0; color: var(--gold); text-shadow: 1px 1px 2px rgba(0,0,0,0.8); }
+    .setup-desc { margin-bottom: 2rem; font-style: italic; }
+    .paper-alert {
+      background: #fdfbf7;
+      color: #3b2f2f;
+      padding: 1.2rem 1.5rem;
+      border: 1px solid #d3cbb8;
+      box-shadow: 2px 3px 8px rgba(0,0,0,0.15), inset 0 0 15px rgba(139, 69, 19, 0.05);
+      font-family: var(--font-body);
+      font-style: normal;
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      position: relative;
+      border-radius: 1px;
+      line-height: 1.5;
+    }
+    .paper-alert::before {
+      content: "";
+      position: absolute;
+      top: -8px; left: 50%; width: 45px; height: 16px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(0,0,0,0.1);
+      transform: translateX(-50%) rotate(-3deg);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="card">
+      <h2>The Archives</h2>
+      <div class="paper-alert">
+        <strong>Notice:</strong> The Archives will now generate a target assignment. You will be assigned a random <strong>Number</strong> (representing Word Length) and a random <strong>Letter</strong>. Seek only words matching these exact laws.
+      </div>
+      <p id="setup-status-text">Drawing your assignment...</p>
+      <div class="generated-code" id="setup-code">
+        <span class="spinner"></span>
+      </div>
+      <p class="setup-desc" id="setup-desc"></p>
+      <button id="setup-continue-btn" class="classic-btn" style="display:none;">Delve Deeper</button>
+    </div>
+  </div>
+  <script src="shared.js"></script>
+  <script src="setup.js"></script>
+</body>
+</html>
