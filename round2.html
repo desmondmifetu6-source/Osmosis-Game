@@ -7,24 +7,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css">
   <style>
-    .stage2-container { max-width: 800px; margin: auto; padding: 1.5rem; background: linear-gradient(135deg, #f4ecd8, #e3d5b8); border: 2px solid #D4AF37; }
+    .stage2-container { max-width: 1000px; margin: auto; padding: 1.5rem; background: linear-gradient(135deg, #f4ecd8, #e3d5b8); border: 2px solid #D4AF37; }
     .s2-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed #D4AF37; padding-bottom: 1rem; margin-bottom: 1rem; }
     .s2-target-info { font-size: 1.5rem; font-family: var(--font-serif); color: var(--ink); }
     .s2-counter { font-size: 1.2rem; font-weight: bold; background: var(--ink); color: var(--parchment); padding: 0.5rem 1rem; border-radius: 4px; text-align: center; }
     
-    .s2-workspace { display: flex; flex-direction: column; gap: 2rem; }
+    .s2-workspace { display: flex; flex-direction: row; gap: 2rem; align-items: stretch; min-height: 400px; }
     
-    .word-pool { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; min-height: 100px; padding: 1rem; border: 1px solid rgba(0,0,0,0.1); border-radius: 4px; background: rgba(255,255,255,0.2); }
+    .word-pool-container { flex: 1; display: flex; flex-direction: column; }
+    .word-pool-title { font-size: 1.2rem; margin-bottom: 1rem; color: var(--ink); text-align: center; border-bottom: 2px dashed rgba(0,0,0,0.1); padding-bottom: 0.5rem; }
+    .word-pool { flex: 1; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 10px; justify-content: center; padding: 1.5rem; border: 1px solid rgba(0,0,0,0.1); border-radius: 4px; background: rgba(255,255,255,0.4); box-shadow: inset 0 2px 8px rgba(0,0,0,0.05); position: relative; overflow: hidden; }
     
+    .wooden-board-container { flex: 1; display: flex; flex-direction: column; }
     .wooden-board {
+      flex: 1;
       background: linear-gradient(to right, #3c781d, #305e19, #3c781d);
       border: 6px solid #254515;
       border-radius: 8px;
-      min-height: 250px;
       padding: 1.5rem;
       box-shadow: inset 0 0 25px rgba(0,0,0,0.9), 0 10px 20px rgba(0,0,0,0.5);
       position: relative;
     }
+    
+    @media (max-width: 768px) {
+      .s2-workspace { flex-direction: column; min-height: auto; }
+      .wooden-board { min-height: 250px; }
+    }
+    
     .wooden-board::before {
       content: ""; position: absolute; top:0; left:0; right:0; bottom:0;
       background: repeating-linear-gradient(90deg, transparent 0px, transparent 15px, rgba(0,0,0,0.15) 15px, rgba(0,0,0,0.15) 30px);
@@ -49,6 +58,15 @@
     }
     .word-tile:hover { transform: translateY(-3px) scale(1.05); box-shadow: 2px 6px 10px rgba(0,0,0,0.3); z-index: 5; }
     
+    .falling-word {
+      position: absolute;
+      top: -50px;
+      animation: fallDown linear forwards;
+    }
+    @keyframes fallDown {
+      to { transform: translateY(600px); }
+    }
+
     .word-tile.wrong { animation: glowWrong 0.5s ease; }
     @keyframes glowWrong {
       0% { box-shadow: 0 0 5px red; background: #ffebee; transform: scale(1); }
@@ -84,13 +102,18 @@
        </div>
        
        <div class="s2-workspace">
-          <div class="word-pool" id="word-pool">
-            <!-- Render words here -->
+          <div class="word-pool-container">
+            <h3 class="word-pool-title">Available Words</h3>
+            <div class="word-pool" id="word-pool">
+              <!-- Render words here -->
+            </div>
           </div>
           
-          <div class="wooden-board" id="wooden-board">
-             <h3 class="board-title">Your Collection</h3>
-             <div class="pasted-words-container" id="pasted-words"></div>
+          <div class="wooden-board-container">
+            <div class="wooden-board" id="wooden-board">
+               <h3 class="board-title">Your Collection</h3>
+               <div class="pasted-words-container" id="pasted-words"></div>
+            </div>
           </div>
        </div>
        

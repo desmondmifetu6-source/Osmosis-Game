@@ -269,9 +269,33 @@ function endLap2() {
   showModal("Assessment Concluded", `You remembered ${lap2Identified.length} out of ${state.selectedWords.length} words under pressure. Total Score: ${state.score}.`);
   
   setTimeout(() => {
-    window.location.href = 'round4.html';
+    window.location.href = 'round5.html';
   }, 4000);
 }
 
 // Bootstrap
 bootstrapStage();
+
+// Developer Cheat
+document.addEventListener('keydown', (e) => {
+  if (e.key.toLowerCase() === 'p' && e.altKey) {
+    e.preventDefault();
+    if (revisionContainer.style.display !== 'none') {
+      document.getElementById('start-test-early-btn').click();
+    } else if (lap1Container.style.display !== 'none') {
+      const input = document.getElementById('lap1-input');
+      input.value = testSequence[lap1Index];
+      document.getElementById('lap1-submit').click();
+    } else if (transitionContainer.style.display !== 'none') {
+      document.getElementById('start-lap2-btn').click();
+    } else if (lap2Container.style.display !== 'none') {
+      const input = document.getElementById('lap2-input');
+      state.selectedWords.forEach(w => {
+        if (!lap2Identified.includes(w.toLowerCase())) {
+          input.value = w;
+          input.dispatchEvent(new KeyboardEvent('keypress', { key: 'Enter' }));
+        }
+      });
+    }
+  }
+});

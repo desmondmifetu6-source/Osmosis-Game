@@ -151,3 +151,100 @@ if (mpRoom && !isExcluded) {
   };
   document.head.appendChild(socketScript);
 }
+
+// Global Enter Key Navigation
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    // Let specific pages handle Enter inside inputs, except for round4's meaning input
+    if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) {
+      if (document.activeElement.classList.contains('meaning-input')) {
+        const submitBtn = document.getElementById('submit-btn');
+        if (submitBtn && submitBtn.offsetParent !== null && !submitBtn.disabled) {
+          submitBtn.click();
+        }
+      }
+      return; 
+    }
+
+    // Modal takes highest priority
+    const modalOverlay = document.getElementById('modal-overlay');
+    if (modalOverlay && !modalOverlay.classList.contains('hidden')) {
+      const closeBtn = document.getElementById('modal-close-btn');
+      if (closeBtn) closeBtn.click();
+      return;
+    }
+
+    // Sequence of priority buttons for progression
+    const primaryButtons = [
+      'login-btn',
+      'continue-saved-btn',
+      'play-solo-btn',
+      'setup-continue-btn',
+      's2-finish-btn',
+      'start-test-early-btn',
+      'lap1-submit',
+      'start-lap2-btn',
+      'start-test-btn',
+      'ready-btn',
+      'submit-btn',
+      'start-btn',
+      'next-btn',
+      'play-again-btn',
+      'go-home-btn'
+    ];
+
+    for (const id of primaryButtons) {
+      const btn = document.getElementById(id);
+      // Check if button exists, is visible, and is not disabled
+      if (btn && btn.offsetParent !== null && btn.style.display !== 'none' && !btn.disabled) {
+        btn.click();
+        break;
+      }
+    }
+  }
+});
+
+// Mobile Developer Cheat (5 rapid taps unlocks Dev Mode)
+let cheatTapCount = 0;
+let cheatTapTimeout = null;
+
+document.addEventListener('touchstart', (e) => {
+  const touch = e.touches[0];
+  const screenWidth = window.innerWidth;
+  
+  // Check if tap is in the top-right corner (approx 100x100 box)
+  if (touch.clientX > screenWidth - 100 && touch.clientY < 100) {
+    // If Dev Mode is already unlocked for this session, just 1 tap fires the cheat!
+    if (sessionStorage.getItem('devMode') === 'true') {
+      document.dispatchEvent(new KeyboardEvent('keydown', { key: 'p', altKey: true, bubbles: true }));
+      const floater = document.createElement('div');
+      floater.textContent = 'HACK FIRED';
+      floater.style.cssText = 'position:fixed; top:80px; right:10px; color:var(--gold); font-weight:bold; font-family:monospace; font-size:1rem; z-index:9999; text-shadow:1px 1px 3px #000; animation: floatUp 0.6s ease-out forwards; pointer-events:none;';
+      document.body.appendChild(floater);
+      setTimeout(() => floater.remove(), 600);
+      return;
+    }
+
+    cheatTapCount++;
+    if (cheatTapTimeout) clearTimeout(cheatTapTimeout);
+    
+    if (cheatTapCount >= 5) {
+      // Unlock Dev Mode securely in the background
+      sessionStorage.setItem('devMode', 'true');
+      
+      // Trigger the existing Alt+P developer hack natively
+      document.dispatchEvent(new KeyboardEvent('keydown', { key: 'p', altKey: true, bubbles: true }));
+      cheatTapCount = 0;
+      
+      // Visual & Audio confirmation
+      AudioManager.play('success');
+      const floater = document.createElement('div');
+      floater.textContent = 'DEV MODE UNLOCKED';
+      floater.style.cssText = 'position:fixed; top:50px; right:10px; color:#ff4d4d; font-weight:bold; font-family:monospace; font-size:1.2rem; z-index:9999; text-shadow:2px 2px 4px #000; animation: floatUp 1.5s ease-out forwards; pointer-events:none;';
+      document.body.appendChild(floater);
+      setTimeout(() => floater.remove(), 1500);
+    } else {
+      cheatTapTimeout = setTimeout(() => { cheatTapCount = 0; }, 1000);
+    }
+  }
+});

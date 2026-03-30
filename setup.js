@@ -16,18 +16,19 @@ async function generateTarget() {
   let found = false;
   let attempts = 0;
   
+  const levelInfo = sharedState.getLevel();
+
   document.getElementById('setup-status-text').textContent = "Drawing your assignment...";
   
   // Decipher Animation
   let cipherInterval = setInterval(() => {
-    let randLen = Math.floor(Math.random() * 27) + 4; // Lengths 4-30
+    let randLen = Math.floor(Math.random() * (levelInfo.maxLen - levelInfo.minLen + 1)) + levelInfo.minLen;
     let randLet = alphabet[Math.floor(Math.random() * alphabet.length)];
     setupCodeEl.textContent = `${randLen},${randLet}`;
     AudioManager.play('chip');
   }, 100);
 
   // Intelligent word generation ensuring it can be played, constrained to level length bounds
-  const levelInfo = sharedState.getLevel();
   
   while (!found && attempts < 10) {
     if (Math.random() < 0.8) {
@@ -51,10 +52,14 @@ async function generateTarget() {
     attempts++;
   }
   
-  // Failsafe Extreme Edge Case guarantee (Max 30)
+  // Failsafe Extreme Edge Case guarantee ensuring level compliance
   if (!found) {
-    state.letter = "A";
-    state.length = 7;
+    await DictionaryLogic.initFallback();
+    let fallbackWords = Object.keys(DictionaryLogic.fallback).filter(w => w.length >= levelInfo.minLen && w.length <= levelInfo.maxLen);
+    if (fallbackWords.length === 0) fallbackWords = Object.keys(DictionaryLogic.fallback);
+    const safeWord = fallbackWords[0] || "biology";
+    state.letter = safeWord[0].toUpperCase();
+    state.length = safeWord.length;
     state.wordsPool = await DictionaryLogic.fetchWords(state.letter, state.length);
   }
   

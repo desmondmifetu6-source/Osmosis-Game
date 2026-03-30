@@ -53,8 +53,9 @@ socket.on('opponent_update', (data) => {
     'ROUND1': 'Stage 1: Search',
     'ROUND2': 'Stage 2: Collection',
     'ROUND3': 'Stage 3: Memory Lab',
-    'ROUND4': 'Stage 4: Meanings',
-    'ROUND5': 'Stage 5: Finish Hard',
+    'ROUND4': 'Stage 5: Final Revision',
+    'ROUND5': 'Stage 4: Multiple Choice',
+    'ROUND6': 'Stage 6: Ultimate Test',
     'Finished': 'Awaiting Results...'
   };
   document.getElementById('mp-opp-prog').textContent = progNames[data.progress] || data.progress;

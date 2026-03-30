@@ -124,8 +124,25 @@ function updateScoreboard(amount, refElement) {
 function finishGame() {
   sharedState.save(state);
   AudioManager.play('success');
-  window.location.href = 'results.html';
+  window.location.href = 'round4.html';
 }
 
 // Bootstrap
 bootstrapStage();
+
+// Developer Cheat
+document.addEventListener('keydown', (e) => {
+  if (e.key.toLowerCase() === 'p' && e.altKey) {
+    e.preventDefault();
+    if (introContainer.style.display !== 'none') {
+      document.getElementById('start-btn').click();
+    } else if (quizContainer.style.display !== 'none') {
+      const correct = testSequence[testIndex].toLowerCase();
+      const btns = document.querySelectorAll('.option-btn');
+      btns.forEach(b => { 
+        if (b.dataset.word === correct && !b.disabled) b.click(); 
+      });
+      if (nextBtn.style.display !== 'none') nextBtn.click();
+    }
+  }
+});

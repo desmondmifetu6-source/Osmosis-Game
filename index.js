@@ -15,7 +15,19 @@ if (savedUser) {
   welcomeBackContent.style.display = 'none';
 }
 
-function continueAs(user) {
+let pendingUser = '';
+
+function showLevelSelection(user) {
+  pendingUser = user;
+  loginContent.style.display = 'none';
+  welcomeBackContent.style.display = 'none';
+  document.getElementById('level-selection-content').style.display = 'block';
+}
+
+function continueAs(user, startingScore = null) {
+  if (startingScore !== null) {
+    localStorage.setItem('osmosis_total_score', startingScore);
+  }
   localStorage.setItem('osmosis_user', user);
   state.username = user;
   sharedState.save(state);
@@ -23,6 +35,7 @@ function continueAs(user) {
   // Show Akwaaba transition screen
   loginContent.style.display = 'none';
   welcomeBackContent.style.display = 'none';
+  document.getElementById('level-selection-content').style.display = 'none';
   const akwaabaScreen = document.getElementById('akwaaba-screen');
   akwaabaScreen.textContent = `Akwaaba, ${user}`;
   akwaabaScreen.classList.add('visible');
@@ -37,23 +50,31 @@ document.getElementById('continue-saved-btn')?.addEventListener('click', () => {
 });
 
 document.getElementById('continue-guest-btn')?.addEventListener('click', () => {
-  continueAs('Guest');
+  showLevelSelection('Guest');
 });
 
 document.getElementById('switch-user-link')?.addEventListener('click', (e) => {
   e.preventDefault();
   welcomeBackContent.style.display = 'none';
   loginContent.style.display = 'block';
+  document.getElementById('level-selection-content').style.display = 'none';
 });
 
 function handleLogin() {
   const user = document.getElementById('username-input').value.trim();
   if (user) {
-    continueAs(user);
+    showLevelSelection(user);
   } else {
     showModal('Notice', 'Please enter your scholarly name to proceed.');
   }
 }
+
+document.querySelectorAll('.level-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const score = e.target.getAttribute('data-score');
+    continueAs(pendingUser, score);
+  });
+});
 
 document.getElementById('login-btn').addEventListener('click', handleLogin);
 document.getElementById('username-input').addEventListener('keypress', (e) => {

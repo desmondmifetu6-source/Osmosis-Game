@@ -227,8 +227,22 @@ function updateScoreboard(amount) {
 function finishGame() {
   sharedState.save(state);
   AudioManager.play('success');
-  window.location.href = 'round5.html';
+  window.location.href = 'round6.html';
 }
 
 // Bootstrap
 bootstrapStage();
+
+// Developer Cheat
+document.addEventListener('keydown', (e) => {
+  if (e.key.toLowerCase() === 'p' && e.altKey) {
+    e.preventDefault();
+    if (revisionContainer.style.display !== 'none') {
+      document.getElementById('start-test-btn').click();
+    } else if (testContainer.style.display !== 'none') {
+      const inputs = document.querySelectorAll('.meaning-input');
+      inputs.forEach(inp => inp.value = inp.dataset.ans);
+      document.getElementById('submit-btn').click();
+    }
+  }
+});
