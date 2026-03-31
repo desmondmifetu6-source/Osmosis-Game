@@ -14,14 +14,75 @@ const finishBtn = document.getElementById('s2-finish-btn');
 
 state.selectedWords = [];
 
+let spawnIntervalId = null;
+
 function initRound() {
-  state.wordsPool.forEach(word => {
-    const tile = document.createElement('div');
-    tile.className = 'word-tile';
-    tile.textContent = word;
-    tile.addEventListener('click', () => handleWordClick(tile, word));
-    poolContainer.appendChild(tile);
+  const level = sharedState.getLevel().name;
+  
+  if (level === 'Titan') {
+    state.wordsPool.forEach(word => {
+      spawnStaticWord(word);
+    });
+  } else {
+    // Falling mode for Seed, Sprout, Oak
+    let spawnRate = 2000;
+    let fallSpeed = 8; // seconds
+    
+    if (level === 'Sprout') {
+      spawnRate = 1200;
+      fallSpeed = 5;
+    } else if (level === 'Oak') {
+      spawnRate = 600;
+      fallSpeed = 3;
+    }
+    
+    let poolIndex = 0;
+    // Spawn initial word
+    spawnFallingWord(state.wordsPool[0], fallSpeed);
+    poolIndex++;
+    
+    spawnIntervalId = setInterval(() => {
+      if (state.selectedWords.length >= 10) {
+        clearInterval(spawnIntervalId);
+        return;
+      }
+      
+      const word = state.wordsPool[poolIndex];
+      spawnFallingWord(word, fallSpeed);
+      
+      poolIndex = (poolIndex + 1) % state.wordsPool.length;
+    }, spawnRate);
+  }
+}
+
+function spawnStaticWord(word) {
+  const tile = document.createElement('div');
+  tile.className = 'word-tile';
+  tile.textContent = word;
+  tile.addEventListener('click', () => handleWordClick(tile, word));
+  poolContainer.appendChild(tile);
+}
+
+function spawnFallingWord(word, duration) {
+  const tile = document.createElement('div');
+  tile.className = 'word-tile falling-word';
+  tile.textContent = word;
+  
+  // Random horizontal position (5% to 85% to keep within container)
+  const randomX = Math.floor(Math.random() * 80) + 5;
+  tile.style.left = `${randomX}%`;
+  tile.style.animationDuration = `${duration}s`;
+  
+  tile.addEventListener('click', () => handleWordClick(tile, word));
+  
+  // Remove if it reaches the bottom
+  tile.addEventListener('animationend', () => {
+    if (tile.parentNode === poolContainer) {
+      tile.remove();
+    }
   });
+  
+  poolContainer.appendChild(tile);
 }
 
 function handleWordClick(tile, word) {
@@ -41,11 +102,15 @@ function handleWordClick(tile, word) {
     state.selectedWords.push(word);
     AudioManager.play('success');
     
+    // Stop fall animation to apply static transition
+    tile.style.animation = 'none';
+    
+    // Force reflow so transition works from current position, or simply override
     tile.style.transform = 'scale(0)';
     tile.style.opacity = '0';
     
     setTimeout(() => {
-      tile.remove(); // Remove from top
+      if (tile.parentNode) tile.remove(); // Remove from top
       
       const pastedNode = document.createElement('div');
       pastedNode.className = 'word-tile pasted-word';
@@ -54,8 +119,6 @@ function handleWordClick(tile, word) {
       // Random rotation for manual aesthetic
       const rot = Math.floor(Math.random() * 8) - 4; // -4 to 4 degrees
       pastedNode.style.animation = `pasteIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards`;
-      // We set rotation dynamically inside a wrapper or just trust the transform inheritance.
-      // Easiest is to set CSS var or inline
       pastedNode.style.transform = `rotate(${rot}deg)`;
       
       boardContainer.appendChild(pastedNode);
@@ -77,8 +140,23 @@ function updateCount() {
 }
 
 finishBtn.addEventListener('click', () => {
+    if (spawnIntervalId) clearInterval(spawnIntervalId);
     sharedState.save(state);
     window.location.href = 'round3.html'; // Move to Meaning Exposure phase
 });
 
 initRound();
+
+// Developer Cheat
+document.addEventListener('keydown', (e) => {
+  if (e.key.toLowerCase() === 'p' && e.altKey) {
+    e.preventDefault();
+    if (spawnIntervalId) clearInterval(spawnIntervalId);
+    const validWords = state.wordsPool.filter(w => w.length === state.length);
+    state.selectedWords = validWords.slice(0, 10);
+    if (state.selectedWords.length < 3) state.selectedWords = state.wordsPool.slice(0, 10);
+    sharedState.save(state);
+    finishBtn.disabled = false;
+    finishBtn.click();
+  }
+});

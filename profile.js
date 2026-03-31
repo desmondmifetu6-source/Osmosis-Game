@@ -5,7 +5,7 @@ const history = JSON.parse(localStorage.getItem('osmosis_history')) || [];
 const list = document.getElementById('history-list');
 
 if (history.length === 0) {
-  list.innerHTML = "<p style='text-align:center;font-style:italic;color:var(--ink-light);'>No archival records found.</p>";
+  list.innerHTML = "<p style='text-align:center;font-style:italic;color:var(--text-secondary);'>No archival records found.</p>";
 } else {
   // Show most recent first
   history.slice().reverse().forEach(record => {

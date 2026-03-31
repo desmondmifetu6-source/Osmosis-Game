@@ -2,29 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Osmosis - Stage 5</title>
+  <title>Osmosis - Stage 4</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css">
   <style>
     .stage5-card { padding: 3rem 2rem; max-width: 800px; margin: auto; }
-    .s5-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed var(--ink-light); padding-bottom: 1rem; margin-bottom: 2rem; }
-    .s5-header h2 { margin: 0; color: var(--ink); }
+    .s5-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed var(--text-secondary); padding-bottom: 1rem; margin-bottom: 2rem; }
+    .s5-header h2 { margin: 0; color: var(--text-main); }
     
-    .meaning-display { font-size: 1.8rem; line-height: 1.6; text-align: center; margin-bottom: 3rem; font-family: var(--font-serif); font-style: italic; color: #305e19; }
+    .meaning-display { font-size: 1.8rem; line-height: 1.6; text-align: center; margin-bottom: 3rem; font-family: var(--font-serif); font-style: italic; color: var(--accent-primary); }
     
     .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
     @media (max-width: 600px) { .options-grid { grid-template-columns: 1fr; } }
     
     .option-btn {
-      background: linear-gradient(to right, #fdfbf7, #f4ecd8);
-      border: 2px solid #D4AF37;
+      background: var(--bg-light);
+      border: 2px solid var(--accent-primary);
       border-radius: 8px;
       padding: 1.5rem 1rem;
       font-size: 1.5rem;
       font-family: var(--font-serif);
       font-weight: bold;
-      color: var(--ink);
+      color: var(--text-main);
       cursor: pointer;
       transition: all 0.2s;
       box-shadow: 2px 4px 6px rgba(0,0,0,0.1);
@@ -33,7 +33,7 @@
     .option-btn:hover:not(:disabled) {
       transform: translateY(-2px);
       box-shadow: 2px 6px 12px rgba(0,0,0,0.2);
-      border-color: var(--gold);
+      border-color: var(--accent-primary);
     }
     .option-btn:disabled { cursor: default; }
     
@@ -47,7 +47,7 @@
     @keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
     @keyframes shake { 0% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } 100% { transform: translateX(0); } }
     
-    .scoreboard { position: fixed; top: 1rem; left: 1rem; background: var(--ink); color: var(--gold); padding: 0.5rem 1rem; border-radius: 4px; font-family: monospace; font-size: 1.5rem; font-weight: bold; z-index: 100; box-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+    .scoreboard { position: fixed; top: 1rem; left: 1rem; background: var(--text-main); color: var(--accent-primary); padding: 0.5rem 1rem; border-radius: 4px; font-family: monospace; font-size: 1.5rem; font-weight: bold; z-index: 100; box-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
     .floating-point { position: absolute; color: #4caf50; font-weight: bold; font-family: monospace; font-size: 2rem; pointer-events: none; animation: floatUp 1s ease-out forwards; z-index: 200; text-shadow: 1px 1px 2px #000; }
     @keyframes floatUp { 0% { opacity: 1; transform: translateY(0) scale(1.5); } 100% { opacity: 0; transform: translateY(-50px) scale(1); } }
   </style>
@@ -58,11 +58,11 @@
     
     <!-- Finish Hard Intro -->
     <div id="intro-container" class="card stage5-card parchment-large" style="text-align:center;">
-      <h1 style="font-size:3.5rem; color:var(--ink); margin-bottom:1rem; letter-spacing:3px; text-transform:uppercase;">Finish Hard</h1>
-      <p style="font-size:1.5rem; color:#305e19; margin-bottom:3rem; line-height:1.6; font-style:italic;">
-        In this final closing test, the definition of the word will be given. You must rapidly deduce and choose the correct word from the options mixed with distractors.
+      <h1 style="font-size:3.5rem; color:var(--text-main); margin-bottom:1rem; letter-spacing:3px; text-transform:uppercase;">Finish Hard</h1>
+      <p style="font-size:1.5rem; color:var(--accent-primary); margin-bottom:3rem; line-height:1.6; font-style:italic;">
+        In this multiple choice test, the definition of the word will be given. You must rapidly deduce and choose the correct word from the options mixed with distractors.
       </p>
-      <button id="start-btn" class="classic-btn" style="width:100%; max-width:300px;">Commence Final Test</button>
+      <button id="start-btn" class="classic-btn" style="width:100%; max-width:300px;">Commence Test</button>
     </div>
 
     <!-- Quiz Container -->

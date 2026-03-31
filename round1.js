@@ -77,3 +77,14 @@ function handlePlankClick(plank, letter) {
 document.addEventListener('DOMContentLoaded', () => {
     initStage1();
 });
+
+// Developer Cheat
+document.addEventListener('keydown', (e) => {
+  if (e.key.toLowerCase() === 'p' && e.altKey) {
+    e.preventDefault();
+    const planks = document.querySelectorAll('.wooden-plank');
+    for (let plank of planks) {
+      if (plank.textContent === targetLetter) { plank.click(); break; }
+    }
+  }
+});

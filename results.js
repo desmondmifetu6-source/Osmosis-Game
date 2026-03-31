@@ -31,8 +31,23 @@ const counterInt = setInterval(() => {
     // Reveal Rank and Stats
     document.getElementById('res-rank').textContent = `Classification: ${intelligenceRank}`;
     document.getElementById('res-stats').textContent = `Accuracy: ${accuracy}%  (${targetScore} / ${maxPossibleScore} pts)`;
+
+    // Accumulation Tracker
+    const currentTotal = parseInt(localStorage.getItem('osmosis_total_score')) || 0;
+    const isSaved = sessionStorage.getItem('osmosis_saved_result');
+    const finalTotal = isSaved ? currentTotal : currentTotal + targetScore;
+    
+    let nextLimit = 501;
+    if (finalTotal >= 3001) nextLimit = 'MAX';
+    else if (finalTotal >= 1501) nextLimit = 3001;
+    else if (finalTotal >= 501) nextLimit = 1501;
+    
+    const progressText = nextLimit === 'MAX' ? `Titan Tier Maxed` : `Next Rank at ${nextLimit}`;
+    document.getElementById('res-lifetime-score').textContent = `Lifetime Accumulation: ${finalTotal} pts (${progressText})`;
+
     document.getElementById('res-rank').style.opacity = 1;
     document.getElementById('res-stats').style.opacity = 1;
+    document.getElementById('res-lifetime-score').style.opacity = 1;
   }
   scoreEl.textContent = currentNumber;
 }, interval);
@@ -58,7 +73,7 @@ if (!sessionStorage.getItem('osmosis_saved_result')) {
   
   if (newLevel !== previousLevel) {
     setTimeout(() => {
-      showModal('Rank Promoted!', `You have transcended to the [${newLevel}] tier! Prepare for vastly expanded lexicon constraints.`);
+      showModal('Rank Promoted!', `You have transcended to the [${newLevel}] tier! Prepare for vastly expanded lexicon constraints. Mifetu wishes you well.`);
     }, 2500);
   }
 
@@ -70,19 +85,6 @@ if (!sessionStorage.getItem('osmosis_saved_result')) {
   });
   localStorage.setItem('osmosis_history', JSON.stringify(history));
   sessionStorage.setItem('osmosis_saved_result', 'true');
-  
-  // SEND TO GLOBAL DEVELOPER DATABASE!
-  fetch('http://localhost:3000/api/score', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      username: state.username,
-      score: targetScore,
-      maxScore: maxPossibleScore,
-      accuracy: accuracy,
-      rank: intelligenceRank
-    })
-  }).catch(err => console.log('DB Offline'));
 }
 
 // Reset loop hooks

@@ -1,83 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Osmosis - Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="global.css">
   <style>
     body {
-      background: linear-gradient(to right, #254515, #305e19, #254515);
+      background: var(--bg-light);
     }
+
     .login-plaque {
-      background: linear-gradient(135deg, #305e19, #1b2e10);
-      border: 2px solid #D4AF37;
-      border-radius: 8px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.8), inset 0 0 10px rgba(0,0,0,0.5);
       position: relative;
       overflow: hidden;
     }
-    .login-plaque::after {
-      border: 1px solid rgba(255, 255, 255, 0.05);
+
+    .logo {
+      font-size: 3.5rem;
+      color: var(--text-main);
+      letter-spacing: 2px;
     }
-    .logo { 
-      font-size: 3.5rem; 
-      color: #15220c;
-      text-shadow: 0px 1px 1px rgba(255,255,255,0.1), 0px -1px 2px rgba(0,0,0,0.9);
-      letter-spacing: 2px; 
+
+    .tagline {
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
     }
-    .tagline { font-style: italic; color: var(--parchment-dark); margin-bottom: 2rem; opacity: 0.8; }
-    h2 { color: var(--parchment); }
-    input[type="text"] {
-      color: var(--parchment);
-      border-bottom: 2px solid var(--parchment-dark);
-    }
-    input[type="text"]::placeholder {
-      color: var(--parchment-dark);
-      opacity: 0.5;
-    }
-    .classic-btn {
-      background: #15220c;
-      color: var(--parchment);
-      border: 1px solid #D4AF37;
-    }
-    .classic-btn:hover:not(:disabled) {
-      background: #254515;
-      color: var(--parchment);
-    }
-    
+
     #akwaaba-screen {
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: linear-gradient(135deg, #305e19, #1b2e10);
-      color: var(--parchment);
-      font-family: var(--font-serif);
+      background: var(--bg-light);
+      color: var(--text-main);
       font-size: 2.5rem;
       opacity: 0;
       pointer-events: none;
       transition: opacity 1s ease;
       z-index: 10;
-      text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
     }
+
     #akwaaba-screen.visible {
       opacity: 1;
       pointer-events: all;
     }
-    
+
     #login-content {
       transition: opacity 0.5s ease;
     }
+
     #login-content.hidden {
       opacity: 0;
       pointer-events: none;
     }
   </style>
 </head>
+
 <body>
   <div class="app-container">
     <div class="card login-plaque">
@@ -93,9 +81,28 @@
         <p class="tagline">Absorb knowledge through the ages.</p>
         <h2 id="welcome-back-title" style="margin-bottom: 30px;">Welcome back</h2>
         <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
-          <button id="continue-saved-btn" class="classic-btn" style="width: 80%; padding: 10px;">Continue as Saved</button>
-          <button id="continue-guest-btn" class="classic-btn" style="width: 80%; background: transparent; border-color: var(--parchment-dark); padding: 10px;">Continue as Guest</button>
-          <a href="#" id="switch-user-link" style="color: var(--parchment-dark); font-size: 0.9em; margin-top: 10px; cursor: pointer;">Login as a different user</a>
+          <button id="continue-saved-btn" class="classic-btn" style="width: 80%; padding: 10px;">Continue as
+            Saved</button>
+          <button id="continue-guest-btn" class="classic-btn outline"
+            style="width: 80%; padding: 10px;">Continue as
+            Guest</button>
+          <a href="#" id="switch-user-link"
+            style="color: var(--text-secondary); font-size: 0.9em; margin-top: 10px; cursor: pointer;">Login as a
+            different user</a>
+        </div>
+      </div>
+      <div id="level-selection-content" style="display: none; text-align: center;">
+        <h1 class="logo" style="margin-bottom: 5px;">Osmosis</h1>
+        <h2 style="margin-bottom: 25px; font-size: 1.5rem;">Select Your Scientific Knowledge Level</h2>
+        <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+          <button class="level-btn classic-btn" data-score="0" style="width: 80%; padding: 10px;">Seed
+            (Beginner)</button>
+          <button class="level-btn classic-btn" data-score="501" style="width: 80%; padding: 10px;">Sprout
+            (Intermediate)</button>
+          <button class="level-btn classic-btn" data-score="1501" style="width: 80%; padding: 10px;">Oak
+            (Advanced)</button>
+          <button class="level-btn classic-btn" data-score="3001" style="width: 80%; padding: 10px;">Titan
+            (Expert)</button>
         </div>
       </div>
       <div id="akwaaba-screen"></div>
@@ -104,4 +111,5 @@
   <script src="shared.js"></script>
   <script src="index.js"></script>
 </body>
+
 </html>
