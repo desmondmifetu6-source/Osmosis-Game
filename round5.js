@@ -129,7 +129,11 @@ function updateScoreboard(amount, refElement) {
 function finishGame() {
   sharedState.save(state);
   AudioManager.play('success');
+<<<<<<< HEAD
   window.location.href = 'round4_5.html'; 
+=======
+  window.location.href = 'round4.html';
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
 }
 
 // Bootstrap

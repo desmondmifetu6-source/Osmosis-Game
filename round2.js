@@ -63,7 +63,10 @@ function initRound() {
 function spawnStaticWord(word) {
   const tile = document.createElement('div');
   tile.className = 'word-tile';
+<<<<<<< HEAD
   if (word.length === state.length) tile.classList.add('correct-length');
+=======
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
   tile.textContent = word;
   tile.addEventListener('click', () => handleWordClick(tile, word));
   poolContainer.appendChild(tile);
@@ -72,7 +75,10 @@ function spawnStaticWord(word) {
 function spawnFallingWord(word, duration) {
   const tile = document.createElement('div');
   tile.className = 'word-tile falling-word';
+<<<<<<< HEAD
   if (word.length === state.length) tile.classList.add('correct-length');
+=======
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
   tile.textContent = word;
   
   // Random horizontal position (5% to 85% to keep within container)
@@ -161,6 +167,10 @@ document.addEventListener('keydown', (e) => {
     if (spawnIntervalId) clearInterval(spawnIntervalId);
     const validWords = state.wordsPool.filter(w => w.length === state.length);
     state.selectedWords = validWords.slice(0, 10);
+<<<<<<< HEAD
+=======
+    if (state.selectedWords.length < 3) state.selectedWords = state.wordsPool.slice(0, 10);
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
     sharedState.save(state);
     finishBtn.disabled = false;
     finishBtn.click();

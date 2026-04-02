@@ -150,6 +150,20 @@ function initModal() {
 }
 
 
+<<<<<<< HEAD
+=======
+if (mpRoom && !isExcluded) {
+  const socketScript = document.createElement('script');
+  socketScript.src = "http://localhost:3000/socket.io/socket.io.js";
+  socketScript.onload = () => {
+    const mpScript = document.createElement('script');
+    mpScript.src = "multiplayer.js";
+    document.body.appendChild(mpScript);
+  };
+  document.head.appendChild(socketScript);
+}
+
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
 // Global Enter Key Navigation
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
@@ -217,7 +231,11 @@ document.addEventListener('touchstart', (e) => {
       document.dispatchEvent(new KeyboardEvent('keydown', { key: 'p', altKey: true, bubbles: true }));
       const floater = document.createElement('div');
       floater.textContent = 'HACK FIRED';
+<<<<<<< HEAD
       floater.style.cssText = 'position:fixed; top:80px; right:10px; color:var(--accent-primary); font-weight:bold; font-family:monospace; font-size:1rem; z-index:9999; text-shadow:1px 1px 3px #000; animation: floatUp 0.6s ease-out forwards; pointer-events:none;';
+=======
+      floater.style.cssText = 'position:fixed; top:80px; right:10px; color:var(--gold); font-weight:bold; font-family:monospace; font-size:1rem; z-index:9999; text-shadow:1px 1px 3px #000; animation: floatUp 0.6s ease-out forwards; pointer-events:none;';
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
       document.body.appendChild(floater);
       setTimeout(() => floater.remove(), 600);
       return;

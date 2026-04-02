@@ -29,8 +29,11 @@ async function generateTarget() {
   }, 100);
 
   // Intelligent word generation ensuring it can be played, constrained to level length bounds
+<<<<<<< HEAD
   
   if (!state.usedLetters) state.usedLetters = [];
+=======
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
   
   while (!found && attempts < 10) {
     let availableLetters = alphabet.split('').filter(l => !state.usedLetters.includes(l));

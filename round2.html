@@ -7,22 +7,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css">
   <style>
+<<<<<<< HEAD
     .stage2-container { max-width: 1000px; margin: auto; padding: 1.5rem; background: var(--bg-light); border: 2px solid var(--accent-primary); }
     .s2-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed var(--accent-primary); padding-bottom: 1rem; margin-bottom: 1rem; }
     .s2-target-info { font-size: 1.5rem; font-family: var(--font-serif); color: var(--text-main); }
     .s2-counter { font-size: 1.2rem; font-weight: bold; background: var(--text-main); color: var(--surface-white); padding: 0.5rem 1rem; border-radius: 4px; text-align: center; }
+=======
+    .stage2-container { max-width: 1000px; margin: auto; padding: 1.5rem; background: linear-gradient(135deg, #f4ecd8, #e3d5b8); border: 2px solid #D4AF37; }
+    .s2-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed #D4AF37; padding-bottom: 1rem; margin-bottom: 1rem; }
+    .s2-target-info { font-size: 1.5rem; font-family: var(--font-serif); color: var(--ink); }
+    .s2-counter { font-size: 1.2rem; font-weight: bold; background: var(--ink); color: var(--parchment); padding: 0.5rem 1rem; border-radius: 4px; text-align: center; }
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
     
     .s2-workspace { display: flex; flex-direction: row; gap: 2rem; align-items: stretch; min-height: 400px; }
     
     .word-pool-container { flex: 1; display: flex; flex-direction: column; }
+<<<<<<< HEAD
     .word-pool-title { font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-main); text-align: center; border-bottom: 2px dashed rgba(0,0,0,0.1); padding-bottom: 0.5rem; }
+=======
+    .word-pool-title { font-size: 1.2rem; margin-bottom: 1rem; color: var(--ink); text-align: center; border-bottom: 2px dashed rgba(0,0,0,0.1); padding-bottom: 0.5rem; }
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
     .word-pool { flex: 1; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 10px; justify-content: center; padding: 1.5rem; border: 1px solid rgba(0,0,0,0.1); border-radius: 4px; background: rgba(255,255,255,0.4); box-shadow: inset 0 2px 8px rgba(0,0,0,0.05); position: relative; overflow: hidden; }
     
     .wooden-board-container { flex: 1; display: flex; flex-direction: column; }
     .wooden-board {
       flex: 1;
+<<<<<<< HEAD
       background: var(--bg-light);
       border: 6px solid var(--bg-dark);
+=======
+      background: linear-gradient(to right, #3c781d, #305e19, #3c781d);
+      border: 6px solid #254515;
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
       border-radius: 8px;
       padding: 1.5rem;
       box-shadow: inset 0 0 25px rgba(0,0,0,0.9), 0 10px 20px rgba(0,0,0,0.5);
@@ -30,9 +46,14 @@
     }
     
     @media (max-width: 768px) {
+<<<<<<< HEAD
       .s2-workspace { flex-direction: column-reverse; min-height: auto; }
       .wooden-board { min-height: 250px; }
       .word-pool { min-height: 350px; }
+=======
+      .s2-workspace { flex-direction: column; min-height: auto; }
+      .wooden-board { min-height: 250px; }
+>>>>>>> 9f63a988d5c66c2f5e88cbbd2d44101fe0e51b88
     }
     
     .wooden-board::before {
