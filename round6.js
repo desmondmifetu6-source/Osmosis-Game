@@ -1,3 +1,9 @@
+/**
+ * ROUND 6: The Final Recall Exam (Boss Stage)
+ * The player faces 2 "boss" words from their collection. After a breathing exercise,
+ * they must manually type out the full definition from memory. Their input is graded
+ * against key scientific keywords extracted from the true definition.
+ */
 initModal();
 const state = sharedState.load();
 if (!state.selectedWords || state.selectedWords.length === 0) window.location.href = 'index.html';

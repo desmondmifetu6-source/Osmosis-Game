@@ -30,18 +30,32 @@ async function generateTarget() {
 
   // Intelligent word generation ensuring it can be played, constrained to level length bounds
   
+  if (!state.usedLetters) state.usedLetters = [];
+  
   while (!found && attempts < 10) {
+    let availableLetters = alphabet.split('').filter(l => !state.usedLetters.includes(l));
+    if (availableLetters.length === 0) {
+      state.usedLetters = [];
+      availableLetters = alphabet.split('');
+    }
+    
     if (Math.random() < 0.8) {
       // 80% chance to guarantee picking a length dynamically supported by Fallback
       await DictionaryLogic.initFallback();
-      let fallbackWords = Object.keys(DictionaryLogic.fallback).filter(w => w.length >= levelInfo.minLen && w.length <= levelInfo.maxLen);
+      let fallbackWords = Object.keys(DictionaryLogic.fallback).filter(w => 
+        w.length >= levelInfo.minLen && 
+        w.length <= levelInfo.maxLen &&
+        availableLetters.includes(w[0].toUpperCase())
+      );
+      if (fallbackWords.length === 0) fallbackWords = Object.keys(DictionaryLogic.fallback).filter(w => availableLetters.includes(w[0].toUpperCase()));
       if (fallbackWords.length === 0) fallbackWords = Object.keys(DictionaryLogic.fallback);
+      
       const randomWord = fallbackWords[Math.floor(Math.random() * fallbackWords.length)];
       state.letter = randomWord[0].toUpperCase();
       state.length = randomWord.length;
     } else {
       // 20% random length within level limits
-      state.letter = alphabet[Math.floor(Math.random() * alphabet.length)];
+      state.letter = availableLetters[Math.floor(Math.random() * availableLetters.length)];
       state.length = Math.floor(Math.random() * (levelInfo.maxLen - levelInfo.minLen + 1)) + levelInfo.minLen;
     }
     
@@ -61,6 +75,10 @@ async function generateTarget() {
     state.letter = safeWord[0].toUpperCase();
     state.length = safeWord.length;
     state.wordsPool = await DictionaryLogic.fetchWords(state.letter, state.length);
+  }
+  
+  if (!state.usedLetters.includes(state.letter)) {
+    state.usedLetters.push(state.letter);
   }
   
   clearInterval(cipherInterval);

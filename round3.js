@@ -1,3 +1,9 @@
+/**
+ * ROUND 3: Meaning Exposure & Basic Recall
+ * Phase 1: Player memorizes definition for their 10 selected words.
+ * Phase 2 (Lap 1): Player fills in missing letters for the words.
+ * Phase 3 (Lap 2): Player must race to type all 10 words from memory under a strict time limit.
+ */
 initModal();
 const state = sharedState.load();
 if (!state.selectedWords || state.selectedWords.length === 0) window.location.href = 'index.html';

@@ -1,3 +1,8 @@
+/**
+ * ROUND 4: Definition Reconstruction
+ * The player is presented with a definition where key terms have been masked.
+ * They must correctly fill in the blanks to perfectly reconstruct the scientific definitions.
+ */
 initModal();
 const state = sharedState.load();
 if (!state.selectedWords || state.selectedWords.length === 0) window.location.href = 'index.html';

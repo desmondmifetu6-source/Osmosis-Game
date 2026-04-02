@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Stage 4.5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style>
+    .stage45-card { padding: 3rem 2rem; max-width: 800px; margin: auto; }
+    .s45-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed var(--text-secondary); padding-bottom: 1rem; margin-bottom: 2rem; }
+    .s45-header h2 { margin: 0; color: var(--text-main); }
+    
+    .meaning-display { font-size: 1.8rem; line-height: 1.6; text-align: center; margin-bottom: 3rem; font-family: var(--font-serif); font-style: italic; color: var(--accent-primary); }
+    
+    .input-container { text-align: center; margin-bottom: 2rem; }
+    .word-input { font-size: 2rem; font-family: inherit; font-weight: bold; color: var(--text-main); border: non; border-bottom: 4px solid var(--accent-primary); background: rgba(255,255,255,0.5); padding: 0.5rem 1rem; border-radius: 4px; text-transform: uppercase; width: 80%; max-width: 400px; text-align: center; transition: all 0.3s; }
+    .word-input:focus { outline: none; background: #fff; border-color: var(--text-main); }
+    .word-input.correct { background: #e8f5e9; border-color: #2e7d32; color: #2e7d32; }
+    .word-input.wrong { background: #ffebee; border-color: #c62828; color: #c62828; animation: shake 0.4s ease; }
+    
+    @keyframes shake { 0% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } 100% { transform: translateX(0); } }
+    
+    .feedback { font-size: 2rem; text-align: center; height: 3rem; margin-top: 1rem; font-weight: bold; }
+    .feedback.success { color: #2e7d32; }
+    .feedback.error { color: #c62828; }
+    
+    /* Scoreboard */
+    .scoreboard { position: fixed; top: 1rem; left: 1rem; background: var(--text-main); color: var(--accent-primary); padding: 0.5rem 1rem; border-radius: 4px; font-family: monospace; font-size: 1.5rem; font-weight: bold; z-index: 100; box-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+    .floating-point { position: absolute; color: #4caf50; font-weight: bold; font-family: monospace; font-size: 2rem; pointer-events: none; animation: floatUp 1s ease-out forwards; z-index: 200; text-shadow: 1px 1px 2px #000; }
+    @keyframes floatUp { 0% { opacity: 1; transform: translateY(0) scale(1.5); } 100% { opacity: 0; transform: translateY(-50px) scale(1); } }
+  </style>
+</head>
+<body>
+  <div class="scoreboard" id="scoreboard" style="display:none;">Score: <span id="current-score">0</span></div>
+  <div class="app-container">
+    <div id="intro-container" class="card stage45-card parchment-large" style="text-align:center;">
+       <h1 style="font-size:3.5rem; color:var(--text-main); margin-bottom:1rem; letter-spacing:3px; text-transform:uppercase;">Absolute Recall</h1>
+       <p style="font-size:1.5rem; color:var(--accent-primary); margin-bottom:3rem; line-height:1.6; font-style:italic;">
+        Given the complete scientific definition, you must manually type the exact corresponding term from memory. No choices. No mercy.
+       </p>
+       <button id="start-btn" class="classic-btn" style="width:100%; max-width:300px;">Commence Proof</button>
+    </div>
+
+    <div id="quiz-container" class="card stage45-card parchment-large" style="display:none;">
+      <div class="s45-header">
+        <h2>Absolute Recall</h2>
+        <div id="quiz-progress" style="font-size:1.5rem; font-weight:bold;">1/10</div>
+      </div>
+      
+      <div class="meaning-display" id="r45-meaning"></div>
+      
+      <div class="input-container">
+        <input type="text" id="target-word-input" class="word-input" autocomplete="off" spellcheck="false" placeholder="...">
+      </div>
+      
+      <div id="r45-feedback" class="feedback"></div>
+      
+      <div style="text-align:center;">
+         <button id="submit-btn" class="classic-btn" style="width:100%; max-width:300px; margin-top:2rem;">Submit Answer</button>
+         <button id="next-btn" class="classic-btn secondary" style="display:none; width:100%; max-width:300px; margin-top:1rem;">Next Term</button>
+      </div>
+    </div>
+  </div>
+  <script src="shared.js"></script>
+  <script src="round4_5.js"></script>
+</body>
+</html>

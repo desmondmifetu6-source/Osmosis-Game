@@ -1,8 +1,13 @@
+/**
+ * sharedState: Manages the game's internal data.
+ * Utilizes sessionStorage to carry the player's progress and state
+ * seamlessly across the different HTML pages (Multi-Page Architecture).
+ */
 const sharedState = {
   load: function() {
     return JSON.parse(sessionStorage.getItem('gameState')) || {
       username: '', letter: '', length: 0, wordsPool: [],
-      selectedWords: [], meanings: {}, score: 0
+      selectedWords: [], meanings: {}, score: 0, usedLetters: []
     };
   },
   save: function(state) {
@@ -68,6 +73,10 @@ document.addEventListener('click', (e) => {
   }
 });
 
+/**
+ * DictionaryLogic: Handles fetching words and their scientific meanings from external APIs.
+ * It includes a built-in fallback system to guarantee the game always works even without internet.
+ */
 const DictionaryLogic = {
   fallback: {},
   _loaded: false,
@@ -112,6 +121,10 @@ const DictionaryLogic = {
   }
 };
 
+/**
+ * initModal: Creates and injects a globally accessible modal overlay into the DOM.
+ * This is used across all pages for consistent popup messages and alerts.
+ */
 function initModal() {
   const overlay = document.createElement('div');
   overlay.id = 'modal-overlay';

@@ -1,3 +1,8 @@
+/**
+ * ROUND 1: Letter Assignment & Selection
+ * The player is given a random target letter and word length. 
+ * They must find and click the target letter among falling/stacked planks before the timer runs out.
+ */
 initModal();
 const state = sharedState.load();
 if (!state.username) window.location.href = 'index.html';

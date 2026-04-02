@@ -1,7 +1,6 @@
 /**
- * ROUND 5: Multiple Choice Mastery
- * A fast-paced quiz round. The player is shown a definition and must select the correct 
- * corresponding word from a list of options (including 3 random distractors).
+ * ROUND 4.5: Absolute Recall
+ * The user is shown the full definition and must type out the exact word without choices.
  */
 initModal();
 const state = sharedState.load();
@@ -9,9 +8,10 @@ if (!state.selectedWords || state.selectedWords.length === 0) window.location.hr
 
 const introContainer = document.getElementById('intro-container');
 const quizContainer = document.getElementById('quiz-container');
-const optionsContainer = document.getElementById('options-container');
+const submitBtn = document.getElementById('submit-btn');
 const nextBtn = document.getElementById('next-btn');
-const feedbackEl = document.getElementById('r5-feedback');
+const feedbackEl = document.getElementById('r45-feedback');
+const wordInput = document.getElementById('target-word-input');
 
 let testSequence = [];
 let testIndex = 0;
@@ -33,75 +33,53 @@ function bootstrapStage() {
 
 function renderQuizCurrent() {
   hasAnsweredRow = false;
+  submitBtn.style.display = 'inline-block';
   nextBtn.style.display = 'none';
   feedbackEl.textContent = '';
-  optionsContainer.innerHTML = '';
+  wordInput.value = '';
+  wordInput.disabled = false;
+  wordInput.classList.remove('correct', 'wrong');
+  wordInput.focus();
   
   const correctWord = testSequence[testIndex];
-  document.getElementById('r5-meaning').textContent = state.meanings[correctWord];
+  document.getElementById('r45-meaning').textContent = state.meanings[correctWord];
   document.getElementById('quiz-progress').textContent = `${testIndex + 1} / ${testSequence.length}`;
-  
-  // Pick 3 distractors
-  let allPossible = [];
-  if (state.wordsPool && state.wordsPool.length > 4) {
-    allPossible = [...state.wordsPool];
-  } else {
-    allPossible = Object.keys(DictionaryLogic.fallback);
-  }
-  
-  // Filter out correct word
-  allPossible = allPossible.filter(w => w.toLowerCase() !== correctWord.toLowerCase());
-  
-  // Randomize and take 3
-  allPossible = allPossible.sort(() => 0.5 - Math.random());
-  let distractors = allPossible.slice(0, 3);
-  
-  let options = [...distractors, correctWord].sort(() => 0.5 - Math.random());
-  
-  options.forEach(opt => {
-    const btn = document.createElement('button');
-    btn.className = 'option-btn';
-    btn.textContent = opt;
-    btn.dataset.word = opt.toLowerCase();
-    
-    btn.addEventListener('click', () => handleOptionClick(btn, opt, correctWord));
-    
-    optionsContainer.appendChild(btn);
-  });
 }
 
-function handleOptionClick(clickedBtn, selectedWord, correctWord) {
+submitBtn.addEventListener('click', () => {
   if (hasAnsweredRow) return;
+  const userText = wordInput.value.trim().toLowerCase();
+  if (!userText) return;
+
   hasAnsweredRow = true;
+  wordInput.disabled = true;
+  submitBtn.style.display = 'none';
   
-  const allBtns = document.querySelectorAll('.option-btn');
-  allBtns.forEach(btn => btn.disabled = true);
+  const correctWord = testSequence[testIndex].toLowerCase();
   
-  if (selectedWord.toLowerCase() === correctWord.toLowerCase()) {
-    // Correct logic
-    clickedBtn.classList.add('correct');
+  if (userText === correctWord) {
+    wordInput.classList.add('correct');
     feedbackEl.textContent = "👍 Correct!";
     feedbackEl.className = 'feedback success';
     AudioManager.play('success');
     
-    updateScoreboard(20, clickedBtn);
+    updateScoreboard(30, wordInput);
   } else {
-    // Wrong logic
-    clickedBtn.classList.add('wrong');
-    feedbackEl.textContent = "Incorrect.";
+    wordInput.classList.add('wrong');
+    feedbackEl.textContent = `Incorrect. The word was "${correctWord.toUpperCase()}".`;
     feedbackEl.className = 'feedback error';
     AudioManager.play('error');
-    
-    // Highlight correct response
-    allBtns.forEach(btn => {
-      if (btn.dataset.word === correctWord.toLowerCase()) {
-        btn.classList.add('correct');
-      }
-    });
   }
   
   nextBtn.style.display = 'inline-block';
-}
+});
+
+wordInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    if (!hasAnsweredRow) submitBtn.click();
+    else nextBtn.click();
+  }
+});
 
 nextBtn.addEventListener('click', () => {
   testIndex++;
@@ -129,7 +107,7 @@ function updateScoreboard(amount, refElement) {
 function finishGame() {
   sharedState.save(state);
   AudioManager.play('success');
-  window.location.href = 'round4_5.html'; 
+  window.location.href = 'round4.html'; // Move to Stage 5
 }
 
 // Bootstrap
@@ -142,12 +120,11 @@ document.addEventListener('keydown', (e) => {
     if (introContainer.style.display !== 'none') {
       document.getElementById('start-btn').click();
     } else if (quizContainer.style.display !== 'none') {
-      const correct = testSequence[testIndex].toLowerCase();
-      const btns = document.querySelectorAll('.option-btn');
-      btns.forEach(b => { 
-        if (b.dataset.word === correct && !b.disabled) b.click(); 
-      });
       if (nextBtn.style.display !== 'none') nextBtn.click();
+      else {
+        wordInput.value = testSequence[testIndex];
+        submitBtn.click();
+      }
     }
   }
 });

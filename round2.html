@@ -30,8 +30,9 @@
     }
     
     @media (max-width: 768px) {
-      .s2-workspace { flex-direction: column; min-height: auto; }
+      .s2-workspace { flex-direction: column-reverse; min-height: auto; }
       .wooden-board { min-height: 250px; }
+      .word-pool { min-height: 350px; }
     }
     
     .wooden-board::before {
@@ -74,6 +75,12 @@
       100% { box-shadow: 2px 3px 5px rgba(0,0,0,0.2); background: var(--bg-light); transform: scale(1); }
     }
     
+    .word-tile.correct-length {
+      box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+      border-color: #4caf50;
+      color: #1b5e20;
+    }
+    
     .pasted-word {
       animation: pasteIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
       transform-origin: center;
@@ -98,7 +105,7 @@
     <div class="card stage2-container">
        <div class="s2-header">
          <div class="s2-target-info">Target: <strong id="s2-letter" style="color:var(--accent-primary);">_</strong> <br><span style="font-size: 1rem; font-style: italic; color:var(--text-secondary);">Length: <strong id="s2-length">_</strong> letters</span></div>
-         <div class="s2-counter">Selected: <span id="s2-count">0</span> / 10 <br><span style="font-size:0.8rem; opacity:0.8; font-weight:normal;">(Min 3 required)</span></div>
+         <div class="s2-counter">Selected: <span id="s2-count">0</span> / 10 <br><span style="font-size:0.8rem; opacity:0.8; font-weight:normal;">(Advisable: Min 3)</span></div>
        </div>
        
        <div class="s2-workspace">
@@ -117,7 +124,7 @@
           </div>
        </div>
        
-       <button id="s2-finish-btn" class="classic-btn" disabled style="margin-top: 2rem;">Confirm Collection</button>
+       <button id="s2-finish-btn" class="classic-btn" style="margin-top: 2rem;">Confirm Collection</button>
     </div>
   </div>
   <script src="shared.js"></script>

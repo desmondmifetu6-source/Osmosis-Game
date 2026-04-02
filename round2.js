@@ -1,3 +1,8 @@
+/**
+ * ROUND 2: Word Collection
+ * The player must collect exactly 10 words that start with the previously assigned letter 
+ * and match the designated character length. Words spawn dynamically based on difficulty.
+ */
 initModal();
 const state = sharedState.load();
 if (!state.letter || !state.length || !state.wordsPool) {
@@ -58,6 +63,7 @@ function initRound() {
 function spawnStaticWord(word) {
   const tile = document.createElement('div');
   tile.className = 'word-tile';
+  if (word.length === state.length) tile.classList.add('correct-length');
   tile.textContent = word;
   tile.addEventListener('click', () => handleWordClick(tile, word));
   poolContainer.appendChild(tile);
@@ -66,6 +72,7 @@ function spawnStaticWord(word) {
 function spawnFallingWord(word, duration) {
   const tile = document.createElement('div');
   tile.className = 'word-tile falling-word';
+  if (word.length === state.length) tile.classList.add('correct-length');
   tile.textContent = word;
   
   // Random horizontal position (5% to 85% to keep within container)
@@ -136,7 +143,7 @@ function handleWordClick(tile, word) {
 function updateCount() {
   const len = state.selectedWords.length;
   countEl.textContent = len;
-  finishBtn.disabled = len < 3;
+  finishBtn.disabled = false;
 }
 
 finishBtn.addEventListener('click', () => {
@@ -154,7 +161,6 @@ document.addEventListener('keydown', (e) => {
     if (spawnIntervalId) clearInterval(spawnIntervalId);
     const validWords = state.wordsPool.filter(w => w.length === state.length);
     state.selectedWords = validWords.slice(0, 10);
-    if (state.selectedWords.length < 3) state.selectedWords = state.wordsPool.slice(0, 10);
     sharedState.save(state);
     finishBtn.disabled = false;
     finishBtn.click();

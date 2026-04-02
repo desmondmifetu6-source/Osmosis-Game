@@ -1,3 +1,9 @@
+/**
+ * wordBank.js
+ * A static, hardcoded dictionary structure mapping every letter (A-Z)
+ * to an array of scientifically relevant words and their definitions.
+ * This acts as the primary source of truth for the game rounds.
+ */
 const wordBank = {
   A: [
     { word: "atom", definition: "Smallest unit of matter" },
