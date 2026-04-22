@@ -41,7 +41,6 @@ const ResultsController = {
       endTimeEl: document.getElementById('res-end-time'),
       stageScoresHost: document.getElementById('res-stage-scores'),
       scoreEl: document.getElementById('res-score'),
-      rankEl: document.getElementById('res-rank'),
       statsEl: document.getElementById('res-stats'),
       lifetimeScoreEl: document.getElementById('res-lifetime-score'),
       wordsList: document.getElementById('res-words-list'),
@@ -86,12 +85,6 @@ const ResultsController = {
     let accuracy = 0;
     if (maxPossibleScore > 0) accuracy = Math.round((this.state.targetScore / maxPossibleScore) * 100);
 
-    let intelligenceRank = "Novice Initiate";
-    if (accuracy >= 95) intelligenceRank = "Champion";
-    else if (accuracy >= 80) intelligenceRank = "Advanced Scholar";
-    else if (accuracy >= 60) intelligenceRank = "Adept Thinker";
-    else if (accuracy >= 40) intelligenceRank = "Apprentice";
-
     this.state.currentNumber = 0;
     const duration = 2000;
     const interval = 30;
@@ -107,11 +100,6 @@ const ResultsController = {
         if (typeof AudioManager !== 'undefined') {
           AudioManager.init();
           AudioManager.play('success'); 
-        }
-        
-        if (domCache.rankEl) {
-          domCache.rankEl.textContent = `Classification: ${intelligenceRank}`;
-          domCache.rankEl.style.opacity = 1;
         }
         
         if (domCache.statsEl) {

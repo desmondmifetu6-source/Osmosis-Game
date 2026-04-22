@@ -118,7 +118,7 @@ const HomeMenuController = {
   // Eventually this will be multiplayer, but for now we give a tip!
   handlePlayFriends() {
     if (typeof showModal === 'function') {
-      showModal('Tip', 'This mode can be played manually in groups by acquiring the dictionary. Good luck!');
+      showModal('Tip', 'This mode can be played manually in groups by each player acquiring the dictionary. In this case the hard-copy  is the tool for playing the game not the compuer or phone ');
     }
   }
 };

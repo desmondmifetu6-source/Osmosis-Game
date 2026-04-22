@@ -208,7 +208,7 @@ const Stage1Controller = {
     if (tile.dataset.collected === "true") return;
 
     if (this.state.localSelectedWord !== null) {
-      if (typeof showModal === 'function') showModal('Limit Reached', 'You can only select exactly 1 word per letter.');
+      if (typeof showModal === 'function') showModal('Limit Reached', 'You can only select 1 word per letter.');
       return;
     }
 

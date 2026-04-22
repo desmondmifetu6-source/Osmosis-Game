@@ -154,7 +154,7 @@ const CampaignSetupController = {
 
     if (domCache.setupStatusText) domCache.setupStatusText.textContent = "ASSIGNMENT GENERATOR";
     if (domCache.setupCodeEl) domCache.setupCodeEl.innerHTML = `<span style="animation: pulse 1s ease-in-out;">${gameData.length},${gameData.letter}</span>`;
-    if (domCache.setupDescEl) domCache.setupDescEl.innerHTML = `Target Acquired.<br>Find one word starting with '<strong>${gameData.letter}</strong>' and exactly <strong>${gameData.length}</strong> letters long.`;
+    if (domCache.setupDescEl) domCache.setupDescEl.innerHTML = `implies.<br>Select one word starting with '<strong>${gameData.letter}</strong>' and exactly <strong>${gameData.length}</strong> letters long.`;
 
     if (domCache.setupContinueBtn) {
       domCache.setupContinueBtn.style.display = 'block';
