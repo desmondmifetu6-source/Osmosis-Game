@@ -167,10 +167,16 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 
 @media (max-width: 768px) {
   #global-game-timer {
-    top: 5.5rem;
+    top: 4.5rem;
     right: 1rem;
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
+  }
+  .scoreboard {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -179,8 +185,18 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   .card { padding: 1.5rem; border-radius: 8px; }
   h1.logo { font-size: 2.2rem; }
   .classic-btn { padding: 0.8rem 1.5rem; font-size: 1rem; }
-  h2 { font-size: 1.5rem; }
+  h2 { font-size: 1.4rem; margin-bottom: 1rem; }
   input[type="text"], textarea { font-size: 1rem; padding: 0.8rem; }
+  
+  .scoreboard {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+  }
+  .floating-point {
+    font-size: 2rem;
+  }
 }
 
 /* Toast Notifications */
