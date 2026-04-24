@@ -14,6 +14,19 @@ const LoginController = {
   },
 
   init() {
+    const splash = document.getElementById('intro-splash');
+    if (splash) {
+      if (!sessionStorage.getItem('osmosis_splash_seen')) {
+        sessionStorage.setItem('osmosis_splash_seen', 'true');
+        setTimeout(() => {
+          splash.classList.add('hidden');
+        }, 2000);
+      } else {
+        splash.style.transition = 'none';
+        splash.classList.add('hidden');
+      }
+    }
+
     if (typeof initModal === 'function') initModal();
     this.state.gameData = sharedState.load();
     this.state.savedUser = localStorage.getItem('osmosis_user');
