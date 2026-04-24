@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Osmosis - Stage 2: Primary Recall</title>
+  <title>Osmosis - Stage 2: Word Fill-in</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
@@ -197,7 +197,7 @@
     <!-- Revision Container -->
     <div id="revision-container" class="card stage3-card" style="display: none;">
       <div class="s3-header">
-        <h2>Stage 2: Quick Revision</h2>
+        <h2>Quick Revision</h2>
         <div id="rev-timer" class="alarming-timer">00:00</div>
       </div>
       <p style="font-style:italic; margin-bottom:1rem;">Revise selected words for recall.</p>
@@ -210,10 +210,10 @@
     <!-- Lap 1 Container -->
     <div id="lap1-container" class="card stage3-card" style="display: none;">
       <div class="s3-header">
-        <h2>Stage 2: Primary Recall</h2>
+        <h2>Stage 2: Word Fill-in</h2>
         <div id="lap1-progress" style="font-size:1.5rem; font-weight:bold;">1/5</div>
       </div>
-      <p style="font-style:italic; margin-bottom:2rem;">Fill in the missing letters to reconstruct the word.</p>
+      <p style="font-style:italic; margin-bottom:2rem;">Fill in the missing letters by typing the entire word.</p>
       <div class="test-area">
         <h1 id="lap1-word-display" class="masked-word">A _ O M</h1>
         <input type="text" id="lap1-input" class="s3-input" autocomplete="off">
@@ -225,7 +225,7 @@
   </div>
   <script src="core_dictionary.js"></script>
   <script src="core_shared_state.js"></script>
-  <script src="04_stage2_primary_recall.js"></script>
+  <script src="04_stage2_word_fillin.js"></script>
 </body>
 
 </html>

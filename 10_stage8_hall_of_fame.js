@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('nd-next-2')?.addEventListener('click', () => {
-    if (typeof window.navigateWithTransition === 'function') navigateWithTransition('09_stage7_boss_phase.html');
-    else window.location.href = '09_stage7_boss_phase.html';
+    if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_boss_phase.html');
+    else window.location.href = '10_stage8_boss_phase.html';
   });
 });

@@ -6,165 +6,150 @@
 // It then rolls a dice to assign you a totally random Letter and Word Length 
 // to hunt down next in the dictionary!
 
-const CampaignSetupController = {
-  // Contains mutable data state and element caching
-  state: {
-    gameData: null,
-    domCache: {},
-    cipherInterval: null
-  },
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Initialize & Security Check
+  const gameData = sharedState.load();
+  if (!gameData.username) {
+    window.location.href = 'index.html';
+    return;
+  }
 
-  init() {
-    this.state.gameData = sharedState.load();
+  // 2. Prepare Data State
+  if (!gameData.usedLetters) gameData.usedLetters = [];
+  if (!gameData.selectedWords) gameData.selectedWords = [];
+  if (typeof gameData.score === 'undefined') gameData.score = 0;
 
-    if (!this.state.gameData.username) {
-      window.location.href = '00_login.html';
-      return;
-    }
+  // 3. Cache DOM Elements Natively
+  const setupContinueBtn = document.getElementById('setup-continue-btn');
+  const setupCodeEl = document.getElementById('setup-code');
+  const setupDescEl = document.getElementById('setup-desc');
+  const setupStatusText = document.getElementById('setup-status-text');
+  const rulesScreen = document.getElementById('rules-screen');
+  const generatorScreen = document.getElementById('generator-screen');
+  const rulesContinueBtn = document.getElementById('rules-continue-btn');
 
-    this.prepareData();
-    this.cacheDOM();
-    this.routeFlow();
-  },
+  // 4. Navigation Helper
+  function navigate(url) {
+    if (typeof window.navigateWithTransition === 'function') navigateWithTransition(url);
+    else window.location.href = url;
+  }
 
-  prepareData() {
-    const { gameData } = this.state;
-    if (!gameData.usedLetters) gameData.usedLetters = [];
-    if (!gameData.selectedWords) gameData.selectedWords = [];
-    if (typeof gameData.score === 'undefined') gameData.score = 0;
-  },
-
-  cacheDOM() {
-    this.state.domCache = {
-      setupContinueBtn: document.getElementById('setup-continue-btn'),
-      setupCodeEl: document.getElementById('setup-code'),
-      setupDescEl: document.getElementById('setup-desc'),
-      setupStatusText: document.getElementById('setup-status-text'),
-      rulesScreen: document.getElementById('rules-screen'),
-      generatorScreen: document.getElementById('generator-screen'),
-      rulesContinueBtn: document.getElementById('rules-continue-btn')
-    };
-  },
-
-  routeFlow() {
-    const { domCache, gameData } = this.state;
-
-    // If they have played before, skip rules
-    if (gameData.usedLetters && gameData.usedLetters.length > 0) {
-      if (domCache.rulesScreen) domCache.rulesScreen.style.display = 'none';
-      if (domCache.generatorScreen) domCache.generatorScreen.style.display = 'block';
-      this.runSelectionAlgorithm();
-    } else {
-      if (domCache.rulesContinueBtn) {
-        domCache.rulesContinueBtn.addEventListener('click', () => {
-          if (domCache.rulesScreen) domCache.rulesScreen.style.display = 'none';
-          if (domCache.generatorScreen) domCache.generatorScreen.style.display = 'block';
-          this.runSelectionAlgorithm();
-        });
-      } else {
-        this.runSelectionAlgorithm(); // Fallback
-      }
-    }
-
-    if (domCache.setupContinueBtn) {
-      domCache.setupContinueBtn.addEventListener('click', () => {
-        if (typeof window.navigateWithTransition === 'function') {
-          navigateWithTransition('03_stage1_word_selection.html');
-        } else {
-          window.location.href = '03_stage1_word_selection.html';
-        }
+  // 5. Route Flow Control
+  // If they have played before, skip rules and go straight to generator
+  if (gameData.usedLetters && gameData.usedLetters.length > 0) {
+    if (rulesScreen) rulesScreen.style.display = 'none';
+    if (generatorScreen) generatorScreen.style.display = 'block';
+    runSelectionAlgorithm();
+  } else {
+    // Wait for them to read rules and click Proceed
+    if (rulesContinueBtn) {
+      rulesContinueBtn.addEventListener('click', () => {
+        if (rulesScreen) rulesScreen.style.display = 'none';
+        if (generatorScreen) generatorScreen.style.display = 'block';
+        runSelectionAlgorithm();
       });
+    } else {
+      runSelectionAlgorithm(); // Fallback if button missing
     }
-  },
+  }
 
-  runSelectionAlgorithm() {
-    const { domCache, gameData } = this.state;
+  // Setup continue button routes to stage 1
+  if (setupContinueBtn) {
+    setupContinueBtn.addEventListener('click', () => navigate('03_stage1_word_selection.html'));
+  }
+
+  // 6. Core Selection Algorithm
+  function runSelectionAlgorithm() {
     const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const availableLetters = alphabet.split('').filter(l => !gameData.usedLetters.includes(l));
 
-    // If we ran out of alphabet letters...
+    // If we ran out of alphabet letters, they beat all sections! Move to Stage 2.
     if (availableLetters.length === 0) {
       if (typeof showModal === 'function') {
         showModal('Mission Complete', 'Every letter done — continuing to the next stage.');
-        setTimeout(() => {
-          if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_primary_recall.html');
-          else window.location.href = '04_stage2_primary_recall.html';
-        }, 1700);
+        setTimeout(() => navigate('04_stage2_primary_recall.html'), 1700);
       } else {
-        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_primary_recall.html');
-        else window.location.href = '04_stage2_primary_recall.html';
+        navigate('04_stage2_primary_recall.html');
       }
       return;
     }
 
-    if (domCache.setupStatusText) domCache.setupStatusText.textContent = "Shuffling constraints...";
+    if (setupStatusText) setupStatusText.textContent = "Shuffling ...";
 
+    // Start a rapid shuffle animation to build suspense
     let counter = 0;
-    this.state.cipherInterval = setInterval(() => {
-      let randChar = availableLetters[Math.floor(Math.random() * availableLetters.length)];
-      let randLength = Math.floor(Math.random() * 8) + 4;
+    const cipherInterval = setInterval(() => {
+      const randChar = availableLetters[Math.floor(Math.random() * availableLetters.length)];
+      const randLength = Math.floor(Math.random() * 8) + 4; // Between 4 and 11
 
-      if (domCache.setupCodeEl) domCache.setupCodeEl.textContent = `${randLength},${randChar}`;
+      if (setupCodeEl) setupCodeEl.textContent = `${randLength},${randChar}`;
       counter++;
 
+      // After 30 shuffles (about 1.5 seconds), finalize the assignment
       if (counter > 30) {
-        clearInterval(this.state.cipherInterval);
-        this.finalizeAssignment(availableLetters);
+        clearInterval(cipherInterval);
+        finalizeAssignment(availableLetters);
       }
     }, 50);
-  },
+  }
 
-  finalizeAssignment(availableLetters) {
-    const { domCache, gameData } = this.state;
-
+  // 7. Finalize The Word Length & Letter
+  function finalizeAssignment(availableLetters) {
+    // Pick the letter
     gameData.letter = availableLetters[Math.floor(Math.random() * availableLetters.length)];
     gameData.usedLetters.push(gameData.letter);
-    gameData.letters = [gameData.letter];
+    gameData.letters = [gameData.letter]; // Keeping for backwards compatibility
 
-    let possibleWords = [];
-    if (typeof window.STEMDictionary !== 'undefined') {
-      possibleWords = window.STEMDictionary.getWordsByLetter(gameData.letter).map(w => w.word);
-    } else {
-      possibleWords = ["biology", "bacteria", "botany", "biodiversity"];
+    // Fetch words for this letter to determine an appropriate length
+    if (typeof window.STEMDictionary === 'undefined') {
+      if (typeof showModal === 'function') {
+        showModal('System Error', 'The Dictionary Archives are currently offline. Please refresh the page.');
+      } else {
+        alert("CRITICAL ERROR: Dictionary failed to load.");
+      }
+      return; // Stop the game from breaking further!
     }
 
+    let possibleWords = window.STEMDictionary.getWordsByLetter(gameData.letter).map(w => w.word);
+
+    // Cooldown Logic: Don't repeat words played globally in the last 3 days
     const globalUsedRaw = JSON.parse(localStorage.getItem('osmosis_global_used_words')) || [];
     const now = Date.now();
     const cooldownMs = 3 * 24 * 60 * 60 * 1000;
 
-    const onCooldown = globalUsedRaw.map(item => typeof item === 'string' ? { word: item.toLowerCase(), time: now } : item)
+    const onCooldown = globalUsedRaw
+      .map(item => typeof item === 'string' ? { word: item.toLowerCase(), time: now } : item)
       .filter(item => (now - item.time) < cooldownMs)
       .map(i => i.word);
 
     let freshWords = possibleWords.filter(w => !onCooldown.includes(w.toLowerCase()));
+    
+    // If somehow all words are on cooldown, ignore cooldown and use all words
     if (freshWords.length === 0) freshWords = possibleWords;
     possibleWords = freshWords;
 
+    // Pick a random word from the pool just to establish our target length
     if (possibleWords.length > 0) {
-      let chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
+      const chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
       gameData.length = chosenWord.length;
     } else {
-      gameData.length = 7;
+      gameData.length = 7; // Fallback
     }
 
     gameData.wordsPool = possibleWords;
 
+    // Play Success Sound & Save State
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
     sharedState.save(gameData);
 
-    if (domCache.setupStatusText) domCache.setupStatusText.textContent = "ASSIGNMENT GENERATOR";
-    if (domCache.setupCodeEl) domCache.setupCodeEl.innerHTML = `<span style="animation: pulse 1s ease-in-out;">${gameData.length},${gameData.letter}</span>`;
-    if (domCache.setupDescEl) domCache.setupDescEl.innerHTML = `implies.<br>Select one word starting with '<strong>${gameData.letter}</strong>' and exactly <strong>${gameData.length}</strong> letters long.`;
+    // Update UI with final assignment
+    if (setupStatusText) setupStatusText.textContent = "ASSIGNMENT GENERATOR";
+    if (setupCodeEl) setupCodeEl.innerHTML = `<span style="animation: pulse 1s ease-in-out;">${gameData.length},${gameData.letter}</span>`;
+    if (setupDescEl) setupDescEl.innerHTML = `implies.<br>Select one word starting with '<strong>${gameData.letter}</strong>' and exactly <strong>${gameData.length}</strong> letters long.`;
 
-    if (domCache.setupContinueBtn) {
-      domCache.setupContinueBtn.style.display = 'block';
-      domCache.setupContinueBtn.textContent = 'Go Pick Word';
+    if (setupContinueBtn) {
+      setupContinueBtn.style.display = 'block';
+      setupContinueBtn.textContent = 'Go Pick Word';
     }
   }
-};
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => CampaignSetupController.init());
-} else {
-  CampaignSetupController.init();
-}
+});

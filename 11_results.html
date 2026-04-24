@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Hall of Fame Results</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="core_styles.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background-color: transparent;
+      overflow-x: hidden;
+      display: block;
+    }
+
+    /* Full Page Background */
+    .hall-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/hall_of_fame_bg.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      z-index: 0;
+    }
+
+    /* Faded Overlay to Ensure Text Legibility */
+    .hall-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(20,15,10,0.7) 100%);
+      z-index: 1;
+    }
+
+    .results-container {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      color: #eaeaea;
+    }
+
+    /* Hero Score Section */
+    .hero-section {
+      text-align: center;
+      margin-bottom: 4rem;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    .hall-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: #ffd700; /* Gold */
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    }
+
+    .hero-score {
+      font-family: monospace;
+      font-size: 5.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 1.5rem 0;
+      text-shadow: 0 5px 20px rgba(255,255,255,0.5);
+    }
+
+    .assimilation-rate {
+      font-size: 2rem;
+      color: #ffd700;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: rgba(0,0,0,0.4);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      display: inline-block;
+      border: 1px solid rgba(255,215,0,0.3);
+    }
+
+    /* Stage Breakdown Section */
+    .breakdown-section {
+      background: rgba(20, 20, 20, 0.6);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 4rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      animation: fadeInUp 1s ease-out 0.5s both;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #ffd700;
+      border-bottom: 1px solid rgba(255,215,0,0.3);
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .stage-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 1.2rem;
+    }
+
+    .stage-row:last-child {
+      border-bottom: none;
+    }
+
+    .stage-name {
+      color: #e0e0e0;
+      font-weight: 500;
+    }
+
+    .stage-score {
+      color: #4caf50;
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    /* Learning Achieved Section */
+    .learning-section {
+      animation: fadeInUp 1s ease-out 0.8s both;
+    }
+
+    .word-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 5px solid #ffd700;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 8px 8px 0;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .word-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(10px);
+    }
+
+    .word-card h4 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .word-card p {
+      margin: 0;
+      font-size: 1.15rem;
+      color: #cccccc;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* Buttons */
+    .menu-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 4rem;
+      animation: fadeIn 1s ease-out 1.2s both;
+    }
+
+    .menu-buttons button {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.2rem;
+      padding: 1.2rem 2.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-primary {
+      background: #ffd700;
+      color: #111;
+      border: none;
+      box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+    }
+
+    .btn-primary:hover {
+      background: #ffea70;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255,215,0,0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #ffd700;
+      border: 2px solid #ffd700;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,215,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hall-background"></div>
+  <div class="hall-overlay"></div>
+
+  <div class="results-container">
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hall-title">Hall of Fame</div>
+      <div class="hero-score" id="res-score">Score: 0</div>
+      <div class="assimilation-rate" id="res-assimilation">Rate of Assimilation: 0.00 pts/sec</div>
+    </div>
+
+    <!-- Stage Breakdown -->
+    <div class="breakdown-section">
+      <h3 class="section-title">Stage Breakdown</h3>
+      <div id="res-stage-scores">
+        <!-- Javascript will populate rows here -->
+      </div>
+    </div>
+
+    <!-- Learning Achieved -->
+    <div class="learning-section">
+      <h3 class="section-title" style="margin-bottom: 2rem;">Learning Achieved</h3>
+      <div id="res-words-list">
+        <!-- Javascript will populate word cards here -->
+      </div>
+    </div>
+
+    <div class="menu-buttons">
+      <button id="play-again-btn" class="btn-primary">Play Again</button>
+      <button id="go-home-btn" class="btn-secondary">Return Home</button>
+    </div>
+
+  </div>
+
+  <script src="core_dictionary.js"></script>
+  <script src="core_shared_state.js"></script>
+  <script src="11_results.js"></script>
+</body>
+
+</html>

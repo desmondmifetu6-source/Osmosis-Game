@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Osmosis - Stage 3: Speed Recall</title>
+  <title>Osmosis - Stage 4: Self Recall</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
@@ -30,37 +30,6 @@
       margin: 0;
     }
 
-    .flash-zone {
-      min-height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px dashed var(--accent-primary);
-      border-radius: 10px;
-      margin: 1rem 0 1.25rem;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.5);
-    }
-
-    .flash-word {
-      font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--text-main);
-    }
-
-    .flash-word.hidden {
-      visibility: hidden;
-    }
-
-    .hint {
-      text-align: center;
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
-      min-height: 24px;
-    }
-
     .feedback {
       text-align: center;
       font-weight: 700;
@@ -81,18 +50,6 @@
       font-weight: 700;
       text-transform: uppercase;
       text-align: center;
-    }
-
-    .word-input.correct {
-      border-color: #2e7d32;
-      background: #e8f5e9;
-      color: #2e7d32;
-    }
-
-    .word-input.wrong {
-      border-color: #c62828;
-      background: #ffebee;
-      color: #c62828;
     }
 
     /* Missed Words Styling */
@@ -146,43 +103,40 @@
         transform: translateY(0);
       }
     }
+    
+    .floating-point {
+      position: absolute;
+      color: #4caf50;
+      font-weight: bold;
+      font-family: monospace;
+      font-size: 2rem;
+      pointer-events: none;
+      animation: floatUp 1s ease-out forwards;
+      z-index: 200;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    @keyframes floatUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1.5);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(1);
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="scoreboard" id="scoreboard">Score: <span id="current-score">0</span></div>
   <div class="app-container">
-    <div id="intro-container" class="card stage4f-card" style="text-align:center;">
-      <h1 style="font-size:2rem; margin-bottom:1rem;">Flash Recall</h1>
-      <p style="font-size:1.05rem; color:var(--text-secondary); margin-bottom:1.5rem; line-height:1.55;">
-        A word appears for <strong>1 second </strong>, then disappears. Type exactly what you saw.
-      </p>
-      <button id="start-btn" class="classic-btn" style="max-width:300px;">Start</button>
-    </div>
 
-    <div id="quiz-container" class="card stage4f-card" style="display:none;">
-      <div class="s4f-header">
-        <h2>Stage 3: Flash Recall</h2>
-        <div id="quiz-progress" style="font-size:1.2rem; font-weight:bold;">1 / 10</div>
-      </div>
-
-      <div class="flash-zone">
-        <div id="flash-word" class="flash-word">READY</div>
-      </div>
-      <p id="flash-hint" class="hint">Watch closely.</p>
-
-      <input type="text" id="typed-word-input" class="word-input" autocomplete="off" spellcheck="false"
-        placeholder="Type the word..." disabled>
-      <div id="flash-feedback" class="feedback"></div>
-
-      <button id="submit-btn" class="classic-btn" style="display:none;">Submit</button>
-      <button id="next-btn" class="classic-btn secondary" style="display:none;">Next</button>
-    </div>
-    <div id="transition-container" class="card stage4f-card" style="display: none; text-align: center;">
-      <h2 class="welcome-lap2" style="font-size: 2.2rem; color: #111111; margin-bottom: 1rem; font-weight:700;">Self
-        Recall</h2>
-      <p style="font-size:1.15rem; margin-bottom:2rem; color:#555555;">You have completed the flash-recall. Now, type all or as many
-        of those words as you can, without any hints.</p>
+    <div id="transition-container" class="card stage4f-card" style="text-align: center;">
+      <h2 class="welcome-lap2" style="font-size: 2.2rem; color: #111111; margin-bottom: 1rem; font-weight:700;">Self Recall</h2>
+      <p style="font-size:1.15rem; margin-bottom:2rem; color:#555555;">You have completed the flash-recall. Now, type all or as many of those words as you can, without any hints.</p>
       <button id="start-lap2-btn" class="classic-btn"
         style="background:#111111; color:#fff; border:none; padding:0.8rem 1.5rem; border-radius:4px; font-weight:500;">Proceed</button>
     </div>
@@ -191,7 +145,7 @@
     <div id="lap2-container" class="card stage4f-card"
       style="display: none; background: #ffffff; border: 1px solid #e5e5e5; border-radius:8px; box-shadow:none;">
       <div class="s4f-header">
-        <h2 style="color: #111111; font-weight:700; font-size:1.8rem;">Stage 3: Speed Recall</h2>
+        <h2 style="color: #111111; font-weight:700; font-size:1.8rem;">Stage 4: Self Recall</h2>
         <div id="lap2-timer" class="alarming-timer"
           style="color: #111111; background: #fafafa; border: 1px solid #d4d4d4; padding:0.4rem 0.8rem; border-radius:4px;">
           00:30</div>
@@ -226,7 +180,7 @@
 
   <script src="core_dictionary.js"></script>
   <script src="core_shared_state.js"></script>
-  <script src="05_stage3_speed_recall.js"></script>
+  <script src="06_stage4_self_recall.js"></script>
 </body>
 
 </html>

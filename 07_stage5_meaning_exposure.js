@@ -6,8 +6,8 @@
 // and their definitions, trying to memorize them before the hard tests begin.
 
 initModal(); // Wake up the popup system
-const state = sharedState.load(); // Open the backpack
 sharedState.startTimer();
+const state = sharedState.load(); // Open the backpack
 sharedState.updateTimerUI();
 
 // Built-in Security: No backpack? Back to the lobby!
@@ -72,7 +72,7 @@ function startRevisionPhase() {
 // Function: endRevisionPhase
 // Throws the player out of the reading room and right into Stage 5!
 function endRevisionPhase() {
-  navigateWithTransition('07_stage5_definition_selection.html');
+  navigateWithTransition('08_stage6_definition_selection.html');
 }
 
 // Developer Cheat Code (Alt + P)

@@ -9,7 +9,7 @@
 
 initModal();
 const state = sharedState.load();
-if (!state.username) window.location.href = '00_login.html';
+if (!state.username) window.location.href = 'index.html';
 sharedState.startTimer();
 sharedState.updateTimerUI();
 

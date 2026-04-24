@@ -14,8 +14,8 @@ const Stage5Controller = {
 
   init() {
     if (typeof initModal === 'function') initModal();
-    this.state.gameData = sharedState.load();
     sharedState.startTimer();
+    this.state.gameData = sharedState.load();
     sharedState.updateTimerUI();
 
     if (!this.state.gameData.selectedWords || this.state.gameData.selectedWords.length === 0) {
@@ -201,9 +201,9 @@ const Stage5Controller = {
     sharedState.save(this.state.gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
     
-    sharedState.showStageScoreThen('07_stage5', 'Definition Match', this.state.stageScore, () => {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('08_stage6_meaning_fillin.html');
-      else window.location.href = '08_stage6_meaning_fillin.html';
+    sharedState.showStageScoreThen('07_stage5', 'Stage 5: Definition Selection', this.state.stageScore, () => {
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('09_stage7_meaning_fillin.html');
+      else window.location.href = '09_stage7_meaning_fillin.html';
     });
   }
 };

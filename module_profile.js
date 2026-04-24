@@ -1,5 +1,5 @@
 const state = sharedState.load();
-if (!state.username) window.location.href = '00_login.html';
+if (!state.username) window.location.href = 'index.html';
 
 const history = JSON.parse(localStorage.getItem('osmosis_history')) || [];
 const list = document.getElementById('history-list');
@@ -14,7 +14,7 @@ if (history.length === 0) {
     item.innerHTML = `
       <div class="history-header">
         <span>${record.date}</span>
-        <span class="history-stats">Score: ${record.score} | Acc: ${record.accuracy}%</span>
+        <span class="history-stats">Score: ${record.score}</span>
       </div>
       <div class="history-words">
         Studied: ${record.words.join(', ')}

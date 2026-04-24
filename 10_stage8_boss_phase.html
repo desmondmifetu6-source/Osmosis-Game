@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Osmosis - Stage 6: Hall of Fame (Boss Phase)</title>
+  <title>Osmosis - Stage 7: Hall of Fame (Boss Phase)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
@@ -19,20 +19,6 @@
       border-radius: 8px;
     }
 
-    .boss-heading {
-      margin-bottom: 0.5rem;
-      text-align: center;
-      font-size: 2.2rem;
-      color: #111111;
-      font-weight: 700;
-    }
-
-    .boss-subtitle {
-      text-align: center;
-      font-size: 1.1rem;
-      color: #555555;
-      margin-bottom: 2rem;
-    }
 
     .nd-progress {
       font-weight: 500;
@@ -160,16 +146,7 @@
       background: #333333;
     }
 
-    .boss-btn.secondary {
-      background: #f5f5f5;
-      color: #333333;
-      border: 1px solid #d4d4d4;
-    }
 
-    .boss-btn.secondary:hover {
-      background: #e5e5e5;
-      color: #111111;
-    }
   </style>
 </head>
 
@@ -178,7 +155,7 @@
   <div class="app-container">
     <div class="nd-card">
       <div id="nd-progress" class="nd-progress"></div>
-      <div id="nd-memory-box" class="nd-memory-box"></div>
+      <div id="nd-memory-box" class="nd-memory-box" style="display: none;"></div>
 
       <div id="nd-input-wrap" style="display:none;">
         <div class="nd-input">
@@ -196,14 +173,14 @@
         <p id="nd-reveal-meaning" style="margin:0;"></p>
       </div>
 
-      <div style="display:flex; gap:0.75rem; margin-top:1rem;">
-        <button id="nd-main-btn" class="boss-btn">Start</button>
+      <div style="display:flex; justify-content:center; margin-top:1rem;">
+        <button id="nd-main-btn" class="boss-btn" style="flex:none; padding: 0.5rem 2rem;">Continue</button>
       </div>
     </div>
   </div>
   <script src="core_dictionary.js"></script>
   <script src="core_shared_state.js"></script>
-  <script src="09_stage7_boss_phase.js"></script>
+  <script src="10_stage8_boss_phase.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 // =====================================================================
-// FILE: 00_login.js (The Bouncer)
+// FILE: index.js (The Bouncer)
 // =====================================================================
 // Imagine this file as a friendly bouncer at the front door of a club.
 // It checks if you've been here before. If you have, it warmly welcomes you back.

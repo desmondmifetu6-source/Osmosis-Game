@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Stage 5: Definition Selection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="core_styles.css">
+  <style>
+    .l2-card {
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px dashed var(--text-secondary);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .header h2 {
+      margin: 0;
+    }
+
+    .question-area {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .target-word {
+      font-size: 1.25rem;
+      color: var(--text-main);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+      padding: 1.5rem;
+      background: var(--bg-light);
+      border-radius: 8px;
+      border: 1px solid var(--text-secondary);
+      text-align: left;
+    }
+
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .option-btn {
+      background: var(--bg-light);
+      border: 2px solid var(--text-secondary);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: var(--text-main);
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 1.4;
+      font-family: var(--font-body);
+      text-transform: uppercase;
+    }
+
+    .option-btn:hover {
+      border-color: var(--accent-primary);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .option-btn.correct {
+      background: #e8f5e9;
+      border-color: #2e7d32;
+      color: #1b5e20;
+    }
+
+    .option-btn.wrong {
+      background: #ffebee;
+      border-color: #c62828;
+      color: #b71c1c;
+    }
+
+    .feedback {
+      height: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .feedback.success {
+      color: #2e7d32;
+    }
+
+    .feedback.error {
+      color: #c62828;
+    }
+
+
+    .floating-point {
+      position: absolute;
+      color: #4caf50;
+      font-weight: bold;
+      font-family: monospace;
+      font-size: 2rem;
+      pointer-events: none;
+      animation: floatUp 1s ease-out forwards;
+      z-index: 200;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    @keyframes floatUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1.5);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scoreboard" id="scoreboard">Score: <span id="current-score">0</span></div>
+  <div class="app-container">
+
+    <!-- Test Container -->
+    <div id="test-container" class="card l2-card">
+      <div class="header">
+        <div>
+          <h2 style="margin-bottom: 0.25rem;">Stage 5: Selecting Best Definition</h2>
+          <span style="color: var(--text-secondary); font-size: 1.1rem;">Select the Word that corresponds to the
+            definition</span>
+        </div>
+        <div id="test-progress" style="font-size:1.5rem; font-weight:bold;">1/10</div>
+      </div>
+      <div class="question-area">
+        <div id="target-word" class="target-word">WORD</div>
+        <div id="options-container" class="options-grid"></div>
+        <div id="test-feedback" class="feedback"></div>
+      </div>
+      <button id="next-btn" class="classic-btn" style="display:none; margin: auto;">Next Word</button>
+    </div>
+
+  </div>
+  <script src="core_dictionary.js"></script>
+  <script src="core_shared_state.js"></script>
+  <script src="08_stage6_definition_selection.js"></script>
+</body>
+
+</html>

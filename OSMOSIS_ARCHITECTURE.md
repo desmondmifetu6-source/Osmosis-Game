@@ -62,5 +62,5 @@ The session culminates in an architectural summary.
 There are various supportive files constructed to round out the platform's professional appeal.
 
 * `core_styles.css`: Contains CSS variables, primary typography bounds, animations (shaking error boxes, glowing buttons), and mobile flex queries.
-* `01_home_menu.html / 00_login.html / module_about.html`: Serves as static entry points that introduce the application's premise and transition the user cleanly into the first `02_campaign_setup.html` loop.
+* `01_home_menu.html / index.html / module_about.html`: Serves as static entry points that introduce the application's premise and transition the user cleanly into the first `02_campaign_setup.html` loop.
 * `module_library.html / module_diagram_study.html / module_archives.html`: Supportive features functioning semi-independently of the A-Z campaign. `diagram_study` renders graphical canvases mapped to biology visuals, whereas archives show long-term metrics for historical accuracy.

@@ -24,14 +24,13 @@ const Stage7Controller = {
   },
 
   init() {
-    if (typeof initModal === 'function') initModal();
-    this.state.gameData = sharedState.load();
     sharedState.startTimer();
+    this.state.gameData = sharedState.load();
     sharedState.updateTimerUI();
 
     if (!this.state.gameData.selectedWords || this.state.gameData.selectedWords.length === 0) {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('00_login.html');
-      else window.location.href = '00_login.html';
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('index.html');
+      else window.location.href = 'index.html';
       return;
     }
 
@@ -55,8 +54,7 @@ const Stage7Controller = {
       revealEl: document.getElementById('nd-reveal'),
       revealWordEl: document.getElementById('nd-reveal-word'),
       revealMeaningEl: document.getElementById('nd-reveal-meaning'),
-      mainBtn: document.getElementById('nd-main-btn'),
-      backBtn: document.getElementById('nd-back-btn')
+      mainBtn: document.getElementById('nd-main-btn')
     };
   },
 
@@ -68,13 +66,6 @@ const Stage7Controller = {
 
   attachListeners() {
     const { domCache } = this.state;
-
-    if (domCache.backBtn) {
-      domCache.backBtn.addEventListener('click', () => {
-        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('06_stage4_meaning_exposure.html');
-        else window.location.href = '06_stage4_meaning_exposure.html';
-      });
-    }
 
     if (domCache.mainBtn) {
       domCache.mainBtn.addEventListener('click', () => this.handleMainAction());
@@ -120,10 +111,6 @@ const Stage7Controller = {
     if (wOk) pts += 10;
     pts += Math.round(mRatio * 10);
 
-    if (!wOk && mRatio < 0.3) {
-      pts = -15; // Severe deduction for failing the King
-    }
-
     return { wOk, mRatio, pts };
   },
 
@@ -147,9 +134,9 @@ const Stage7Controller = {
 
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('nebuchadnezzar', 'Final Round', stageScore, () => {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_results.html');
-      else window.location.href = '10_results.html';
+    sharedState.showStageScoreThen('nebuchadnezzar', 'Stage 7: Boss Phase', stageScore, () => {
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('11_results.html');
+      else window.location.href = '11_results.html';
     });
   },
 
@@ -175,10 +162,12 @@ const Stage7Controller = {
     if (domCache.meaningInput) domCache.meaningInput.value = '';
 
     if (domCache.memoryBoxEl) {
+      domCache.memoryBoxEl.style.display = 'flex';
       domCache.memoryBoxEl.innerHTML = `<div class="nd-word">${this.escapeHTML(word)}</div><div class="nd-meaning">${this.escapeHTML(meaning)}</div>`;
     }
 
     if (domCache.mainBtn) {
+      domCache.mainBtn.style.flex = '1';
       domCache.mainBtn.disabled = true;
       domCache.mainBtn.textContent = 'Memorize...';
     }
@@ -212,8 +201,8 @@ const Stage7Controller = {
     const { sequence, phase } = this.state;
 
     if (sequence.length === 0) {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_results.html');
-      else window.location.href = '10_results.html';
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('11_results.html');
+      else window.location.href = '11_results.html';
       return;
     }
 
@@ -258,11 +247,7 @@ const Stage7Controller = {
         if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
       } else {
         domCache.feedbackEl.className = 'nd-feedback bad';
-        if (g.pts < 0) {
-          domCache.feedbackEl.textContent = `You have angered the King! ${g.pts} pts`;
-        } else {
-          domCache.feedbackEl.textContent = `Missed this one. +${g.pts} pts`;
-        }
+        domCache.feedbackEl.textContent = `Missed this one. +${g.pts} pts`;
         if (typeof AudioManager !== 'undefined') AudioManager.play('error');
       }
     }

@@ -18,12 +18,12 @@ const Stage6Controller = {
 
   init() {
     if (typeof initModal === 'function') initModal();
-    this.state.gameData = sharedState.load();
     sharedState.startTimer();
+    this.state.gameData = sharedState.load();
     sharedState.updateTimerUI();
 
     if (!this.state.gameData.selectedWords || this.state.gameData.selectedWords.length === 0) {
-      window.location.href = '00_login.html';
+      window.location.href = 'index.html';
       return;
     }
 
@@ -96,15 +96,15 @@ const Stage6Controller = {
     if (!gameData.meanings) gameData.meanings = {};
     for (let w of gameData.selectedWords) {
       if (!gameData.meanings[w]) {
-         gameData.meanings[w] = typeof DictionaryLogic !== 'undefined' ? DictionaryLogic.fetchMeaning(w) : "Definition unavailable";
+        gameData.meanings[w] = typeof DictionaryLogic !== 'undefined' ? DictionaryLogic.fetchMeaning(w) : "Definition unavailable";
       }
     }
     sharedState.save(gameData);
 
     this.state.testSequence = [...gameData.selectedWords].sort(() => 0.5 - Math.random());
-    
+
     if (domCache.loadingContainer) domCache.loadingContainer.style.display = 'none';
-    
+
     this.startTestPhase();
   },
 
@@ -127,52 +127,51 @@ const Stage6Controller = {
     // We look at the long meaning of the word, pick out some nice solid words, 
     // and replace them with empty text boxes for you to type in later.
     const { domCache, testSequence, testIndex, gameData } = this.state;
-    
+
     if (testIndex >= testSequence.length) return;
 
     const currentWord = testSequence[testIndex];
     if (domCache.testWord) domCache.testWord.textContent = currentWord;
     if (domCache.testProgress) domCache.testProgress.textContent = `${testIndex + 1}/${testSequence.length}`;
-    
+
     let rawMeaning = gameData.meanings[currentWord] || "";
     let plainMeaning = String(rawMeaning).replace(/<\/?[^>]+(>|$)/g, "");
-    
-    let tokens = plainMeaning.split(/(\b[\w'-]+\b)/); 
+
+    let stopWords = ["that", "with", "this", "have", "they", "their", "them", "what", "which", "when", "where", "who", "whom", "whose", "why", "how", "some", "such", "than", "very", "will", "just", "should", "also", "into", "only", "about", "many", "then", "would", "like", "these", "because", "could", "been", "much", "even", "from", "were", "there"];
+
+    let tokens = plainMeaning.split(/(\b[\w'-]+\b)/);
     let validIndices = [];
+    
     tokens.forEach((t, i) => {
       if (t.length > 3 && /^[a-zA-Z]+$/.test(t) && t.toLowerCase() !== currentWord.toLowerCase()) {
-        validIndices.push(i);
+        if (!stopWords.includes(t.toLowerCase())) {
+          validIndices.push(i);
+        }
       }
     });
 
-    if (validIndices.length > 0) {
-      validIndices.shift(); 
+    if (validIndices.length === 0) {
+      tokens.forEach((t, i) => {
+        if (t.length > 3 && /^[a-zA-Z]+$/.test(t) && t.toLowerCase() !== currentWord.toLowerCase()) {
+          validIndices.push(i);
+        }
+      });
     }
-    
-    let targetMasks = Math.min(2, Math.max(1, Math.floor(validIndices.length * 0.3)));
-    
+
     let chosenIndices = [];
     if (validIndices.length > 0) {
-      if (targetMasks === 1 || validIndices.length < 2) {
-        chosenIndices.push(validIndices[Math.floor(Math.random() * validIndices.length)]);
-      } else {
-        let found = false;
-        let shuffled = [...validIndices].sort(() => 0.5 - Math.random());
-        for (let i = 0; i < shuffled.length; i++) {
-          for (let j = i + 1; j < shuffled.length; j++) {
-            if (Math.abs(shuffled[i] - shuffled[j]) >= 4) {
-               chosenIndices.push(shuffled[i], shuffled[j]);
-               found = true; 
-               break;
-            }
-          }
-          if (found) break;
+      let longestIndex = validIndices[0];
+      for (let i = 1; i < validIndices.length; i++) {
+        if (tokens[validIndices[i]].length > tokens[longestIndex].length) {
+          longestIndex = validIndices[i];
+        } else if (tokens[validIndices[i]].length === tokens[longestIndex].length && Math.random() > 0.5) {
+          longestIndex = validIndices[i];
         }
-        if (!found) chosenIndices.push(shuffled[0]);
       }
+      chosenIndices.push(longestIndex);
     }
     validIndices = chosenIndices;
-    
+
     function escapeHTML(str) {
       return str.replace(/[&<>'"]/g, tag => ({
         '&': '&amp;',
@@ -182,7 +181,7 @@ const Stage6Controller = {
         '"': '&quot;'
       }[tag] || tag));
     }
-    
+
     let html = '';
     tokens.forEach((t, i) => {
       if (validIndices.includes(i)) {
@@ -191,20 +190,20 @@ const Stage6Controller = {
         html += escapeHTML(t);
       }
     });
-    
+
     if (domCache.testMeaningContainer) domCache.testMeaningContainer.innerHTML = html;
-    
+
     if (domCache.submitBtn) {
       domCache.submitBtn.textContent = "Submit Findings";
       domCache.submitBtn.disabled = false;
     }
     if (domCache.skipBtn) domCache.skipBtn.disabled = false;
-    
+
     if (domCache.testFeedback) {
       domCache.testFeedback.textContent = '';
       domCache.testFeedback.className = 'feedback';
     }
-    
+
     const firstInput = document.querySelector('.meaning-input');
     if (firstInput) firstInput.focus();
   },
@@ -219,18 +218,18 @@ const Stage6Controller = {
       this.nextWord();
       return;
     }
-    
+
     const inputs = document.querySelectorAll('.meaning-input');
     let allCorrect = true;
     let hasEmpty = false;
-    
+
     inputs.forEach(inp => {
       const userVal = inp.value.trim().toLowerCase();
       const correctVal = inp.dataset.ans.toLowerCase();
       inp.classList.remove('wrong', 'correct');
-      
+
       if (userVal === '') hasEmpty = true;
-      
+
       if (userVal === correctVal) {
         inp.classList.add('correct');
         inp.disabled = true;
@@ -241,21 +240,21 @@ const Stage6Controller = {
         allCorrect = false;
       }
     });
-    
+
     if (hasEmpty && !allCorrect) {
       this.triggerFeedback("Please fill in all blanks.", 'error');
       return;
     }
-    
+
     if (allCorrect) {
-      this.triggerFeedback("Masterful interpretation!", 'success');
+      this.triggerFeedback("Excellent", 'success');
       this.state.stageScore += 5;
       this.updateScoreboard(5);
-      
+
       if (domCache.skipBtn) domCache.skipBtn.disabled = true;
       if (domCache.submitBtn) domCache.submitBtn.textContent = "Next Definition";
     } else {
-      this.triggerFeedback("There are errors in your transcription. Review and try again.", 'error');
+      this.triggerFeedback("Wrong. click skip/forfeit for answer", 'error');
     }
   },
 
@@ -274,9 +273,9 @@ const Stage6Controller = {
       inp.classList.add('wrong');
       inp.disabled = true;
     });
-    
-    this.triggerFeedback("Skipped. Revealing transcription.", 'error');
-    
+
+    this.triggerFeedback("", 'error');
+
     const { domCache } = this.state;
     if (domCache.skipBtn) domCache.skipBtn.disabled = true;
     if (domCache.submitBtn) domCache.submitBtn.textContent = "Next Definition";
@@ -296,7 +295,7 @@ const Stage6Controller = {
     if (this.state.domCache.scoreEl) {
       this.state.domCache.scoreEl.textContent = this.state.gameData.score;
     }
-    
+
     const btn = this.state.domCache.submitBtn;
     if (btn) {
       const rect = btn.getBoundingClientRect();
@@ -314,10 +313,8 @@ const Stage6Controller = {
     sharedState.save(this.state.gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('08_stage6', 'Meaning Fill-In', this.state.stageScore, () => {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('09_stage7_boss_intro.html');
-      else window.location.href = '09_stage7_boss_intro.html';
-    });
+    if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame.html');
+    else window.location.href = '10_stage8_hall_of_fame.html';
   }
 };
 

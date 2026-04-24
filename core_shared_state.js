@@ -249,13 +249,18 @@ const DictionaryLogic = {
   // You hand the librarian a Letter and a Length, and it digs through 
   // the filing cabinet to bring you matched scientific words.
   fetchWords: function(letter, length) {
-    if (typeof window.STEMDictionary === 'undefined') return ["biology"]; 
+    if (typeof window.STEMDictionary === 'undefined') return []; 
     const words = window.STEMDictionary.getWordsByLetter(letter);
     
-    // We try to find words that match the exact target length first.
-    let matched = words.map(w => w.word).filter(w => w.length === length);
-    // If the library has no words of that exact size, we just take any word under that letter.
-    if (matched.length === 0) matched = words.map(w => w.word);
+    // We try to find words that match the exact target length first, AND have a valid definition!
+    let matched = words.filter(w => w.definition && w.definition.trim() !== "")
+                       .filter(w => w.word.length === length)
+                       .map(w => w.word);
+                       
+    // If the library has no words of that exact size, we just take any word under that letter with a definition.
+    if (matched.length === 0) {
+      matched = words.filter(w => w.definition && w.definition.trim() !== "").map(w => w.word);
+    }
     
     // The "sort(() => 0.5 - Math.random())" is a fancy trick to shuffle the deck of words so they are in a random order!
     return [...new Set(matched)].sort(() => 0.5 - Math.random());
@@ -264,11 +269,11 @@ const DictionaryLogic = {
   // Function: fetchMeaning
   // You give the librarian a word, and it hands you back the scientific definition.
   fetchMeaning: function(word) {
-    if (!word || typeof window.STEMDictionary === 'undefined') return "A standardized scientific definition.";
+    if (!word || typeof window.STEMDictionary === 'undefined') return "Error: Dictionary offline.";
     const firstLetter = word.charAt(0).toUpperCase();
     const wordsArray = window.STEMDictionary.getWordsByLetter(firstLetter);
     const found = wordsArray.find(w => w.word.toLowerCase() === word.toLowerCase());
-    return found ? found.definition : "A standardized scientific definition.";
+    return found ? found.definition : "Error: Definition not found in dictionary.";
   }
 };
 

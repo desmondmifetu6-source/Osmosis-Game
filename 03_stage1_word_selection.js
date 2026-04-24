@@ -15,13 +15,13 @@ const Stage1Controller = {
 
   init() {
     if (typeof initModal === 'function') initModal();
-    this.state.gameData = sharedState.load();
     sharedState.startTimer();
+    this.state.gameData = sharedState.load();
     sharedState.updateTimerUI();
 
     // Security Check
     if (!this.state.gameData.letter || typeof this.state.gameData.length === 'undefined') {
-      window.location.href = '00_login.html';
+      window.location.href = 'index.html';
       return;
     }
 
@@ -97,10 +97,13 @@ const Stage1Controller = {
     const { gameData, domCache } = this.state;
     const currentLetter = gameData.letter.toUpperCase();
 
-    let allWordsForLetter = ['biology', 'biosecurity', 'bacteria', 'botany', 'biodiversity']; // Backup
+    let allWordsForLetter = []; // We removed the fake fallback words!
     if (typeof window.STEMDictionary !== 'undefined') {
       const rawWords = window.STEMDictionary.getWordsByLetter(currentLetter);
-      if (rawWords.length > 0) allWordsForLetter = rawWords.map(w => w.word);
+      // ONLY accept words that actually have a definition in the dictionary!
+      if (rawWords.length > 0) {
+        allWordsForLetter = rawWords.filter(w => w.definition && w.definition.trim() !== "").map(w => w.word);
+      }
     }
 
     if (domCache.targetLengthEl) domCache.targetLengthEl.textContent = gameData.length;
@@ -300,16 +303,16 @@ const Stage1Controller = {
 
     // If we've completed all letters...
     if (usedCount >= 26) {
-      sharedState.recordStageScore('round2', 'Word Selection', gameData.selectedWords.length);
+      sharedState.recordStageScore('round2', 'Word Selection', gameData.selectedWords.length * 5);
       if (typeof showModal === 'function') {
         showModal('Run Complete', 'Alphabet run complete.');
         setTimeout(() => {
-          if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_primary_recall.html');
-          else window.location.href = '04_stage2_primary_recall.html';
+          if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_word_fillin.html');
+          else window.location.href = '04_stage2_word_fillin.html';
         }, 1700);
       } else {
-        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_primary_recall.html');
-        else window.location.href = '04_stage2_primary_recall.html';
+        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_word_fillin.html');
+        else window.location.href = '04_stage2_word_fillin.html';
       }
     } else {
       // Otherwise, keep hunting for the next letter!
@@ -337,18 +340,9 @@ const Stage1Controller = {
     }
     
     sharedState.save(gameData);
-    if (typeof showModal === 'function') {
-      showModal('Skipped', 'Skipping ahead.');
-      setTimeout(() => {
-        sharedState.recordStageScore('round2', 'Word Selection', gameData.selectedWords.length);
-        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_primary_recall.html');
-        else window.location.href = '04_stage2_primary_recall.html';
-      }, 1700);
-    } else {
-      sharedState.recordStageScore('round2', 'Word Selection', gameData.selectedWords.length);
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_primary_recall.html');
-      else window.location.href = '04_stage2_primary_recall.html';
-    }
+    sharedState.recordStageScore('round2', 'Word Selection', gameData.selectedWords.length * 5);
+    if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_word_fillin.html');
+    else window.location.href = '04_stage2_word_fillin.html';
   }
 };
 

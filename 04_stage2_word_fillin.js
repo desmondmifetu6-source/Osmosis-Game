@@ -23,12 +23,12 @@ const Stage2Controller = {
 
   async init() {
     if (typeof initModal === 'function') initModal();
-    this.state.gameData = sharedState.load();
     sharedState.startTimer();
+    this.state.gameData = sharedState.load();
     sharedState.updateTimerUI();
 
     if (!this.state.gameData.selectedWords || this.state.gameData.selectedWords.length === 0) {
-      window.location.href = '00_login.html';
+      window.location.href = 'index.html';
       return;
     }
 
@@ -278,11 +278,11 @@ const Stage2Controller = {
     
     sharedState.showStageScoreThen(
       '04_stage2',
-      'Round 1',
+      'Stage 2: Word Fill-in',
       this.state.roundScore,
       () => {
-        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('05_stage3_speed_recall.html');
-        else window.location.href = '05_stage3_speed_recall.html';
+        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('05_stage3_flash_recall.html');
+        else window.location.href = '05_stage3_flash_recall.html';
       }
     );
   }
