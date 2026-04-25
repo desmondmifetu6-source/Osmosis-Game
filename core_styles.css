@@ -171,15 +171,15 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 
 @media (max-width: 768px) {
   #global-game-timer {
-    top: 1rem;
+    top: 3.5rem;
     right: 1rem;
     padding: 0.4rem 0.8rem;
     font-size: 1rem;
   }
   .scoreboard {
     top: 1rem;
-    right: auto;
-    left: 1rem;
+    right: 1rem;
+    left: auto;
     padding: 0.4rem 0.8rem;
     font-size: 1rem;
   }
@@ -187,7 +187,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 
 @media (max-width: 480px) {
   .app-container { padding: 0.25rem; }
-  .card { padding: 1rem; border-radius: 8px; margin-top: 3.5rem; }
+  .card { padding: 1rem; border-radius: 8px; margin-top: 4.5rem; }
   h1.logo { font-size: 1.6rem; }
   .classic-btn { padding: 0.6rem 1rem; font-size: 0.9rem; margin-bottom: 0.5rem; }
   h2 { font-size: 1.1rem; margin-bottom: 0.8rem; }
@@ -196,16 +196,17 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   
   .scoreboard {
     top: 0.5rem;
-    right: auto;
-    left: 0.5rem;
+    right: 0.5rem;
+    left: auto;
     padding: 0.35rem 0.6rem;
     font-size: 0.8rem;
     border-width: 1.5px;
     gap: 4px;
   }
   #global-game-timer {
-    top: 0.5rem;
+    top: 3.2rem;
     right: 0.5rem;
+    left: auto;
     padding: 0.35rem 0.6rem;
     font-size: 0.8rem;
     border-width: 1.5px;
