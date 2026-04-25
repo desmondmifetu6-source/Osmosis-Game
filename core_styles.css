@@ -196,23 +196,25 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   
   .scoreboard {
     top: 0.5rem;
-    left: 0.5rem;
-    right: auto;
-    padding: 0.4rem 0.6rem;
-    font-size: 0.85rem;
-    border-width: 1.5px;
+    right: 50%;
+    left: auto;
+    transform: translateX(-2px);
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    border-width: 1px;
     gap: 4px;
-    height: 32px;
+    height: 30px;
   }
   #global-game-timer {
     top: 0.5rem;
-    right: 0.5rem;
-    left: auto;
-    padding: 0.4rem 0.6rem;
-    font-size: 0.85rem;
-    border-width: 1.5px;
+    left: 50%;
+    right: auto;
+    transform: translateX(2px);
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    border-width: 1px;
     gap: 4px;
-    height: 32px;
+    height: 30px;
   }
   #global-game-timer::before {
     font-size: 0.7rem;
