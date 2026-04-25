@@ -171,14 +171,15 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 
 @media (max-width: 768px) {
   #global-game-timer {
-    top: 3.5rem;
+    top: 1rem;
     right: 1rem;
     padding: 0.4rem 0.8rem;
     font-size: 1rem;
   }
   .scoreboard {
     top: 1rem;
-    right: 1rem;
+    right: auto;
+    left: 1rem;
     padding: 0.4rem 0.8rem;
     font-size: 1rem;
   }
@@ -186,7 +187,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 
 @media (max-width: 480px) {
   .app-container { padding: 0.25rem; }
-  .card { padding: 1rem; border-radius: 8px; margin-top: 3rem; }
+  .card { padding: 1rem; border-radius: 8px; margin-top: 3.5rem; }
   h1.logo { font-size: 1.6rem; }
   .classic-btn { padding: 0.6rem 1rem; font-size: 0.9rem; margin-bottom: 0.5rem; }
   h2 { font-size: 1.1rem; margin-bottom: 0.8rem; }
@@ -194,23 +195,24 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   input[type="text"], textarea { font-size: 0.9rem; padding: 0.6rem; margin-bottom: 1rem; }
   
   .scoreboard {
-    top: 0.25rem;
-    right: 0.25rem;
-    padding: 0.3rem 0.5rem;
-    font-size: 0.75rem;
-    border-width: 1px;
+    top: 0.5rem;
+    right: auto;
+    left: 0.5rem;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+    border-width: 1.5px;
     gap: 4px;
   }
   #global-game-timer {
-    top: 2.2rem;
-    right: 0.25rem;
-    padding: 0.3rem 0.5rem;
-    font-size: 0.75rem;
-    border-width: 1px;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+    border-width: 1.5px;
     gap: 4px;
   }
   #global-game-timer::before {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
   .floating-point {
     font-size: 1.5rem;
