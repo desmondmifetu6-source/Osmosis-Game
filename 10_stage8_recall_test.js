@@ -1,5 +1,5 @@
 // =====================================================================
-// FILE: 09_stage7_boss_phase.js (The Final Boss)
+// FILE: 10_stage8_recall_test.js (The Final Recall Test)
 // =====================================================================
 // Welcome to the final battle! This is like standing before a great king who 
 // wants you to interpret his dreams.
@@ -136,8 +136,8 @@ const Stage7Controller = {
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
     sharedState.showStageScoreThen('stage7', "Stage 7: Hall Of Fame Entry Conditionality: Revealing Nebuchadnezzar's Dream And Meaning:", stageScore, () => {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_hall_of_fame_congrats.html');
-      else window.location.href = '10b_hall_of_fame_congrats.html';
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_stage8_complete.html');
+      else window.location.href = '10b_stage8_complete.html';
     });
   },
 
@@ -202,8 +202,8 @@ const Stage7Controller = {
     const { sequence, phase } = this.state;
 
     if (sequence.length === 0) {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_hall_of_fame_congrats.html');
-      else window.location.href = '10b_hall_of_fame_congrats.html';
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_stage8_complete.html');
+      else window.location.href = '10b_stage8_complete.html';
       return;
     }
 

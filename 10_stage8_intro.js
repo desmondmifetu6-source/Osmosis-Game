@@ -1,5 +1,5 @@
 // =====================================================================
-// FILE: 10_stage8_hall_of_fame.js (Boss Stage Intro — The Chamber Doors)
+// FILE: 10_stage8_intro.js (Boss Stage Intro — The Chamber Doors)
 // =====================================================================
 // This file controls the dramatic two-page intro sequence that plays
 // immediately before the final boss stage (Stage 8).
@@ -10,7 +10,7 @@
 //        - Page 1 fades out when the player clicks the first "Next" button.
 //        - Page 2 fades in, building suspense before the hall of fame encounter.
 //   3. On the second "Next" click, navigates the player to the boss phase
-//      (10_stage8_boss_phase.html) using an animated page transition.
+//      (10_stage8_recall_test.html) using an animated page transition.
 
 document.addEventListener('DOMContentLoaded', () => {
   const gameData = sharedState.load();
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('nd-next-2')?.addEventListener('click', () => {
-    if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_boss_phase.html');
-    else window.location.href = '10_stage8_boss_phase.html';
+    if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_recall_test.html');
+    else window.location.href = '10_stage8_recall_test.html';
   });
 });

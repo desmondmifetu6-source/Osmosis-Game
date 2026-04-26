@@ -314,8 +314,8 @@ const Stage6Controller = {
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
     sharedState.showStageScoreThen('stage6', 'Stage 6: Filling-In Gaps In Definitions', this.state.stageScore, () => {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame.html');
-      else window.location.href = '10_stage8_hall_of_fame.html';
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_intro.html');
+      else window.location.href = '10_stage8_intro.html';
     });
   }
 };
