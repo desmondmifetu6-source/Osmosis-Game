@@ -110,6 +110,7 @@ const Stage7Controller = {
     let pts = 0;
     if (wOk) pts += 10;
     pts += Math.round(mRatio * 10);
+    pts = Math.max(0, pts); // Safety guard — score can never decrease here
 
     return { wOk, mRatio, pts };
   },
@@ -134,9 +135,9 @@ const Stage7Controller = {
 
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('nebuchadnezzar', 'Stage 7: Boss Phase', stageScore, () => {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('11_results.html');
-      else window.location.href = '11_results.html';
+    sharedState.showStageScoreThen('stage7', "Stage 7: Hall Of Fame Entry Conditionality: Revealing Nebuchadnezzar's Dream And Meaning:", stageScore, () => {
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_hall_of_fame_congrats.html');
+      else window.location.href = '10b_hall_of_fame_congrats.html';
     });
   },
 
@@ -201,8 +202,8 @@ const Stage7Controller = {
     const { sequence, phase } = this.state;
 
     if (sequence.length === 0) {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('11_results.html');
-      else window.location.href = '11_results.html';
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_hall_of_fame_congrats.html');
+      else window.location.href = '10b_hall_of_fame_congrats.html';
       return;
     }
 
@@ -247,7 +248,7 @@ const Stage7Controller = {
         if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
       } else {
         domCache.feedbackEl.className = 'nd-feedback bad';
-        domCache.feedbackEl.textContent = `Missed this one. +${g.pts} pts`;
+        domCache.feedbackEl.textContent = `Keep going — no points lost! The correct answer is shown below. (${pct}% match)`;
         if (typeof AudioManager !== 'undefined') AudioManager.play('error');
       }
     }

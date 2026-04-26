@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Hall of Fame</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="core_styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body, html {
+      width: 100%;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background: #f5f3ee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    /* ── Confetti Canvas ── */
+    #confetti-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Main Card ── */
+    .hof-card {
+      position: relative;
+      z-index: 1;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      max-width: 520px;
+      width: 92%;
+      padding: 3rem 2.5rem 3.5rem;
+      text-align: center;
+      animation: slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Laurel / Star Header ── */
+    .hof-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .hof-laurel {
+      font-size: 2.2rem;
+      animation: sway 3s ease-in-out infinite alternate;
+    }
+
+    .hof-star-icon {
+      font-size: 2rem;
+      color: #c8980a;
+    }
+
+    @keyframes sway {
+      from { transform: rotate(-4deg); }
+      to   { transform: rotate(4deg); }
+    }
+
+    .hof-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .hof-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      color: #c8980a;
+      font-size: 1rem;
+    }
+
+    .hof-divider::before,
+    .hof-divider::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: #c8980a;
+    }
+
+    /* ── Trophy ── */
+    .hof-trophy {
+      font-size: 6rem;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      animation: bounce 1.2s ease-in-out infinite alternate;
+      filter: drop-shadow(0 8px 20px rgba(200, 152, 10, 0.4));
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0) scale(1); }
+      to   { transform: translateY(-8px) scale(1.04); }
+    }
+
+    /* ── Congratulations Block ── */
+    .hof-congrats-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hof-congrats-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #111;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.6rem;
+    }
+
+    .hof-congrats-sub {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+
+    .hof-congrats-great {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Score Badge ── */
+    .hof-score-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #c8980a, #f5c842);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      margin-bottom: 2.5rem;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+      box-shadow: 0 4px 12px rgba(200, 152, 10, 0.35);
+    }
+
+    /* ── Continue Button ── */
+    .hof-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #0f1f3d;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 1rem 3rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 6px 20px rgba(15, 31, 61, 0.3);
+    }
+
+    .hof-btn:hover {
+      background: #1a3360;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(15, 31, 61, 0.4);
+    }
+
+    .hof-btn:active {
+      transform: translateY(0);
+    }
+
+    .hof-btn-arrow {
+      font-size: 1.2rem;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 480px) {
+      .hof-card { padding: 2rem 1.5rem 2.5rem; }
+      .hof-title { font-size: 2.2rem; }
+      .hof-trophy { font-size: 4.5rem; }
+      .hof-congrats-title { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="hof-card">
+    <!-- Laurel Header -->
+    <div class="hof-header">
+      <span class="hof-laurel">🌿</span>
+      <span class="hof-star-icon">★</span>
+      <span class="hof-laurel" style="transform: scaleX(-1);">🌿</span>
+    </div>
+
+    <h1 class="hof-title">Hall of Fame</h1>
+
+    <div class="hof-divider">★</div>
+
+    <!-- Trophy -->
+    <div class="hof-trophy">🏆</div>
+
+    <!-- Congrats -->
+    <div class="hof-congrats-icon">🎉</div>
+    <div class="hof-congrats-title">Congratulations!</div>
+    <p class="hof-congrats-sub">You have made it to the Hall of Fame.</p>
+    <p class="hof-congrats-great">You are great 🤝</p>
+
+    <!-- Score badge (filled by JS) -->
+    <div class="hof-score-badge" id="hof-score-display">Loading score...</div>
+
+    <br>
+
+    <!-- Continue Button -->
+    <button class="hof-btn" id="hof-continue-btn">
+      CONTINUE <span class="hof-btn-arrow">→</span>
+    </button>
+  </div>
+
+  <script src="core_shared_state.js"></script>
+  <script>
+    // Show the player's final score on the badge
+    (function () {
+      const gameData = sharedState.load();
+      const badge = document.getElementById('hof-score-display');
+      if (badge) badge.textContent = `Final Score: ${gameData.score || 0} pts`;
+    })();
+
+    // Continue button → go to results
+    document.getElementById('hof-continue-btn').addEventListener('click', () => {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('11_results.html');
+      else window.location.href = '11_results.html';
+    });
+
+    // ── Confetti ──────────────────────────────────────────────
+    (function () {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      let W, H, pieces = [];
+
+      function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+
+      function rand(min, max) { return Math.random() * (max - min) + min; }
+
+      const COLORS = ['#c8980a', '#f5c842', '#0f1f3d', '#ffffff', '#e8a020', '#3a5fa0'];
+
+      function spawn() {
+        return {
+          x: rand(0, W),
+          y: rand(-20, -5),
+          w: rand(6, 14),
+          h: rand(10, 20),
+          color: COLORS[Math.floor(Math.random() * COLORS.length)],
+          vx: rand(-1.5, 1.5),
+          vy: rand(2, 5),
+          angle: rand(0, Math.PI * 2),
+          spin: rand(-0.08, 0.08),
+          opacity: 1
+        };
+      }
+
+      function init() {
+        resize();
+        window.addEventListener('resize', resize);
+        for (let i = 0; i < 120; i++) {
+          const p = spawn();
+          p.y = rand(0, H); // pre-scatter on load
+          pieces.push(p);
+        }
+        loop();
+      }
+
+      function loop() {
+        ctx.clearRect(0, 0, W, H);
+        // Add new pieces
+        if (pieces.length < 150) pieces.push(spawn());
+
+        pieces = pieces.filter(p => p.opacity > 0.05);
+
+        pieces.forEach(p => {
+          p.x  += p.vx;
+          p.y  += p.vy;
+          p.angle += p.spin;
+          if (p.y > H + 20) p.opacity -= 0.02;
+
+          ctx.save();
+          ctx.globalAlpha = p.opacity;
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.angle);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+        });
+
+        requestAnimationFrame(loop);
+      }
+
+      init();
+    })();
+  </script>
+</body>
+
+</html>

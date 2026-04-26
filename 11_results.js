@@ -82,6 +82,13 @@ const ResultsController = {
         domCache.assimilationEl.textContent = `Rate of Assimilation: ${rateOfAssimilation} pts/sec`;
     }
 
+    // Format total time as Xm Ys
+    const totalMins = Math.floor(totalTimeSecs / 60);
+    const totalSecs = Math.floor(totalTimeSecs % 60);
+    const totalTimeFormatted = totalMins > 0
+      ? `${totalMins}m ${totalSecs}s`
+      : `${totalSecs}s`;
+
     this.state.currentNumber = 0;
     const duration = 2000;
     const interval = 30;
@@ -99,6 +106,11 @@ const ResultsController = {
           AudioManager.play('success');
         }
 
+        // Show total time spent once counter finishes
+        if (domCache.scoreEl) {
+          domCache.scoreEl.innerHTML = `Total Score: ${this.state.currentNumber}<br><span style="font-size:4rem; color:#ffd700; letter-spacing:2px;">time spent: ${totalTimeFormatted}</span>`;
+        }
+
         let bonusShown = false;
         const showBonus = () => {
           if (bonusShown) return;
@@ -109,10 +121,11 @@ const ResultsController = {
           // }
         };
         setTimeout(showBonus, 900);
+        return;
       }
 
       if (domCache.scoreEl) {
-        domCache.scoreEl.textContent = `Score: ${this.state.currentNumber}`;
+        domCache.scoreEl.textContent = `Total Score: ${this.state.currentNumber}`;
       }
     }, interval);
   },

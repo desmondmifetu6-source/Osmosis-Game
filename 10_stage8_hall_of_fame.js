@@ -1,9 +1,16 @@
 // =====================================================================
-// FILE: 09_stage7_boss_intro.js (The Chamber Doors)
+// FILE: 10_stage8_hall_of_fame.js (Boss Stage Intro — The Chamber Doors)
 // =====================================================================
-// Imagine walking down a long, scary hallway toward the final boss room.
-// This short file just handles the dramatic animations of the text pages 
-// fading in and out to set a spooky mood before you actually face the king!
+// This file controls the dramatic two-page intro sequence that plays
+// immediately before the final boss stage (Stage 8).
+//
+// Responsibilities:
+//   1. Loads the player's current score from sharedState and displays it.
+//   2. Manages a two-screen narrative transition:
+//        - Page 1 fades out when the player clicks the first "Next" button.
+//        - Page 2 fades in, building suspense before the hall of fame encounter.
+//   3. On the second "Next" click, navigates the player to the boss phase
+//      (10_stage8_boss_phase.html) using an animated page transition.
 
 document.addEventListener('DOMContentLoaded', () => {
   const gameData = sharedState.load();

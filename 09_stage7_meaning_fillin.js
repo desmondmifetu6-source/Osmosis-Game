@@ -313,8 +313,10 @@ const Stage6Controller = {
     sharedState.save(this.state.gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame.html');
-    else window.location.href = '10_stage8_hall_of_fame.html';
+    sharedState.showStageScoreThen('stage6', 'Stage 6: Filling-In Gaps In Definitions', this.state.stageScore, () => {
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame.html');
+      else window.location.href = '10_stage8_hall_of_fame.html';
+    });
   }
 };
 
