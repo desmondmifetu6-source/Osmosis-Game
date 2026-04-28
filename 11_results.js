@@ -86,7 +86,16 @@ const ResultsController = {
     if (opponent) {
       domCache.battleContainer.style.display = 'block';
       domCache.opponentName.textContent = opponent.name;
-      domCache.opponentPoints.textContent = opponent.score || 0;
+      
+      // If opponent hasn't submitted a score yet (is 0 or undefined), show waiting status
+      if (!opponent.score && opponent.score !== 0) {
+        domCache.opponentPoints.textContent = "...";
+        domCache.battleOutcome.textContent = "WAITING FOR OPPONENT";
+        domCache.battleOutcome.style.color = "#aaa";
+        return;
+      }
+
+      domCache.opponentPoints.textContent = opponent.score;
 
       const myScore = gameData.score || 0;
       const oppScore = opponent.score || 0;
