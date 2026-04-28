@@ -63,8 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Play Friends Logic (Multiplayer Battle)
   const playFriendsBtn = document.getElementById('play-friends-btn');
+  const multiplayerBtn = document.getElementById('multiplayer-btn');
+  
   if (playFriendsBtn) {
     playFriendsBtn.addEventListener('click', () => {
+      navigate('multiplayer_lobby.html');
+    });
+  }
+
+  if (multiplayerBtn) {
+    multiplayerBtn.addEventListener('click', () => {
       navigate('multiplayer_lobby.html');
     });
   }
