@@ -76,18 +76,57 @@
   <div class="app-container">
     <!-- Rules Screen -->
     <div class="card" id="rules-screen">
+      <h2 style="margin-bottom: 0.5rem;">Word selection stage</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.9rem;">Stage 1: Word selection</p>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem; text-align: left; margin-bottom: 2rem;">
+        <div
+          style="background: #fcfcfc; padding: 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: relative;">
+          <span
+            style="position: absolute; top: -10px; left: 1rem; background: #334155; color: white; font-size: 0.65rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;">📡
+            Selection</span>
+          <p style="font-size: 0.95rem; margin-top: 0.25rem; color: #1e293b; line-height: 1.4;">Words are selected
+            randomly with alphabets and numbers (alpha-numeric).</p>
+        </div>
+
+        <div
+          style="background: #fcfcfc; padding: 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: relative;">
+          <span
+            style="position: absolute; top: -10px; left: 1rem; background: #334155; color: white; font-size: 0.65rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;">📐
+            The Logic</span>
+          <p style="font-size: 0.95rem; margin-top: 0.25rem; color: #1e293b; line-height: 1.4;">The letter indicates the
+            section of the dictionary that the word is picked from and the number indicates the length of the word.</p>
+        </div>
+
+        <div
+          style="background: #fcfcfc; padding: 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: relative;">
+          <span
+            style="position: absolute; top: -10px; left: 1rem; background: #4f46e5; color: white; font-size: 0.65rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;">🎯
+            Your Goal</span>
+          <p style="font-size: 0.95rem; margin-top: 0.25rem; color: #1e293b; line-height: 1.4;">Choose the highlighted
+            word from the list of words projected
+          </p>
+        </div>
+      </div>
+
+      <!-- 
+      =====================================================================
+      LEGACY VERSION (Commented out for safety)
+      =====================================================================
       <h2>Word selection stage</h2>
       <div class="paper-alert">
         <ol style="margin: 0; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
           <li>Words are selected randomly with alphabets and numbers (alpha-numeric).</li>
-          <li>Letters selected are without replacement and Numbers selected are with replacement, for coverage of the
-            entire library.</li>
-          <li>The letter indicates the section of the dictionary that the word is picked from and the number indicates
-            the length of the word.</li>
+          <li>Letters selected are without replacement and Numbers selected are with replacement, for coverage of the entire library.</li>
+          <li>The letter indicates the section of the dictionary that the word is picked from and the number indicates the length of the word.</li>
           <li>Choose the highlighted word from the list of words projected.</li>
         </ol>
       </div>
       <button id="rules-continue-btn" class="classic-btn primary">Proceed</button>
+
+      -->
+
+      <button id="rules-continue-btn" class="classic-btn primary">proceed</button>
     </div>
 
     <!-- Generator Screen -->
