@@ -166,7 +166,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 }
 
 #global-game-timer::before {
-  content: "⏱️";
+  content: "Time Spent: ";
   font-size: 1rem;
 }
 
@@ -223,7 +223,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
     background: rgba(25, 135, 84, 0.9) !important;
   }
   #global-game-timer::before {
-    content: "⏱️";
+    content: "Time: ";
     font-size: 0.75rem;
   }
   .floating-point {
