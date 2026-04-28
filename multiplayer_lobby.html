@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Multiplayer Lobby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="core_styles.css">
+  <style>
+    .lobby-header { margin-bottom: 2rem; }
+    .room-code-display {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: 5px;
+      color: var(--accent-primary);
+      margin: 1.5rem 0;
+      font-family: 'Courier New', monospace;
+    }
+    .player-list {
+      background: var(--surface-dim);
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      text-align: left;
+    }
+    .player-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .player-entry:last-child { border-bottom: none; }
+    .player-name { font-weight: 600; }
+    .player-status { font-size: 0.8rem; text-transform: uppercase; color: var(--accent-green); font-weight: 800; }
+    
+    .mode-toggle { display: flex; gap: 1rem; margin-bottom: 2rem; }
+    .mode-btn { flex: 1; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0; background: #fff; cursor: pointer; transition: all 0.2s; font-weight: 600; }
+    .mode-btn.active { background: var(--accent-primary); color: #fff; border-color: var(--accent-primary); }
+    
+    #join-section { display: none; }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="card">
+      <div class="lobby-header">
+        <h1 class="logo" style="font-size: 2rem;">MULTILINK</h1>
+        <p style="color: var(--text-secondary);">Real-time Cognitive Combat</p>
+      </div>
+
+      <div class="mode-toggle">
+        <button id="mode-host" class="mode-btn active">Host Game</button>
+        <button id="mode-join" class="mode-btn">Join Game</button>
+      </div>
+
+      <!-- HOST SECTION -->
+      <div id="host-section">
+        <h3>Room Code</h3>
+        <div class="room-code-display" id="room-id">------</div>
+        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Share this code with your teammates.</p>
+        
+        <div class="player-list">
+          <div class="player-entry">
+            <span class="player-name" id="host-player-name">You</span>
+            <span class="player-status">Host</span>
+          </div>
+          <div id="extra-players">
+             <p style="text-align: center; color: var(--text-secondary); font-size: 0.85rem; padding: 1rem;">Waiting for players...</p>
+          </div>
+        </div>
+
+        <button id="start-multi-btn" class="classic-btn primary" disabled>Awaiting Connections...</button>
+      </div>
+
+      <!-- JOIN SECTION -->
+      <div id="join-section">
+        <h3>Enter Code</h3>
+        <input type="text" id="join-code-input" placeholder="000000" maxlength="6" style="text-transform: uppercase;">
+        <button id="confirm-join-btn" class="classic-btn primary">Establish Link</button>
+      </div>
+
+      <button onclick="window.location.href='index.html'" class="classic-btn outline">Back to Menu</button>
+    </div>
+  </div>
+
+  <script src="core_shared_state.js"></script>
+  <script src="multiplayer_lobby.js"></script>
+</body>
+</html>

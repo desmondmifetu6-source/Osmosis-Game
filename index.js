@@ -46,6 +46,7 @@ const LoginController = {
       switchUserLink: document.getElementById('switch-user-link'),
       loginBtn: document.getElementById('login-btn'),
       usernameInput: document.getElementById('username-input'),
+      multiplayerBtn: document.getElementById('multiplayer-btn'),
       akwaabaScreen: document.getElementById('akwaaba-screen')
     };
   },
@@ -91,6 +92,28 @@ const LoginController = {
     if (domCache.usernameInput) {
       domCache.usernameInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') this.handleLogin();
+      });
+    }
+
+    if (domCache.multiplayerBtn) {
+      domCache.multiplayerBtn.addEventListener('click', () => {
+        // If they are on the welcome back screen, they already have a saved user
+        if (savedUser) {
+          this.state.gameData.username = savedUser;
+          sharedState.save(this.state.gameData);
+          window.location.href = 'multiplayer_lobby.html';
+        } else {
+          // If they are on login screen, they need to enter a name first
+          const user = domCache.usernameInput ? domCache.usernameInput.value.trim() : '';
+          if (user) {
+            localStorage.setItem('osmosis_user', user);
+            this.state.gameData.username = user;
+            sharedState.save(this.state.gameData);
+            window.location.href = 'multiplayer_lobby.html';
+          } else {
+            if (typeof showModal === 'function') showModal('Notice', 'Please type your name first.');
+          }
+        }
       });
     }
   },
