@@ -93,8 +93,6 @@ const LoginController = {
         if (e.key === 'Enter') this.handleLogin();
       });
     }
-
-    }
   },
 
   handleLogin() {
