@@ -102,7 +102,7 @@ const LoginController = {
     if (user) {
       this.continueAs(user, 0);
     } else {
-      if (typeof showModal === 'function') showModal('Notice', 'Please enter your name to proceed.');
+      if (typeof showModal === 'function') showModal('Notice', 'Please type your name first.');
     }
   },
 

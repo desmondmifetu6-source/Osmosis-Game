@@ -10,9 +10,16 @@
     rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    body, html {
+    body,
+    html {
       width: 100%;
       min-height: 100vh;
       font-family: 'Inter', sans-serif;
@@ -27,8 +34,10 @@
     /* ── Confetti Canvas ── */
     #confetti-canvas {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
       z-index: 0;
     }
@@ -39,7 +48,7 @@
       z-index: 1;
       background: #ffffff;
       border-radius: 16px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
       max-width: 520px;
       width: 92%;
       padding: 3rem 2.5rem 3.5rem;
@@ -48,8 +57,15 @@
     }
 
     @keyframes slideUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ── Laurel / Star Header ── */
@@ -72,8 +88,13 @@
     }
 
     @keyframes sway {
-      from { transform: rotate(-4deg); }
-      to   { transform: rotate(4deg); }
+      from {
+        transform: rotate(-4deg);
+      }
+
+      to {
+        transform: rotate(4deg);
+      }
     }
 
     .hof-title {
@@ -115,8 +136,13 @@
     }
 
     @keyframes bounce {
-      from { transform: translateY(0) scale(1); }
-      to   { transform: translateY(-8px) scale(1.04); }
+      from {
+        transform: translateY(0) scale(1);
+      }
+
+      to {
+        transform: translateY(-8px) scale(1.04);
+      }
     }
 
     /* ── Congratulations Block ── */
@@ -158,7 +184,7 @@
       padding: 0.5rem 1.5rem;
       border-radius: 50px;
       margin-bottom: 2.5rem;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
       box-shadow: 0 4px 12px rgba(200, 152, 10, 0.35);
     }
 
@@ -198,10 +224,21 @@
 
     /* ── Mobile ── */
     @media (max-width: 480px) {
-      .hof-card { padding: 2rem 1.5rem 2.5rem; }
-      .hof-title { font-size: 2.2rem; }
-      .hof-trophy { font-size: 4.5rem; }
-      .hof-congrats-title { font-size: 1.4rem; }
+      .hof-card {
+        padding: 2rem 1.5rem 2.5rem;
+      }
+
+      .hof-title {
+        font-size: 2.2rem;
+      }
+
+      .hof-trophy {
+        font-size: 4.5rem;
+      }
+
+      .hof-congrats-title {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
@@ -264,7 +301,7 @@
       let W, H, pieces = [];
 
       function resize() {
-        W = canvas.width  = window.innerWidth;
+        W = canvas.width = window.innerWidth;
         H = canvas.height = window.innerHeight;
       }
 
@@ -306,8 +343,8 @@
         pieces = pieces.filter(p => p.opacity > 0.05);
 
         pieces.forEach(p => {
-          p.x  += p.vx;
-          p.y  += p.vy;
+          p.x += p.vx;
+          p.y += p.vy;
           p.angle += p.spin;
           if (p.y > H + 20) p.opacity -= 0.02;
 

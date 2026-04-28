@@ -1,8 +1,7 @@
-// =====================================================================
-// FILE: 07_stage5_definition_selection.js (The Multiple Choice Test)
+// FILE: 08_stage6_definition_selection.js (The Multiple Choice Test)
 // =====================================================================
 
-const Stage5Controller = {
+const Stage6Controller = {
   state: {
     gameData: null,
     domCache: {},
@@ -51,7 +50,7 @@ const Stage5Controller = {
 
   attachListeners() {
     const { domCache } = this.state;
-    
+
     if (domCache.nextBtn) {
       domCache.nextBtn.addEventListener('click', () => {
         this.state.testIndex++;
@@ -91,7 +90,7 @@ const Stage5Controller = {
 
   renderQuestion() {
     const { domCache, testSequence, testIndex, gameData } = this.state;
-    
+
     this.state.answerLocked = false;
     if (domCache.nextBtn) domCache.nextBtn.style.display = 'none';
     if (domCache.feedbackEl) {
@@ -115,15 +114,15 @@ const Stage5Controller = {
     }
 
     if (options.length < 4 && typeof window.STEMDictionary !== 'undefined') {
-      const all = window.STEMDictionary.getWordsByLetter('B'); 
+      const all = window.STEMDictionary.getWordsByLetter('B');
       for (let w of all) {
-         if (options.length < 4 && !options.includes(w.word)) {
-            options.push(w.word);
-         }
+        if (options.length < 4 && !options.includes(w.word)) {
+          options.push(w.word);
+        }
       }
     }
 
-    while(options.length < 4) {
+    while (options.length < 4) {
       options.push("Anomaly");
     }
 
@@ -157,7 +156,7 @@ const Stage5Controller = {
         domCache.feedbackEl.className = 'feedback success';
       }
       if (typeof AudioManager !== 'undefined') AudioManager.play('success');
-      
+
       this.state.stageScore += 5;
       this.updateScoreboard(5, btn);
     } else {
@@ -200,8 +199,8 @@ const Stage5Controller = {
   finishStage() {
     sharedState.save(this.state.gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
-    
-    sharedState.showStageScoreThen('stage5', 'Stage 5: Selecting Word Matching Definition', this.state.stageScore, () => {
+
+    sharedState.showStageScoreThen('stage6', 'Stage 6: Match & Master: Terms & Meanings', this.state.stageScore, () => {
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('09_stage7_meaning_fillin.html');
       else window.location.href = '09_stage7_meaning_fillin.html';
     });
@@ -209,7 +208,7 @@ const Stage5Controller = {
 };
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => Stage5Controller.init());
+  document.addEventListener('DOMContentLoaded', () => Stage6Controller.init());
 } else {
-  Stage5Controller.init();
+  Stage6Controller.init();
 }

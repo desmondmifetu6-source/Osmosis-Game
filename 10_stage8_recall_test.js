@@ -8,7 +8,7 @@
 // You have to type back the exact word and meaning entirely from memory. 
 // Get it right, and the king rewards you. Get it wrong, and you lose points!
 
-const Stage7Controller = {
+const Stage8Controller = {
   state: {
     gameData: null,
     domCache: {},
@@ -16,7 +16,8 @@ const Stage7Controller = {
     idx: -1,
     phase: 'intro',
     stageStartScore: 0,
-    isFinishing: false
+    isFinishing: false,
+    isSecondChance: false
   },
 
   CONFIG: {
@@ -24,6 +25,7 @@ const Stage7Controller = {
   },
 
   init() {
+    if (typeof initModal === 'function') initModal();
     sharedState.startTimer();
     this.state.gameData = sharedState.load();
     sharedState.updateTimerUI();
@@ -40,6 +42,7 @@ const Stage7Controller = {
     this.cacheDOM();
     this.renderInitialUI();
     this.attachListeners();
+    this.advanceToNextCard(); // Auto-start — no need for a "Continue" click
   },
 
   cacheDOM() {
@@ -135,7 +138,7 @@ const Stage7Controller = {
 
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('stage7', "Stage 7: Hall Of Fame Entry Conditionality: Revealing Nebuchadnezzar's Dream And Meaning:", stageScore, () => {
+    sharedState.showStageScoreThen('stage7', "Stage 7: Hall of Fame", stageScore, () => {
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_stage8_complete.html');
       else window.location.href = '10b_stage8_complete.html';
     });
@@ -190,6 +193,7 @@ const Stage7Controller = {
   },
 
   advanceToNextCard() {
+    this.state.isSecondChance = false;
     this.state.idx += 1;
     if (this.state.idx >= this.state.sequence.length) {
       this.finishStage();
@@ -217,38 +221,106 @@ const Stage7Controller = {
     this.submitAnswer();
   },
 
-  submitAnswer() {
-    // This happens when you confidently click "Check".
-    // We look at what you typed, ask the teacher (gradeAttempt) how you did, 
-    // and figure out what color ribbon or harsh words you get from the King!
-    const { domCache, sequence, idx, gameData } = this.state;
+  triggerFlashSequence(word, meaning) {
+    const { domCache, idx, sequence } = this.state;
 
+    // Flash logic
+    if (domCache.inputWrapEl) domCache.inputWrapEl.style.display = 'none';
+    if (domCache.memoryBoxEl) {
+      domCache.memoryBoxEl.style.display = 'flex';
+      domCache.memoryBoxEl.innerHTML = `<div class="nd-word">${this.escapeHTML(word)}</div><div class="nd-meaning">${this.escapeHTML(meaning)}</div>`;
+    }
+    if (domCache.mainBtn) {
+      domCache.mainBtn.disabled = true;
+      domCache.mainBtn.textContent = 'Memorize...';
+    }
+
+    setTimeout(() => {
+      if (domCache.memoryBoxEl) {
+        domCache.memoryBoxEl.innerHTML = `<div class="nd-hidden-note">Try again! (Half points available)</div>`;
+      }
+      if (domCache.inputWrapEl) domCache.inputWrapEl.style.display = 'block';
+      if (domCache.wordInput) domCache.wordInput.focus();
+      if (domCache.mainBtn) {
+        domCache.mainBtn.disabled = false;
+        domCache.mainBtn.textContent = (idx === sequence.length - 1) ? 'Check & Finish' : 'Check';
+      }
+    }, 2500);
+  },
+
+  submitAnswer() {
+    const { domCache, sequence, idx, gameData, isSecondChance } = this.state;
     const word = sequence[idx];
     const meaning = (gameData.meanings && gameData.meanings[word]) ? gameData.meanings[word] : '';
-
     const userWord = domCache.wordInput ? domCache.wordInput.value : '';
     const userMeaning = domCache.meaningInput ? domCache.meaningInput.value : '';
 
     const g = this.gradeAttempt(userWord, userMeaning, word, meaning);
+    const isPerfect = (g.wOk && g.mRatio >= 0.8);
 
-    gameData.score = (gameData.score || 0) + g.pts;
+    if (!isPerfect && !isSecondChance) {
+      // Trigger Second Chance via Popup
+      this.state.isSecondChance = true;
+      
+      const promptText = "Incorrect. You have a second chance for half points. Prepare to read carefully...";
+      
+      if (typeof window.showModal === 'function') {
+        window.showModal(
+          "Second Chance", 
+          promptText, 
+          () => {
+            this.triggerFlashSequence(word, meaning);
+          },
+          () => {
+            // Forfeit Logic: Show answer, no points, move to next
+            if (domCache.feedbackEl) {
+              domCache.feedbackEl.className = 'nd-feedback bad';
+              domCache.feedbackEl.textContent = "Forfeited. Look at the answer and click next.";
+            }
+            if (domCache.revealWordEl) domCache.revealWordEl.textContent = word;
+            if (domCache.revealMeaningEl) domCache.revealMeaningEl.textContent = meaning;
+            if (domCache.revealEl) domCache.revealEl.style.display = 'block';
+            this.state.phase = 'next';
+            if (domCache.mainBtn) {
+              domCache.mainBtn.textContent = (idx === sequence.length - 1) ? 'Finish to Results' : 'Next';
+            }
+          }
+        );
+      } else {
+        // Fallback if modal system is somehow missing
+        if (domCache.feedbackEl) {
+          domCache.feedbackEl.className = 'nd-feedback partial';
+          domCache.feedbackEl.textContent = promptText;
+        }
+        setTimeout(() => this.triggerFlashSequence(word, meaning), 1000);
+      }
+      
+      if (typeof AudioManager !== 'undefined') AudioManager.play('error');
+      return;
+    }
+
+    // Final grading (either perfect on first try, or any result on second try)
+    let finalPts = g.pts;
+    if (isSecondChance) finalPts = Math.round(finalPts / 2);
+
+    gameData.score = (gameData.score || 0) + finalPts;
     if (domCache.scoreEl) domCache.scoreEl.textContent = gameData.score;
     sharedState.save(gameData);
 
     const pct = Math.round(g.mRatio * 100);
 
     if (domCache.feedbackEl) {
-      if (g.wOk && g.mRatio >= 0.8) {
+      if (isPerfect) {
         domCache.feedbackEl.className = 'nd-feedback ok';
-        domCache.feedbackEl.textContent = `You have succesfully  revealed his dream and its meaning The King is pleased ! ! +${g.pts} pts`;
+        domCache.feedbackEl.textContent = `You have successfully remembered! +${finalPts} pts`;
         if (typeof AudioManager !== 'undefined') AudioManager.play('success');
       } else if (g.wOk || g.mRatio >= 0.50) {
         domCache.feedbackEl.className = 'nd-feedback partial';
-        domCache.feedbackEl.textContent = `The King is partially pleased for partial interpretation! you gained a token reward of   +${g.pts} pts (${pct}% match)`;
+        domCache.feedbackEl.textContent = `You have partially remembered +${finalPts} pts (${pct}% match)`;
         if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
       } else {
         domCache.feedbackEl.className = 'nd-feedback bad';
-        domCache.feedbackEl.textContent = `Keep going — no points lost! The correct answer is shown below. (${pct}% match)`;
+        domCache.feedbackEl.textContent = `Keep going, The correct answer is shown below. (${pct}% match)`;
         if (typeof AudioManager !== 'undefined') AudioManager.play('error');
       }
     }
@@ -265,7 +337,7 @@ const Stage7Controller = {
 };
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => Stage7Controller.init());
+  document.addEventListener('DOMContentLoaded', () => Stage8Controller.init());
 } else {
-  Stage7Controller.init();
+  Stage8Controller.init();
 }

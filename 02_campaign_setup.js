@@ -65,12 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // If we ran out of alphabet letters, they beat all sections! Move to Stage 2.
     if (availableLetters.length === 0) {
-      if (typeof showModal === 'function') {
-        showModal('Mission Complete', 'Every letter done — continuing to the next stage.');
-        setTimeout(() => navigate('04_stage2_primary_recall.html'), 1700);
-      } else {
-        navigate('04_stage2_primary_recall.html');
-      }
+      navigate('04_stage2_primary_recall.html');
       return;
     }
 
@@ -103,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch words for this letter to determine an appropriate length
     if (typeof window.STEMDictionary === 'undefined') {
       if (typeof showModal === 'function') {
-        showModal('System Error', 'The Dictionary Archives are currently offline. Please refresh the page.');
+        showModal('Error', 'Dictionary offline. Please refresh the page.');
       } else {
         alert("CRITICAL ERROR: Dictionary failed to load.");
       }

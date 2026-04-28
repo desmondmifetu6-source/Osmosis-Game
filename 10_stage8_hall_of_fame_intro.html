@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Stage 7: Hall of Fame Challenge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="core_styles.css">
+  <style>
+    .intro-card {
+      max-width: 680px;
+      margin: auto;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .intro-title {
+      font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+      border-bottom: 2px dashed var(--text-secondary);
+      padding-bottom: 1rem;
+    }
+
+    .intro-narrative {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-narrative strong {
+      color: var(--accent-primary);
+    }
+
+    .king-image-wrap {
+      margin: 1.5rem auto;
+      max-width: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
+      border: 3px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .king-image-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .intro-challenge {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      text-align: left;
+      margin-bottom: 2rem;
+      padding: 1.2rem 1.5rem;
+      background: rgba(79, 70, 229, 0.06);
+      border-left: 4px solid var(--accent-primary);
+      border-radius: 4px;
+    }
+
+    .intro-challenge strong {
+      color: #c62828;
+    }
+
+    .continue-btn {
+      font-family: var(--font-main);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 1rem 3rem;
+      background: var(--text-main);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .continue-btn:hover {
+      background: var(--accent-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+    }
+
+    .continue-btn:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      .intro-card {
+        padding: 1.5rem 1rem;
+      }
+
+      .intro-narrative,
+      .intro-challenge {
+        font-size: 0.95rem;
+      }
+
+      .king-image-wrap {
+        max-width: 280px;
+      }
+
+      .continue-btn {
+        width: 100%;
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scoreboard" id="scoreboard">Score: <span id="current-score">0</span></div>
+  <div class="app-container">
+    <div class="card intro-card">
+
+      <h2 class="intro-title">Stage 7: Hall of Fame</h2>
+
+      <p class="intro-narrative">
+        You are on your Final journey to Hall of Fame, but got lost.
+      </p>
+
+      <p class="intro-narrative">
+        <strong>Memory Diffusion:</strong> As solution, all the terms you met during the Game will
+        flash at you for 5 seconds, per term.Type these terms and meanings to enter the Hall of Fame!
+      </p>
+
+      <button id="continue-btn" class="continue-btn">Continue</button>
+
+    </div>
+  </div>
+  <script src="core_dictionary.js"></script>
+  <script src="core_shared_state.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Load score
+      const gameData = sharedState.load();
+      const scoreEl = document.getElementById('current-score');
+      if (scoreEl && gameData.score) scoreEl.textContent = gameData.score;
+
+      // Continue button → go to the recall test
+      const btn = document.getElementById('continue-btn');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_recall_test.html');
+          else window.location.href = '10_stage8_recall_test.html';
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

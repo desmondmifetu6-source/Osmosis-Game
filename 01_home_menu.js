@@ -6,7 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize & Security Check
   if (typeof initModal === 'function') initModal();
-  
+
   const gameData = sharedState.load();
   if (!gameData.username) {
     navigate('index.html');
@@ -36,10 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btn) btn.addEventListener('click', () => navigate(url));
   }
 
-  // 5. Play Solo Logic
+  // 5. Play Solo Logic — show popup first
   const playSoloBtn = document.getElementById('play-solo-btn');
-  if (playSoloBtn) {
+  const soloOverlay = document.getElementById('solo-popup-overlay');
+  const soloContinueBtn = document.getElementById('solo-popup-continue');
+
+  if (playSoloBtn && soloOverlay) {
     playSoloBtn.addEventListener('click', () => {
+      soloOverlay.classList.add('active');
+    });
+  }
+
+  if (soloContinueBtn) {
+    soloContinueBtn.addEventListener('click', () => {
       // Wipe session data for a fresh run
       Object.assign(gameData, {
         score: 0, usedLetters: [], selectedWords: [], stageScores: {},
@@ -47,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       sharedState.save(gameData);
 
-      // Navigate instantly without restrictive popups
+      // Navigate to campaign setup
       navigate('02_campaign_setup.html');
     });
   }
@@ -57,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (playFriendsBtn) {
     playFriendsBtn.addEventListener('click', () => {
       if (typeof showModal === 'function') {
-        showModal('Tip', 'This mode can be played manually in groups by each player acquiring the dictionary. In this case the hard-copy is the tool for playing the game not the computer or phone.');
+        showModal('Tip', 'This mode can be played manually in groups by each player acquiring the STEM Dictionary. In this case the hard-copy is the tool for playing the game not the computer or phone.The competition is super exciting and the feeling is like participating in a live game such as football , boxing or athletics');
       }
     });
   }

@@ -59,7 +59,7 @@ const Stage1Controller = {
     
     const currentLetter = gameData.letter.toUpperCase();
     if (domCache.targetLetterEl) domCache.targetLetterEl.textContent = currentLetter;
-    if (domCache.progressEl) domCache.progressEl.textContent = gameData.usedLetters ? gameData.usedLetters.length : 1;
+    if (domCache.progressEl) domCache.progressEl.textContent = (gameData.selectedWords ? gameData.selectedWords.length : 0) + 1;
   },
 
   attachListeners() {
@@ -211,7 +211,7 @@ const Stage1Controller = {
     if (tile.dataset.collected === "true") return;
 
     if (this.state.localSelectedWord !== null) {
-      if (typeof showModal === 'function') showModal('Limit Reached', 'You can only select 1 word per letter.');
+      if (typeof showModal === 'function') showModal('Limit', 'Only 1 word per letter.');
       return;
     }
 
@@ -304,28 +304,12 @@ const Stage1Controller = {
     // If we've completed all letters...
     if (usedCount >= 26) {
       sharedState.recordStageScore('03_stage1', 'Stage 1: Word Selection', gameData.selectedWords.length * 5);
-      if (typeof showModal === 'function') {
-        showModal('Run Complete', 'Alphabet run complete.');
-        setTimeout(() => {
-          if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_word_fillin.html');
-          else window.location.href = '04_stage2_word_fillin.html';
-        }, 1700);
-      } else {
-        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_word_fillin.html');
-        else window.location.href = '04_stage2_word_fillin.html';
-      }
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_word_fillin.html');
+      else window.location.href = '04_stage2_word_fillin.html';
     } else {
       // Otherwise, keep hunting for the next letter!
-      if (typeof showModal === 'function') {
-        showModal('Great Job!', 'Nice pick! Moving to the next letter.');
-        setTimeout(() => {
-          if (typeof window.navigateWithTransition === 'function') navigateWithTransition('02_campaign_setup.html');
-          else window.location.href = '02_campaign_setup.html';
-        }, 1700);
-      } else {
-        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('02_campaign_setup.html');
-        else window.location.href = '02_campaign_setup.html';
-      }
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('02_campaign_setup.html');
+      else window.location.href = '02_campaign_setup.html';
     }
   },
 
@@ -335,7 +319,7 @@ const Stage1Controller = {
       gameData.selectedWords.push(localSelectedWord);
     }
     if (gameData.selectedWords.length === 0) {
-      if (typeof showModal === 'function') showModal('Cannot Proceed', 'You must select at least 1 word to skip.');
+      if (typeof showModal === 'function') showModal('Wait', 'Select at least 1 word before skipping.');
       return;
     }
     

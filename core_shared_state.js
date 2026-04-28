@@ -14,10 +14,10 @@
  * we can put variables (like score) inside the backpack to carry them around!
  */
 const sharedState = {
-  
+
   // Function: load
   // When we need to look in the backpack to grab our stats, we call 'load()'.
-  load: function() {
+  load: function () {
     // We open the backpack and look for 'gameState'.
     // If we find it, we read it. If it's completely empty (||), we create a brand new, empty save file!
     return JSON.parse(sessionStorage.getItem('gameState')) || {
@@ -29,7 +29,7 @@ const sharedState = {
 
   // Function: save
   // When we earn points or learn new words, we need to put the new info back into the backpack.
-  save: function(state) {
+  save: function (state) {
     // JSON.stringify is like squishing all your data into a flat piece of paper 
     // so it fits inside the backpack cleanly.
     sessionStorage.setItem('gameState', JSON.stringify(state));
@@ -37,13 +37,13 @@ const sharedState = {
 
   // Function: startTimer
   // This is a stopwatch that starts ticking the moment a level begins.
-  startTimer: function() {
+  startTimer: function () {
     const state = this.load(); // Grab the backpack
     if (!state.sessionStartedAt) {
       state.sessionStartedAt = Date.now(); // Record exactly what time it is right now
     }
     state.sessionEndedAt = null;
-    
+
     // If the stopwatch hasn't started yet...
     if (!state.startTime) {
       state.startTime = Date.now(); // Click the stopwatch button!
@@ -53,12 +53,12 @@ const sharedState = {
 
   // Function: stopTimer
   // Stops the stopwatch when you finish the stage to see how long you took.
-  stopTimer: function() {
+  stopTimer: function () {
     const state = this.load();
     if (state.startTime) {
       const now = Date.now();
       // Add the time you just spent onto your total playtime.
-      state.totalTime += (now - state.startTime); 
+      state.totalTime += (now - state.startTime);
       state.startTime = null; // Reset the current stage timer
       state.sessionEndedAt = now;
       this.save(state);
@@ -68,7 +68,7 @@ const sharedState = {
   // Function: getFormattedTime
   // Computers count time in milliseconds (thousands of a second). 
   // Humans don't read time like that. This converts "65000 milliseconds" into "1:05" (1 minute, 5 secs).
-  getFormattedTime: function(ms) {
+  getFormattedTime: function (ms) {
     const totalSeconds = Math.floor(ms / 1000); // Chop off the milliseconds
     const minutes = Math.floor(totalSeconds / 60); // Find out how many full minutes fit 
     const seconds = totalSeconds % 60; // Find the leftover seconds
@@ -78,17 +78,17 @@ const sharedState = {
 
   // Function: formatDateTime
   // Converts computer timestamp numbers into a human-readable calendar date.
-  formatDateTime: function(ts) {
+  formatDateTime: function (ts) {
     if (!ts) return 'N/A';
     return new Date(ts).toLocaleString();
   },
 
   // Function: recordStageScore
   // Think of this like a report card. It records exactly how you did on a specific test.
-  recordStageScore: function(stageKey, stageLabel, score) {
+  recordStageScore: function (stageKey, stageLabel, score) {
     const state = this.load();
     if (!state.stageScores || typeof state.stageScores !== 'object') state.stageScores = {};
-    
+
     // We create a new folder for the specific stage, saving your score and the time you finished it.
     state.stageScores[stageKey] = {
       label: stageLabel || stageKey,
@@ -99,27 +99,15 @@ const sharedState = {
   },
 
   // Function: showStageScoreThen
-  // When you beat a level, this shows a popup praising you, then magically teleports you to the next level.
-  showStageScoreThen: function(stageKey, stageLabel, score, onContinue) {
+  // When you beat a level, this magically teleports you to the next level seamlessly without a popup.
+  showStageScoreThen: function (stageKey, stageLabel, score, onContinue) {
     this.recordStageScore(stageKey, stageLabel, score); // Update report card
-    if (typeof window.showModal === 'function') {
-      const state = this.load();
-      // Trigger the popup window!
-      window.showModal(`${stageLabel} Complete`, `Stage score: ${score} pts\nTotal score: ${state.score || 0} pts`);
-    }
-    
-    // After 1.7 seconds (1700 ms), we automatically close the popup and trigger the 'onContinue' command
-    // to move to the next stage.
-    setTimeout(() => {
-      const overlay = document.getElementById('modal-overlay');
-      if (overlay) overlay.classList.add('hidden');
-      if (typeof onContinue === 'function') onContinue();
-    }, 1700);
+    if (typeof onContinue === 'function') onContinue();
   },
 
   // Function: ensureGlobalTimer
   // If the screen doesn't have a clock visible, this physically builds a clock onto the webpage using code!
-  ensureGlobalTimer: function() {
+  ensureGlobalTimer: function () {
     let el = document.getElementById('global-game-timer');
     if (!el) {
       el = document.createElement('div'); // Create a new empty internet box (div)
@@ -131,10 +119,10 @@ const sharedState = {
 
   // Function: updateTimerUI
   // This is the animated ticking clock you see on the screen.
-  updateTimerUI: function(elementId = 'global-game-timer') {
+  updateTimerUI: function (elementId = 'global-game-timer') {
     const state = this.load();
     if (!state.startTime) return;
-    
+
     const el = elementId === 'global-game-timer' ? this.ensureGlobalTimer() : document.getElementById(elementId);
     if (!el) return;
 
@@ -151,10 +139,10 @@ const sharedState = {
 
   // Function: getLevel
   // This determines your overall Rank in the game based on your total persistent score.
-  getLevel: function() {
+  getLevel: function () {
     // Look for the absolute total score across all play sessions
     const score = parseInt(localStorage.getItem('osmosis_total_score')) || 0;
-    
+
     // If you have a ton of points, you get higher ranks!
     if (score >= 3001) return { name: 'Titan', minLen: 12, maxLen: 30, next: Infinity };
     if (score >= 1501) return { name: 'Oak', minLen: 9, maxLen: 11, next: 3001 };
@@ -169,36 +157,36 @@ const sharedState = {
 // This creates all those cool little bloops and bleeps you hear.
 const AudioManager = {
   ctx: null,
-  
+
   // Function: init
   // Starts up the "Sound Engine" inside the browser.
-  init: function() {
+  init: function () {
     if (!this.ctx) {
       try {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
         this.ctx = new AudioContext(); // We buy a brand new synthesizer
-      } catch (err) {}
+      } catch (err) { }
     }
   },
-  
+
   // Function: play
   // Instead of using pre-recorded MP3 files, this ACTUALLY GENERATES SOUNDWAVES 
   // live using math! 
-  play: function(type) {
+  play: function (type) {
     if (!this.ctx) return;
     // Sometimes browsers pause the sound engine to save battery. We wake it up.
     if (this.ctx.state === 'suspended') this.ctx.resume();
-    
+
     const osc = this.ctx.createOscillator(); // Oscillator = The thing that vibrates to make sound
     const gain = this.ctx.createGain(); // Gain = The Volume Knob
-    
+
     osc.connect(gain); // Connect the instrument to the volume knob
     gain.connect(this.ctx.destination); // Connect the volume knob to your computer speakers
-    
+
     const now = this.ctx.currentTime;
-    
+
     // Depending on what we want to hear, we change the shape of the soundwave!
-    switch(type) {
+    switch (type) {
       case 'click':
         // A simple smooth 'sine' wave that gently fades out.
         osc.type = 'sine'; osc.frequency.setValueAtTime(150, now); osc.frequency.exponentialRampToValueAtTime(40, now + 0.1);
@@ -244,31 +232,31 @@ document.addEventListener('click', (e) => {
 // =====================================================================
 // This is an assistant that talks strictly to our word library (core_dictionary.js).
 const DictionaryLogic = {
-  
+
   // Function: fetchWords
   // You hand the librarian a Letter and a Length, and it digs through 
   // the filing cabinet to bring you matched scientific words.
-  fetchWords: function(letter, length) {
-    if (typeof window.STEMDictionary === 'undefined') return []; 
+  fetchWords: function (letter, length) {
+    if (typeof window.STEMDictionary === 'undefined') return [];
     const words = window.STEMDictionary.getWordsByLetter(letter);
-    
+
     // We try to find words that match the exact target length first, AND have a valid definition!
     let matched = words.filter(w => w.definition && w.definition.trim() !== "")
-                       .filter(w => w.word.length === length)
-                       .map(w => w.word);
-                       
+      .filter(w => w.word.length === length)
+      .map(w => w.word);
+
     // If the library has no words of that exact size, we just take any word under that letter with a definition.
     if (matched.length === 0) {
       matched = words.filter(w => w.definition && w.definition.trim() !== "").map(w => w.word);
     }
-    
+
     // The "sort(() => 0.5 - Math.random())" is a fancy trick to shuffle the deck of words so they are in a random order!
     return [...new Set(matched)].sort(() => 0.5 - Math.random());
   },
-  
+
   // Function: fetchMeaning
   // You give the librarian a word, and it hands you back the scientific definition.
-  fetchMeaning: function(word) {
+  fetchMeaning: function (word) {
     if (!word || typeof window.STEMDictionary === 'undefined') return "Error: Dictionary offline.";
     const firstLetter = word.charAt(0).toUpperCase();
     const wordsArray = window.STEMDictionary.getWordsByLetter(firstLetter);
@@ -292,20 +280,46 @@ function initModal() {
     <div class="card modal-card" style="max-width: 400px; margin: auto;">
       <h3 id="modal-title">Notice</h3>
       <p id="modal-text"></p>
-      <button id="modal-close-btn" class="classic-btn" style="margin-top:20px;">Continue</button>
+      <div id="modal-btn-wrap" style="display:flex; gap:10px; margin-top:20px;">
+        <button id="modal-forfeit-btn" class="classic-btn secondary" style="display:none; flex:1;">Forfeit</button>
+        <button id="modal-close-btn" class="classic-btn" style="flex:1;">Continue</button>
+      </div>
     </div>
   `;
   document.body.appendChild(overlay); // Stick it onto the page
-  
+
   // When you click close, we just hide it by putting the 'hidden' class back on.
   document.getElementById('modal-close-btn').addEventListener('click', () => {
     overlay.classList.add('hidden');
+    if (typeof window.modalCallback === 'function') {
+      const cb = window.modalCallback;
+      window.modalCallback = null;
+      cb();
+    }
   });
-  
-  // This creates a global command anywhere in the game to force the modal to show.
-  window.showModal = function(title, text) {
+
+  document.getElementById('modal-forfeit-btn').addEventListener('click', () => {
+    overlay.classList.add('hidden');
+    if (typeof window.modalForfeitCallback === 'function') {
+      const cb = window.modalForfeitCallback;
+      window.modalForfeitCallback = null;
+      cb();
+    }
+  });
+
+  window.showModal = function (title, text, onContinue, onForfeit) {
     document.getElementById('modal-title').textContent = title;
     document.getElementById('modal-text').textContent = text;
+    window.modalCallback = onContinue;
+    window.modalForfeitCallback = onForfeit;
+
+    const forfeitBtn = document.getElementById('modal-forfeit-btn');
+    if (onForfeit) {
+      forfeitBtn.style.display = 'block';
+    } else {
+      forfeitBtn.style.display = 'none';
+    }
+
     overlay.classList.remove('hidden');
   }
 }
@@ -375,7 +389,7 @@ document.addEventListener('keydown', (e) => {
           submitBtn.click();
         }
       }
-      return; 
+      return;
     }
 
     // If there is a popup box waiting to be closed, Enter closes it instantly!
@@ -414,7 +428,7 @@ let cheatTapTimeout = null;
 document.addEventListener('touchstart', (e) => {
   const touch = e.touches[0];
   const screenWidth = window.innerWidth;
-  
+
   // If they tap specifically in the top right corner (where it's empty)...
   if (touch.clientX > screenWidth - 100 && touch.clientY < 100) {
 
@@ -422,7 +436,7 @@ document.addEventListener('touchstart', (e) => {
     if (sessionStorage.getItem('devMode') === 'true') {
       // Simulate pushing "Alt + P"
       document.dispatchEvent(new KeyboardEvent('keydown', { key: 'p', altKey: true, bubbles: true }));
-      
+
       // Floating text saying "HACK FIRED"
       const floater = document.createElement('div');
       floater.textContent = 'HACK FIRED';
@@ -435,14 +449,14 @@ document.addEventListener('touchstart', (e) => {
     // Every tap we count it. If you tap 5 times fast... you unlock the cheat.
     cheatTapCount++;
     if (cheatTapTimeout) clearTimeout(cheatTapTimeout); // Stop the reset timer
-    
+
     // Did they hit 5 times?
     if (cheatTapCount >= 5) {
       sessionStorage.setItem('devMode', 'true'); // Backpack updated: You are a god now.
-      
+
       document.dispatchEvent(new KeyboardEvent('keydown', { key: 'p', altKey: true, bubbles: true }));
       cheatTapCount = 0;
-      
+
       AudioManager.play('success');
       const floater = document.createElement('div');
       floater.textContent = 'DEV MODE UNLOCKED';

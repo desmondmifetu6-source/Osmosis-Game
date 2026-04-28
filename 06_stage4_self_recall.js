@@ -100,7 +100,7 @@ const Stage4Controller = {
     const { domCache, gameData } = this.state;
     const val = domCache.lap2Input.value.trim().toLowerCase();
     domCache.lap2Input.value = '';
-    
+
     if (!val) return;
 
     if (this.state.lap2Identified.includes(val)) {
@@ -109,13 +109,13 @@ const Stage4Controller = {
     }
 
     const allCorrectWords = gameData.selectedWords.map(w => w.toLowerCase());
-    
+
     if (allCorrectWords.includes(val)) {
       this.state.lap2Identified.push(val);
       this.triggerLap2Feedback("Match!", 'success');
-      
+
       this.rewardLap2Points(20);
-      
+
       const t = document.createElement('div');
       t.className = 'word-tile';
       t.textContent = val;
@@ -142,7 +142,7 @@ const Stage4Controller = {
   rewardLap2Points(amount) {
     this.state.lap2Score += amount;
     this.state.gameData.score = (this.state.gameData.score || 0) + amount;
-    
+
     if (this.state.domCache.scoreEl) {
       this.state.domCache.scoreEl.textContent = this.state.gameData.score;
     }
@@ -167,16 +167,7 @@ const Stage4Controller = {
     sharedState.save(gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    if (typeof showModal === 'function') {
-      showModal("Assessment Concluded", `You remembered ${this.state.lap2Identified.length} out of ${gameData.selectedWords.length} words under pressure. Stage Score: ${this.state.lap2Score}.`);
-    }
-
-    setTimeout(() => {
-      const modalOverlay = document.getElementById('modal-overlay');
-      if (modalOverlay) modalOverlay.classList.add('hidden');
-      
-      this.showMissedWordsScreen();
-    }, 2200);
+    this.showMissedWordsScreen();
   },
 
   showMissedWordsScreen() {
@@ -185,38 +176,38 @@ const Stage4Controller = {
     const missedWords = allCorrectWords.filter(w => !this.state.lap2Identified.includes(w));
 
     if (missedWords.length === 0) {
-       this.finishStageTransition();
-       return;
+      this.finishStageTransition();
+      return;
     }
 
     const missedWordsContainer = document.getElementById('missed-words-container');
     const missedWordsList = document.getElementById('missed-words-list');
-    
-    if (missedWordsContainer && missedWordsList) {
-        missedWordsList.innerHTML = '';
-        missedWords.forEach((w, index) => {
-            const t = document.createElement('div');
-            t.className = 'missed-word-tile';
-            t.style.animationDelay = `${index * 0.1}s`;
-            t.textContent = w;
-            missedWordsList.appendChild(t);
-        });
-        missedWordsContainer.style.display = 'block';
 
-        const continueBtn = document.getElementById('finish-stage-missed-btn');
-        if (continueBtn) {
-            continueBtn.onclick = () => {
-                missedWordsContainer.style.display = 'none';
-                this.finishStageTransition();
-            };
-        }
+    if (missedWordsContainer && missedWordsList) {
+      missedWordsList.innerHTML = '';
+      missedWords.forEach((w, index) => {
+        const t = document.createElement('div');
+        t.className = 'missed-word-tile';
+        t.style.animationDelay = `${index * 0.1}s`;
+        t.textContent = w;
+        missedWordsList.appendChild(t);
+      });
+      missedWordsContainer.style.display = 'block';
+
+      const continueBtn = document.getElementById('finish-stage-missed-btn');
+      if (continueBtn) {
+        continueBtn.onclick = () => {
+          missedWordsContainer.style.display = 'none';
+          this.finishStageTransition();
+        };
+      }
     } else {
-        this.finishStageTransition();
+      this.finishStageTransition();
     }
   },
 
   finishStageTransition() {
-    sharedState.showStageScoreThen('06_stage4_self_recall', 'Stage 4: Auto(Word) Recall', this.state.lap2Score, () => {
+    sharedState.showStageScoreThen('06_stage4_self_recall', 'Stage 4: Self-Recall challenge', this.state.lap2Score, () => {
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('07_stage5_meaning_exposure.html');
       else window.location.href = '07_stage5_meaning_exposure.html';
     });

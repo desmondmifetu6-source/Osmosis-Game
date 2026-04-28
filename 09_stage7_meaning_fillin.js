@@ -1,12 +1,12 @@
 // =====================================================================
-// FILE: 08_stage6_meaning_fillin.js (The Missing Word Definition Test)
+// FILE: 09_stage7_meaning_fillin.js (The Missing Word Definition Test)
 // =====================================================================
 // Imagine you found an ancient scroll with a word's meaning written on it, 
 // but moths ate holes through some of the words! 
 // This file reads the word's meaning, picks a few words to turn into blank text boxes,
 // and you have to fill in the missing pieces correctly like a puzzle detective!
 
-const Stage6Controller = {
+const Stage7Controller = {
   state: {
     gameData: null,
     domCache: {},
@@ -214,7 +214,7 @@ const Stage6Controller = {
     // Otherwise, we tell you to review your errors and try again.
     const { domCache } = this.state;
 
-    if (domCache.submitBtn && domCache.submitBtn.textContent === "Next Definition") {
+    if (domCache.submitBtn && domCache.submitBtn.textContent === "Next Word") {
       this.nextWord();
       return;
     }
@@ -247,16 +247,19 @@ const Stage6Controller = {
     }
 
     if (allCorrect) {
-      this.triggerFeedback("Excellent", 'success');
-      this.state.stageScore += 5;
-      this.updateScoreboard(5);
+      this.triggerFeedback("Correct!", 'success');
+      const pts = 5;
+      this.state.stageScore += pts;
+      this.updateScoreboard(pts);
 
       if (domCache.skipBtn) domCache.skipBtn.disabled = true;
-      if (domCache.submitBtn) domCache.submitBtn.textContent = "Next Definition";
+      if (domCache.submitBtn) domCache.submitBtn.textContent = "Next Word";
     } else {
-      this.triggerFeedback("Wrong. click skip/forfeit for answer", 'error');
+      this.triggerFeedback("Incorrect. Try again or click skip.", 'error');
     }
   },
+
+
 
   triggerFeedback(message, type) {
     if (this.state.domCache.testFeedback) {
@@ -313,15 +316,15 @@ const Stage6Controller = {
     sharedState.save(this.state.gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('stage6', 'Stage 6: Filling-In Gaps In Definitions', this.state.stageScore, () => {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_recall_test.html');
-      else window.location.href = '10_stage8_recall_test.html';
+    sharedState.showStageScoreThen('stage7', 'Stage 7: Fill-in-Memory Challenge', this.state.stageScore, () => {
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame_intro.html');
+      else window.location.href = '10_stage8_hall_of_fame_intro.html';
     });
   }
 };
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => Stage6Controller.init());
+  document.addEventListener('DOMContentLoaded', () => Stage7Controller.init());
 } else {
-  Stage6Controller.init();
+  Stage7Controller.init();
 }

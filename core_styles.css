@@ -313,3 +313,57 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   0% { opacity: 1; transform: translateY(0) scale(1.5); }
   100% { opacity: 0; transform: translateY(-80px) scale(1); }
 }
+
+/* ===== Long Word / Definition Overflow Protection ===== */
+
+/* Prevent any word from overflowing its container */
+.masked-word,
+.highlight-word,
+.revision-item strong,
+.revision-item p,
+.nd-word,
+.nd-meaning,
+.meaning-fill-area,
+.word-tile,
+h1, h2, h3 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Scale down large word displays so long words fit */
+.masked-word {
+  font-size: clamp(1.4rem, 5vw, 3rem);
+  letter-spacing: clamp(0.15rem, 1vw, 0.5rem);
+}
+
+.highlight-word {
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  letter-spacing: clamp(1px, 0.5vw, 3px);
+}
+
+/* Revision item words — keep readable but bounded */
+.revision-item strong {
+  font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+.revision-item p {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+}
+
+/* Definition selection option text */
+.nd-meaning,
+.meaning-fill-area {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* Stage headings — allow wrapping on long titles */
+.s4f-header h2,
+.s6-header h2,
+.s3-header h2,
+.header h2 {
+  font-size: clamp(1rem, 3.5vw, 1.6rem);
+  line-height: 1.3;
+  white-space: normal;
+}
+
