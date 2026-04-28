@@ -54,9 +54,9 @@ const Stage1Controller = {
 
   renderInitialUI() {
     const { domCache, gameData } = this.state;
-    
+
     if (domCache.scoreEl) domCache.scoreEl.textContent = gameData.score || 0;
-    
+
     const currentLetter = gameData.letter.toUpperCase();
     if (domCache.targetLetterEl) domCache.targetLetterEl.textContent = currentLetter;
     if (domCache.progressEl) domCache.progressEl.textContent = (gameData.selectedWords ? gameData.selectedWords.length : 0) + 1;
@@ -238,9 +238,9 @@ const Stage1Controller = {
 
   rewardPoints(amount, originElement) {
     const { domCache, gameData } = this.state;
-    
+
     gameData.score = (gameData.score || 0) + amount;
-    
+
     if (domCache.scoreEl) domCache.scoreEl.textContent = gameData.score;
     if (domCache.sb) {
       domCache.sb.style.animation = 'none';
@@ -262,16 +262,16 @@ const Stage1Controller = {
 
   updateCount() {
     const { domCache, gameData, localSelectedWord } = this.state;
-    
+
     if (domCache.countEl) domCache.countEl.textContent = localSelectedWord ? '1' : '0';
     if (domCache.finishBtn) {
       domCache.finishBtn.disabled = localSelectedWord === null;
-      
+
       let usedCount = gameData.usedLetters ? gameData.usedLetters.length : 1;
       if (usedCount >= 26) {
         domCache.finishBtn.textContent = "Finalize Board & Proceed";
       } else {
-        domCache.finishBtn.textContent = "Next Alphabet";
+        domCache.finishBtn.textContent = "Next Letter";
       }
     }
   },
@@ -322,7 +322,7 @@ const Stage1Controller = {
       if (typeof showModal === 'function') showModal('Wait', 'Select at least 1 word before skipping.');
       return;
     }
-    
+
     sharedState.save(gameData);
     sharedState.recordStageScore('03_stage1', 'Stage 1: Word Selection', gameData.selectedWords.length * 5);
     if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_word_fillin.html');
