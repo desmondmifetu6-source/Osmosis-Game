@@ -303,7 +303,7 @@ const Stage1Controller = {
 
     // If we've completed all letters...
     if (usedCount >= 26) {
-      sharedState.recordStageScore('03_stage1', 'Stage 1: Word Selection', gameData.selectedWords.length * 5);
+      sharedState.recordStageScore('stage1', 'Stage 1: Word Selection', gameData.selectedWords.length * 5);
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_word_fillin.html');
       else window.location.href = '04_stage2_word_fillin.html';
     } else {
@@ -324,7 +324,7 @@ const Stage1Controller = {
     }
 
     sharedState.save(gameData);
-    sharedState.recordStageScore('03_stage1', 'Stage 1: Word Selection', gameData.selectedWords.length * 5);
+    sharedState.recordStageScore('stage1', 'Stage 1: Word Selection', gameData.selectedWords.length * 5);
     if (typeof window.navigateWithTransition === 'function') navigateWithTransition('04_stage2_word_fillin.html');
     else window.location.href = '04_stage2_word_fillin.html';
   }

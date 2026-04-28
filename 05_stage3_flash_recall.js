@@ -189,7 +189,7 @@ const Stage3Controller = {
     sharedState.save(this.state.gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('05_stage3_flash', 'Stage 3: Flash Recall', this.state.flashStageScore, () => {
+    sharedState.showStageScoreThen('stage3', 'Stage 3: Flash Recall', this.state.flashStageScore, () => {
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('06_stage4_self_recall.html');
       else window.location.href = '06_stage4_self_recall.html';
     });

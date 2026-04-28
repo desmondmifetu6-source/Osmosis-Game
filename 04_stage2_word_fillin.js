@@ -277,7 +277,7 @@ const Stage2Controller = {
     sharedState.save(this.state.gameData);
     
     sharedState.showStageScoreThen(
-      '04_stage2',
+      'stage2',
       'Stage 2: Word Fill-in',
       this.state.roundScore,
       () => {

@@ -1,7 +1,7 @@
 // =====================================================================
 // FILE: 07_stage5_meaning_exposure.js (The Library Reading Room)
 // =====================================================================
-// Stage 5 is simple: It's just a reading room. 
+// This phase is simple: It's just a reading room. 
 // We give the player 5 massive minutes to stare at a clean list of all 26 words 
 // and their definitions, trying to memorize them before the hard tests begin.
 

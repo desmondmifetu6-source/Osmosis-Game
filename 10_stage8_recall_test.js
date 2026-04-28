@@ -138,7 +138,7 @@ const Stage8Controller = {
 
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('stage7', "Stage 7: Hall of Fame", stageScore, () => {
+    sharedState.showStageScoreThen('stage7', "Stage 7: Hall of fame", stageScore, () => {
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_stage8_complete.html');
       else window.location.href = '10b_stage8_complete.html';
     });
@@ -256,18 +256,19 @@ const Stage8Controller = {
     const userMeaning = domCache.meaningInput ? domCache.meaningInput.value : '';
 
     const g = this.gradeAttempt(userWord, userMeaning, word, meaning);
+    const isBad = (!g.wOk && g.mRatio < 0.50);
     const isPerfect = (g.wOk && g.mRatio >= 0.8);
 
-    if (!isPerfect && !isSecondChance) {
-      // Trigger Second Chance via Popup
+    if (isBad && !isSecondChance) {
+      // Trigger Second Chance via Popup only if they totally failed
       this.state.isSecondChance = true;
-      
+
       const promptText = "Incorrect. You have a second chance for half points. Prepare to read carefully...";
-      
+
       if (typeof window.showModal === 'function') {
         window.showModal(
-          "Second Chance", 
-          promptText, 
+          "Second Chance",
+          promptText,
           () => {
             this.triggerFlashSequence(word, meaning);
           },
@@ -294,7 +295,7 @@ const Stage8Controller = {
         }
         setTimeout(() => this.triggerFlashSequence(word, meaning), 1000);
       }
-      
+
       if (typeof AudioManager !== 'undefined') AudioManager.play('error');
       return;
     }

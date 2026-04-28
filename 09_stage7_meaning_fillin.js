@@ -316,7 +316,7 @@ const Stage7Controller = {
     sharedState.save(this.state.gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('stage7', 'Stage 7: Fill-in-Memory Challenge', this.state.stageScore, () => {
+    sharedState.showStageScoreThen('stage6', 'Stage 6: Fill-in-Memory Challenge', this.state.stageScore, () => {
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame_intro.html');
       else window.location.href = '10_stage8_hall_of_fame_intro.html';
     });
