@@ -90,7 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   socket.on('game_started', () => {
-    window.location.href = '02_campaign_setup.html'; // Or a specific multiplayer stage
+    gameData.multiplayerMode = true;
+    gameData.currentRoomId = currentRoomId;
+    sharedState.save(gameData);
+    window.location.href = '02_campaign_setup.html';
   });
 
   document.getElementById('start-multi-btn').addEventListener('click', () => {

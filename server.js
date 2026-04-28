@@ -53,7 +53,23 @@ io.on('connection', (socket) => {
     }
   });
 
-  // 3. START GAME: Host starts for everyone
+  // 3. BATTLE: Update Score
+  socket.on('update_score', (data) => {
+    const roomId = data.roomId;
+    if (rooms[roomId]) {
+      // Find the player and update their score in the room data
+      const player = rooms[roomId].players.find(p => p.id === socket.id);
+      if (player) {
+        player.score = data.score;
+        // Broadcast the new leaderboard to everyone in the room
+        io.to(roomId).emit('leaderboard_update', {
+          players: rooms[roomId].players
+        });
+      }
+    }
+  });
+
+  // 4. START GAME: Host starts for everyone
   socket.on('start_game', (roomId) => {
     if (rooms[roomId]) {
       rooms[roomId].status = 'playing';

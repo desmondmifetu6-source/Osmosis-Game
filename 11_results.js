@@ -12,6 +12,12 @@ const ResultsController = {
   },
 
   init() {
+    // Add socket.io client dynamically if in multiplayer
+    this.state.gameData = sharedState.load();
+    if (this.state.gameData.multiplayerMode) {
+      this.initMultiplayer();
+    }
+
     if (typeof initModal === 'function') initModal();
     sharedState.stopTimer();
 
@@ -40,8 +46,62 @@ const ResultsController = {
       stageScoresHost: document.getElementById('res-stage-scores'),
       wordsList: document.getElementById('res-words-list'),
       playAgainBtn: document.getElementById('play-again-btn'),
-      goHomeBtn: document.getElementById('go-home-btn')
+      goHomeBtn: document.getElementById('go-home-btn'),
+      battleContainer: document.getElementById('battle-verdict-container'),
+      battleOutcome: document.getElementById('battle-outcome'),
+      opponentName: document.getElementById('opponent-name'),
+      opponentPoints: document.getElementById('opponent-points')
     };
+  },
+
+  initMultiplayer() {
+    const { gameData } = this.state;
+    if (typeof io === 'undefined') return;
+    
+    this.socket = io();
+    this.socket.emit('join_room', { 
+      roomId: gameData.currentRoomId, 
+      username: localStorage.getItem('osmosis_user') || 'Guest' 
+    });
+
+    // Send final score immediately
+    this.socket.emit('update_score', {
+      roomId: gameData.currentRoomId,
+      score: gameData.score || 0,
+      username: localStorage.getItem('osmosis_user') || 'Guest'
+    });
+
+    this.socket.on('leaderboard_update', (data) => {
+      this.updateBattleVerdict(data.players);
+    });
+  },
+
+  updateBattleVerdict(players) {
+    const { domCache, gameData } = this.state;
+    if (!domCache.battleContainer) return;
+
+    const myName = localStorage.getItem('osmosis_user') || 'Guest';
+    const opponent = players.find(p => p.name !== myName);
+
+    if (opponent) {
+      domCache.battleContainer.style.display = 'block';
+      domCache.opponentName.textContent = opponent.name;
+      domCache.opponentPoints.textContent = opponent.score || 0;
+
+      const myScore = gameData.score || 0;
+      const oppScore = opponent.score || 0;
+
+      if (myScore > oppScore) {
+        domCache.battleOutcome.textContent = "VICTORY";
+        domCache.battleOutcome.style.color = "#4caf50";
+      } else if (myScore < oppScore) {
+        domCache.battleOutcome.textContent = "DEFEAT";
+        domCache.battleOutcome.style.color = "#f44336";
+      } else {
+        domCache.battleOutcome.textContent = "DRAW";
+        domCache.battleOutcome.style.color = "#ffd700";
+      }
+    }
   },
 
   renderStageScores() {

@@ -96,6 +96,23 @@ const sharedState = {
       at: Date.now()
     };
     this.save(state);
+
+    // Multiplayer Reporting: If we are in a battle, tell the server!
+    if (state.multiplayerMode && state.currentRoomId) {
+      this.reportScoreToServer(state.currentRoomId, state.score || 0);
+    }
+  },
+
+  reportScoreToServer: function(roomId, score) {
+    // assumption: socket.io client is loaded in the page
+    if (typeof io !== 'undefined') {
+      if (!this.socket) this.socket = io();
+      this.socket.emit('update_score', { 
+        roomId: roomId, 
+        score: score,
+        username: localStorage.getItem('osmosis_user') || 'Guest'
+      });
+    }
   },
 
   // Function: showStageScoreThen
