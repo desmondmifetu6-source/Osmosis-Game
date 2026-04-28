@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(i => i.word);
 
     let freshWords = possibleWords.filter(w => !onCooldown.includes(w.toLowerCase()));
-    
+
     // If somehow all words are on cooldown, ignore cooldown and use all words
     if (freshWords.length === 0) freshWords = possibleWords;
     possibleWords = freshWords;
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update UI with final assignment
     if (setupStatusText) setupStatusText.textContent = "ASSIGNMENT GENERATOR";
     if (setupCodeEl) setupCodeEl.innerHTML = `<span style="animation: pulse 1s ease-in-out;">${gameData.length},${gameData.letter}</span>`;
-    if (setupDescEl) setupDescEl.innerHTML = `Find one word starting with '<strong>${gameData.letter}</strong>' that is exactly <strong>${gameData.length}</strong> letters long.`;
+    if (setupDescEl) setupDescEl.innerHTML = `implies.<br>Select one word starting with '<strong>${gameData.letter}</strong>' and exactly <strong>${gameData.length}</strong> letters long.`;
 
     if (setupContinueBtn) {
       setupContinueBtn.style.display = 'block';

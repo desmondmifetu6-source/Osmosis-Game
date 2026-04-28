@@ -17,12 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
     hostPlayerName.textContent = gameData.username;
   }
 
-  // 1. Mode Toggle Logic
+  // 1. Initialize Connection
+  const socket = io(); // Connects to the server we just built
+  let currentRoomId = null;
+
+  // 2. Mode Toggle Logic
   modeHost.addEventListener('click', () => {
     modeHost.classList.add('active');
     modeJoin.classList.remove('active');
     hostSection.style.display = 'block';
     joinSection.style.display = 'none';
+    
+    // Generate and register room
+    currentRoomId = generateRoomCode();
+    roomIdEl.textContent = currentRoomId;
+    socket.emit('create_room', { roomId: currentRoomId, username: gameData.username || 'Player' });
   });
 
   modeJoin.addEventListener('click', () => {
@@ -32,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     joinSection.style.display = 'block';
   });
 
-  // 2. Mock Room Code Generation
+  // 3. Mock Room Code Generation
   function generateRoomCode() {
-    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // No O, I, 0, 1 for clarity
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
     let result = '';
     for (let i = 0; i < 6; i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -42,30 +51,49 @@ document.addEventListener('DOMContentLoaded', () => {
     return result;
   }
 
-  // Initialize Host Code
-  const mockCode = generateRoomCode();
-  roomIdEl.textContent = mockCode;
+  // Auto-host on load
+  currentRoomId = generateRoomCode();
+  roomIdEl.textContent = currentRoomId;
+  socket.emit('create_room', { roomId: currentRoomId, username: gameData.username || 'Player' });
 
-  // 3. Mock Join Logic
+  // 4. Real Join Logic
   document.getElementById('confirm-join-btn').addEventListener('click', () => {
     const code = document.getElementById('join-code-input').value.trim().toUpperCase();
-    if (code.length < 6) {
-      if (typeof window.showModal === 'function') {
-        window.showModal("Invalid Link", "Please enter a valid 6-character room code.");
-      } else {
-        alert("Please enter a valid 6-character room code.");
+    if (code.length < 6) return alert("Enter a valid 6-char code.");
+    
+    currentRoomId = code;
+    socket.emit('join_room', { roomId: code, username: gameData.username || 'Guest' });
+  });
+
+  // 5. Server Listeners
+  socket.on('player_joined', (data) => {
+    const extraPlayers = document.getElementById('extra-players');
+    extraPlayers.innerHTML = ''; // Clear "Waiting..."
+    
+    data.players.forEach(p => {
+      if (p.name !== gameData.username) {
+        const div = document.createElement('div');
+        div.className = 'player-entry';
+        div.innerHTML = `<span class="player-name">${p.name}</span><span class="player-status">Connected</span>`;
+        extraPlayers.appendChild(div);
       }
-      return;
-    }
-    
-    // For now, since we have no backend, we'll just mock a "Connecting..." state
-    document.getElementById('confirm-join-btn').textContent = "Connecting...";
-    document.getElementById('confirm-join-btn').disabled = true;
-    
-    setTimeout(() => {
-      alert("Note: Real-time multiplayer requires a server backend. This is currently a visual preview.");
-      document.getElementById('confirm-join-btn').textContent = "Establish Link";
-      document.getElementById('confirm-join-btn').disabled = false;
-    }, 1500);
+    });
+
+    // Enable Start button if someone joined
+    const startBtn = document.getElementById('start-multi-btn');
+    startBtn.disabled = false;
+    startBtn.textContent = "Ignite Game!";
+  });
+
+  socket.on('error_message', (msg) => {
+    alert(msg);
+  });
+
+  socket.on('game_started', () => {
+    window.location.href = '02_campaign_setup.html'; // Or a specific multiplayer stage
+  });
+
+  document.getElementById('start-multi-btn').addEventListener('click', () => {
+    socket.emit('start_game', currentRoomId);
   });
 });
