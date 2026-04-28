@@ -102,6 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Mode Toggle Logic
   if (modeHost && modeJoin && hostSection && joinSection) {
     modeHost.addEventListener('click', () => {
+      if (modeHost.classList.contains('active')) return;
+      
       modeHost.classList.add('active');
       modeJoin.classList.remove('active');
       hostSection.style.display = 'block';

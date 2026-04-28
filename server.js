@@ -31,14 +31,21 @@ io.on('connection', (socket) => {
       status: 'waiting'
     };
     socket.join(roomId);
-    console.log(`Room created: ${roomId} by ${data.username}`);
+    console.log(`[ROOM CREATED] ID: ${roomId} | Host: ${data.username} | Socket: ${socket.id}`);
   });
 
   // 2. GUEST: Join a Room
   socket.on('join_room', (data) => {
     const roomId = data.roomId;
+    console.log(`[JOIN ATTEMPT] ID: ${roomId} | User: ${data.username} | Socket: ${socket.id}`);
+    
     if (rooms[roomId]) {
-      rooms[roomId].players.push({ id: socket.id, name: data.username });
+      // Check if player is already in the room
+      const existing = rooms[roomId].players.find(p => p.id === socket.id);
+      if (!existing) {
+        rooms[roomId].players.push({ id: socket.id, name: data.username });
+      }
+      
       socket.join(roomId);
       
       // Tell everyone in the room that a new player arrived
@@ -47,9 +54,10 @@ io.on('connection', (socket) => {
         message: `${data.username} joined the link!`
       });
       
-      console.log(`${data.username} joined room: ${roomId}`);
+      console.log(`[JOIN SUCCESS] ID: ${roomId} | User: ${data.username}`);
     } else {
-      socket.emit('error_message', 'Room not found. Check the code!');
+      console.warn(`[JOIN FAILED] ID: ${roomId} not found. Active rooms:`, Object.keys(rooms));
+      socket.emit('error_message', `Room not found (${roomId}). Check the code!`);
     }
   });
 
@@ -57,11 +65,9 @@ io.on('connection', (socket) => {
   socket.on('update_score', (data) => {
     const roomId = data.roomId;
     if (rooms[roomId]) {
-      // Find the player and update their score in the room data
       const player = rooms[roomId].players.find(p => p.id === socket.id);
       if (player) {
         player.score = data.score;
-        // Broadcast the new leaderboard to everyone in the room
         io.to(roomId).emit('leaderboard_update', {
           players: rooms[roomId].players
         });
@@ -74,11 +80,12 @@ io.on('connection', (socket) => {
     if (rooms[roomId]) {
       rooms[roomId].status = 'playing';
       io.to(roomId).emit('game_started');
+      console.log(`[GAME STARTED] Room: ${roomId}`);
     }
   });
 
   socket.on('disconnect', () => {
-    console.log('A player disconnected');
+    console.log(`[DISCONNECT] Socket: ${socket.id}`);
   });
 });
 
