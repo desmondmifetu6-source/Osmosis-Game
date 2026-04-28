@@ -108,6 +108,43 @@
       50% { transform: scale(1.05); opacity: 1; }
       100% { transform: scale(0.95); opacity: 0.8; }
     }
+    /* Avatar Selection */
+    .avatar-selection {
+      margin: 1.5rem 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      padding: 0.5rem;
+    }
+    .avatar-option {
+      cursor: pointer;
+      border: 3px solid transparent;
+      border-radius: 50%;
+      padding: 5px;
+      transition: all 0.2s ease;
+      background: var(--surface-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      aspect-ratio: 1/1;
+    }
+    .avatar-option.selected {
+      border-color: var(--accent-primary);
+      background: #fff;
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    }
+    .avatar-option:hover {
+      background: #fff;
+    }
+    .avatar-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
   </style>
 </head>
 
@@ -117,8 +154,18 @@
       <div id="login-content">
         <h1 class="logo">Osmosis</h1>
         <p class="tagline">Fun time with science</p>
+        
         <h2>Enter your name</h2>
         <input type="text" id="username-input" placeholder="Your Name" autocomplete="off">
+        
+        <span class="avatar-label">Select Your Character</span>
+        <div class="avatar-selection" id="avatar-grid">
+          <div class="avatar-option selected" data-avatar="👦" title="Boy Yellow">👦</div>
+          <div class="avatar-option" data-avatar="👤" title="Boy Blue">👤</div>
+          <div class="avatar-option" data-avatar="👧" title="Girl Pink">👧</div>
+          <div class="avatar-option" data-avatar="🧢" title="Boy Green">🧢</div>
+        </div>
+
         <button id="login-btn" class="classic-btn">Continue</button>
       </div>
       <div id="welcome-back-content" style="display: none; text-align: center;">

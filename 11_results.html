@@ -65,7 +65,7 @@
 
     .hall-title {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
+      font-size: clamp(1.8rem, 8vw, 4rem);
       font-weight: 700;
       color: #ffd700;
       /* Gold */
@@ -77,12 +77,18 @@
 
     .hero-score {
       font-family: monospace;
-      font-size: 5rem;
+      font-size: clamp(2rem, 10vw, 5rem);
       font-weight: 800;
       color: #ffffff;
       margin: 1.5rem 0;
       text-shadow: 0 5px 20px rgba(255, 255, 255, 0.5);
       text-transform: capitalize;
+    }
+
+    .time-spent-text {
+      font-size: 4rem;
+      display: block;
+      margin-top: 0.5rem;
     }
 
     .assimilation-rate {
@@ -112,7 +118,7 @@
 
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: 4.5rem;
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
       color: #ffd700;
       border-bottom: 1px solid rgba(255, 215, 0, 0.3);
       padding-bottom: 0.8rem;
@@ -126,7 +132,7 @@
       align-items: center;
       padding: 1rem 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 1.7rem;
+      font-size: clamp(1.1rem, 4vw, 1.7rem);
     }
 
     .stage-row:last-child {
@@ -260,6 +266,29 @@
         opacity: 1;
       }
     }
+
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+      .hall-title { font-size: 2.5rem; letter-spacing: 3px; }
+      .hero-score { font-size: 3rem; }
+      #battle-outcome { font-size: 3rem !important; letter-spacing: 4px !important; }
+      .results-container { padding: 2rem 1rem; }
+      .hero-section { margin-bottom: 2rem; }
+      .breakdown-section, .learning-section { padding: 1.5rem; margin-bottom: 2rem; }
+      .menu-buttons { flex-direction: column; gap: 1rem; }
+      .menu-buttons button { width: 100%; padding: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hall-title { font-size: 1.8rem; }
+      .hero-score { font-size: 2.2rem; }
+      #battle-outcome { font-size: 2.2rem !important; }
+      .time-spent-text { font-size: 1.2rem !important; }
+      .stage-row { font-size: 1rem; }
+      .stage-score { font-size: 1.1rem; }
+      .word-card h4 { font-size: 1.5rem; }
+      .word-card p { font-size: 1rem; }
+    }
   </style>
 </head>
 
@@ -271,7 +300,7 @@
 
     <!-- Battle Verdict (Multiplayer Only) -->
     <div id="battle-verdict-container" style="display: none; text-align: center; margin-bottom: 3rem; animation: fadeInDown 1s ease-out;">
-      <div id="battle-outcome" style="font-size: 5rem; font-weight: 900; letter-spacing: 10px; margin-bottom: 1rem; text-shadow: 0 0 20px rgba(255,215,0,0.6);">LOADING...</div>
+      <div id="battle-outcome" style="font-weight: 900; letter-spacing: 10px; margin-bottom: 1rem; text-shadow: 0 0 20px rgba(255,215,0,0.6); font-size: 5rem;">LOADING...</div>
       <div id="opponent-score-box" style="background: rgba(255,255,255,0.1); display: inline-block; padding: 1rem 2rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">
         <span id="opponent-name" style="font-weight: 700; color: #ffd700;">Opponent</span>: <span id="opponent-points">0</span> pts
       </div>

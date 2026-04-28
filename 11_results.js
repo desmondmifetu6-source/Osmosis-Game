@@ -177,7 +177,7 @@ const ResultsController = {
 
         // Show total time spent once counter finishes
         if (domCache.scoreEl) {
-          domCache.scoreEl.innerHTML = `Total Score: ${this.state.currentNumber}<br><span style="font-size:4rem; color:#ffd700; letter-spacing:2px;">time spent: ${totalTimeFormatted}</span>`;
+          domCache.scoreEl.innerHTML = `Total Score: ${this.state.currentNumber}<br><span class="time-spent-text" style="color:#ffd700; letter-spacing:2px;">time spent: ${totalTimeFormatted}</span>`;
         }
 
         let bonusShown = false;

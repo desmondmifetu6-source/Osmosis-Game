@@ -38,7 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
       socket = io(); 
       
       // Auto-host on load
-      socket.emit('create_room', { roomId: currentRoomId, username: gameData.username || 'Player' });
+      socket.emit('create_room', { 
+        roomId: currentRoomId, 
+        username: gameData.username || 'Player',
+        avatar: gameData.avatar || '👦'
+      });
 
       // Server Listeners
       socket.on('player_joined', (data) => {
@@ -49,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (p.name !== gameData.username) {
               const div = document.createElement('div');
               div.className = 'player-entry';
-              div.innerHTML = `<span class="player-name">${p.name}</span><span class="player-status">Connected</span>`;
+              const pAvatar = p.avatar || '👦';
+              div.innerHTML = `<span class="player-name">${pAvatar} ${p.name}</span><span class="player-status">Connected</span>`;
               extraPlayers.appendChild(div);
             }
           });
@@ -88,7 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
           if (code.length < 6) return alert("Enter a valid 6-char code.");
           
           currentRoomId = code;
-          socket.emit('join_room', { roomId: code, username: gameData.username || 'Guest' });
+          socket.emit('join_room', { 
+            roomId: code, 
+            username: gameData.username || 'Guest',
+            avatar: gameData.avatar || '👦'
+          });
         });
       }
     } else {
@@ -112,7 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
       // Re-generate if hosting a new session
       currentRoomId = generateRoomCode();
       if (roomIdEl) roomIdEl.textContent = currentRoomId;
-      if (socket) socket.emit('create_room', { roomId: currentRoomId, username: gameData.username || 'Player' });
+      if (socket) socket.emit('create_room', { 
+        roomId: currentRoomId, 
+        username: gameData.username || 'Player',
+        avatar: gameData.avatar || '👦'
+      });
     });
 
     modeJoin.addEventListener('click', () => {

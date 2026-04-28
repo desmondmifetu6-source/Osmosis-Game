@@ -61,13 +61,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Play Friends Logic (Multiplayer Battle)
+  // 6. Play Friends Logic (Local or Online)
   const playFriendsBtn = document.getElementById('play-friends-btn');
   const multiplayerBtn = document.getElementById('multiplayer-btn');
+  const friendsOverlay = document.getElementById('friends-popup-overlay');
+  const friendsContinueBtn = document.getElementById('friends-popup-continue');
   
-  if (playFriendsBtn) {
+  if (playFriendsBtn && friendsOverlay) {
     playFriendsBtn.addEventListener('click', () => {
-      navigate('multiplayer_lobby.html');
+      friendsOverlay.classList.add('active');
+    });
+  }
+
+  if (friendsContinueBtn) {
+    friendsContinueBtn.addEventListener('click', () => {
+      // Wipe session data for a fresh local multiplayer run
+      Object.assign(gameData, {
+        score: 0, usedLetters: [], selectedWords: [], stageScores: {},
+        meanings: {}, lastLength: null, totalTime: 0, sessionStartedAt: null
+      });
+      sharedState.save(gameData);
+      navigate('02_campaign_setup.html');
     });
   }
 

@@ -289,9 +289,11 @@
 
     // Continue button → go to results
     document.getElementById('hof-continue-btn').addEventListener('click', () => {
+      const gameData = sharedState.load();
+      const target = gameData.multiplayerMode ? '11_multiplayer_results.html' : '11_results.html';
       if (typeof AudioManager !== 'undefined') AudioManager.play('click');
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('11_results.html');
-      else window.location.href = '11_results.html';
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition(target);
+      else window.location.href = target;
     });
 
     // ── Confetti ──────────────────────────────────────────────

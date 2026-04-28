@@ -10,6 +10,7 @@ const LoginController = {
   state: {
     gameData: null,
     savedUser: null,
+    selectedAvatar: "👦",
     domCache: {}
   },
 
@@ -46,6 +47,7 @@ const LoginController = {
       switchUserLink: document.getElementById('switch-user-link'),
       loginBtn: document.getElementById('login-btn'),
       usernameInput: document.getElementById('username-input'),
+      avatarOptions: document.querySelectorAll('.avatar-option'),
       akwaabaScreen: document.getElementById('akwaaba-screen')
     };
   },
@@ -88,6 +90,17 @@ const LoginController = {
       domCache.loginBtn.addEventListener('click', () => this.handleLogin());
     }
 
+    if (domCache.avatarOptions) {
+      domCache.avatarOptions.forEach(opt => {
+        opt.addEventListener('click', () => {
+          domCache.avatarOptions.forEach(o => o.classList.remove('selected'));
+          opt.classList.add('selected');
+          this.state.selectedAvatar = opt.getAttribute('data-avatar');
+          if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
+        });
+      });
+    }
+
     if (domCache.usernameInput) {
       domCache.usernameInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') this.handleLogin();
@@ -115,6 +128,7 @@ const LoginController = {
     localStorage.setItem('osmosis_user', user);
 
     gameData.username = user;
+    gameData.avatar = this.state.selectedAvatar;
     gameData.totalTime = 0;
     gameData.startTime = null;
     sharedState.save(gameData);

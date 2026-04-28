@@ -27,7 +27,7 @@ io.on('connection', (socket) => {
   socket.on('create_room', (data) => {
     const roomId = data.roomId;
     rooms[roomId] = {
-      players: [{ id: socket.id, name: data.username }],
+      players: [{ id: socket.id, name: data.username, avatar: data.avatar || '👦' }],
       status: 'waiting'
     };
     socket.join(roomId);
@@ -40,10 +40,22 @@ io.on('connection', (socket) => {
     console.log(`[JOIN ATTEMPT] ID: ${roomId} | User: ${data.username} | Socket: ${socket.id}`);
     
     if (rooms[roomId]) {
-      // Check if player is already in the room
-      const existing = rooms[roomId].players.find(p => p.id === socket.id);
-      if (!existing) {
-        rooms[roomId].players.push({ id: socket.id, name: data.username });
+      // 4 Player Limit
+      if (rooms[roomId].players.length >= 4) {
+        socket.emit('error_message', "Room is full! Max 4 players.");
+        return;
+      }
+
+      // Check if player is already in the room by socket ID OR by name (for page refreshes)
+      let player = rooms[roomId].players.find(p => p.id === socket.id || p.name === data.username);
+      
+      if (!player) {
+        player = { id: socket.id, name: data.username, avatar: data.avatar || '👦' };
+        rooms[roomId].players.push(player);
+      } else {
+        // Update socket ID and potentially avatar to the new one
+        player.id = socket.id;
+        if (data.avatar) player.avatar = data.avatar;
       }
       
       socket.join(roomId);
