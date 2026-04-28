@@ -61,13 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Play Friends Logic
+  // 6. Play Friends Logic (Multiplayer Battle)
   const playFriendsBtn = document.getElementById('play-friends-btn');
   if (playFriendsBtn) {
     playFriendsBtn.addEventListener('click', () => {
-      if (typeof showModal === 'function') {
-        showModal('Tip', 'This mode can be played manually in groups by each player acquiring the STEM Dictionary. In this case the hard-copy is the tool for playing the game not the computer or phone.The competition is super exciting and the feeling is like participating in a live game such as football , boxing or athletics');
-      }
+      navigate('multiplayer_lobby.html');
     });
   }
 
