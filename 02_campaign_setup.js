@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // If we ran out of alphabet letters, they beat all sections! Move to Stage 2.
     if (availableLetters.length === 0) {
-      navigate('04_stage2_primary_recall.html');
+      navigate('04_stage2_word_fillin.html');
       return;
     }
 
