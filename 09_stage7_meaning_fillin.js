@@ -185,7 +185,7 @@ const Stage7Controller = {
     let html = '';
     tokens.forEach((t, i) => {
       if (validIndices.includes(i)) {
-        html += `<input type="text" class="meaning-input" data-ans="${escapeHTML(t.toLowerCase())}" autocomplete="off" style="width: ${Math.max(6, t.length * 1.2)}em;">`;
+        html += `<input type="text" class="meaning-input" data-ans="${escapeHTML(t.toLowerCase())}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="width: ${Math.max(6, t.length * 1.2)}em;">`;
       } else {
         html += escapeHTML(t);
       }

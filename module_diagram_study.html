@@ -77,7 +77,7 @@
             <div id="r2-flash-word" class="flash-word" style="font-size: clamp(1.4rem, 8vw, 4rem); font-weight: bold; font-family: var(--font-serif); opacity: 0; display: inline-block; max-width: 100%; overflow-wrap: break-word;"></div>
         </div>
         <div id="r2-input-area" style="display:none;">
-           <input type="text" id="r2-input" class="round-input" placeholder="Type the flashed word..." autocomplete="off" spellcheck="false">
+           <input type="text" id="r2-input" class="round-input" placeholder="Type the flashed word..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
            <p style="margin-top:1rem; color:var(--text-secondary); font-weight:bold;" id="r2-progress">0/10</p>
            <div style="margin-top:1.5rem;">
              <button id="r2-skip-btn" class="classic-btn outline" style="width: auto;">Skip Word</button>
@@ -88,7 +88,7 @@
       <div id="recall-view" style="display:none; padding: 2rem; background: rgba(0,0,0,0.05); border: 2px dashed var(--accent-primary); border-radius: 8px;">
         <h3 style="font-size:2rem; margin-bottom:1rem; color:var(--text-main);">Round 3: Total Recall</h3>
         <p style="margin-bottom:1rem; color:var(--text-secondary);">List every part you remember from pure memory.</p>
-        <input type="text" id="recall-input" class="round-input" placeholder="Type a label and press Enter..." autocomplete="off" spellcheck="false">
+        <input type="text" id="recall-input" class="round-input" placeholder="Type a label and press Enter..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         
         <div class="recalled-grid" id="recalled-list"></div>
         
