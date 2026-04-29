@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       sharedState.save(gameData);
 
-      // Navigate to campaign setup
-      navigate('02_campaign_setup.html');
+      // Close the popup and remain on the home page
+      soloOverlay.classList.remove('active');
     });
   }
 
