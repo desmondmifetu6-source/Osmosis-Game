@@ -10,7 +10,7 @@ const LoginController = {
   state: {
     gameData: null,
     savedUser: null,
-    selectedAvatar: "👦",
+    selectedAvatar: "🤓",
     domCache: {}
   },
 

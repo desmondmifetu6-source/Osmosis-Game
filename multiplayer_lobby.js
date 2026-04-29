@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('start-multi-btn');
   
   if (gameData.username) {
-    hostPlayerName.textContent = gameData.username;
+    const avatar = gameData.avatar || '🤓';
+    hostPlayerName.textContent = `${avatar} ${gameData.username}`;
   }
 
   // 1. Generate Room Code Immediately (Before Socket)
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       socket.emit('create_room', { 
         roomId: currentRoomId, 
         username: gameData.username || 'Player',
-        avatar: gameData.avatar || '👦'
+        avatar: gameData.avatar || '🤓'
       });
 
       // Server Listeners
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (p.name !== gameData.username) {
               const div = document.createElement('div');
               div.className = 'player-entry';
-              const pAvatar = p.avatar || '👦';
+              const pAvatar = p.avatar || '🤓';
               div.innerHTML = `<span class="player-name">${pAvatar} ${p.name}</span><span class="player-status">Connected</span>`;
               extraPlayers.appendChild(div);
             }
@@ -63,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Enable Start button if someone joined
         if (startBtn) {
           startBtn.disabled = false;
-          startBtn.textContent = "Ignite Game!";
+          startBtn.textContent = "Start";
         }
       });
 
@@ -96,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
           socket.emit('join_room', { 
             roomId: code, 
             username: gameData.username || 'Guest',
-            avatar: gameData.avatar || '👦'
+            avatar: gameData.avatar || '🤓'
           });
         });
       }
@@ -124,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (socket) socket.emit('create_room', { 
         roomId: currentRoomId, 
         username: gameData.username || 'Player',
-        avatar: gameData.avatar || '👦'
+        avatar: gameData.avatar || '🤓'
       });
     });
 

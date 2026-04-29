@@ -29,7 +29,7 @@ const MultiplayerResults = {
     
     this.state.socket = io();
     const myName = localStorage.getItem('osmosis_user') || 'Guest';
-    const myAvatar = this.state.gameData.avatar || '👦';
+    const myAvatar = this.state.gameData.avatar || '🤓';
 
     this.state.socket.emit('join_room', { 
       roomId: this.state.roomId, 
@@ -64,7 +64,7 @@ const MultiplayerResults = {
       const card = document.createElement('div');
       card.className = `rank-card rank-${rank}`;
       
-      const avatar = player.avatar || '👦';
+      const avatar = player.avatar || '🤓';
       const score = player.score !== undefined ? player.score : '...';
       
       // Select trophy based on rank

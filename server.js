@@ -27,7 +27,7 @@ io.on('connection', (socket) => {
   socket.on('create_room', (data) => {
     const roomId = data.roomId;
     rooms[roomId] = {
-      players: [{ id: socket.id, name: data.username, avatar: data.avatar || '👦' }],
+      players: [{ id: socket.id, name: data.username, avatar: data.avatar || '🤓' }],
       status: 'waiting'
     };
     socket.join(roomId);
@@ -50,7 +50,7 @@ io.on('connection', (socket) => {
       let player = rooms[roomId].players.find(p => p.id === socket.id || p.name === data.username);
       
       if (!player) {
-        player = { id: socket.id, name: data.username, avatar: data.avatar || '👦' };
+        player = { id: socket.id, name: data.username, avatar: data.avatar || '🤓' };
         rooms[roomId].players.push(player);
       } else {
         // Update socket ID and potentially avatar to the new one

@@ -50,8 +50,13 @@ const ResultsController = {
       battleContainer: document.getElementById('battle-verdict-container'),
       battleOutcome: document.getElementById('battle-outcome'),
       opponentName: document.getElementById('opponent-name'),
-      opponentPoints: document.getElementById('opponent-points')
+      opponentPoints: document.getElementById('opponent-points'),
+      playerAvatarDisplay: document.getElementById('player-avatar-display')
     };
+
+    if (this.state.domCache.playerAvatarDisplay) {
+      this.state.domCache.playerAvatarDisplay.textContent = this.state.gameData.avatar || '🤓';
+    }
   },
 
   initMultiplayer() {

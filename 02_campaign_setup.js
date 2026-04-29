@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (setupContinueBtn) {
       setupContinueBtn.style.display = 'block';
-      setupContinueBtn.textContent = 'Go Pick Word';
+      setupContinueBtn.textContent = 'Proceed';
     }
   }
 });

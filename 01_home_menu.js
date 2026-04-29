@@ -55,9 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         meanings: {}, lastLength: null, totalTime: 0, sessionStartedAt: null
       });
       sharedState.save(gameData);
-
-      // Close the popup and remain on the home page
-      soloOverlay.classList.remove('active');
+      navigate('02_campaign_setup.html');
     });
   }
 
@@ -75,13 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (friendsContinueBtn) {
     friendsContinueBtn.addEventListener('click', () => {
-      // Wipe session data for a fresh local multiplayer run
-      Object.assign(gameData, {
-        score: 0, usedLetters: [], selectedWords: [], stageScores: {},
-        meanings: {}, lastLength: null, totalTime: 0, sessionStartedAt: null
-      });
-      sharedState.save(gameData);
-      navigate('02_campaign_setup.html');
+      // Close the popup and remain on the home page
+      friendsOverlay.classList.remove('active');
     });
   }
 
