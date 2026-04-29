@@ -323,6 +323,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 /* Prevent any word from overflowing its container */
 .masked-word,
 .highlight-word,
+.flash-word,
 .revision-item strong,
 .revision-item p,
 .nd-word,
@@ -344,6 +345,13 @@ h1, h2, h3 {
 .highlight-word {
   font-size: clamp(1.6rem, 5vw, 3rem);
   letter-spacing: clamp(1px, 0.5vw, 3px);
+}
+
+.flash-word {
+  font-size: clamp(1.4rem, 6vw, 3rem);
+  letter-spacing: clamp(1px, 0.8vw, 4px);
+  display: inline-block;
+  max-width: 100%;
 }
 
 /* Revision item words — keep readable but bounded */

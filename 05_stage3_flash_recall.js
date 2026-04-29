@@ -117,6 +117,17 @@ const Stage3Controller = {
 
     const currentWord = sequence[currentIndex];
     if (domCache.flashWordEl) {
+      // Dynamic font size adjustment based on word length to prevent overlap/overflow
+      if (currentWord.length > 10) {
+        domCache.flashWordEl.style.fontSize = '1.8rem';
+        domCache.flashWordEl.style.letterSpacing = '1px';
+      } else if (currentWord.length >= 7) {
+        domCache.flashWordEl.style.fontSize = '2.2rem';
+        domCache.flashWordEl.style.letterSpacing = '2px';
+      } else {
+        domCache.flashWordEl.style.fontSize = ''; // Reset to CSS default (3rem)
+        domCache.flashWordEl.style.letterSpacing = ''; // Reset to CSS default (4px)
+      }
       domCache.flashWordEl.textContent = currentWord;
       domCache.flashWordEl.classList.remove('hidden');
     }

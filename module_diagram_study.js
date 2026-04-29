@@ -214,6 +214,18 @@ function flashNextR2() {
   r2Prog.textContent = `${r2CurrentIdx + 1} / 8`;
   const currentWord = r2Parts[r2CurrentIdx];
   r2Word.textContent = currentWord;
+
+  // Dynamic font size adjustment for very long biology terms (e.g. "rough endoplasmic reticulum")
+  if (currentWord.length > 20) {
+    r2Word.style.fontSize = '1.8rem';
+    r2Word.style.letterSpacing = '1px';
+  } else if (currentWord.length > 12) {
+    r2Word.style.fontSize = '2.5rem';
+    r2Word.style.letterSpacing = '2px';
+  } else {
+    r2Word.style.fontSize = ''; // Use the clamp() defined in style
+    r2Word.style.letterSpacing = '';
+  }
   r2Word.style.opacity = '0';
   
   // Trigger animation

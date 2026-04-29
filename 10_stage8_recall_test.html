@@ -41,17 +41,23 @@
     }
 
     .nd-word {
-      font-size: 1.6rem;
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: #111111;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
     }
 
     .nd-meaning {
       color: #555555;
       line-height: 1.5;
       max-width: 95%;
-      font-size: 1.05rem;
+      font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+      overflow-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
     }
 
     .nd-hidden-note {

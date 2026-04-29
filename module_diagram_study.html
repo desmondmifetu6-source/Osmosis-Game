@@ -74,7 +74,7 @@
       <div id="round2-view" style="display:none; padding:3rem 1rem; background:rgba(0,0,0,0.02); border-radius:8px; border:1px solid #ddd; text-align:center;">
         <h3 style="font-size:1.5rem; margin-bottom:1rem; color:var(--text-main);">Round 2: Type As They Flash</h3>
         <div id="r2-flash-container" style="min-height: 100px; display:flex; align-items:center; justify-content:center; margin-bottom: 2rem;">
-            <div id="r2-flash-word" style="font-size:4rem; font-weight:bold; font-family:var(--font-serif); opacity:0;"></div>
+            <div id="r2-flash-word" class="flash-word" style="font-size: clamp(1.4rem, 8vw, 4rem); font-weight: bold; font-family: var(--font-serif); opacity: 0; display: inline-block; max-width: 100%; overflow-wrap: break-word;"></div>
         </div>
         <div id="r2-input-area" style="display:none;">
            <input type="text" id="r2-input" class="round-input" placeholder="Type the flashed word..." autocomplete="off" spellcheck="false">

@@ -43,11 +43,14 @@
     }
 
     .flash-word {
-      font-size: 3rem;
+      font-size: clamp(1.4rem, 6vw, 3rem);
       font-weight: 800;
-      letter-spacing: 4px;
+      letter-spacing: clamp(1px, 0.8vw, 4px);
       text-transform: uppercase;
       color: var(--text-main);
+      display: inline-block;
+      max-width: 100%;
+      overflow-wrap: break-word;
     }
 
     .flash-word.hidden {
