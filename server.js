@@ -40,9 +40,9 @@ io.on('connection', (socket) => {
     console.log(`[JOIN ATTEMPT] ID: ${roomId} | User: ${data.username} | Socket: ${socket.id}`);
     
     if (rooms[roomId]) {
-      // 4 Player Limit
-      if (rooms[roomId].players.length >= 4) {
-        socket.emit('error_message', "Room is full! Max 4 players.");
+      // 10 Player Limit
+      if (rooms[roomId].players.length >= 10) {
+        socket.emit('error_message', "Room is full! Max 10 players.");
         return;
       }
 
