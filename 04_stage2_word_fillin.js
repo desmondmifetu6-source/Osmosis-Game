@@ -108,7 +108,7 @@ const Stage2Controller = {
   },
 
   maskWord(word) {
-    let arr = word.toUpperCase().split('');
+    let arr = word.split('');
     let len = word.length;
     let numToMask = Math.min(2, Math.max(1, Math.floor(len * CONFIG.MASK_PERCENTAGE)));
     let validIndices = [];

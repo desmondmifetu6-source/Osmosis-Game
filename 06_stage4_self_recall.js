@@ -112,7 +112,7 @@ const Stage4Controller = {
 
     if (allCorrectWords.includes(val)) {
       this.state.lap2Identified.push(val);
-      this.triggerLap2Feedback("Match!", 'success');
+      this.triggerLap2Feedback("Excellent!", 'success');
 
       this.rewardLap2Points(20);
 

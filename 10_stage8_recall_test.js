@@ -313,7 +313,7 @@ const Stage8Controller = {
     if (domCache.feedbackEl) {
       if (isPerfect) {
         domCache.feedbackEl.className = 'nd-feedback ok';
-        domCache.feedbackEl.textContent = `You have successfully remembered! +${finalPts} pts`;
+        domCache.feedbackEl.textContent = `Excellent! You remembered it perfectly! +${finalPts} pts`;
         if (typeof AudioManager !== 'undefined') AudioManager.play('success');
       } else if (g.wOk || g.mRatio >= 0.50) {
         domCache.feedbackEl.className = 'nd-feedback partial';

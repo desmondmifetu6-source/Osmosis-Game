@@ -152,7 +152,7 @@ const Stage6Controller = {
     if (isCorrect) {
       btn.classList.add('correct');
       if (domCache.feedbackEl) {
-        domCache.feedbackEl.textContent = 'Precise.';
+        domCache.feedbackEl.textContent = 'Excellent!';
         domCache.feedbackEl.className = 'feedback success';
       }
       if (typeof AudioManager !== 'undefined') AudioManager.play('success');
