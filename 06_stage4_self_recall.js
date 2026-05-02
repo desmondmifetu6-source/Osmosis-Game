@@ -7,8 +7,7 @@ const Stage4Controller = {
     gameData: null,
     domCache: {},
     lap2Score: 0,
-    lap2Identified: [],
-    lap2TimerInt: null
+    lap2Identified: []
   },
 
   init() {
@@ -33,7 +32,7 @@ const Stage4Controller = {
       transitionContainerLap2: document.getElementById('transition-container'),
       lap2Container: document.getElementById('lap2-container'),
       startLap2Btn: document.getElementById('start-lap2-btn'),
-      lap2Timer: document.getElementById('lap2-timer'),
+      finishRecallBtn: document.getElementById('finish-recall-btn'),
       lap2Input: document.getElementById('lap2-input'),
       lap2Feedback: document.getElementById('lap2-feedback'),
       lap2WordsList: document.getElementById('lap2-words-list')
@@ -59,40 +58,22 @@ const Stage4Controller = {
     if (domCache.lap2Input) {
       domCache.lap2Input.addEventListener('keypress', (e) => this.handleLap2Keypress(e));
     }
+
+    if (domCache.finishRecallBtn) {
+      domCache.finishRecallBtn.addEventListener('click', () => {
+        this.endFinalRecall();
+      });
+    }
   },
 
   startFinalRecall() {
     const { domCache, gameData } = this.state;
     if (domCache.lap2Container) domCache.lap2Container.style.display = 'block';
 
-    let timeLeft = gameData.selectedWords.length * 6;
-
     if (domCache.lap2Input) domCache.lap2Input.focus();
-
-    const tick = () => {
-      const min = String(Math.floor(timeLeft / 60)).padStart(2, '0');
-      const sec = String(timeLeft % 60).padStart(2, '0');
-      if (domCache.lap2Timer) domCache.lap2Timer.textContent = `${min}:${sec}`;
-
-      if (timeLeft <= 0) {
-        this.clearLap2Timer();
-        this.endFinalRecall();
-      } else if (timeLeft <= 10) {
-        if (typeof AudioManager !== 'undefined') AudioManager.play('click');
-      }
-      timeLeft--;
-    };
-
-    tick();
-    this.state.lap2TimerInt = setInterval(tick, 1000);
   },
 
-  clearLap2Timer() {
-    if (this.state.lap2TimerInt) {
-      clearInterval(this.state.lap2TimerInt);
-      this.state.lap2TimerInt = null;
-    }
-  },
+
 
   handleLap2Keypress(e) {
     if (e.key !== 'Enter') return;
@@ -122,7 +103,6 @@ const Stage4Controller = {
       if (domCache.lap2WordsList) domCache.lap2WordsList.appendChild(t);
 
       if (this.state.lap2Identified.length === gameData.selectedWords.length) {
-        this.clearLap2Timer();
         setTimeout(() => this.endFinalRecall(), 1000);
       }
     } else {
