@@ -6,29 +6,118 @@
   <title>Osmosis - Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
     body {
-      background: var(--bg-light);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #e0f7fa, #b2ebf2, #80deea, #4dd0e1) !important;
+      background-size: 400% 400% !important;
+      animation: gradientBG 15s ease infinite !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .app-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      box-sizing: border-box;
     }
 
     .login-plaque {
       position: relative;
       overflow: hidden;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
     }
 
     .logo {
-      font-size: 3.5rem;
-      color: var(--text-main);
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
+      color: #1a237e;
       letter-spacing: 2px;
+      margin: 0 0 0.5rem 0;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
     }
 
     .tagline {
       font-style: italic;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
+      color: #3949ab;
+      margin-bottom: 2.5rem;
+      font-size: 1.1rem;
+    }
+
+    #username-input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.6);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      color: #111;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    #username-input:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #1a237e;
+      box-shadow: 0 0 10px rgba(26, 35, 126, 0.2);
+    }
+
+    .classic-btn {
+      background: #1a237e;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(26, 35, 126, 0.3);
+    }
+
+    .classic-btn:hover {
+      background: #283593;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(26, 35, 126, 0.4);
+    }
+
+    .classic-btn.outline {
+      background: transparent;
+      color: #1a237e;
+      border: 2px solid #1a237e;
+      box-shadow: none;
+    }
+
+    .classic-btn.outline:hover {
+      background: rgba(26, 35, 126, 0.1);
+      transform: translateY(-2px);
     }
 
     #akwaaba-screen {
@@ -77,8 +166,8 @@
     #intro-splash {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: var(--bg-light); /* Pure white to match the game */
-      color: var(--text-main);
+      background: #e0f7fa; /* Match the bright gradient theme */
+      color: #1a237e;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -121,8 +210,8 @@
       border: 3px solid transparent;
       border-radius: 50%;
       padding: 5px;
-      transition: all 0.2s ease;
-      background: var(--surface-dim);
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.5);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -130,13 +219,14 @@
       aspect-ratio: 1/1;
     }
     .avatar-option.selected {
-      border-color: var(--accent-primary);
+      border-color: #1a237e;
       background: #fff;
-      transform: scale(1.1);
-      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+      transform: scale(1.15);
+      box-shadow: 0 6px 16px rgba(26, 35, 126, 0.3);
     }
     .avatar-option:hover {
       background: #fff;
+      transform: scale(1.05);
     }
     .avatar-label {
       font-size: 0.8rem;
