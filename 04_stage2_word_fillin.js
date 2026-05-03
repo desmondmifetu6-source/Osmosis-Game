@@ -215,7 +215,7 @@ const Stage2Controller = {
   handleValidation() {
     const { domCache, sequence, currentIndex } = this.state;
     
-    if (domCache.lap1Submit && domCache.lap1Submit.textContent === "Next") {
+    if (domCache.lap1Submit && (domCache.lap1Submit.textContent === "Next" || domCache.lap1Submit.textContent === "Finish")) {
       this.state.currentIndex++;
       if (this.state.currentIndex < sequence.length) {
         this.renderCurrentQuestion();
@@ -240,7 +240,13 @@ const Stage2Controller = {
       this.triggerFeedback(`Incorrect. Word was "${correctWord.toUpperCase()}"`, 'error');
     }
 
-    if (domCache.lap1Submit) domCache.lap1Submit.textContent = "Next";
+    if (domCache.lap1Submit) {
+      if (currentIndex === sequence.length - 1) {
+        domCache.lap1Submit.textContent = "Finish";
+      } else {
+        domCache.lap1Submit.textContent = "Next";
+      }
+    }
   },
 
   triggerFeedback(message, type) {

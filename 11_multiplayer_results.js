@@ -41,7 +41,8 @@ const MultiplayerResults = {
     this.state.socket.emit('update_score', {
       roomId: this.state.roomId,
       score: this.state.gameData.score || 0,
-      username: myName
+      username: myName,
+      time: this.state.gameData.totalTime || 0
     });
 
     this.state.socket.on('leaderboard_update', (data) => {
@@ -66,6 +67,7 @@ const MultiplayerResults = {
       
       const avatar = player.avatar || '🤓';
       const score = player.score !== undefined ? player.score : '...';
+      const timeStr = player.time !== undefined ? sharedState.getFormattedTime(player.time) : '...';
       
       // Select trophy based on rank
       let trophy = '';
@@ -79,7 +81,7 @@ const MultiplayerResults = {
         <div class="player-avatar">${avatar}</div>
         <div class="player-info">
           <p class="player-name">${player.name}</p>
-          <p class="player-score">${score} pts</p>
+          <p class="player-score">${score} pts | Time: ${timeStr}</p>
         </div>
         <div style="font-size: 2.5rem;">${trophy}</div>
       `;

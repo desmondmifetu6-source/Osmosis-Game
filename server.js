@@ -80,6 +80,7 @@ io.on('connection', (socket) => {
       const player = rooms[roomId].players.find(p => p.id === socket.id);
       if (player) {
         player.score = data.score;
+        player.time = data.time;
         io.to(roomId).emit('leaderboard_update', {
           players: rooms[roomId].players
         });
