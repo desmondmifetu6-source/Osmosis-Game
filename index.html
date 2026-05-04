@@ -62,15 +62,34 @@
       font-size: 3.8rem;
       color: #1a237e;
       letter-spacing: 2px;
-      margin: 0 0 0.5rem 0;
+      margin: 0 0 0.3rem 0; /* Reduced to bring tagline closer */
       text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
     }
 
     .tagline {
       font-style: italic;
+      font-weight: 700;
       color: #3949ab;
-      margin-bottom: 0.5rem;
+      margin-top: 0;
+      margin-bottom: 1.8rem; /* Increased to push lower text further down */
       font-size: 1.1rem;
+      display: inline-block;
+      animation: pulseInAndOut 2s ease-in-out infinite;
+      /* Claymorphism styles */
+      background: #e0f7fa;
+      padding: 8px 20px;
+      border-radius: 25px;
+      box-shadow: 
+        4px 4px 10px rgba(0, 0, 0, 0.08), 
+        -4px -4px 10px rgba(255, 255, 255, 0.8), 
+        inset 4px 4px 10px rgba(255, 255, 255, 0.9), 
+        inset -4px -4px 10px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    @keyframes pulseInAndOut {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
     }
 
     .sub-tagline {
@@ -342,9 +361,8 @@
       </div>
       <div id="welcome-back-content" style="display: none; text-align: center;">
         <h1 class="logo">Osmosis</h1>
-        <p class="tagline">FUNTIME WITH SCIENCE.</p>
-        <p class="sub-tagline">Quick, Easy Learning Game for high interest, excellent performance & participation in
-          STEM</p>
+        <p class="tagline">FUNTIME WITH SCIENCE GAME.</p>
+        <p class="sub-tagline">Quick, Easy method for high interest, excellent performance & participation in STEM</p>
         <h2 id="welcome-back-title" style="margin-bottom: 30px;">Welcome back</h2>
         <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
           <button id="continue-saved-btn" class="classic-btn" style="width: 80%; padding: 10px;">Continue as
