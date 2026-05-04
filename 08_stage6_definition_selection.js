@@ -200,7 +200,7 @@ const Stage6Controller = {
     sharedState.save(this.state.gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('stage5', 'Stage 5: Match & Master: Terms & Meanings', this.state.stageScore, () => {
+    sharedState.showStageScoreThen('stage5', 'match words to meanings', this.state.stageScore, () => {
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('09_stage7_meaning_fillin.html');
       else window.location.href = '09_stage7_meaning_fillin.html';
     });
