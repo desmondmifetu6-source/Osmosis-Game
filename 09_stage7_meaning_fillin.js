@@ -106,6 +106,50 @@ const Stage7Controller = {
     if (domCache.loadingContainer) domCache.loadingContainer.style.display = 'none';
 
     this.startTestPhase();
+    this.playCelebration();
+  },
+
+  playCelebration() {
+    // Play an energetic success chord using the existing audio manager if available
+    if (typeof AudioManager !== 'undefined') {
+      AudioManager.play('success');
+      setTimeout(() => AudioManager.play('success'), 300);
+      setTimeout(() => AudioManager.play('success'), 600);
+    }
+
+    // Show a victorious pop-up banner
+    const banner = document.createElement('div');
+    banner.className = 'final-stage-banner';
+    banner.innerHTML = '🏆 THE FINAL CHALLENGE! 🏆<br><span style="font-size:1.2rem; font-weight:500;">You made it! Show what you know!</span>';
+    document.body.appendChild(banner);
+    setTimeout(() => banner.remove(), 4000);
+
+    // Shoot digital confetti!
+    const colors = ['#ffeb3b', '#4caf50', '#2196f3', '#f44336', '#e91e63', '#9c27b0'];
+    for (let i = 0; i < 80; i++) {
+      let confetti = document.createElement('div');
+      confetti.style.position = 'fixed';
+      confetti.style.width = Math.random() * 12 + 6 + 'px';
+      confetti.style.height = Math.random() * 12 + 6 + 'px';
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.top = '-20px';
+      confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      confetti.style.zIndex = '9998';
+      confetti.style.pointerEvents = 'none';
+      document.body.appendChild(confetti);
+
+      const fallDuration = Math.random() * 2 + 2.5;
+      confetti.animate([
+        { transform: `translate3d(0, 0, 0) rotate(0deg)`, opacity: 1 },
+        { transform: `translate3d(${Math.random() * 400 - 200}px, 100vh, 0) rotate(${Math.random() * 1080}deg)`, opacity: 0 }
+      ], {
+        duration: fallDuration * 1000,
+        easing: 'cubic-bezier(.37,0,.63,1)'
+      });
+
+      setTimeout(() => confetti.remove(), fallDuration * 1000);
+    }
   },
 
   startTestPhase() {

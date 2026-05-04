@@ -16,13 +16,21 @@
 body {
   font-family: var(--font-main);
   color: var(--text-main);
-  background: var(--bg-light); 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
   opacity: 1;
   transition: opacity 220ms ease;
+  background: linear-gradient(-45deg, #e0f7fa, #b2ebf2, #80deea, #4dd0e1) !important;
+  background-size: 400% 400% !important;
+  animation: gradientBG 15s ease infinite !important;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 body.page-preload {
@@ -50,10 +58,10 @@ body::before {
 }
 
 .card {
-  background-color: var(--surface-white);
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.04), 0 4px 10px rgba(0,0,0,0.02);
+  background: #FFFFFF !important;
+  border: 1px solid #E0E0E0 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 16px !important;
   padding: 2.5rem; text-align: center;
   position: relative; max-height: 90vh; overflow-y: auto;
 }
