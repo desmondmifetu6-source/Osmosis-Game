@@ -7,6 +7,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #e0f7fa, #b2ebf2, #80deea, #4dd0e1) !important;
+      background-size: 400% 400% !important;
+      animation: gradientBG 15s ease infinite !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .app-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.3) !important;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+      border-radius: 20px !important;
+      padding: 3rem 2rem !important;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
     .lobby-header { margin-bottom: 2rem; }
     .room-code-display {
       font-size: 2.5rem;

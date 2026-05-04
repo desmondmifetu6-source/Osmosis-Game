@@ -63,8 +63,25 @@
     .tagline {
       font-style: italic;
       color: #3949ab;
-      margin-bottom: 2.5rem;
+      margin-bottom: 0.5rem;
       font-size: 1.1rem;
+    }
+
+    .sub-tagline {
+      font-style: italic;
+      color: #b8860b; /* Dark Goldenrod for good contrast */
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+      animation: floatUp 1.2s ease-out forwards;
+      animation-delay: 0.3s;
+      opacity: 0;
+    }
+
+    @keyframes floatUp {
+      0% { opacity: 0; transform: translateY(15px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     #username-input {
@@ -244,6 +261,7 @@
       <div id="login-content">
         <h1 class="logo">Osmosis</h1>
         <p class="tagline">Fun time with science</p>
+        <p class="sub-tagline">A Rapid Fun-filled STEM Learning Game for All Ages</p>
         
         <h2>Enter your name</h2>
         <input type="text" id="username-input" placeholder="Your Name" autocomplete="off">
@@ -261,6 +279,7 @@
       <div id="welcome-back-content" style="display: none; text-align: center;">
         <h1 class="logo">Osmosis</h1>
         <p class="tagline">FUNTIME WITH SCIENCE.</p>
+        <p class="sub-tagline">A Rapid Fun-filled STEM Learning Game for All Ages</p>
         <h2 id="welcome-back-title" style="margin-bottom: 30px;">Welcome back</h2>
         <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
           <button id="continue-saved-btn" class="classic-btn" style="width: 80%; padding: 10px;">Continue as
