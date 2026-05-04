@@ -23,9 +23,17 @@
     }
 
     @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     .app-container {
@@ -67,7 +75,8 @@
 
     .sub-tagline {
       font-style: italic;
-      color: #b8860b; /* Dark Goldenrod for good contrast */
+      color: #b8860b;
+      /* Dark Goldenrod for good contrast */
       font-size: 0.95rem;
       font-weight: 600;
       margin-bottom: 2.5rem;
@@ -78,8 +87,15 @@
     }
 
     @keyframes floatUp {
-      0% { opacity: 0; transform: translateY(15px); }
-      100% { opacity: 1; transform: translateY(0); }
+      0% {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     #username-input {
@@ -172,23 +188,29 @@
       .login-plaque {
         padding: 2rem 1rem;
       }
+
       .logo {
         font-size: 2.5rem;
       }
+
       .tagline {
         font-size: 0.95rem;
       }
+
       .sub-tagline {
         font-size: 0.85rem;
       }
+
       #username-input {
         font-size: 1rem;
         padding: 0.8rem;
       }
+
       .classic-btn {
         font-size: 1.1rem;
         padding: 0.8rem 1.5rem;
       }
+
       #akwaaba-screen {
         font-size: 1.8rem;
         line-height: 1.3;
@@ -200,8 +222,12 @@
     /* Intro Splash Screen */
     #intro-splash {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: #e0f7fa; /* Match the bright gradient theme */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #e0f7fa;
+      /* Match the bright gradient theme */
       color: #1a237e;
       display: flex;
       flex-direction: column;
@@ -210,16 +236,19 @@
       z-index: 9999;
       transition: opacity 1s ease, visibility 1s ease;
     }
+
     #intro-splash.hidden {
       opacity: 0;
       visibility: hidden;
     }
+
     #intro-splash img {
       width: 120px;
       height: 120px;
       margin-bottom: 20px;
       animation: pulseLogo 2s infinite ease-in-out;
     }
+
     #intro-splash p {
       font-size: 1.2rem;
       color: var(--text-secondary);
@@ -227,11 +256,24 @@
       margin: 0;
       font-style: italic;
     }
+
     @keyframes pulseLogo {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1.05); opacity: 1; }
-      100% { transform: scale(0.95); opacity: 0.8; }
+      0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(0.95);
+        opacity: 0.8;
+      }
     }
+
     /* Avatar Selection */
     .avatar-selection {
       margin: 1.5rem 0;
@@ -240,6 +282,7 @@
       gap: 12px;
       padding: 0.5rem;
     }
+
     .avatar-option {
       cursor: pointer;
       border: 3px solid transparent;
@@ -253,16 +296,19 @@
       font-size: 2rem;
       aspect-ratio: 1/1;
     }
+
     .avatar-option.selected {
       border-color: #1a237e;
       background: #fff;
       transform: scale(1.15);
       box-shadow: 0 6px 16px rgba(26, 35, 126, 0.3);
     }
+
     .avatar-option:hover {
       background: #fff;
       transform: scale(1.05);
     }
+
     .avatar-label {
       font-size: 0.8rem;
       font-weight: 600;
@@ -280,10 +326,10 @@
         <h1 class="logo">Osmosis</h1>
         <p class="tagline">Fun time with science</p>
         <p class="sub-tagline">A Rapid Fun-filled STEM Learning Game for All Ages</p>
-        
+
         <h2>Enter your name</h2>
         <input type="text" id="username-input" placeholder="Your Name" autocomplete="off">
-        
+
         <span class="avatar-label">Select Your Character</span>
         <div class="avatar-selection" id="avatar-grid">
           <div class="avatar-option selected" data-avatar="🤓" title="Nerd">🤓</div>
@@ -297,13 +343,13 @@
       <div id="welcome-back-content" style="display: none; text-align: center;">
         <h1 class="logo">Osmosis</h1>
         <p class="tagline">FUNTIME WITH SCIENCE.</p>
-        <p class="sub-tagline">A Rapid Fun-filled STEM Learning Game for All Ages</p>
+        <p class="sub-tagline">Quick, Easy Learning Game for high interest, excellent performance & participation in
+          STEM</p>
         <h2 id="welcome-back-title" style="margin-bottom: 30px;">Welcome back</h2>
         <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
           <button id="continue-saved-btn" class="classic-btn" style="width: 80%; padding: 10px;">Continue as
             Saved</button>
-          <button id="continue-guest-btn" class="classic-btn outline"
-            style="width: 80%; padding: 10px;">Continue as
+          <button id="continue-guest-btn" class="classic-btn outline" style="width: 80%; padding: 10px;">Continue as
             Guest</button>
           <a href="#" id="switch-user-link"
             style="color: var(--text-secondary); font-size: 0.9em; margin-top: 10px; cursor: pointer;">Login as a
