@@ -271,11 +271,12 @@
 
     #line-yell {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 15vw, 6rem);
+      font-size: clamp(2.5rem, 12vw, 5rem);
       font-weight: 900;
       color: #1a237e;
       text-transform: uppercase;
-      letter-spacing: 8px;
+      letter-spacing: 4px;
+      white-space: nowrap;
     }
 
     #line-response {
@@ -286,11 +287,12 @@
     }
 
     #line-together {
-      font-size: clamp(1rem, 4vw, 1.8rem);
+      font-size: clamp(0.9rem, 3vw, 1.3rem);
       color: #b8860b;
       font-weight: 600;
-      max-width: 800px;
-      margin-top: 2rem;
+      max-width: 90%;
+      margin-top: 1.5rem;
+      line-height: 1.4;
     }
 
     /* Animation Classes */
@@ -373,8 +375,8 @@
     }
 
     .yell-badge.main-logo {
-      font-size: 1.5rem;
-      margin-left: 15px;
+      font-size: clamp(1rem, 4vw, 1.5rem);
+      margin-left: 10px;
       animation-delay: 1.2s;
     }
 
@@ -398,8 +400,7 @@
     <div id="line-yell" class="intro-line">Osmosis <span class="yell-badge main-logo">YELL</span></div>
     <div id="line-response" class="intro-line">Fun Time with Science</div>
     <div id="line-together" class="intro-line">
-      <span class="yell-badge tagline-prefix">ALL :</span> Quick, Easy Games for High Interest in STEM, <br>
-      Active Participation, and Excellent Performance for Life
+      <span class="yell-badge tagline-prefix">ALL :</span> Quick, Easy Games for High Interest in STEM, Active Participation, and Excellent Performance for Life
     </div>
     <div id="proceed-btn-wrap">
       <button id="intro-proceed-btn" class="classic-btn">Proceed to Login</button>
