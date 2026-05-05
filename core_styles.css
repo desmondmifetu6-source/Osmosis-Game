@@ -76,7 +76,7 @@ h1, h2, h3 {
 }
 
 h1.logo {
-  font-size: 3rem; text-transform: uppercase; letter-spacing: 4px; color: var(--text-main);
+  font-size: 4rem; text-transform: uppercase; letter-spacing: 4px; color: var(--text-main);
 }
 
 input[type="text"], textarea {
@@ -200,7 +200,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 @media (max-width: 480px) {
   .app-container { padding: 0.25rem; }
   .card { padding: 1rem; border-radius: 8px; margin-top: 3.5rem; }
-  h1.logo { font-size: 1.6rem; }
+  h1.logo { font-size: 2.2rem; }
   .classic-btn { padding: 0.6rem 1rem; font-size: 0.9rem; margin-bottom: 0.5rem; }
   h2 { font-size: 1.1rem; margin-bottom: 0.8rem; }
   h3 { font-size: 1rem; margin-bottom: 0.8rem; }

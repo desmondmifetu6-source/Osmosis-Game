@@ -59,10 +59,11 @@
 
     .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 3.8rem;
+      font-size: 4.8rem;
       color: #1a237e;
       letter-spacing: 2px;
-      margin: 0 0 0.3rem 0; /* Reduced to bring tagline closer */
+      margin: 0 0 1.2rem 0;
+      /* Increased from 0.5rem */
       text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
     }
 
@@ -70,26 +71,36 @@
       font-style: italic;
       font-weight: 700;
       color: #3949ab;
-      margin-top: 0;
-      margin-bottom: 1.8rem; /* Increased to push lower text further down */
+      margin-bottom: 0.8rem;
       font-size: 1.1rem;
       display: inline-block;
-      animation: pulseInAndOut 2s ease-in-out infinite;
+      animation: bounceSideToSide 2s ease-in-out infinite;
       /* Claymorphism styles */
       background: #e0f7fa;
       padding: 8px 20px;
       border-radius: 25px;
-      box-shadow: 
-        4px 4px 10px rgba(0, 0, 0, 0.08), 
-        -4px -4px 10px rgba(255, 255, 255, 0.8), 
-        inset 4px 4px 10px rgba(255, 255, 255, 0.9), 
+      box-shadow:
+        4px 4px 10px rgba(0, 0, 0, 0.08),
+        -4px -4px 10px rgba(255, 255, 255, 0.8),
+        inset 4px 4px 10px rgba(255, 255, 255, 0.9),
         inset -4px -4px 10px rgba(0, 0, 0, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.5);
     }
 
-    @keyframes pulseInAndOut {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); }
+    @keyframes bounceSideToSide {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-6px);
+      }
+
+      75% {
+        transform: translateX(6px);
+      }
     }
 
     .sub-tagline {
@@ -209,7 +220,7 @@
       }
 
       .logo {
-        font-size: 2.5rem;
+        font-size: 3.2rem;
       }
 
       .tagline {
@@ -262,8 +273,8 @@
     }
 
     #intro-splash img {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 160px;
       margin-bottom: 20px;
       animation: pulseLogo 2s infinite ease-in-out;
     }
@@ -361,7 +372,7 @@
       </div>
       <div id="welcome-back-content" style="display: none; text-align: center;">
         <h1 class="logo">Osmosis</h1>
-        <p class="tagline">FUNTIME WITH SCIENCE GAME.</p>
+        <p class="tagline">FUNTIME WITH SCIENCE .</p>
         <p class="sub-tagline">Quick, Easy method for high interest, excellent performance & participation in STEM</p>
         <h2 id="welcome-back-title" style="margin-bottom: 30px;">Welcome back</h2>
         <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">

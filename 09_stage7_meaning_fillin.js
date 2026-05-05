@@ -106,7 +106,6 @@ const Stage7Controller = {
     if (domCache.loadingContainer) domCache.loadingContainer.style.display = 'none';
 
     this.startTestPhase();
-    this.playCelebration();
   },
 
   playCelebration() {
@@ -358,12 +357,15 @@ const Stage7Controller = {
 
   finishGame() {
     sharedState.save(this.state.gameData);
-    if (typeof AudioManager !== 'undefined') AudioManager.play('success');
+    this.playCelebration(); // Celebrate first!
 
-    sharedState.showStageScoreThen('stage6', 'Stage 6: Fill-in-Memory Challenge', this.state.stageScore, () => {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame_intro.html');
-      else window.location.href = '10_stage8_hall_of_fame_intro.html';
-    });
+    // Wait for the celebration to be enjoyed before moving on
+    setTimeout(() => {
+      sharedState.showStageScoreThen('stage6', 'Stage 6: Fill-in-Memory Challenge', this.state.stageScore, () => {
+        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame_intro.html');
+        else window.location.href = '10_stage8_hall_of_fame_intro.html';
+      });
+    }, 3500);
   }
 };
 
