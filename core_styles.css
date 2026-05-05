@@ -22,15 +22,37 @@ body {
   overflow-x: hidden;
   opacity: 1;
   transition: opacity 220ms ease;
-  background: linear-gradient(-45deg, #e0f7fa, #b2ebf2, #80deea, #4dd0e1) !important;
-  background-size: 400% 400% !important;
-  animation: gradientBG 15s ease infinite !important;
+  background: linear-gradient(135deg, #e0c3fc 0%, #c2e9fb 100%) !important;
+  background-attachment: fixed;
+  position: relative;
 }
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Glassy Background Shapes */
+body::after {
+  content: "";
+  position: fixed;
+  top: -10%; left: -10%;
+  width: 40vw; height: 40vw;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  filter: blur(60px);
+  z-index: -1;
+  animation: floatShape 20s infinite alternate ease-in-out;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  bottom: -10%; right: -10%;
+  width: 50vw; height: 50vw;
+  background: radial-gradient(circle, rgba(142,197,252,0.3) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: -1;
+  animation: floatShape 25s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes floatShape {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, 50px) scale(1.1); }
 }
 
 body.page-preload {
@@ -58,10 +80,12 @@ body::before {
 }
 
 .card {
-  background: #FFFFFF !important;
-  border: 1px solid #E0E0E0 !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.05) !important;
-  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(15px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 24px !important;
   padding: 2.5rem; text-align: center;
   position: relative; max-height: 90vh; overflow-y: auto;
 }
@@ -198,45 +222,18 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 }
 
 @media (max-width: 480px) {
-  .app-container { padding: 0.25rem; }
-  .card { padding: 1rem; border-radius: 8px; margin-top: 3.5rem; }
-  h1.logo { font-size: 2.2rem; }
-  .classic-btn { padding: 0.6rem 1rem; font-size: 0.9rem; margin-bottom: 0.5rem; }
-  h2 { font-size: 1.1rem; margin-bottom: 0.8rem; }
-  h3 { font-size: 1rem; margin-bottom: 0.8rem; }
-  input[type="text"], textarea { font-size: 0.9rem; padding: 0.6rem; margin-bottom: 1rem; }
-  
-  .scoreboard {
-    top: 0.5rem !important;
-    left: 0.5rem !important;
-    right: auto !important;
-    transform: none !important;
-    padding: 0.4rem 0.75rem !important;
-    font-size: 0.75rem !important;
-    border-width: 1px !important;
-    gap: 4px !important;
-    height: auto !important;
-    background: rgba(25, 135, 84, 0.9) !important;
+  .app-container { padding: 0.5rem; }
+  .card { 
+    padding: 1.5rem 1rem !important; 
+    border-radius: 12px !important; 
+    margin-top: 2rem; 
   }
-  #global-game-timer {
-    top: 0.5rem !important;
-    right: 0.5rem !important;
-    left: auto !important;
-    transform: none !important;
-    padding: 0.4rem 0.75rem !important;
-    font-size: 0.75rem !important;
-    border-width: 1px !important;
-    gap: 4px !important;
-    height: auto !important;
-    background: rgba(25, 135, 84, 0.9) !important;
-  }
-  #global-game-timer::before {
-    content: "Time: ";
-    font-size: 0.75rem;
-  }
-  .floating-point {
-    font-size: 1.5rem;
-  }
+  h1.logo { font-size: 2.2rem !important; }
+  h2 { font-size: 1.1rem !important; margin-bottom: 0.8rem !important; }
+  h3 { font-size: 1rem !important; margin-bottom: 0.6rem !important; }
+  p { font-size: 0.9rem !important; }
+  .classic-btn { padding: 0.7rem 1rem !important; font-size: 0.95rem !important; margin-bottom: 0.6rem !important; }
+  input[type="text"], textarea { font-size: 0.95rem !important; padding: 0.7rem !important; margin-bottom: 1rem !important; }
 }
 
 /* Toast Notifications */

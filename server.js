@@ -77,10 +77,17 @@ io.on('connection', (socket) => {
   socket.on('update_score', (data) => {
     const roomId = data.roomId;
     if (rooms[roomId]) {
-      const player = rooms[roomId].players.find(p => p.id === socket.id);
+      // Find by ID first, then by name (backup for page transitions)
+      let player = rooms[roomId].players.find(p => p.id === socket.id);
+      if (!player && data.username) {
+        player = rooms[roomId].players.find(p => p.name === data.username);
+      }
+      
       if (player) {
         player.score = data.score;
-        player.time = data.time;
+        player.time = data.time || 0;
+        if (socket.id !== player.id) player.id = socket.id; // Sync ID if found by name
+
         io.to(roomId).emit('leaderboard_update', {
           players: rooms[roomId].players
         });

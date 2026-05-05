@@ -98,21 +98,85 @@ const sharedState = {
     this.save(state);
 
     // Multiplayer Reporting: If we are in a battle, tell the server!
+    this.syncScore();
+  },
+
+  syncScore: function() {
+    const state = this.load();
     if (state.multiplayerMode && state.currentRoomId) {
       this.reportScoreToServer(state.currentRoomId, state.score || 0);
     }
   },
 
   reportScoreToServer: function(roomId, score) {
-    // assumption: socket.io client is loaded in the page
     if (typeof io !== 'undefined') {
-      if (!this.socket) this.socket = io();
+      if (!this.socket) {
+        this.socket = io();
+        this.socket.on('leaderboard_update', (data) => this.renderLeaderboard(data.players));
+      }
       this.socket.emit('update_score', { 
         roomId: roomId, 
         score: score,
         username: localStorage.getItem('osmosis_user') || 'Guest'
       });
     }
+  },
+
+  initMultiplayer: function() {
+    const state = this.load();
+    if (state.multiplayerMode && state.currentRoomId && typeof io !== 'undefined') {
+      this.socket = io();
+      
+      // Re-join the room so server knows this socket is active in this room
+      this.socket.emit('join_room', {
+        roomId: state.currentRoomId,
+        username: localStorage.getItem('osmosis_user') || 'Guest',
+        avatar: state.avatar || '🤓'
+      });
+
+      // Listen for leaderboard updates from other players
+      this.socket.on('leaderboard_update', (data) => {
+        this.renderLeaderboard(data.players);
+      });
+
+      // Listen for game end or other events
+      this.socket.on('error_message', (msg) => console.error("MP Error:", msg));
+    }
+  },
+
+  renderLeaderboard: function(players) {
+    let el = document.getElementById('mp-leaderboard');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'mp-leaderboard';
+      el.style.cssText = `
+        position: fixed; top: 80px; left: 20px; 
+        background: rgba(255,255,255,0.7); backdrop-filter: blur(10px);
+        padding: 15px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.4);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1); z-index: 9998;
+        min-width: 180px; font-family: var(--font-main);
+      `;
+      document.body.appendChild(el);
+    }
+
+    // Sort players by score
+    const sorted = [...players].sort((a, b) => (b.score || 0) - (a.score || 0));
+    
+    el.innerHTML = `<h4 style="margin:0 0 10px 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing:1px; color: var(--text-secondary);">Battle Stats</h4>`;
+    sorted.forEach((p, i) => {
+      const isMe = p.name === localStorage.getItem('osmosis_user');
+      const div = document.createElement('div');
+      div.style.cssText = `
+        display: flex; justify-content: space-between; align-items: center;
+        margin-bottom: 5px; font-size: 0.9rem;
+        ${isMe ? 'color: var(--accent-primary); font-weight: 700;' : ''}
+      `;
+      div.innerHTML = `
+        <span>${i + 1}. ${p.avatar || '🤓'} ${p.name}</span>
+        <span style="font-family: monospace; font-weight: 800;">${p.score || 0}</span>
+      `;
+      el.appendChild(div);
+    });
   },
 
   // Function: showStageScoreThen
@@ -167,6 +231,11 @@ const sharedState = {
     return { name: 'Seed', minLen: 4, maxLen: 5, next: 501 };
   }
 };
+
+// Auto-init multiplayer if needed on page load
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => sharedState.initMultiplayer());
+}
 
 // =====================================================================
 // AudioManager: The Sound Effects Department

@@ -86,35 +86,46 @@ const ResultsController = {
     if (!domCache.battleContainer) return;
 
     const myName = localStorage.getItem('osmosis_user') || 'Guest';
-    const opponent = players.find(p => p.name !== myName);
+    const otherPlayers = players.filter(p => p.name !== myName);
 
-    if (opponent) {
+    if (otherPlayers.length > 0) {
       domCache.battleContainer.style.display = 'block';
-      domCache.opponentName.textContent = opponent.name;
       
-      // If opponent hasn't submitted a score yet (is 0 or undefined), show waiting status
-      if (!opponent.score && opponent.score !== 0) {
-        domCache.opponentPoints.textContent = "...";
-        domCache.battleOutcome.textContent = "WAITING FOR OPPONENT";
-        domCache.battleOutcome.style.color = "#aaa";
+      // Check if everyone has a score submitted
+      const allFinished = players.every(p => p.score !== undefined && p.score !== null);
+      
+      if (!allFinished) {
+        domCache.battleOutcome.textContent = "WAITING FOR OTHERS...";
+        domCache.battleOutcome.style.color = "var(--text-secondary)";
+        domCache.opponentName.textContent = "Multiplayer Battle";
+        domCache.opponentPoints.textContent = "Calculating...";
         return;
       }
 
-      domCache.opponentPoints.textContent = opponent.score;
-
+      // If everyone finished, find the winner
       const myScore = gameData.score || 0;
-      const oppScore = opponent.score || 0;
+      const scores = players.map(p => p.score || 0);
+      const maxScore = Math.max(...scores);
+      const winners = players.filter(p => p.score === maxScore);
 
-      if (myScore > oppScore) {
-        domCache.battleOutcome.textContent = "VICTORY";
-        domCache.battleOutcome.style.color = "#4caf50";
-      } else if (myScore < oppScore) {
+      // UI Polish for the verdict
+      if (winners.some(w => w.name === myName)) {
+        if (winners.length > 1) {
+          domCache.battleOutcome.textContent = "TIE FOR 1ST";
+          domCache.battleOutcome.style.color = "#ffd700";
+        } else {
+          domCache.battleOutcome.textContent = "VICTORY";
+          domCache.battleOutcome.style.color = "#4caf50";
+        }
+      } else {
         domCache.battleOutcome.textContent = "DEFEAT";
         domCache.battleOutcome.style.color = "#f44336";
-      } else {
-        domCache.battleOutcome.textContent = "DRAW";
-        domCache.battleOutcome.style.color = "#ffd700";
       }
+
+      // Show the top opponent's score in the sub-box
+      const topOpponent = [...otherPlayers].sort((a, b) => b.score - a.score)[0];
+      domCache.opponentName.textContent = `Top Opponent: ${topOpponent.name}`;
+      domCache.opponentPoints.textContent = topOpponent.score;
     }
   },
 

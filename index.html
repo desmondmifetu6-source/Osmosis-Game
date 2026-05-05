@@ -14,26 +14,9 @@
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      background: linear-gradient(-45deg, #e0f7fa, #b2ebf2, #80deea, #4dd0e1) !important;
-      background-size: 400% 400% !important;
-      animation: gradientBG 15s ease infinite !important;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    @keyframes gradientBG {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
     }
 
     .app-container {
@@ -216,141 +199,180 @@
 
     @media (max-width: 480px) {
       .login-plaque {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
+        max-width: 340px;
+        margin: 1rem;
       }
 
       .logo {
-        font-size: 3.2rem;
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
       }
 
       .tagline {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
+        padding: 6px 15px;
       }
 
       .sub-tagline {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
+        margin-bottom: 1.5rem;
       }
 
       #username-input {
-        font-size: 1rem;
-        padding: 0.8rem;
+        font-size: 0.95rem;
+        padding: 0.7rem;
+        margin-bottom: 1rem;
       }
 
       .classic-btn {
-        font-size: 1.1rem;
-        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
       }
 
       #akwaaba-screen {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         line-height: 1.3;
         padding: 1rem;
         word-wrap: break-word;
       }
+
+      .avatar-selection {
+        gap: 8px;
+        margin: 1rem 0;
+      }
+
+      .avatar-option {
+        font-size: 1.5rem;
+      }
     }
 
-    /* Intro Splash Screen */
-    #intro-splash {
+    /* High-Energy Kinetic Intro */
+    #kinetic-intro {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: #e0f7fa;
-      /* Match the bright gradient theme */
-      color: #1a237e;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, #e0c3fc 0%, #c2e9fb 100%);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      z-index: 9999;
-      transition: opacity 1s ease, visibility 1s ease;
+      z-index: 10000;
+      padding: 2rem;
+      text-align: center;
+      overflow: hidden;
     }
 
-    #intro-splash.hidden {
+    .intro-line {
       opacity: 0;
-      visibility: hidden;
+      transform: scale(0.8);
+      margin: 1rem 0;
+      line-height: 1.2;
     }
 
-    #intro-splash img {
-      width: 160px;
-      height: 160px;
-      margin-bottom: 20px;
-      animation: pulseLogo 2s infinite ease-in-out;
+    #line-yell {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 15vw, 6rem);
+      font-weight: 900;
+      color: #1a237e;
+      text-transform: uppercase;
+      letter-spacing: 8px;
     }
 
-    #intro-splash p {
-      font-size: 1.2rem;
-      color: var(--text-secondary);
-      letter-spacing: 2px;
-      margin: 0;
+    #line-response {
+      font-size: clamp(1.5rem, 6vw, 3rem);
+      color: #3949ab;
+      font-weight: 700;
       font-style: italic;
     }
 
-    @keyframes pulseLogo {
-      0% {
-        transform: scale(0.95);
-        opacity: 0.8;
-      }
-
-      50% {
-        transform: scale(1.05);
-        opacity: 1;
-      }
-
-      100% {
-        transform: scale(0.95);
-        opacity: 0.8;
-      }
-    }
-
-    /* Avatar Selection */
-    .avatar-selection {
-      margin: 1.5rem 0;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      padding: 0.5rem;
-    }
-
-    .avatar-option {
-      cursor: pointer;
-      border: 3px solid transparent;
-      border-radius: 50%;
-      padding: 5px;
-      transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      aspect-ratio: 1/1;
-    }
-
-    .avatar-option.selected {
-      border-color: #1a237e;
-      background: #fff;
-      transform: scale(1.15);
-      box-shadow: 0 6px 16px rgba(26, 35, 126, 0.3);
-    }
-
-    .avatar-option:hover {
-      background: #fff;
-      transform: scale(1.05);
-    }
-
-    .avatar-label {
-      font-size: 0.8rem;
+    #line-together {
+      font-size: clamp(1rem, 4vw, 1.8rem);
+      color: #b8860b;
       font-weight: 600;
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
-      display: block;
+      max-width: 800px;
+      margin-top: 2rem;
+    }
+
+    /* Animation Classes */
+    .animate-yell { animation: yellPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, shake 0.3s ease-in-out; }
+    .animate-response { animation: responseFade 0.6s ease-out forwards; animation-delay: 0.8s; }
+    .animate-together { animation: togetherSlide 1s ease-out forwards; animation-delay: 1.8s; }
+
+    @keyframes yellPop {
+      0% { opacity: 0; transform: scale(0.5) translateY(50px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+
+    @keyframes responseFade {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1.1); text-shadow: 0 0 20px rgba(57,73,171,0.3); }
+    }
+
+    @keyframes togetherSlide {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    #proceed-btn-wrap {
+      margin-top: 3rem;
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
+      animation-delay: 2.2s;
+    }
+
+    #intro-proceed-btn {
+      background: #1a237e;
+      color: white;
+      padding: 1.2rem 3rem;
+      font-size: 1.5rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 0 30px rgba(26,35,126,0.4);
+      transition: all 0.3s ease;
+      animation: glowPulse 2s infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 15px rgba(26,35,126,0.3); }
+      50% { box-shadow: 0 0 35px rgba(26,35,126,0.6); transform: scale(1.05); }
+      100% { box-shadow: 0 0 15px rgba(26,35,126,0.3); }
+    }
+
+    #intro-proceed-btn:hover {
+      background: #283593;
+      transform: scale(1.1) translateY(-3px);
     }
   </style>
 </head>
 
 <body>
-  <div class="app-container">
+  <!-- Kinetic Intro Sequence -->
+  <div id="kinetic-intro">
+    <div id="line-yell" class="intro-line">Osmosis</div>
+    <div id="line-response" class="intro-line">Fun Time with Science</div>
+    <div id="line-together" class="intro-line">
+      Quick, Easy Games for High Interest in STEM, <br>
+      Active Participation, and Excellent Performance for Life
+    </div>
+    <div id="proceed-btn-wrap">
+      <button id="intro-proceed-btn" class="classic-btn">Proceed to Login</button>
+    </div>
+  </div>
+
+  <div class="app-container" style="display: none;" id="main-app-ui">
     <div class="card login-plaque">
       <div id="login-content">
         <h1 class="logo">Osmosis</h1>
@@ -388,10 +410,34 @@
       <div id="akwaaba-screen"></div>
     </div>
   </div>
-  <div id="intro-splash">
-    <img src="assets/osmosis-favicon.svg" alt="Osmosis Logo">
-    <p>Fun time with science</p>
-  </div>
+
+  <script src="core_shared_state.js"></script>
+  <script src="index.js"></script>
+  <script>
+    // Trigger Intro Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => document.getElementById('line-yell').classList.add('animate-yell'), 500);
+      setTimeout(() => document.getElementById('line-response').classList.add('animate-response'), 600);
+      setTimeout(() => document.getElementById('line-together').classList.add('animate-together'), 700);
+
+      const proceedBtn = document.getElementById('intro-proceed-btn');
+      const intro = document.getElementById('kinetic-intro');
+      const mainApp = document.getElementById('main-app-ui');
+
+      proceedBtn.addEventListener('click', () => {
+        intro.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        intro.style.opacity = '0';
+        intro.style.transform = 'scale(1.1)';
+        
+        setTimeout(() => {
+          intro.style.display = 'none';
+          mainApp.style.display = 'flex';
+          mainApp.style.animation = 'fadeIn 1s ease-out';
+        }, 800);
+      });
+    });
+  </script>
+</body>
 
   <script src="core_shared_state.js"></script>
   <script src="index.js"></script>
