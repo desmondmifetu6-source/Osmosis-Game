@@ -355,16 +355,50 @@
       background: #283593;
       transform: scale(1.1) translateY(-3px);
     }
+
+    .yell-badge {
+      font-size: 1.2rem;
+      background: #ff4081;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 12px;
+      vertical-align: middle;
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      opacity: 0;
+    }
+
+    .yell-badge.main-logo {
+      font-size: 1.5rem;
+      margin-left: 15px;
+      animation-delay: 1.2s;
+    }
+
+    .yell-badge.tagline-prefix {
+      font-size: 1rem;
+      margin-right: 10px;
+      vertical-align: baseline;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.3) rotate(-10deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
   </style>
 </head>
 
 <body>
   <!-- Kinetic Intro Sequence -->
   <div id="kinetic-intro">
-    <div id="line-yell" class="intro-line">Osmosis</div>
+    <div id="line-yell" class="intro-line">Osmosis <span class="yell-badge main-logo">YELL</span></div>
     <div id="line-response" class="intro-line">Fun Time with Science</div>
     <div id="line-together" class="intro-line">
-      Quick, Easy Games for High Interest in STEM, <br>
+      <span class="yell-badge tagline-prefix">ALL :</span> Quick, Easy Games for High Interest in STEM, <br>
       Active Participation, and Excellent Performance for Life
     </div>
     <div id="proceed-btn-wrap">
