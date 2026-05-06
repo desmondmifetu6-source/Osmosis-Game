@@ -61,6 +61,11 @@ const Stage4Controller = {
 
     if (domCache.finishRecallBtn) {
       domCache.finishRecallBtn.addEventListener('click', () => {
+        // Process any pending input first
+        const val = domCache.lap2Input.value.trim().toLowerCase();
+        if (val) {
+          this.processWord(val);
+        }
         this.endFinalRecall();
       });
     }
@@ -78,11 +83,17 @@ const Stage4Controller = {
   handleLap2Keypress(e) {
     if (e.key !== 'Enter') return;
 
-    const { domCache, gameData } = this.state;
+    const { domCache } = this.state;
     const val = domCache.lap2Input.value.trim().toLowerCase();
     domCache.lap2Input.value = '';
 
-    if (!val) return;
+    if (val) {
+      this.processWord(val);
+    }
+  },
+
+  processWord(val) {
+    const { domCache, gameData } = this.state;
 
     if (this.state.lap2Identified.includes(val)) {
       this.triggerLap2Feedback("Already appended!", 'error');
@@ -103,7 +114,7 @@ const Stage4Controller = {
       if (domCache.lap2WordsList) domCache.lap2WordsList.appendChild(t);
 
       if (this.state.lap2Identified.length === gameData.selectedWords.length) {
-        setTimeout(() => this.endFinalRecall(), 1000);
+        setTimeout(() => this.endFinalRecall(), 800);
       }
     } else {
       this.triggerLap2Feedback("Not in your selection.", 'error');

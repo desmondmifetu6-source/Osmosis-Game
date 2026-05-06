@@ -132,6 +132,34 @@
       box-shadow: 0 0 10px rgba(26, 35, 126, 0.2);
     }
 
+    .avatar-selection {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .avatar-option {
+      font-size: 2.2rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+      background: rgba(255, 255, 255, 0.5);
+      border: 2px solid transparent;
+    }
+
+    .avatar-option:hover {
+      transform: scale(1.2);
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .avatar-option.selected {
+      border-color: #1a237e;
+      background: #eef2ff;
+      transform: scale(1.1);
+    }
+
     .classic-btn {
       background: #1a237e;
       color: white;
