@@ -10,23 +10,40 @@
     rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
-    body, html {
-      margin: 0; padding: 0; width: 100%; height: 100%;
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
       font-family: 'Inter', sans-serif;
       overflow: hidden;
-      background: #f5f3ee; /* Cup page beige background */
+      background: #f5f3ee;
+      /* Cup page beige background */
     }
 
     #confetti-canvas {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none; z-index: 5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 5;
     }
 
     /* Phase 0: Hall of Fame Style Welcome */
     #phase0-welcome {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      display: flex; justify-content: center; align-items: center;
-      z-index: 100; padding: 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      padding: 2rem;
     }
 
     .hof-card {
@@ -35,131 +52,272 @@
       border: 1px solid rgba(255, 255, 255, 0.6) !important;
       border-radius: 32px !important;
       box-shadow: 0 30px 70px rgba(0, 0, 0, 0.1) !important;
-      max-width: 550px; width: 100%;
-      padding: 4rem 3rem; text-align: center;
+      max-width: 550px;
+      width: 100%;
+      padding: 4rem 3rem;
+      text-align: center;
       animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
     @keyframes slideUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hof-trophy {
-      font-size: 7rem; line-height: 1; margin-bottom: 2rem;
+      font-size: 7rem;
+      line-height: 1;
+      margin-bottom: 2rem;
       animation: bounce 1.2s ease-in-out infinite alternate;
       filter: drop-shadow(0 15px 30px rgba(255, 215, 0, 0.4));
     }
 
     @keyframes bounce {
-      from { transform: translateY(0) scale(1); }
-      to { transform: translateY(-15px) scale(1.05); }
+      from {
+        transform: translateY(0) scale(1);
+      }
+
+      to {
+        transform: translateY(-15px) scale(1.05);
+      }
     }
 
     .welcome-text {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2rem; font-weight: 700; color: #1a1a1a;
-      line-height: 1.3; margin-bottom: 3rem;
-      text-transform: uppercase; letter-spacing: 1px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.3;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     /* Phase 1: Kinetic Intro */
     #kinetic-intro {
-      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background: linear-gradient(135deg, #e0c3fc 0%, #c2e9fb 100%);
-      display: none; flex-direction: column; justify-content: center; align-items: center;
-      z-index: 90; padding: 2rem; text-align: center;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 90;
+      padding: 2rem;
+      text-align: center;
     }
 
-    .intro-line { opacity: 0; transform: scale(0.8); margin: 1rem 0; line-height: 1.2; }
+    .intro-line {
+      opacity: 0;
+      transform: scale(0.8);
+      margin: 1rem 0;
+      line-height: 1.2;
+    }
 
     #line-yell {
       font-family: 'Playfair Display', serif;
       font-size: clamp(3rem, 12vw, 5rem);
-      font-weight: 900; color: #1a237e;
-      text-transform: uppercase; letter-spacing: 4px;
+      font-weight: 900;
+      color: #1a237e;
+      text-transform: uppercase;
+      letter-spacing: 4px;
     }
 
     #line-response {
-      font-size: clamp(1.8rem, 6vw, 3.2rem); color: #3949ab;
-      font-weight: 700; font-style: italic;
+      font-size: clamp(1.8rem, 6vw, 3.2rem);
+      color: #3949ab;
+      font-weight: 700;
+      font-style: italic;
     }
 
     #line-together {
-      font-size: clamp(1rem, 3vw, 1.4rem); color: #1a237e;
-      font-weight: 500; max-width: 90%; margin-top: 1.5rem;
-      line-height: 1.6; letter-spacing: 0.5px;
+      font-size: clamp(1rem, 3vw, 1.4rem);
+      color: #1a237e;
+      font-weight: 500;
+      max-width: 90%;
+      margin-top: 1.5rem;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
     }
 
-    .animate-yell { animation: yellPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
-    .animate-response { animation: responseFade 0.6s ease-out forwards; animation-delay: 0.8s; }
-    .animate-together { animation: togetherSlide 1s ease-out forwards; animation-delay: 1.8s; }
+    .animate-yell {
+      animation: yellPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    .animate-response {
+      animation: responseFade 0.6s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+
+    .animate-together {
+      animation: togetherSlide 1s ease-out forwards;
+      animation-delay: 1.8s;
+    }
 
     @keyframes yellPop {
-      0% { opacity: 0; transform: scale(0.5) translateY(50px); }
-      100% { opacity: 1; transform: scale(1) translateY(0); }
+      0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
     }
+
     @keyframes responseFade {
-      0% { opacity: 0; transform: scale(0.9); }
-      100% { opacity: 1; transform: scale(1.1); }
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
     }
+
     @keyframes togetherSlide {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Main Login Screen Styling */
     .app-container {
-      position: relative; z-index: 10; width: 100%; height: 100%;
-      display: none; justify-content: center; align-items: center; padding: 1rem;
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
     }
 
     .login-plaque {
-      position: relative; background: #FFFFFF; border-radius: 24px;
-      padding: 4rem 3rem; max-width: 500px; width: 100%; text-align: center;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); border: 1px solid #E0E0E0;
+      position: relative;
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 4rem 3rem;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      border: 1px solid #E0E0E0;
     }
 
     #username-input {
-      width: 100%; padding: 1.2rem; font-size: 1.2rem;
-      background: #f8f9fa; border: 2px solid #eee;
-      border-radius: 12px; margin-bottom: 2rem; color: #111;
+      width: 100%;
+      padding: 1.2rem;
+      font-size: 1.2rem;
+      background: #f8f9fa;
+      border: 2px solid #eee;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      color: #111;
       font-family: 'Inter', sans-serif;
     }
 
     .classic-btn {
-      background: #1a237e; color: white; border: none;
-      padding: 1.2rem 2.5rem; font-size: 1.4rem; border-radius: 12px;
-      cursor: pointer; width: 100%; font-weight: 700;
-      transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(26, 35, 126, 0.2);
+      background: #1a237e;
+      color: white;
+      border: none;
+      padding: 1.2rem 2.5rem;
+      font-size: 1.4rem;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(26, 35, 126, 0.2);
     }
 
-    .classic-btn:hover { background: #283593; transform: translateY(-3px); }
+    .classic-btn:hover {
+      background: #283593;
+      transform: translateY(-3px);
+    }
 
-    .avatar-selection { display: flex; justify-content: center; gap: 1.5rem; margin: 2rem 0; }
+    .avatar-selection {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
     .avatar-option {
-      font-size: 2.5rem; cursor: pointer; padding: 0.8rem; border-radius: 16px;
-      transition: all 0.2s ease; border: 3px solid transparent; background: #f8f9fa;
+      font-size: 2.5rem;
+      cursor: pointer;
+      padding: 0.8rem;
+      border-radius: 16px;
+      transition: all 0.2s ease;
+      border: 3px solid transparent;
+      background: #f8f9fa;
     }
-    .avatar-option.selected { border-color: #1a237e; background: #eef2ff; transform: scale(1.1); }
+
+    .avatar-option.selected {
+      border-color: #1a237e;
+      background: #eef2ff;
+      transform: scale(1.1);
+    }
 
     #akwaaba-screen {
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      display: flex; justify-content: center; align-items: center;
-      text-align: center; background: #ffffff;
-      color: #1a237e; font-size: 2.2rem; font-weight: 800;
-      opacity: 0; pointer-events: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #ffffff;
+      color: #1a237e;
+      font-size: 2.2rem;
+      font-weight: 800;
+      opacity: 0;
+      pointer-events: none;
       transition: opacity 0.5s ease;
-      z-index: 50; border-radius: 24px;
+      z-index: 50;
+      border-radius: 24px;
     }
 
-    #akwaaba-screen.visible { opacity: 1; pointer-events: all; }
+    #akwaaba-screen.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
 
     @media (max-width: 480px) {
-      .hof-card, .login-plaque { padding: 2.5rem 1.5rem; }
-      .welcome-text { font-size: 1.8rem; }
-      .classic-btn { font-size: 1.1rem; }
+
+      .hof-card,
+      .login-plaque {
+        padding: 2.5rem 1.5rem;
+      }
+
+      .welcome-text {
+        font-size: 1.8rem;
+      }
+
+      .classic-btn {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
@@ -172,7 +330,8 @@
     <div class="hof-card">
       <div class="hof-trophy">🏆</div>
       <h1 class="welcome-text">Welcome to the Greatest<br>STEM Learning Game</h1>
-      <button id="p0-continue-btn" class="classic-btn" style="background: #ffd700; color: #111; box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);">Continue</button>
+      <button id="p0-continue-btn" class="classic-btn"
+        style="background: #ffd700; color: #111; box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);">Continue</button>
     </div>
   </div>
 
@@ -181,7 +340,7 @@
     <div id="line-yell" class="intro-line">Osmosis</div>
     <div id="line-response" class="intro-line">Fun time with science</div>
     <div id="line-together" class="intro-line">
-      Quick, Easy Games for High Interest in STEM, Active Participation, and Excellent Performance for Life
+      Quick, Easy Game for High Interest in STEM, Active Participation, and Excellent Performance for Life
     </div>
     <div id="proceed-btn-wrap" style="opacity: 0; margin-top: 3rem;">
       <button id="intro-proceed-btn" class="classic-btn">Continue</button>
@@ -192,13 +351,16 @@
   <div class="app-container" id="main-app-ui">
     <div class="login-plaque">
       <div id="login-content">
-        <h1 style="font-family:'Playfair Display',serif; font-size:4.5rem; color:#1a237e; margin-bottom:0.5rem;">Osmosis</h1>
-        <p style="font-style:italic; font-weight:700; color:#3949ab; font-size:1.2rem; margin-bottom:3rem;">Fun time with science</p>
+        <h1 style="font-family:'Playfair Display',serif; font-size:4.5rem; color:#1a237e; margin-bottom:0.5rem;">Osmosis
+        </h1>
+        <p style="font-style:italic; font-weight:700; color:#3949ab; font-size:1.2rem; margin-bottom:3rem;">Fun time
+          with science</p>
 
         <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Enter your name</h2>
         <input type="text" id="username-input" placeholder="Your Name" autocomplete="off">
 
-        <h3 style="font-size: 1rem; font-weight: 700; color: #555; text-transform: uppercase;">Select Your Character</h3>
+        <h3 style="font-size: 1rem; font-weight: 700; color: #555; text-transform: uppercase;">Select Your Character
+        </h3>
         <div class="avatar-selection" id="avatar-grid">
           <div class="avatar-option selected" data-avatar="🤓">🤓</div>
           <div class="avatar-option" data-avatar="😊">😊</div>
@@ -214,8 +376,11 @@
         <h2 style="margin-bottom: 2rem;">Welcome back</h2>
         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
           <button id="continue-saved-btn" class="classic-btn">Continue as Saved</button>
-          <button id="continue-guest-btn" class="classic-btn" style="background:transparent; color:#1a237e; border:2px solid #1a237e; box-shadow:none;">Play as Guest</button>
-          <a href="#" id="switch-user-link" style="color: #666; font-size: 0.9rem; text-decoration: underline;">Switch Account</a>
+          <button id="continue-guest-btn" class="classic-btn"
+            style="background:transparent; color:#1a237e; border:2px solid #1a237e; box-shadow:none;">Play as
+            Guest</button>
+          <a href="#" id="switch-user-link" style="color: #666; font-size: 0.9rem; text-decoration: underline;">Switch
+            Account</a>
         </div>
       </div>
       <div id="akwaaba-screen"></div>
