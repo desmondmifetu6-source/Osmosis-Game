@@ -13,107 +13,83 @@
     .intro-card {
       max-width: 680px;
       margin: auto;
-      padding: 2.5rem 2rem;
+      padding: 3.5rem 2.5rem;
       text-align: center;
+      background: rgba(255, 255, 255, 0.25) !important;
+      backdrop-filter: blur(15px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.4) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1) !important;
     }
 
     .intro-title {
-      font-size: clamp(1.2rem, 3.5vw, 1.6rem);
-      font-weight: 700;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800;
       color: var(--text-main);
-      margin-bottom: 1.5rem;
-      line-height: 1.4;
-      border-bottom: 2px dashed var(--text-secondary);
-      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 1.5rem;
     }
 
     .intro-narrative {
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       line-height: 1.8;
       color: var(--text-main);
-      text-align: left;
-      margin-bottom: 1.5rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-weight: 500;
+      opacity: 0.9;
     }
 
     .intro-narrative strong {
-      color: var(--accent-primary);
-    }
-
-    .king-image-wrap {
-      margin: 1.5rem auto;
-      max-width: 400px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
-      border: 3px solid rgba(0, 0, 0, 0.08);
-    }
-
-    .king-image-wrap img {
-      width: 100%;
-      height: auto;
       display: block;
-    }
-
-    .intro-challenge {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: var(--text-main);
-      text-align: left;
-      margin-bottom: 2rem;
-      padding: 1.2rem 1.5rem;
-      background: rgba(79, 70, 229, 0.06);
-      border-left: 4px solid var(--accent-primary);
-      border-radius: 4px;
-    }
-
-    .intro-challenge strong {
-      color: #c62828;
+      color: var(--accent-primary);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .continue-btn {
       font-family: var(--font-main);
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      padding: 1rem 3rem;
-      background: var(--text-main);
+      padding: 1.2rem 3.5rem;
+      background: var(--accent-primary);
       color: #fff;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
-      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
     }
 
     .continue-btn:hover {
-      background: var(--accent-primary);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4);
+      filter: brightness(1.1);
     }
 
     .continue-btn:active {
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
 
     @media (max-width: 480px) {
       .intro-card {
-        padding: 1.5rem 1rem;
+        padding: 2rem 1.5rem;
+        margin: 1rem;
       }
 
-      .intro-narrative,
-      .intro-challenge {
-        font-size: 0.95rem;
+      .intro-title {
+        font-size: 1.8rem;
       }
 
-      .king-image-wrap {
-        max-width: 280px;
-      }
-
-      .continue-btn {
-        width: 100%;
-        padding: 0.9rem 1.5rem;
-        font-size: 1rem;
+      .intro-narrative {
+        font-size: 1.05rem;
       }
     }
   </style>
@@ -127,10 +103,9 @@
       <h2 class="intro-title">Stage 7: Hall of Fame</h2>
 
       <p class="intro-narrative">
-        <strong>Memory Diffusion:</strong> You are on your Final journey to the Hall of Fame, but got lost. As solution,
-        all
-        the terms you met during the Game will
-        flash at you for 5 seconds, per term.Type these terms and meanings to enter the Hall of Fame!
+        <strong>Final Challenge</strong>
+        You have reached the ultimate test. To enter the Hall of Fame, you must recall every term and definition you have learned.
+        Words will flash for 5 seconds—memorize them and prove your mastery!
       </p>
 
       <button id="continue-btn" class="continue-btn">Continue</button>

@@ -10,146 +10,164 @@
     rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
-    .nd-card {
+    .recall-card {
+      padding: 3rem 2.5rem;
       max-width: 800px;
       margin: auto;
-      padding: 3rem;
-      background: #ffffff;
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.25) !important;
+      backdrop-filter: blur(15px) !important;
+      border: 2px solid rgba(0, 0, 0, 0.2) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
     }
 
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
 
-    .nd-progress {
-      font-weight: 500;
-      margin-bottom: 0.6rem;
-      color: #777777;
+    .header h2 {
+      margin: 0;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: 1px;
     }
 
     .nd-memory-box {
-      min-height: 150px;
-      border: 1px solid #e5e5e5;
-      border-radius: 4px;
-      background: #fafafa;
-      padding: 1.5rem;
-      margin: 0.75rem 0 1.5rem;
+      min-height: 200px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.4);
+      border: 2px solid rgba(0, 0, 0, 0.15);
+      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 2.5rem;
+      margin: 1.5rem 0 2.5rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
     .nd-word {
-      font-size: clamp(1.2rem, 4vw, 1.6rem);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #111111;
-      overflow-wrap: break-word;
-      word-break: break-word;
-      hyphens: auto;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 2;
     }
 
     .nd-meaning {
-      color: #555555;
-      line-height: 1.5;
-      max-width: 95%;
-      font-size: clamp(0.9rem, 2.5vw, 1.05rem);
-      overflow-wrap: break-word;
-      word-break: break-word;
-      hyphens: auto;
-    }
-
-    .nd-hidden-note {
-      color: #777777;
-      font-weight: 500;
+      color: var(--text-main);
+      line-height: 1.6;
+      max-width: 90%;
+      font-size: 1.3rem;
+      font-weight: 600;
+      opacity: 0.9;
+      z-index: 2;
     }
 
     .nd-input {
       width: 100%;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .nd-input input,
     .nd-input textarea {
       width: 100%;
       box-sizing: border-box;
-      border: 1px solid #d4d4d4;
-      border-radius: 4px;
+      border: 2px solid rgba(0, 0, 0, 0.15);
+      border-radius: 16px;
       background: #ffffff;
-      padding: 0.8rem 1rem;
-      color: #111111;
-      font-size: 1.05rem;
+      padding: 1.2rem 1.5rem;
+      color: var(--text-main);
+      font-size: 1.2rem;
       font-family: inherit;
-    }
-
-    .nd-input input::placeholder,
-    .nd-input textarea::placeholder {
-      color: #999999;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
 
     .nd-input input:focus,
     .nd-input textarea:focus {
       outline: none;
-      border-color: #111111;
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 20px rgba(79, 70, 229, 0.15);
     }
 
     .nd-input textarea {
-      min-height: 100px;
+      min-height: 140px;
       resize: vertical;
+      line-height: 1.5;
     }
 
     .nd-feedback {
-      min-height: 1.5rem;
-      font-weight: 500;
-      margin-top: 0.5rem;
-      font-size: 1rem;
-    }
-
-    .nd-feedback.ok {
-      color: #15803d;
-    }
-
-    .nd-feedback.partial {
-      color: #ea580c;
-    }
-
-    .nd-feedback.bad {
-      color: #b91c1c;
+      min-height: 2.5rem;
+      font-weight: 700;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      text-align: center;
     }
 
     .nd-reveal {
-      background: #fafafa;
-      border: 1px solid #e5e5e5;
-      padding: 1rem;
-      margin-top: 1rem;
-      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.4);
+      border: 2px solid var(--accent-primary);
+      padding: 2.5rem;
+      margin-top: 1.5rem;
+      border-radius: 20px;
       display: none;
-      color: #111111;
+      color: var(--text-main);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
     .nd-reveal strong {
       display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: #111111;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .boss-btn {
-      flex: 1;
-      background: #111111;
+      width: 100%;
+      max-width: 320px;
+      background: var(--accent-primary);
       color: #ffffff;
       border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 4px;
-      font-size: 1.1rem;
-      font-weight: 500;
+      padding: 1.2rem 2.5rem;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: 800;
       cursor: pointer;
-      transition: background 0.2s ease;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
     }
 
     .boss-btn:hover {
-      background: #333333;
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4);
+    }
+
+    @media (max-width: 480px) {
+      .recall-card { padding: 2rem 1.25rem; }
+      .nd-word { font-size: 1.8rem; }
+      .nd-meaning { font-size: 1.1rem; }
+      .nd-input input, .nd-input textarea { font-size: 1.1rem; padding: 1rem; }
+      .nd-reveal { padding: 1.5rem; }
+      .nd-reveal strong { font-size: 1.25rem; }
     }
 
 
@@ -159,8 +177,11 @@
 <body>
   <div class="scoreboard" id="scoreboard">Score: <span id="current-score">0</span></div>
   <div class="app-container">
-    <div class="nd-card">
-      <div id="nd-progress" class="nd-progress"></div>
+    <div class="card recall-card">
+      <div class="header">
+        <h2>Stage 7: Final Recall Test</h2>
+        <div id="nd-progress" style="font-size:1.5rem; font-weight:bold;">1 / 10</div>
+      </div>
       <div id="nd-memory-box" class="nd-memory-box" style="display: none;"></div>
 
       <div id="nd-input-wrap" style="display:none;">

@@ -29,6 +29,7 @@
       align-items: center;
       justify-content: center;
       overflow-x: hidden;
+      margin: 0;
     }
 
     /* ── Confetti Canvas ── */
@@ -46,65 +47,31 @@
     .hof-card {
       position: relative;
       z-index: 1;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      background: rgba(255, 255, 255, 0.25) !important;
+      backdrop-filter: blur(15px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.4) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
       max-width: 520px;
       width: 92%;
-      padding: 3rem 2.5rem 3.5rem;
+      padding: 3.5rem 2.5rem;
       text-align: center;
       animation: slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
     @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ── Laurel / Star Header ── */
-    .hof-header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .hof-laurel {
-      font-size: 2.2rem;
-      animation: sway 3s ease-in-out infinite alternate;
-    }
-
-    .hof-star-icon {
-      font-size: 2rem;
-      color: #c8980a;
-    }
-
-    @keyframes sway {
-      from {
-        transform: rotate(-4deg);
-      }
-
-      to {
-        transform: rotate(4deg);
-      }
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .hof-title {
       font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
-      font-weight: 700;
-      color: #111;
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--text-main);
       letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
     }
 
     .hof-divider {
@@ -113,105 +80,95 @@
       justify-content: center;
       gap: 0.5rem;
       margin-bottom: 2rem;
-      color: #c8980a;
-      font-size: 1rem;
+      color: #ffd700;
+      font-size: 1.2rem;
     }
 
     .hof-divider::before,
     .hof-divider::after {
       content: '';
       flex: 1;
-      max-width: 80px;
-      height: 1px;
-      background: #c8980a;
+      max-width: 60px;
+      height: 2px;
+      background: #ffd700;
     }
 
-    /* ── Trophy ── */
     .hof-trophy {
       font-size: 6rem;
       line-height: 1;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       animation: bounce 1.2s ease-in-out infinite alternate;
-      filter: drop-shadow(0 8px 20px rgba(200, 152, 10, 0.4));
+      filter: drop-shadow(0 10px 20px rgba(255, 215, 0, 0.4));
     }
 
     @keyframes bounce {
-      from {
-        transform: translateY(0) scale(1);
-      }
-
-      to {
-        transform: translateY(-8px) scale(1.04);
-      }
-    }
-
-    /* ── Congratulations Block ── */
-    .hof-congrats-icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.8rem;
+      from { transform: translateY(0) scale(1); }
+      to { transform: translateY(-10px) scale(1.05); }
     }
 
     .hof-congrats-title {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 800;
-      color: #111;
+      color: var(--text-main);
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
     }
 
     .hof-congrats-sub {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
     }
 
     .hof-congrats-great {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: #222;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent-primary);
       margin-bottom: 2.5rem;
     }
 
-    /* ── Score Badge ── */
     .hof-score-badge {
       display: inline-block;
-      background: linear-gradient(135deg, #c8980a, #f5c842);
+      background: linear-gradient(135deg, #ffd700, #ff8c00);
       color: #fff;
-      font-size: 1rem;
-      font-weight: 700;
+      font-size: 1.1rem;
+      font-weight: 800;
       letter-spacing: 1px;
-      padding: 0.5rem 1.5rem;
+      padding: 0.8rem 2rem;
       border-radius: 50px;
       margin-bottom: 2.5rem;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-      box-shadow: 0 4px 12px rgba(200, 152, 10, 0.35);
+      box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
     }
 
-    /* ── Continue Button ── */
     .hof-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      background: #0f1f3d;
+      gap: 0.8rem;
+      background: var(--accent-primary);
       color: #ffffff;
       font-family: 'Inter', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      padding: 1rem 3rem;
+      padding: 1.2rem 3rem;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
-      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 6px 20px rgba(15, 31, 61, 0.3);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
     }
 
     .hof-btn:hover {
-      background: #1a3360;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(15, 31, 61, 0.4);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4);
+      filter: brightness(1.1);
+    }
+
+    .hof-btn:active {
+      transform: translateY(0);
     }
 
     .hof-btn:active {

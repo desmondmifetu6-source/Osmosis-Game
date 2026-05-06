@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Osmosis - Stage 7: Fill-in-Memory Challenge</title>
+  <title>Osmosis - Stage 6: Definition Completion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
@@ -11,49 +11,62 @@
   <link rel="stylesheet" href="core_styles.css">
   <style>
     .stage6-card {
-      padding: 2rem;
+      padding: 3rem 2.5rem;
       max-width: 800px;
       margin: auto;
+      background: rgba(255, 255, 255, 0.25) !important;
+      backdrop-filter: blur(15px) !important;
+      border: 2px solid rgba(0, 0, 0, 0.2) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
     }
 
     .s6-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px dashed var(--text-secondary);
-      padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
+      gap: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .s6-header h2 {
       margin: 0;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: 1px;
     }
 
     .alarming-timer {
-      font-size: 2rem;
-      font-weight: bold;
-      font-family: monospace;
-      background: var(--text-main);
-      color: var(--surface-white);
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+      font-size: 2.2rem;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent-primary);
+      background: rgba(255, 255, 255, 0.4);
+      padding: 0.8rem 1.5rem;
+      border-radius: 12px;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
     .revision-list {
       max-height: 50vh;
       overflow-y: auto;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       text-align: left;
-      padding-right: 1rem;
+      padding-right: 1.5rem;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent-primary) rgba(255, 255, 255, 0.2);
     }
 
     .revision-item {
       margin-bottom: 1.5rem;
       padding: 1.5rem;
-      background: rgba(0, 0, 0, 0.05);
+      background: rgba(255, 255, 255, 0.3);
       border-left: 6px solid var(--accent-primary);
-      border-radius: 4px;
+      border-radius: 12px;
+      transition: all 0.2s ease;
     }
 
     .revision-item strong {
@@ -78,40 +91,45 @@
       color: var(--text-main);
       text-align: center;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid var(--text-secondary);
+      letter-spacing: 4px;
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid var(--accent-primary);
       display: inline-block;
       padding-bottom: 0.5rem;
+      font-weight: 800;
     }
 
     .meaning-fill-area {
-      font-size: 1.5rem;
-      line-height: 2.2;
+      font-size: 1.6rem;
+      line-height: 2.4;
       text-align: justify;
-      font-family: var(--font-serif);
+      color: var(--text-main);
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      border: 2px solid rgba(0, 0, 0, 0.1);
     }
 
     .meaning-input {
       font-size: 1.6rem;
       font-family: inherit;
       text-align: center;
-      font-weight: bold;
-      color: var(--text-main);
-      border: none;
-      border-bottom: 3px solid var(--text-main);
-      background: rgba(255, 255, 255, 0.4);
-      border-radius: 6px;
-      margin: 0 0.5rem;
-      padding: 0.4rem 0.5rem;
+      font-weight: 800;
+      color: var(--accent-primary);
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      background: #ffffff;
+      border-radius: 8px;
+      margin: 0 0.4rem;
+      padding: 0.2rem 0.8rem;
       transition: all 0.3s ease;
-      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      min-width: 120px;
     }
 
     .meaning-input:focus {
       outline: none;
-      background: rgba(255, 255, 255, 0.9);
       border-color: var(--accent-primary);
+      box-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
     }
 
     .meaning-input.wrong {
@@ -128,37 +146,31 @@
     }
 
     @keyframes shake {
-      0% {
-        transform: translateX(0);
-      }
-
-      25% {
-        transform: translateX(-4px);
-      }
-
-      75% {
-        transform: translateX(4px);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-4px); }
+      75% { transform: translateX(4px); }
     }
 
     .feedback {
-      height: 2rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-      text-align: center;
+      height: 2.5rem;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .feedback.success {
-      color: #2e7d32;
-    }
+    .feedback.success { color: #2e7d32; }
+    .feedback.error { color: #c62828; }
 
-    .feedback.error {
-      color: #c62828;
+    @media (max-width: 480px) {
+      .stage6-card { padding: 2rem 1.25rem; }
+      .highlight-word { font-size: 2rem; }
+      .meaning-fill-area { font-size: 1.2rem; line-height: 2; padding: 1.5rem; }
+      .meaning-input { font-size: 1.2rem; min-width: 80px; }
+      .revision-item strong { font-size: 1.4rem; }
+      .revision-item p { font-size: 1.1rem; }
     }
 
     /* Scoreboard & Floating Text */
@@ -223,14 +235,14 @@
   <div class="app-container">
 
     <div class="card stage6-card" id="loading-container">
-      <h2 style="text-align:center;">Preparing Stage 7...</h2>
+      <h2 style="text-align:center;">Preparing Stage 6...</h2>
       <div style="text-align:center;"><span class="spinner"></span></div>
     </div>
 
     <!-- Revision Container -->
     <div id="revision-container" class="card stage6-card parchment-large" style="display: none;">
       <div class="s6-header">
-        <h2>Stage 7: Fill gaps in definitions to prepare for the Hall of Fame.</h2>
+        <h2>Stage 6: Definition Completion</h2>
         <div id="rev-timer" class="alarming-timer">00:00</div>
       </div>
       <p style="font-style:italic; margin-bottom:1rem; font-size: 1.2rem;">Commit the exact phrasing of these
@@ -243,7 +255,7 @@
     <!-- Mastery Test Container -->
     <div id="test-container" class="card stage6-card parchment-large" style="display: none;">
       <div class="s6-header">
-        <h2>Stage 6: Fill gaps to Refresh for Final Challenge.</h2>
+        <h2>Stage 6: Definition Completion</h2>
         <div id="test-progress" style="font-size:1.5rem; font-weight:bold;">1/10</div>
       </div>
       <p style="font-style:italic; margin-bottom:2rem; text-align:center;">Fill in the missing key terminology within

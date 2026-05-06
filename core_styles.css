@@ -83,8 +83,8 @@ body::before {
   background: rgba(255, 255, 255, 0.75) !important;
   backdrop-filter: blur(15px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+  border: 2px solid rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.08) !important;
   border-radius: 24px !important;
   padding: 2.5rem; text-align: center;
   position: relative; max-height: 90vh; overflow-y: auto;
@@ -100,12 +100,12 @@ h1, h2, h3 {
 }
 
 h1.logo {
-  font-size: 4rem; text-transform: uppercase; letter-spacing: 4px; color: var(--text-main);
+  font-size: 3rem; text-transform: uppercase; letter-spacing: 4px; color: var(--text-main);
 }
 
 input[type="text"], textarea {
   width: 100%; padding: 1rem; font-family: var(--font-main); font-size: 1.1rem;
-  background: var(--surface-dim); border: 1px solid rgba(0,0,0,0.1); border-radius: 6px;
+  background: var(--surface-white); border: 2px solid rgba(0,0,0,0.2); border-radius: 12px;
   color: var(--text-main); margin-bottom: 2rem; outline: none; text-align: center;
   transition: all 0.2s ease;
 }
@@ -118,8 +118,8 @@ input[type="text"]:focus, textarea:focus {
 input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secondary); opacity: 0.6; }
 
 .classic-btn {
-  font-family: var(--font-main); font-size: 1.1rem; font-weight: 600;
-  padding: 0.8rem 2rem; background: var(--text-main); color: var(--surface-white);
+  font-family: var(--font-main); font-size: 1rem; font-weight: 600;
+  padding: 0.75rem 1.5rem; background: var(--text-main); color: var(--surface-white);
   border: none; border-radius: 6px; cursor: pointer; transition: all 0.2s ease;
   width: 100%; margin-bottom: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -185,11 +185,11 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 1.2rem;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 800;
   z-index: 10000;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.4);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -295,8 +295,8 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   border-radius: 50px;
   border: 1px solid rgba(255,255,255,0.2);
   font-family: 'Courier New', Courier, monospace;
-  font-size: 1.2rem;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 800;
   z-index: 9999;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
@@ -304,6 +304,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   align-items: center;
   gap: 8px;
   pointer-events: none;
+  border: 2px solid rgba(255,255,255,0.4);
 }
 
 .floating-point {

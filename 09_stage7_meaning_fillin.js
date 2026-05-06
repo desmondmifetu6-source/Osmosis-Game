@@ -1,12 +1,12 @@
 // =====================================================================
-// FILE: 09_stage7_meaning_fillin.js (The Missing Word Definition Test)
+// FILE: 09_stage6_meaning_fillin.js (The Missing Word Definition Test)
 // =====================================================================
 // Imagine you found an ancient scroll with a word's meaning written on it, 
 // but moths ate holes through some of the words! 
 // This file reads the word's meaning, picks a few words to turn into blank text boxes,
 // and you have to fill in the missing pieces correctly like a puzzle detective!
 
-const Stage7Controller = {
+const Stage6Controller = {
   state: {
     gameData: null,
     domCache: {},
@@ -116,10 +116,9 @@ const Stage7Controller = {
       setTimeout(() => AudioManager.play('success'), 600);
     }
 
-    // Show a victorious pop-up banner
     const banner = document.createElement('div');
     banner.className = 'final-stage-banner';
-    banner.innerHTML = '🏆 THE FINAL CHALLENGE! 🏆<br><span style="font-size:1.2rem; font-weight:500;">You made it! Show what you know!</span>';
+    banner.innerHTML = '🏆 CHALLENGE COMPLETE! 🏆<br><span style="font-size:1.2rem; font-weight:500;">You are mastering these definitions!</span>';
     document.body.appendChild(banner);
     setTimeout(() => banner.remove(), 4000);
 
@@ -361,7 +360,7 @@ const Stage7Controller = {
 
     // Wait for the celebration to be enjoyed before moving on
     setTimeout(() => {
-      sharedState.showStageScoreThen('stage6', 'Stage 6: Fill-in-Memory Challenge', this.state.stageScore, () => {
+      sharedState.showStageScoreThen('stage6', 'Stage 6: Definition Completion', this.state.stageScore, () => {
         if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame_intro.html');
         else window.location.href = '10_stage8_hall_of_fame_intro.html';
       });
@@ -370,7 +369,7 @@ const Stage7Controller = {
 };
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => Stage7Controller.init());
+  document.addEventListener('DOMContentLoaded', () => Stage6Controller.init());
 } else {
-  Stage7Controller.init();
+  Stage6Controller.init();
 }

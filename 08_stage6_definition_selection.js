@@ -1,7 +1,7 @@
-// FILE: 08_stage6_definition_selection.js (The Multiple Choice Test)
+// FILE: 08_stage5_definition_selection.js (The Multiple Choice Test)
 // =====================================================================
 
-const Stage6Controller = {
+const Stage5Controller = {
   state: {
     gameData: null,
     domCache: {},
@@ -200,7 +200,7 @@ const Stage6Controller = {
     sharedState.save(this.state.gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('stage5', 'match words to meanings', this.state.stageScore, () => {
+    sharedState.showStageScoreThen('stage5', 'Stage 5: Definition Selection', this.state.stageScore, () => {
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('09_stage7_meaning_fillin.html');
       else window.location.href = '09_stage7_meaning_fillin.html';
     });
@@ -208,7 +208,7 @@ const Stage6Controller = {
 };
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => Stage6Controller.init());
+  document.addEventListener('DOMContentLoaded', () => Stage5Controller.init());
 } else {
-  Stage6Controller.init();
+  Stage5Controller.init();
 }

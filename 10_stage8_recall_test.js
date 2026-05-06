@@ -1,5 +1,5 @@
 // =====================================================================
-// FILE: 10_stage8_recall_test.js (The Final Recall Test)
+// FILE: 10_stage7_recall_test.js (The Final Recall Test)
 // =====================================================================
 // Welcome to the final battle! This is like standing before a great king who 
 // wants you to interpret his dreams.
@@ -8,7 +8,7 @@
 // You have to type back the exact word and meaning entirely from memory. 
 // Get it right, and the king rewards you. Get it wrong, and you lose points!
 
-const Stage8Controller = {
+const Stage7Controller = {
   state: {
     gameData: null,
     domCache: {},
@@ -138,7 +138,7 @@ const Stage8Controller = {
 
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-    sharedState.showStageScoreThen('stage7', "Stage 7: Hall of fame", stageScore, () => {
+    sharedState.showStageScoreThen('stage7', "Stage 7: Final Recall Test", stageScore, () => {
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_stage8_complete.html');
       else window.location.href = '10b_stage8_complete.html';
     });
@@ -338,7 +338,7 @@ const Stage8Controller = {
 };
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => Stage8Controller.init());
+  document.addEventListener('DOMContentLoaded', () => Stage7Controller.init());
 } else {
-  Stage8Controller.init();
+  Stage7Controller.init();
 }

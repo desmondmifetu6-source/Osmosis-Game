@@ -10,64 +10,116 @@
     rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
-    .generated-code {
-      font-size: 3.5rem;
-      font-family: var(--font-serif);
-      font-weight: bold;
-      letter-spacing: 4px;
-      margin: 2rem 0;
-      color: var(--accent-primary);
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    .setup-card {
+      padding: 3.5rem 2.5rem;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.25) !important;
+      backdrop-filter: blur(15px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.4) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
     }
 
-    .setup-desc {
-      margin-bottom: 2rem;
-      font-style: italic;
+    .setup-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 1.5rem;
     }
 
-    .paper-alert {
-      background: var(--bg-light);
-      color: #3b2f2f;
-      padding: 1.2rem 1.5rem;
-      border: 1px solid #d3cbb8;
-      box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15), inset 0 0 15px rgba(88, 204, 2, 0.05);
-      font-family: var(--font-body);
-      font-style: normal;
-      font-size: 1.05rem;
-      margin-bottom: 2rem;
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+
+    .rule-box {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 2rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease;
       position: relative;
-      border-radius: 1px;
-      line-height: 1.5;
+      overflow: hidden;
     }
 
-    .paper-alert::before {
-      content: "";
-      position: absolute;
-      top: -8px;
-      left: 50%;
-      width: 45px;
-      height: 16px;
-      background: rgba(255, 255, 255, 0.7);
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      transform: translateX(-50%) rotate(-3deg);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    .rule-box:hover {
+      background: rgba(255, 255, 255, 0.5);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .rule-box.highlight {
+      background: rgba(79, 70, 229, 0.1);
+      border-color: rgba(79, 70, 229, 0.3);
+    }
+
+    .rule-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .rule-box h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .rule-box p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--text-main);
+      opacity: 0.9;
+    }
+
+    .generated-code {
+      font-size: 4rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      letter-spacing: 6px;
+      margin: 2.5rem 0;
+      color: var(--accent-primary);
+      text-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+    }
+
+    .boss-btn {
+      width: 100%;
+      max-width: 320px;
+      background: var(--accent-primary);
+      color: #ffffff;
+      border: none;
+      padding: 1.2rem 2.5rem;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+    }
+
+    .boss-btn:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4);
+      filter: brightness(1.1);
     }
 
     @media (max-width: 480px) {
-      .generated-code {
-        font-size: 2.2rem;
-        margin: 1rem 0;
-      }
-
-      .paper-alert {
-        font-size: 0.9rem;
-        padding: 1rem;
-      }
-
-      #rules-screen p {
-        font-size: 0.95rem !important;
-        margin-bottom: 1rem !important;
-      }
+      .setup-card { padding: 2rem 1.5rem; }
+      .setup-title { font-size: 1.8rem; }
+      .generated-code { font-size: 2.5rem; }
+      .rules-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -75,56 +127,30 @@
 <body>
   <div class="app-container">
     <!-- Rules Screen -->
-    <div class="card" id="rules-screen">
-      <h2 style="margin-bottom: 0.5rem; padding: 20px; font-size: larger;">Stage 1 :Word selection</h2>
-      <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem; text-align: left; margin-bottom: 2rem;">
-        <div
-          style="background: #fcfcfc; padding: 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: relative;">
-          <span
-            style="position: absolute; top: -10px; left: 1rem; background: #334155; color: white; font-size: 0.65rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;">📡
-            Selection</span>
-          <p style="font-size: 0.95rem; margin-top: 0.25rem; color: #1e293b; line-height: 1.4;">Words are selected
-            randomly with alphabets and numbers (alpha-numeric).</p>
+    <div class="card setup-card" id="rules-screen">
+      <h2 class="setup-title">Stage 1: Word Selection</h2>
+      
+      <div class="rules-grid">
+        <div class="rule-box">
+          <div class="rule-icon">📡</div>
+          <h3>Selection</h3>
+          <p>Words are selected randomly with alphabets and numbers (alpha-numeric).</p>
         </div>
 
-        <div
-          style="background: #fcfcfc; padding: 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: relative;">
-          <span
-            style="position: absolute; top: -10px; left: 1rem; background: #334155; color: white; font-size: 0.65rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;">📐
-            Logic</span>
-          <p style="font-size: 0.95rem; margin-top: 0.25rem; color: #1e293b; line-height: 1.4;">The letter indicates the
-            section of the dictionary that the word is picked from and the number indicates the length of the word.</p>
+        <div class="rule-box">
+          <div class="rule-icon">📐</div>
+          <h3>Logic</h3>
+          <p>The letter indicates the section of the dictionary, and the number indicates the word length.</p>
         </div>
 
-        <div
-          style="background: #fcfcfc; padding: 1.25rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); position: relative;">
-          <span
-            style="position: absolute; top: -10px; left: 1rem; background: #4f46e5; color: white; font-size: 0.65rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;">🎯
-            Your Goal</span>
-          <p style="font-size: 0.95rem; margin-top: 0.25rem; color: #1e293b; line-height: 1.4;">Choose the highlighted
-            word from the list of words projected
-          </p>
+        <div class="rule-box highlight">
+          <div class="rule-icon">🎯</div>
+          <h3>Your Goal</h3>
+          <p>Identify and select the target word from the projected list as fast as possible.</p>
         </div>
       </div>
 
-      <!-- 
-      =====================================================================
-      LEGACY VERSION (Commented out for safety)
-      =====================================================================
-      <h2>Word selection stage</h2>
-      <div class="paper-alert">
-        <ol style="margin: 0; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
-          <li>Words are selected randomly with alphabets and numbers (alpha-numeric).</li>
-          <li>Letters selected are without replacement and Numbers selected are with replacement, for coverage of the entire library.</li>
-          <li>The letter indicates the section of the dictionary that the word is picked from and the number indicates the length of the word.</li>
-          <li>Choose the highlighted word from the list of words projected.</li>
-        </ol>
-      </div>
-      <button id="rules-continue-btn" class="classic-btn primary">Proceed</button>
-
-      -->
-
-      <button id="rules-continue-btn" class="classic-btn primary">proceed</button>
+      <button id="rules-continue-btn" class="boss-btn">Begin Selection</button>
     </div>
 
     <!-- Generator Screen -->
