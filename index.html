@@ -214,14 +214,16 @@
 
     .login-plaque {
       position: relative;
-      background: transparent;
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
       border-radius: 24px;
       padding: 4rem 3rem;
       max-width: 500px;
       width: 100%;
       text-align: center;
-      box-shadow: none;
-      border: none;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.6);
     }
 
     #username-input {
@@ -372,12 +374,13 @@
       </div>
 
       <div id="welcome-back-content" style="display: none;">
-        <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem;">
-          <button id="continue-saved-btn" class="classic-btn">Continue as Saved</button>
+        <h1 style="font-family:'Playfair Display',serif; font-size:3.5rem; color:#1a237e; margin-bottom: 2rem;">Osmosis</h1>
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <button id="continue-saved-btn" class="classic-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; box-shadow: 0 10px 20px rgba(118, 75, 162, 0.3); font-weight: 800; letter-spacing: 0.5px;">Continue as Saved</button>
           <button id="continue-guest-btn" class="classic-btn"
-            style="color:#ffd700; border:2px solid #1a237e;">Play as Guest</button>
+            style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #1a237e; border: none; box-shadow: 0 10px 20px rgba(255, 154, 158, 0.3); font-weight: 800; letter-spacing: 0.5px;">Play as Guest</button>
           <button id="switch-user-link" class="classic-btn"
-            style="background:#ffffff; color:#ffd700;">Switch Account</button>
+            style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border: none; box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3); font-weight: 800; letter-spacing: 0.5px;">Switch Account</button>
         </div>
       </div>
       <div id="akwaaba-screen"></div>
