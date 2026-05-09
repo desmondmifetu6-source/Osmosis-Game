@@ -98,6 +98,38 @@ body::before {
   to { transform: rotate(360deg); }
 }
 
+.global-formulas-container {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.stem-formula {
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.45);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+}
+
+.f1 { font-size: clamp(4rem, 10vw, 10rem); top: 15%; left: -5%; animation: floatF1 25s ease-in-out infinite alternate; }
+.f2 { font-size: clamp(3rem, 8vw, 8rem); top: 35%; right: 10%; animation: floatF2 20s ease-in-out infinite alternate-reverse; }
+.f3 { font-size: clamp(3.5rem, 9vw, 9rem); bottom: 15%; left: 5%; animation: floatF3 30s ease-in-out infinite alternate; }
+.f4 { font-size: clamp(5rem, 12vw, 12rem); top: 60%; left: 30%; animation: floatF4 35s ease-in-out infinite alternate-reverse; color: rgba(255,255,255,0.3); }
+.f5 { font-size: clamp(2.5rem, 6vw, 6rem); top: 5%; right: 25%; animation: floatF5 28s ease-in-out infinite alternate; }
+.f6 { font-size: clamp(4rem, 8vw, 8rem); bottom: -5%; right: 15%; animation: floatF6 32s ease-in-out infinite alternate-reverse; }
+
+@keyframes floatF1 { 0% { transform: translate(0, 0) rotate(-10deg); } 100% { transform: translate(25vw, 15vh) rotate(10deg); } }
+@keyframes floatF2 { 0% { transform: translate(0, 0) rotate(5deg); } 100% { transform: translate(-25vw, 20vh) rotate(-15deg); } }
+@keyframes floatF3 { 0% { transform: translate(0, 0) rotate(-5deg); } 100% { transform: translate(30vw, -25vh) rotate(15deg); } }
+@keyframes floatF4 { 0% { transform: translate(0, 0) rotate(15deg); } 100% { transform: translate(-20vw, -15vh) rotate(-10deg); } }
+@keyframes floatF5 { 0% { transform: translate(0, 0) rotate(-20deg); } 100% { transform: translate(-30vw, 30vh) rotate(5deg); } }
+@keyframes floatF6 { 0% { transform: translate(0, 0) rotate(10deg); } 100% { transform: translate(15vw, -35vh) rotate(-15deg); } }
+
 .app-container::before {
   content: "";
   position: fixed;

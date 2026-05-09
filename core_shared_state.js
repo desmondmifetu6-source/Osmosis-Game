@@ -455,6 +455,21 @@ function setupPageTransitions() {
     document.body.prepend(gearsBg);
   }
 
+  if (!document.getElementById('global-stem-formulas')) {
+    const eqBg = document.createElement('div');
+    eqBg.id = 'global-stem-formulas';
+    eqBg.className = 'global-formulas-container';
+    eqBg.innerHTML = `
+      <div class="stem-formula f1">E = mc²</div>
+      <div class="stem-formula f2">F = ma</div>
+      <div class="stem-formula f3">a² + b² = c²</div>
+      <div class="stem-formula f4">H₂O</div>
+      <div class="stem-formula f5">π ≈ 3.14159</div>
+      <div class="stem-formula f6">ΔxΔp ≥ ℏ/2</div>
+    `;
+    document.body.prepend(eqBg);
+  }
+
   requestAnimationFrame(() => {
     requestAnimationFrame(() => document.body.classList.remove('page-preload'));
   });
