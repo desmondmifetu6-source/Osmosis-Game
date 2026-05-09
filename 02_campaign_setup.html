@@ -34,16 +34,16 @@
 
     .rules-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
       text-align: left;
     }
 
     .rule-box {
       background: rgba(255, 255, 255, 0.3);
-      padding: 2rem;
-      border-radius: 20px;
+      padding: 1.25rem 1.5rem;
+      border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.5);
       transition: all 0.3s ease;
       position: relative;
@@ -61,25 +61,32 @@
       border-color: rgba(79, 70, 229, 0.3);
     }
 
+    .rule-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
     .rule-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.8rem;
     }
 
     .rule-box h3 {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 0.75rem;
+      margin: 0;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
     .rule-box p {
-      font-size: 1.05rem;
-      line-height: 1.6;
+      font-size: 0.95rem;
+      line-height: 1.4;
       color: var(--text-main);
       opacity: 0.9;
+      margin: 0;
     }
 
     .generated-code {
@@ -132,20 +139,26 @@
       
       <div class="rules-grid">
         <div class="rule-box">
-          <div class="rule-icon">📡</div>
-          <h3>Selection</h3>
+          <div class="rule-header">
+            <div class="rule-icon">📡</div>
+            <h3>Selection</h3>
+          </div>
           <p>Words are selected randomly with alphabets and numbers (alpha-numeric).</p>
         </div>
 
         <div class="rule-box">
-          <div class="rule-icon">📐</div>
-          <h3>Logic</h3>
+          <div class="rule-header">
+            <div class="rule-icon">📐</div>
+            <h3>Logic</h3>
+          </div>
           <p>The letter indicates the section of the dictionary, and the number indicates the word length.</p>
         </div>
 
         <div class="rule-box highlight">
-          <div class="rule-icon">🎯</div>
-          <h3>Your Goal</h3>
+          <div class="rule-header">
+            <div class="rule-icon">🎯</div>
+            <h3>Your Goal</h3>
+          </div>
           <p>Identify and select the target word from the projected list as fast as possible.</p>
         </div>
       </div>

@@ -108,47 +108,7 @@ const Stage6Controller = {
     this.startTestPhase();
   },
 
-  playCelebration() {
-    // Play an energetic success chord using the existing audio manager if available
-    if (typeof AudioManager !== 'undefined') {
-      AudioManager.play('success');
-      setTimeout(() => AudioManager.play('success'), 300);
-      setTimeout(() => AudioManager.play('success'), 600);
-    }
 
-    const banner = document.createElement('div');
-    banner.className = 'final-stage-banner';
-    banner.innerHTML = '🏆 CHALLENGE COMPLETE! 🏆<br><span style="font-size:1.2rem; font-weight:500;">You are mastering these definitions!</span>';
-    document.body.appendChild(banner);
-    setTimeout(() => banner.remove(), 4000);
-
-    // Shoot digital confetti!
-    const colors = ['#ffeb3b', '#4caf50', '#2196f3', '#f44336', '#e91e63', '#9c27b0'];
-    for (let i = 0; i < 80; i++) {
-      let confetti = document.createElement('div');
-      confetti.style.position = 'fixed';
-      confetti.style.width = Math.random() * 12 + 6 + 'px';
-      confetti.style.height = Math.random() * 12 + 6 + 'px';
-      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      confetti.style.left = Math.random() * 100 + 'vw';
-      confetti.style.top = '-20px';
-      confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
-      confetti.style.zIndex = '9998';
-      confetti.style.pointerEvents = 'none';
-      document.body.appendChild(confetti);
-
-      const fallDuration = Math.random() * 2 + 2.5;
-      confetti.animate([
-        { transform: `translate3d(0, 0, 0) rotate(0deg)`, opacity: 1 },
-        { transform: `translate3d(${Math.random() * 400 - 200}px, 100vh, 0) rotate(${Math.random() * 1080}deg)`, opacity: 0 }
-      ], {
-        duration: fallDuration * 1000,
-        easing: 'cubic-bezier(.37,0,.63,1)'
-      });
-
-      setTimeout(() => confetti.remove(), fallDuration * 1000);
-    }
-  },
 
   startTestPhase() {
     if (this.state.domCache.scoreboard) {
@@ -256,7 +216,7 @@ const Stage6Controller = {
     // Otherwise, we tell you to review your errors and try again.
     const { domCache } = this.state;
 
-    if (domCache.submitBtn && domCache.submitBtn.textContent === "Next Word") {
+    if (domCache.submitBtn && domCache.submitBtn.textContent !== "Submit Findings") {
       this.nextWord();
       return;
     }
@@ -295,7 +255,7 @@ const Stage6Controller = {
       this.updateScoreboard(pts);
 
       if (domCache.skipBtn) domCache.skipBtn.disabled = true;
-      if (domCache.submitBtn) domCache.submitBtn.textContent = "Next Word";
+      if (domCache.submitBtn) domCache.submitBtn.textContent = (this.state.testIndex < this.state.testSequence.length - 1) ? "Next Word" : "Proceed";
     } else {
       this.triggerFeedback("Incorrect. Try again or click skip.", 'error');
     }
@@ -323,7 +283,7 @@ const Stage6Controller = {
 
     const { domCache } = this.state;
     if (domCache.skipBtn) domCache.skipBtn.disabled = true;
-    if (domCache.submitBtn) domCache.submitBtn.textContent = "Next Definition";
+    if (domCache.submitBtn) domCache.submitBtn.textContent = (this.state.testIndex < this.state.testSequence.length - 1) ? "Next Definition" : "Proceed";
   },
 
   nextWord() {
@@ -356,15 +316,11 @@ const Stage6Controller = {
 
   finishGame() {
     sharedState.save(this.state.gameData);
-    this.playCelebration(); // Celebrate first!
 
-    // Wait for the celebration to be enjoyed before moving on
-    setTimeout(() => {
-      sharedState.showStageScoreThen('stage6', 'Stage 6: Definition Completion', this.state.stageScore, () => {
-        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame_intro.html');
-        else window.location.href = '10_stage8_hall_of_fame_intro.html';
-      });
-    }, 3500);
+    sharedState.showStageScoreThen('stage6', 'Stage 6: Definition Completion', this.state.stageScore, () => {
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_hall_of_fame_intro.html');
+      else window.location.href = '10_stage8_hall_of_fame_intro.html';
+    });
   }
 };
 
