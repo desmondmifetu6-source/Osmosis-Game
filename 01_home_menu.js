@@ -45,6 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
     playSoloBtn.addEventListener('click', () => {
       soloOverlay.classList.add('active');
     });
+    
+    // Close when clicking outside the popup
+    soloOverlay.addEventListener('click', (e) => {
+      if (e.target === soloOverlay) {
+        soloOverlay.classList.remove('active');
+      }
+    });
   }
 
   if (soloContinueBtn) {
@@ -68,6 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (playFriendsBtn && friendsOverlay) {
     playFriendsBtn.addEventListener('click', () => {
       friendsOverlay.classList.add('active');
+    });
+    
+    // Close when clicking outside the popup
+    friendsOverlay.addEventListener('click', (e) => {
+      if (e.target === friendsOverlay) {
+        friendsOverlay.classList.remove('active');
+      }
     });
   }
 

@@ -200,6 +200,20 @@
       }
     }
 
+    .intro-card {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-radius: 24px;
+      padding: 4rem 3rem;
+      max-width: 650px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      z-index: 2;
+    }
+
     /* Main Login Screen Styling */
     .app-container {
       position: relative;
@@ -339,13 +353,15 @@
 
   <!-- Phase 1: Kinetic Intro (Osmosis Screen) -->
   <div id="kinetic-intro">
-    <div id="line-yell" class="intro-line">Osmosis!</div>
-    <div id="line-response" class="intro-line">Fun time with science</div>
-    <div id="line-together" class="intro-line">
-      Quick, Easy, Fun-filled; For High Interest in STEM, Active Participation, and Excellent Performance for Life
-    </div>
-    <div id="proceed-btn-wrap" style="opacity: 0; margin-top: 3rem;">
-      <button id="intro-proceed-btn" class="classic-btn">Continue</button>
+    <div class="intro-card">
+      <div id="line-yell" class="intro-line">Osmosis!</div>
+      <div id="line-response" class="intro-line">Fun time with science</div>
+      <div id="line-together" class="intro-line">
+        Quick, Easy, Fun-filled; For High Interest in STEM, increased participation, and Excellent Performance for Life
+      </div>
+      <div id="proceed-btn-wrap" style="opacity: 0; margin-top: 3rem;">
+        <button id="intro-proceed-btn" class="classic-btn">Continue</button>
+      </div>
     </div>
   </div>
 
@@ -374,13 +390,18 @@
       </div>
 
       <div id="welcome-back-content" style="display: none;">
-        <h1 style="font-family:'Playfair Display',serif; font-size:3.5rem; color:#1a237e; margin-bottom: 2rem;">Osmosis</h1>
+        <h1 style="font-family:'Playfair Display',serif; font-size:3.5rem; color:#1a237e; margin-bottom: 2rem;">Osmosis
+        </h1>
         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-          <button id="continue-saved-btn" class="classic-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; box-shadow: 0 10px 20px rgba(118, 75, 162, 0.3); font-weight: 800; letter-spacing: 0.5px;">Continue as Saved</button>
+          <button id="continue-saved-btn" class="classic-btn"
+            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; box-shadow: 0 10px 20px rgba(118, 75, 162, 0.3); font-weight: 800; letter-spacing: 0.5px;">Continue
+            as Saved</button>
           <button id="continue-guest-btn" class="classic-btn"
-            style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #1a237e; border: none; box-shadow: 0 10px 20px rgba(255, 154, 158, 0.3); font-weight: 800; letter-spacing: 0.5px;">Play as Guest</button>
+            style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #1a237e; border: none; box-shadow: 0 10px 20px rgba(255, 154, 158, 0.3); font-weight: 800; letter-spacing: 0.5px;">Play
+            as Guest</button>
           <button id="switch-user-link" class="classic-btn"
-            style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border: none; box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3); font-weight: 800; letter-spacing: 0.5px;">Switch Account</button>
+            style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border: none; box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3); font-weight: 800; letter-spacing: 0.5px;">Switch
+            Account</button>
         </div>
       </div>
       <div id="akwaaba-screen"></div>

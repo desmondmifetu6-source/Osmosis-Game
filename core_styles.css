@@ -22,37 +22,95 @@ body {
   overflow-x: hidden;
   opacity: 1;
   transition: opacity 220ms ease;
-  background: linear-gradient(135deg, #e0c3fc 0%, #c2e9fb 100%) !important;
+  background: linear-gradient(-45deg, #e0c3fc, #c2e9fb, #a1c4fd, #c2e9fb) !important;
+  background-size: 400% 400% !important;
+  animation: gradientBG 15s ease infinite !important;
   background-attachment: fixed;
   position: relative;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Glassy Background Shapes */
 body::after {
   content: "";
   position: fixed;
-  top: -10%; left: -10%;
-  width: 40vw; height: 40vw;
-  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
-  filter: blur(60px);
-  z-index: -1;
-  animation: floatShape 20s infinite alternate ease-in-out;
+  top: -20%; left: -20%; right: -20%; bottom: -20%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+  filter: blur(25px);
+  z-index: 0;
+  animation: floatShapes 18s infinite alternate ease-in-out;
+  pointer-events: none;
 }
 
 body::before {
   content: "";
   position: fixed;
-  bottom: -10%; right: -10%;
-  width: 50vw; height: 50vw;
-  background: radial-gradient(circle, rgba(142,197,252,0.3) 0%, transparent 70%);
-  filter: blur(80px);
-  z-index: -1;
-  animation: floatShape 25s infinite alternate-reverse ease-in-out;
+  top: -20%; left: -20%; right: -20%; bottom: -20%;
+  background: 
+    radial-gradient(circle at 70% 20%, rgba(142, 197, 252, 0.5) 0%, transparent 40%),
+    radial-gradient(circle at 30% 80%, rgba(224, 195, 252, 0.5) 0%, transparent 40%);
+  filter: blur(35px);
+  z-index: 0;
+  animation: floatShapesReverse 22s infinite alternate-reverse ease-in-out;
+  pointer-events: none;
 }
 
-@keyframes floatShape {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(50px, 50px) scale(1.1); }
+@keyframes floatShapes {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(5vw, -5vh) scale(1.1) rotate(5deg); }
+  100% { transform: translate(-5vw, 8vh) scale(0.9) rotate(-5deg); }
+}
+
+@keyframes floatShapesReverse {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(-6vw, 6vh) scale(1.2) rotate(-5deg); }
+  100% { transform: translate(6vw, -6vh) scale(0.8) rotate(5deg); }
+}
+
+.gears-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.12;
+}
+
+.gear {
+  position: absolute;
+  animation: spinGear 20s linear infinite;
+}
+
+.gear1 { top: -10%; left: -10%; width: 40vw; height: 40vw; animation-duration: 25s; }
+.gear2 { bottom: -15%; right: -10%; width: 50vw; height: 50vw; animation-duration: 30s; animation-direction: reverse; }
+.gear3 { top: 30%; right: 5%; width: 20vw; height: 20vw; animation-duration: 15s; }
+
+@keyframes spinGear {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.app-container::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 20px);
+  pointer-events: none;
+  z-index: 0;
+  animation: slideGrid 40s linear infinite;
+}
+
+@keyframes slideGrid {
+  from { background-position: 0 0; }
+  to { background-position: 100vw 100vh; }
 }
 
 body.page-preload {
@@ -63,20 +121,13 @@ body.page-leave {
   opacity: 0;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.01) 0px, rgba(0,0,0,0.01) 1px, transparent 1px, transparent 5px);
-  pointer-events: none;
-  z-index: -1;
-}
-
 .app-container {
   width: 100%; 
   max-width: 600px; 
   padding: 1rem;
   margin: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .card {
