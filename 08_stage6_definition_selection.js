@@ -110,20 +110,31 @@ const Stage5Controller = {
 
     let options = [currentWord];
     for (let w of pool) {
-      if (options.length < 4) options.push(w);
+      if (options.length < 4 && !options.includes(w)) options.push(w);
     }
 
     if (options.length < 4 && typeof window.STEMDictionary !== 'undefined') {
-      const all = window.STEMDictionary.getWordsByLetter('B');
-      for (let w of all) {
-        if (options.length < 4 && !options.includes(w.word)) {
-          options.push(w.word);
+      let attempts = 0;
+      while (options.length < 4 && attempts < 50) {
+        const randomLetter = window.STEMDictionary.getRandomLetter();
+        const wordsFromLetter = window.STEMDictionary.getWordsByLetter(randomLetter);
+        if (wordsFromLetter && wordsFromLetter.length > 0) {
+          const randomWordObj = wordsFromLetter[Math.floor(Math.random() * wordsFromLetter.length)];
+          if (!options.includes(randomWordObj.word)) {
+            options.push(randomWordObj.word);
+          }
         }
+        attempts++;
       }
     }
 
+    const fallbackWords = ["Anomaly", "Phenomenon", "Paradox", "Catalyst"];
+    let fallbackIndex = 0;
     while (options.length < 4) {
-      options.push("Anomaly");
+      if (!options.includes(fallbackWords[fallbackIndex])) {
+        options.push(fallbackWords[fallbackIndex]);
+      }
+      fallbackIndex = (fallbackIndex + 1) % fallbackWords.length;
     }
 
     options = this.shuffle(options);

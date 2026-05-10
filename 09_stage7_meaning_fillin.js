@@ -162,14 +162,14 @@ const Stage6Controller = {
 
     let chosenIndices = [];
     if (validIndices.length > 0) {
-      let longestIndex = validIndices[0];
-      for (let i = 1; i < validIndices.length; i++) {
-        if (tokens[validIndices[i]].length > tokens[longestIndex].length) {
-          longestIndex = validIndices[i];
-        } else if (tokens[validIndices[i]].length === tokens[longestIndex].length && Math.random() > 0.5) {
-          longestIndex = validIndices[i];
-        }
-      }
+      // Maintaining the ONE blank limit per user request for game pacing.
+      // But we will write the logic cleanly. Pick the longest valid word for a satisfying blank.
+      let longestIndex = validIndices.reduce((longest, current) => {
+        if (tokens[current].length > tokens[longest].length) return current;
+        if (tokens[current].length === tokens[longest].length) return Math.random() > 0.5 ? current : longest;
+        return longest;
+      }, validIndices[0]);
+      
       chosenIndices.push(longestIndex);
     }
     validIndices = chosenIndices;

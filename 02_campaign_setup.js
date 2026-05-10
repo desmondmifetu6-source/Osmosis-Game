@@ -105,7 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return; // Stop the game from breaking further!
     }
 
-    let possibleWords = window.STEMDictionary.getWordsByLetter(gameData.letter).map(w => w.word);
+    let possibleWords = window.STEMDictionary.getWordsByLetter(gameData.letter)
+      .filter(w => w.definition && w.definition.trim() !== "")
+      .map(w => w.word);
 
     // Cooldown Logic: Don't repeat words played globally in the last 3 days
     const globalUsedRaw = JSON.parse(localStorage.getItem('osmosis_global_used_words')) || [];
