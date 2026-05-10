@@ -103,7 +103,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } else {
       console.warn("Socket.io not loaded. Multiplayer features disabled.");
-      if (startBtn) startBtn.textContent = "Offline Mode (No Server)";
+      if (startBtn) {
+        startBtn.textContent = "Play Solo (No Server Connection)";
+        startBtn.disabled = false;
+        startBtn.addEventListener('click', () => {
+          gameData.multiplayerMode = false;
+          sharedState.save(gameData);
+          window.location.href = '02_campaign_setup.html';
+        });
+      }
     }
   } catch (err) {
     console.error("Socket initialization failed:", err);
