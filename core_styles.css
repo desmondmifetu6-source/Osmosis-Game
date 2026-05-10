@@ -111,9 +111,10 @@ body::before {
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.45);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6); /* Slightly more opaque */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Stronger glow */
   white-space: nowrap;
+  letter-spacing: 2px;
 }
 
 .f1 { font-size: clamp(4rem, 10vw, 10rem); top: 15%; left: -5%; animation: floatF1 25s ease-in-out infinite alternate; }
@@ -183,7 +184,13 @@ h1, h2, h3 {
 }
 
 h1.logo {
-  font-size: 3rem; text-transform: uppercase; letter-spacing: 4px; color: var(--text-main);
+  font-size: clamp(1.8rem, 10vw, 3.5rem); 
+  text-transform: uppercase; 
+  letter-spacing: clamp(2px, 1vw, 5px); 
+  margin-right: -4px; /* Offset to center text with letter-spacing */
+  color: var(--text-main);
+  line-height: 1;
+  width: 100%;
 }
 
 input[type="text"], textarea {
@@ -217,11 +224,33 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   box-shadow: none; transform: none;
 }
 
-.classic-btn.primary {
-  background: var(--accent-primary); color: #fff;
-}
 .classic-btn.primary:hover:not(:disabled) {
   background: #4338CA;
+}
+
+.solo-btn-elegant {
+  background: #1a237e;
+  color: #ffffff;
+  padding: 1.2rem 3rem;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 25px rgba(26, 35, 126, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.solo-btn-elegant:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(26, 35, 126, 0.4);
+  background: #283593;
+}
+
+.solo-btn-elegant:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .classic-btn.secondary {
@@ -262,7 +291,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   position: fixed;
   top: 1.5rem;
   right: 2rem;
-  background: rgba(25, 135, 84, 0.85);
+  background: rgba(26, 35, 126, 0.85); /* Deep Blue */
   backdrop-filter: blur(10px);
   color: #fff;
   padding: 0.5rem 1.2rem;
@@ -307,11 +336,10 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 @media (max-width: 480px) {
   .app-container { padding: 0.5rem; }
   .card { 
-    padding: 1.5rem 1rem !important; 
-    border-radius: 12px !important; 
-    margin-top: 2rem; 
+    padding: 2rem 1.2rem !important; 
+    border-radius: 16px !important; 
+    margin-top: 1rem; 
   }
-  h1.logo { font-size: 2.2rem !important; }
   h2 { font-size: 1.1rem !important; margin-bottom: 0.8rem !important; }
   h3 { font-size: 1rem !important; margin-bottom: 0.6rem !important; }
   p { font-size: 0.9rem !important; }
@@ -371,7 +399,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   position: fixed;
   top: 1.5rem;
   left: 2rem;
-  background: rgba(25, 135, 84, 0.85);
+  background: rgba(26, 35, 126, 0.85); /* Deep Blue */
   backdrop-filter: blur(10px);
   color: #fff;
   padding: 0.5rem 1.2rem;

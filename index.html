@@ -126,18 +126,24 @@
 
     #line-yell {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 12vw, 5rem);
+      font-size: clamp(2.2rem, 12vw, 4.5rem);
       font-weight: 900;
       color: #1a237e;
       text-transform: uppercase;
       letter-spacing: 4px;
+      margin-right: -4px;
+      /* Offset for letter-spacing to ensure perfect center */
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+      width: 100%;
     }
 
     #line-response {
-      font-size: clamp(1.8rem, 6vw, 3.2rem);
+      font-size: clamp(1.4rem, 8vw, 3.2rem);
       color: #3949ab;
       font-weight: 700;
       font-style: italic;
+      line-height: 1.2;
     }
 
     #line-together {
@@ -323,16 +329,24 @@
     @media (max-width: 480px) {
 
       .hof-card,
-      .login-plaque {
-        padding: 2.5rem 1.5rem;
+      .login-plaque,
+      .intro-card {
+        padding: 2.5rem 1.2rem;
+        /* Reduced horizontal padding */
       }
 
       .welcome-text {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
 
       .classic-btn {
         font-size: 1.1rem;
+        padding: 1rem;
+      }
+
+      #line-yell {
+        letter-spacing: 2px;
+        /* Reduce spacing on tiny screens */
       }
     }
   </style>
@@ -357,7 +371,8 @@
       <div id="line-yell" class="intro-line">Osmosis!</div>
       <div id="line-response" class="intro-line">Fun time with science</div>
       <div id="line-together" class="intro-line">
-        Quick, Easy, Fun-filled; For High Interest in STEM, increased participation, and Excellent Performance for Life
+        Quick, Easy, Fun-filled; For High Interest in STEM, increased participation, and Excellent Performance for
+        Life
       </div>
       <div id="proceed-btn-wrap" style="opacity: 0; margin-top: 3rem;">
         <button id="intro-proceed-btn" class="classic-btn">Continue</button>
@@ -369,9 +384,13 @@
   <div class="app-container" id="main-app-ui">
     <div class="login-plaque">
       <div id="login-content">
-        <h1 style="font-family:'Playfair Display',serif; font-size:4.5rem; color:#1a237e; margin-bottom:0.5rem;">Osmosis
+        <h1
+          style="font-family:'Playfair Display',serif; font-size: clamp(2.5rem, 12vw, 4rem); color:#1a237e; margin-bottom:0.5rem; line-height: 1; letter-spacing: 2px; margin-right: -2px;">
+          Osmosis
         </h1>
-        <p style="font-style:italic; font-weight:700; color:#3949ab; font-size:1.2rem; margin-bottom:3rem;">Fun time
+        <p
+          style="font-style:italic; font-weight:700; color:#3949ab; font-size: clamp(1rem, 5vw, 1.2rem); margin-bottom:3rem;">
+          Fun time
           with science</p>
 
         <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Enter your name</h2>
@@ -390,7 +409,9 @@
       </div>
 
       <div id="welcome-back-content" style="display: none;">
-        <h1 style="font-family:'Playfair Display',serif; font-size:3.5rem; color:#1a237e; margin-bottom: 2rem;">Osmosis
+        <h1
+          style="font-family:'Playfair Display',serif; font-size: clamp(2.5rem, 12vw, 3.5rem); color:#1a237e; margin-bottom: 2rem; line-height: 1;">
+          Osmosis
         </h1>
         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
           <button id="continue-saved-btn" class="classic-btn"

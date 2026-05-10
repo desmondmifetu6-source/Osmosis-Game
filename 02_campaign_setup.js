@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (setupContinueBtn) {
       setupContinueBtn.style.display = 'block';
-      setupContinueBtn.textContent = 'Proceed';
+      setupContinueBtn.textContent = 'Continue';
     }
   }
 });
