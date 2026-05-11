@@ -75,7 +75,7 @@
       text-transform: uppercase !important;
       padding: 1.2rem !important;
     }
-    
+
     .classic-btn:hover {
       transform: translateY(-4px) scale(1.02);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -98,7 +98,7 @@
         font-size: 1.8rem;
         letter-spacing: 1px;
       }
-      
+
       .akwaaba-header span {
         font-size: 1.3rem;
       }
@@ -106,18 +106,24 @@
 
     .solo-popup-overlay {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
-      z-index: 9998; /* Just below timer/scoreboard but above everything else */
+      z-index: 9998;
+      /* Just below timer/scoreboard but above everything else */
       display: none;
       justify-content: center;
       align-items: center;
       transition: all 0.3s ease;
     }
 
-    .solo-popup-overlay.active { display: flex; }
+    .solo-popup-overlay.active {
+      display: flex;
+    }
 
     .solo-popup {
       background: rgba(255, 255, 255, 0.9);
@@ -128,7 +134,7 @@
       padding: 3.5rem 2.5rem;
       max-width: 480px;
       width: 90%;
-      box-shadow: 
+      box-shadow:
         0 40px 100px rgba(0, 0, 0, 0.1),
         0 0 0 1px rgba(255, 255, 255, 0.5),
         inset 0 0 20px rgba(255, 255, 255, 0.5);
@@ -136,18 +142,20 @@
       animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
     }
-    
+
     .solo-popup h3 {
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
-      color: #312e81; /* Brighter, richer indigo */
+      color: #312e81;
+      /* Brighter, richer indigo */
       margin-bottom: 1.5rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
-    
+
     .solo-popup p {
       font-size: 1.25rem;
-      color: #1e293b; /* Deeper slate for better contrast */
+      color: #1e293b;
+      /* Deeper slate for better contrast */
       line-height: 1.7;
       margin-bottom: 3rem;
       font-weight: 500;
@@ -181,8 +189,15 @@
     }
 
     @keyframes popIn {
-      from { opacity: 0; transform: scale(0.8) translateY(20px); }
-      to { opacity: 1; transform: scale(1) translateY(0); }
+      from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
     }
   </style>
 </head>
@@ -191,7 +206,9 @@
   <div class="app-container">
     <div class="card" style="text-align: center;">
       <h2 class="akwaaba-header">WELCOME, <span id="home-username">Scholar</span></h2>
-      <p style="margin-bottom: 2rem; color: var(--text-main); font-weight: 700; font-size: 1.2rem; letter-spacing: 2px;">CLICK YOUR PREFERENCE.</p>
+      <p
+        style="margin-bottom: 2rem; color: var(--text-main); font-weight: 700; font-size: 1.2rem; letter-spacing: 2px;">
+        CLICK YOUR PREFERENCE.</p>
       <div class="menu-buttons">
         <button id="play-solo-btn" class="classic-btn primary">Play Solo</button>
         <button id="multiplayer-btn" class="classic-btn primary"
@@ -217,7 +234,7 @@
   <div id="solo-popup-overlay" class="solo-popup-overlay">
     <div class="solo-popup">
       <h3>Play Solo</h3>
-      <p>Play Solo means play alone or with one or two people supporting you. Begin now by selecting your words.</p>
+      <p>Play Solo means play alone or with one or two people supporting you.</p>
       <button id="solo-popup-continue" class="solo-btn-elegant">Continue</button>
     </div>
   </div>
