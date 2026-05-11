@@ -60,7 +60,8 @@
       font-weight: 800;
       letter-spacing: 1px;
       padding: 1.2rem 4rem;
-      background: #ffcc00; /* Golden Yellow */
+      background: #ffcc00;
+      /* Golden Yellow */
       color: #000;
       border: none;
       border-radius: 12px;
@@ -117,16 +118,38 @@
       animation: fall linear infinite;
     }
 
-    .confetti-blue { background: #1a237e; }
-    .confetti-gold { background: #ffcc00; }
-    .confetti-white { background: #ffffff; }
+    .confetti-blue {
+      background: #1a237e;
+    }
+
+    .confetti-gold {
+      background: #ffcc00;
+    }
+
+    .confetti-white {
+      background: #ffffff;
+    }
 
     @keyframes fall {
-      0% { transform: translateY(-10vh) translateX(0) rotate(0deg); }
-      25% { transform: translateY(20vh) translateX(15px) rotate(90deg); }
-      50% { transform: translateY(50vh) translateX(-15px) rotate(180deg); }
-      75% { transform: translateY(80vh) translateX(10px) rotate(270deg); }
-      100% { transform: translateY(110vh) translateX(0) rotate(360deg); }
+      0% {
+        transform: translateY(-10vh) translateX(0) rotate(0deg);
+      }
+
+      25% {
+        transform: translateY(20vh) translateX(15px) rotate(90deg);
+      }
+
+      50% {
+        transform: translateY(50vh) translateX(-15px) rotate(180deg);
+      }
+
+      75% {
+        transform: translateY(80vh) translateX(10px) rotate(270deg);
+      }
+
+      100% {
+        transform: translateY(110vh) translateX(0) rotate(360deg);
+      }
     }
   </style>
 </head>
@@ -138,11 +161,13 @@
   <div class="app-container">
     <div class="card intro-card">
 
-      <h2 class="intro-title" style="color: #1a237e;">Stage 7: Hall of Fame <span style="font-size: 1.2em; vertical-align: middle;">🏆</span></h2>
+      <h2 class="intro-title" style="color: #1a237e;">Stage 7: To Hall of Fame ➡️<span
+          style="font-size: 1.2em; vertical-align: middle;">🏆</span></h2>
 
       <p class="intro-narrative" style="color: #1a237e;">
-        <strong style="color: #3949ab;">Final Challenge</strong>
-        You have reached the ultimate test. To enter the Hall of Fame, you must recall every term and definition you have learned.
+        <strong style="color: #3949ab;"> Final Challenge</strong>
+        You have reached the ultimate test. To enter the Hall of Fame, you must recall every term and definition you
+        have learned.
         Words will flash for 5 seconds—memorize them and prove your mastery!
       </p>
 
@@ -181,22 +206,22 @@
       for (let i = 0; i < count; i++) {
         const div = document.createElement('div');
         div.className = 'falling-item ' + colors[Math.floor(Math.random() * colors.length)];
-        
+
         // Randomize
         div.style.left = Math.random() * 100 + 'vw';
-        
+
         // Stagger vertical start
         const initialTop = Math.random() * 120 - 20;
         div.style.top = initialTop + 'vh';
-        
-        div.style.animationDuration = (Math.random() * 4 + 3) + 's'; 
+
+        div.style.animationDuration = (Math.random() * 4 + 3) + 's';
         div.style.animationDelay = '-' + (Math.random() * 10) + 's';
-        
+
         // Randomize size slightly
         const size = (Math.random() * 8 + 6) + 'px';
         div.style.width = size;
         div.style.height = (Math.random() * 12 + 8) + 'px'; // Rectangular
-        
+
         bg.appendChild(div);
       }
     }
