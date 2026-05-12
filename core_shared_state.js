@@ -117,7 +117,8 @@ const sharedState = {
       this.socket.emit('update_score', { 
         roomId: roomId, 
         score: score,
-        username: localStorage.getItem('osmosis_user') || 'Guest'
+        username: localStorage.getItem('osmosis_user') || 'Guest',
+        time: state.totalTime || 0
       });
     }
   },

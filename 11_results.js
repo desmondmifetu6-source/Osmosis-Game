@@ -73,7 +73,8 @@ const ResultsController = {
     this.socket.emit('update_score', {
       roomId: gameData.currentRoomId,
       score: gameData.score || 0,
-      username: localStorage.getItem('osmosis_user') || 'Guest'
+      username: localStorage.getItem('osmosis_user') || 'Guest',
+      time: gameData.totalTime || 0
     });
 
     this.socket.on('leaderboard_update', (data) => {
@@ -102,30 +103,35 @@ const ResultsController = {
         return;
       }
 
-      // If everyone finished, find the winner
+      // If everyone finished, find the winner using tie-breaking (Faster time wins)
       const myScore = gameData.score || 0;
-      const scores = players.map(p => p.score || 0);
-      const maxScore = Math.max(...scores);
-      const winners = players.filter(p => p.score === maxScore);
+      const myTime = gameData.totalTime || 0;
+
+      const sortedPlayers = [...players].sort((a, b) => {
+        if ((b.score || 0) !== (a.score || 0)) return (b.score || 0) - (a.score || 0);
+        return (a.time || 0) - (b.time || 0);
+      });
+
+      const winner = sortedPlayers[0];
 
       // UI Polish for the verdict
-      if (winners.some(w => w.name === myName)) {
-        if (winners.length > 1) {
-          domCache.battleOutcome.textContent = "TIE FOR 1ST";
-          domCache.battleOutcome.style.color = "#ffd700";
-        } else {
-          domCache.battleOutcome.textContent = "VICTORY";
-          domCache.battleOutcome.style.color = "#4caf50";
-        }
+      if (winner.name === myName) {
+        domCache.battleOutcome.textContent = "VICTORY";
+        domCache.battleOutcome.style.color = "#4caf50";
       } else {
         domCache.battleOutcome.textContent = "DEFEAT";
         domCache.battleOutcome.style.color = "#f44336";
       }
 
-      // Show the top opponent's score in the sub-box
-      const topOpponent = [...otherPlayers].sort((a, b) => b.score - a.score)[0];
+      // Show the top opponent's score and time in the sub-box
+      const topOpponent = otherPlayers.sort((a, b) => {
+        if ((b.score || 0) !== (a.score || 0)) return (b.score || 0) - (a.score || 0);
+        return (a.time || 0) - (b.time || 0);
+      })[0];
+      
+      const oppTimeStr = typeof sharedState !== 'undefined' ? sharedState.getFormattedTime(topOpponent.time || 0) : '...';
       domCache.opponentName.textContent = `Top Opponent: ${topOpponent.name}`;
-      domCache.opponentPoints.textContent = topOpponent.score;
+      domCache.opponentPoints.textContent = `${topOpponent.score} pts (Time: ${oppTimeStr})`;
     }
   },
 
@@ -179,6 +185,11 @@ const ResultsController = {
     const interval = 30;
     const step = Math.max(1, Math.floor(this.state.targetScore / (duration / interval)));
 
+    // Show total time spent immediately
+    if (domCache.scoreEl) {
+      domCache.scoreEl.innerHTML = `Total Score: 0<br><span class="time-spent-text" style="color:#ffd700; letter-spacing:2px; font-size:1.5rem;">time spent: ${totalTimeFormatted}</span>`;
+    }
+
     this.state.counterInt = setInterval(() => {
       this.state.currentNumber += step;
 
@@ -191,26 +202,22 @@ const ResultsController = {
           AudioManager.play('success');
         }
 
-        // Show total time spent once counter finishes
+        // Final Score display with time
         if (domCache.scoreEl) {
-          domCache.scoreEl.innerHTML = `Total Score: ${this.state.currentNumber}<br><span class="time-spent-text" style="color:#ffd700; letter-spacing:2px;">time spent: ${totalTimeFormatted}</span>`;
+          domCache.scoreEl.innerHTML = `Total Score: ${this.state.currentNumber}<br><span class="time-spent-text" style="color:#ffd700; letter-spacing:2px; font-size:1.5rem;">time spent: ${totalTimeFormatted}</span>`;
         }
 
         let bonusShown = false;
         const showBonus = () => {
           if (bonusShown) return;
           bonusShown = true;
-          // Optionally show a modal, but keeping it minimal for the new UI
-          // if (typeof showModal === 'function') {
-          //   showModal('congratulation.');
-          // }
         };
         setTimeout(showBonus, 900);
         return;
       }
 
       if (domCache.scoreEl) {
-        domCache.scoreEl.textContent = `Total Score: ${this.state.currentNumber}`;
+        domCache.scoreEl.innerHTML = `Total Score: ${this.state.currentNumber}<br><span class="time-spent-text" style="color:#ffd700; letter-spacing:2px; font-size:1.5rem;">time spent: ${totalTimeFormatted}</span>`;
       }
     }, interval);
   },

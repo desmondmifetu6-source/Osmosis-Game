@@ -55,8 +55,13 @@ const MultiplayerResults = {
     const listEl = document.getElementById('leaderboard-list');
     if (!listEl) return;
 
-    // Sort players by score (descending)
-    const sorted = [...this.state.players].sort((a, b) => (b.score || 0) - (a.score || 0));
+    // Sort players by score (descending), then by time (ascending) to break ties
+    const sorted = [...this.state.players].sort((a, b) => {
+      if ((b.score || 0) !== (a.score || 0)) {
+        return (b.score || 0) - (a.score || 0);
+      }
+      return (a.time || 0) - (b.time || 0); // Lower time wins tie
+    });
     
     listEl.innerHTML = '';
     
