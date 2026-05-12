@@ -289,6 +289,18 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
 }
 
+/* Premium Danger Style (The 'Purge' Style) */
+.classic-btn.danger {
+  background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+  color: white;
+  box-shadow: 0 10px 20px rgba(255, 75, 43, 0.3);
+}
+
+.classic-btn.danger:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+  box-shadow: 0 15px 30px rgba(255, 75, 43, 0.4);
+}
+
 /* Secondary/Subtle Variant (for Skip/Back) */
 .classic-btn.secondary,
 .classic-btn.outline {
