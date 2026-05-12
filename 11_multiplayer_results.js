@@ -42,7 +42,9 @@ const MultiplayerResults = {
       roomId: this.state.roomId,
       score: this.state.gameData.score || 0,
       username: myName,
-      time: this.state.gameData.totalTime || 0
+      time: this.state.gameData.totalTime || 0,
+      words: this.state.gameData.selectedWords || [],
+      meanings: this.state.gameData.meanings || {}
     });
 
     this.state.socket.on('leaderboard_update', (data) => {
@@ -74,7 +76,6 @@ const MultiplayerResults = {
       const score = player.score !== undefined ? player.score : '...';
       const timeStr = player.time !== undefined ? sharedState.getFormattedTime(player.time) : '...';
       
-      // Select trophy based on rank
       let trophy = '';
       if (rank === 1) trophy = '🏆';
       else if (rank === 2) trophy = '🥈';
@@ -87,9 +88,12 @@ const MultiplayerResults = {
         <div class="player-info">
           <p class="player-name">${player.name}</p>
           <p class="player-score">${score} pts | Time: ${timeStr}</p>
+          <p style="font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 4px;">Click to view words</p>
         </div>
         <div style="font-size: 2.5rem;">${trophy}</div>
       `;
+
+      card.addEventListener('click', () => this.showPlayerWords(player));
       
       listEl.appendChild(card);
     });
@@ -100,6 +104,35 @@ const MultiplayerResults = {
       p.textContent = 'Waiting for other teammates to finish...';
       listEl.appendChild(p);
     }
+  },
+
+  showPlayerWords(player) {
+    const modal = document.getElementById('word-modal');
+    const nameEl = document.getElementById('modal-player-name');
+    const listEl = document.getElementById('modal-word-list');
+    
+    if (!modal || !nameEl || !listEl) return;
+    if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
+
+    nameEl.textContent = `${player.name}'s Learning Achieved`;
+    listEl.innerHTML = '';
+
+    const words = player.words || [];
+    const meanings = player.meanings || {};
+
+    if (words.length === 0) {
+      listEl.innerHTML = '<p style="text-align:center; font-style:italic; padding: 2rem;">No words collected yet.</p>';
+    } else {
+      words.forEach(word => {
+        const item = document.createElement('div');
+        item.className = 'word-item';
+        const m = meanings[word] || 'Definition stored in memory.';
+        item.innerHTML = `<h4>${word}</h4><p>${m}</p>`;
+        listEl.appendChild(item);
+      });
+    }
+
+    modal.classList.add('active');
   },
 
   attachListeners() {

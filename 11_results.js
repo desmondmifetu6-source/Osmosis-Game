@@ -74,7 +74,9 @@ const ResultsController = {
       roomId: gameData.currentRoomId,
       score: gameData.score || 0,
       username: localStorage.getItem('osmosis_user') || 'Guest',
-      time: gameData.totalTime || 0
+      time: gameData.totalTime || 0,
+      words: gameData.selectedWords || [],
+      meanings: gameData.meanings || {}
     });
 
     this.socket.on('leaderboard_update', (data) => {

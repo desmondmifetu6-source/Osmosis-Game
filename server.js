@@ -86,6 +86,8 @@ io.on('connection', (socket) => {
       if (player) {
         player.score = data.score;
         player.time = data.time || 0;
+        player.words = data.words || [];
+        player.meanings = data.meanings || {};
         if (socket.id !== player.id) player.id = socket.id; // Sync ID if found by name
 
         io.to(roomId).emit('leaderboard_update', {

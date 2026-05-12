@@ -165,21 +165,71 @@
       margin-top: 1rem;
     }
 
-    @media (max-width: 480px) {
-      .arena-title { font-size: 1.8rem; }
-      .rank-card { gap: 8px; padding: 0.8rem; }
-      .rank-number { font-size: 1.2rem; width: 25px; }
-      .player-avatar { width: 45px; height: 45px; font-size: 1.8rem; }
-      .player-info { min-width: 0; }
-      .player-name { 
-        font-size: 1rem; 
-        white-space: nowrap; 
-        overflow: hidden; 
-        text-overflow: ellipsis; 
-      }
-      .player-score { font-size: 1.1rem; }
-      .mini-trophy { width: 35px; }
+    /* Modal for Learning Achieved */
+    .word-modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 10000;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
     }
+    .word-modal.active { display: flex; }
+    .word-modal-content {
+      background: rgba(255, 255, 255, 0.95);
+      color: #1a237e;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 24px;
+      padding: 2.5rem;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .word-modal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      border-bottom: 2px solid rgba(26, 35, 126, 0.1);
+      padding-bottom: 1rem;
+    }
+    .word-item {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: rgba(26, 35, 126, 0.05);
+      border-radius: 12px;
+      border-left: 5px solid #ffcc00;
+    }
+    .word-item h4 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .word-item p {
+      font-size: 1rem;
+      font-style: italic;
+      color: #333;
+      line-height: 1.5;
+    }
+    .close-modal {
+      background: #1a237e;
+      color: white;
+      border: none;
+      padding: 1rem;
+      width: 100%;
+      border-radius: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .rank-card { cursor: pointer; transition: transform 0.2s; }
+    .rank-card:hover { transform: scale(1.02); }
   </style>
 </head>
 <body>
@@ -197,6 +247,17 @@
 
   <div class="arena-footer">
     <button class="classic-btn primary" id="go-home-btn">Continue</button>
+  </div>
+
+  <!-- Learning Achieved Modal -->
+  <div id="word-modal" class="word-modal">
+    <div class="word-modal-content">
+      <h2 class="word-modal-title" id="modal-player-name">Scholar's Words</h2>
+      <div id="modal-word-list">
+        <!-- Words go here -->
+      </div>
+      <button class="close-modal" onclick="document.getElementById('word-modal').classList.remove('active')">Dismiss</button>
+    </div>
   </div>
 
   <script src="/socket.io/socket.io.js"></script>
