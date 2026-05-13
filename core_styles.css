@@ -20,131 +20,10 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  opacity: 1;
-  transition: opacity 220ms ease;
-  background: linear-gradient(-45deg, #e0c3fc, #c2e9fb, #a1c4fd, #c2e9fb) !important;
-  background-size: 400% 400% !important;
-  animation: gradientBG 15s ease infinite !important;
-  background-attachment: fixed;
-  position: relative;
+  background: linear-gradient(135deg, #e0c3fc 0%, #c2e9fb 50%, #a1c4fd 100%) fixed;
 }
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Glassy Background Shapes */
-body::after {
-  content: "";
-  position: fixed;
-  top: -20%; left: -20%; right: -20%; bottom: -20%;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.2) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
-  filter: blur(25px);
-  z-index: 0;
-  animation: floatShapes 18s infinite alternate ease-in-out;
-  pointer-events: none;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: -20%; left: -20%; right: -20%; bottom: -20%;
-  background: 
-    radial-gradient(circle at 70% 20%, rgba(142, 197, 252, 0.5) 0%, transparent 40%),
-    radial-gradient(circle at 30% 80%, rgba(224, 195, 252, 0.5) 0%, transparent 40%);
-  filter: blur(35px);
-  z-index: 0;
-  animation: floatShapesReverse 22s infinite alternate-reverse ease-in-out;
-  pointer-events: none;
-}
-
-@keyframes floatShapes {
-  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-  50% { transform: translate(5vw, -5vh) scale(1.1) rotate(5deg); }
-  100% { transform: translate(-5vw, 8vh) scale(0.9) rotate(-5deg); }
-}
-
-@keyframes floatShapesReverse {
-  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-  50% { transform: translate(-6vw, 6vh) scale(1.2) rotate(-5deg); }
-  100% { transform: translate(6vw, -6vh) scale(0.8) rotate(5deg); }
-}
-
-.gears-bg {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  overflow: hidden;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.12;
-}
-
-.gear {
-  position: absolute;
-  animation: spinGear 20s linear infinite;
-}
-
-.gear1 { top: -10%; left: -10%; width: 40vw; height: 40vw; animation-duration: 25s; }
-.gear2 { bottom: -15%; right: -10%; width: 50vw; height: 50vw; animation-duration: 30s; animation-direction: reverse; }
-.gear3 { top: 30%; right: 5%; width: 20vw; height: 20vw; animation-duration: 15s; }
-
-@keyframes spinGear {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.global-formulas-container {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.stem-formula {
-  position: absolute;
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.6); /* Slightly more opaque */
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Stronger glow */
-  white-space: nowrap;
-  letter-spacing: 2px;
-}
-
-.f1 { font-size: clamp(4rem, 10vw, 10rem); top: 15%; left: -5%; animation: floatF1 25s ease-in-out infinite alternate; }
-.f2 { font-size: clamp(3rem, 8vw, 8rem); top: 35%; right: 10%; animation: floatF2 20s ease-in-out infinite alternate-reverse; }
-.f3 { font-size: clamp(3.5rem, 9vw, 9rem); bottom: 15%; left: 5%; animation: floatF3 30s ease-in-out infinite alternate; }
-.f4 { font-size: clamp(5rem, 12vw, 12rem); top: 60%; left: 30%; animation: floatF4 35s ease-in-out infinite alternate-reverse; color: rgba(255,255,255,0.3); }
-.f5 { font-size: clamp(2.5rem, 6vw, 6rem); top: 5%; right: 25%; animation: floatF5 28s ease-in-out infinite alternate; }
-.f6 { font-size: clamp(4rem, 8vw, 8rem); bottom: -5%; right: 15%; animation: floatF6 32s ease-in-out infinite alternate-reverse; }
-
-@keyframes floatF1 { 0% { transform: translate(0, 0) rotate(-10deg); } 100% { transform: translate(25vw, 15vh) rotate(10deg); } }
-@keyframes floatF2 { 0% { transform: translate(0, 0) rotate(5deg); } 100% { transform: translate(-25vw, 20vh) rotate(-15deg); } }
-@keyframes floatF3 { 0% { transform: translate(0, 0) rotate(-5deg); } 100% { transform: translate(30vw, -25vh) rotate(15deg); } }
-@keyframes floatF4 { 0% { transform: translate(0, 0) rotate(15deg); } 100% { transform: translate(-20vw, -15vh) rotate(-10deg); } }
-@keyframes floatF5 { 0% { transform: translate(0, 0) rotate(-20deg); } 100% { transform: translate(-30vw, 30vh) rotate(5deg); } }
-@keyframes floatF6 { 0% { transform: translate(0, 0) rotate(10deg); } 100% { transform: translate(15vw, -35vh) rotate(-15deg); } }
-
-.app-container::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 20px);
-  pointer-events: none;
-  z-index: 0;
-  animation: slideGrid 40s linear infinite;
-}
-
-@keyframes slideGrid {
-  from { background-position: 0 0; }
-  to { background-position: 100vw 100vh; }
-}
+/* Decorative shapes, gears, and grids removed for performance */
 
 body.page-preload {
   opacity: 0;
@@ -164,11 +43,9 @@ body.page-leave {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.75) !important;
-  backdrop-filter: blur(15px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
-  border: 2px solid rgba(0, 0, 0, 0.15) !important;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+  background: var(--surface-white) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
   border-radius: 24px !important;
   padding: 2.5rem; text-align: center;
   position: relative; max-height: 90vh; overflow-y: auto;
