@@ -85,7 +85,7 @@ input[type="text"]:focus, textarea:focus {
 input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secondary); opacity: 0.6; }
 
 /* The Family Standard: Main Action Button */
-.classic-btn {
+.classic-btn, .solo-btn-elegant {
   font-family: var(--font-main);
   font-size: 1.25rem;
   font-weight: 800;
@@ -197,7 +197,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 
 /* Legacy Support / Specific Overrides */
 .solo-btn-elegant {
-  extend: .classic-btn; /* Logical reference */
+  /* This now inherits from .classic-btn via the shared selector above */
 }
 
 .spinner {

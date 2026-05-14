@@ -110,6 +110,7 @@ const sharedState = {
 
   reportScoreToServer: function(roomId, score) {
     if (typeof io !== 'undefined') {
+      const state = this.load();
       if (!this.socket) {
         this.socket = io();
         this.socket.on('leaderboard_update', (data) => this.renderLeaderboard(data.players));
