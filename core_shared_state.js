@@ -89,6 +89,13 @@ const sharedState = {
     const state = this.load();
     if (!state.stageScores || typeof state.stageScores !== 'object') state.stageScores = {};
 
+    // Calculate elapsed time for this stage and add to totalTime
+    if (state.startTime) {
+      const now = Date.now();
+      state.totalTime += (now - state.startTime);
+      state.startTime = null; // Clear so it can be restarted by the next stage
+    }
+
     // We create a new folder for the specific stage, saving your score and the time you finished it.
     state.stageScores[stageKey] = {
       label: stageLabel || stageKey,
@@ -152,11 +159,11 @@ const sharedState = {
       el = document.createElement('div');
       el.id = 'mp-leaderboard';
       el.style.cssText = `
-        position: fixed; top: 80px; left: 20px; 
-        background: rgba(255,255,255,0.7); backdrop-filter: blur(10px);
-        padding: 15px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.4);
+        position: fixed; bottom: 20px; left: 20px; 
+        background: rgba(255,255,255,0.6); backdrop-filter: blur(15px);
+        padding: 10px 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.4);
         box-shadow: 0 8px 32px rgba(0,0,0,0.1); z-index: 9998;
-        min-width: 180px; font-family: var(--font-main);
+        min-width: 150px; font-family: var(--font-main);
       `;
       document.body.appendChild(el);
     }
@@ -164,13 +171,13 @@ const sharedState = {
     // Sort players by score
     const sorted = [...players].sort((a, b) => (b.score || 0) - (a.score || 0));
     
-    el.innerHTML = `<h4 style="margin:0 0 10px 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing:1px; color: var(--text-secondary);">Battle Stats</h4>`;
+    el.innerHTML = `<h4 style="margin:0 0 8px 0; font-size: 0.6rem; font-weight: 800; letter-spacing:0.5px; color: var(--text-secondary); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 4px; opacity: 0.7;">Score board</h4>`;
     sorted.forEach((p, i) => {
       const isMe = p.name === localStorage.getItem('osmosis_user');
       const div = document.createElement('div');
       div.style.cssText = `
         display: flex; justify-content: space-between; align-items: center;
-        margin-bottom: 5px; font-size: 0.9rem;
+        margin-bottom: 4px; font-size: 0.75rem;
         ${isMe ? 'color: var(--accent-primary); font-weight: 700;' : ''}
       `;
       div.innerHTML = `

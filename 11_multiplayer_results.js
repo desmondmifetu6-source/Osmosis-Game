@@ -53,6 +53,11 @@ const MultiplayerResults = {
     });
   },
 
+  getOrdinal(n) {
+    const s = ["th", "st", "nd", "rd"], v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  },
+
   renderLeaderboard() {
     const listEl = document.getElementById('leaderboard-list');
     if (!listEl) return;
@@ -69,6 +74,7 @@ const MultiplayerResults = {
     
     sorted.forEach((player, index) => {
       const rank = index + 1;
+      const rankOrdinal = this.getOrdinal(rank);
       const card = document.createElement('div');
       card.className = `rank-card rank-${rank}`;
       
@@ -83,14 +89,14 @@ const MultiplayerResults = {
       else trophy = '🏅';
 
       card.innerHTML = `
-        <div class="rank-number">${rank}</div>
+        <div class="rank-number">${rankOrdinal}</div>
         <div class="player-avatar">${avatar}</div>
         <div class="player-info">
           <p class="player-name">${player.name}</p>
           <p class="player-score">${score} pts | Time: ${timeStr}</p>
-          <p style="font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 4px;">Click to view words</p>
+          <p style="font-size: 0.7rem; color: rgba(255,255,255,0.6); margin-top: 2px;">View Learning</p>
         </div>
-        <div style="font-size: 2.5rem;">${trophy}</div>
+        <div style="font-size: 1.8rem;">${trophy}</div>
       `;
 
       card.addEventListener('click', () => this.showPlayerWords(player));
