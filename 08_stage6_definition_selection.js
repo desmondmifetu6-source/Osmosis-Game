@@ -168,8 +168,8 @@ const Stage5Controller = {
       }
       if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
-      this.state.stageScore += 5;
-      this.updateScoreboard(5, btn);
+      this.state.stageScore += 10;
+      this.updateScoreboard(10, btn);
     } else {
       btn.classList.add('wrong');
       if (domCache.feedbackEl) {

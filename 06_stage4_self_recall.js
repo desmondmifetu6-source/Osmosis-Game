@@ -106,7 +106,7 @@ const Stage4Controller = {
       this.state.lap2Identified.push(val);
       this.triggerLap2Feedback("Excellent!", 'success');
 
-      this.rewardLap2Points(20);
+      this.rewardLap2Points(10);
 
       const t = document.createElement('div');
       t.className = 'word-tile';

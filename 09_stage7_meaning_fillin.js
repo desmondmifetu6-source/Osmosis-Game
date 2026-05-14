@@ -250,7 +250,7 @@ const Stage6Controller = {
 
     if (allCorrect) {
       this.triggerFeedback("Correct!", 'success');
-      const pts = 5;
+      const pts = 10;
       this.state.stageScore += pts;
       this.updateScoreboard(pts);
 

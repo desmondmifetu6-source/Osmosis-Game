@@ -7,7 +7,7 @@
 const CONFIG = {
   TIME_PER_WORD: 8,       
   MASK_PERCENTAGE: 0.4,   
-  POINTS_PER_CORRECT: 5   
+  POINTS_PER_CORRECT: 10   
 };
 
 const Stage2Controller = {
