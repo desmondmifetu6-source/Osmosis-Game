@@ -324,6 +324,11 @@
       pointer-events: all;
     }
 
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
     @media (max-width: 480px) {
 
       .hof-card,
@@ -357,7 +362,7 @@
   <div id="phase0-welcome">
     <div class="hof-card">
       <div class="hof-trophy">🏆</div>
-      <h1 class="welcome-text">Welcome to the Greatest <br>STEM Learning Game</h1>
+      <h1 class="welcome-text">Welcome to the Most Effective <br>STEM Learning Game</h1>
       <button id="p0-continue-btn" class="classic-btn primary">Continue</button>
     </div>
   </div>
@@ -406,7 +411,7 @@
       </div>
 
       <div id="welcome-back-content" style="display: none;">
-        <h1
+        <h1 id="welcome-back-title"
           style="font-family:'Playfair Display',serif; font-size: clamp(2.5rem, 12vw, 3.5rem); color:#1a237e; margin-bottom: 2rem; line-height: 1;">
           Osmosis
         </h1>

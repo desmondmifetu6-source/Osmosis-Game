@@ -122,7 +122,7 @@ const LoginController = {
   continueAs(user, startingScore = null) {
     const { domCache, gameData } = this.state;
 
-    if (startingScore !== null) {
+    if (startingScore !== null && startingScore !== undefined) {
       localStorage.setItem('osmosis_total_score', startingScore);
     }
     localStorage.setItem('osmosis_user', user);
