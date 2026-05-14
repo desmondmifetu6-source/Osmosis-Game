@@ -89,11 +89,11 @@
 
     .welcome-text {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
+      font-size: clamp(1.2rem, 5vw, 2.2rem);
       font-weight: 700;
       color: #1a1a1a;
-      line-height: 1.3;
-      margin-bottom: 3rem;
+      line-height: 1.4;
+      margin-bottom: 2.5rem;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -344,7 +344,8 @@
       }
 
       .welcome-text {
-        font-size: 1.6rem;
+        font-size: 1.1rem;
+        line-height: 1.5;
       }
 
       .classic-btn {
@@ -367,7 +368,13 @@
   <div id="phase0-welcome">
     <div class="hof-card">
       <div class="hof-trophy">🏆</div>
-      <h1 class="welcome-text">Welcome to the Most Effective <br>STEM Learning Games</h1> <strong>Ever</strong>
+      <h1 class="welcome-text">
+        WELCOME TO THE<br>
+        • GREATEST AND <br>
+        • MOST EFFECTIVE <br>
+        STEM LEARNING GAME <br>
+        EVER
+      </h1>
       <button id="p0-continue-btn" class="classic-btn primary">Continue</button>
     </div>
   </div>
