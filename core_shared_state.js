@@ -154,16 +154,26 @@ const sharedState = {
   },
 
   renderLeaderboard: function(players) {
+    // We don't want the floating scoreboard on the results page or the home menu
+    const isResultsPage = window.location.pathname.includes('results.html');
+    const isHome = window.location.pathname.includes('home_menu.html') || window.location.pathname.endsWith('/');
+    
+    if (isResultsPage || isHome) {
+      const existing = document.getElementById('mp-leaderboard');
+      if (existing) existing.remove();
+      return;
+    }
+
     let el = document.getElementById('mp-leaderboard');
     if (!el) {
       el = document.createElement('div');
       el.id = 'mp-leaderboard';
       el.style.cssText = `
-        position: fixed; bottom: 20px; left: 20px; 
-        background: rgba(255,255,255,0.6); backdrop-filter: blur(15px);
-        padding: 10px 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.4);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.1); z-index: 9998;
-        min-width: 150px; font-family: var(--font-main);
+        position: fixed; top: 1.5rem; left: 1.5rem; 
+        background: rgba(255,255,255,0.7); backdrop-filter: blur(12px);
+        padding: 8px 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.5);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15); z-index: 9998;
+        min-width: 140px; font-family: var(--font-main); pointer-events: none;
       `;
       document.body.appendChild(el);
     }
