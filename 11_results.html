@@ -238,28 +238,102 @@
 
     /* Mobile Adjustments */
     @media (max-width: 768px) {
-      .hall-title { font-size: 2.5rem; letter-spacing: 3px; }
-      .hero-score { font-size: 3rem; }
-      #battle-outcome { font-size: 3rem !important; letter-spacing: 4px !important; }
-      .results-container { padding: 2rem 1rem; }
-      .hero-section { margin-bottom: 2rem; }
-      .breakdown-section, .learning-section { padding: 1.5rem; margin-bottom: 2rem; }
-      .menu-buttons { flex-direction: row; gap: 0.8rem; }
-      .menu-buttons button { flex: 1; padding: 0.8rem 0.5rem; font-size: 0.9rem; }
+      .hall-title {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+      }
+
+      .hero-score {
+        font-size: 3rem;
+      }
+
+      #battle-outcome {
+        font-size: 3rem !important;
+        letter-spacing: 4px !important;
+      }
+
+      .results-container {
+        padding: 2rem 1rem;
+      }
+
+      .hero-section {
+        margin-bottom: 2rem;
+      }
+
+      .breakdown-section,
+      .learning-section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .menu-buttons {
+        flex-direction: row;
+        gap: 0.8rem;
+      }
+
+      .menu-buttons button {
+        flex: 1;
+        padding: 0.8rem 0.5rem;
+        font-size: 0.9rem;
+      }
     }
 
     @media (max-width: 480px) {
-      .hall-title { font-size: 1.4rem; letter-spacing: 2px; }
-      .hero-score { font-size: 1.6rem; }
-      #battle-outcome { font-size: 1.8rem !important; letter-spacing: 2px !important; }
-      .time-spent-text { font-size: 1rem !important; }
-      .section-title { font-size: 1.3rem !important; padding-bottom: 0.5rem; margin-bottom: 1rem; }
-      .stage-row { font-size: 0.85rem; padding: 0.8rem 0; flex-wrap: wrap; gap: 4px; }
-      .stage-score { font-size: 0.95rem; }
-      .word-card { padding: 1rem; }
-      .word-card h4 { font-size: 1.1rem; margin-bottom: 0.3rem; word-wrap: break-word; }
-      .word-card p { font-size: 0.85rem; line-height: 1.4; word-wrap: break-word; }
-      .menu-buttons button { font-size: 0.8rem; padding: 0.7rem 0.2rem; }
+      .hall-title {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+      }
+
+      .hero-score {
+        font-size: 1.6rem;
+      }
+
+      #battle-outcome {
+        font-size: 1.8rem !important;
+        letter-spacing: 2px !important;
+      }
+
+      .time-spent-text {
+        font-size: 1rem !important;
+      }
+
+      .section-title {
+        font-size: 1.3rem !important;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .stage-row {
+        font-size: 0.85rem;
+        padding: 0.8rem 0;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .stage-score {
+        font-size: 0.95rem;
+      }
+
+      .word-card {
+        padding: 1rem;
+      }
+
+      .word-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+        word-wrap: break-word;
+      }
+
+      .word-card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        word-wrap: break-word;
+      }
+
+      .menu-buttons button {
+        font-size: 0.8rem;
+        padding: 0.7rem 0.2rem;
+      }
     }
   </style>
 </head>
@@ -271,16 +345,22 @@
   <div class="results-container">
 
     <!-- Battle Verdict (Multiplayer Only) -->
-    <div id="battle-verdict-container" style="display: none; text-align: center; margin-bottom: 3rem; animation: fadeInDown 1s ease-out;">
-      <div id="battle-outcome" style="font-weight: 900; letter-spacing: 10px; margin-bottom: 1rem; text-shadow: 0 0 20px rgba(255,215,0,0.6); font-size: 5rem;">LOADING...</div>
-      <div id="opponent-score-box" style="background: rgba(255,255,255,0.1); display: inline-block; padding: 1rem 2rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">
-        <span id="opponent-name" style="font-weight: 700; color: #ffd700;">Opponent</span>: <span id="opponent-points">0</span> pts
+    <div id="battle-verdict-container"
+      style="display: none; text-align: center; margin-bottom: 3rem; animation: fadeInDown 1s ease-out;">
+      <div id="battle-outcome"
+        style="font-weight: 900; letter-spacing: 10px; margin-bottom: 1rem; text-shadow: 0 0 20px rgba(255,215,0,0.6); font-size: 5rem;">
+        LOADING...</div>
+      <div id="opponent-score-box"
+        style="background: rgba(255,255,255,0.1); display: inline-block; padding: 1rem 2rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">
+        <span id="opponent-name" style="font-weight: 700; color: #ffd700;">Opponent</span>: <span
+          id="opponent-points">0</span> pts
       </div>
     </div>
 
     <!-- Hero Section -->
     <div class="hero-section">
-      <div id="player-avatar-display" style="font-size: 5rem; margin-bottom: 1rem; animation: pulseLogo 2s infinite ease-in-out;"></div>
+      <div id="player-avatar-display"
+        style="font-size: 5rem; margin-bottom: 1rem; animation: pulseLogo 2s infinite ease-in-out;"></div>
       <div class="hall-title">Summary of Results</div>
       <div class="hero-score" id="res-score">Total Score: 0</div>
     </div>
@@ -303,7 +383,7 @@
 
     <div class="menu-buttons">
       <button id="play-again-btn" class="classic-btn primary">Play Again</button>
-      <button id="go-home-btn" class="classic-btn blue-gradient">The End Proceed</button>
+      <button id="go-home-btn" class="classic-btn blue-gradient">The End / Proceed</button>
     </div>
 
   </div>
