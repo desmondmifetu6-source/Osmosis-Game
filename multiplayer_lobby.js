@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const gameData = sharedState.load();
-  
+
   // UI Elements
   const modeHost = document.getElementById('mode-host');
   const modeJoin = document.getElementById('mode-join');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const roomIdEl = document.getElementById('room-id');
   const hostPlayerName = document.getElementById('host-player-name');
   const startBtn = document.getElementById('start-multi-btn');
-  
+
   if (gameData.username) {
     const avatar = gameData.avatar || '🤓';
     hostPlayerName.textContent = `${avatar} ${gameData.username}`;
@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let socket;
   try {
     if (typeof io !== 'undefined') {
-      socket = io(); 
-      
+      socket = io();
+
       // Auto-host on load
-      socket.emit('create_room', { 
-        roomId: currentRoomId, 
+      socket.emit('create_room', {
+        roomId: currentRoomId,
         username: gameData.username || 'Player',
         avatar: gameData.avatar || '🤓'
       });
@@ -48,6 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Server Listeners
       socket.on('player_joined', (data) => {
         const extraPlayers = document.getElementById('extra-players');
+        const guestPlayerList = document.getElementById('guest-player-list');
+        const guestStatus = document.getElementById('guest-status-container');
+        const confirmJoinBtn = document.getElementById('confirm-join-btn');
+        const joinInput = document.getElementById('join-code-input');
+
+        // Update Host UI
         if (extraPlayers) {
           extraPlayers.innerHTML = ''; // Clear "Waiting..."
           data.players.forEach(p => {
@@ -61,6 +67,25 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }
 
+        // Update Guest UI (if they are in join mode and this is their room)
+        if (modeJoin && modeJoin.classList.contains('active')) {
+          if (confirmJoinBtn) confirmJoinBtn.style.display = 'none';
+          if (joinInput) joinInput.style.display = 'none';
+          if (guestStatus) guestStatus.style.display = 'block';
+
+          if (guestPlayerList) {
+            guestPlayerList.innerHTML = '';
+            data.players.forEach(p => {
+              const div = document.createElement('div');
+              div.className = 'player-entry';
+              const pAvatar = p.avatar || '🤓';
+              const isMe = p.name === gameData.username;
+              div.innerHTML = `<span class="player-name">${pAvatar} ${p.name} ${isMe ? '(You)' : ''}</span><span class="player-status">Connected</span>`;
+              guestPlayerList.appendChild(div);
+            });
+          }
+        }
+
         // Enable Start button if someone joined
         if (startBtn) {
           startBtn.disabled = false;
@@ -70,6 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       socket.on('error_message', (msg) => {
         alert(msg);
+        const confirmJoinBtn = document.getElementById('confirm-join-btn');
+        if (confirmJoinBtn) {
+          confirmJoinBtn.textContent = "Establish Link";
+          confirmJoinBtn.disabled = false;
+        }
       });
 
       socket.on('game_started', () => {
@@ -92,10 +122,13 @@ document.addEventListener('DOMContentLoaded', () => {
         confirmJoinBtn.addEventListener('click', () => {
           const code = document.getElementById('join-code-input').value.trim().toUpperCase();
           if (code.length < 6) return alert("Enter a valid 6-char code.");
-          
+
+          confirmJoinBtn.textContent = "Connecting...";
+          confirmJoinBtn.disabled = true;
+
           currentRoomId = code;
-          socket.emit('join_room', { 
-            roomId: code, 
+          socket.emit('join_room', {
+            roomId: code,
             username: gameData.username || 'Guest',
             avatar: gameData.avatar || '🤓'
           });
@@ -116,17 +149,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (modeHost && modeJoin && hostSection && joinSection) {
     modeHost.addEventListener('click', () => {
       if (modeHost.classList.contains('active')) return;
-      
+
       modeHost.classList.add('active');
       modeJoin.classList.remove('active');
       hostSection.style.display = 'block';
       joinSection.style.display = 'none';
-      
+
       // Re-generate if hosting a new session
       currentRoomId = generateRoomCode();
       if (roomIdEl) roomIdEl.textContent = currentRoomId;
-      if (socket) socket.emit('create_room', { 
-        roomId: currentRoomId, 
+      if (socket) socket.emit('create_room', {
+        roomId: currentRoomId,
         username: gameData.username || 'Player',
         avatar: gameData.avatar || '🤓'
       });
