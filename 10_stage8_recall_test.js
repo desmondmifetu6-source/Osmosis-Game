@@ -98,16 +98,25 @@ const Stage7Controller = {
     // Here we grade your answer like a strict but fair teacher.
     // It checks if you spelled your word perfectly, and counts how many 
     // "juicy" keywords you got right in the meaning.
-    const wOk = userWord.trim().toLowerCase() === String(trueWord || '').toLowerCase();
+    const cleanUserWord = String(userWord || '').trim().toLowerCase();
+    const cleanTrueWord = String(trueWord || '').trim().toLowerCase();
+    
+    // Partial word matching: if user types part of the word or vice versa
+    const wOk = cleanUserWord === cleanTrueWord || 
+                (cleanUserWord.length > 2 && cleanTrueWord.includes(cleanUserWord)) || 
+                (cleanTrueWord.length > 2 && cleanUserWord.includes(cleanTrueWord));
+
     const trueK = this.extractKeywords(trueMeaning);
     const userK = this.extractKeywords(userMeaning);
     let mRatio = 0;
 
     if (trueK.length > 0) {
-      const hit = trueK.filter(k => userK.includes(k)).length;
-      mRatio = hit / trueK.length;
-    } else if (String(userMeaning || '').trim().length > 15) {
-      mRatio = 0.35;
+      // Relaxed keyword matching: partial match allowed
+      const hit = trueK.filter(k => userK.some(uk => uk.includes(k) || k.includes(uk))).length;
+      // Boost the ratio to make it easier
+      mRatio = Math.min(1.0, (hit / trueK.length) * 1.5);
+    } else if (String(userMeaning || '').trim().length > 10) {
+      mRatio = 0.5; // Easier fallback
     }
 
     let pts = 0;

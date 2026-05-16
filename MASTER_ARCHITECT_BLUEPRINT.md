@@ -50,4 +50,4 @@ The diagram section is a data-driven module designed to teach visual biological 
 - **Scalability**: The system is modular. Adding a new stage or a new diagram requires zero changes to the core engine—only new data entries.
 
 ---
-**Uncle Chen's Note**: *A true engineer understands the 'Why' behind every line. Study this, and you will never shrink in your pants again.*
+**MR. Chen's Note**: *A true engineer understands the 'Why' behind every line. Study this, and you will never shrink in your pants again.*
