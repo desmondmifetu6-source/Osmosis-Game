@@ -105,6 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
       socket.on('game_started', () => {
         gameData.multiplayerMode = true;
         gameData.currentRoomId = currentRoomId;
+        gameData.score = 0;
+        gameData.usedLetters = [];
+        gameData.selectedWords = [];
+        gameData.stageScores = {};
+        gameData.meanings = {};
+        gameData.lastLength = null;
+        gameData.totalTime = 0;
+        gameData.sessionStartedAt = null;
         sharedState.save(gameData);
         window.location.href = '02_campaign_setup.html';
       });

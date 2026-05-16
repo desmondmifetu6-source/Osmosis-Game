@@ -174,6 +174,14 @@ const MultiplayerResults = {
         const data = sharedState.load();
         data.multiplayerMode = false;
         data.currentRoomId = null;
+        data.score = 0;
+        data.usedLetters = [];
+        data.selectedWords = [];
+        data.stageScores = {};
+        data.meanings = {};
+        data.lastLength = null;
+        data.totalTime = 0;
+        data.sessionStartedAt = null;
         sharedState.save(data);
         
         window.location.href = '01_home_menu.html';

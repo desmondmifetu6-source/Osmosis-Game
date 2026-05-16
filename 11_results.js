@@ -284,6 +284,17 @@ const ResultsController = {
       domCache.goHomeBtn.addEventListener('click', () => {
         sessionStorage.removeItem('osmosis_saved_result');
         if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+
+        gameData.score = 0;
+        gameData.usedLetters = [];
+        gameData.selectedWords = [];
+        gameData.stageScores = {};
+        gameData.meanings = {};
+        gameData.lastLength = null;
+        gameData.totalTime = 0;
+        gameData.sessionStartedAt = null;
+        sharedState.save(gameData);
+
         setTimeout(() => {
           if (typeof window.navigateWithTransition === 'function') navigateWithTransition('01_home_menu.html');
           else window.location.href = '01_home_menu.html';
