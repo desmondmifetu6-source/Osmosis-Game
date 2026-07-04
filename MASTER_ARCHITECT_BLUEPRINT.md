@@ -50,4 +50,9 @@ The diagram section is a data-driven module designed to teach visual biological 
 - **Scalability**: The system is modular. Adding a new stage or a new diagram requires zero changes to the core engine—only new data entries.
 
 ---
-**MR. Chen's Note**: *A true engineer understands the 'Why' behind every line. Study this, and you will never shrink in your pants again.*
+**Desmond Mifetu(Chen)'s Note**: *A true engineer understands the 'Why' behind every line. Study this, and you will never shrink in your pants again.*
+
+
+
+well there is a logic error , somewhere in the code  , well it is about the brower catch , it keeps the record of the game , and if someone wants to restart the game , it will still kepp their previous scores . to fix this , we need to clear the catch of the game when the user clicks on the restart button .
+
