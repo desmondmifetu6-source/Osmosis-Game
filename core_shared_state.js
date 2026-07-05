@@ -276,19 +276,6 @@ const sharedState = {
     };
     update();
   },
-
-  // Function: getLevel
-  // This determines your overall Rank in the game based on your total persistent score.
-  getLevel: function () {
-    // Look for the absolute total score across all play sessions
-    const score = parseInt(localStorage.getItem('osmosis_total_score')) || 0;
-
-    // If you have a ton of points, you get higher ranks!
-    if (score >= 3001) return { name: 'Titan', minLen: 12, maxLen: 30, next: Infinity };
-    if (score >= 1501) return { name: 'Oak', minLen: 9, maxLen: 11, next: 3001 };
-    if (score >= 501) return { name: 'Sprout', minLen: 6, maxLen: 8, next: 1501 };
-    return { name: 'Seed', minLen: 4, maxLen: 5, next: 501 };
-  }
 };
 
 // Auto-init multiplayer if needed on page load
