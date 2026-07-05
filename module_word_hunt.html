@@ -282,16 +282,96 @@
       opacity: 0.4;
       cursor: not-allowed;
     }
-
-    .hint-flash {
-      animation: flashHint 1.5s ease-out forwards;
-      z-index: 5;
+    
+    .book-item {
+      background: rgba(255, 255, 255, 0.4);
+      padding: 10px 15px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
     }
-    @keyframes flashHint {
-      0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-      15% { opacity: 0.9; transform: translate(-50%, -50%) scale(1.1); box-shadow: 0 0 20px rgba(253,224,71,0.8); }
-      80% { opacity: 0.9; transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 20px rgba(253,224,71,0.8); }
-      100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+    .book-item-word {
+      font-weight: 800;
+      color: #0f172a;
+      font-size: 1.1rem;
+      margin-bottom: 2px;
+    }
+    .book-item-desc {
+      font-weight: 600;
+      color: #334155;
+      font-size: 0.9rem;
+    }
+
+    /* Definition Popup Overlay */
+    .def-popup-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    .def-popup-overlay.active {
+      display: flex;
+    }
+    .def-popup {
+      background: rgba(255, 255, 255, 0.6); /* High transparency for liquid */
+      backdrop-filter: blur(20px) contrast(1.1) saturate(1.2);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 
+        0 30px 60px rgba(0,0,0,0.15), 
+        inset 0 4px 10px rgba(255,255,255,0.8), 
+        inset 0 -4px 10px rgba(0,0,0,0.05);
+      border-radius: 32px;
+      padding: 3.5rem 2.5rem;
+      max-width: 480px;
+      width: 90%;
+      text-align: center;
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .def-popup h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2.8rem;
+      color: #0f172a;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+    .def-popup p {
+      font-size: 1.25rem;
+      color: #1e293b;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .def-continue-btn {
+      background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+      color: white;
+      border: none;
+      font-weight: 800;
+      letter-spacing: 2px;
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+      border-radius: 16px;
+      padding: 1.4rem 2rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .def-continue-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(79, 70, 229, 0.5);
+      filter: brightness(1.1);
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.8) translateY(20px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
     }
 
     @media (max-width: 360px) {
@@ -328,7 +408,7 @@
   </div>
 
   <div class="bottom-bar">
-    <button class="icon-btn" id="hint-btn" title="Magic Hint">🪄</button>
+    <button class="icon-btn" id="book-btn" title="View Definitions">📖</button>
     <button class="icon-btn" id="back-home-btn" title="Back Home">🏠</button>
   </div>
 
@@ -346,6 +426,26 @@
     <div class="overlay-btns">
       <button class="overlay-btn" id="overlay-home-btn">Home</button>
       <button class="overlay-btn primary" id="overlay-continue-btn">Continue</button>
+    </div>
+  </div>
+
+  <!-- Definition Popup Overlay -->
+  <div id="def-popup-overlay" class="def-popup-overlay">
+    <div class="def-popup">
+      <h3 id="def-popup-title">ATOM</h3>
+      <p id="def-popup-desc">Smallest unit of matter</p>
+      <button id="def-popup-continue" class="def-continue-btn">Continue</button>
+    </div>
+  </div>
+
+  <!-- Book Popup Overlay -->
+  <div id="book-popup-overlay" class="def-popup-overlay">
+    <div class="def-popup" style="max-height: 85vh; overflow-y: auto; padding: 2rem 1.5rem;">
+      <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">WORD LIST</h3>
+      <div id="book-definitions-list" style="text-align: left; margin-bottom: 2rem;">
+        <!-- Definitions injected here -->
+      </div>
+      <button id="book-popup-continue" class="def-continue-btn">Close</button>
     </div>
   </div>
 

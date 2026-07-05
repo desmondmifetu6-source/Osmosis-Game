@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const wordsEl = document.getElementById('hunt-words');
   const scoreEl = document.getElementById('hunt-score');
   const backBtn = document.getElementById('back-home-btn');
-  const hintBtn = document.getElementById('hint-btn');
+  const bookBtn = document.getElementById('book-btn');
   const lvlBadge = document.getElementById('hunt-lvl-badge');
 
   // Overlay Elements
@@ -20,6 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const xpText = document.getElementById('xp-text');
   const overlayHomeBtn = document.getElementById('overlay-home-btn');
   const overlayContinueBtn = document.getElementById('overlay-continue-btn');
+
+  // Definition Popup Elements
+  const defOverlay = document.getElementById('def-popup-overlay');
+  const defTitle = document.getElementById('def-popup-title');
+  const defDesc = document.getElementById('def-popup-desc');
+  const defContinueBtn = document.getElementById('def-popup-continue');
+
+  // Book Popup Elements
+  const bookOverlay = document.getElementById('book-popup-overlay');
+  const bookList = document.getElementById('book-definitions-list');
+  const bookContinueBtn = document.getElementById('book-popup-continue');
 
   // Progression Data
   const LEVELS = [
@@ -38,13 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let targetWords = [];
   let foundWords = [];
   let wordCoordinates = {}; // Stores {start, end} for hints
+  let wordDefinitions = {}; // Stores {word: definition}
   let currentScore = 0;
 
   let isSelecting = false;
   let startCell = null;
   let lastValidEndCell = null;
   let selectionPill = null;
-  let isHintCooldown = false;
   
   const pillColors = ["#818cf8", "#34d399", "#f472b6", "#fb7185", "#38bdf8", "#fbbf24", "#a78bfa"];
   let colorIndex = 0;
@@ -75,12 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset game vars
     foundWords = [];
     wordCoordinates = {};
+    wordDefinitions = {};
     isSelecting = false;
     startCell = null;
     lastValidEndCell = null;
     selectionPill = null;
-    isHintCooldown = false;
-    hintBtn.disabled = false;
     highlightsLayer.innerHTML = '';
     winOverlay.classList.remove('active');
     promoStar.classList.remove('active');
@@ -88,22 +98,45 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let allWords = [];
     if (typeof window.STEMDictionary !== 'undefined') {
-      const letters = Object.keys(window.STEMDictionary.data || {});
+      // Use wordBank (the correct property name) to get all letters
+      const bank = window.STEMDictionary.wordBank || {};
+      const letters = Object.keys(bank);
       letters.forEach(l => {
-         allWords.push(...window.STEMDictionary.getWordsByLetter(l));
+        // getWordsByLetter returns [{word, definition}, ...] directly
+        allWords.push(...window.STEMDictionary.getWordsByLetter(l));
       });
     }
     
     if (allWords.length === 0) {
-      const fallbacks = ["ATOM", "CELL", "GENE", "MASS", "DATA", "DNA", "RNA", "LENS", "BONE", "VEIN", "ACID", "BASE", "CORE", "STAR", "MOON", "SUN", "HEAT", "COLD", "LAVA", "ROCK", "WAVE", "RAY", "GAS", "ION", "BOND", "MOLD", "SEED", "LEAF", "ROOT", "STEM", "BARK", "WOOD", "DIRT", "SAND", "DUST", "WIND", "RAIN", "SNOW", "ICE", "FIRE", "BURN", "MELT", "BOIL", "COOL"];
-      allWords = fallbacks.map(w => ({word: w}));
+      // Fallback only if dictionary truly failed to load
+      const fallbacks = [
+        {word:"ATOM", definition:"Smallest unit of matter"},
+        {word:"CELL", definition:"Basic unit of life"},
+        {word:"GENE", definition:"A unit of heredity"},
+        {word:"LENS", definition:"A curved piece of glass that focuses light"},
+        {word:"BOND", definition:"A force holding atoms together"},
+        {word:"MASS", definition:"The amount of matter in an object"},
+        {word:"WAVE", definition:"A disturbance that transfers energy"},
+        {word:"ACID", definition:"A substance with a pH below 7"},
+        {word:"VEIN", definition:"A blood vessel carrying blood to the heart"},
+        {word:"CORE", definition:"The central part of the Earth"}
+      ];
+      allWords = fallbacks;
     }
 
-    let validWords = allWords.map(w => w.word.toUpperCase().replace(/[^A-Z]/g, '')).filter(w => w.length >= 3 && w.length <= currentLevelObj.maxLen);
-    validWords = [...new Set(validWords)];
+    let uniqueMap = new Map();
+    allWords.forEach(w => {
+       const clean = w.word.toUpperCase().replace(/[^A-Z]/g, '');
+       if (clean.length >= 3 && clean.length <= currentLevelObj.maxLen) {
+           if(!uniqueMap.has(clean)) {
+               uniqueMap.set(clean, { word: clean, definition: w.definition || "A scientific term." });
+           }
+       }
+    });
+    let validWords = Array.from(uniqueMap.values());
 
     let usedWords = JSON.parse(localStorage.getItem('wordHuntUsedWords')) || [];
-    let availableWords = validWords.filter(w => !usedWords.includes(w));
+    let availableWords = validWords.filter(w => !usedWords.includes(w.word));
 
     if (availableWords.length < numWords) {
       usedWords = [];
@@ -116,7 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
       [availableWords[i], availableWords[j]] = [availableWords[j], availableWords[i]];
     }
     
-    targetWords = availableWords.slice(0, numWords);
+    const pickedObjs = availableWords.slice(0, numWords);
+    targetWords = pickedObjs.map(obj => obj.word);
+    
+    pickedObjs.forEach(obj => {
+       wordDefinitions[obj.word] = obj.definition;
+    });
+
     usedWords.push(...targetWords);
     localStorage.setItem('wordHuntUsedWords', JSON.stringify(usedWords));
 
@@ -216,39 +255,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Hint System ---
-  hintBtn.addEventListener('click', () => {
-    if (isHintCooldown) return;
-    
-    // Find the first unfound word
-    const unfoundWord = targetWords.find(w => !foundWords.includes(w));
-    if (!unfoundWord) return;
-
-    if (typeof AudioManager !== 'undefined') AudioManager.play('click'); // Or 'magic'
-
-    isHintCooldown = true;
-    hintBtn.disabled = true;
-
-    // Create a temporary glowing pill over the word
-    const coords = wordCoordinates[unfoundWord];
-    const hintPill = document.createElement('div');
-    hintPill.className = 'highlight-pill hint-flash';
-    highlightsLayer.appendChild(hintPill);
-
-    // Color it glowing gold
-    updatePillTransform(hintPill, coords.start, coords.end, 'rgba(253, 224, 71, 0.9)');
-
-    // Remove the pill after animation completes (1.5s)
-    setTimeout(() => {
-      if (hintPill.parentNode) hintPill.remove();
-    }, 1500);
-
-    // 5 second cooldown before using hint again
-    setTimeout(() => {
-      isHintCooldown = false;
-      hintBtn.disabled = false;
-    }, 5000);
+  // --- Book Button (View All Definitions) ---
+  bookBtn.addEventListener('click', () => {
+    if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+    bookList.innerHTML = '';
+    targetWords.forEach(word => {
+      const item = document.createElement('div');
+      item.className = 'book-item';
+      const wordEl = document.createElement('div');
+      wordEl.className = 'book-item-word';
+      wordEl.textContent = word;
+      const descEl = document.createElement('div');
+      descEl.className = 'book-item-desc';
+      descEl.textContent = wordDefinitions[word] || 'A scientific term.';
+      item.appendChild(wordEl);
+      item.appendChild(descEl);
+      bookList.appendChild(item);
+    });
+    bookOverlay.classList.add('active');
   });
+
+  if (bookContinueBtn) {
+    bookContinueBtn.addEventListener('click', () => {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+      bookOverlay.classList.remove('active');
+    });
+  }
 
   // --- Interaction Logic ---
   
@@ -353,13 +385,11 @@ document.addEventListener('DOMContentLoaded', () => {
       currentScore += 100;
       scoreEl.textContent = `${currentScore} pts`;
 
+      showDefinitionPopup(match);
+
       // Keep pill
       colorIndex++;
       selectionPill = null;
-
-      if (foundWords.length === targetWords.length) {
-        handleWin();
-      }
     } else {
       // Wrong selection
       if (typeof AudioManager !== 'undefined' && steps > 0) AudioManager.play('error');
@@ -396,6 +426,23 @@ document.addEventListener('DOMContentLoaded', () => {
     pill.style.left = `${centerX}px`;
     pill.style.top = `${centerY}px`;
     pill.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+  }
+
+  function showDefinitionPopup(word) {
+    defTitle.textContent = word;
+    defDesc.textContent = wordDefinitions[word] || "A scientific term.";
+    defOverlay.classList.add('active');
+  }
+
+  if (defContinueBtn) {
+    defContinueBtn.addEventListener('click', () => {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+      defOverlay.classList.remove('active');
+      
+      if (foundWords.length === targetWords.length) {
+        handleWin();
+      }
+    });
   }
 
   function handleWin() {
