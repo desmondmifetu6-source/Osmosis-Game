@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const huntDropdownSubmit = document.getElementById('hunt-dropdown-submit');
   const huntDropdownSkip = document.getElementById('hunt-dropdown-skip');
 
+  // Success Banner Elements
+  const successBanner = document.getElementById('success-banner-overlay');
+  const successThanksBtn = document.getElementById('success-banner-thanks');
+
   // Book Popup Elements
   const bookOverlay = document.getElementById('book-popup-overlay');
   const bookList = document.getElementById('book-definitions-list');
@@ -599,14 +603,17 @@ document.addEventListener('DOMContentLoaded', () => {
       
       if (allCorrect) {
           if (typeof AudioManager !== 'undefined') AudioManager.play('success');
-          huntDropdownFeedback.textContent = 'Perfect!';
-          huntDropdownFeedback.className = 'feedback success';
+          
+          huntDropdownFeedback.textContent = '';
+          huntDropdownFeedback.className = 'feedback';
           huntDropdownSubmit.disabled = true;
           huntDropdownSkip.style.display = 'none';
           
-          setTimeout(() => {
-              closeTestAndCheckWin();
-          }, 1500);
+          // Show the grand success banner
+          successBanner.style.display = 'flex';
+          
+          // Start continuous confetti
+          startContinuousConfetti();
       } else {
           if (typeof AudioManager !== 'undefined') AudioManager.play('error');
           huntDropdownFeedback.textContent = 'Some answers are incorrect. Try again!';
@@ -642,6 +649,60 @@ document.addEventListener('DOMContentLoaded', () => {
       if (foundWords.length === targetWords.length) {
           handleWin();
       }
+  }
+
+  let confettiInterval;
+  function startContinuousConfetti() {
+    if (typeof confetti === 'function') {
+      const defaults = {
+        spread: 60,
+        ticks: 100,
+        gravity: 0.9,
+        decay: 0.92,
+        startVelocity: 45,
+        zIndex: 10002, // Ensure it is above the new banner
+        scalar: 1.5,
+        shapes: ['star', 'circle', 'square'],
+        colors: ['#FFD700', '#FF1493', '#00FFFF', '#39FF14', '#FF4500', '#ffffff']
+      };
+
+      function shoot() {
+        // Left corner
+        confetti({
+          ...defaults,
+          particleCount: 60,
+          angle: 60,
+          origin: { x: 0, y: 1 }
+        });
+
+        // Right corner
+        confetti({
+          ...defaults,
+          particleCount: 60,
+          angle: 120,
+          origin: { x: 1, y: 1 }
+        });
+      }
+
+      shoot();
+      confettiInterval = setInterval(shoot, 800);
+    }
+  }
+
+  function stopContinuousConfetti() {
+    if (confettiInterval) {
+      clearInterval(confettiInterval);
+      confettiInterval = null;
+    }
+  }
+
+  if (successThanksBtn) {
+    successThanksBtn.addEventListener('click', () => {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+      successBanner.style.display = 'none';
+      stopContinuousConfetti();
+      closeTestAndCheckWin();
+    });
   }
 
   function getRandomTrickWords(correctWord, num = 3) {
@@ -731,6 +792,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   overlayContinueBtn.addEventListener('click', () => {
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
-    initGame();
+    
+    // Save words to gameData for stage 8 recall test
+    let gameData = sharedState.load() || {};
+    gameData.selectedWords = targetWords;
+    gameData.meanings = gameData.meanings || {};
+    
+    // Populate meanings for the recall test
+    if (typeof window.STEMDictionary !== 'undefined' && window.STEMDictionary.wordBank) {
+      targetWords.forEach(w => {
+        let dictEntry = window.STEMDictionary.wordBank.find(entry => entry.word.toLowerCase() === w.toLowerCase());
+        if (dictEntry) {
+           gameData.meanings[w] = dictEntry.meaning;
+        }
+      });
+    }
+    sharedState.save(gameData);
+    
+    if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_recall_test.html');
+    else window.location.href = '10_stage8_recall_test.html';
   });
 });
