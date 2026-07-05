@@ -689,8 +689,24 @@
   </div>
 
   <div class="bottom-bar">
+    <button class="icon-btn" id="settings-btn" title="Game Settings">⚙️</button>
     <button class="icon-btn" id="book-btn" title="View Definitions">📖</button>
     <button class="icon-btn" id="back-home-btn" title="Back Home">🏠</button>
+  </div>
+
+  <!-- Difficulty Selection Overlay -->
+  <div class="def-popup-overlay" id="difficulty-overlay" style="display: flex;">
+    <div class="def-popup" style="max-width: 450px; padding: 3rem 2.5rem;">
+      <h3 style="font-size: 2.2rem; margin-bottom: 0.5rem; text-transform: uppercase;">Intensity</h3>
+      <p style="font-size: 1.05rem; color: #475569; margin-bottom: 2rem; font-weight: 600;">Choose your comfort level:</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+        <button class="classic-btn" id="diff-easy" style="background: rgba(16, 185, 129, 0.2); border: 2px solid #10b981; color: #047857;">Easy (6x6)</button>
+        <button class="classic-btn" id="diff-medium" style="background: rgba(245, 158, 11, 0.2); border: 2px solid #f59e0b; color: #b45309;">Medium (8x8)</button>
+        <button class="classic-btn" id="diff-intellect" style="background: rgba(239, 68, 68, 0.2); border: 2px solid #ef4444; color: #b91c1c;">Intellect (10x10)</button>
+      </div>
+      <button id="diff-cancel-btn" class="classic-btn secondary" style="margin-top: 15px; display: none;">Cancel</button>
+    </div>
   </div>
 
   <!-- Win & Promotion Overlay -->

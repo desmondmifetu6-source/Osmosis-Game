@@ -44,18 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const bookList = document.getElementById('book-definitions-list');
   const bookContinueBtn = document.getElementById('book-popup-continue');
 
-  // Progression Data
-  const LEVELS = [
-    { lvl: 1, words: 3, maxLen: 5, grid: 6, xpNeeded: 2 },
-    { lvl: 2, words: 4, maxLen: 6, grid: 7, xpNeeded: 5 },
-    { lvl: 3, words: 5, maxLen: 7, grid: 8, xpNeeded: 9 },
-    { lvl: 4, words: 6, maxLen: 8, grid: 9, xpNeeded: 14 },
-    { lvl: 5, words: 7, maxLen: 10, grid: 10, xpNeeded: 9999 } // Max level
-  ];
+  // Difficulty Selection Elements
+  const difficultyOverlay = document.getElementById('difficulty-overlay');
+  const btnEasy = document.getElementById('diff-easy');
+  const btnMedium = document.getElementById('diff-medium');
+  const btnIntellect = document.getElementById('diff-intellect');
+  const btnSettings = document.getElementById('settings-btn');
+  const btnCancelDiff = document.getElementById('diff-cancel-btn');
 
-  let currentLevelObj = null;
-  let gridSize = 6;
-  let numWords = 3;
+  // Progression Data (Difficulty configs)
+  const DIFFICULTY_CONFIGS = {
+    easy: { lvl: 'Easy', words: 3, maxLen: 5, grid: 6, dirs: [[0,1], [1,0]] },
+    medium: { lvl: 'Medium', words: 5, maxLen: 7, grid: 8, dirs: [[0,1], [1,0], [1,1]] },
+    intellect: { lvl: 'Intellect', words: 7, maxLen: 10, grid: 10, dirs: [[0,1], [1,0], [1,1], [-1,1], [0,-1], [-1,0], [-1,-1], [1,-1]] }
+  };
+
+  let currentLevelObj = DIFFICULTY_CONFIGS.medium;
+  let gridSize = 8;
+  let numWords = 5;
 
   let grid = [];
   let targetWords = [];
@@ -68,32 +74,43 @@ document.addEventListener('DOMContentLoaded', () => {
   let startCell = null;
   let lastValidEndCell = null;
   let selectionPill = null;
+  let gameInProgress = false;
   
   const pillColors = ["#818cf8", "#34d399", "#f472b6", "#fb7185", "#38bdf8", "#fbbf24", "#a78bfa"];
   let colorIndex = 0;
 
-  initGame();
+  // Event Listeners for Difficulty
+  btnEasy.addEventListener('click', () => setDifficulty('easy'));
+  btnMedium.addEventListener('click', () => setDifficulty('medium'));
+  btnIntellect.addEventListener('click', () => setDifficulty('intellect'));
 
-  function getCurrentLevelIndex(xp) {
-    for (let i = 0; i < LEVELS.length; i++) {
-      if (xp < LEVELS[i].xpNeeded) return i;
-    }
-    return LEVELS.length - 1;
+  btnSettings.addEventListener('click', () => {
+    btnCancelDiff.style.display = gameInProgress ? 'inline-block' : 'none';
+    difficultyOverlay.style.display = 'flex';
+  });
+
+  btnCancelDiff.addEventListener('click', () => {
+    difficultyOverlay.style.display = 'none';
+  });
+
+  function setDifficulty(level) {
+    if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+    currentLevelObj = DIFFICULTY_CONFIGS[level];
+    difficultyOverlay.style.display = 'none';
+    initGame();
   }
 
   function initGame() {
+    gameInProgress = true;
     if (typeof initModal === 'function') initModal();
     
-    // Load XP and set difficulty
-    let xp = parseInt(localStorage.getItem('wordHuntXP')) || 0;
-    const lvlIndex = getCurrentLevelIndex(xp);
-    currentLevelObj = LEVELS[lvlIndex];
+    // Set parameters based on chosen difficulty
     gridSize = currentLevelObj.grid;
     numWords = currentLevelObj.words;
     
     // Update UI for level
     textLayer.style.setProperty('--grid-size', gridSize);
-    lvlBadge.textContent = `Lvl ${currentLevelObj.lvl}`;
+    lvlBadge.textContent = currentLevelObj.lvl;
 
     // Reset game vars
     foundWords = [];
@@ -179,7 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function generateGrid() {
     grid = Array(gridSize).fill(null).map(() => Array(gridSize).fill(''));
-    const dirs = [[0,1], [1,0], [1,1], [-1,1], [0,-1], [-1,0], [-1,-1], [1,-1]];
+    // Use directions restricted by current difficulty level
+    const dirs = currentLevelObj.dirs;
     wordCoordinates = {};
     let successfullyPlaced = [];
 
@@ -734,47 +752,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function handleWin() {
     setTimeout(() => {
-      // Add standard score
+      // Award flat 50 pts regardless of difficulty
+      currentScore = 50;
       const totalScore = parseInt(localStorage.getItem('osmosis_total_score')) || 0;
       localStorage.setItem('osmosis_total_score', totalScore + currentScore);
 
-      // Handle Progression
-      let xp = parseInt(localStorage.getItem('wordHuntXP')) || 0;
-      const oldLvlIndex = getCurrentLevelIndex(xp);
-      
-      xp++; // Earn 1 session point
-      localStorage.setItem('wordHuntXP', xp);
-      
-      const newLvlIndex = getCurrentLevelIndex(xp);
-      const isPromoted = (newLvlIndex > oldLvlIndex);
-      const oldLevelObj = LEVELS[oldLvlIndex];
+      winMessage.textContent = "Awesome Job!";
+      levelText.textContent = `${currentLevelObj.lvl} Stage Complete!`;
 
       // Setup overlay UI
       winOverlay.classList.add('active');
-      levelText.textContent = `Level ${oldLevelObj.lvl} Clear!`;
       
-      const previousTierXp = oldLvlIndex === 0 ? 0 : LEVELS[oldLvlIndex - 1].xpNeeded;
-      const pointsInThisTier = xp - previousTierXp;
-      const totalPointsInThisTier = oldLevelObj.xpNeeded - previousTierXp;
+      // We can just hide or instantly fill the XP bar since we removed the tier system
+      xpFluid.style.width = `100%`;
+      xpText.textContent = `50 Points Earned!`;
       
-      const startPct = ((pointsInThisTier - 1) / totalPointsInThisTier) * 100;
-      xpFluid.style.width = `${Math.max(0, startPct)}%`;
-      xpText.textContent = `${pointsInThisTier - 1} / ${totalPointsInThisTier}`;
-
       setTimeout(() => {
-        if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
-        const endPct = (pointsInThisTier / totalPointsInThisTier) * 100;
-        xpFluid.style.width = `${Math.min(100, endPct)}%`;
-        xpText.textContent = `${pointsInThisTier} / ${totalPointsInThisTier}`;
-
-        if (isPromoted) {
-          setTimeout(() => {
-            if (typeof AudioManager !== 'undefined') AudioManager.play('success');
-            promoStar.classList.add('active');
-            levelText.textContent = `PROMOTED TO LVL ${LEVELS[newLvlIndex].lvl}!`;
-            winMessage.textContent = "Grid expanded. New words unlocked.";
-          }, 1000);
-        }
+        if (typeof AudioManager !== 'undefined') AudioManager.play('success');
       }, 500);
 
     }, 800);
