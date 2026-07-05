@@ -302,12 +302,13 @@
       font-size: 0.9rem;
     }
 
-    /* Definition Popup Overlay */
+    /* iPhone-style Liquid Glass Popup */
     .def-popup-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(4px);
+      background: rgba(0, 0, 10, 0.4);
+      backdrop-filter: blur(8px) saturate(160%);
+      -webkit-backdrop-filter: blur(8px) saturate(160%);
       z-index: 200;
       display: none;
       justify-content: center;
@@ -317,19 +318,58 @@
       display: flex;
     }
     .def-popup {
-      background: rgba(255, 255, 255, 0.6); /* High transparency for liquid */
-      backdrop-filter: blur(20px) contrast(1.1) saturate(1.2);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      box-shadow: 
-        0 30px 60px rgba(0,0,0,0.15), 
-        inset 0 4px 10px rgba(255,255,255,0.8), 
-        inset 0 -4px 10px rgba(0,0,0,0.05);
-      border-radius: 32px;
+      /* iOS Ultra Thin Material: very low opacity + extreme blur */
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(72px) saturate(200%) brightness(1.15);
+      -webkit-backdrop-filter: blur(72px) saturate(200%) brightness(1.15);
+      border-radius: 36px;
       padding: 3.5rem 2.5rem;
       max-width: 480px;
       width: 90%;
       text-align: center;
-      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: popIn 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      /* The outer edge: very subtle white ring */
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      /* Layered shadows for depth + the KEY specular top-edge highlight */
+      box-shadow:
+        0 40px 80px rgba(0, 0, 0, 0.45),
+        0 0 0 0.5px rgba(255, 255, 255, 0.2),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.75),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    }
+    /* The shimmering top light refraction stripe */
+    .def-popup::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1.5px;
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255,255,255,0.9) 30%, 
+        rgba(255,255,255,1) 50%, 
+        rgba(255,255,255,0.9) 70%, 
+        transparent 100%);
+      border-radius: 50%;
+      filter: blur(0.5px);
+    }
+    .def-popup h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2.8rem;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+    .def-popup p {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.95);
+      line-height: 1.7;
+      margin-bottom: 3rem;
+      font-weight: 600;
+      font-family: 'Quicksand', sans-serif;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.3);
     }
     .def-popup h3 {
       font-family: 'Quicksand', sans-serif;
