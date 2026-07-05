@@ -4,3 +4,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .env
+
+# App-version build artifacts (Capacitor/Electron) - do not commit on main
+android/
+dist/
+www/
