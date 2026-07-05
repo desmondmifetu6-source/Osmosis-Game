@@ -27,6 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const defDesc = document.getElementById('def-popup-desc');
   const defContinueBtn = document.getElementById('def-popup-continue');
 
+  // Dropdown Test Popup Elements
+  const huntDropdownOverlay = document.getElementById('hunt-dropdown-overlay');
+  const huntDropdownTitle = document.getElementById('hunt-dropdown-title');
+  const huntDropdownMeaning = document.getElementById('hunt-dropdown-meaning');
+  const huntDropdownFeedback = document.getElementById('hunt-dropdown-feedback');
+  const huntDropdownSubmit = document.getElementById('hunt-dropdown-submit');
+  const huntDropdownSkip = document.getElementById('hunt-dropdown-skip');
+
   // Book Popup Elements
   const bookOverlay = document.getElementById('book-popup-overlay');
   const bookList = document.getElementById('book-definitions-list');
@@ -439,10 +447,228 @@ document.addEventListener('DOMContentLoaded', () => {
       if (typeof AudioManager !== 'undefined') AudioManager.play('click');
       defOverlay.classList.remove('active');
       
-      if (foundWords.length === targetWords.length) {
-        handleWin();
-      }
+      // Start the definition test
+      const currentWord = defTitle.textContent;
+      const currentDef = wordDefinitions[currentWord] || "A scientific term.";
+      startDropdownTest(currentWord, currentDef);
     });
+  }
+
+  let activeDropdownTestAnswers = [];
+
+  function startDropdownTest(word, definition) {
+    huntDropdownTitle.textContent = word;
+    huntDropdownFeedback.textContent = '';
+    huntDropdownFeedback.className = 'feedback';
+    huntDropdownSubmit.textContent = 'Submit';
+    huntDropdownSubmit.disabled = false;
+    huntDropdownSkip.style.display = 'block';
+
+    const stopWords = ['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 'from', 'by', 'of', 'in', 'is', 'are', 'was', 'were', 'it', 'that', 'this', 'with'];
+    
+    // simple tokenization keeping punctuation separate
+    const tokens = definition.match(/([a-zA-Z]+|[^a-zA-Z]+)/g) || [];
+    
+    // find valid words to blank
+    let validIndices = [];
+    tokens.forEach((t, i) => {
+       if (/^[a-zA-Z]+$/.test(t) && t.length > 3 && !stopWords.includes(t.toLowerCase())) {
+           validIndices.push(i);
+       }
+    });
+
+    // pick 1 to 2 blanks
+    let numBlanks = Math.min(validIndices.length, Math.floor(Math.random() * 2) + 1);
+    // shuffle validIndices
+    for(let i = validIndices.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [validIndices[i], validIndices[j]] = [validIndices[j], validIndices[i]];
+    }
+    
+    let chosenIndices = validIndices.slice(0, numBlanks);
+    activeDropdownTestAnswers = [];
+
+    let html = '';
+    let blankCounter = 0;
+    
+    tokens.forEach((t, i) => {
+        if (chosenIndices.includes(i)) {
+            let correctWord = t;
+            let trickWords = getRandomTrickWords(correctWord, 3);
+            let options = [correctWord, ...trickWords];
+            // shuffle options
+            for(let k = options.length - 1; k > 0; k--) {
+                const j = Math.floor(Math.random() * (k + 1));
+                [options[k], options[j]] = [options[j], options[k]];
+            }
+            
+            let id = `hunt-blank-${blankCounter}`;
+            activeDropdownTestAnswers.push({ id, correct: correctWord });
+            
+            let optionsHtml = options.map(opt => `<div class="custom-option" data-val="${opt}">${opt}</div>`).join('');
+            
+            html += `
+              <div class="custom-dropdown-container" id="${id}">
+                <div class="custom-dropdown-btn" onclick="toggleDropdown(this)">
+                  <span class="btn-text">Select</span>
+                  <span class="dropdown-arrow">▼</span>
+                </div>
+                <div class="custom-dropdown-menu">
+                  ${optionsHtml}
+                </div>
+              </div>
+            `;
+            blankCounter++;
+        } else {
+            html += t;
+        }
+    });
+
+    if (blankCounter === 0) {
+        // Fallback if no valid blanks found (e.g. very short definition)
+        huntDropdownMeaning.innerHTML = definition;
+    } else {
+        huntDropdownMeaning.innerHTML = html;
+        
+        // Add option click listeners
+        const optionElements = huntDropdownMeaning.querySelectorAll('.custom-option');
+        optionElements.forEach(opt => {
+            opt.addEventListener('click', (e) => {
+                const container = opt.closest('.custom-dropdown-container');
+                const btn = container.querySelector('.custom-dropdown-btn');
+                const btnText = btn.querySelector('.btn-text');
+                btnText.textContent = opt.dataset.val;
+                btn.dataset.selected = opt.dataset.val;
+                btn.classList.add('filled');
+                container.classList.remove('open');
+                if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+                e.stopPropagation();
+            });
+        });
+    }
+
+    huntDropdownOverlay.classList.add('active');
+  }
+
+  // Make toggleDropdown global for onclick attribute
+  window.toggleDropdown = function(btn) {
+    const container = btn.closest('.custom-dropdown-container');
+    // close others
+    document.querySelectorAll('.custom-dropdown-container.open').forEach(c => {
+        if (c !== container) c.classList.remove('open');
+    });
+    container.classList.toggle('open');
+  };
+
+  // close dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+      if (!e.target.closest('.custom-dropdown-container')) {
+          document.querySelectorAll('.custom-dropdown-container.open').forEach(c => {
+              c.classList.remove('open');
+          });
+      }
+  });
+
+  huntDropdownSubmit.addEventListener('click', () => {
+      if (huntDropdownSubmit.disabled) return;
+      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+      
+      if (activeDropdownTestAnswers.length === 0) {
+          closeTestAndCheckWin();
+          return;
+      }
+      
+      let allCorrect = true;
+      activeDropdownTestAnswers.forEach(ans => {
+          const container = document.getElementById(ans.id);
+          const btn = container.querySelector('.custom-dropdown-btn');
+          const selected = btn.dataset.selected || '';
+          
+          btn.classList.remove('wrong', 'correct');
+          
+          if (selected.toLowerCase() === ans.correct.toLowerCase()) {
+              btn.classList.add('correct');
+          } else {
+              btn.classList.add('wrong');
+              allCorrect = false;
+              setTimeout(() => {
+                  if (btn.classList.contains('wrong')) btn.classList.remove('wrong');
+              }, 400);
+          }
+      });
+      
+      if (allCorrect) {
+          if (typeof AudioManager !== 'undefined') AudioManager.play('success');
+          huntDropdownFeedback.textContent = 'Perfect!';
+          huntDropdownFeedback.className = 'feedback success';
+          huntDropdownSubmit.disabled = true;
+          huntDropdownSkip.style.display = 'none';
+          
+          setTimeout(() => {
+              closeTestAndCheckWin();
+          }, 1500);
+      } else {
+          if (typeof AudioManager !== 'undefined') AudioManager.play('error');
+          huntDropdownFeedback.textContent = 'Some answers are incorrect. Try again!';
+          huntDropdownFeedback.className = 'feedback error';
+      }
+  });
+
+  huntDropdownSkip.addEventListener('click', () => {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+      
+      activeDropdownTestAnswers.forEach(ans => {
+          const container = document.getElementById(ans.id);
+          const btn = container.querySelector('.custom-dropdown-btn');
+          const btnText = btn.querySelector('.btn-text');
+          btnText.textContent = ans.correct;
+          btn.dataset.selected = ans.correct;
+          btn.classList.remove('wrong');
+          btn.classList.add('correct');
+      });
+      
+      huntDropdownFeedback.textContent = 'Skipped. Showing correct answers.';
+      huntDropdownFeedback.className = 'feedback';
+      huntDropdownSubmit.disabled = true;
+      huntDropdownSkip.style.display = 'none';
+      
+      setTimeout(() => {
+          closeTestAndCheckWin();
+      }, 2000);
+  });
+
+  function closeTestAndCheckWin() {
+      huntDropdownOverlay.classList.remove('active');
+      if (foundWords.length === targetWords.length) {
+          handleWin();
+      }
+  }
+
+  function getRandomTrickWords(correctWord, num = 3) {
+      let all = [];
+      if (typeof window.STEMDictionary !== 'undefined' && window.STEMDictionary.wordBank) {
+        const bank = window.STEMDictionary.wordBank;
+        for (let letter in bank) {
+            all.push(...bank[letter].map(w => w.word));
+        }
+      }
+      if (all.length < 5) {
+          all = ['Energy', 'Matter', 'Cell', 'Force', 'Space', 'Gene', 'Atom', 'Bond', 'Mass', 'Acid'];
+      }
+      
+      let tricks = [];
+      let attempts = 0;
+      while(tricks.length < num && attempts < 100) {
+        attempts++;
+        let word = all[Math.floor(Math.random() * all.length)];
+        word = word.split(' ')[0]; // Take only first word to keep dropdown options short
+        word = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        
+        if (word.toLowerCase() !== correctWord.toLowerCase() && !tricks.includes(word)) {
+          tricks.push(word);
+        }
+      }
+      return tricks;
   }
 
   function handleWin() {

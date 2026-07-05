@@ -44,16 +44,16 @@
       background: linear-gradient(180deg, #42df98, #2ebd75);
       color: white;
       text-align: center;
-      padding: 12px 0;
-      font-size: 1.5rem;
+      padding: 12px 10px;
+      font-size: 1rem;
       font-weight: 700;
-      text-transform: capitalize;
+      text-transform: uppercase;
       letter-spacing: 0.5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      padding-left: 20px;
-      padding-right: 20px;
+      gap: 6px;
     }
 
     .words-list-container {
@@ -410,10 +410,9 @@
     }
 
     .def-popup {
-      /* iOS Ultra Thin Material: very low opacity + extreme blur */
-      background: rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(72px) saturate(200%) brightness(1.15);
-      -webkit-backdrop-filter: blur(72px) saturate(200%) brightness(1.15);
+      background: rgba(255, 255, 255, 0.35); /* Clear water translucent glass */
+      backdrop-filter: blur(25px) saturate(200%);
+      -webkit-backdrop-filter: blur(25px) saturate(200%);
       border-radius: 36px;
       padding: 3.5rem 2.5rem;
       max-width: 480px;
@@ -421,67 +420,24 @@
       text-align: center;
       animation: popIn 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
-      /* The outer edge: very subtle white ring */
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      /* Layered shadows for depth + the KEY specular top-edge highlight */
-      box-shadow:
-        0 40px 80px rgba(0, 0, 0, 0.45),
-        0 0 0 0.5px rgba(255, 255, 255, 0.2),
-        inset 0 1.5px 0 rgba(255, 255, 255, 0.75),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-    }
-
-    /* The shimmering top light refraction stripe */
-    .def-popup::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 10%;
-      right: 10%;
-      height: 1.5px;
-      background: linear-gradient(90deg,
-          transparent 0%,
-          rgba(255, 255, 255, 0.9) 30%,
-          rgba(255, 255, 255, 1) 50%,
-          rgba(255, 255, 255, 0.9) 70%,
-          transparent 100%);
-      border-radius: 50%;
-      filter: blur(0.5px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), inset 0 2px 10px rgba(255, 255, 255, 0.4);
     }
 
     .def-popup h3 {
       font-family: 'Quicksand', sans-serif;
       font-size: 2.8rem;
-      color: #ffffff;
+      color: #0f172a; /* Pure black text */
       margin-bottom: 1.5rem;
-      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+      text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
       text-transform: uppercase;
       font-weight: 800;
     }
 
     .def-popup p {
       font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.95);
-      line-height: 1.7;
-      margin-bottom: 3rem;
-      font-weight: 600;
-      font-family: 'Quicksand', sans-serif;
-      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-    }
-
-    .def-popup h3 {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 2.8rem;
-      color: #0f172a;
-      margin-bottom: 1.5rem;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      text-transform: uppercase;
-      font-weight: 800;
-    }
-
-    .def-popup p {
-      font-size: 1.25rem;
-      color: #1e293b;
+      color: #0f172a; /* Pure black text */
       line-height: 1.7;
       margin-bottom: 3rem;
       font-weight: 700;
@@ -510,6 +466,142 @@
       box-shadow: 0 20px 40px rgba(79, 70, 229, 0.5);
       filter: brightness(1.1);
     }
+
+    /* Custom Dropdown Styles for Integrated Blanks Test */
+    .meaning-fill-area {
+      font-size: 1.4rem;
+      line-height: 2.2;
+      text-align: left;
+      color: #0f172a !important; /* Black text */
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      margin-bottom: 1.5rem;
+    }
+
+    .custom-dropdown-container {
+      display: inline-block;
+      position: relative;
+      margin: 0 0.4rem;
+    }
+
+    .custom-dropdown-btn {
+      font-size: 1.3rem;
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      font-weight: 800;
+      color: #0f172a; /* Black text */
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 12px;
+      padding: 0.1rem 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      min-width: 140px;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .custom-dropdown-btn:hover {
+      background: rgba(255, 255, 255, 0.7);
+      border-color: #0f172a;
+    }
+
+    .custom-dropdown-btn.filled {
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .custom-dropdown-btn.correct {
+      background: rgba(74, 222, 128, 0.4);
+      border-color: #166534;
+      color: #166534;
+      pointer-events: none;
+    }
+
+    .custom-dropdown-btn.wrong {
+      background: rgba(248, 113, 113, 0.4);
+      border-color: #991b1b;
+      color: #991b1b;
+      animation: shake 0.4s ease;
+    }
+
+    .custom-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-15px) scale(0.95);
+      background: rgba(255, 255, 255, 0.85); /* Frosted glass */
+      backdrop-filter: blur(15px) saturate(200%);
+      -webkit-backdrop-filter: blur(15px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      min-width: 200px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      overflow: hidden;
+    }
+
+    .custom-dropdown-container.open .custom-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    .custom-option {
+      padding: 12px 18px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      cursor: pointer;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .custom-option:last-child {
+      border-bottom: none;
+    }
+
+    .custom-option:hover {
+      background: rgba(0, 0, 0, 0.05);
+      color: #000;
+    }
+
+    .dropdown-arrow {
+      font-size: 0.7em;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .custom-dropdown-container.open .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-4px); }
+      75% { transform: translateX(4px); }
+    }
+
+    .feedback {
+      height: 2.2rem;
+      font-weight: 700;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .feedback.success { color: #4ade80; }
+    .feedback.error { color: #f87171; }
 
     @keyframes popIn {
       from {
@@ -545,10 +637,11 @@
     <div class="words-card">
       <div class="words-header">
         <span id="hunt-lvl-badge">Lvl 1</span>
-        <span>STEM hunt</span>
+        <span style="flex: 1; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">STEM Language Hunt</span>
         <span id="hunt-score" style="font-size:1rem; opacity:0.8; align-self:center;">0 pts</span>
       </div>
-      <p style="text-align:center; font-size:0.78rem; color:rgba(255,255,255,0.6); margin: 6px 0 10px; letter-spacing:0.03em;">
+      <p
+        style="text-align:center; font-size:0.78rem; color:rgba(255,255,255,0.6); margin: 6px 0 10px; letter-spacing:0.03em;">
         Hunt the following words from below
       </p>
       <div class="words-list-container" id="hunt-words">
@@ -597,6 +690,25 @@
       <h3 id="def-popup-title">ATOM</h3>
       <p id="def-popup-desc">Smallest unit of matter</p>
       <button id="def-popup-continue" class="def-continue-btn">Continue</button>
+    </div>
+  </div>
+
+  <!-- Dropdown Test Popup Overlay -->
+  <div id="hunt-dropdown-overlay" class="def-popup-overlay">
+    <div class="def-popup" style="max-width: 600px; padding: 2.5rem 2rem;">
+      <h3 style="font-size: 2rem; margin-bottom: 0.5rem; text-transform: uppercase;" id="hunt-dropdown-title">TEST</h3>
+      <p style="font-size: 1rem; color: #475569; margin-bottom: 1.5rem; font-weight: 600;">Complete the definition:</p>
+      
+      <div class="meaning-fill-area" id="hunt-dropdown-meaning">
+        <!-- Blanks here -->
+      </div>
+      
+      <div id="hunt-dropdown-feedback" class="feedback"></div>
+      
+      <div style="display: flex; gap: 15px; width: 100%; margin-top: 1rem;">
+        <button id="hunt-dropdown-submit" class="def-continue-btn" style="padding: 1rem; font-size: 1.1rem; flex: 1;">Submit</button>
+        <button id="hunt-dropdown-skip" class="def-continue-btn" style="padding: 1rem; font-size: 1.1rem; background: #64748b; flex: 1; box-shadow: none;">Skip</button>
+      </div>
     </div>
   </div>
 
