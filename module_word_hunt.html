@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Word Hunt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="core_styles.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e0c3fc 0%, #c2e9fb 50%, #a1c4fd 100%) fixed;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .notebook {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    /* Top Card */
+    .words-card {
+      background: #fdfdfd;
+      width: 320px;
+      border-radius: 16px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15), inset 0 -3px 5px rgba(0,0,0,0.03);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #d0e5e8;
+      z-index: 2;
+    }
+    .words-header {
+      background: linear-gradient(180deg, #42df98, #2ebd75);
+      color: white;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .words-list-container {
+      padding: 15px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 18px;
+    }
+    .hunt-word {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #94a3b8;
+      transition: color 0.3s;
+    }
+    .hunt-word.found {
+      animation: wordPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    @keyframes wordPop {
+      0% { transform: scale(1); color: #94a3b8; text-decoration: none; }
+      40% { transform: scale(1.4) translateY(-3px); color: #38bdf8; text-decoration: none; }
+      70% { transform: scale(0.95); color: #cbd5e1; text-decoration: line-through; }
+      100% { transform: scale(1); color: #cbd5e1; text-decoration: line-through; }
+    }
+
+    /* Metal Rings */
+    .rings-container {
+      position: absolute;
+      top: -22px; /* Straddle the gap perfectly */
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .ring {
+      width: 10px;
+      height: 38px;
+      background: linear-gradient(90deg, #e2e8f0, #ffffff, #94a3b8);
+      border-radius: 6px;
+      box-shadow: 2px 4px 6px rgba(0,0,0,0.3), inset -1px -2px 3px rgba(255,255,255,0.8);
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Bottom Card (Grid) */
+    .grid-card {
+      background: #e0f2fe; /* Very light cyan/blue */
+      width: 320px;
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3), inset 0 -4px 8px rgba(0,0,0,0.05);
+      padding: 30px 15px 15px 15px; /* Extra top padding to protect letters from rings */
+      border: 1px solid #bae6fd;
+      position: relative;
+      margin-top: 15px; /* Consistent gap between cards */
+      z-index: 1;
+    }
+
+    .grid-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1/1;
+      touch-action: none; /* Prevent scroll on drag */
+    }
+
+    /* Layers */
+    .highlights-layer, .text-layer {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+    .text-layer {
+      display: grid;
+      grid-template-columns: repeat(var(--grid-size, 7), 1fr);
+      grid-template-rows: repeat(var(--grid-size, 7), 1fr);
+      z-index: 2;
+    }
+    .highlights-layer {
+      z-index: 1;
+      overflow: visible; /* Let pills overlap slightly if needed */
+    }
+
+    .hunt-cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: clamp(1rem, 5vw, 1.4rem);
+      font-weight: 800;
+      color: #0f172a; /* Very dark blue/black */
+      user-select: none;
+      cursor: crosshair;
+    }
+
+    /* Highlight Pills */
+    .highlight-pill {
+      position: absolute;
+      border-radius: 999px;
+      transform-origin: center;
+      opacity: 0.8;
+      pointer-events: none;
+      mix-blend-mode: multiply; /* Looks great on light backgrounds */
+    }
+
+    /* Overlay for Win/Promotion */
+    .win-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 23, 42, 0.85); /* Dark slate */
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: none; 
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      color: white;
+      text-align: center;
+    }
+    .win-overlay.active {
+      display: flex;
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    
+    .star-icon {
+      font-size: 7rem;
+      filter: drop-shadow(0 0 25px rgba(250, 204, 21, 0.8));
+      display: none;
+      margin-bottom: -10px;
+    }
+    .star-icon.active {
+      display: block;
+      animation: popStar 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes popStar {
+      0% { transform: scale(0) rotate(-180deg); opacity: 0; }
+      70% { transform: scale(1.2) rotate(10deg); }
+      100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    }
+    
+    .level-text {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 5px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .xp-bar-container {
+      width: 260px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 14px;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      position: relative;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .xp-fluid {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #0ea5e9, #38bdf8, #bae6fd);
+      transition: width 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+    }
+    .xp-text {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+      letter-spacing: 1px;
+    }
+
+    .overlay-btns {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+    }
+    .overlay-btn {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      padding: 12px 28px;
+      border-radius: 20px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .overlay-btn.primary { 
+      background: linear-gradient(135deg, #38bdf8, #2563eb);
+      border-color: transparent;
+      box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4); 
+    }
+    .overlay-btn:hover { transform: translateY(-3px); background: rgba(255,255,255,0.2); }
+    .overlay-btn.primary:hover { filter: brightness(1.1); }
+
+    /* Bottom Buttons */
+    .bottom-bar {
+      margin-top: 1rem;
+      display: flex;
+      gap: 15px;
+    }
+    .bottom-btn {
+      background: rgba(255,255,255,0.2);
+      color: var(--text-main);
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 20px;
+      padding: 8px 20px;
+      font-weight: 700;
+      font-family: 'Quicksand', sans-serif;
+      cursor: pointer;
+      backdrop-filter: blur(5px);
+      transition: all 0.2s;
+    }
+    .bottom-btn:hover {
+      background: rgba(255,255,255,0.5);
+    }
+
+    @media (max-width: 360px) {
+      .words-card { width: 290px; }
+      .grid-card { width: 290px; }
+      .rings-container { width: 250px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="notebook">
+    <div class="words-card">
+      <div class="words-header">
+        <span id="hunt-lvl-badge">Lvl 1</span>
+        <span>Games</span>
+        <span id="hunt-score" style="font-size:1rem; opacity:0.8; align-self:center;">0 pts</span>
+      </div>
+      <div class="words-list-container" id="hunt-words">
+        <!-- words will be inserted here -->
+      </div>
+    </div>
+    
+    <div class="grid-card">
+      <div class="rings-container">
+        <div class="ring" style="margin-left: 35px;"></div>
+        <div class="ring" style="margin-right: 35px;"></div>
+      </div>
+      <div class="grid-wrapper" id="grid-wrapper">
+        <div class="highlights-layer" id="highlights-layer"></div>
+        <div class="text-layer" id="text-layer" style="--grid-size: 6;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <button class="bottom-btn" id="back-home-btn">Back Home</button>
+  </div>
+
+  <!-- Win & Promotion Overlay -->
+  <div class="win-overlay" id="win-overlay">
+    <div class="star-icon" id="promotion-star">🌟</div>
+    <div class="level-text" id="level-text">Level 1 Complete!</div>
+    <div style="font-size:1.2rem; color:#bae6fd; margin-bottom:10px; font-weight:600;" id="win-message">Awesome Job!</div>
+    
+    <div class="xp-bar-container">
+      <div class="xp-fluid" id="xp-fluid"></div>
+      <div class="xp-text" id="xp-text">0 / 2</div>
+    </div>
+
+    <div class="overlay-btns">
+      <button class="overlay-btn" id="overlay-home-btn">Home</button>
+      <button class="overlay-btn primary" id="overlay-continue-btn">Continue</button>
+    </div>
+  </div>
+
+  <script src="core_dictionary.js"></script>
+  <script src="core_shared_state.js"></script>
+  <script src="module_word_hunt.js"></script>
+</body>
+</html>
