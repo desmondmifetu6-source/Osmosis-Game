@@ -212,8 +212,8 @@ const Stage5Controller = {
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
     sharedState.showStageScoreThen('stage5', 'Stage 5: Match Terms to Meanings', this.state.stageScore, () => {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('09_stage7_meaning_fillin.html');
-      else window.location.href = '09_stage7_meaning_fillin.html';
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('08b_stage6b_meaning_dropdown.html');
+      else window.location.href = '08b_stage6b_meaning_dropdown.html';
     });
   }
 };

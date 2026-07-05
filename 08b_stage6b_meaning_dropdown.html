@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Stage 6b: Definition Trick Dropdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="core_styles.css">
+  <style>
+    .stage6b-card {
+      padding: 3rem 2.5rem;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.25) !important;
+      backdrop-filter: blur(15px) !important;
+      border: 2px solid rgba(0, 0, 0, 0.2) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .s6b-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .s6b-header h2 {
+      margin: 0;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: 1px;
+    }
+
+    .highlight-word {
+      font-size: 3rem;
+      color: var(--text-main);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid var(--accent-primary);
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      font-weight: 800;
+    }
+
+    .meaning-fill-area {
+      font-size: 1.6rem;
+      line-height: 2.4;
+      text-align: justify;
+      color: var(--text-main);
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    /* Custom Animated Frosted Glass Dropdown */
+    .custom-dropdown-container {
+      display: inline-block;
+      position: relative;
+      margin: 0 0.4rem;
+    }
+
+    .custom-dropdown-btn {
+      font-size: 1.6rem;
+      font-family: inherit;
+      text-align: center;
+      font-weight: 800;
+      color: var(--accent-primary);
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 0.2rem 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      min-width: 140px;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .custom-dropdown-btn:hover {
+      background: rgba(255, 255, 255, 0.6);
+      border-color: var(--accent-primary);
+      box-shadow: 0 6px 15px rgba(79, 70, 229, 0.15);
+    }
+
+    .custom-dropdown-btn.filled {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .custom-dropdown-btn.correct {
+      background: #e8f5e9;
+      border-color: #2e7d32;
+      color: #2e7d32;
+      pointer-events: none;
+    }
+
+    .custom-dropdown-btn.wrong {
+      background: #ffebee;
+      border-color: #c62828;
+      color: #c62828;
+      animation: shake 0.4s ease;
+    }
+
+    .custom-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-15px) scale(0.95);
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      min-width: 220px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      overflow: hidden;
+    }
+
+    .custom-dropdown-container.open .custom-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    .custom-option {
+      padding: 14px 20px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .custom-option:last-child {
+      border-bottom: none;
+    }
+
+    .custom-option:hover {
+      background: rgba(79, 70, 229, 0.15);
+      color: var(--accent-primary);
+    }
+
+    .dropdown-arrow {
+      font-size: 0.7em;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .custom-dropdown-container.open .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-4px); }
+      75% { transform: translateX(4px); }
+    }
+
+    .feedback {
+      height: 2.5rem;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feedback.success { color: #2e7d32; }
+    .feedback.error { color: #c62828; }
+
+    @media (max-width: 480px) {
+      .stage6b-card { padding: 2rem 1.25rem; }
+      .highlight-word { font-size: 2rem; }
+      .meaning-fill-area { font-size: 1.2rem; line-height: 2; padding: 1.5rem; }
+      .custom-dropdown-btn { font-size: 1.2rem; min-width: 100px; padding: 0.2rem 0.8rem; }
+      .custom-dropdown-menu { min-width: 160px; }
+      .custom-option { font-size: 1.1rem; padding: 10px 15px; }
+    }
+
+    .floating-point {
+      position: absolute;
+      color: #4caf50;
+      font-weight: bold;
+      font-family: monospace;
+      font-size: 2rem;
+      pointer-events: none;
+      animation: floatUp 1s ease-out forwards;
+      z-index: 200;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    @keyframes floatUp {
+      0% { opacity: 1; transform: translateY(0) scale(1.5); }
+      100% { opacity: 0; transform: translateY(-50px) scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scoreboard" id="scoreboard">Score: <span id="current-score">0</span></div>
+  <div class="app-container">
+
+    <div class="card stage6b-card" id="loading-container">
+      <h2 style="text-align:center;">Preparing Stage 6b...</h2>
+      <div style="text-align:center;"><span class="spinner"></span></div>
+    </div>
+
+    <!-- Dropdown Test Container -->
+    <div id="test-container" class="card stage6b-card parchment-large" style="display: none;">
+      <div class="s6b-header">
+        <h2>Stage 6b: Missing Word Analysis</h2>
+        <div id="test-progress" style="font-size:1.5rem; font-weight:bold;">1/10</div>
+      </div>
+      <p style="font-style:italic; margin-bottom:2rem; text-align:center;">Select the correct words from the dropdown menus to complete the definition.</p>
+
+      <div style="text-align:center;">
+        <h1 id="test-word" class="highlight-word">WORD</h1>
+      </div>
+      
+      <!-- Content Area where the sentence with dropdowns will appear -->
+      <div id="test-meaning-container" class="meaning-fill-area"></div>
+
+      <div id="test-feedback" class="feedback" style="margin-top:2rem;"></div>
+
+      <div style="display:flex; justify-content:space-between; margin-top:1rem;">
+        <button id="skip-btn" class="classic-btn secondary" style="width:48%;">Skip / Forfeit (0 pts)</button>
+        <button id="submit-btn" class="classic-btn blue-gradient" style="width:48%;">Submit Findings</button>
+      </div>
+    </div>
+
+  </div>
+  <script src="core_dictionary.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="core_shared_state.js"></script>
+  <script src="08b_stage6b_meaning_dropdown.js"></script>
+</body>
+
+</html>
