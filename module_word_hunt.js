@@ -663,7 +663,7 @@ document.addEventListener('DOMContentLoaded', () => {
         zIndex: 10002, // Ensure it is above the new banner
         scalar: 1.5,
         shapes: ['star', 'circle', 'square'],
-        colors: ['#FFD700', '#FF1493', '#00FFFF', '#39FF14', '#FF4500', '#ffffff']
+        colors: ['#F5C842', '#D4AF37', '#C9A96E', '#E8B4B8', '#ffffff', '#B8860B', '#E8D5B7']
       };
 
       function shoot() {
@@ -793,20 +793,17 @@ document.addEventListener('DOMContentLoaded', () => {
   overlayContinueBtn.addEventListener('click', () => {
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
     
-    // Save words to gameData for stage 8 recall test
+    // Save words + definitions for the recall test
+    // wordDefinitions is already populated during initGame() — use it directly
     let gameData = sharedState.load() || {};
     gameData.selectedWords = targetWords;
-    gameData.meanings = gameData.meanings || {};
-    
-    // Populate meanings for the recall test
-    if (typeof window.STEMDictionary !== 'undefined' && window.STEMDictionary.wordBank) {
-      targetWords.forEach(w => {
-        let dictEntry = window.STEMDictionary.wordBank.find(entry => entry.word.toLowerCase() === w.toLowerCase());
-        if (dictEntry) {
-           gameData.meanings[w] = dictEntry.meaning;
-        }
-      });
-    }
+    gameData.meanings = {};
+
+    targetWords.forEach(w => {
+      // wordDefinitions uses the definition key from the STEM dictionary entries
+      gameData.meanings[w] = wordDefinitions[w] || '';
+    });
+
     sharedState.save(gameData);
     
     if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_recall_test.html');
