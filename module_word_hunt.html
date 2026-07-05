@@ -254,22 +254,44 @@
     .bottom-bar {
       margin-top: 1rem;
       display: flex;
-      gap: 15px;
+      gap: 20px;
     }
-    .bottom-btn {
+    .icon-btn {
       background: rgba(255,255,255,0.2);
-      color: var(--text-main);
+      color: white;
       border: 2px solid rgba(255,255,255,0.5);
-      border-radius: 20px;
-      padding: 8px 20px;
-      font-weight: 700;
-      font-family: 'Quicksand', sans-serif;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
       backdrop-filter: blur(5px);
       transition: all 0.2s;
     }
-    .bottom-btn:hover {
+    .icon-btn:hover:not(:disabled) {
       background: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+    .icon-btn:active:not(:disabled) {
+      transform: scale(0.9);
+    }
+    .icon-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .hint-flash {
+      animation: flashHint 1.5s ease-out forwards;
+      z-index: 5;
+    }
+    @keyframes flashHint {
+      0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+      15% { opacity: 0.9; transform: translate(-50%, -50%) scale(1.1); box-shadow: 0 0 20px rgba(253,224,71,0.8); }
+      80% { opacity: 0.9; transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 20px rgba(253,224,71,0.8); }
+      100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
     }
 
     @media (max-width: 360px) {
@@ -306,7 +328,8 @@
   </div>
 
   <div class="bottom-bar">
-    <button class="bottom-btn" id="back-home-btn">Back Home</button>
+    <button class="icon-btn" id="hint-btn" title="Magic Hint">🪄</button>
+    <button class="icon-btn" id="back-home-btn" title="Back Home">🏠</button>
   </div>
 
   <!-- Win & Promotion Overlay -->

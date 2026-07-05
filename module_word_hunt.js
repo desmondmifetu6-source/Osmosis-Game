@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const wordsEl = document.getElementById('hunt-words');
   const scoreEl = document.getElementById('hunt-score');
   const backBtn = document.getElementById('back-home-btn');
+  const hintBtn = document.getElementById('hint-btn');
   const lvlBadge = document.getElementById('hunt-lvl-badge');
 
   // Overlay Elements
@@ -36,12 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let grid = [];
   let targetWords = [];
   let foundWords = [];
+  let wordCoordinates = {}; // Stores {start, end} for hints
   let currentScore = 0;
 
   let isSelecting = false;
   let startCell = null;
   let lastValidEndCell = null;
   let selectionPill = null;
+  let isHintCooldown = false;
   
   const pillColors = ["#818cf8", "#34d399", "#f472b6", "#fb7185", "#38bdf8", "#fbbf24", "#a78bfa"];
   let colorIndex = 0;
@@ -71,10 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reset game vars
     foundWords = [];
+    wordCoordinates = {};
     isSelecting = false;
     startCell = null;
     lastValidEndCell = null;
     selectionPill = null;
+    isHintCooldown = false;
+    hintBtn.disabled = false;
     highlightsLayer.innerHTML = '';
     winOverlay.classList.remove('active');
     promoStar.classList.remove('active');
@@ -92,9 +98,26 @@ document.addEventListener('DOMContentLoaded', () => {
       allWords = [{word:"ATOM"}, {word:"CELL"}, {word:"GENE"}, {word:"MASS"}, {word:"DATA"}, {word:"DNA"}, {word:"RNA"}, {word:"LENS"}];
     }
 
-    const validWords = allWords.map(w => w.word.toUpperCase().replace(/[^A-Z]/g, '')).filter(w => w.length >= 3 && w.length <= currentLevelObj.maxLen);
-    const uniqueWords = [...new Set(validWords)].sort(() => 0.5 - Math.random());
-    targetWords = uniqueWords.slice(0, numWords);
+    let validWords = allWords.map(w => w.word.toUpperCase().replace(/[^A-Z]/g, '')).filter(w => w.length >= 3 && w.length <= currentLevelObj.maxLen);
+    validWords = [...new Set(validWords)];
+
+    // Fetch history to prevent repeating words
+    let usedWords = JSON.parse(localStorage.getItem('wordHuntUsedWords')) || [];
+    let availableWords = validWords.filter(w => !usedWords.includes(w));
+
+    // If we run out of fresh words for this length, reset the history
+    if (availableWords.length < numWords) {
+      usedWords = [];
+      availableWords = validWords;
+    }
+
+    // Shuffle and pick
+    availableWords.sort(() => 0.5 - Math.random());
+    targetWords = availableWords.slice(0, numWords);
+
+    // Add picked words to history and save
+    usedWords.push(...targetWords);
+    localStorage.setItem('wordHuntUsedWords', JSON.stringify(usedWords));
 
     // Failsafe
     while (targetWords.length < numWords) {
@@ -110,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function generateGrid() {
     grid = Array(gridSize).fill(null).map(() => Array(gridSize).fill(''));
     const dirs = [[0,1], [1,0], [1,1], [-1,1], [0,-1], [-1,0], [-1,-1], [1,-1]];
+    wordCoordinates = {};
 
     targetWords.forEach(word => {
       let placed = false;
@@ -122,6 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (canPlace(word, r, c, d[0], d[1])) {
           placeWord(word, r, c, d[0], d[1]);
+          // Save coordinates for the Magic Hint system
+          wordCoordinates[word] = {
+            start: {r, c},
+            end: {r: r + (word.length - 1)*d[0], c: c + (word.length - 1)*d[1]}
+          };
           placed = true;
         }
       }
@@ -158,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderGrid() {
     textLayer.innerHTML = '';
     
-    // Create text cells
     for(let r=0; r<gridSize; r++) {
       for(let c=0; c<gridSize; c++) {
         const cell = document.createElement('div');
@@ -168,7 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Attach master event listeners to the layer to capture dragging
     textLayer.addEventListener('mousedown', handlePointerDown);
     document.addEventListener('mousemove', handlePointerMove);
     document.addEventListener('mouseup', handlePointerUp);
@@ -188,6 +215,40 @@ document.addEventListener('DOMContentLoaded', () => {
       wordsEl.appendChild(span);
     });
   }
+
+  // --- Hint System ---
+  hintBtn.addEventListener('click', () => {
+    if (isHintCooldown) return;
+    
+    // Find the first unfound word
+    const unfoundWord = targetWords.find(w => !foundWords.includes(w));
+    if (!unfoundWord) return;
+
+    if (typeof AudioManager !== 'undefined') AudioManager.play('click'); // Or 'magic'
+
+    isHintCooldown = true;
+    hintBtn.disabled = true;
+
+    // Create a temporary glowing pill over the word
+    const coords = wordCoordinates[unfoundWord];
+    const hintPill = document.createElement('div');
+    hintPill.className = 'highlight-pill hint-flash';
+    highlightsLayer.appendChild(hintPill);
+
+    // Color it glowing gold
+    updatePillTransform(hintPill, coords.start, coords.end, 'rgba(253, 224, 71, 0.9)');
+
+    // Remove the pill after animation completes (1.5s)
+    setTimeout(() => {
+      if (hintPill.parentNode) hintPill.remove();
+    }, 1500);
+
+    // 5 second cooldown before using hint again
+    setTimeout(() => {
+      isHintCooldown = false;
+      hintBtn.disabled = false;
+    }, 5000);
+  });
 
   // --- Interaction Logic ---
   
@@ -248,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cellPos = getCellFromEvent(e);
     if (!cellPos) return;
 
-    // Check if it forms a valid straight line (horizontal, vertical, diagonal)
+    // Check if it forms a valid straight line
     const dr = cellPos.r - startCell.r;
     const dc = cellPos.c - startCell.c;
 
@@ -294,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Keep pill
       colorIndex++;
-      selectionPill = null; // detached from tracker so it stays
+      selectionPill = null;
 
       if (foundWords.length === targetWords.length) {
         handleWin();
@@ -327,7 +388,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const centerX = (x1 + x2) / 2;
     const centerY = (y1 + y2) / 2;
 
-    // 80% of cell width as the thickness of the pill
     const pillThickness = Math.min(cw, ch) * 0.8; 
 
     pill.style.width = `${distance + pillThickness}px`;
@@ -359,24 +419,20 @@ document.addEventListener('DOMContentLoaded', () => {
       winOverlay.classList.add('active');
       levelText.textContent = `Level ${oldLevelObj.lvl} Clear!`;
       
-      // Calculate bar progress relative to current tier
       const previousTierXp = oldLvlIndex === 0 ? 0 : LEVELS[oldLvlIndex - 1].xpNeeded;
       const pointsInThisTier = xp - previousTierXp;
       const totalPointsInThisTier = oldLevelObj.xpNeeded - previousTierXp;
       
-      // Initial state of bar (before fill animation)
       const startPct = ((pointsInThisTier - 1) / totalPointsInThisTier) * 100;
       xpFluid.style.width = `${Math.max(0, startPct)}%`;
       xpText.textContent = `${pointsInThisTier - 1} / ${totalPointsInThisTier}`;
 
-      // Animate fluid forward
       setTimeout(() => {
         if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
         const endPct = (pointsInThisTier / totalPointsInThisTier) * 100;
         xpFluid.style.width = `${Math.min(100, endPct)}%`;
         xpText.textContent = `${pointsInThisTier} / ${totalPointsInThisTier}`;
 
-        // If promoted, pop the star!
         if (isPromoted) {
           setTimeout(() => {
             if (typeof AudioManager !== 'undefined') AudioManager.play('success');
@@ -402,7 +458,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   overlayContinueBtn.addEventListener('click', () => {
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
-    // Re-initialize for next round seamlessly
     initGame();
   });
 });
