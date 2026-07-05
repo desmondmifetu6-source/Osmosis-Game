@@ -95,34 +95,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     if (allWords.length === 0) {
-      allWords = [{word:"ATOM"}, {word:"CELL"}, {word:"GENE"}, {word:"MASS"}, {word:"DATA"}, {word:"DNA"}, {word:"RNA"}, {word:"LENS"}];
+      const fallbacks = ["ATOM", "CELL", "GENE", "MASS", "DATA", "DNA", "RNA", "LENS", "BONE", "VEIN", "ACID", "BASE", "CORE", "STAR", "MOON", "SUN", "HEAT", "COLD", "LAVA", "ROCK", "WAVE", "RAY", "GAS", "ION", "BOND", "MOLD", "SEED", "LEAF", "ROOT", "STEM", "BARK", "WOOD", "DIRT", "SAND", "DUST", "WIND", "RAIN", "SNOW", "ICE", "FIRE", "BURN", "MELT", "BOIL", "COOL"];
+      allWords = fallbacks.map(w => ({word: w}));
     }
 
     let validWords = allWords.map(w => w.word.toUpperCase().replace(/[^A-Z]/g, '')).filter(w => w.length >= 3 && w.length <= currentLevelObj.maxLen);
     validWords = [...new Set(validWords)];
 
-    // Fetch history to prevent repeating words
     let usedWords = JSON.parse(localStorage.getItem('wordHuntUsedWords')) || [];
     let availableWords = validWords.filter(w => !usedWords.includes(w));
 
-    // If we run out of fresh words for this length, reset the history
     if (availableWords.length < numWords) {
       usedWords = [];
       availableWords = validWords;
     }
 
-    // Shuffle and pick
-    availableWords.sort(() => 0.5 - Math.random());
+    // Proper Fisher-Yates shuffle
+    for (let i = availableWords.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [availableWords[i], availableWords[j]] = [availableWords[j], availableWords[i]];
+    }
+    
     targetWords = availableWords.slice(0, numWords);
-
-    // Add picked words to history and save
     usedWords.push(...targetWords);
     localStorage.setItem('wordHuntUsedWords', JSON.stringify(usedWords));
-
-    // Failsafe
-    while (targetWords.length < numWords) {
-      targetWords.push("WORD");
-    }
 
     generateGrid();
     renderGrid();
@@ -134,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     grid = Array(gridSize).fill(null).map(() => Array(gridSize).fill(''));
     const dirs = [[0,1], [1,0], [1,1], [-1,1], [0,-1], [-1,0], [-1,-1], [1,-1]];
     wordCoordinates = {};
+    let successfullyPlaced = [];
 
     targetWords.forEach(word => {
       let placed = false;
@@ -152,9 +149,12 @@ document.addEventListener('DOMContentLoaded', () => {
             end: {r: r + (word.length - 1)*d[0], c: c + (word.length - 1)*d[1]}
           };
           placed = true;
+          successfullyPlaced.push(word);
         }
       }
     });
+
+    targetWords = successfullyPlaced; // Drop any words that couldn't fit
 
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     for(let i=0; i<gridSize; i++) {
