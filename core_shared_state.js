@@ -35,6 +35,46 @@ const sharedState = {
     sessionStorage.setItem('gameState', JSON.stringify(state));
   },
 
+  // Function: clearGameSession
+  // Wipes all game-specific progress (score, timers, word pools) from sessionStorage.
+  // By default, preserves user profile information (username and avatar) so they stay logged in.
+  clearGameSession: function (keepUserAndAvatar = true) {
+    let username = '';
+    let avatar = '🤓';
+    let multiplayerMode = false;
+    let currentRoomId = null;
+
+    if (keepUserAndAvatar) {
+      const state = this.load();
+      username = state.username || localStorage.getItem('osmosis_user') || '';
+      avatar = state.avatar || '🤓';
+      multiplayerMode = state.multiplayerMode || false;
+      currentRoomId = state.currentRoomId || null;
+    }
+
+    const cleanState = {
+      username: username,
+      avatar: avatar,
+      letters: [],
+      length: 0,
+      wordsPool: [],
+      selectedWords: [],
+      meanings: {},
+      score: 0,
+      usedLetters: [],
+      startTime: null,
+      totalTime: 0,
+      sessionStartedAt: null,
+      sessionEndedAt: null,
+      stageScores: {},
+      multiplayerMode: multiplayerMode,
+      currentRoomId: currentRoomId
+    };
+
+    this.save(cleanState);
+    sessionStorage.removeItem('osmosis_saved_result');
+  },
+
   // Function: startTimer
   // This is a stopwatch that starts ticking the moment a level begins.
   startTimer: function () {

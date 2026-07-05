@@ -149,17 +149,9 @@ const MultiplayerResults = {
       playAgainBtn.addEventListener('click', () => {
         if (typeof AudioManager !== 'undefined') AudioManager.play('click');
         
-        // Reset game stats but keep multiplayer active
-        const data = sharedState.load();
-        data.score = 0;
-        data.usedLetters = [];
-        data.selectedWords = [];
-        data.stageScores = {};
-        data.meanings = {};
-        data.lastLength = null;
-        data.totalTime = 0;
-        data.sessionStartedAt = null;
-        sharedState.save(data);
+        if (typeof sharedState.clearGameSession === 'function') {
+          sharedState.clearGameSession(true);
+        }
         
         if (typeof window.navigateWithTransition === 'function') navigateWithTransition('02_campaign_setup.html');
         else window.location.href = '02_campaign_setup.html';
@@ -170,19 +162,15 @@ const MultiplayerResults = {
       homeBtn.addEventListener('click', () => {
         if (typeof AudioManager !== 'undefined') AudioManager.play('click');
         
-        // Reset multiplayer state before returning
-        const data = sharedState.load();
-        data.multiplayerMode = false;
-        data.currentRoomId = null;
-        data.score = 0;
-        data.usedLetters = [];
-        data.selectedWords = [];
-        data.stageScores = {};
-        data.meanings = {};
-        data.lastLength = null;
-        data.totalTime = 0;
-        data.sessionStartedAt = null;
-        sharedState.save(data);
+        if (typeof sharedState.clearGameSession === 'function') {
+          sharedState.clearGameSession(true);
+          
+          // Disable multiplayer mode when going back to Menu
+          const data = sharedState.load();
+          data.multiplayerMode = false;
+          data.currentRoomId = null;
+          sharedState.save(data);
+        }
         
         window.location.href = '01_home_menu.html';
       });

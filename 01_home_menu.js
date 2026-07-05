@@ -57,11 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (soloContinueBtn) {
     soloContinueBtn.addEventListener('click', () => {
       // Wipe session data for a fresh run
-      Object.assign(gameData, {
-        score: 0, usedLetters: [], selectedWords: [], stageScores: {},
-        meanings: {}, lastLength: null, totalTime: 0, sessionStartedAt: null
-      });
-      sharedState.save(gameData);
+      if (typeof sharedState.clearGameSession === 'function') {
+        sharedState.clearGameSession(true);
+      }
       navigate('02_campaign_setup.html');
     });
   }

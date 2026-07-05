@@ -49,8 +49,12 @@ document.head.appendChild(styleSheet);
 finishBtn.addEventListener('click', () => {
   AudioManager.init();
   AudioManager.play('click');
-  // Clear the active game state to reset the loop
-  sessionStorage.removeItem('gameState');
+  // Clear the active game state to reset the loop while keeping user info
+  if (typeof sharedState.clearGameSession === 'function') {
+    sharedState.clearGameSession(true);
+  } else {
+    sessionStorage.removeItem('gameState');
+  }
   setTimeout(() => {
     window.location.href = 'module_library.html';
   }, 300);

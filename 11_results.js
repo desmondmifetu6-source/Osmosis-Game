@@ -260,18 +260,11 @@ const ResultsController = {
 
     if (domCache.playAgainBtn) {
       domCache.playAgainBtn.addEventListener('click', () => {
-        sessionStorage.removeItem('osmosis_saved_result');
         if (typeof AudioManager !== 'undefined') AudioManager.play('click');
 
-        gameData.score = 0;
-        gameData.usedLetters = [];
-        gameData.selectedWords = [];
-        gameData.stageScores = {};
-        gameData.meanings = {};
-        gameData.lastLength = null;
-        gameData.totalTime = 0;
-        gameData.sessionStartedAt = null;
-        sharedState.save(gameData);
+        if (typeof sharedState.clearGameSession === 'function') {
+          sharedState.clearGameSession(true);
+        }
 
         setTimeout(() => {
           if (typeof window.navigateWithTransition === 'function') navigateWithTransition('02_campaign_setup.html');
@@ -282,18 +275,11 @@ const ResultsController = {
 
     if (domCache.goHomeBtn) {
       domCache.goHomeBtn.addEventListener('click', () => {
-        sessionStorage.removeItem('osmosis_saved_result');
         if (typeof AudioManager !== 'undefined') AudioManager.play('click');
 
-        gameData.score = 0;
-        gameData.usedLetters = [];
-        gameData.selectedWords = [];
-        gameData.stageScores = {};
-        gameData.meanings = {};
-        gameData.lastLength = null;
-        gameData.totalTime = 0;
-        gameData.sessionStartedAt = null;
-        sharedState.save(gameData);
+        if (typeof sharedState.clearGameSession === 'function') {
+          sharedState.clearGameSession(true);
+        }
 
         setTimeout(() => {
           if (typeof window.navigateWithTransition === 'function') navigateWithTransition('01_home_menu.html');
