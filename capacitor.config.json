@@ -1,7 +1,7 @@
 {
   "appId": "com.desmondmifetu.osmosis",
   "appName": "Osmosis",
-  "webDir": ".",
+  "webDir": "www",
   "bundledWebRuntime": false,
   "server": {
     "androidScheme": "https"
