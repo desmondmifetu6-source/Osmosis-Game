@@ -1,0 +1,14 @@
+# Files/folders to exclude from Capacitor web asset copy
+node_modules
+dist
+android
+ios
+.git
+.gitignore
+.vscode
+package-lock.json
+server.js
+main.js
+capacitor.config.json
+BRANCHING_GUIDE.md
+MASTER_ARCHITECT_BLUEPRINT.md

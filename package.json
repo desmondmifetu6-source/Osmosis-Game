@@ -1,9 +1,74 @@
 {
+  "name": "osmosis-learning-game",
+  "version": "1.0.0",
+  "description": "Osmosis - STEM Rapid Learning Game by Desmond Mifetu (Chen)",
+  "author": "Desmond Mifetu (Chen)",
+  "license": "MIT",
+  "main": "main.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "electron-start": "electron .",
+    "dist": "electron-builder build --win --publish never",
+    "dist-mac": "electron-builder build --mac --publish never",
+    "dist-linux": "electron-builder build --linux --publish never"
   },
   "dependencies": {
     "express": "^5.2.1",
     "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "electron": "^43.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.desmondmifetu.osmosis",
+    "productName": "Osmosis",
+    "copyright": "Copyright © 2025 Desmond Mifetu (Chen)",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!android/**",
+      "!ios/**",
+      "!.git/**",
+      "!.gitignore",
+      "!BRANCHING_GUIDE.md",
+      "!MASTER_ARCHITECT_BLUEPRINT.md"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns",
+      "category": "public.app-category.education"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png",
+      "category": "Education"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Osmosis"
+    }
   }
 }
