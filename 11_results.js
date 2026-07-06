@@ -14,8 +14,11 @@ const ResultsController = {
   init() {
     // Add socket.io client dynamically if in multiplayer
     this.state.gameData = sharedState.load();
-    if (this.state.gameData.multiplayerMode) {
-      this.initMultiplayer();
+    if (this.state.gameData.multiplayerMode && this.state.gameData.currentRoomId) {
+      // Multiplayer players get their own dedicated results page
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('multiplayer_results.html');
+      else window.location.href = 'multiplayer_results.html';
+      return;
     }
 
     if (typeof initModal === 'function') initModal();

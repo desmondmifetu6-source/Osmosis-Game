@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle Results | Osmosis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="core_styles.css">
+
+  <style>
+    :root {
+      --gold: #ffd700;
+      --gold-dim: rgba(255, 215, 0, 0.15);
+      --silver: #c0c0c0;
+      --bronze: #cd7f32;
+      --card-bg: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(255, 255, 255, 0.11);
+      --text-primary: #f1f5f9;
+      --text-muted: rgba(255, 255, 255, 0.5);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #080e1a 0%, #0d1b2e 55%, #060c18 100%);
+      font-family: 'Inter', sans-serif;
+      color: var(--text-primary);
+      overflow-x: hidden;
+    }
+
+    /* Ambient blobs */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 60% 40% at 20% 30%, rgba(255, 215, 0, 0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 80% 70%, rgba(80, 140, 255, 0.05) 0%, transparent 70%);
+      z-index: 0;
+    }
+
+    .page-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    /* ─── Header ─── */
+    .page-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+      animation: fadeDown 0.7s ease-out both;
+    }
+
+    .header-trophy {
+      font-size: 3.8rem;
+      display: block;
+      margin-bottom: 1rem;
+      animation: floatY 3s ease-in-out infinite;
+    }
+
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 7vw, 3.8rem);
+      font-weight: 900;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
+      margin-bottom: 0.4rem;
+    }
+
+    .page-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 1.2rem;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.28);
+      color: #fc8181;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 30px;
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #fc8181;
+      animation: blink 1.4s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* ─── Cards Grid ─── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    /* ─── Player Card ─── */
+    .player-card {
+      position: relative;
+      background: var(--card-bg);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid var(--card-border);
+      border-radius: 22px;
+      padding: 2.2rem 1.8rem 1.8rem;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      animation: cardIn 0.55s ease-out both;
+    }
+
+    .player-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+    }
+
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(28px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .player-card.rank-1 {
+      border-color: rgba(255, 215, 0, 0.38);
+      background: rgba(255, 215, 0, 0.06);
+      box-shadow: 0 6px 28px rgba(255, 215, 0, 0.1);
+    }
+    .player-card.rank-1:hover {
+      border-color: rgba(255, 215, 0, 0.6);
+      box-shadow: 0 24px 52px rgba(255, 215, 0, 0.18);
+    }
+    .player-card.rank-2 {
+      border-color: rgba(192, 192, 192, 0.28);
+      background: rgba(192, 192, 192, 0.04);
+    }
+    .player-card.rank-3 {
+      border-color: rgba(205, 127, 50, 0.28);
+      background: rgba(205, 127, 50, 0.04);
+    }
+
+    /* Rank pill badge */
+    .rank-pill {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--card-border);
+      background: #14213d;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .rank-1 .rank-pill { background: #92600a; border-color: var(--gold); color: var(--gold); }
+    .rank-2 .rank-pill { background: #3a3f4b; border-color: var(--silver); color: var(--silver); }
+    .rank-3 .rank-pill { background: #5c2d0f; border-color: var(--bronze); color: var(--bronze); }
+
+    .card-medal {
+      font-size: 2rem;
+      display: block;
+      margin: 0.6rem 0;
+    }
+
+    .card-avatar {
+      font-size: 3.8rem;
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.9rem;
+    }
+
+    .card-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      word-break: break-word;
+      margin-bottom: 0.4rem;
+    }
+
+    .winner-crown {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(255, 215, 0, 0.4);
+      padding: 3px 10px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .card-divider {
+      width: 36px;
+      height: 2px;
+      border-radius: 1px;
+      background: var(--card-border);
+      margin: 1rem auto;
+    }
+    .rank-1 .card-divider { background: rgba(255, 215, 0, 0.35); }
+    .rank-2 .card-divider { background: rgba(192, 192, 192, 0.3); }
+    .rank-3 .card-divider { background: rgba(205, 127, 50, 0.3); }
+
+    .card-score {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+    }
+    .rank-1 .card-score { color: var(--gold); }
+
+    .card-pts {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .card-time {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0.8rem 0 1.4rem;
+    }
+
+    /* View Words Button */
+    .view-words-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.07);
+      color: rgba(255, 255, 255, 0.8);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, transform 0.2s, border-color 0.2s;
+    }
+    .view-words-btn:hover {
+      background: rgba(255, 255, 255, 0.13);
+      border-color: rgba(255, 255, 255, 0.22);
+      transform: scale(1.03);
+    }
+    .rank-1 .view-words-btn {
+      background: rgba(255, 215, 0, 0.1);
+      border-color: rgba(255, 215, 0, 0.28);
+      color: var(--gold);
+    }
+    .rank-1 .view-words-btn:hover {
+      background: rgba(255, 215, 0, 0.18);
+      border-color: rgba(255, 215, 0, 0.5);
+    }
+
+    .pending-label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ─── Words Modal ─── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: rgba(12, 20, 38, 0.96);
+      backdrop-filter: blur(30px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      width: 100%;
+      max-width: 460px;
+      max-height: 82vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+      transform: translateY(24px) scale(0.96);
+      transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-overlay.active .modal-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-top {
+      padding: 2rem 2rem 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .modal-x {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.55);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .modal-x:hover { background: rgba(255, 255, 255, 0.14); color: #fff; }
+
+    .modal-avatar { font-size: 3.2rem; display: block; margin-bottom: 0.5rem; }
+    .modal-name { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .modal-label { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 2.5px; text-transform: uppercase; }
+
+    .modal-body {
+      padding: 1.4rem 1.6rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .modal-word-row {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-left: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 0.95rem 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-word-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .modal-word-def {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.58);
+      line-height: 1.55;
+    }
+
+    .modal-empty {
+      text-align: center;
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2.5rem 0;
+    }
+
+    /* ─── Footer ─── */
+    .page-footer {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ─── Animations ─── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 500px) {
+      .cards-grid { grid-template-columns: 1fr; }
+      .page-title { font-size: 2rem; letter-spacing: 2px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="page-header">
+      <span class="header-trophy">🏆</span>
+      <h1 class="page-title">Battle Results</h1>
+      <p class="page-subtitle">Final Standings</p>
+      <div class="live-badge" id="live-badge">
+        <span class="live-dot"></span>
+        LIVE
+      </div>
+    </header>
+
+    <!-- Player Cards -->
+    <div class="cards-grid" id="cards-grid">
+      <!-- Injected by JS -->
+    </div>
+
+    <!-- Buttons -->
+    <div class="page-footer">
+      <button class="classic-btn" id="mp-home-btn">🏠 Home</button>
+      <button class="classic-btn primary" id="mp-play-btn">🔄 Play Again</button>
+    </div>
+
+  </div>
+
+  <!-- Words Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-top">
+        <button class="modal-x" id="modal-x">✕</button>
+        <span class="modal-avatar" id="modal-avatar">🤓</span>
+        <div class="modal-name" id="modal-name">Player</div>
+        <div class="modal-label">Words Learned This Session</div>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Words injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="core_dictionary.js"></script>
+  <script src="core_shared_state.js"></script>
+  <script src="multiplayer_results.js"></script>
+</body>
+</html>
