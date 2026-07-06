@@ -47,15 +47,29 @@ const ResultsController = {
       wordsList: document.getElementById('res-words-list'),
       playAgainBtn: document.getElementById('play-again-btn'),
       goHomeBtn: document.getElementById('go-home-btn'),
-      battleContainer: document.getElementById('battle-verdict-container'),
-      battleOutcome: document.getElementById('battle-outcome'),
-      opponentName: document.getElementById('opponent-name'),
-      opponentPoints: document.getElementById('opponent-points'),
+      leaderboardCard: document.getElementById('mp-leaderboard-card'),
+      leaderboardBody: document.getElementById('mp-leaderboard-body'),
+      insightsModal: document.getElementById('player-insights-modal'),
+      insightsCloseBtn: document.getElementById('insights-close-btn'),
+      insightsAvatar: document.getElementById('insights-avatar'),
+      insightsName: document.getElementById('insights-name'),
+      insightsWordsContainer: document.getElementById('insights-words-container'),
       playerAvatarDisplay: document.getElementById('player-avatar-display')
     };
 
     if (this.state.domCache.playerAvatarDisplay) {
       this.state.domCache.playerAvatarDisplay.textContent = this.state.gameData.avatar || '🤓';
+    }
+
+    // Close modal on button click or overlay click
+    const { insightsModal, insightsCloseBtn } = this.state.domCache;
+    if (insightsCloseBtn) {
+      insightsCloseBtn.addEventListener('click', () => insightsModal.classList.remove('active'));
+    }
+    if (insightsModal) {
+      insightsModal.addEventListener('click', (e) => {
+        if (e.target === insightsModal) insightsModal.classList.remove('active');
+      });
     }
   },
 
@@ -85,56 +99,101 @@ const ResultsController = {
   },
 
   updateBattleVerdict(players) {
-    const { domCache, gameData } = this.state;
-    if (!domCache.battleContainer) return;
+    const { domCache } = this.state;
+    if (!domCache.leaderboardCard || !domCache.leaderboardBody) return;
 
-    const myName = localStorage.getItem('osmosis_user') || 'Guest';
-    const otherPlayers = players.filter(p => p.name !== myName);
+    // Sort by score desc, then time asc
+    const sorted = [...players].sort((a, b) => {
+      if ((b.score || 0) !== (a.score || 0)) return (b.score || 0) - (a.score || 0);
+      return (a.time || 0) - (b.time || 0);
+    });
 
-    if (otherPlayers.length > 0) {
-      domCache.battleContainer.style.display = 'block';
-      
-      // Check if everyone has a score submitted
-      const allFinished = players.every(p => p.score !== undefined && p.score !== null);
-      
-      if (!allFinished) {
-        domCache.battleOutcome.textContent = "WAITING FOR OTHERS...";
-        domCache.battleOutcome.style.color = "var(--text-secondary)";
-        domCache.opponentName.textContent = "Multiplayer Battle";
-        domCache.opponentPoints.textContent = "Calculating...";
-        return;
-      }
+    // Show the leaderboard card
+    domCache.leaderboardCard.style.display = 'block';
 
-      // If everyone finished, find the winner using tie-breaking (Faster time wins)
-      const myScore = gameData.score || 0;
-      const myTime = gameData.totalTime || 0;
+    // Rank medal emoji
+    const medals = ['🥇', '🥈', '🥉'];
+    const trophyIcons = ['🏆', '🏆', '🏆'];
+    const rankColors = ['#d69e2e', '#a0aec0', '#9c4221'];
 
-      const sortedPlayers = [...players].sort((a, b) => {
-        if ((b.score || 0) !== (a.score || 0)) return (b.score || 0) - (a.score || 0);
-        return (a.time || 0) - (b.time || 0);
+    domCache.leaderboardBody.innerHTML = '';
+    sorted.forEach((player, i) => {
+      const rank = i + 1;
+      const isWinner = rank === 1;
+      const hasScore = player.score !== undefined && player.score !== null;
+      const scoreText = hasScore ? player.score.toLocaleString() : '...';
+      const timeStr = hasScore && typeof sharedState !== 'undefined'
+        ? sharedState.getFormattedTime(player.time || 0)
+        : '—';
+      const avatar = player.avatar || '🤓';
+      const medal = medals[i] || '';
+      const trophyColor = rankColors[i] || '#a0aec0';
+
+      const tr = document.createElement('tr');
+      if (isWinner) tr.classList.add('winner-row');
+      if (rank === 2) tr.classList.add('rank-2');
+      if (rank === 3) tr.classList.add('rank-3');
+      tr.style.cursor = 'pointer';
+
+      tr.innerHTML = `
+        <td style="text-align: center;">
+          <span class="mp-rank">${rank}</span>
+          ${medal ? `<span class="mp-rank-medal">${medal}</span>` : ''}
+        </td>
+        <td>
+          <div class="mp-player-col">
+            <div class="mp-avatar">${avatar}</div>
+            <div>
+              <div class="mp-name">
+                ${player.name}
+                ${isWinner ? '<span class="mp-winner-tag">WINNER</span>' : ''}
+              </div>
+              <div style="font-size: 0.8rem; color: #a0aec0; margin-top: 2px;">Time: ${timeStr}</div>
+            </div>
+          </div>
+        </td>
+        <td class="right-align">
+          <span class="mp-score">${scoreText}</span>
+          ${rank <= 3 ? `<span class="mp-score-trophy" style="color: ${trophyColor};">🏆</span>` : ''}
+        </td>
+      `;
+
+      // Click to open player insights
+      tr.addEventListener('click', () => this.openPlayerInsights(player));
+      domCache.leaderboardBody.appendChild(tr);
+    });
+  },
+
+  openPlayerInsights(player) {
+    const { domCache } = this.state;
+    if (!domCache.insightsModal) return;
+
+    // Populate header
+    domCache.insightsAvatar.textContent = player.avatar || '🤓';
+    domCache.insightsName.textContent = player.name;
+
+    // Populate words list
+    const words = player.words || [];
+    const meanings = player.meanings || {};
+    const container = domCache.insightsWordsContainer;
+    container.innerHTML = '';
+
+    if (words.length === 0) {
+      container.innerHTML = '<p class="insights-empty">No words recorded for this player yet.</p>';
+    } else {
+      words.forEach(word => {
+        const def = meanings[word] || 'Definition not available.';
+        const item = document.createElement('div');
+        item.className = 'insights-word-item';
+        item.innerHTML = `
+          <div class="insights-word-title">${word}</div>
+          <p class="insights-word-def">${def}</p>
+        `;
+        container.appendChild(item);
       });
-
-      const winner = sortedPlayers[0];
-
-      // UI Polish for the verdict
-      if (winner.name === myName) {
-        domCache.battleOutcome.textContent = "VICTORY";
-        domCache.battleOutcome.style.color = "#4caf50";
-      } else {
-        domCache.battleOutcome.textContent = "DEFEAT";
-        domCache.battleOutcome.style.color = "#f44336";
-      }
-
-      // Show the top opponent's score and time in the sub-box
-      const topOpponent = otherPlayers.sort((a, b) => {
-        if ((b.score || 0) !== (a.score || 0)) return (b.score || 0) - (a.score || 0);
-        return (a.time || 0) - (b.time || 0);
-      })[0];
-      
-      const oppTimeStr = typeof sharedState !== 'undefined' ? sharedState.getFormattedTime(topOpponent.time || 0) : '...';
-      domCache.opponentName.textContent = `Top Opponent: ${topOpponent.name}`;
-      domCache.opponentPoints.textContent = `${topOpponent.score} pts (Time: ${oppTimeStr})`;
     }
+
+    domCache.insightsModal.classList.add('active');
   },
 
   renderStageScores() {

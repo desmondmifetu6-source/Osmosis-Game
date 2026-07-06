@@ -234,6 +234,287 @@
       to {
         opacity: 1;
       }
+    /* Multiplayer Leaderboard Styles */
+    .mp-leaderboard-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      margin-bottom: 3rem;
+      animation: fadeInUp 1s ease-out;
+      color: #333;
+      font-family: 'Inter', sans-serif;
+      display: none; /* hidden by default */
+    }
+    
+    .mp-leaderboard-header {
+      text-align: center;
+      padding: 2rem 0 1rem;
+    }
+    
+    .mp-leaderboard-header .trophy-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    
+    .mp-leaderboard-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #1a202c;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    
+    .mp-leaderboard-subtitle {
+      font-size: 0.9rem;
+      color: #718096;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      display: inline-block;
+    }
+    .mp-leaderboard-subtitle::before, .mp-leaderboard-subtitle::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 1px;
+      background: #e2e8f0;
+    }
+    .mp-leaderboard-subtitle::before { right: 100%; margin-right: 15px; }
+    .mp-leaderboard-subtitle::after { left: 100%; margin-left: 15px; }
+
+    .mp-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .mp-table th {
+      text-align: left;
+      padding: 1rem 2rem;
+      color: #a0aec0;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .mp-table th.right-align, .mp-table td.right-align {
+      text-align: right;
+    }
+
+    .mp-table td {
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid #edf2f7;
+      vertical-align: middle;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .mp-table tr:hover td {
+      background: #f7fafc;
+    }
+
+    .mp-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .mp-rank {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #4a5568;
+      display: inline-block;
+      width: 30px;
+      text-align: center;
+    }
+
+    .mp-rank-medal {
+      font-size: 1.8rem;
+      margin-left: 15px;
+      vertical-align: middle;
+    }
+
+    .mp-table tr.winner-row td {
+      background: #fffaf0;
+    }
+    .mp-table tr.winner-row:hover td {
+      background: #feebc8;
+    }
+    .mp-table tr.winner-row .mp-rank { color: #d69e2e; }
+    .mp-table tr.winner-row .mp-score { color: #d69e2e; }
+
+    .mp-player-col {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .mp-avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .mp-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2d3748;
+    }
+
+    .mp-winner-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #d69e2e;
+      border: 1px solid #d69e2e;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-left: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .mp-score {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #4a5568;
+    }
+
+    .mp-score-trophy {
+      font-size: 1.5rem;
+      margin-left: 15px;
+      color: #a0aec0;
+      vertical-align: middle;
+    }
+    .winner-row .mp-score-trophy { color: #d69e2e; }
+    .rank-2 .mp-score-trophy { color: #a0aec0; }
+    .rank-3 .mp-score-trophy { color: #9c4221; }
+
+    /* Player Insights Modal */
+    .insights-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .insights-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .insights-card {
+      background: #ffffff;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 500px;
+      max-height: 80vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .insights-overlay.active .insights-card {
+      transform: translateY(0);
+    }
+
+    .insights-header {
+      padding: 2rem 2rem 1.5rem;
+      border-bottom: 1px solid #edf2f7;
+      text-align: center;
+      position: relative;
+    }
+
+    .insights-close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #a0aec0;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .insights-close-btn:hover { color: #4a5568; }
+
+    .insights-avatar {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .insights-name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1a202c;
+      margin: 0;
+    }
+
+    .insights-subtitle {
+      font-size: 0.9rem;
+      color: #718096;
+      margin-top: 5px;
+    }
+
+    .insights-body {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      background: #f7fafc;
+      flex: 1;
+    }
+
+    .insights-word-item {
+      background: #ffffff;
+      border: 1px solid #edf2f7;
+      border-left: 4px solid #4299e1;
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .insights-word-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2d3748;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 0 5px 0;
+    }
+
+    .insights-word-def {
+      font-size: 0.95rem;
+      color: #4a5568;
+      margin: 0;
+      line-height: 1.5;
+    }
+    
+    .insights-empty {
+      text-align: center;
+      color: #a0aec0;
+      font-style: italic;
+      padding: 2rem 0;
     }
 
     /* Mobile Adjustments */
@@ -344,17 +625,25 @@
 
   <div class="results-container">
 
-    <!-- Battle Verdict (Multiplayer Only) -->
-    <div id="battle-verdict-container"
-      style="display: none; text-align: center; margin-bottom: 3rem; animation: fadeInDown 1s ease-out;">
-      <div id="battle-outcome"
-        style="font-weight: 900; letter-spacing: 10px; margin-bottom: 1rem; text-shadow: 0 0 20px rgba(255,215,0,0.6); font-size: 5rem;">
-        LOADING...</div>
-      <div id="opponent-score-box"
-        style="background: rgba(255,255,255,0.1); display: inline-block; padding: 1rem 2rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2);">
-        <span id="opponent-name" style="font-weight: 700; color: #ffd700;">Opponent</span>: <span
-          id="opponent-points">0</span> pts
+    <!-- Multiplayer Leaderboard -->
+    <div id="mp-leaderboard-card" class="mp-leaderboard-card">
+      <div class="mp-leaderboard-header">
+        <div class="trophy-icon">🏆</div>
+        <div class="mp-leaderboard-title">MULTIPLAYER LEADERBOARD</div>
+        <div class="mp-leaderboard-subtitle">TOP PLAYERS</div>
       </div>
+      <table class="mp-table">
+        <thead>
+          <tr>
+            <th style="width: 100px; text-align: center;">RANK</th>
+            <th>PLAYER</th>
+            <th class="right-align">SCORE</th>
+          </tr>
+        </thead>
+        <tbody id="mp-leaderboard-body">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
     </div>
 
     <!-- Hero Section -->
@@ -386,6 +675,21 @@
       <button id="go-home-btn" class="classic-btn blue-gradient">The End / Proceed</button>
     </div>
 
+  </div>
+
+  <!-- Player Insights Modal -->
+  <div class="insights-overlay" id="player-insights-modal">
+    <div class="insights-card">
+      <div class="insights-header">
+        <button class="insights-close-btn" id="insights-close-btn">×</button>
+        <div class="insights-avatar" id="insights-avatar">🤓</div>
+        <h3 class="insights-name" id="insights-name">Player</h3>
+        <div class="insights-subtitle">Learning Profile</div>
+      </div>
+      <div class="insights-body" id="insights-words-container">
+        <!-- JS populates this -->
+      </div>
+    </div>
   </div>
 
   <script src="/socket.io/socket.io.js"></script>
