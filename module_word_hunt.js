@@ -642,6 +642,10 @@ document.addEventListener('DOMContentLoaded', () => {
   huntDropdownSkip.addEventListener('click', () => {
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
 
+    // Deduct the points gained for finding the word since they skipped the definition test
+    currentScore = Math.max(0, currentScore - 100);
+    scoreEl.textContent = `${currentScore} pts`;
+
     activeDropdownTestAnswers.forEach(ans => {
       const container = document.getElementById(ans.id);
       const btn = container.querySelector('.custom-dropdown-btn');
