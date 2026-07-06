@@ -148,8 +148,13 @@ const Stage7Controller = {
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
     sharedState.showStageScoreThen('stage7', "Stage 7: Final Recall Test", stageScore, () => {
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_stage8_complete.html');
-      else window.location.href = '10b_stage8_complete.html';
+      if (this.state.gameData && this.state.gameData.isStemHunt) {
+        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('module_word_hunt.html?celebration=true');
+        else window.location.href = 'module_word_hunt.html?celebration=true';
+      } else {
+        if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10b_stage8_complete.html');
+        else window.location.href = '10b_stage8_complete.html';
+      }
     });
   },
 

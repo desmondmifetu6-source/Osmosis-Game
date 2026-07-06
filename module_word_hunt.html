@@ -655,6 +655,94 @@
         width: 250px;
       }
     }
+
+    @keyframes spinTrophy {
+      0% { transform: rotate(-15deg) scale(1); }
+      25% { transform: rotate(10deg) scale(1.1); }
+      50% { transform: rotate(-10deg) scale(1.05); }
+      75% { transform: rotate(8deg) scale(1.1); }
+      100% { transform: rotate(-15deg) scale(1); }
+    }
+
+    .celebration-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9000;
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .celebration-overlay.active {
+      display: flex;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .celebration-card {
+      background: rgba(255, 255, 255, 0.38);
+      backdrop-filter: blur(28px) saturate(200%);
+      -webkit-backdrop-filter: blur(28px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-top: 2px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+      border-radius: 40px;
+      padding: 3rem 3.5rem;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+    }
+
+    .trophy-icon {
+      font-size: 6rem;
+      display: block;
+      animation: spinTrophy 2s ease-in-out infinite;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .celebration-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.3rem;
+    }
+
+    .celebration-sub {
+      font-size: 1.05rem;
+      color: #475569;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .thanks-btn {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: #78350f;
+      border: none;
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .thanks-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(245, 158, 11, 0.5);
+    }
   </style>
 </head>
 
@@ -775,6 +863,26 @@
       <button id="success-banner-thanks" class="def-continue-btn" style="margin-top: 1.5rem; padding: 1rem 3rem; background: #fff; color: #b45309; width: auto; font-size: 1.3rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">Thanks!</button>
     </div>
   </div>
+
+  <!-- Grand Completion Celebration Overlay -->
+  <div class="celebration-overlay" id="recall-celebration">
+    <div class="celebration-card">
+      <span class="trophy-icon">🌟</span>
+      <div class="celebration-title">Mastered!</div>
+      <div class="celebration-sub">You've completed the Cognitive Consolidation Stage.<br>Your memory is getting
+        stronger every second!</div>
+
+      <!-- Lottie Thumbs Up Animation -->
+      <dotlottie-player id="thumbs-lottie"
+        src="https://lottie.host/8db0f765-e8df-445e-83ef-e11d1fa7cfbd/BzKFENfhPZ.lottie" background="transparent"
+        speed="1" style="width: 160px; height: 160px; margin: 0 auto;" loop autoplay>
+      </dotlottie-player>
+
+      <button class="thanks-btn" id="recall-thanks-btn">Thanks! 🙏</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 
   <!-- Confetti Library for Word Completion Celebrations -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>

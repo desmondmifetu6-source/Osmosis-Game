@@ -198,97 +198,33 @@
     }
 
     @media (max-width: 480px) {
-      .recall-card { padding: 2rem 1.25rem; }
-      .nd-word { font-size: 1.8rem; }
-      .nd-meaning { font-size: 1.1rem; }
-      .nd-input input, .nd-input textarea { font-size: 1.1rem; padding: 1rem; }
-      .nd-reveal { padding: 1.5rem; }
-      .nd-reveal strong { font-size: 1.25rem; }
-    }
-    @keyframes spinTrophy {
-      0%   { transform: rotate(-15deg) scale(1); }
-      25%  { transform: rotate(10deg)  scale(1.1); }
-      50%  { transform: rotate(-10deg) scale(1.05); }
-      75%  { transform: rotate(8deg)  scale(1.1); }
-      100% { transform: rotate(-15deg) scale(1); }
+      .recall-card {
+        padding: 2rem 1.25rem;
+      }
+
+      .nd-word {
+        font-size: 1.8rem;
+      }
+
+      .nd-meaning {
+        font-size: 1.1rem;
+      }
+
+      .nd-input input,
+      .nd-input textarea {
+        font-size: 1.1rem;
+        padding: 1rem;
+      }
+
+      .nd-reveal {
+        padding: 1.5rem;
+      }
+
+      .nd-reveal strong {
+        font-size: 1.25rem;
+      }
     }
 
-    .celebration-overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      z-index: 9000;
-      background: rgba(15, 23, 42, 0.45);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .celebration-overlay.active {
-      display: flex;
-      animation: fadeIn 0.5s ease;
-    }
-
-    .celebration-card {
-      background: rgba(255, 255, 255, 0.38);
-      backdrop-filter: blur(28px) saturate(200%);
-      -webkit-backdrop-filter: blur(28px) saturate(200%);
-      border: 1px solid rgba(255,255,255,0.55);
-      border-top: 2px solid rgba(255,255,255,0.85);
-      box-shadow: 0 25px 60px rgba(0,0,0,0.2);
-      border-radius: 40px;
-      padding: 3rem 3.5rem;
-      text-align: center;
-      max-width: 420px;
-      width: 90%;
-    }
-
-    .trophy-icon {
-      font-size: 6rem;
-      display: block;
-      animation: spinTrophy 2s ease-in-out infinite;
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-
-    .celebration-title {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: #0f172a;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 0.3rem;
-    }
-
-    .celebration-sub {
-      font-size: 1.05rem;
-      color: #475569;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-
-    .thanks-btn {
-      background: linear-gradient(135deg, #fbbf24, #f59e0b);
-      color: #78350f;
-      border: none;
-      padding: 1rem 3rem;
-      border-radius: 50px;
-      font-size: 1.3rem;
-      font-weight: 800;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(245,158,11,0.4);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .thanks-btn:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 15px 35px rgba(245,158,11,0.5);
-    }
 
   </style>
 </head>
@@ -299,20 +235,23 @@
     <div class="card recall-card">
       <div class="header">
         <div style="text-align: left;">
-          <h2 style="margin-bottom: 0.2rem; font-size: 1.4rem;">⚡ Final Recall Test</h2>
+          <h2 style="margin-bottom: 0.2rem; font-size: 1.4rem;">Final Recall Test</h2>
           <p style="font-size: 0.9rem; color: #64748b; font-weight: 600; margin: 0;">Cognitive Consolidation Stage</p>
         </div>
-        <div id="nd-progress" style="font-size:1.5rem; font-weight:bold; color: #0f172a; background: rgba(255,255,255,0.6); padding: 0.3rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.8); white-space: nowrap;">1 / 10</div>
+        <div id="nd-progress"
+          style="font-size:1.5rem; font-weight:bold; color: #0f172a; background: rgba(255,255,255,0.6); padding: 0.3rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.8); white-space: nowrap;">
+          1 / 10</div>
       </div>
       <div id="nd-memory-box" class="nd-memory-box" style="display: none;"></div>
 
       <div id="nd-input-wrap" style="display:none;">
         <div class="nd-input">
-          <input type="text" id="nd-word-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-            placeholder="Type the word you saw">
+          <input type="text" id="nd-word-input" autocomplete="off" autocorrect="off" autocapitalize="off"
+            spellcheck="false" placeholder="Type the word you saw">
         </div>
         <div class="nd-input">
-          <textarea id="nd-meaning-input" placeholder="Type the meaning you saw" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+          <textarea id="nd-meaning-input" placeholder="Type the meaning you saw" autocomplete="off" autocorrect="off"
+            autocapitalize="off" spellcheck="false"></textarea>
         </div>
       </div>
 
@@ -323,36 +262,14 @@
       </div>
 
       <div style="display:flex; gap: 12px; justify-content:center; margin-top:1rem;">
-        <button id="nd-skip-btn" class="classic-btn" style="flex: 1; width: auto; background: rgba(255,255,255,0.5); color: #475569; border: 1.5px solid rgba(0,0,0,0.1); box-shadow: none; backdrop-filter: blur(10px); margin-bottom: 0;">Skip</button>
-        <button id="nd-main-btn" class="classic-btn blue-gradient" style="flex: 1; width: auto; margin-bottom: 0;">Continue</button>
+        <button id="nd-skip-btn" class="classic-btn"
+          style="flex: 1; width: auto; background: rgba(255,255,255,0.5); color: #475569; border: 1.5px solid rgba(0,0,0,0.1); box-shadow: none; backdrop-filter: blur(10px); margin-bottom: 0;">Skip</button>
+        <button id="nd-main-btn" class="classic-btn blue-gradient"
+          style="flex: 1; width: auto; margin-bottom: 0;">Continue</button>
       </div>
     </div>
   </div>
-  <!-- Grand Completion Celebration Overlay -->
-  <div class="celebration-overlay" id="recall-celebration">
-    <div class="celebration-card">
-      <span class="trophy-icon">🌟</span>
-      <div class="celebration-title">Mastered!</div>
-      <div class="celebration-sub">You've completed the Cognitive Consolidation Stage.<br>Your memory is getting stronger every second!</div>
 
-      <!-- Lottie Thumbs Up Animation -->
-      <dotlottie-player
-        id="thumbs-lottie"
-        src="https://lottie.host/8db0f765-e8df-445e-83ef-e11d1fa7cfbd/BzKFENfhPZ.lottie"
-        background="transparent"
-        speed="1"
-        style="width: 160px; height: 160px; margin: 0 auto;"
-        loop
-        autoplay>
-      </dotlottie-player>
-
-      <button class="thanks-btn" id="recall-thanks-btn">Thanks! 🙏</button>
-    </div>
-  </div>
-
-  <!-- Confetti + Lottie Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.js"></script>
 
   <script src="core_dictionary.js"></script>
   <script src="core_shared_state.js"></script>
@@ -362,7 +279,7 @@
     // Skip button logic
     const skipBtn = document.getElementById('nd-skip-btn');
     if (skipBtn) {
-      skipBtn.addEventListener('click', function() {
+      skipBtn.addEventListener('click', function () {
         if (typeof Stage7Controller !== 'undefined') {
           // Reveal answer if in answer phase, then advance
           const sc = Stage7Controller;
@@ -384,50 +301,7 @@
       });
     }
 
-    // Grand celebration
-    let glitterInterval = null;
 
-    function launchGrandCelebration() {
-      const overlay = document.getElementById('recall-celebration');
-      if (overlay) overlay.classList.add('active');
-
-      function shootGlitter() {
-        const opts = {
-          spread: 70, ticks: 120, gravity: 0.85, decay: 0.91,
-          startVelocity: 50, scalar: 1.6, zIndex: 9999,
-          shapes: ['star', 'circle'],
-          colors: ['#F5C842','#E8B4B8','#C9A96E','#D4AF37','#ffffff','#B8860B','#E8D5B7']
-        };
-        confetti({ ...opts, particleCount: 70, angle: 60, origin: { x: 0, y: 1 } });
-        confetti({ ...opts, particleCount: 70, angle: 120, origin: { x: 1, y: 1 } });
-        confetti({ ...opts, particleCount: 40, angle: 90, origin: { x: 0.5, y: 0 } });
-      }
-
-      shootGlitter();
-      glitterInterval = setInterval(shootGlitter, 900);
-    }
-
-    document.getElementById('recall-thanks-btn').addEventListener('click', function() {
-      if (glitterInterval) { clearInterval(glitterInterval); glitterInterval = null; }
-      const overlay = document.getElementById('recall-celebration');
-      if (overlay) overlay.classList.remove('active');
-      // Navigate home after thanks
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('01_home_menu.html');
-      else window.location.href = '01_home_menu.html';
-    });
-
-    // Hook into Stage7Controller finishStage to show celebration instead of navigating away
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof Stage7Controller !== 'undefined') {
-        const origFinish = Stage7Controller.finishStage.bind(Stage7Controller);
-        Stage7Controller.finishStage = function() {
-          if (this.state.isFinishing) return;
-          this.state.isFinishing = true;
-          if (typeof AudioManager !== 'undefined') AudioManager.play('success');
-          launchGrandCelebration();
-        };
-      }
-    });
   </script>
 
 </html>

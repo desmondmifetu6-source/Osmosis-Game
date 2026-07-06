@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Progression Data (Difficulty configs)
   const DIFFICULTY_CONFIGS = {
-    easy: { lvl: 'Easy', words: 3, maxLen: 5, grid: 6, dirs: [[0,1], [1,0]] },
-    medium: { lvl: 'Medium', words: 5, maxLen: 7, grid: 8, dirs: [[0,1], [1,0], [1,1]] },
-    intellect: { lvl: 'Intellect', words: 7, maxLen: 10, grid: 10, dirs: [[0,1], [1,0], [1,1], [-1,1], [0,-1], [-1,0], [-1,-1], [1,-1]] }
+    easy: { lvl: 'Easy', words: 3, maxLen: 5, grid: 6, dirs: [[0, 1], [1, 0]] },
+    medium: { lvl: 'Medium', words: 5, maxLen: 7, grid: 8, dirs: [[0, 1], [1, 0], [1, 1]] },
+    intellect: { lvl: 'Intellect', words: 7, maxLen: 10, grid: 10, dirs: [[0, 1], [1, 0], [1, 1], [-1, 1], [0, -1], [-1, 0], [-1, -1], [1, -1]] }
   };
 
   let currentLevelObj = DIFFICULTY_CONFIGS.medium;
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastValidEndCell = null;
   let selectionPill = null;
   let gameInProgress = false;
-  
+
   const pillColors = ["#818cf8", "#34d399", "#f472b6", "#fb7185", "#38bdf8", "#fbbf24", "#a78bfa"];
   let colorIndex = 0;
 
@@ -103,11 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
   function initGame() {
     gameInProgress = true;
     if (typeof initModal === 'function') initModal();
-    
+
     // Set parameters based on chosen difficulty
     gridSize = currentLevelObj.grid;
     numWords = currentLevelObj.words;
-    
+
     // Update UI for level
     textLayer.style.setProperty('--grid-size', gridSize);
     lvlBadge.textContent = currentLevelObj.lvl;
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     winOverlay.classList.remove('active');
     promoStar.classList.remove('active');
     winMessage.textContent = "Great job!";
-    
+
     let allWords = [];
     if (typeof window.STEMDictionary !== 'undefined') {
       // Use wordBank (the correct property name) to get all letters
@@ -135,32 +135,32 @@ document.addEventListener('DOMContentLoaded', () => {
         allWords.push(...window.STEMDictionary.getWordsByLetter(l));
       });
     }
-    
+
     if (allWords.length === 0) {
       // Fallback only if dictionary truly failed to load
       const fallbacks = [
-        {word:"ATOM", definition:"Smallest unit of matter"},
-        {word:"CELL", definition:"Basic unit of life"},
-        {word:"GENE", definition:"A unit of heredity"},
-        {word:"LENS", definition:"A curved piece of glass that focuses light"},
-        {word:"BOND", definition:"A force holding atoms together"},
-        {word:"MASS", definition:"The amount of matter in an object"},
-        {word:"WAVE", definition:"A disturbance that transfers energy"},
-        {word:"ACID", definition:"A substance with a pH below 7"},
-        {word:"VEIN", definition:"A blood vessel carrying blood to the heart"},
-        {word:"CORE", definition:"The central part of the Earth"}
+        { word: "ATOM", definition: "Smallest unit of matter" },
+        { word: "CELL", definition: "Basic unit of life" },
+        { word: "GENE", definition: "A unit of heredity" },
+        { word: "LENS", definition: "A curved piece of glass that focuses light" },
+        { word: "BOND", definition: "A force holding atoms together" },
+        { word: "MASS", definition: "The amount of matter in an object" },
+        { word: "WAVE", definition: "A disturbance that transfers energy" },
+        { word: "ACID", definition: "A substance with a pH below 7" },
+        { word: "VEIN", definition: "A blood vessel carrying blood to the heart" },
+        { word: "CORE", definition: "The central part of the Earth" }
       ];
       allWords = fallbacks;
     }
 
     let uniqueMap = new Map();
     allWords.forEach(w => {
-       const clean = w.word.toUpperCase().replace(/[^A-Z]/g, '');
-       if (clean.length >= 3 && clean.length <= currentLevelObj.maxLen) {
-           if(!uniqueMap.has(clean)) {
-               uniqueMap.set(clean, { word: clean, definition: w.definition || "A scientific term." });
-           }
-       }
+      const clean = w.word.toUpperCase().replace(/[^A-Z]/g, '');
+      if (clean.length >= 3 && clean.length <= currentLevelObj.maxLen) {
+        if (!uniqueMap.has(clean)) {
+          uniqueMap.set(clean, { word: clean, definition: w.definition || "A scientific term." });
+        }
+      }
     });
     let validWords = Array.from(uniqueMap.values());
 
@@ -177,12 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const j = Math.floor(Math.random() * (i + 1));
       [availableWords[i], availableWords[j]] = [availableWords[j], availableWords[i]];
     }
-    
+
     const pickedObjs = availableWords.slice(0, numWords);
     targetWords = pickedObjs.map(obj => obj.word);
-    
+
     pickedObjs.forEach(obj => {
-       wordDefinitions[obj.word] = obj.definition;
+      wordDefinitions[obj.word] = obj.definition;
     });
 
     usedWords.push(...targetWords);
@@ -214,8 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
           placeWord(word, r, c, d[0], d[1]);
           // Save coordinates for the Magic Hint system
           wordCoordinates[word] = {
-            start: {r, c},
-            end: {r: r + (word.length - 1)*d[0], c: c + (word.length - 1)*d[1]}
+            start: { r, c },
+            end: { r: r + (word.length - 1) * d[0], c: c + (word.length - 1) * d[1] }
           };
           placed = true;
           successfullyPlaced.push(word);
@@ -226,38 +226,38 @@ document.addEventListener('DOMContentLoaded', () => {
     targetWords = successfullyPlaced; // Drop any words that couldn't fit
 
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    for(let i=0; i<gridSize; i++) {
-       for(let j=0; j<gridSize; j++) {
-          if(grid[i][j] === '') {
-             grid[i][j] = letters.charAt(Math.floor(Math.random() * letters.length));
-          }
-       }
+    for (let i = 0; i < gridSize; i++) {
+      for (let j = 0; j < gridSize; j++) {
+        if (grid[i][j] === '') {
+          grid[i][j] = letters.charAt(Math.floor(Math.random() * letters.length));
+        }
+      }
     }
   }
 
   function canPlace(word, r, c, dr, dc) {
-    for(let i=0; i<word.length; i++) {
-       const nr = r + i*dr;
-       const nc = c + i*dc;
-       if(nr < 0 || nr >= gridSize || nc < 0 || nc >= gridSize) return false;
-       if(grid[nr][nc] !== '' && grid[nr][nc] !== word[i]) return false;
+    for (let i = 0; i < word.length; i++) {
+      const nr = r + i * dr;
+      const nc = c + i * dc;
+      if (nr < 0 || nr >= gridSize || nc < 0 || nc >= gridSize) return false;
+      if (grid[nr][nc] !== '' && grid[nr][nc] !== word[i]) return false;
     }
     return true;
   }
 
   function placeWord(word, r, c, dr, dc) {
-    for(let i=0; i<word.length; i++) {
-       const nr = r + i*dr;
-       const nc = c + i*dc;
-       grid[nr][nc] = word[i];
+    for (let i = 0; i < word.length; i++) {
+      const nr = r + i * dr;
+      const nc = c + i * dc;
+      grid[nr][nc] = word[i];
     }
   }
 
   function renderGrid() {
     textLayer.innerHTML = '';
-    
-    for(let r=0; r<gridSize; r++) {
-      for(let c=0; c<gridSize; c++) {
+
+    for (let r = 0; r < gridSize; r++) {
+      for (let c = 0; c < gridSize; c++) {
         const cell = document.createElement('div');
         cell.className = 'hunt-cell';
         cell.textContent = grid[r][c];
@@ -269,8 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', handlePointerMove);
     document.addEventListener('mouseup', handlePointerUp);
 
-    textLayer.addEventListener('touchstart', handlePointerDown, {passive: false});
-    document.addEventListener('touchmove', handlePointerMove, {passive: false});
+    textLayer.addEventListener('touchstart', handlePointerDown, { passive: false });
+    document.addEventListener('touchmove', handlePointerMove, { passive: false });
     document.addEventListener('touchend', handlePointerUp);
   }
 
@@ -313,20 +313,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Interaction Logic ---
-  
+
   function getCellFromEvent(e) {
     let clientX, clientY;
-    if(e.touches && e.touches.length > 0) {
-       clientX = e.touches[0].clientX;
-       clientY = e.touches[0].clientY;
+    if (e.touches && e.touches.length > 0) {
+      clientX = e.touches[0].clientX;
+      clientY = e.touches[0].clientY;
     } else if (e.changedTouches && e.changedTouches.length > 0) {
-       clientX = e.changedTouches[0].clientX;
-       clientY = e.changedTouches[0].clientY;
+      clientX = e.changedTouches[0].clientX;
+      clientY = e.changedTouches[0].clientY;
     } else {
-       clientX = e.clientX;
-       clientY = e.clientY;
+      clientX = e.clientX;
+      clientY = e.clientY;
     }
-    
+
     const rect = textLayer.getBoundingClientRect();
     const x = clientX - rect.left;
     const y = clientY - rect.top;
@@ -339,8 +339,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const c = Math.floor(x / cw);
     const r = Math.floor(y / ch);
 
-    if(r >= 0 && r < gridSize && c >= 0 && c < gridSize) {
-        return {r, c};
+    if (r >= 0 && r < gridSize && c >= 0 && c < gridSize) {
+      return { r, c };
     }
     return null;
   }
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function handlePointerDown(e) {
     if (e.type === 'mousedown' && e.button !== 0) return;
     if (e.type === 'touchstart') e.preventDefault();
-    
+
     const cellPos = getCellFromEvent(e);
     if (!cellPos) return;
 
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dr = lastValidEndCell.r - startCell.r;
     const dc = lastValidEndCell.c - startCell.c;
     const steps = Math.max(Math.abs(dr), Math.abs(dc));
-    
+
     let wordStr = '';
     const stepR = steps === 0 ? 0 : dr / steps;
     const stepC = steps === 0 ? 0 : dc / steps;
@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Correct!
       if (typeof AudioManager !== 'undefined') AudioManager.play('success');
       foundWords.push(match);
-      
+
       const chip = document.getElementById('word-' + match);
       if (chip) chip.classList.add('found');
 
@@ -428,7 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selectionPill = null;
       }
     }
-    
+
     startCell = null;
     lastValidEndCell = null;
   }
@@ -442,13 +442,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const x2 = end.c * cw + cw / 2;
     const y2 = end.r * ch + ch / 2;
 
-    const distance = Math.sqrt((x2 - x1)**2 + (y2 - y1)**2);
+    const distance = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
     const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
 
     const centerX = (x1 + x2) / 2;
     const centerY = (y1 + y2) / 2;
 
-    const pillThickness = Math.min(cw, ch) * 0.8; 
+    const pillThickness = Math.min(cw, ch) * 0.8;
 
     pill.style.width = `${distance + pillThickness}px`;
     pill.style.height = `${pillThickness}px`;
@@ -468,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
     defContinueBtn.addEventListener('click', () => {
       if (typeof AudioManager !== 'undefined') AudioManager.play('click');
       defOverlay.classList.remove('active');
-      
+
       // Start the definition test
       const currentWord = defTitle.textContent;
       const currentDef = wordDefinitions[currentWord] || "A scientific term.";
@@ -487,49 +487,49 @@ document.addEventListener('DOMContentLoaded', () => {
     huntDropdownSkip.style.display = 'block';
 
     const stopWords = ['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 'from', 'by', 'of', 'in', 'is', 'are', 'was', 'were', 'it', 'that', 'this', 'with'];
-    
+
     // simple tokenization keeping punctuation separate
     const tokens = definition.match(/([a-zA-Z]+|[^a-zA-Z]+)/g) || [];
-    
+
     // find valid words to blank
     let validIndices = [];
     tokens.forEach((t, i) => {
-       if (/^[a-zA-Z]+$/.test(t) && t.length > 3 && !stopWords.includes(t.toLowerCase())) {
-           validIndices.push(i);
-       }
+      if (/^[a-zA-Z]+$/.test(t) && t.length > 3 && !stopWords.includes(t.toLowerCase())) {
+        validIndices.push(i);
+      }
     });
 
     // pick 1 to 2 blanks
     let numBlanks = Math.min(validIndices.length, Math.floor(Math.random() * 2) + 1);
     // shuffle validIndices
-    for(let i = validIndices.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [validIndices[i], validIndices[j]] = [validIndices[j], validIndices[i]];
+    for (let i = validIndices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [validIndices[i], validIndices[j]] = [validIndices[j], validIndices[i]];
     }
-    
+
     let chosenIndices = validIndices.slice(0, numBlanks);
     activeDropdownTestAnswers = [];
 
     let html = '';
     let blankCounter = 0;
-    
+
     tokens.forEach((t, i) => {
-        if (chosenIndices.includes(i)) {
-            let correctWord = t;
-            let trickWords = getRandomTrickWords(correctWord, 3);
-            let options = [correctWord, ...trickWords];
-            // shuffle options
-            for(let k = options.length - 1; k > 0; k--) {
-                const j = Math.floor(Math.random() * (k + 1));
-                [options[k], options[j]] = [options[j], options[k]];
-            }
-            
-            let id = `hunt-blank-${blankCounter}`;
-            activeDropdownTestAnswers.push({ id, correct: correctWord });
-            
-            let optionsHtml = options.map(opt => `<div class="custom-option" data-val="${opt}">${opt}</div>`).join('');
-            
-            html += `
+      if (chosenIndices.includes(i)) {
+        let correctWord = t;
+        let trickWords = getRandomTrickWords(correctWord, 3);
+        let options = [correctWord, ...trickWords];
+        // shuffle options
+        for (let k = options.length - 1; k > 0; k--) {
+          const j = Math.floor(Math.random() * (k + 1));
+          [options[k], options[j]] = [options[j], options[k]];
+        }
+
+        let id = `hunt-blank-${blankCounter}`;
+        activeDropdownTestAnswers.push({ id, correct: correctWord });
+
+        let optionsHtml = options.map(opt => `<div class="custom-option" data-val="${opt}">${opt}</div>`).join('');
+
+        html += `
               <div class="custom-dropdown-container" id="${id}">
                 <div class="custom-dropdown-btn" onclick="toggleDropdown(this)">
                   <span class="btn-text">Select</span>
@@ -540,133 +540,133 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
               </div>
             `;
-            blankCounter++;
-        } else {
-            html += t;
-        }
+        blankCounter++;
+      } else {
+        html += t;
+      }
     });
 
     if (blankCounter === 0) {
-        // Fallback if no valid blanks found (e.g. very short definition)
-        huntDropdownMeaning.innerHTML = definition;
+      // Fallback if no valid blanks found (e.g. very short definition)
+      huntDropdownMeaning.innerHTML = definition;
     } else {
-        huntDropdownMeaning.innerHTML = html;
-        
-        // Add option click listeners
-        const optionElements = huntDropdownMeaning.querySelectorAll('.custom-option');
-        optionElements.forEach(opt => {
-            opt.addEventListener('click', (e) => {
-                const container = opt.closest('.custom-dropdown-container');
-                const btn = container.querySelector('.custom-dropdown-btn');
-                const btnText = btn.querySelector('.btn-text');
-                btnText.textContent = opt.dataset.val;
-                btn.dataset.selected = opt.dataset.val;
-                btn.classList.add('filled');
-                container.classList.remove('open');
-                if (typeof AudioManager !== 'undefined') AudioManager.play('click');
-                e.stopPropagation();
-            });
+      huntDropdownMeaning.innerHTML = html;
+
+      // Add option click listeners
+      const optionElements = huntDropdownMeaning.querySelectorAll('.custom-option');
+      optionElements.forEach(opt => {
+        opt.addEventListener('click', (e) => {
+          const container = opt.closest('.custom-dropdown-container');
+          const btn = container.querySelector('.custom-dropdown-btn');
+          const btnText = btn.querySelector('.btn-text');
+          btnText.textContent = opt.dataset.val;
+          btn.dataset.selected = opt.dataset.val;
+          btn.classList.add('filled');
+          container.classList.remove('open');
+          if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+          e.stopPropagation();
         });
+      });
     }
 
     huntDropdownOverlay.classList.add('active');
   }
 
   // Make toggleDropdown global for onclick attribute
-  window.toggleDropdown = function(btn) {
+  window.toggleDropdown = function (btn) {
     const container = btn.closest('.custom-dropdown-container');
     // close others
     document.querySelectorAll('.custom-dropdown-container.open').forEach(c => {
-        if (c !== container) c.classList.remove('open');
+      if (c !== container) c.classList.remove('open');
     });
     container.classList.toggle('open');
   };
 
   // close dropdowns when clicking outside
   document.addEventListener('click', (e) => {
-      if (!e.target.closest('.custom-dropdown-container')) {
-          document.querySelectorAll('.custom-dropdown-container.open').forEach(c => {
-              c.classList.remove('open');
-          });
-      }
+    if (!e.target.closest('.custom-dropdown-container')) {
+      document.querySelectorAll('.custom-dropdown-container.open').forEach(c => {
+        c.classList.remove('open');
+      });
+    }
   });
 
   huntDropdownSubmit.addEventListener('click', () => {
-      if (huntDropdownSubmit.disabled) return;
-      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
-      
-      if (activeDropdownTestAnswers.length === 0) {
-          closeTestAndCheckWin();
-          return;
-      }
-      
-      let allCorrect = true;
-      activeDropdownTestAnswers.forEach(ans => {
-          const container = document.getElementById(ans.id);
-          const btn = container.querySelector('.custom-dropdown-btn');
-          const selected = btn.dataset.selected || '';
-          
-          btn.classList.remove('wrong', 'correct');
-          
-          if (selected.toLowerCase() === ans.correct.toLowerCase()) {
-              btn.classList.add('correct');
-          } else {
-              btn.classList.add('wrong');
-              allCorrect = false;
-              setTimeout(() => {
-                  if (btn.classList.contains('wrong')) btn.classList.remove('wrong');
-              }, 400);
-          }
-      });
-      
-      if (allCorrect) {
-          if (typeof AudioManager !== 'undefined') AudioManager.play('success');
-          
-          huntDropdownFeedback.textContent = '';
-          huntDropdownFeedback.className = 'feedback';
-          huntDropdownSubmit.disabled = true;
-          huntDropdownSkip.style.display = 'none';
-          
-          // Show the grand success banner
-          successBanner.style.display = 'flex';
-          
-          // Start continuous confetti
-          startContinuousConfetti();
-      } else {
-          if (typeof AudioManager !== 'undefined') AudioManager.play('error');
-          huntDropdownFeedback.textContent = 'Some answers are incorrect. Try again!';
-          huntDropdownFeedback.className = 'feedback error';
-      }
-  });
+    if (huntDropdownSubmit.disabled) return;
+    if (typeof AudioManager !== 'undefined') AudioManager.play('click');
 
-  huntDropdownSkip.addEventListener('click', () => {
-      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
-      
-      activeDropdownTestAnswers.forEach(ans => {
-          const container = document.getElementById(ans.id);
-          const btn = container.querySelector('.custom-dropdown-btn');
-          const btnText = btn.querySelector('.btn-text');
-          btnText.textContent = ans.correct;
-          btn.dataset.selected = ans.correct;
-          btn.classList.remove('wrong');
-          btn.classList.add('correct');
-      });
-      
-      huntDropdownFeedback.textContent = 'Skipped. Showing correct answers.';
+    if (activeDropdownTestAnswers.length === 0) {
+      closeTestAndCheckWin();
+      return;
+    }
+
+    let allCorrect = true;
+    activeDropdownTestAnswers.forEach(ans => {
+      const container = document.getElementById(ans.id);
+      const btn = container.querySelector('.custom-dropdown-btn');
+      const selected = btn.dataset.selected || '';
+
+      btn.classList.remove('wrong', 'correct');
+
+      if (selected.toLowerCase() === ans.correct.toLowerCase()) {
+        btn.classList.add('correct');
+      } else {
+        btn.classList.add('wrong');
+        allCorrect = false;
+        setTimeout(() => {
+          if (btn.classList.contains('wrong')) btn.classList.remove('wrong');
+        }, 400);
+      }
+    });
+
+    if (allCorrect) {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('success');
+
+      huntDropdownFeedback.textContent = '';
       huntDropdownFeedback.className = 'feedback';
       huntDropdownSubmit.disabled = true;
       huntDropdownSkip.style.display = 'none';
-      
-      setTimeout(() => {
-          closeTestAndCheckWin();
-      }, 2000);
+
+      // Show the grand success banner
+      successBanner.style.display = 'flex';
+
+      // Start continuous confetti
+      startContinuousConfetti();
+    } else {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('error');
+      huntDropdownFeedback.textContent = 'Some answers are incorrect. Try again!';
+      huntDropdownFeedback.className = 'feedback error';
+    }
+  });
+
+  huntDropdownSkip.addEventListener('click', () => {
+    if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+
+    activeDropdownTestAnswers.forEach(ans => {
+      const container = document.getElementById(ans.id);
+      const btn = container.querySelector('.custom-dropdown-btn');
+      const btnText = btn.querySelector('.btn-text');
+      btnText.textContent = ans.correct;
+      btn.dataset.selected = ans.correct;
+      btn.classList.remove('wrong');
+      btn.classList.add('correct');
+    });
+
+    huntDropdownFeedback.textContent = 'Skipped. Showing correct answers.';
+    huntDropdownFeedback.className = 'feedback';
+    huntDropdownSubmit.disabled = true;
+    huntDropdownSkip.style.display = 'none';
+
+    setTimeout(() => {
+      closeTestAndCheckWin();
+    }, 2000);
   });
 
   function closeTestAndCheckWin() {
-      huntDropdownOverlay.classList.remove('active');
-      if (foundWords.length === targetWords.length) {
-          handleWin();
-      }
+    huntDropdownOverlay.classList.remove('active');
+    if (foundWords.length === targetWords.length) {
+      handleWin();
+    }
   }
 
   let confettiInterval;
@@ -724,30 +724,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function getRandomTrickWords(correctWord, num = 3) {
-      let all = [];
-      if (typeof window.STEMDictionary !== 'undefined' && window.STEMDictionary.wordBank) {
-        const bank = window.STEMDictionary.wordBank;
-        for (let letter in bank) {
-            all.push(...bank[letter].map(w => w.word));
-        }
+    let all = [];
+    if (typeof window.STEMDictionary !== 'undefined' && window.STEMDictionary.wordBank) {
+      const bank = window.STEMDictionary.wordBank;
+      for (let letter in bank) {
+        all.push(...bank[letter].map(w => w.word));
       }
-      if (all.length < 5) {
-          all = ['Energy', 'Matter', 'Cell', 'Force', 'Space', 'Gene', 'Atom', 'Bond', 'Mass', 'Acid'];
+    }
+    if (all.length < 5) {
+      all = ['Energy', 'Matter', 'Cell', 'Force', 'Space', 'Gene', 'Atom', 'Bond', 'Mass', 'Acid'];
+    }
+
+    let tricks = [];
+    let attempts = 0;
+    while (tricks.length < num && attempts < 100) {
+      attempts++;
+      let word = all[Math.floor(Math.random() * all.length)];
+      word = word.split(' ')[0]; // Take only first word to keep dropdown options short
+      word = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+
+      if (word.toLowerCase() !== correctWord.toLowerCase() && !tricks.includes(word)) {
+        tricks.push(word);
       }
-      
-      let tricks = [];
-      let attempts = 0;
-      while(tricks.length < num && attempts < 100) {
-        attempts++;
-        let word = all[Math.floor(Math.random() * all.length)];
-        word = word.split(' ')[0]; // Take only first word to keep dropdown options short
-        word = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-        
-        if (word.toLowerCase() !== correctWord.toLowerCase() && !tricks.includes(word)) {
-          tricks.push(word);
-        }
-      }
-      return tricks;
+    }
+    return tricks;
   }
 
   function handleWin() {
@@ -762,11 +762,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Setup overlay UI
       winOverlay.classList.add('active');
-      
+
       // We can just hide or instantly fill the XP bar since we removed the tier system
       xpFluid.style.width = `100%`;
       xpText.textContent = `50 Points Earned!`;
-      
+
       setTimeout(() => {
         if (typeof AudioManager !== 'undefined') AudioManager.play('success');
       }, 500);
@@ -786,7 +786,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   overlayContinueBtn.addEventListener('click', () => {
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
-    
+
     // Save words + definitions for the recall test
     // wordDefinitions is already populated during initGame() — use it directly
     let gameData = sharedState.load() || {};
@@ -798,9 +798,57 @@ document.addEventListener('DOMContentLoaded', () => {
       gameData.meanings[w] = wordDefinitions[w] || '';
     });
 
+    gameData.isStemHunt = true;
+
     sharedState.save(gameData);
-    
+
     if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_recall_test.html');
     else window.location.href = '10_stage8_recall_test.html';
   });
+
+  // --- Grand celebration logic for STEM Hunt ---
+  let glitterInterval = null;
+
+  function launchGrandCelebration() {
+    const overlay = document.getElementById('recall-celebration');
+    if (overlay) overlay.classList.add('active');
+
+    function shootGlitter() {
+      const opts = {
+        spread: 70, ticks: 120, gravity: 0.85, decay: 0.91,
+        startVelocity: 50, scalar: 1.6, zIndex: 9999,
+        shapes: ['star', 'circle'],
+        colors: ['#F5C842', '#E8B4B8', '#C9A96E', '#D4AF37', '#ffffff', '#B8860B', '#E8D5B7']
+      };
+      if (typeof confetti === 'function') {
+        confetti({ ...opts, particleCount: 70, angle: 60, origin: { x: 0, y: 1 } });
+        confetti({ ...opts, particleCount: 70, angle: 120, origin: { x: 1, y: 1 } });
+        confetti({ ...opts, particleCount: 40, angle: 90, origin: { x: 0.5, y: 0 } });
+      }
+    }
+
+    shootGlitter();
+    glitterInterval = setInterval(shootGlitter, 900);
+  }
+
+  const recallThanksBtn = document.getElementById('recall-thanks-btn');
+  if (recallThanksBtn) {
+    recallThanksBtn.addEventListener('click', function () {
+      if (glitterInterval) { clearInterval(glitterInterval); glitterInterval = null; }
+      const overlay = document.getElementById('recall-celebration');
+      if (overlay) overlay.classList.remove('active');
+      
+      let gameData = sharedState.load() || {};
+      gameData.isStemHunt = false;
+      sharedState.save(gameData);
+
+      // Navigate home after thanks
+      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('01_home_menu.html');
+      else window.location.href = '01_home_menu.html';
+    });
+  }
+
+  if (window.location.search.includes('celebration=true')) {
+    launchGrandCelebration();
+  }
 });
