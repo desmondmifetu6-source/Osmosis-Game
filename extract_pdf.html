@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osmosis PDF Extractor</title>
+    <!-- We use a CDN to load pdf.js since your command line internet is blocked -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f9; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .btn { background: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-size: 16px; margin-top: 15px;}
+        .btn:hover { background: #0056b3; }
+        #log { background: #1e1e1e; color: #00ff00; padding: 15px; border-radius: 4px; height: 300px; overflow-y: auto; font-family: monospace; margin-top: 20px; white-space: pre-wrap;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Osmosis Dictionary Extractor (Offline)</h1>
+        <p>Since your network blocks Python and WPS Office's cloud, we will use your browser's engine to parse the PDF completely offline!</p>
+        
+        <input type="file" id="pdfFile" accept="application/pdf" />
+        <br>
+        <button class="btn" id="startBtn">Start Extraction</button>
+
+        <div id="log">Waiting for file...</div>
+    </div>
+
+    <script>
+        // Setup pdf.js worker
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+        const logEl = document.getElementById('log');
+        function log(msg) {
+            logEl.innerHTML += msg + '\n';
+            logEl.scrollTop = logEl.scrollHeight;
+        }
+
+        document.getElementById('startBtn').addEventListener('click', async () => {
+            const file = document.getElementById('pdfFile').files[0];
+            if (!file) {
+                alert("Please select the Dictionary Book 2.pdf file first!");
+                return;
+            }
+
+            log("Loading PDF into memory...");
+            const arrayBuffer = await file.arrayBuffer();
+            
+            try {
+                const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
+                const pdf = await loadingTask.promise;
+                log(`Successfully loaded PDF! Total pages: ${pdf.numPages}`);
+                
+                // Let's just test Page 30 first to analyze the fonts
+                log("Analyzing Page 30 for font structures...");
+                const pageNum = 30;
+                const page = await pdf.getPage(pageNum);
+                const textContent = await page.getTextContent();
+                
+                let output = "--- PAGE 30 TEXT ITEMS ---\n";
+                // Only log the first 20 items to not flood the screen
+                for(let i=0; i<Math.min(20, textContent.items.length); i++) {
+                    const item = textContent.items[i];
+                    output += `Text: "${item.str}" | Font: ${item.fontName} | Height: ${item.height}\n`;
+                }
+                log(output);
+                log("If you see the text above, the CDN is working and we can build the full extractor!");
+
+            } catch (error) {
+                log(`Error: ${error.message}`);
+                log("If it says 'pdfjsLib is not defined', your network is also blocking the Cloudflare CDN.");
+            }
+        });
+    </script>
+</body>
+</html>

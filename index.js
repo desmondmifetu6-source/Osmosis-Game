@@ -127,13 +127,20 @@ const LoginController = {
     }
     localStorage.setItem('osmosis_user', user);
 
+    // Determine and save avatar
+    let avatar = this.state.selectedAvatar;
+    if (user === this.state.savedUser) {
+      avatar = localStorage.getItem('osmosis_avatar') || (gameData && gameData.avatar) || this.state.selectedAvatar;
+    }
+    localStorage.setItem('osmosis_avatar', avatar);
+
     // Wipe previous game session but keep user info
     if (typeof sharedState.clearGameSession === 'function') {
       sharedState.clearGameSession(false);
     }
     const freshData = sharedState.load();
     freshData.username = user;
-    freshData.avatar = this.state.selectedAvatar;
+    freshData.avatar = avatar;
     sharedState.save(freshData);
 
     if (domCache.loginContent) domCache.loginContent.style.display = 'none';

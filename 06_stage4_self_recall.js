@@ -62,7 +62,7 @@ const Stage4Controller = {
     if (domCache.finishRecallBtn) {
       domCache.finishRecallBtn.addEventListener('click', () => {
         // Process any pending input first
-        const val = domCache.lap2Input.value.trim().toLowerCase();
+        const val = domCache.lap2Input ? domCache.lap2Input.value.trim().toLowerCase() : '';
         if (val) {
           this.processWord(val);
         }

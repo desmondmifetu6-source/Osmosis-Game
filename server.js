@@ -108,6 +108,31 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     console.log(`[DISCONNECT] Socket: ${socket.id}`);
+    
+    for (const roomId in rooms) {
+      const room = rooms[roomId];
+      const playerIndex = room.players.findIndex(p => p.id === socket.id);
+      if (playerIndex !== -1) {
+        const removedPlayer = room.players.splice(playerIndex, 1)[0];
+        console.log(`[DISCONNECT] Removed player: ${removedPlayer.name} from Room: ${roomId}`);
+        
+        if (room.players.length === 0) {
+          delete rooms[roomId];
+          console.log(`[ROOM DELETED] Room ${roomId} is empty.`);
+        } else {
+          // Tell remaining players that this player left
+          io.to(roomId).emit('player_left', {
+            players: room.players,
+            message: `${removedPlayer.name} disconnected.`
+          });
+          
+          // Broadcast updated leaderboard
+          io.to(roomId).emit('leaderboard_update', {
+            players: room.players
+          });
+        }
+      }
+    }
   });
 });
 

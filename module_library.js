@@ -2,7 +2,6 @@ initModal();
 
 const inputEl = document.getElementById('dict-input');
 const searchBtn = document.getElementById('dict-search-btn');
-const loadingEl = document.getElementById('dict-loading');
 const resultEl = document.getElementById('dict-result');
 const errorEl = document.getElementById('dict-error');
 
@@ -12,54 +11,72 @@ const resMeaning = document.getElementById('res-meaning');
 
 searchBtn.addEventListener('click', performSearch);
 inputEl.addEventListener('keypress', (e) => {
-  if(e.key === 'Enter') performSearch();
+  if (e.key === 'Enter') performSearch();
 });
 
-async function performSearch() {
-  const query = inputEl.value.trim().toLowerCase();
-  if(!query) return;
-  
+function lookupInStemDictionary(query) {
+  if (typeof window.STEMDictionary === 'undefined') return null;
+
+  const normalized = query.trim().toLowerCase();
+  if (!normalized) return null;
+
+  const exactDefinition = window.STEMDictionary.getDefinition(normalized);
+  if (exactDefinition) {
+    const entry = window.STEMDictionary.getAllWords().find(
+      (e) => e.word.toLowerCase() === normalized
+    );
+    return {
+      word: entry ? entry.word : query.trim(),
+      definition: exactDefinition
+    };
+  }
+
+  const matches = window.STEMDictionary.getAllWords().filter((entry) => {
+    const word = entry.word.toLowerCase();
+    return word.startsWith(normalized) || word.includes(normalized);
+  });
+
+  if (matches.length === 0) return null;
+
+  const best = matches.find((entry) => entry.word.toLowerCase().startsWith(normalized)) || matches[0];
+  return {
+    word: best.word,
+    definition: best.definition,
+    suggestions: matches.length > 1 ? matches.slice(0, 5).map((m) => m.word) : null
+  };
+}
+
+function performSearch() {
+  const query = inputEl.value.trim();
+  if (!query) return;
+
   resultEl.style.display = 'none';
   errorEl.style.display = 'none';
-  loadingEl.classList.remove('hidden');
-  AudioManager.play('click');
-  
-  try {
-    const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${query}`);
-    if(!res.ok) throw new Error("Not found");
-    const data = await res.json();
-    
-    // Pick the first entry
-    const entry = data[0];
-    resWord.textContent = entry.word;
-    
-    // Extract phonetic if available
-    let phonetic = entry.phonetic || "";
-    if(!phonetic && entry.phonetics) {
-       const p = entry.phonetics.find(ph => ph.text);
-       if(p) phonetic = p.text;
-    }
-    resPhonetic.textContent = phonetic;
-    
-    // Stitch all meanings together cleanly
-    let meaningsHTML = '';
-    entry.meanings.forEach(m => {
-      // For each speech part, get the first most relevant definition
-      const def = m.definitions[0].definition;
-      meaningsHTML += `<strong>${m.partOfSpeech}</strong>: ${def}<br><br>`;
-    });
-    resMeaning.innerHTML = meaningsHTML;
-    
-    loadingEl.classList.add('hidden');
-    resultEl.style.display = 'block';
-    
-    // Success Ping
-    AudioManager.play('chip');
-  } catch (err) {
-    loadingEl.classList.add('hidden');
+  if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+
+  const entry = lookupInStemDictionary(query);
+
+  if (!entry) {
     errorEl.style.display = 'block';
-    AudioManager.play('error');
+    if (typeof AudioManager !== 'undefined') AudioManager.play('error');
+    return;
   }
+
+  resWord.textContent = entry.word;
+  resPhonetic.textContent = 'Osmosis STEM Dictionary';
+  resMeaning.textContent = entry.definition;
+
+  if (entry.suggestions && entry.suggestions.length > 1) {
+    const note = document.createElement('p');
+    note.style.marginTop = '1rem';
+    note.style.fontSize = '0.95rem';
+    note.style.color = 'var(--text-secondary)';
+    note.textContent = `Related entries: ${entry.suggestions.join(', ')}`;
+    resMeaning.appendChild(note);
+  }
+
+  resultEl.style.display = 'block';
+  if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
 }
 
 document.getElementById('go-home-btn').addEventListener('click', () => {

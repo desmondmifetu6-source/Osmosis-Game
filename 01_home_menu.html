@@ -37,10 +37,6 @@
 
     .card {
       position: relative;
-      background: rgba(255, 255, 255, 0.25) !important;
-      backdrop-filter: blur(15px) !important;
-      border: 2px solid rgba(0, 0, 0, 0.2) !important;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.1) !important;
       border-radius: 24px !important;
       padding: 3.5rem 2.5rem !important;
       max-width: 500px;
@@ -48,10 +44,19 @@
       text-align: center;
     }
 
+    .home-book-badge {
+      width: 72px;
+      height: auto;
+      border-radius: 6px;
+      margin: 0 auto 1.25rem;
+      display: block;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
     .akwaaba-header {
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
-      color: var(--text-main);
       text-transform: uppercase;
       letter-spacing: 3px;
       margin-bottom: 2rem;
@@ -60,7 +65,6 @@
     }
 
     .akwaaba-header span {
-      color: var(--accent-primary);
       display: block;
       font-size: 1.8rem;
       margin-top: 0.5rem;
@@ -202,12 +206,18 @@
   </style>
 </head>
 
-<body>
+<body class="dict-cover-page home-menu-page">
+  <div class="dict-cover-bg" aria-hidden="true"></div>
+  <div class="dict-cover-overlay" aria-hidden="true"></div>
+
   <div class="app-container">
     <div class="card" style="text-align: center;">
+      <img src="assets/stem_dictionary_cover.png" alt="STEM Dictionary cover" class="home-book-badge dict-cover-preview" title="View cover">
+      <p class="dict-cover-hint">Tap cover to enlarge</p>
       <h2 class="akwaaba-header">WELCOME, <span id="home-username">Scholar</span></h2>
+      <p class="dict-source-tag">The 6-In-1 STEM Dictionary</p>
       <p
-        style="margin-bottom: 2rem; color: var(--text-main); font-weight: 700; font-size: 1.2rem; letter-spacing: 2px;">
+        style="margin: 1.5rem 0 2rem; font-weight: 700; font-size: 1.2rem; letter-spacing: 2px;">
         CLICK YOUR PREFERENCE.</p>
       <div class="menu-buttons">
         <button id="play-solo-btn" class="classic-btn primary">Osmosis </button>
@@ -253,6 +263,7 @@
   <script src="core_dictionary.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="core_shared_state.js"></script>
+  <script src="dict_cover_lightbox.js"></script>
   <script src="01_home_menu.js"></script>
 </body>
 

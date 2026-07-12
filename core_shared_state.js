@@ -148,6 +148,16 @@ const sharedState = {
     this.syncScore();
   },
 
+  escapeHTML: function (str) {
+    return String(str || '').replace(/[&<>'"]/g, tag => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[tag] || tag));
+  },
+
   syncScore: function() {
     const state = this.load();
     if (state.multiplayerMode && state.currentRoomId) {
@@ -160,8 +170,10 @@ const sharedState = {
       const state = this.load();
       if (!this.socket) {
         this.socket = io();
-        this.socket.on('leaderboard_update', (data) => this.renderLeaderboard(data.players));
       }
+      this.socket.off('leaderboard_update');
+      this.socket.on('leaderboard_update', (data) => this.renderLeaderboard(data.players));
+
       this.socket.emit('update_score', { 
         roomId: roomId, 
         score: score,
@@ -174,7 +186,9 @@ const sharedState = {
   initMultiplayer: function() {
     const state = this.load();
     if (state.multiplayerMode && state.currentRoomId && typeof io !== 'undefined') {
-      this.socket = io();
+      if (!this.socket) {
+        this.socket = io();
+      }
       
       // Re-join the room so server knows this socket is active in this room
       this.socket.emit('join_room', {
@@ -184,11 +198,13 @@ const sharedState = {
       });
 
       // Listen for leaderboard updates from other players
+      this.socket.off('leaderboard_update');
       this.socket.on('leaderboard_update', (data) => {
         this.renderLeaderboard(data.players);
       });
 
       // Listen for game end or other events
+      this.socket.off('error_message');
       this.socket.on('error_message', (msg) => console.error("MP Error:", msg));
     }
   },
@@ -230,9 +246,11 @@ const sharedState = {
         margin-bottom: 4px; font-size: 0.75rem;
         ${isMe ? 'color: var(--accent-primary); font-weight: 700;' : ''}
       `;
+      const escapedAvatar = this.escapeHTML(p.avatar || '🤓');
+      const escapedName = this.escapeHTML(p.name || 'Guest');
       div.innerHTML = `
-        <span>${i + 1}. ${p.avatar || '🤓'} ${p.name}</span>
-        <span style="font-family: monospace; font-weight: 800;">${p.score || 0}</span>
+        <span>${i + 1}. ${escapedAvatar} ${escapedName}</span>
+        <span style="font-family: monospace; font-weight: 800;">${Number(p.score) || 0}</span>
       `;
       el.appendChild(div);
     });
@@ -260,21 +278,30 @@ const sharedState = {
   // Function: updateTimerUI
   // This is the animated ticking clock you see on the screen.
   updateTimerUI: function (elementId = 'global-game-timer') {
-    const state = this.load();
-    if (!state.startTime) return;
+    if (this._timerLoopId) {
+      cancelAnimationFrame(this._timerLoopId);
+      this._timerLoopId = null;
+    }
 
     const el = elementId === 'global-game-timer' ? this.ensureGlobalTimer() : document.getElementById(elementId);
     if (!el) return;
 
-    // This is a special loop that updates the clock super fast alongside the screen refresh rate,
-    // so it looks incredibly smooth.
     const update = () => {
+      const state = this.load();
+      if (!state.startTime) {
+        this._timerLoopId = null;
+        return;
+      }
       const now = Date.now();
       const currentElapsed = state.totalTime + (now - state.startTime);
       el.textContent = this.getFormattedTime(currentElapsed); // Update the text on screen
-      if (state.startTime) requestAnimationFrame(update); // Repeat forever until stopped!
+      this._timerLoopId = requestAnimationFrame(update);
     };
-    update();
+
+    const state = this.load();
+    if (state.startTime) {
+      this._timerLoopId = requestAnimationFrame(update);
+    }
   },
 };
 

@@ -196,26 +196,28 @@ const Stage6bController = {
       }[tag] || tag));
     }
 
-    // Prepare trick words pool globally from STEMDictionary
+    // Prepare trick words pool from STEMDictionary
     let globalTricks = [];
-    if (typeof window.STEMDictionary !== 'undefined') {
+    if (typeof window.STEMDictionary !== 'undefined' && typeof window.STEMDictionary.getRandomLetter === 'function') {
       let attempts = 0;
       while (globalTricks.length < 20 && attempts < 100) {
         const randLetter = window.STEMDictionary.getRandomLetter();
         const words = window.STEMDictionary.getWordsByLetter(randLetter);
         if (words && words.length > 0) {
           const wObj = words[Math.floor(Math.random() * words.length)];
-          const parts = wObj.definition.split(/(\b[\w'-]+\b)/).filter(t => t.length > 4 && /^[a-zA-Z]+$/.test(t) && !stopWords.includes(t.toLowerCase()));
-          if (parts.length > 0) {
-            let trk = parts[Math.floor(Math.random() * parts.length)].toLowerCase();
-            if (!globalTricks.includes(trk)) globalTricks.push(trk);
+          if (wObj && wObj.definition) {
+            const parts = wObj.definition.split(/(\b[\w'-]+\b)/).filter(t => t.length > 4 && /^[a-zA-Z]+$/.test(t) && !stopWords.includes(t.toLowerCase()));
+            if (parts.length > 0) {
+              const trk = parts[Math.floor(Math.random() * parts.length)].toLowerCase();
+              if (!globalTricks.includes(trk)) globalTricks.push(trk);
+            }
           }
         }
         attempts++;
       }
     }
-    
-    let defaultTricks = ["process", "system", "cell", "energy", "force", "matter", "reaction", "structure", "function", "development"];
+
+    const defaultTricks = ["process", "system", "cell", "energy", "force", "matter", "reaction", "structure", "function", "development"];
     if (globalTricks.length < 10) globalTricks = [...globalTricks, ...defaultTricks];
 
     // Build HTML

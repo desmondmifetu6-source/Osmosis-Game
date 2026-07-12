@@ -28,38 +28,72 @@ document.addEventListener('DOMContentLoaded', () => {
   const generatorScreen = document.getElementById('generator-screen');
   const rulesContinueBtn = document.getElementById('rules-continue-btn');
 
+  let _activeCipherInterval = null;
+
   // 4. Navigation Helper
   function navigate(url) {
     if (typeof window.navigateWithTransition === 'function') navigateWithTransition(url);
     else window.location.href = url;
   }
 
+  function syncGameDataFromStorage() {
+    const latest = sharedState.load();
+    Object.keys(latest).forEach((key) => {
+      gameData[key] = latest[key];
+    });
+    if (!gameData.usedLetters) gameData.usedLetters = [];
+    if (!gameData.selectedWords) gameData.selectedWords = [];
+    if (typeof gameData.score === 'undefined') gameData.score = 0;
+  }
+
+  function stopShuffle() {
+    if (_activeCipherInterval) {
+      clearInterval(_activeCipherInterval);
+      _activeCipherInterval = null;
+    }
+  }
+
+  function showGeneratorAndRun() {
+    syncGameDataFromStorage();
+    if (rulesScreen) rulesScreen.style.display = 'none';
+    if (generatorScreen) generatorScreen.style.display = 'block';
+    if (setupContinueBtn) setupContinueBtn.style.display = 'none';
+    runSelectionAlgorithm();
+  }
+
   // 5. Route Flow Control
   // If they have played before, skip rules and go straight to generator
   if (gameData.usedLetters && gameData.usedLetters.length > 0) {
-    if (rulesScreen) rulesScreen.style.display = 'none';
-    if (generatorScreen) generatorScreen.style.display = 'block';
-    runSelectionAlgorithm();
+    showGeneratorAndRun();
   } else {
     // Wait for them to read rules and click Proceed
     if (rulesContinueBtn) {
-      rulesContinueBtn.addEventListener('click', () => {
-        if (rulesScreen) rulesScreen.style.display = 'none';
-        if (generatorScreen) generatorScreen.style.display = 'block';
-        runSelectionAlgorithm();
-      });
+      rulesContinueBtn.addEventListener('click', showGeneratorAndRun);
     } else {
-      runSelectionAlgorithm(); // Fallback if button missing
+      showGeneratorAndRun(); // Fallback if button missing
     }
   }
+
+  // Re-run when browser restores this page from cache (2nd letter, 3rd letter, etc.)
+  window.addEventListener('pageshow', (event) => {
+    if (!event.persisted) return;
+    if (gameData.usedLetters && gameData.usedLetters.length > 0) {
+      showGeneratorAndRun();
+    }
+  });
+
+  window.addEventListener('pagehide', stopShuffle);
 
   // Setup continue button routes to stage 1
   if (setupContinueBtn) {
     setupContinueBtn.addEventListener('click', () => navigate('03_stage1_word_selection.html'));
   }
 
-  // 6. Core Selection Algorithm
+  // 6. Core Selection Algorithm (from committed git version)
   function runSelectionAlgorithm() {
+    syncGameDataFromStorage();
+    stopShuffle();
+
     const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const availableLetters = alphabet.split('').filter(l => !gameData.usedLetters.includes(l));
 
@@ -73,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start a rapid shuffle animation to build suspense
     let counter = 0;
-    const cipherInterval = setInterval(() => {
+    _activeCipherInterval = setInterval(() => {
       const randChar = availableLetters[Math.floor(Math.random() * availableLetters.length)];
       const randLength = Math.floor(Math.random() * 8) + 4; // Between 4 and 11
 
@@ -82,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // After 30 shuffles (about 1.5 seconds), finalize the assignment
       if (counter > 30) {
-        clearInterval(cipherInterval);
+        stopShuffle();
         finalizeAssignment(availableLetters);
       }
     }, 50);

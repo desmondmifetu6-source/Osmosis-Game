@@ -112,6 +112,7 @@ const ResultsController = {
     });
 
     // Show the leaderboard card
+    domCache.leaderboardCard.hidden = false;
     domCache.leaderboardCard.style.display = 'block';
 
     // Rank medal emoji

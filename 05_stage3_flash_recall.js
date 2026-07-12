@@ -133,6 +133,10 @@ const Stage3Controller = {
     }
     if (domCache.hintEl) domCache.hintEl.textContent = 'Memorize it...';
 
+    const baseFlashMs = 2000;
+    const wordLengthExtra = Math.max(0, currentWord.length - 6) * 200;
+    const totalFlashMs = baseFlashMs + wordLengthExtra;
+
     setTimeout(() => {
       if (domCache.flashWordEl) domCache.flashWordEl.classList.add('hidden');
       if (domCache.hintEl) domCache.hintEl.textContent = 'Now type the word you saw.';
@@ -142,7 +146,7 @@ const Stage3Controller = {
         domCache.inputEl.focus();
       }
       if (domCache.submitBtn) domCache.submitBtn.style.display = 'block';
-    }, 1000);
+    }, totalFlashMs);
   },
 
   submitFlashRow() {

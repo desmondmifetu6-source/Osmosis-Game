@@ -5,9 +5,9 @@
 // Now, we hide a few letters from each word, and they must remember how to spell them!
 
 const CONFIG = {
-  TIME_PER_WORD: 8,       
-  MASK_PERCENTAGE: 0.4,   
-  POINTS_PER_CORRECT: 10   
+  TIME_PER_WORD: 8,
+  MASK_PERCENTAGE: 0.4,
+  POINTS_PER_CORRECT: 10
 };
 
 const Stage2Controller = {
@@ -89,7 +89,7 @@ const Stage2Controller = {
       if (!this.state.meanings[w]) {
         try {
           this.state.meanings[w] = typeof DictionaryLogic !== 'undefined' ? DictionaryLogic.fetchMeaning(w) : "Definition unavailable";
-        } catch(e) {
+        } catch (e) {
           this.state.meanings[w] = "Definition unavailable";
         }
       }
@@ -114,30 +114,30 @@ const Stage2Controller = {
     let validIndices = [];
 
     for (let i = 1; i < len; i++) {
-        validIndices.push(i);
+      validIndices.push(i);
     }
-    
+
     let chosen = [];
     if (validIndices.length > 0) {
       if (numToMask === 1 || validIndices.length < 3) {
-          chosen.push(validIndices[Math.floor(Math.random() * validIndices.length)]);
+        chosen.push(validIndices[Math.floor(Math.random() * validIndices.length)]);
       } else {
-          let found = false;
-          let shuffled = this.shuffle([...validIndices]);
-          for (let i = 0; i < shuffled.length; i++) {
-              for (let j = i + 1; j < shuffled.length; j++) {
-                  if (Math.abs(shuffled[i] - shuffled[j]) > 1) {
-                      chosen.push(shuffled[i], shuffled[j]);
-                      found = true;
-                      break;
-                  }
-              }
-              if (found) break;
+        let found = false;
+        let shuffled = this.shuffle([...validIndices]);
+        for (let i = 0; i < shuffled.length; i++) {
+          for (let j = i + 1; j < shuffled.length; j++) {
+            if (Math.abs(shuffled[i] - shuffled[j]) > 1) {
+              chosen.push(shuffled[i], shuffled[j]);
+              found = true;
+              break;
+            }
           }
-          if (!found) chosen.push(shuffled[0]);
+          if (found) break;
+        }
+        if (!found) chosen.push(shuffled[0]);
       }
     }
-    
+
     chosen.forEach(i => arr[i] = '_');
     return arr.join(' ');
   },
@@ -214,7 +214,7 @@ const Stage2Controller = {
 
   handleValidation() {
     const { domCache, sequence, currentIndex } = this.state;
-    
+
     if (domCache.lap1Submit && (domCache.lap1Submit.textContent === "Next" || domCache.lap1Submit.textContent === "Finish")) {
       this.state.currentIndex++;
       if (this.state.currentIndex < sequence.length) {
@@ -261,7 +261,7 @@ const Stage2Controller = {
   rewardPoints(amount) {
     this.state.roundScore += amount;
     this.state.gameData.score = (this.state.gameData.score || 0) + amount;
-    
+
     if (this.state.domCache.scoreEl) {
       this.state.domCache.scoreEl.textContent = this.state.gameData.score;
     }
@@ -281,7 +281,7 @@ const Stage2Controller = {
 
   finishGame() {
     sharedState.save(this.state.gameData);
-    
+
     sharedState.showStageScoreThen(
       'stage2',
       'Stage 2: Word Fill-in',

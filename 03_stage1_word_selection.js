@@ -124,6 +124,7 @@ const Stage1Controller = {
     }
 
     const correctWords = this.shuffle(freshWords.filter(w => w.length === gameData.length));
+    const distractorWords = this.shuffle(freshWords.filter(w => w.length !== gameData.length));
 
     let workingCorrect = correctWords;
     if (workingCorrect.length === 0) {
@@ -135,14 +136,23 @@ const Stage1Controller = {
     let finalPool = [];
     const maxPoolSize = 20;
 
-    let uniqueSelected = this.shuffle(workingCorrect).slice(0, maxPoolSize);
-    uniqueSelected.forEach(w => finalPool.push(w));
+    // Ensure featuredWordThisRound is in the correct selection pool
+    const correctSelection = [this.state.featuredWordThisRound];
+    const otherCorrect = workingCorrect.filter(w => w !== this.state.featuredWordThisRound);
+    
+    // Pick up to 4 more correct-length words
+    const numOtherCorrect = Math.min(4, otherCorrect.length);
+    const otherCorrectSelection = this.shuffle(otherCorrect).slice(0, numOtherCorrect);
+    correctSelection.push(...otherCorrectSelection);
+
+    correctSelection.forEach(w => finalPool.push(w));
+
+    // Fill the rest of the pool with distractor words of different lengths
+    const numDistractorsNeeded = maxPoolSize - finalPool.length;
+    const distractorSelection = distractorWords.slice(0, numDistractorsNeeded);
+    distractorSelection.forEach(w => finalPool.push(w));
 
     finalPool = this.shuffle(finalPool);
-
-    if (!finalPool.includes(this.state.featuredWordThisRound)) {
-      finalPool[Math.floor(Math.random() * finalPool.length)] = this.state.featuredWordThisRound;
-    }
 
     let targetSpawned = false;
 
