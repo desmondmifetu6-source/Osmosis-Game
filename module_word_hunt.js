@@ -15,9 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const winOverlay = document.getElementById('win-overlay');
   const promoStar = document.getElementById('promotion-star');
   const levelText = document.getElementById('level-text');
-  const winMessage = document.getElementById('win-message');
-  const xpFluid = document.getElementById('xp-fluid');
-  const xpText = document.getElementById('xp-text');
+  // Note: win-message, xp-fluid, xp-text are no longer in the HTML (replaced by results card)
   const overlayHomeBtn = document.getElementById('overlay-home-btn');
   const overlayContinueBtn = document.getElementById('overlay-continue-btn');
 
@@ -69,6 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let wordCoordinates = {}; // Stores {start, end} for hints
   let wordDefinitions = {}; // Stores {word: definition}
   let currentScore = 0;
+  let stageStartTime = null;
+  let occupiedCells = new Set();
 
   let isSelecting = false;
   let startCell = null;
@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initGame() {
     gameInProgress = true;
+    stageStartTime = Date.now();
     if (typeof initModal === 'function') initModal();
 
     // Set parameters based on chosen difficulty
@@ -123,39 +124,33 @@ document.addEventListener('DOMContentLoaded', () => {
     highlightsLayer.innerHTML = '';
     winOverlay.classList.remove('active');
     promoStar.classList.remove('active');
-    winMessage.textContent = "Great job!";
 
+    // Use the curated Hunt Dictionary (200 STEM words, short definitions, grid-friendly)
     let allWords = [];
-    if (typeof window.STEMDictionary !== 'undefined') {
-      // Use wordBank (the correct property name) to get all letters
+    if (typeof window.HuntDictionary !== 'undefined') {
+      allWords = window.HuntDictionary.getWordsByMaxLength(currentLevelObj.maxLen);
+    } else if (typeof window.STEMDictionary !== 'undefined') {
+      // Fallback to main dictionary if hunt dictionary not loaded
       const bank = window.STEMDictionary.wordBank || {};
-      const letters = Object.keys(bank);
-      letters.forEach(l => {
-        // getWordsByLetter returns [{word, definition}, ...] directly
+      Object.keys(bank).forEach(l => {
         allWords.push(...window.STEMDictionary.getWordsByLetter(l));
       });
     }
 
     if (allWords.length === 0) {
-      // Fallback only if dictionary truly failed to load
-      const fallbacks = [
-        { word: "ATOM", definition: "Smallest unit of matter" },
-        { word: "CELL", definition: "Basic unit of life" },
-        { word: "GENE", definition: "A unit of heredity" },
-        { word: "LENS", definition: "A curved piece of glass that focuses light" },
-        { word: "BOND", definition: "A force holding atoms together" },
-        { word: "MASS", definition: "The amount of matter in an object" },
-        { word: "WAVE", definition: "A disturbance that transfers energy" },
-        { word: "ACID", definition: "A substance with a pH below 7" },
-        { word: "VEIN", definition: "A blood vessel carrying blood to the heart" },
-        { word: "CORE", definition: "The central part of the Earth" }
+      // Last-resort fallback
+      allWords = [
+        { word: "ATOM",   definition: "Smallest unit of matter that retains element properties." },
+        { word: "CELL",   definition: "The basic structural unit of all living organisms." },
+        { word: "GENE",   definition: "A segment of DNA that codes for a specific trait." },
+        { word: "WAVE",   definition: "A disturbance that transfers energy from place to place." },
+        { word: "ACID",   definition: "A substance with a pH below 7 that releases H+ ions." }
       ];
-      allWords = fallbacks;
     }
 
     let uniqueMap = new Map();
     allWords.forEach(w => {
-      const clean = w.word.toUpperCase().replace(/[^A-Z]/g, '');
+      const clean = (w.word || '').toUpperCase().replace(/[^A-Z]/g, '');
       if (clean.length >= 3 && clean.length <= currentLevelObj.maxLen) {
         if (!uniqueMap.has(clean)) {
           uniqueMap.set(clean, { word: clean, definition: w.definition || "A scientific term." });
@@ -196,6 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function generateGrid() {
     grid = Array(gridSize).fill(null).map(() => Array(gridSize).fill(''));
+    occupiedCells.clear();
     // Use directions restricted by current difficulty level
     const dirs = currentLevelObj.dirs;
     wordCoordinates = {};
@@ -233,6 +229,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     }
+
+    removeAccidentalWords();
   }
 
   function canPlace(word, r, c, dr, dc) {
@@ -250,6 +248,81 @@ document.addEventListener('DOMContentLoaded', () => {
       const nr = r + i * dr;
       const nc = c + i * dc;
       grid[nr][nc] = word[i];
+      occupiedCells.add(`${nr},${nc}`);
+    }
+  }
+
+  function removeAccidentalWords() {
+    const dirs = [[0, 1], [1, 0], [1, 1], [-1, 1], [0, -1], [-1, 0], [-1, -1], [1, -1]];
+    let foundAccidental = true;
+    let iterations = 0;
+    
+    while (foundAccidental && iterations < 100) {
+      foundAccidental = false;
+      iterations++;
+      
+      for (let word of targetWords) {
+        const len = word.length;
+        const coord = wordCoordinates[word];
+        if (!coord) continue;
+        
+        for (let r = 0; r < gridSize; r++) {
+          for (let c = 0; c < gridSize; c++) {
+            for (let [dr, dc] of dirs) {
+              const endR = r + (len - 1) * dr;
+              const endC = c + (len - 1) * dc;
+              if (endR < 0 || endR >= gridSize || endC < 0 || endC >= gridSize) continue;
+              
+              let match = true;
+              for (let i = 0; i < len; i++) {
+                if (grid[r + i * dr][c + i * dc] !== word[i]) {
+                  match = false;
+                  break;
+                }
+              }
+              
+              if (match) {
+                const isDesignated = (
+                  (r === coord.start.r && c === coord.start.c && endR === coord.end.r && endC === coord.end.c) ||
+                  (r === coord.end.r && c === coord.end.c && endR === coord.start.r && endC === coord.start.c)
+                );
+                
+                if (!isDesignated) {
+                  let changed = false;
+                  for (let i = 0; i < len; i++) {
+                    const mr = r + i * dr;
+                    const mc = c + i * dc;
+                    if (!occupiedCells.has(`${mr},${mc}`)) {
+                      let newLetter;
+                      do {
+                        newLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".charAt(Math.floor(Math.random() * 26));
+                      } while (newLetter === grid[mr][mc]);
+                      grid[mr][mc] = newLetter;
+                      changed = true;
+                      foundAccidental = true;
+                      break;
+                    }
+                  }
+                  
+                  if (!changed) {
+                    // Overlap is entirely on occupied cells, which is extremely rare.
+                    // We change one letter anyway to break the accidental word.
+                    const randomIdx = Math.floor(Math.random() * len);
+                    const mr = r + randomIdx * dr;
+                    const mc = c + randomIdx * dc;
+                    let newLetter;
+                    do {
+                      newLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".charAt(Math.floor(Math.random() * 26));
+                    } while (newLetter === grid[mr][mc]);
+                    grid[mr][mc] = newLetter;
+                    foundAccidental = true;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -345,6 +418,49 @@ document.addEventListener('DOMContentLoaded', () => {
     return null;
   }
 
+  const pianoScale = [
+    261.63, // C4 (Do)
+    293.66, // D4 (Re)
+    329.63, // E4 (Mi)
+    349.23, // F4 (Fa)
+    392.00, // G4 (Sol)
+    440.00, // A4 (La)
+    493.88, // B4 (Ti)
+    523.25, // C5 (Do)
+    587.33, // D5 (Re)
+    659.25, // E5 (Mi)
+    698.46, // F5 (Fa)
+    783.99  // G5 (Sol)
+  ];
+
+  function playDragNote(steps) {
+    if (typeof AudioManager === 'undefined') return;
+    AudioManager.init();
+    const ctx = AudioManager.ctx;
+    if (!ctx) return;
+    if (ctx.state === 'suspended') ctx.resume();
+
+    const noteIndex = Math.min(steps, pianoScale.length - 1);
+    const freq = pianoScale[noteIndex];
+
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, ctx.currentTime);
+    
+    const now = ctx.currentTime;
+    gain.gain.setValueAtTime(0, now);
+    gain.gain.linearRampToValueAtTime(0.25, now + 0.02); // rapid attack
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35); // decay
+    
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    
+    osc.start(now);
+    osc.stop(now + 0.35);
+  }
+
   function handlePointerDown(e) {
     if (e.type === 'mousedown' && e.button !== 0) return;
     if (e.type === 'touchstart') e.preventDefault();
@@ -362,6 +478,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const color = pillColors[colorIndex % pillColors.length];
     updatePillTransform(selectionPill, startCell, startCell, color);
+    
+    playDragNote(0);
   }
 
   function handlePointerMove(e) {
@@ -376,9 +494,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const dc = cellPos.c - startCell.c;
 
     if (dr === 0 || dc === 0 || Math.abs(dr) === Math.abs(dc)) {
-      lastValidEndCell = cellPos;
-      const color = pillColors[colorIndex % pillColors.length];
-      updatePillTransform(selectionPill, startCell, lastValidEndCell, color);
+      if (lastValidEndCell.r !== cellPos.r || lastValidEndCell.c !== cellPos.c) {
+        lastValidEndCell = cellPos;
+        const color = pillColors[colorIndex % pillColors.length];
+        updatePillTransform(selectionPill, startCell, lastValidEndCell, color);
+        
+        const steps = Math.max(Math.abs(dr), Math.abs(dc));
+        playDragNote(steps);
+      }
     }
   }
 
@@ -756,20 +879,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function handleWin() {
     setTimeout(() => {
-      // Award flat 50 pts regardless of difficulty
-      currentScore = 50;
+      // Calculate time spent
+      const endTime = Date.now();
+      const timeDiff = stageStartTime ? Math.floor((endTime - stageStartTime) / 1000) : 0;
+      const min = Math.floor(timeDiff / 60);
+      const sec = timeDiff % 60;
+      const formattedTime = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+
+      // Calculate difficulty bonus
+      let bonus = 100;
+      if (currentLevelObj.lvl === 'Easy') bonus = 50;
+      if (currentLevelObj.lvl === 'Intellect') bonus = 200;
+
+      // Add bonus to score
+      currentScore += bonus;
+
+      // Update total score in localStorage
       const totalScore = parseInt(localStorage.getItem('osmosis_total_score')) || 0;
       localStorage.setItem('osmosis_total_score', totalScore + currentScore);
 
-      winMessage.textContent = "Awesome Job!";
-      levelText.textContent = `${currentLevelObj.lvl} Stage Complete!`;
+      // Save to shared state as well so it propagates
+      let gameData = sharedState.load() || {};
+      gameData.score = (gameData.score || 0) + currentScore;
+      sharedState.save(gameData);
 
-      // Setup overlay UI
+      // Populate results details
+      const wordsFoundEl = document.getElementById('result-words-found');
+      if (wordsFoundEl) wordsFoundEl.textContent = `${foundWords.length}/${targetWords.length}`;
+
+      const timeSpentEl = document.getElementById('result-time-spent');
+      if (timeSpentEl) timeSpentEl.textContent = formattedTime;
+
+      const totalScoreEl = document.getElementById('result-total-score');
+      if (totalScoreEl) totalScoreEl.textContent = currentScore;
+
+      // Render words mastered list with new duo chip style
+      const wordListHost = document.getElementById('result-words-list');
+      if (wordListHost) {
+        wordListHost.innerHTML = '';
+        foundWords.forEach(w => {
+          const chip = document.createElement('span');
+          chip.className = 'duo-word-chip';
+          chip.textContent = w;
+          wordListHost.appendChild(chip);
+        });
+      }
+
+      // Show win overlay
       winOverlay.classList.add('active');
-
-      // We can just hide or instantly fill the XP bar since we removed the tier system
-      xpFluid.style.width = `100%`;
-      xpText.textContent = `50 Points Earned!`;
 
       setTimeout(() => {
         if (typeof AudioManager !== 'undefined') AudioManager.play('success');
@@ -790,66 +947,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
   overlayContinueBtn.addEventListener('click', () => {
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
-
-    // Save words + definitions for the recall test
-    // wordDefinitions is already populated during initGame() — use it directly
-    let gameData = sharedState.load() || {};
-    gameData.selectedWords = targetWords;
-    gameData.meanings = {};
-
-    targetWords.forEach(w => {
-      // wordDefinitions uses the definition key from the STEM dictionary entries
-      gameData.meanings[w] = wordDefinitions[w] || '';
-    });
-
-    gameData.isStemHunt = true;
-
-    sharedState.save(gameData);
-
-    if (typeof window.navigateWithTransition === 'function') navigateWithTransition('10_stage8_recall_test.html');
-    else window.location.href = '10_stage8_recall_test.html';
+    // Word Hunt ends here — go straight home (recall test stage removed per HOD feedback)
+    goHome();
   });
 
-  // --- Grand celebration logic for STEM Hunt ---
-  let glitterInterval = null;
+  // --- Guiding Wizard Logic ---
+  let wizardCurrentStep = 1;
+  const wizardOverlay = document.getElementById('guiding-wizard-overlay');
+  const wizardNextBtn = document.getElementById('wizard-next-btn');
+  const wizardBackBtn = document.getElementById('wizard-back-btn');
+  const wizardSteps = document.querySelectorAll('.wizard-step');
+  const wizardDots = document.querySelectorAll('.wizard-progress-dots .dot');
 
-  function launchGrandCelebration() {
-    const overlay = document.getElementById('recall-celebration');
-    if (overlay) overlay.classList.add('active');
-
-    function shootGlitter() {
-      const opts = {
-        spread: 70, ticks: 120, gravity: 0.85, decay: 0.91,
-        startVelocity: 50, scalar: 1.6, zIndex: 9999,
-        shapes: ['star', 'circle'],
-        colors: ['#F5C842', '#E8B4B8', '#C9A96E', '#D4AF37', '#ffffff', '#B8860B', '#E8D5B7']
-      };
-      if (typeof confetti === 'function') {
-        confetti({ ...opts, particleCount: 70, angle: 60, origin: { x: 0, y: 1 } });
-        confetti({ ...opts, particleCount: 70, angle: 120, origin: { x: 1, y: 1 } });
-        confetti({ ...opts, particleCount: 40, angle: 90, origin: { x: 0.5, y: 0 } });
+  function updateWizardUI() {
+    wizardSteps.forEach((step) => {
+      if (parseInt(step.dataset.step) === wizardCurrentStep) {
+        step.style.display = 'block';
+      } else {
+        step.style.display = 'none';
       }
-    }
+    });
 
-    shootGlitter();
-    glitterInterval = setInterval(shootGlitter, 900);
+    wizardDots.forEach((dot, index) => {
+      if (index + 1 === wizardCurrentStep) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+
+    if (wizardCurrentStep === 1) {
+      wizardBackBtn.style.display = 'none';
+      wizardNextBtn.textContent = 'Next';
+    } else if (wizardCurrentStep === 3) {
+      wizardBackBtn.style.display = 'block';
+      wizardNextBtn.textContent = 'Got It!';
+    } else {
+      wizardBackBtn.style.display = 'block';
+      wizardNextBtn.textContent = 'Next';
+    }
   }
 
-  const recallThanksBtn = document.getElementById('recall-thanks-btn');
-  if (recallThanksBtn) {
-    recallThanksBtn.addEventListener('click', function () {
-      if (glitterInterval) { clearInterval(glitterInterval); glitterInterval = null; }
-      const overlay = document.getElementById('recall-celebration');
-      if (overlay) overlay.classList.remove('active');
-      
-      let gameData = sharedState.load() || {};
-      gameData.isStemHunt = false;
-      sharedState.save(gameData);
-
-      // Navigate home after thanks
-      if (typeof window.navigateWithTransition === 'function') navigateWithTransition('01_home_menu.html');
-      else window.location.href = '01_home_menu.html';
+  if (wizardNextBtn && wizardBackBtn) {
+    wizardNextBtn.addEventListener('click', () => {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+      if (wizardCurrentStep < 3) {
+        wizardCurrentStep++;
+        updateWizardUI();
+      } else {
+        localStorage.setItem('wordHuntWizardShown', 'true');
+        if (wizardOverlay) wizardOverlay.style.display = 'none';
+        const diffOverlay = document.getElementById('difficulty-overlay');
+        if (diffOverlay) diffOverlay.style.display = 'flex';
+      }
     });
+
+    wizardBackBtn.addEventListener('click', () => {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+      if (wizardCurrentStep > 1) {
+        wizardCurrentStep--;
+        updateWizardUI();
+      }
+    });
+  }
+
+  // Check if wizard needs to be shown
+  if (!localStorage.getItem('wordHuntWizardShown')) {
+    if (wizardOverlay) wizardOverlay.style.display = 'flex';
+    const diffOverlay = document.getElementById('difficulty-overlay');
+    if (diffOverlay) diffOverlay.style.display = 'none';
+  } else {
+    const diffOverlay = document.getElementById('difficulty-overlay');
+    if (diffOverlay) diffOverlay.style.display = 'flex';
   }
 
   if (window.location.search.includes('celebration=true')) {
