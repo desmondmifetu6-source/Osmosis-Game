@@ -313,58 +313,127 @@ if (typeof window !== 'undefined') {
 // =====================================================================
 // AudioManager: The Sound Effects Department
 // =====================================================================
-// This creates all those cool little bloops and bleeps you hear.
+// Synthesizes rich audio live in-browser: fanfares, funny boings, page warps & gems!
 const AudioManager = {
   ctx: null,
 
-  // Function: init
-  // Starts up the "Sound Engine" inside the browser.
   init: function () {
     if (!this.ctx) {
       try {
         const AudioContext = window.AudioContext || window.webkitAudioContext;
-        this.ctx = new AudioContext(); // We buy a brand new synthesizer
+        this.ctx = new AudioContext();
       } catch (err) { }
     }
   },
 
-  // Function: play
-  // Instead of using pre-recorded MP3 files, this ACTUALLY GENERATES SOUNDWAVES 
-  // live using math! 
   play: function (type) {
     if (!this.ctx) return;
-    // Sometimes browsers pause the sound engine to save battery. We wake it up.
     if (this.ctx.state === 'suspended') this.ctx.resume();
-
-    const osc = this.ctx.createOscillator(); // Oscillator = The thing that vibrates to make sound
-    const gain = this.ctx.createGain(); // Gain = The Volume Knob
-
-    osc.connect(gain); // Connect the instrument to the volume knob
-    gain.connect(this.ctx.destination); // Connect the volume knob to your computer speakers
 
     const now = this.ctx.currentTime;
 
-    // Depending on what we want to hear, we change the shape of the soundwave!
     switch (type) {
-      case 'click':
-        // A simple smooth 'sine' wave that gently fades out.
-        osc.type = 'sine'; osc.frequency.setValueAtTime(150, now); osc.frequency.exponentialRampToValueAtTime(40, now + 0.1);
-        gain.gain.setValueAtTime(1, now); gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
-        osc.start(now); osc.stop(now + 0.1); break;
-      case 'chip':
-        // A sharp, jagged 'triangle' wave that sounds somewhat digital.
-        osc.type = 'triangle'; osc.frequency.setValueAtTime(300, now); osc.frequency.exponentialRampToValueAtTime(100, now + 0.1);
-        gain.gain.setValueAtTime(0.5, now); gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
-        osc.start(now); osc.stop(now + 0.1); break;
-      case 'success':
-        osc.type = 'sine'; osc.frequency.setValueAtTime(440, now); osc.frequency.setValueAtTime(554, now + 0.1);
-        gain.gain.setValueAtTime(0, now); gain.gain.linearRampToValueAtTime(0.5, now + 0.05); gain.gain.exponentialRampToValueAtTime(0.01, now + 0.5);
-        osc.start(now); osc.stop(now + 0.5); break;
-      case 'error':
-        // A buzzing 'sawtooth' wave that sounds a bit harsh and alerting.
-        osc.type = 'sawtooth'; osc.frequency.setValueAtTime(100, now); osc.frequency.exponentialRampToValueAtTime(50, now + 0.2);
-        gain.gain.setValueAtTime(0.5, now); gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
-        osc.start(now); osc.stop(now + 0.2); break;
+      case 'click': {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.connect(gain); gain.connect(this.ctx.destination);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(220, now);
+        osc.frequency.exponentialRampToValueAtTime(60, now + 0.08);
+        gain.gain.setValueAtTime(0.3, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+        osc.start(now); osc.stop(now + 0.08);
+        break;
+      }
+      case 'chip': {
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.connect(gain); gain.connect(this.ctx.destination);
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(400, now);
+        osc.frequency.exponentialRampToValueAtTime(150, now + 0.1);
+        gain.gain.setValueAtTime(0.4, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+        osc.start(now); osc.stop(now + 0.1);
+        break;
+      }
+      case 'success': {
+        // Glorious 3-note arpeggio chord (C5 - E5 - G5)
+        [523.25, 659.25, 783.99].forEach((freq, idx) => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.connect(gain); gain.connect(this.ctx.destination);
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + idx * 0.07);
+          gain.gain.setValueAtTime(0, now + idx * 0.07);
+          gain.gain.linearRampToValueAtTime(0.25, now + idx * 0.07 + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.07 + 0.35);
+          osc.start(now + idx * 0.07);
+          osc.stop(now + idx * 0.07 + 0.35);
+        });
+        break;
+      }
+      case 'error': {
+        // Hilarious comedic "Boing / Wobble" pitch bend sound
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.connect(gain); gain.connect(this.ctx.destination);
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(180, now);
+        osc.frequency.linearRampToValueAtTime(60, now + 0.15);
+        osc.frequency.linearRampToValueAtTime(120, now + 0.3);
+        osc.frequency.exponentialRampToValueAtTime(40, now + 0.45);
+
+        gain.gain.setValueAtTime(0.35, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+        osc.start(now); osc.stop(now + 0.45);
+        break;
+      }
+      case 'warp': {
+        // Futuristic portal slide for stage transition
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.connect(gain); gain.connect(this.ctx.destination);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(150, now);
+        osc.frequency.exponentialRampToValueAtTime(880, now + 0.35);
+        gain.gain.setValueAtTime(0.01, now);
+        gain.gain.linearRampToValueAtTime(0.3, now + 0.15);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+        osc.start(now); osc.stop(now + 0.35);
+        break;
+      }
+      case 'gem': {
+        // Sparkling high-pitched double chime
+        [1046.50, 1567.98].forEach((freq, idx) => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.connect(gain); gain.connect(this.ctx.destination);
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + idx * 0.08);
+          gain.gain.setValueAtTime(0.2, now + idx * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.25);
+          osc.start(now + idx * 0.08);
+          osc.stop(now + idx * 0.08 + 0.25);
+        });
+        break;
+      }
+      case 'levelup': {
+        // Triumph victory trumpet fanfare
+        [440, 554.37, 659.25, 880].forEach((freq, idx) => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.connect(gain); gain.connect(this.ctx.destination);
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, now + idx * 0.1);
+          gain.gain.setValueAtTime(0, now + idx * 0.1);
+          gain.gain.linearRampToValueAtTime(0.35, now + idx * 0.1 + 0.03);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.1 + 0.5);
+          osc.start(now + idx * 0.1);
+          osc.stop(now + idx * 0.1 + 0.5);
+        });
+        break;
+      }
     }
   }
 };
@@ -504,6 +573,10 @@ function applyOsmosisFavicon() {
 // BEFORE we throw you into the next webpage (URL).
 window.navigateWithTransition = function navigateWithTransition(url, delayMs = 220) {
   if (!url) return;
+  if (typeof AudioManager !== 'undefined') {
+    AudioManager.init();
+    AudioManager.play('warp');
+  }
   if (document.body) document.body.classList.add('page-leave'); // Trigger the fade-out CSS animation!
   setTimeout(() => {
     window.location.href = url; // Actually move to the new page

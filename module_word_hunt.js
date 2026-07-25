@@ -79,10 +79,136 @@ document.addEventListener('DOMContentLoaded', () => {
   const pillColors = ["#818cf8", "#34d399", "#f472b6", "#fb7185", "#38bdf8", "#fbbf24", "#a78bfa"];
   let colorIndex = 0;
 
+  // Visual FX Canvas Engine
+  const fxCanvas = document.getElementById('fx-canvas');
+  const fxCtx = fxCanvas ? fxCanvas.getContext('2d') : null;
+  let particles = [];
+
+  function resizeFxCanvas() {
+    if (!fxCanvas || !textLayer) return;
+    fxCanvas.width = textLayer.clientWidth;
+    fxCanvas.height = textLayer.clientHeight;
+  }
+  window.addEventListener('resize', resizeFxCanvas);
+  setTimeout(resizeFxCanvas, 100);
+
+  function triggerParticleExplosion(start, end) {
+    if (!fxCtx || !textLayer) return;
+    resizeFxCanvas();
+
+    const cw = textLayer.clientWidth / gridSize;
+    const ch = textLayer.clientHeight / gridSize;
+
+    const startX = (start.c + 0.5) * cw;
+    const startY = (start.r + 0.5) * ch;
+    const endX = (end.c + 0.5) * cw;
+    const endY = (end.r + 0.5) * ch;
+
+    const colors = ["#38bdf8", "#818cf8", "#34d399", "#fb7185", "#fbbf24"];
+
+    // Spawn 40 vivid physics particles along the word vector
+    for (let i = 0; i < 40; i++) {
+      const t = Math.random();
+      const px = startX + (endX - startX) * t;
+      const py = startY + (endY - startY) * t;
+
+      const angle = Math.random() * Math.PI * 2;
+      const speed = Math.random() * 6 + 2;
+
+      particles.push({
+        x: px,
+        y: py,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        radius: Math.random() * 5 + 3,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: 1,
+        life: 1
+      });
+    }
+
+    if (!window.particleAnimLoopRunning) {
+      window.particleAnimLoopRunning = true;
+      requestAnimationFrame(runParticleLoop);
+    }
+  }
+
+  function runParticleLoop() {
+    if (!fxCtx) return;
+    fxCtx.clearRect(0, 0, fxCanvas.width, fxCanvas.height);
+
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.15; // Gravity pull
+      p.life -= 0.025;
+      p.alpha = Math.max(0, p.life);
+
+      fxCtx.save();
+      fxCtx.globalAlpha = p.alpha;
+      fxCtx.fillStyle = p.color;
+      fxCtx.beginPath();
+      fxCtx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      fxCtx.fill();
+      fxCtx.restore();
+
+      if (p.life <= 0) particles.splice(i, 1);
+    }
+
+    if (particles.length > 0) {
+      requestAnimationFrame(runParticleLoop);
+    } else {
+      window.particleAnimLoopRunning = false;
+    }
+  }
+
+  function triggerFloatingXPBadge(endCell) {
+    if (!textLayer) return;
+    const cw = textLayer.clientWidth / gridSize;
+    const ch = textLayer.clientHeight / gridSize;
+
+    const posX = (endCell.c + 0.5) * cw;
+    const posY = (endCell.r + 0.5) * ch;
+
+    const badge = document.createElement('div');
+    badge.className = 'xp-float-badge';
+    badge.textContent = '+100 XP!';
+    badge.style.left = `${posX - 40}px`;
+    badge.style.top = `${posY - 20}px`;
+
+    const wrapper = document.getElementById('grid-wrapper');
+    if (wrapper) wrapper.appendChild(badge);
+
+    setTimeout(() => badge.remove(), 1000);
+  }
+
   // Event Listeners for Difficulty
   btnEasy.addEventListener('click', () => setDifficulty('easy'));
   btnMedium.addEventListener('click', () => setDifficulty('medium'));
   btnIntellect.addEventListener('click', () => setDifficulty('intellect'));
+
+  // 3D Parallax Card Tilt Effect on Mouse Movement
+  const notebookCard = document.querySelector('.notebook');
+  if (notebookCard) {
+    document.addEventListener('mousemove', (e) => {
+      const cx = window.innerWidth / 2;
+      const cy = window.innerHeight / 2;
+      const dx = (e.clientX - cx) / cx;
+      const dy = (e.clientY - cy) / cy;
+
+      const tiltX = (dy * -8).toFixed(2);
+      const tiltY = (dx * 8).toFixed(2);
+
+      notebookCard.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+      notebookCard.style.transition = 'transform 0.1s ease-out';
+    });
+
+    document.addEventListener('mouseleave', () => {
+      notebookCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+      notebookCard.style.transition = 'transform 0.5s ease';
+    });
+  }
 
   btnSettings.addEventListener('click', () => {
     btnCancelDiff.style.display = gameInProgress ? 'inline-block' : 'none';
@@ -92,6 +218,78 @@ document.addEventListener('DOMContentLoaded', () => {
   btnCancelDiff.addEventListener('click', () => {
     difficultyOverlay.style.display = 'none';
   });
+
+  const statsHeaderTrigger = document.getElementById('stats-header-trigger');
+  const leagueBtn = document.getElementById('league-btn');
+  const xpBreakdownOverlay = document.getElementById('xp-breakdown-overlay');
+  const xpBreakdownClose = document.getElementById('xp-breakdown-close');
+
+  const openLeagueModal = () => {
+    if (typeof AudioManager !== 'undefined') {
+      AudioManager.init();
+      AudioManager.play('gem');
+    }
+    populateStatsModal();
+    xpBreakdownOverlay.style.display = 'flex';
+  };
+
+  if (statsHeaderTrigger && xpBreakdownOverlay) {
+    statsHeaderTrigger.addEventListener('click', openLeagueModal);
+  }
+
+  if (leagueBtn && xpBreakdownOverlay) {
+    leagueBtn.addEventListener('click', openLeagueModal);
+  }
+
+  if (xpBreakdownClose && xpBreakdownOverlay) {
+    xpBreakdownClose.addEventListener('click', () => {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+      xpBreakdownOverlay.style.display = 'none';
+    });
+  }
+
+  function populateStatsModal() {
+    const streak = parseInt(localStorage.getItem('osmosis_hunt_streak')) || 0;
+    const totalXP = parseInt(localStorage.getItem('osmosis_total_score')) || 0;
+    const gems = Math.floor(totalXP / 100);
+
+    const level = Math.floor(totalXP / 500) + 1;
+    const leagues = ["Bronze League", "Silver League", "Gold League", "Sapphire League", "Ruby League", "Diamond League"];
+    const leagueRank = leagues[Math.min(leagues.length - 1, Math.floor((level - 1) / 2))];
+
+    const rankEl = document.getElementById('modal-league-rank');
+    const streakEl = document.getElementById('breakdown-streak');
+    const xpEl = document.getElementById('breakdown-xp');
+    const gemsEl = document.getElementById('breakdown-gems');
+
+    if (rankEl) rankEl.textContent = leagueRank;
+    if (streakEl) streakEl.textContent = `${streak} Sessions`;
+    if (xpEl) xpEl.textContent = `${totalXP} XP`;
+    if (gemsEl) gemsEl.textContent = `${gems} Gems`;
+  }
+
+  function updateProgressionHeader() {
+    const streak = parseInt(localStorage.getItem('osmosis_hunt_streak')) || 0;
+    const totalXP = parseInt(localStorage.getItem('osmosis_total_score')) || 0;
+    const gems = Math.floor(totalXP / 100);
+
+    // Calculate level progression (Every level requires 500 XP)
+    const level = Math.floor(totalXP / 500) + 1;
+    const currentLevelXP = totalXP % 500;
+    const xpPercent = Math.min(100, Math.floor((currentLevelXP / 500) * 100));
+
+    const streakEl = document.getElementById('header-streak-count');
+    const lvlTitleEl = document.getElementById('header-level-title');
+    const xpTextEl = document.getElementById('header-xp-text');
+    const xpFillEl = document.getElementById('header-xp-fill');
+    const gemsEl = document.getElementById('header-gems-count');
+
+    if (streakEl) streakEl.textContent = streak;
+    if (lvlTitleEl) lvlTitleEl.textContent = `LVL ${level}`;
+    if (xpTextEl) xpTextEl.textContent = `${currentLevelXP} / 500 XP`;
+    if (xpFillEl) xpFillEl.style.width = `${xpPercent}%`;
+    if (gemsEl) gemsEl.textContent = gems;
+  }
 
   function setDifficulty(level) {
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
@@ -109,9 +307,12 @@ document.addEventListener('DOMContentLoaded', () => {
     gridSize = currentLevelObj.grid;
     numWords = currentLevelObj.words;
 
-    // Update UI for level
+    // Update UI for level with persistent streak progress
+    const streak = parseInt(localStorage.getItem('osmosis_hunt_streak')) || 0;
     textLayer.style.setProperty('--grid-size', gridSize);
-    lvlBadge.textContent = currentLevelObj.lvl;
+    lvlBadge.textContent = `${currentLevelObj.lvl} (Streak: ${streak})`;
+
+    updateProgressionHeader();
 
     // Reset game vars
     foundWords = [];
@@ -433,6 +634,9 @@ document.addEventListener('DOMContentLoaded', () => {
     783.99  // G5 (Sol)
   ];
 
+  // We keep a registry of active audio nodes to play harmonized chord layers
+  let activeHarmonies = [];
+
   function playDragNote(steps) {
     if (typeof AudioManager === 'undefined') return;
     AudioManager.init();
@@ -440,25 +644,99 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!ctx) return;
     if (ctx.state === 'suspended') ctx.resume();
 
-    const noteIndex = Math.min(steps, pianoScale.length - 1);
-    const freq = pianoScale[noteIndex];
+    // Clean up old active notes to prevent frequency clutter
+    activeHarmonies.forEach(node => {
+      try { node.osc.stop(); } catch (e) {}
+    });
+    activeHarmonies = [];
 
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
+    // Scale index bounded to range
+    const rootIndex = Math.min(steps, pianoScale.length - 1);
+    const rootFreq = pianoScale[rootIndex];
+
+    // Define helper to create a warm synthesized piano voice
+    const playHarmonicVoice = (frequency, volume, delay = 0, type = 'sine') => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      const filter = ctx.createBiquadFilter();
+
+      osc.type = type;
+      osc.frequency.setValueAtTime(frequency, ctx.currentTime);
+
+      // Lowpass filter simulates the warm damper resonance of a piano string
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(2000, ctx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(100, ctx.currentTime + 0.4);
+
+      const now = ctx.currentTime;
+      gain.gain.setValueAtTime(0, now);
+      gain.gain.linearRampToValueAtTime(volume, now + 0.03 + delay); 
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5 + delay); // decay
+
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(now);
+      osc.stop(now + 0.6);
+
+      activeHarmonies.push({ osc, gain });
+    };
+
+    // Play a beautiful chord progression harmony based on step length
+    // Ratios: Root (1.0), Major Third (1.25) or Minor Third (1.2), Perfect Fifth (1.5), Octave (2.0)
+    const isEven = (steps % 2 === 0);
+    const thirdRatio = isEven ? 1.25 : 1.20; // Alternates between major/minor steps for organic coloring
+    const fifthRatio = 1.50;
+    const octaveRatio = 2.00;
+
+    // 1. Root Note (deep warm resonance)
+    playHarmonicVoice(rootFreq, 0.20, 0, 'sine');
+
+    // 2. Harmonic Third (adds emotional coloring)
+    playHarmonicVoice(rootFreq * thirdRatio, 0.12, 0.02, 'sine');
+
+    // 3. Harmonic Fifth (provides stability)
+    playHarmonicVoice(rootFreq * fifthRatio, 0.10, 0.04, 'sine');
+
+    // 4. Sparkling Octave (adds bell-like high clarity)
+    if (steps > 2) {
+      playHarmonicVoice(rootFreq * octaveRatio, 0.08, 0.06, 'triangle');
+    }
+  }
+
+  // Helper to animate matrix cells selected in the path
+  function highlightMatrixCellsInSelection() {
+    if (!startCell || !lastValidEndCell) return;
+    const cells = textLayer.querySelectorAll('.hunt-cell');
     
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(freq, ctx.currentTime);
+    // Reset all cells from temporary scale/glow effects
+    cells.forEach(c => {
+      c.style.transform = '';
+      c.style.textShadow = '';
+      c.style.color = '#0f172a';
+    });
+
+    const dr = lastValidEndCell.r - startCell.r;
+    const dc = lastValidEndCell.c - startCell.c;
+    const steps = Math.max(Math.abs(dr), Math.abs(dc));
     
-    const now = ctx.currentTime;
-    gain.gain.setValueAtTime(0, now);
-    gain.gain.linearRampToValueAtTime(0.25, now + 0.02); // rapid attack
-    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35); // decay
-    
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    
-    osc.start(now);
-    osc.stop(now + 0.35);
+    const stepR = steps === 0 ? 0 : dr / steps;
+    const stepC = steps === 0 ? 0 : dc / steps;
+
+    for (let i = 0; i <= steps; i++) {
+      const r = Math.round(startCell.r + (stepR * i));
+      const c = Math.round(startCell.c + (stepC * i));
+      const idx = r * gridSize + c;
+      const cellNode = cells[idx];
+      if (cellNode) {
+        // Dynamic scale expansion & color shift to reflect live selection
+        cellNode.style.transform = 'scale(1.25)';
+        cellNode.style.color = '#4f46e5';
+        cellNode.style.textShadow = '0 0 12px rgba(79, 70, 229, 0.8)';
+        cellNode.style.transition = 'transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.1s';
+      }
+    }
   }
 
   function handlePointerDown(e) {
@@ -480,6 +758,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePillTransform(selectionPill, startCell, startCell, color);
     
     playDragNote(0);
+    highlightMatrixCellsInSelection();
   }
 
   function handlePointerMove(e) {
@@ -501,6 +780,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const steps = Math.max(Math.abs(dr), Math.abs(dc));
         playDragNote(steps);
+        highlightMatrixCellsInSelection();
       }
     }
   }
@@ -508,6 +788,14 @@ document.addEventListener('DOMContentLoaded', () => {
   function handlePointerUp(e) {
     if (!isSelecting) return;
     isSelecting = false;
+
+    // Reset temporary styles on all cells from the dynamic highlighting
+    const cells = textLayer.querySelectorAll('.hunt-cell');
+    cells.forEach(c => {
+      c.style.transform = '';
+      c.style.textShadow = '';
+      c.style.color = '#0f172a';
+    });
 
     // Evaluate selection
     const dr = lastValidEndCell.r - startCell.r;
@@ -531,6 +819,20 @@ document.addEventListener('DOMContentLoaded', () => {
       // Correct!
       if (typeof AudioManager !== 'undefined') AudioManager.play('success');
       foundWords.push(match);
+
+      // 1. Trigger Screen Impact Shake
+      const notebookEl = document.querySelector('.notebook');
+      if (notebookEl) {
+        notebookEl.classList.remove('impact-shake');
+        void notebookEl.offsetWidth; // Force DOM reflow
+        notebookEl.classList.add('impact-shake');
+      }
+
+      // 2. Trigger Canvas Particle Explosion along the word path
+      triggerParticleExplosion(startCell, lastValidEndCell);
+
+      // 3. Trigger Floating "+100 XP" Badge Animation
+      triggerFloatingXPBadge(lastValidEndCell);
 
       const chip = document.getElementById('word-' + match);
       if (chip) chip.classList.add('found');
@@ -903,6 +1205,9 @@ document.addEventListener('DOMContentLoaded', () => {
       gameData.score = (gameData.score || 0) + currentScore;
       sharedState.save(gameData);
 
+      // Refresh top header stats (XP bar animation & Gem earnings)
+      updateProgressionHeader();
+
       // Populate results details
       const wordsFoundEl = document.getElementById('result-words-found');
       if (wordsFoundEl) wordsFoundEl.textContent = `${foundWords.length}/${targetWords.length}`;
@@ -947,8 +1252,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   overlayContinueBtn.addEventListener('click', () => {
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
-    // Word Hunt ends here — go straight home (recall test stage removed per HOD feedback)
-    goHome();
+    winOverlay.classList.remove('active');
+    
+    // Increment a "Streak / Game Level" count to show progress going up
+    const currentStreak = parseInt(localStorage.getItem('osmosis_hunt_streak')) || 0;
+    localStorage.setItem('osmosis_hunt_streak', currentStreak + 1);
+
+    // Re-initialize a brand new game with a fresh set of words
+    initGame();
   });
 
   // --- Guiding Wizard Logic ---
