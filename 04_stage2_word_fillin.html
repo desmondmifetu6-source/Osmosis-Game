@@ -185,8 +185,15 @@
       justify-content: center;
     }
 
-    .feedback.success { color: #2e7d32; text-shadow: 0 0 10px rgba(46, 125, 50, 0.2); }
-    .feedback.error { color: #c62828; text-shadow: 0 0 10px rgba(198, 40, 40, 0.2); }
+    .feedback.success {
+      color: #2e7d32;
+      text-shadow: 0 0 10px rgba(46, 125, 50, 0.2);
+    }
+
+    .feedback.error {
+      color: #c62828;
+      text-shadow: 0 0 10px rgba(198, 40, 40, 0.2);
+    }
 
     .welcome-lap2 {
       font-size: 3rem;
@@ -261,17 +268,12 @@
         <div id="rev-timer" class="alarming-timer">00:00</div>
       </div>
 
-      <!-- Glancing Guide Banner -->
-      <div class="glance-banner">
-        <div class="glance-icon">👁️</div>
-        <div class="glance-text">
-          <strong>You don't need to memorise every word!</strong>
-          <p>Simply <em>glance through</em> each term and its meaning. Pick out <strong>one or two key ideas</strong> that stand out to you — a mental hook, an image, a connection. That's all you need. The repeated exposure across stages will do the rest of the work for you.</p>
-        </div>
-      </div>
+
+
 
       <div id="rev-list" class="revision-list"></div>
-      <button id="start-test-early-btn" class="classic-btn secondary" style="width:auto; float:right;">I'm Ready &rarr;</button>
+      <button id="start-test-early-btn" class="classic-btn secondary" style="width:auto; float:right;">Proceed
+        &rarr;</button>
       <div style="clear:both;"></div>
     </div>
 
@@ -284,7 +286,8 @@
       <p style="font-style:italic; margin-bottom:2rem;">Fill in the missing letters by typing the entire word.</p>
       <div class="test-area">
         <h1 id="lap1-word-display" class="masked-word">A _ O M</h1>
-        <input type="text" id="lap1-input" class="s3-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <input type="text" id="lap1-input" class="s3-input" autocomplete="off" autocorrect="off" autocapitalize="off"
+          spellcheck="false">
         <div id="lap1-feedback" class="feedback"></div>
       </div>
       <button id="lap1-submit" class="classic-btn blue-gradient">Submit Answer</button>
