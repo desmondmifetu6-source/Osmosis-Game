@@ -355,6 +355,7 @@ const AudioManager = {
     else if (type === 'error') this.vibrate([50, 40, 50]);
     else if (type === 'levelup') this.vibrate([35, 50, 35, 50, 90]);
     else if (type === 'gem') this.vibrate([15, 25, 15]);
+    else if (type === 'fanfare') this.vibrate([40, 50, 40, 50, 40, 60, 120]);
 
     if (!this.ctx) return;
     if (this.ctx.state === 'suspended') this.ctx.resume();
@@ -362,6 +363,48 @@ const AudioManager = {
     const now = this.ctx.currentTime;
 
     switch (type) {
+      case 'fanfare': {
+        // Triumphant "Pa-na-na-na-na-naaa!" Victory Trumpet Fanfare
+        // Notes: G4 (392Hz), C5 (523.25Hz), E5 (659.25Hz), G5 (783.99Hz), E5 (659.25Hz), G5 (783.99Hz)
+        const notes = [
+          { freq: 392.00,  start: 0.00, duration: 0.09, vol: 0.22 }, // Pa
+          { freq: 523.25,  start: 0.10, duration: 0.09, vol: 0.24 }, // Na
+          { freq: 659.25,  start: 0.20, duration: 0.09, vol: 0.26 }, // Na
+          { freq: 783.99,  start: 0.30, duration: 0.16, vol: 0.28 }, // Na
+          { freq: 659.25,  start: 0.48, duration: 0.10, vol: 0.25 }, // Na
+          { freq: 783.99,  start: 0.60, duration: 0.60, vol: 0.32 }  // NAAAA!
+        ];
+
+        notes.forEach(n => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          const filter = this.ctx.createBiquadFilter();
+
+          // Triangle + Lowpass filter creates a bright, warm brassy trumpet timbre
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(n.freq, now + n.start);
+
+          filter.type = 'lowpass';
+          filter.frequency.setValueAtTime(2800, now + n.start);
+
+          const tStart = now + n.start;
+          const tEnd = tStart + n.duration;
+
+          // Attack - Sustain - Decay envelope for brassy punch
+          gain.gain.setValueAtTime(0, tStart);
+          gain.gain.linearRampToValueAtTime(n.vol, tStart + 0.015);
+          gain.gain.setValueAtTime(n.vol * 0.85, tEnd - 0.03);
+          gain.gain.exponentialRampToValueAtTime(0.001, tEnd);
+
+          osc.connect(filter);
+          filter.connect(gain);
+          gain.connect(this.ctx.destination);
+
+          osc.start(tStart);
+          osc.stop(tEnd);
+        });
+        break;
+      }
       case 'click': {
         // Soft futuristic glass tap (No more heavy drum thud!)
         const osc = this.ctx.createOscillator();
@@ -606,14 +649,21 @@ function applyOsmosisFavicon() {
 // BEFORE we throw you into the next webpage (URL).
 window.navigateWithTransition = function navigateWithTransition(url, delayMs = 220) {
   if (!url) return;
+  const isResults = url.includes('results');
+  const actualDelay = isResults ? 700 : delayMs;
+
   if (typeof AudioManager !== 'undefined') {
     AudioManager.init();
-    AudioManager.play('warp');
+    if (isResults) {
+      AudioManager.play('fanfare');
+    } else {
+      AudioManager.play('warp');
+    }
   }
   if (document.body) document.body.classList.add('page-leave'); // Trigger the fade-out CSS animation!
   setTimeout(() => {
     window.location.href = url; // Actually move to the new page
-  }, delayMs);
+  }, actualDelay);
 };
 
 // Function: setupPageTransitions

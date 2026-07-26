@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
     else window.location.href = 'multiplayer_lobby.html';
   });
 
+  // ── Play Victory Trumpet Fanfare! ──
+  if (typeof AudioManager !== 'undefined') {
+    AudioManager.init();
+    AudioManager.play('fanfare');
+  }
+
   // ── Modal ──
   function closeModal() { modalOverlay.classList.remove('active'); }
   modalX.addEventListener('click', closeModal);

@@ -40,6 +40,12 @@ const ResultsController = {
     this.renderWordsList();
     this.updateGlobalHistory();
     this.attachListeners();
+
+    // Play Victory Trumpet Fanfare!
+    if (typeof AudioManager !== 'undefined') {
+      AudioManager.init();
+      AudioManager.play('fanfare');
+    }
   },
 
   cacheDOM() {

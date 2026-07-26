@@ -212,11 +212,29 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 
 #modal-overlay {
   position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4); z-index: 100;
+  background: rgba(0,0,0,0.45); z-index: 10000;
   display: flex; justify-content: center; align-items: center;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 #modal-overlay.hidden { display: none; }
+
+.modal-card {
+  animation: springSlideUp 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@keyframes springSlideUp {
+  0% { opacity: 0; transform: translateY(35px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
 
 /* Global Floating Timer */
 #global-game-timer {
