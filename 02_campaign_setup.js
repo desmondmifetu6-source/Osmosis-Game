@@ -159,10 +159,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (freshWords.length === 0) freshWords = possibleWords;
     possibleWords = freshWords;
 
-    // Pick a random word from the pool just to establish our target length
-    if (possibleWords.length > 0) {
+    // Prefer solid single-token STEM terms (no spaces) so length matches what players expect.
+    // Letter-count ignores spaces/hyphens/punctuation: "brain" = 5, "a fortiori" = 9.
+    const countLetters = (word) =>
+      (typeof DictionaryLogic !== 'undefined' && DictionaryLogic.countLetters)
+        ? DictionaryLogic.countLetters(word)
+        : String(word || '').replace(/[^a-zA-Z]/g, '').length;
+
+    const solidWords = possibleWords.filter((w) => !/\s/.test(w) && countLetters(w) >= 4 && countLetters(w) <= 11);
+    const lengthPool = solidWords.length > 0
+      ? solidWords
+      : possibleWords.filter((w) => countLetters(w) >= 4 && countLetters(w) <= 11);
+
+    if (lengthPool.length > 0) {
+      const chosenWord = lengthPool[Math.floor(Math.random() * lengthPool.length)];
+      gameData.length = countLetters(chosenWord);
+    } else if (possibleWords.length > 0) {
       const chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
-      gameData.length = chosenWord.length;
+      gameData.length = countLetters(chosenWord) || 7;
     } else {
       gameData.length = 7; // Fallback
     }

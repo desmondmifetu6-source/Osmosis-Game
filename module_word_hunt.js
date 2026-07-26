@@ -1016,9 +1016,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  huntDropdownSubmit.addEventListener('click', () => {
+  huntDropdownSubmit.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (huntDropdownSubmit.disabled) return;
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+
+    // Close any open dropdown menus so they can't sit on top of the button
+    document.querySelectorAll('.custom-dropdown-container.open').forEach(c => {
+      c.classList.remove('open');
+    });
 
     if (activeDropdownTestAnswers.length === 0) {
       closeTestAndCheckWin();
@@ -1026,14 +1033,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let allCorrect = true;
+    let hasEmpty = false;
+
     activeDropdownTestAnswers.forEach(ans => {
       const container = document.getElementById(ans.id);
+      if (!container) {
+        allCorrect = false;
+        return;
+      }
       const btn = container.querySelector('.custom-dropdown-btn');
-      const selected = btn.dataset.selected || '';
+      if (!btn) {
+        allCorrect = false;
+        return;
+      }
+      const selected = (btn.dataset.selected || '').trim();
 
       btn.classList.remove('wrong', 'correct');
 
-      if (selected.toLowerCase() === ans.correct.toLowerCase()) {
+      if (!selected) {
+        hasEmpty = true;
+        allCorrect = false;
+        btn.classList.add('wrong');
+        setTimeout(() => {
+          if (btn.classList.contains('wrong') && !(btn.dataset.selected || '').trim()) {
+            btn.classList.remove('wrong');
+          }
+        }, 400);
+        return;
+      }
+
+      if (selected.toLowerCase() === String(ans.correct).toLowerCase()) {
         btn.classList.add('correct');
       } else {
         btn.classList.add('wrong');
@@ -1044,6 +1073,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    if (hasEmpty) {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('error');
+      huntDropdownFeedback.textContent = 'Please select a word for every blank.';
+      huntDropdownFeedback.className = 'feedback error';
+      return;
+    }
+
     if (allCorrect) {
       if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 
@@ -1052,8 +1088,9 @@ document.addEventListener('DOMContentLoaded', () => {
       huntDropdownSubmit.disabled = true;
       huntDropdownSkip.style.display = 'none';
 
-      // Show the grand success banner
+      // Show the grand success banner ABOVE the dropdown overlay
       successBanner.style.display = 'flex';
+      successBanner.style.zIndex = '26000';
 
       // Start continuous confetti
       startContinuousConfetti();
@@ -1154,10 +1191,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function getRandomTrickWords(correctWord, num = 3) {
     let all = [];
-    if (typeof window.STEMDictionary !== 'undefined' && window.STEMDictionary.wordBank) {
-      const bank = window.STEMDictionary.wordBank;
-      for (let letter in bank) {
-        all.push(...bank[letter].map(w => w.word));
+    if (typeof window.STEMDictionary !== 'undefined') {
+      if (typeof window.STEMDictionary.getAllWords === 'function') {
+        all = window.STEMDictionary.getAllWords().map(w => w.word);
+      } else if (window.STEMDictionary.wordBank) {
+        const bank = window.STEMDictionary.wordBank;
+        for (let letter in bank) {
+          all.push(...bank[letter].map(w => w.word));
+        }
       }
     }
     if (all.length < 5) {
@@ -1169,10 +1210,11 @@ document.addEventListener('DOMContentLoaded', () => {
     while (tricks.length < num && attempts < 100) {
       attempts++;
       let word = all[Math.floor(Math.random() * all.length)];
-      word = word.split(' ')[0]; // Take only first word to keep dropdown options short
+      word = String(word).split(' ')[0]; // Take only first word to keep dropdown options short
+      if (!word) continue;
       word = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 
-      if (word.toLowerCase() !== correctWord.toLowerCase() && !tricks.includes(word)) {
+      if (word.toLowerCase() !== String(correctWord).toLowerCase() && !tricks.includes(word)) {
         tricks.push(word);
       }
     }

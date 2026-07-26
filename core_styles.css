@@ -43,6 +43,11 @@ body.page-leave {
   z-index: 1;
 }
 
+/* Expanded container for multi-column stages (e.g. Stage 1 Word Selection) */
+.app-container.wide-stage {
+  max-width: 980px !important;
+}
+
 .card {
   background: var(--surface-white) !important;
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
@@ -589,12 +594,14 @@ body.dict-cover-page .dict-source-tag {
   -webkit-backdrop-filter: blur(10px);
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .dict-cover-lightbox.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .dict-cover-lightbox-back {

@@ -642,6 +642,48 @@ Create a file named `spring_menu.html` on your desktop:
 
 ---
 
+## 📐 Lesson 7: Responsive Layouts & Preventing Long Word Overflow
+
+When building web applications with long text terms (like scientific terms: *"williamson's synthesis"*, *"wurtzite structure"*, *"wilcoxon test"*), fixed containers can squish side-by-side columns and push content off-screen.
+
+### What Caused the Column Clipping?
+1. **Container Width Cap**: `.app-container` had a global CSS cap of `max-width: 600px`.
+2. **Two Side-by-Side Flex Columns**: Stage 1 had `.word-pool-container` and `.wooden-board-container` side-by-side. 600px was too narrow for two columns containing long phrases!
+3. **Fixed Media Query Breakpoints**: Media queries checking viewport width (`@media (max-width: 992px)`) didn't trigger inside fixed 600px cards.
+
+### The 3-Step Responsive Solution:
+
+1. **Expanded Wide Containers (`.wide-stage`)**:
+   For multi-column layouts, expand the parent container on desktop/tablet to `max-width: 980px`.
+   ```css
+   .app-container.wide-stage {
+     max-width: 980px !important;
+   }
+   ```
+
+2. **Responsive Column Stacking**:
+   When the screen or window is under 850px, switch flex direction to `column` so the columns stack vertically instead of clipping side-by-side!
+   ```css
+   @media (max-width: 850px) {
+     .s2-workspace { flex-direction: column; }
+     .word-pool-container, .wooden-board-container { width: 100%; }
+   }
+   ```
+
+3. **Text Wrap Protection**:
+   Prevent long phrases from overflowing their chips using word wrapping and dynamic font clamping:
+   ```css
+   .word-tile {
+     max-width: 100%;
+     overflow-wrap: break-word;
+     word-break: break-word;
+     white-space: normal;
+     font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+   }
+   ```
+
+---
+
 ## 🛠️ Summary Checklist for Desmond:
 
 1. **Audio Autoplay**: Play audio inside user click gesture handlers (`navigateWithTransition`) so browsers allow instant autoplay during page transitions!
@@ -650,7 +692,9 @@ Create a file named `spring_menu.html` on your desktop:
 4. **Safari Performance**: Add `-webkit-transform: translate3d(0,0,0)` and `-webkit-backface-visibility: hidden` whenever you use `backdrop-filter`.
 5. **Melodies**: Chain notes in Web Audio API by adding offset delays (`now + delayInSeconds`) to schedule full musical fanfares!
 6. **Liquid Motion**: Use `cubic-bezier(0.175, 0.885, 0.32, 1.275)` + `translateY` + `scale` to turn boring popups into springy liquid animations!
+7. **Responsive Columns**: Use `.wide-stage` (`max-width: 980px`) and responsive flex stacking (`flex-direction: column`) so long scientific terms never cut off side columns!
 
 Keep practicing and building! You've got this! 🚀
+
 
 

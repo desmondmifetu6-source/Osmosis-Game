@@ -349,6 +349,14 @@ const AudioManager = {
   },
 
   play: function (type) {
+    try {
+      this._playInternal(type);
+    } catch (err) {
+      // Never let audio glitches block Submit / Continue clicks
+    }
+  },
+
+  _playInternal: function (type) {
     this.init(); // Guarantee audio context exists
     if (type === 'click') this.vibrate(10);
     else if (type === 'chip') this.vibrate(15);
@@ -538,16 +546,23 @@ document.addEventListener('click', (e) => {
 // This is an assistant that talks strictly to our word library (core_dictionary.js).
 const DictionaryLogic = {
 
+  // Count only A–Z letters so spaces/hyphens in dictionary entries do not inflate length.
+  // Example: "a fortiori" → 9 letters, not 10 characters.
+  countLetters: function (word) {
+    return String(word || '').replace(/[^a-zA-Z]/g, '').length;
+  },
+
   // Function: fetchWords
   // You hand the librarian a Letter and a Length, and it digs through 
   // the filing cabinet to bring you matched scientific words.
   fetchWords: function (letter, length) {
     if (typeof window.STEMDictionary === 'undefined') return [];
     const words = window.STEMDictionary.getWordsByLetter(letter);
+    const targetLen = Number(length);
 
-    // We try to find words that match the exact target length first, AND have a valid definition!
+    // We try to find words that match the exact target letter-count first, AND have a valid definition!
     let matched = words.filter(w => w.definition && w.definition.trim() !== "")
-      .filter(w => w.word.length === length)
+      .filter(w => this.countLetters(w.word) === targetLen)
       .map(w => w.word);
 
     // If the library has no words of that exact size, we just take any word under that letter with a definition.
@@ -577,40 +592,44 @@ const DictionaryLogic = {
 // Function: initModal
 // Builds the pop-up box that tells you your score. It physically constructs HTML code inside JS.
 function initModal() {
-  const overlay = document.createElement('div');
-  overlay.id = 'modal-overlay';
-  overlay.className = 'hidden';
-  // Notice the backticks (` `). They let us write multi-line HTML string easily.
-  overlay.innerHTML = `
-    <div class="card modal-card" style="max-width: 400px; margin: auto;">
-      <h3 id="modal-title">Notice</h3>
-      <p id="modal-text"></p>
-      <div id="modal-btn-wrap" style="display:flex; gap:10px; margin-top:20px;">
-        <button id="modal-forfeit-btn" class="classic-btn secondary" style="display:none; flex:1;">Forfeit</button>
-        <button id="modal-close-btn" class="classic-btn" style="flex:1;">Continue</button>
+  // Never stack duplicate overlays — a leftover full-screen modal blocks every button.
+  let overlay = document.getElementById('modal-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'modal-overlay';
+    overlay.className = 'hidden';
+    overlay.innerHTML = `
+      <div class="card modal-card" style="max-width: 400px; margin: auto;">
+        <h3 id="modal-title">Notice</h3>
+        <p id="modal-text"></p>
+        <div id="modal-btn-wrap" style="display:flex; gap:10px; margin-top:20px;">
+          <button id="modal-forfeit-btn" class="classic-btn secondary" style="display:none; flex:1;">Forfeit</button>
+          <button id="modal-close-btn" class="classic-btn" style="flex:1;">Continue</button>
+        </div>
       </div>
-    </div>
-  `;
-  document.body.appendChild(overlay); // Stick it onto the page
+    `;
+    document.body.appendChild(overlay);
 
-  // When you click close, we just hide it by putting the 'hidden' class back on.
-  document.getElementById('modal-close-btn').addEventListener('click', () => {
-    overlay.classList.add('hidden');
-    if (typeof window.modalCallback === 'function') {
-      const cb = window.modalCallback;
-      window.modalCallback = null;
-      cb();
-    }
-  });
+    document.getElementById('modal-close-btn').addEventListener('click', () => {
+      overlay.classList.add('hidden');
+      if (typeof window.modalCallback === 'function') {
+        const cb = window.modalCallback;
+        window.modalCallback = null;
+        cb();
+      }
+    });
 
-  document.getElementById('modal-forfeit-btn').addEventListener('click', () => {
+    document.getElementById('modal-forfeit-btn').addEventListener('click', () => {
+      overlay.classList.add('hidden');
+      if (typeof window.modalForfeitCallback === 'function') {
+        const cb = window.modalForfeitCallback;
+        window.modalForfeitCallback = null;
+        cb();
+      }
+    });
+  } else {
     overlay.classList.add('hidden');
-    if (typeof window.modalForfeitCallback === 'function') {
-      const cb = window.modalForfeitCallback;
-      window.modalForfeitCallback = null;
-      cb();
-    }
-  });
+  }
 
   window.showModal = function (title, text, onContinue, onForfeit) {
     document.getElementById('modal-title').textContent = title;
@@ -626,7 +645,7 @@ function initModal() {
     }
 
     overlay.classList.remove('hidden');
-  }
+  };
 }
 
 
@@ -702,12 +721,30 @@ if (document.readyState === 'loading') {
 document.addEventListener('keydown', (e) => {
   // If they smash the "Enter" key...
   if (e.key === 'Enter') {
-    // If they were typing in a specific test box, we try to submit the answer.
+    // If they were typing in a specific test box, submit that stage's answer.
     if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) {
-      if (document.activeElement.classList.contains('meaning-input')) {
-        const submitBtn = document.getElementById('submit-btn');
-        if (submitBtn && submitBtn.offsetParent !== null && !submitBtn.disabled) {
-          submitBtn.click();
+      const active = document.activeElement;
+      const submitCandidates = [
+        'submit-btn',
+        'lap1-submit',
+        'lap2-submit-btn'
+      ];
+
+      // Prefer stage-specific submit when typing in known answer fields
+      if (
+        active.classList.contains('meaning-input') ||
+        active.classList.contains('s3-input') ||
+        active.classList.contains('word-input') ||
+        active.id === 'lap1-input' ||
+        active.id === 'lap2-input'
+      ) {
+        for (const id of submitCandidates) {
+          const submitBtn = document.getElementById(id);
+          if (submitBtn && submitBtn.offsetParent !== null && submitBtn.style.display !== 'none' && !submitBtn.disabled) {
+            e.preventDefault();
+            submitBtn.click();
+            return;
+          }
         }
       }
       return;
@@ -724,7 +761,7 @@ document.addEventListener('keydown', (e) => {
     // Otherwise, we look around for ANY big primary button on the screen and push it for them.
     const primaryButtons = [
       'login-btn', 'continue-saved-btn', 'play-solo-btn', 'setup-continue-btn',
-      's2-finish-btn', 'start-test-early-btn', 'lap1-submit', 'start-lap2-btn',
+      's2-finish-btn', 'start-test-early-btn', 'lap1-submit', 'lap2-submit-btn', 'start-lap2-btn',
       'start-test-btn', 'ready-btn', 'submit-btn', 'start-btn', 'next-btn',
       'play-again-btn', 'go-home-btn'
     ];

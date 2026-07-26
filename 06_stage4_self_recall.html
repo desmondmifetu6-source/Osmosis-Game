@@ -162,19 +162,27 @@
 
     <!-- Lap 2 Container -->
     <div id="lap2-container" class="card stage4f-card"
-      style="display: none; background: #ffffff; border: 1px solid #e5e5e5; border-radius:8px; box-shadow:none;">
+      style="display: none; background: #ffffff; border: 1px solid #e5e5e5; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
       <div class="s4f-header">
-        <h2 style="color: #111111; font-weight:700; font-size:1.8rem;">Stage 4: Self Recall challenge</h2>
+        <h2 style="color: #111111; font-weight:700; font-size:1.8rem;">Stage 4: Self Recall Challenge</h2>
       </div>
-      <p style="font-weight:500; margin-bottom:1rem; text-align: center; color:#555;">Recall all terms</p>
-      <div class="test-area" style="text-align: center; margin-bottom:1rem;">
-        <input type="text" id="lap2-input" class="word-input" autocomplete="off" autocorrect="off" autocapitalize="off"
-          spellcheck="false" style="border: 1px solid #d4d4d4; border-radius:4px; background:#fff; color:#111;">
-        <div id="lap2-feedback" class="feedback" style="font-size:1rem; margin-top:0.5rem; height:1.5rem;"></div>
-        <button id="finish-recall-btn" class="classic-btn primary">Next</button>
+      <p style="font-weight:600; margin-bottom:1.5rem; text-align: center; color:#555;">
+        Type all terms you can remember from your selection. Press <strong>Submit</strong> or <strong>Enter</strong> for each word!
+      </p>
+      <div class="test-area" style="text-align: center; margin-bottom:1.5rem;">
+        <div style="display: flex; gap: 12px; max-width: 520px; margin: 0 auto; align-items: center;">
+          <input type="text" id="lap2-input" class="word-input" placeholder="Type recalled term..." autocomplete="off" autocorrect="off" autocapitalize="off"
+            spellcheck="false" style="border: 2px solid var(--accent-primary); border-radius:12px; background:#fff; color:#111; flex:1; margin-bottom:0;">
+          <button id="lap2-submit-btn" class="classic-btn primary" style="width: auto; padding: 0.9rem 1.8rem; margin: 0; min-width: 120px;">Submit</button>
+        </div>
+        <div id="lap2-feedback" class="feedback" style="font-size:1.1rem; margin-top:0.8rem; min-height:1.8rem;"></div>
       </div>
       <div id="lap2-words-list"
-        style="display:flex; flex-wrap:wrap; justify-content:center; gap:5px; min-height:100px; padding:1rem; background:#fafafa; border:1px solid #e5e5e5; border-radius:4px;">
+        style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px; min-height:90px; padding:1.2rem; background:#fafafa; border:1px solid #e5e5e5; border-radius:12px; margin-bottom: 1.5rem;">
+      </div>
+      <p id="lap2-progress" style="text-align:center; font-size:1rem; color:#888; font-weight:600; margin-bottom:1rem;">0 / 0 recalled</p>
+      <div style="text-align: center;">
+        <button id="finish-recall-btn" class="classic-btn secondary" style="max-width: 320px; margin: 0 auto; font-size: 1rem;">Finish Recall (I'm Done)</button>
       </div>
     </div>
 

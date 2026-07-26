@@ -33,9 +33,11 @@ const Stage4Controller = {
       lap2Container: document.getElementById('lap2-container'),
       startLap2Btn: document.getElementById('start-lap2-btn'),
       finishRecallBtn: document.getElementById('finish-recall-btn'),
+      lap2SubmitBtn: document.getElementById('lap2-submit-btn'),
       lap2Input: document.getElementById('lap2-input'),
       lap2Feedback: document.getElementById('lap2-feedback'),
-      lap2WordsList: document.getElementById('lap2-words-list')
+      lap2WordsList: document.getElementById('lap2-words-list'),
+      lap2Progress: document.getElementById('lap2-progress')
     };
   },
 
@@ -59,12 +61,19 @@ const Stage4Controller = {
       domCache.lap2Input.addEventListener('keypress', (e) => this.handleLap2Keypress(e));
     }
 
+    // New: dedicated Submit button for each word
+    if (domCache.lap2SubmitBtn) {
+      domCache.lap2SubmitBtn.addEventListener('click', () => this.submitCurrentWord());
+    }
+
     if (domCache.finishRecallBtn) {
       domCache.finishRecallBtn.addEventListener('click', () => {
-        // Process any pending input first
-        const val = domCache.lap2Input ? domCache.lap2Input.value.trim().toLowerCase() : '';
+        // If the user typed something but didn't submit it yet, warn them
+        const val = domCache.lap2Input ? domCache.lap2Input.value.trim() : '';
         if (val) {
-          this.processWord(val);
+          this.triggerLap2Feedback("Press Submit to enter that word first!", 'error');
+          domCache.lap2Input.focus();
+          return;
         }
         this.endFinalRecall();
       });
@@ -72,11 +81,37 @@ const Stage4Controller = {
   },
 
   startFinalRecall() {
-    const { domCache, gameData } = this.state;
+    const { domCache } = this.state;
     if (domCache.lap2Container) domCache.lap2Container.style.display = 'block';
-
+    this.updateProgress();
     if (domCache.lap2Input) domCache.lap2Input.focus();
   },
+
+  submitCurrentWord() {
+    const { domCache } = this.state;
+    if (!domCache.lap2Input) return;
+
+    const val = domCache.lap2Input.value.trim().toLowerCase();
+    domCache.lap2Input.value = '';
+    domCache.lap2Input.focus();
+
+    if (val) {
+      this.processWord(val);
+    } else {
+      this.triggerLap2Feedback("Type a word first!", 'error');
+    }
+  },
+
+  updateProgress() {
+    const { domCache, gameData } = this.state;
+    const total = gameData.selectedWords ? gameData.selectedWords.length : 0;
+    const found = this.state.lap2Identified.length;
+    if (domCache.lap2Progress) {
+      domCache.lap2Progress.textContent = `${found} / ${total} recalled`;
+    }
+  },
+
+
 
 
 
@@ -104,9 +139,10 @@ const Stage4Controller = {
 
     if (allCorrectWords.includes(val)) {
       this.state.lap2Identified.push(val);
-      this.triggerLap2Feedback("Excellent!", 'success');
+      this.triggerLap2Feedback("Excellent! ✓", 'success');
 
       this.rewardLap2Points(10);
+      this.updateProgress();
 
       const t = document.createElement('div');
       t.className = 'word-tile';

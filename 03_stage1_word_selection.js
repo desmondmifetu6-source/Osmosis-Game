@@ -90,6 +90,18 @@ const Stage1Controller = {
     return a;
   },
 
+  // Spaces/hyphens must not count toward "5 letters" — only A–Z characters do.
+  countLetters(word) {
+    if (typeof DictionaryLogic !== 'undefined' && DictionaryLogic.countLetters) {
+      return DictionaryLogic.countLetters(word);
+    }
+    return String(word || '').replace(/[^a-zA-Z]/g, '').length;
+  },
+
+  matchesTargetLength(word) {
+    return this.countLetters(word) === Number(this.state.gameData.length);
+  },
+
   // Function: generateLengthAndWords
   // This is the heart of the scavenger hunt! It builds a massive random pool of words,
   // making sure at least ONE word exactly matches your target letter and length.
@@ -119,12 +131,17 @@ const Stage1Controller = {
 
     let freshWords = allWordsForLetter.filter(w => !onCooldown.includes(w.toLowerCase()));
 
-    if (freshWords.filter(w => w.length === gameData.length).length === 0) {
+    if (freshWords.filter(w => this.matchesTargetLength(w)).length === 0) {
       freshWords = allWordsForLetter;
     }
 
-    const correctWords = this.shuffle(freshWords.filter(w => w.length === gameData.length));
-    const distractorWords = this.shuffle(freshWords.filter(w => w.length !== gameData.length));
+    // Prefer clean single-token matches for the featured target (no spaces)
+    const exactMatches = freshWords.filter(w => this.matchesTargetLength(w));
+    const solidExact = exactMatches.filter(w => !/\s/.test(w));
+    const correctSource = solidExact.length > 0 ? solidExact : exactMatches;
+
+    const correctWords = this.shuffle(correctSource);
+    const distractorWords = this.shuffle(freshWords.filter(w => !this.matchesTargetLength(w)));
 
     let workingCorrect = correctWords;
     if (workingCorrect.length === 0) {
@@ -180,7 +197,7 @@ const Stage1Controller = {
     const tile = document.createElement('div');
     tile.className = 'word-tile';
 
-    if (word.length === gameData.length) tile.classList.add('correct-length');
+    if (this.matchesTargetLength(word)) tile.classList.add('correct-length');
     if (isFeatured) tile.classList.add('highlighted-target');
 
     tile.textContent = word;

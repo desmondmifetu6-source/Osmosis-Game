@@ -303,15 +303,16 @@ const Stage6bController = {
     let hasEmpty = false;
 
     dropdowns.forEach(dd => {
-      const userVal = dd.dataset.selected.toLowerCase();
-      const correctVal = dd.dataset.ans.toLowerCase();
+      const userVal = (dd.dataset.selected || '').toLowerCase();
+      const correctVal = (dd.dataset.ans || '').toLowerCase();
       const btn = dd.querySelector('.custom-dropdown-btn');
+      if (!btn) return;
       
       btn.classList.remove('wrong', 'correct');
 
       if (userVal === '') hasEmpty = true;
 
-      if (userVal === correctVal) {
+      if (userVal && userVal === correctVal) {
         btn.classList.add('correct');
       } else if (userVal !== '') {
         btn.classList.add('wrong');

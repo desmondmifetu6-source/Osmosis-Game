@@ -84,9 +84,10 @@
       pointer-events: none;
     }
     
-    @media (max-width: 992px) {
+    @media (max-width: 850px) {
       .s2-workspace { flex-direction: column; min-height: auto; }
-      .wooden-board { min-height: 250px; }
+      .wooden-board { min-height: 200px; }
+      .word-pool-container, .wooden-board-container { width: 100%; }
     }
     
     @media (max-width: 480px) {
@@ -123,13 +124,15 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       cursor: pointer;
       font-family: var(--font-main);
-      font-size: 1.15rem;
+      font-size: clamp(0.85rem, 2.5vw, 1.1rem);
       font-weight: 700;
       transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
       z-index: 2;
       max-width: 100%;
-      white-space: nowrap;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      white-space: normal;
       text-align: center;
     }
     
@@ -180,7 +183,7 @@
   </style>
 </head>
 <body>
-  <div class="app-container">
+  <div class="app-container wide-stage">
     <div class="scoreboard" id="scoreboard">Score: <span id="current-score">0</span></div>
     <div id="main-container" class="card stage2-container">
        <h2 style="text-align: left; margin-top: 0; margin-bottom: 1rem;">Stage 1: Word Selection</h2>

@@ -154,14 +154,27 @@ const Stage2Controller = {
     if (domCache.revisionContainer) domCache.revisionContainer.style.display = 'block';
     if (domCache.revList) domCache.revList.innerHTML = '';
 
+    // Render each word with word DOMINANT (large, bold) above the definition
+    let totalChars = 0;
     gameData.selectedWords.forEach(w => {
+      const meaning = meanings[w] || 'Definition unavailable';
+      totalChars += meaning.length;
+
       const item = document.createElement('div');
       item.className = 'revision-item';
-      item.innerHTML = `<strong>${w}</strong><p>${meanings[w]}</p>`;
+      item.innerHTML = `
+        <strong>${w}</strong>
+        <p>${meaning}</p>
+      `;
       if (domCache.revList) domCache.revList.appendChild(item);
     });
 
-    let timeLeft = gameData.selectedWords.length * CONFIG.TIME_PER_WORD;
+    // Dynamic timer: based on total characters in all definitions
+    // Avg reading speed ~1000 chars/min = ~16.7 chars/sec, we use 12 chars/sec (generous)
+    // Add 30s base buffer. Clamp between 45s and 5 minutes.
+    const dynamicTime = Math.min(300, Math.max(45, Math.round(totalChars / 12) + 30));
+
+    let timeLeft = dynamicTime;
 
     this.state.timerInt = setInterval(() => {
       if (domCache.revTimer) domCache.revTimer.textContent = this.formatTime(timeLeft);
@@ -226,7 +239,11 @@ const Stage2Controller = {
     }
 
     const inputVal = domCache.lap1Input ? domCache.lap1Input.value.trim().toLowerCase() : '';
-    if (!inputVal) return;
+    if (!inputVal) {
+      this.triggerFeedback("Type the full word first.", 'error');
+      if (domCache.lap1Input) domCache.lap1Input.focus();
+      return;
+    }
 
     const correctWord = sequence[currentIndex].toLowerCase();
     const isCorrect = inputVal === correctWord;

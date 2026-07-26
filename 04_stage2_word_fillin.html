@@ -67,6 +67,7 @@
       border-left: 6px solid var(--accent-primary);
       border-radius: 12px;
       transition: transform 0.2s ease;
+      text-align: left;
     }
 
     .revision-item:hover {
@@ -77,7 +78,7 @@
     .revision-item strong {
       display: block;
       font-size: 1.6rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
       color: var(--text-main);
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -85,11 +86,50 @@
 
     .revision-item p {
       margin: 0;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-style: italic;
       color: var(--text-main);
       opacity: 0.8;
-      line-height: 1.5;
+      line-height: 1.6;
+    }
+
+    /* Glancing guide banner */
+    .glance-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(124, 58, 237, 0.06));
+      border: 1.5px solid rgba(79, 70, 229, 0.25);
+      border-radius: 16px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.8rem;
+      text-align: left;
+    }
+
+    .glance-banner .glance-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+      line-height: 1;
+      margin-top: 0.1rem;
+    }
+
+    .glance-banner .glance-text strong {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--accent-primary);
+      margin-bottom: 0.35rem;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .glance-banner .glance-text p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+      font-style: normal;
+      opacity: 1;
     }
 
     .test-area {
@@ -220,10 +260,18 @@
         <h2>Quick Revision</h2>
         <div id="rev-timer" class="alarming-timer">00:00</div>
       </div>
-      <p style="font-style:italic; margin-bottom:1rem;">Revise selected words for recall.</p>
+
+      <!-- Glancing Guide Banner -->
+      <div class="glance-banner">
+        <div class="glance-icon">👁️</div>
+        <div class="glance-text">
+          <strong>You don't need to memorise every word!</strong>
+          <p>Simply <em>glance through</em> each term and its meaning. Pick out <strong>one or two key ideas</strong> that stand out to you — a mental hook, an image, a connection. That's all you need. The repeated exposure across stages will do the rest of the work for you.</p>
+        </div>
+      </div>
+
       <div id="rev-list" class="revision-list"></div>
-      <button id="start-test-early-btn" class="classic-btn secondary" style="width:auto; float:right;">Start Test
-        Early</button>
+      <button id="start-test-early-btn" class="classic-btn secondary" style="width:auto; float:right;">I'm Ready &rarr;</button>
       <div style="clear:both;"></div>
     </div>
 
