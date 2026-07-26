@@ -188,27 +188,27 @@ document.addEventListener('DOMContentLoaded', () => {
   btnMedium.addEventListener('click', () => setDifficulty('medium'));
   btnIntellect.addEventListener('click', () => setDifficulty('intellect'));
 
-  // 3D Parallax Card Tilt Effect on Mouse Movement
-  const notebookCard = document.querySelector('.notebook');
-  if (notebookCard) {
-    document.addEventListener('mousemove', (e) => {
-      const cx = window.innerWidth / 2;
-      const cy = window.innerHeight / 2;
-      const dx = (e.clientX - cx) / cx;
-      const dy = (e.clientY - cy) / cy;
+  // // 3D Parallax Card Tilt Effect on Mouse Movement . commented becaus it was affecting ios browser
+  // const notebookCard = document.querySelector('.notebook');
+  // if (notebookCard) {
+  //   document.addEventListener('mousemove', (e) => {
+  //     const cx = window.innerWidth / 2;
+  //     const cy = window.innerHeight / 2;
+  //     const dx = (e.clientX - cx) / cx;
+  //     const dy = (e.clientY - cy) / cy;
 
-      const tiltX = (dy * -8).toFixed(2);
-      const tiltY = (dx * 8).toFixed(2);
+  //     const tiltX = (dy * -8).toFixed(2);
+  //     const tiltY = (dx * 8).toFixed(2);
 
-      notebookCard.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-      notebookCard.style.transition = 'transform 0.1s ease-out';
-    });
+  //     notebookCard.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+  //     notebookCard.style.transition = 'transform 0.1s ease-out';
+  //   });
 
-    document.addEventListener('mouseleave', () => {
-      notebookCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-      notebookCard.style.transition = 'transform 0.5s ease';
-    });
-  }
+  //   document.addEventListener('mouseleave', () => {
+  //     notebookCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+  //     notebookCard.style.transition = 'transform 0.5s ease';
+  //   });
+  // }
 
   btnSettings.addEventListener('click', () => {
     btnCancelDiff.style.display = gameInProgress ? 'inline-block' : 'none';
@@ -341,11 +341,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (allWords.length === 0) {
       // Last-resort fallback
       allWords = [
-        { word: "ATOM",   definition: "Smallest unit of matter that retains element properties." },
-        { word: "CELL",   definition: "The basic structural unit of all living organisms." },
-        { word: "GENE",   definition: "A segment of DNA that codes for a specific trait." },
-        { word: "WAVE",   definition: "A disturbance that transfers energy from place to place." },
-        { word: "ACID",   definition: "A substance with a pH below 7 that releases H+ ions." }
+        { word: "ATOM", definition: "Smallest unit of matter that retains element properties." },
+        { word: "CELL", definition: "The basic structural unit of all living organisms." },
+        { word: "GENE", definition: "A segment of DNA that codes for a specific trait." },
+        { word: "WAVE", definition: "A disturbance that transfers energy from place to place." },
+        { word: "ACID", definition: "A substance with a pH below 7 that releases H+ ions." }
       ];
     }
 
@@ -457,23 +457,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const dirs = [[0, 1], [1, 0], [1, 1], [-1, 1], [0, -1], [-1, 0], [-1, -1], [1, -1]];
     let foundAccidental = true;
     let iterations = 0;
-    
+
     while (foundAccidental && iterations < 100) {
       foundAccidental = false;
       iterations++;
-      
+
       for (let word of targetWords) {
         const len = word.length;
         const coord = wordCoordinates[word];
         if (!coord) continue;
-        
+
         for (let r = 0; r < gridSize; r++) {
           for (let c = 0; c < gridSize; c++) {
             for (let [dr, dc] of dirs) {
               const endR = r + (len - 1) * dr;
               const endC = c + (len - 1) * dc;
               if (endR < 0 || endR >= gridSize || endC < 0 || endC >= gridSize) continue;
-              
+
               let match = true;
               for (let i = 0; i < len; i++) {
                 if (grid[r + i * dr][c + i * dc] !== word[i]) {
@@ -481,13 +481,13 @@ document.addEventListener('DOMContentLoaded', () => {
                   break;
                 }
               }
-              
+
               if (match) {
                 const isDesignated = (
                   (r === coord.start.r && c === coord.start.c && endR === coord.end.r && endC === coord.end.c) ||
                   (r === coord.end.r && c === coord.end.c && endR === coord.start.r && endC === coord.start.c)
                 );
-                
+
                 if (!isDesignated) {
                   let changed = false;
                   for (let i = 0; i < len; i++) {
@@ -504,7 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       break;
                     }
                   }
-                  
+
                   if (!changed) {
                     // Overlap is entirely on occupied cells, which is extremely rare.
                     // We change one letter anyway to break the accidental word.
@@ -646,7 +646,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Clean up old active notes to prevent frequency clutter
     activeHarmonies.forEach(node => {
-      try { node.osc.stop(); } catch (e) {}
+      try { node.osc.stop(); } catch (e) { }
     });
     activeHarmonies = [];
 
@@ -670,7 +670,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const now = ctx.currentTime;
       gain.gain.setValueAtTime(0, now);
-      gain.gain.linearRampToValueAtTime(volume, now + 0.03 + delay); 
+      gain.gain.linearRampToValueAtTime(volume, now + 0.03 + delay);
       gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5 + delay); // decay
 
       osc.connect(filter);
@@ -709,7 +709,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function highlightMatrixCellsInSelection() {
     if (!startCell || !lastValidEndCell) return;
     const cells = textLayer.querySelectorAll('.hunt-cell');
-    
+
     // Reset all cells from temporary scale/glow effects
     cells.forEach(c => {
       c.style.transform = '';
@@ -720,7 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dr = lastValidEndCell.r - startCell.r;
     const dc = lastValidEndCell.c - startCell.c;
     const steps = Math.max(Math.abs(dr), Math.abs(dc));
-    
+
     const stepR = steps === 0 ? 0 : dr / steps;
     const stepC = steps === 0 ? 0 : dc / steps;
 
@@ -756,7 +756,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const color = pillColors[colorIndex % pillColors.length];
     updatePillTransform(selectionPill, startCell, startCell, color);
-    
+
     playDragNote(0);
     highlightMatrixCellsInSelection();
   }
@@ -777,7 +777,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lastValidEndCell = cellPos;
         const color = pillColors[colorIndex % pillColors.length];
         updatePillTransform(selectionPill, startCell, lastValidEndCell, color);
-        
+
         const steps = Math.max(Math.abs(dr), Math.abs(dc));
         playDragNote(steps);
         highlightMatrixCellsInSelection();
@@ -1298,7 +1298,7 @@ document.addEventListener('DOMContentLoaded', () => {
   overlayContinueBtn.addEventListener('click', () => {
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
     winOverlay.classList.remove('active');
-    
+
     // Increment a "Streak / Game Level" count to show progress going up
     const currentStreak = parseInt(localStorage.getItem('osmosis_hunt_streak')) || 0;
     localStorage.setItem('osmosis_hunt_streak', currentStreak + 1);
