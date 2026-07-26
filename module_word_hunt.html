@@ -496,6 +496,11 @@
       display: none;
       justify-content: center;
       align-items: center;
+      /* Safari rendering bug fixes */
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
     .def-popup-overlay.active {
@@ -516,6 +521,11 @@
       border: 1px solid rgba(255, 255, 255, 0.5);
       border-top: 1px solid rgba(255, 255, 255, 0.8);
       box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), inset 0 2px 10px rgba(255, 255, 255, 0.4);
+      /* Safari rendering bug fixes */
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
     .def-popup h3 {
@@ -639,6 +649,10 @@
       visibility: hidden;
       transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       overflow: hidden;
+      /* Safari rendering bug fixes */
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
     .custom-dropdown-container.open .custom-dropdown-menu {
@@ -757,6 +771,11 @@
       align-items: center;
       justify-content: center;
       gap: 1.5rem;
+      /* Safari rendering bug fixes */
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
     .celebration-overlay.active {
@@ -776,6 +795,11 @@
       text-align: center;
       max-width: 420px;
       width: 90%;
+      /* Safari rendering bug fixes */
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
     .trophy-icon {

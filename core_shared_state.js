@@ -326,7 +326,22 @@ const AudioManager = {
     }
   },
 
+  vibrate: function (pattern) {
+    if ('vibrate' in navigator) {
+      try {
+        navigator.vibrate(pattern);
+      } catch (e) { }
+    }
+  },
+
   play: function (type) {
+    if (type === 'click') this.vibrate(15);
+    else if (type === 'chip') this.vibrate(20);
+    else if (type === 'success') this.vibrate([30, 40, 50, 40, 70]);
+    else if (type === 'error') this.vibrate([60, 50, 60]);
+    else if (type === 'levelup') this.vibrate([40, 60, 40, 60, 100]);
+    else if (type === 'gem') this.vibrate([20, 30, 20]);
+
     if (!this.ctx) return;
     if (this.ctx.state === 'suspended') this.ctx.resume();
 

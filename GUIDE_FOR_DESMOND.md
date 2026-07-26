@@ -209,6 +209,29 @@ console.log("My XP is:", myScore);
 
 ---
 
+## 📳 Lesson 5: Haptic Feedback (Physical Device Vibrations)
+
+Did you know phones can physically vibrate when you win or make a mistake? Web browsers have a built-in **Vibration API**!
+
+```javascript
+function triggerHaptic(type) {
+  // Check if the user's browser supports vibration
+  if ('vibrate' in navigator) {
+    if (type === 'click') {
+      navigator.vibrate(15); // Tiny 15ms tap
+    } else if (type === 'success') {
+      // Pattern: Vibrate 30ms, pause 40ms, vibrate 50ms, pause 40ms, vibrate 70ms!
+      navigator.vibrate([30, 40, 50, 40, 70]); 
+    } else if (type === 'error') {
+      // 3 quick warning buzzes
+      navigator.vibrate([60, 50, 60]); 
+    }
+  }
+}
+```
+
+---
+
 ## 🛠️ Summary Checklist to Code Your Next Feature:
 
 1. **HTML**: Create your button `<button id="my-btn">Click Me</button>`.
@@ -216,7 +239,7 @@ console.log("My XP is:", myScore);
 3. **JS**: Attach a listener:
    ```javascript
    document.getElementById('my-btn').addEventListener('click', () => {
-     AudioManager.play('success'); // Sound!
+     AudioManager.play('success'); // Sound + Haptics!
      burstParticles(100, 100);     // FX!
    });
    ```
