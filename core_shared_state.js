@@ -327,7 +327,21 @@ const AudioManager = {
   },
 
   vibrate: function (pattern) {
-    if ('vibrate' in navigator) {
+    // Telegram Mini App Haptics
+    if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.HapticFeedback) {
+      try {
+        const haptic = window.Telegram.WebApp.HapticFeedback;
+        if (pattern === 'error' || (Array.isArray(pattern) && pattern.length === 3)) {
+          haptic.notificationOccurred('error');
+        } else if (pattern === 'success' || pattern === 'levelup') {
+          haptic.notificationOccurred('success');
+        } else {
+          haptic.impactOccurred('light');
+        }
+      } catch (e) { }
+    }
+    // Standard Web Vibration API
+    if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
       try {
         navigator.vibrate(pattern);
       } catch (e) { }
@@ -335,12 +349,12 @@ const AudioManager = {
   },
 
   play: function (type) {
-    if (type === 'click') this.vibrate(15);
-    else if (type === 'chip') this.vibrate(20);
-    else if (type === 'success') this.vibrate([30, 40, 50, 40, 70]);
-    else if (type === 'error') this.vibrate([60, 50, 60]);
-    else if (type === 'levelup') this.vibrate([40, 60, 40, 60, 100]);
-    else if (type === 'gem') this.vibrate([20, 30, 20]);
+    if (type === 'click') this.vibrate(10);
+    else if (type === 'chip') this.vibrate(15);
+    else if (type === 'success') this.vibrate([25, 35, 45, 35, 60]);
+    else if (type === 'error') this.vibrate([50, 40, 50]);
+    else if (type === 'levelup') this.vibrate([35, 50, 35, 50, 90]);
+    else if (type === 'gem') this.vibrate([15, 25, 15]);
 
     if (!this.ctx) return;
     if (this.ctx.state === 'suspended') this.ctx.resume();
@@ -349,31 +363,35 @@ const AudioManager = {
 
     switch (type) {
       case 'click': {
+        // Soft futuristic glass tap (No more heavy drum thud!)
         const osc = this.ctx.createOscillator();
         const gain = this.ctx.createGain();
         osc.connect(gain); gain.connect(this.ctx.destination);
         osc.type = 'sine';
-        osc.frequency.setValueAtTime(220, now);
-        osc.frequency.exponentialRampToValueAtTime(60, now + 0.08);
-        gain.gain.setValueAtTime(0.3, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
-        osc.start(now); osc.stop(now + 0.08);
+        osc.frequency.setValueAtTime(800, now);
+        osc.frequency.exponentialRampToValueAtTime(1100, now + 0.04);
+        gain.gain.setValueAtTime(0.08, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+        osc.start(now); osc.stop(now + 0.04);
         break;
       }
       case 'chip': {
-        const osc = this.ctx.createOscillator();
-        const gain = this.ctx.createGain();
-        osc.connect(gain); gain.connect(this.ctx.destination);
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(400, now);
-        osc.frequency.exponentialRampToValueAtTime(150, now + 0.1);
-        gain.gain.setValueAtTime(0.4, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
-        osc.start(now); osc.stop(now + 0.1);
+        // Soft dual-tone crystal tech harmony
+        [659.25, 880].forEach((freq, idx) => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.connect(gain); gain.connect(this.ctx.destination);
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + idx * 0.02);
+          gain.gain.setValueAtTime(0.06, now + idx * 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.02 + 0.08);
+          osc.start(now + idx * 0.02);
+          osc.stop(now + idx * 0.02 + 0.08);
+        });
         break;
       }
       case 'success': {
-        // Glorious 3-note arpeggio chord (C5 - E5 - G5)
+        // Glorious soft 3-note arpeggio chord (C5 - E5 - G5)
         [523.25, 659.25, 783.99].forEach((freq, idx) => {
           const osc = this.ctx.createOscillator();
           const gain = this.ctx.createGain();
@@ -381,7 +399,7 @@ const AudioManager = {
           osc.type = 'sine';
           osc.frequency.setValueAtTime(freq, now + idx * 0.07);
           gain.gain.setValueAtTime(0, now + idx * 0.07);
-          gain.gain.linearRampToValueAtTime(0.25, now + idx * 0.07 + 0.02);
+          gain.gain.linearRampToValueAtTime(0.18, now + idx * 0.07 + 0.02);
           gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.07 + 0.35);
           osc.start(now + idx * 0.07);
           osc.stop(now + idx * 0.07 + 0.35);
@@ -389,33 +407,33 @@ const AudioManager = {
         break;
       }
       case 'error': {
-        // Hilarious comedic "Boing / Wobble" pitch bend sound
+        // Soft, funny cartoon "boing / oopsie" sound (Gentle sine frequency bend, no harsh buzzing!)
         const osc = this.ctx.createOscillator();
         const gain = this.ctx.createGain();
         osc.connect(gain); gain.connect(this.ctx.destination);
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(180, now);
-        osc.frequency.linearRampToValueAtTime(60, now + 0.15);
-        osc.frequency.linearRampToValueAtTime(120, now + 0.3);
-        osc.frequency.exponentialRampToValueAtTime(40, now + 0.45);
+        osc.type = 'sine'; // Soft pure wave
+        osc.frequency.setValueAtTime(320, now);
+        osc.frequency.exponentialRampToValueAtTime(200, now + 0.12);
+        osc.frequency.linearRampToValueAtTime(260, now + 0.22);
+        osc.frequency.exponentialRampToValueAtTime(150, now + 0.38);
 
-        gain.gain.setValueAtTime(0.35, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
-        osc.start(now); osc.stop(now + 0.45);
+        gain.gain.setValueAtTime(0.15, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.38);
+        osc.start(now); osc.stop(now + 0.38);
         break;
       }
       case 'warp': {
-        // Futuristic portal slide for stage transition
+        // Soft futuristic ambient slide for stage transition
         const osc = this.ctx.createOscillator();
         const gain = this.ctx.createGain();
         osc.connect(gain); gain.connect(this.ctx.destination);
         osc.type = 'sine';
-        osc.frequency.setValueAtTime(150, now);
-        osc.frequency.exponentialRampToValueAtTime(880, now + 0.35);
+        osc.frequency.setValueAtTime(300, now);
+        osc.frequency.exponentialRampToValueAtTime(700, now + 0.25);
         gain.gain.setValueAtTime(0.01, now);
-        gain.gain.linearRampToValueAtTime(0.3, now + 0.15);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
-        osc.start(now); osc.stop(now + 0.35);
+        gain.gain.linearRampToValueAtTime(0.12, now + 0.1);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+        osc.start(now); osc.stop(now + 0.25);
         break;
       }
       case 'gem': {
@@ -426,7 +444,7 @@ const AudioManager = {
           osc.connect(gain); gain.connect(this.ctx.destination);
           osc.type = 'sine';
           osc.frequency.setValueAtTime(freq, now + idx * 0.08);
-          gain.gain.setValueAtTime(0.2, now + idx * 0.08);
+          gain.gain.setValueAtTime(0.15, now + idx * 0.08);
           gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.25);
           osc.start(now + idx * 0.08);
           osc.stop(now + idx * 0.08 + 0.25);
@@ -442,7 +460,7 @@ const AudioManager = {
           osc.type = 'triangle';
           osc.frequency.setValueAtTime(freq, now + idx * 0.1);
           gain.gain.setValueAtTime(0, now + idx * 0.1);
-          gain.gain.linearRampToValueAtTime(0.35, now + idx * 0.1 + 0.03);
+          gain.gain.linearRampToValueAtTime(0.25, now + idx * 0.1 + 0.03);
           gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.1 + 0.5);
           osc.start(now + idx * 0.1);
           osc.stop(now + idx * 0.1 + 0.5);
