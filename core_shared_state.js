@@ -349,6 +349,7 @@ const AudioManager = {
   },
 
   play: function (type) {
+    this.init(); // Guarantee audio context exists
     if (type === 'click') this.vibrate(10);
     else if (type === 'chip') this.vibrate(15);
     else if (type === 'success') this.vibrate([25, 35, 45, 35, 60]);
@@ -358,7 +359,9 @@ const AudioManager = {
     else if (type === 'fanfare') this.vibrate([40, 50, 40, 50, 40, 60, 120]);
 
     if (!this.ctx) return;
-    if (this.ctx.state === 'suspended') this.ctx.resume();
+    if (this.ctx.state === 'suspended') {
+      try { this.ctx.resume(); } catch(e) {}
+    }
 
     const now = this.ctx.currentTime;
 
@@ -367,12 +370,12 @@ const AudioManager = {
         // Triumphant "Pa-na-na-na-na-naaa!" Victory Trumpet Fanfare
         // Notes: G4 (392Hz), C5 (523.25Hz), E5 (659.25Hz), G5 (783.99Hz), E5 (659.25Hz), G5 (783.99Hz)
         const notes = [
-          { freq: 392.00,  start: 0.00, duration: 0.09, vol: 0.22 }, // Pa
-          { freq: 523.25,  start: 0.10, duration: 0.09, vol: 0.24 }, // Na
-          { freq: 659.25,  start: 0.20, duration: 0.09, vol: 0.26 }, // Na
-          { freq: 783.99,  start: 0.30, duration: 0.16, vol: 0.28 }, // Na
-          { freq: 659.25,  start: 0.48, duration: 0.10, vol: 0.25 }, // Na
-          { freq: 783.99,  start: 0.60, duration: 0.60, vol: 0.32 }  // NAAAA!
+          { freq: 392.00,  start: 0.00, duration: 0.09, vol: 0.25 }, // Pa
+          { freq: 523.25,  start: 0.10, duration: 0.09, vol: 0.27 }, // Na
+          { freq: 659.25,  start: 0.20, duration: 0.09, vol: 0.29 }, // Na
+          { freq: 783.99,  start: 0.30, duration: 0.16, vol: 0.30 }, // Na
+          { freq: 659.25,  start: 0.48, duration: 0.10, vol: 0.27 }, // Na
+          { freq: 783.99,  start: 0.60, duration: 0.65, vol: 0.35 }  // NAAAA!
         ];
 
         notes.forEach(n => {
@@ -380,7 +383,6 @@ const AudioManager = {
           const gain = this.ctx.createGain();
           const filter = this.ctx.createBiquadFilter();
 
-          // Triangle + Lowpass filter creates a bright, warm brassy trumpet timbre
           osc.type = 'triangle';
           osc.frequency.setValueAtTime(n.freq, now + n.start);
 
@@ -390,11 +392,10 @@ const AudioManager = {
           const tStart = now + n.start;
           const tEnd = tStart + n.duration;
 
-          // Attack - Sustain - Decay envelope for brassy punch
-          gain.gain.setValueAtTime(0, tStart);
+          // Standard Web Audio gain envelope (0.0001 prevents WebKit exponential ramp DOM exceptions)
+          gain.gain.setValueAtTime(0.0001, tStart);
           gain.gain.linearRampToValueAtTime(n.vol, tStart + 0.015);
-          gain.gain.setValueAtTime(n.vol * 0.85, tEnd - 0.03);
-          gain.gain.exponentialRampToValueAtTime(0.001, tEnd);
+          gain.gain.exponentialRampToValueAtTime(0.0001, tEnd);
 
           osc.connect(filter);
           filter.connect(gain);

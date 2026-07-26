@@ -1234,8 +1234,11 @@ document.addEventListener('DOMContentLoaded', () => {
       winOverlay.classList.add('active');
 
       setTimeout(() => {
-        if (typeof AudioManager !== 'undefined') AudioManager.play('success');
-      }, 500);
+        if (typeof AudioManager !== 'undefined') {
+          AudioManager.init();
+          AudioManager.play('fanfare');
+        }
+      }, 300);
 
     }, 800);
   }
