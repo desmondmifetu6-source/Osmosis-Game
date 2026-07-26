@@ -107,21 +107,44 @@ function triggerHaptic(type) {
 
 ---
 
-## 🍏 Lesson 3: Fixing iOS Safari Rendering Bugs (The Diagonal Clip Glitch)
+## 🍏 Lesson 3: The WebKit GPU Compositing Bug (Hunting Down the Diagonal Screen Slicing Glitch!)
 
-### The Problem:
-On iOS Safari, combining `-webkit-backdrop-filter` (frosted glass blur) with `z-index` overlays or animations can cause Safari's graphics compositor to slice elements diagonally across the screen!
+### The Bug Anatomy:
+On iPhones (iOS Safari / WebKit), you might see a **sharp diagonal line slicing right across the screen**, where one card cuts into another card.
 
-### The Solution:
-Force hardware acceleration on the GPU using 3D transforms and backface visibility:
+### What Actually Causes It?
+This is a documented GPU hardware-compositing bug in Apple's WebKit / Metal graphics pipeline. It occurs when **3 specific CSS properties collide**:
+
+1. **`mix-blend-mode: multiply`**: Tells the GPU to blend colors of lower elements. WebKit creates a separate offscreen GPU composition buffer for this layer.
+2. **`-webkit-backdrop-filter` (Blur Shaders)**: Creates dynamic blur shaders across active elements.
+3. **Low `z-index` values on Fixed Overlays**: When fixed popups have lower `z-index` (e.g., `z-index: 200`) than floating header elements (e.g., `z-index: 10000`).
+
+When WebKit's Metal GPU driver renders a fixed backdrop blur overlay on top of an element with `mix-blend-mode: multiply`, WebKit fails to compute the blend layer boundaries and **slices the render buffer diagonally along GPU hardware tile boundaries**!
+
+### The 4-Step Bulletproof Solution:
+
+1. **Eliminate `mix-blend-mode` on Mobile Canvas Layers**: Use clean semi-transparent background colors (`background: rgba(...)` with `opacity: 0.75`).
+2. **Solidify Popup Containers**: Use solid, high-clarity background colors (`#ffffff`) with `box-shadow` on mobile popups instead of layering multiple live blur shaders.
+3. **Elevate Stacking Context**: Set popup overlays to `z-index: 25000` so they sit cleanly on top of all canvas layers and scoreboards.
+4. **Force Hardware Layering**: Add `-webkit-transform: translate3d(0, 0, 0)` and `-webkit-backface-visibility: hidden` to popups.
 
 ```css
-/* Add this to any overlay or popup using backdrop-filter */
-.def-popup-overlay, .def-popup {
-  backdrop-filter: blur(25px) saturate(200%);
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
+/* Bulletproof Safari Popup Styling */
+.def-popup-overlay {
+  position: fixed; inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  z-index: 25000; /* Sit above all canvas & header layers */
+  display: flex; align-items: center; justify-content: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 
-  /* Hardware Acceleration Fix for iOS Safari */
+.def-popup {
+  background: #ffffff; /* Solid crisp white prevents WebKit GPU shader tile slicing */
+  border-radius: 32px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
