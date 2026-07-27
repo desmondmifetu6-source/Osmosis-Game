@@ -301,7 +301,7 @@ const Stage2Controller = {
 
     sharedState.showStageScoreThen(
       'stage2',
-      'Stage 2: Word Fill-in',
+      'Stage 2: Word Reconstruction',
       this.state.roundScore,
       () => {
         if (typeof window.navigateWithTransition === 'function') navigateWithTransition('05_stage3_flash_recall.html');
