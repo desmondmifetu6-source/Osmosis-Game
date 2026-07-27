@@ -73,10 +73,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const rankClasses = ['rank-1', 'rank-2', 'rank-3'];
 
   function renderCards(players) {
+    if (!players || !Array.isArray(players) || players.length === 0) return;
+
+    // Cache room state locally
+    try { sessionStorage.setItem('mp_final_results', JSON.stringify(players)); } catch (e) {}
+
     // Sort: score desc, then time asc
     const sorted = [...players].sort((a, b) => {
-      const scoreA = a.score || 0;
-      const scoreB = b.score || 0;
+      const scoreA = (a.score !== undefined && a.score !== null) ? a.score : 0;
+      const scoreB = (b.score !== undefined && b.score !== null) ? b.score : 0;
       if (scoreB !== scoreA) return scoreB - scoreA;
       return (a.time || 0) - (b.time || 0);
     });
@@ -87,15 +92,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const rank = i + 1;
       const rankClass = rankClasses[i] || '';
       const medal = medals[i] || '';
-      const isFinished = player.isFinished || player.finished || (player.score !== undefined && player.score !== null && player.time > 0);
+      const isFinished = !!(player.isFinished || player.finished);
       const currentScore = player.score || 0;
       const timeStr = formatTime(player.time || 0);
       const avatar = player.avatar || '🤓';
-      const isWinner = rank === 1;
+      const isWinner = rank === 1 && isFinished;
 
       const card = document.createElement('div');
       card.className = `player-card ${rankClass}`;
-      card.style.animationDelay = `${i * 0.08}s`;
+      card.style.animationDelay = `${i * 0.05}s`;
 
       card.innerHTML = `
         <div class="rank-badge">
@@ -114,14 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="meta-item">⏱ ${timeStr}</span>
               <span class="meta-item">📚 ${player.words ? player.words.length : 0} words</span>
             ` : `
-              <span class="in-progress-dot">Playing Stage ${(player.currentStage || 1)}</span>
+              <span class="in-progress-dot">Playing Stage ${player.currentStage || 1} • Live</span>
             `}
           </div>
         </div>
 
         <div class="card-score-block">
           <div class="card-score-val">${currentScore.toLocaleString()}</div>
-          <div class="card-score-label">PTS</div>
+          <div class="card-score-label">${isFinished ? 'FINAL' : 'LIVE'}</div>
         </div>
 
         <div class="card-chevron">❯</div>
@@ -134,43 +139,73 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Socket connection ──
+  // ── Instant Initial Render (No waiting) ──
+  const initialUser = gameData.username || localStorage.getItem('osmosis_user') || 'You';
+  const initialScore = gameData.score || 0;
+  const initialTime = gameData.totalTime || 0;
+
+  let cachedPlayers = [];
+  try {
+    const stored = sessionStorage.getItem('mp_final_results');
+    if (stored) cachedPlayers = JSON.parse(stored);
+  } catch (e) {}
+
+  if (cachedPlayers.length > 0) {
+    // Sync local player's finished status into cached list
+    const myIndex = cachedPlayers.findIndex(p => p.name === initialUser);
+    if (myIndex !== -1) {
+      cachedPlayers[myIndex].score = initialScore;
+      cachedPlayers[myIndex].time = initialTime;
+      cachedPlayers[myIndex].isFinished = true;
+      if (gameData.selectedWords) cachedPlayers[myIndex].words = gameData.selectedWords;
+    }
+    renderCards(cachedPlayers);
+  } else {
+    // Instant fallback render so page shows immediately
+    renderCards([
+      { name: initialUser, score: initialScore, time: initialTime, avatar: gameData.avatar || '⚡', words: gameData.selectedWords || [], isFinished: true }
+    ]);
+  }
+
+  // ── Real-Time Socket Connection & Live Updates ──
   if (typeof io !== 'undefined' && gameData.currentRoomId) {
     const socket = io();
 
     // Rejoin room
     socket.emit('join_room', {
       roomId: gameData.currentRoomId,
-      username: gameData.username || localStorage.getItem('osmosis_user') || 'Guest',
+      username: initialUser,
       avatar: gameData.avatar || '🤓'
     });
 
-    // Send updated score
+    // Send updated final score immediately
     socket.emit('update_score', {
       roomId: gameData.currentRoomId,
-      score: gameData.score || 0,
-      username: gameData.username || localStorage.getItem('osmosis_user') || 'Guest',
-      time: gameData.totalTime || 0,
+      score: initialScore,
+      username: initialUser,
+      time: initialTime,
       words: gameData.selectedWords || [],
       meanings: gameData.meanings || {},
       isFinished: true
     });
 
+    // Live continuous score & status updates
     socket.on('leaderboard_update', (data) => {
-      renderCards(data.players);
+      if (data && data.players) {
+        renderCards(data.players);
+      }
     });
-  } else {
-    // Fallback: local session storage
-    const stored = sessionStorage.getItem('mp_final_results');
-    if (stored) {
-      try { renderCards(JSON.parse(stored)); } catch (e) {}
-    } else {
-      // Demo preview if standalone
-      renderCards([
-        { name: gameData.username || 'You', score: gameData.score || 1250, time: gameData.totalTime || 145, avatar: gameData.avatar || '⚡', words: gameData.selectedWords || ['osmosis', 'mitosis'], isFinished: true },
-        { name: 'Alex', score: 980, time: 180, avatar: '🔥', words: ['nucleus', 'ribosome'], isFinished: true },
-        { name: 'Chen', score: 620, time: 90, avatar: '🧪', currentStage: 5, isFinished: false }
-      ]);
-    }
+
+    socket.on('player_joined', (data) => {
+      if (data && data.players) {
+        renderCards(data.players);
+      }
+    });
+
+    socket.on('player_left', (data) => {
+      if (data && data.players) {
+        renderCards(data.players);
+      }
+    });
   }
 });

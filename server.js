@@ -84,10 +84,12 @@ io.on('connection', (socket) => {
       }
       
       if (player) {
-        player.score = data.score;
-        player.time = data.time || 0;
-        player.words = data.words || [];
-        player.meanings = data.meanings || {};
+        player.score = (data.score !== undefined) ? data.score : (player.score || 0);
+        player.time = data.time || player.time || 0;
+        if (data.words) player.words = data.words;
+        if (data.meanings) player.meanings = data.meanings;
+        if (data.isFinished !== undefined) player.isFinished = data.isFinished;
+        if (data.currentStage !== undefined) player.currentStage = data.currentStage;
         if (socket.id !== player.id) player.id = socket.id; // Sync ID if found by name
 
         io.to(roomId).emit('leaderboard_update', {
