@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const gameData = sharedState.load();
-  const cardsGrid = document.getElementById('cards-grid');
+  const cardsList = document.getElementById('cards-list');
   const liveBadge = document.getElementById('live-badge');
   const modalOverlay = document.getElementById('modal-overlay');
   const modalX = document.getElementById('modal-x');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     else window.location.href = 'multiplayer_lobby.html';
   });
 
-  // ── Play Victory Trumpet Fanfare! ──
+  // ── Play Victory Fanfare ──
   if (typeof AudioManager !== 'undefined') {
     AudioManager.init();
     AudioManager.play('fanfare');
@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Time helper ──
   function formatTime(seconds) {
+    if (!seconds && seconds !== 0) return '—';
     if (typeof sharedState !== 'undefined' && sharedState.getFormattedTime) {
       return sharedState.getFormattedTime(seconds);
     }
@@ -68,61 +69,73 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${m}m ${s}s`;
   }
 
-  // ── Render cards ──
+  // ── Render slim player cards ──
   const medals = ['🥇', '🥈', '🥉'];
   const rankClasses = ['rank-1', 'rank-2', 'rank-3'];
 
   function renderCards(players) {
     // Sort: score desc, then time asc
     const sorted = [...players].sort((a, b) => {
-      if ((b.score || 0) !== (a.score || 0)) return (b.score || 0) - (a.score || 0);
+      const scoreA = a.score || 0;
+      const scoreB = b.score || 0;
+      if (scoreB !== scoreA) return scoreB - scoreA;
       return (a.time || 0) - (b.time || 0);
     });
 
-    cardsGrid.innerHTML = '';
+    cardsList.innerHTML = '';
 
     sorted.forEach((player, i) => {
       const rank = i + 1;
       const rankClass = rankClasses[i] || '';
       const medal = medals[i] || '';
-      const hasScore = player.score !== undefined && player.score !== null;
+      const isFinished = player.isFinished || player.finished || (player.score !== undefined && player.score !== null && player.time > 0);
+      const currentScore = player.score || 0;
+      const timeStr = formatTime(player.time || 0);
       const avatar = player.avatar || '🤓';
       const isWinner = rank === 1;
-      const scoreDisplay = hasScore ? player.score.toLocaleString() : '...';
-      const timeStr = hasScore ? formatTime(player.time || 0) : '—';
 
       const card = document.createElement('div');
       card.className = `player-card ${rankClass}`;
-      card.style.animationDelay = `${i * 0.1}s`;
+      card.style.animationDelay = `${i * 0.08}s`;
 
       card.innerHTML = `
-        <div class="rank-pill">${rank === 1 ? '👑 1st' : rank === 2 ? '🥈 2nd' : rank === 3 ? '🥉 3rd' : `#${rank}`}</div>
-        <span class="card-medal">${medal}</span>
-        <span class="card-avatar">${avatar}</span>
-        <div class="card-name">${player.name}</div>
-        ${isWinner ? '<div class="winner-crown">Winner</div>' : '<div style="margin-bottom:1rem;"></div>'}
-        <div class="card-divider"></div>
-        ${hasScore ? `
-          <div class="card-score">${scoreDisplay}</div>
-          <div class="card-pts">points</div>
-          <div class="card-time">⏱ ${timeStr}</div>
-          <button class="view-words-btn">📚 View Words Learned</button>
-        ` : `
-          <div class="card-time" style="margin-top:1rem;"><span class="pending-label">Awaiting results...</span></div>
-        `}
+        <div class="rank-badge">
+          ${medal ? `<span class="rank-medal">${medal}</span>` : `<span class="rank-num">#${rank}</span>`}
+        </div>
+
+        <div class="card-avatar">${avatar}</div>
+
+        <div class="card-info">
+          <div class="card-name">
+            ${player.name}
+            ${isWinner ? '<span class="winner-tag">Winner</span>' : ''}
+          </div>
+          <div class="card-meta">
+            ${isFinished ? `
+              <span class="meta-item">⏱ ${timeStr}</span>
+              <span class="meta-item">📚 ${player.words ? player.words.length : 0} words</span>
+            ` : `
+              <span class="in-progress-dot">Playing Stage ${(player.currentStage || 1)}</span>
+            `}
+          </div>
+        </div>
+
+        <div class="card-score-block">
+          <div class="card-score-val">${currentScore.toLocaleString()}</div>
+          <div class="card-score-label">PTS</div>
+        </div>
+
+        <div class="card-chevron">❯</div>
       `;
 
-      if (hasScore) {
-        const wordsBtn = card.querySelector('.view-words-btn');
-        wordsBtn.addEventListener('click', (e) => { e.stopPropagation(); openModal(player); });
-        card.addEventListener('click', () => openModal(player));
-      }
+      // Click card to open words modal
+      card.addEventListener('click', () => openModal(player));
 
-      cardsGrid.appendChild(card);
+      cardsList.appendChild(card);
     });
 
-    // Hide LIVE badge when all finished
-    const allDone = sorted.every(p => p.score !== undefined && p.score !== null);
+    // Hide LIVE badge if all players are finished
+    const allDone = sorted.every(p => p.isFinished || p.finished);
     if (allDone && liveBadge) liveBadge.style.display = 'none';
   }
 
@@ -130,31 +143,39 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof io !== 'undefined' && gameData.currentRoomId) {
     const socket = io();
 
-    // Rejoin room so the server knows we're here
+    // Rejoin room
     socket.emit('join_room', {
       roomId: gameData.currentRoomId,
       username: gameData.username || localStorage.getItem('osmosis_user') || 'Guest',
       avatar: gameData.avatar || '🤓'
     });
 
-    // Push our final score to the room
+    // Send updated score
     socket.emit('update_score', {
       roomId: gameData.currentRoomId,
       score: gameData.score || 0,
       username: gameData.username || localStorage.getItem('osmosis_user') || 'Guest',
       time: gameData.totalTime || 0,
       words: gameData.selectedWords || [],
-      meanings: gameData.meanings || {}
+      meanings: gameData.meanings || {},
+      isFinished: true
     });
 
     socket.on('leaderboard_update', (data) => {
       renderCards(data.players);
     });
   } else {
-    // Fallback: try sessionStorage data saved by 11_results.js
+    // Fallback: local session storage
     const stored = sessionStorage.getItem('mp_final_results');
     if (stored) {
-      try { renderCards(JSON.parse(stored)); } catch (e) { /* ignore */ }
+      try { renderCards(JSON.parse(stored)); } catch (e) {}
+    } else {
+      // Demo preview if standalone
+      renderCards([
+        { name: gameData.username || 'You', score: gameData.score || 1250, time: gameData.totalTime || 145, avatar: gameData.avatar || '⚡', words: gameData.selectedWords || ['osmosis', 'mitosis'], isFinished: true },
+        { name: 'Alex', score: 980, time: 180, avatar: '🔥', words: ['nucleus', 'ribosome'], isFinished: true },
+        { name: 'Chen', score: 620, time: 90, avatar: '🧪', currentStage: 5, isFinished: false }
+      ]);
     }
   }
 });
