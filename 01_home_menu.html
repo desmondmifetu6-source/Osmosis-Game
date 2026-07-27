@@ -45,17 +45,36 @@
     }
 
     .book-preview-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 18px;
-      padding: 1.25rem 1rem 1rem;
+      position: relative;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 215, 0, 0.08) 50%, rgba(99, 102, 241, 0.08) 100%);
+      border: 1.5px solid rgba(255, 215, 0, 0.35);
+      border-radius: 20px;
+      padding: 1.4rem 1.1rem 1.1rem;
       margin-bottom: 1.8rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       display: flex;
       flex-direction: column;
       align-items: center;
+      overflow: hidden;
+    }
+
+    /* Falling Confetti Canvas */
+    #book-confetti-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      border-radius: inherit;
+    }
+
+    /* Ensure contents sit above confetti canvas */
+    .book-preview-card > *:not(#book-confetti-canvas) {
+      position: relative;
+      z-index: 1;
     }
 
     .home-book-badge {
@@ -228,6 +247,8 @@
     <div class="card" style="text-align: center;">
       <!-- Book Preview Card -->
       <div class="book-preview-card">
+        <!-- Falling Confetti Canvas -->
+        <canvas id="book-confetti-canvas" aria-hidden="true"></canvas>
         <span class="dict-source-tag">The 6-In-1 STEM Dictionary</span>
         <img src="assets/stem_dictionary_cover.png" alt="STEM Dictionary cover" class="home-book-badge dict-cover-preview"
           title="View cover">
@@ -283,6 +304,112 @@
   <script src="core_shared_state.js"></script>
   <script src="dict_cover_lightbox.js"></script>
   <script src="01_home_menu.js"></script>
+
+  <script>
+    /* ── Falling Confetti on Book Preview Card ── */
+    (function () {
+      const canvas = document.getElementById('book-confetti-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let W, H, pieces = [];
+      const COLORS = ['#f59e0b', '#ec4899', '#3b82f6', '#10b981', '#8b5cf6', '#ef4444', '#f97316', '#facc15', '#ffffff'];
+
+      function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        W = canvas.width = rect.width || canvas.offsetWidth;
+        H = canvas.height = rect.height || canvas.offsetHeight;
+      }
+
+      function rand(min, max) { return Math.random() * (max - min) + min; }
+
+      function spawn() {
+        return {
+          x: rand(0, W),
+          y: rand(-20, -5),
+          w: rand(5, 11),
+          h: rand(8, 16),
+          color: COLORS[Math.floor(Math.random() * COLORS.length)],
+          vx: rand(-0.8, 0.8),
+          vy: rand(1.2, 3),
+          angle: rand(0, Math.PI * 2),
+          spin: rand(-0.07, 0.07),
+          opacity: 1,
+          type: 'rect'
+        };
+      }
+
+      function spawnCup() {
+        return {
+          x: rand(10, W - 10),
+          y: rand(-30, -10),
+          emoji: '🏆',
+          size: rand(16, 22),
+          vx: rand(-0.4, 0.4),
+          vy: rand(0.8, 1.8),
+          angle: 0,
+          spin: rand(-0.03, 0.03),
+          opacity: 1,
+          type: 'emoji'
+        };
+      }
+
+      function init() {
+        resize();
+        window.addEventListener('resize', resize);
+        /* Seed initial confetti pieces spread across the card */
+        for (let i = 0; i < 30; i++) {
+          const p = spawn();
+          p.y = rand(0, H);
+          pieces.push(p);
+        }
+        /* Seed several cups already visible */
+        for (let c = 0; c < 8; c++) {
+          const cup = spawnCup();
+          cup.y = rand(0, H);
+          pieces.push(cup);
+        }
+        loop();
+      }
+
+      function loop() {
+        ctx.clearRect(0, 0, W, H);
+        /* Keep ~40 confetti pieces */
+        if (pieces.length < 40) pieces.push(spawn());
+        /* Drop a new cup frequently — roughly every 30 frames (~0.5 s) */
+        if (Math.random() < 0.035) pieces.push(spawnCup());
+        pieces = pieces.filter(p => p.opacity > 0.05);
+        pieces.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.angle += p.spin;
+          /* Fade out once past the bottom */
+          if (p.y > H + 10) p.opacity -= 0.04;
+          ctx.save();
+          ctx.globalAlpha = p.opacity * 0.85;
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.angle);
+          if (p.type === 'emoji') {
+            ctx.font = p.size + 'px serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(p.emoji, 0, 0);
+          } else {
+            ctx.fillStyle = p.color;
+            ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          }
+          ctx.restore();
+        });
+        requestAnimationFrame(loop);
+      }
+
+      /* Wait for layout so getBoundingClientRect is accurate */
+      if (document.readyState === 'complete') {
+        init();
+      } else {
+        window.addEventListener('load', init);
+      }
+    })();
+  </script>
 </body>
 
 </html>

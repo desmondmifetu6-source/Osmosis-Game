@@ -294,6 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function setDifficulty(level) {
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
     currentLevelObj = DIFFICULTY_CONFIGS[level];
+    localStorage.setItem('osmosis_hunt_diff', level);
     difficultyOverlay.style.display = 'none';
     initGame();
   }
@@ -1354,7 +1355,14 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('wordHuntWizardShown', 'true');
         if (wizardOverlay) wizardOverlay.style.display = 'none';
         const diffOverlay = document.getElementById('difficulty-overlay');
-        if (diffOverlay) diffOverlay.style.display = 'flex';
+        const savedDiff = localStorage.getItem('osmosis_hunt_diff');
+        if (savedDiff && DIFFICULTY_CONFIGS[savedDiff]) {
+          currentLevelObj = DIFFICULTY_CONFIGS[savedDiff];
+          if (diffOverlay) diffOverlay.style.display = 'none';
+          initGame();
+        } else {
+          if (diffOverlay) diffOverlay.style.display = 'flex';
+        }
       }
     });
 
@@ -1377,14 +1385,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Check if wizard needs to be shown
+  // Load saved difficulty preference if present
+  const savedDiffPref = localStorage.getItem('osmosis_hunt_diff');
+  if (savedDiffPref && DIFFICULTY_CONFIGS[savedDiffPref]) {
+    currentLevelObj = DIFFICULTY_CONFIGS[savedDiffPref];
+  }
+
+  // Check if wizard or difficulty overlay needs to be shown
   if (!localStorage.getItem('wordHuntWizardShown')) {
     if (wizardOverlay) wizardOverlay.style.display = 'flex';
     const diffOverlay = document.getElementById('difficulty-overlay');
     if (diffOverlay) diffOverlay.style.display = 'none';
   } else {
     const diffOverlay = document.getElementById('difficulty-overlay');
-    if (diffOverlay) diffOverlay.style.display = 'flex';
+    if (savedDiffPref && DIFFICULTY_CONFIGS[savedDiffPref]) {
+      if (diffOverlay) diffOverlay.style.display = 'none';
+      initGame();
+    } else {
+      if (diffOverlay) diffOverlay.style.display = 'flex';
+    }
   }
 
   if (window.location.search.includes('celebration=true')) {
