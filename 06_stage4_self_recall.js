@@ -234,7 +234,7 @@ const Stage4Controller = {
   },
 
   finishStageTransition() {
-    sharedState.showStageScoreThen('stage4', 'Stage 4: Self-Recall challenge', this.state.lap2Score, () => {
+    sharedState.showStageScoreThen('stage4', 'Stage 4: Self-Recall ', this.state.lap2Score, () => {
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('07_stage5_meaning_exposure.html');
       else window.location.href = '07_stage5_meaning_exposure.html';
     });
