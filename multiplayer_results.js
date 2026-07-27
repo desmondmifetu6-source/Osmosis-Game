@@ -5,7 +5,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const gameData = sharedState.load();
   const cardsList = document.getElementById('cards-list');
-  const liveBadge = document.getElementById('live-badge');
   const modalOverlay = document.getElementById('modal-overlay');
   const modalX = document.getElementById('modal-x');
   const modalAvatar = document.getElementById('modal-avatar');
@@ -133,10 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       cardsList.appendChild(card);
     });
-
-    // Hide LIVE badge if all players are finished
-    const allDone = sorted.every(p => p.isFinished || p.finished);
-    if (allDone && liveBadge) liveBadge.style.display = 'none';
   }
 
   // ── Socket connection ──
