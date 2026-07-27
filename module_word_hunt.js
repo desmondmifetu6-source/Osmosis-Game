@@ -1367,6 +1367,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const helpBtn = document.getElementById('help-btn');
+  if (helpBtn) {
+    helpBtn.addEventListener('click', () => {
+      if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+      wizardCurrentStep = 1;
+      updateWizardUI();
+      if (wizardOverlay) wizardOverlay.style.display = 'flex';
+    });
+  }
+
   // Check if wizard needs to be shown
   if (!localStorage.getItem('wordHuntWizardShown')) {
     if (wizardOverlay) wizardOverlay.style.display = 'flex';

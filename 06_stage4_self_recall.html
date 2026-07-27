@@ -176,32 +176,36 @@
 
     <!-- Lap 2 Container -->
     <div id="lap2-container" class="card stage4f-card"
-      style="display: none; background: #ffffff; border: 1px solid #e5e5e5; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
-      <div class="s4f-header">
-        <h2 style="color: #111111; font-weight:700; font-size:1.8rem;">Stage 4: Self Recall</h2>
+      style="display: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); padding: 2rem 1.8rem;">
+      
+      <!-- Clean Header -->
+      <div class="s4f-header" style="margin-bottom: 1.2rem; padding-bottom: 0.8rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9;">
+        <h2 style="color: #0f172a; font-weight: 800; font-size: 1.5rem; margin: 0;">Stage 4: Self Recall</h2>
+        <span id="lap2-progress" style="font-size: 0.9rem; color: #4f46e5; font-weight: 800; background: #eef2ff; border: 1px solid #c7d2fe; padding: 4px 12px; border-radius: 20px;">
+          0 / 0 Recalled</span>
       </div>
-      <p style="font-weight:600; margin-bottom:1.5rem; text-align: center; color:#555;">
-        Type all terms you can remember from your selection. Press <strong>Submit</strong> or <strong>Enter</strong> for
-        each word!
-      </p>
-      <div class="test-area" style="text-align: center; margin-bottom:1.5rem;">
-        <div style="display: flex; gap: 12px; max-width: 520px; margin: 0 auto; align-items: center;">
-          <input type="text" id="lap2-input" class="word-input" placeholder="Type recalled term..." autocomplete="off"
+
+      <!-- Input Row -->
+      <div class="test-area" style="text-align: center; margin-bottom: 1rem;">
+        <div style="display: flex; gap: 10px; max-width: 480px; margin: 0 auto; align-items: center;">
+          <input type="text" id="lap2-input" class="word-input" placeholder="Type term from memory..." autocomplete="off"
             autocorrect="off" autocapitalize="off" spellcheck="false"
-            style="border: 2px solid var(--accent-primary); border-radius:12px; background:#fff; color:#111; flex:1; margin-bottom:0;">
+            style="border: 2px solid #cbd5e1; border-radius: 12px; background: #fff; color: #0f172a; flex: 1; margin-bottom: 0; font-size: 1.2rem; padding: 0.8rem 1rem;">
           <button id="lap2-submit-btn" class="classic-btn primary"
-            style="width: auto; padding: 0.9rem 1.8rem; margin: 0; min-width: 120px;">Submit</button>
+            style="width: auto; padding: 0.8rem 1.6rem; margin: 0; min-width: 100px; border-radius: 12px; font-weight: 800; font-size: 1rem;">Submit</button>
         </div>
-        <div id="lap2-feedback" class="feedback" style="font-size:1.1rem; margin-top:0.8rem; min-height:1.8rem;"></div>
+        <div id="lap2-feedback" class="feedback" style="font-size: 0.95rem; margin-top: 0.5rem; min-height: 1.4rem;"></div>
       </div>
+
+      <!-- Recalled Words -->
       <div id="lap2-words-list"
-        style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px; min-height:90px; padding:1.2rem; background:#fafafa; border:1px solid #e5e5e5; border-radius:12px; margin-bottom: 1.5rem;">
+        style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; min-height: 60px; padding: 0.8rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 1.2rem;">
       </div>
-      <p id="lap2-progress" style="text-align:center; font-size:1rem; color:#888; font-weight:600; margin-bottom:1rem;">
-        0 / 0 recalled</p>
+
+      <!-- Single Complete Action -->
       <div style="text-align: center;">
         <button id="finish-recall-btn" class="classic-btn secondary"
-          style="max-width: 320px; margin: 0 auto; font-size: 1rem;">Complete</button>
+          style="width: 100%; max-width: 260px; margin: 0 auto; font-size: 0.95rem; font-weight: 700; background: #475569; color: #ffffff; border-radius: 12px; padding: 0.8rem 1.4rem;">Complete Stage ➔</button>
       </div>
     </div>
 

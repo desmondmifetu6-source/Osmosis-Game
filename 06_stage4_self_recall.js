@@ -59,22 +59,27 @@ const Stage4Controller = {
 
     if (domCache.lap2Input) {
       domCache.lap2Input.addEventListener('keypress', (e) => this.handleLap2Keypress(e));
+      // Smooth auto-scroll on mobile focus so input stays centered above keyboard
+      domCache.lap2Input.addEventListener('focus', () => {
+        setTimeout(() => {
+          domCache.lap2Input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+      });
     }
 
-    // New: dedicated Submit button for each word
     if (domCache.lap2SubmitBtn) {
       domCache.lap2SubmitBtn.addEventListener('click', () => this.submitCurrentWord());
     }
 
     if (domCache.finishRecallBtn) {
       domCache.finishRecallBtn.addEventListener('click', () => {
-        // If the user typed something but didn't submit it yet, warn them
         const val = domCache.lap2Input ? domCache.lap2Input.value.trim() : '';
         if (val) {
           this.triggerLap2Feedback("Press Submit to enter that word first!", 'error');
           domCache.lap2Input.focus();
           return;
         }
+        if (domCache.lap2Input) domCache.lap2Input.blur();
         this.endFinalRecall();
       });
     }
@@ -93,12 +98,12 @@ const Stage4Controller = {
 
     const val = domCache.lap2Input.value.trim().toLowerCase();
     domCache.lap2Input.value = '';
-    domCache.lap2Input.focus();
 
     if (val) {
+      domCache.lap2Input.focus();
       this.processWord(val);
     } else {
-      this.triggerLap2Feedback("Type a word first!", 'error');
+      this.triggerLap2Feedback("Type a word or tap 'Complete Stage'", 'error');
     }
   },
 
@@ -107,13 +112,9 @@ const Stage4Controller = {
     const total = gameData.selectedWords ? gameData.selectedWords.length : 0;
     const found = this.state.lap2Identified.length;
     if (domCache.lap2Progress) {
-      domCache.lap2Progress.textContent = `${found} / ${total} recalled`;
+      domCache.lap2Progress.textContent = `${found} / ${total} Recalled`;
     }
   },
-
-
-
-
 
   handleLap2Keypress(e) {
     if (e.key !== 'Enter') return;
@@ -124,6 +125,8 @@ const Stage4Controller = {
 
     if (val) {
       this.processWord(val);
+    } else {
+      this.triggerLap2Feedback("Type a word or tap 'Complete Stage'", 'error');
     }
   },
 

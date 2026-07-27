@@ -143,17 +143,11 @@ const LoginController = {
     freshData.avatar = avatar;
     sharedState.save(freshData);
 
-    if (domCache.loginContent) domCache.loginContent.style.display = 'none';
-    if (domCache.welcomeBackContent) domCache.welcomeBackContent.style.display = 'none';
-
-    if (domCache.akwaabaScreen) {
-      domCache.akwaabaScreen.textContent = `Welcome, ${user}`;
-      domCache.akwaabaScreen.classList.add('visible');
-    }
-
-    setTimeout(() => {
+    if (typeof window.navigateWithTransition === 'function') {
+      navigateWithTransition('01_home_menu.html');
+    } else {
       window.location.href = '01_home_menu.html';
-    }, 2000);
+    }
   }
 };
 
