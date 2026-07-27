@@ -872,9 +872,11 @@
 
     /* Guiding Wizard Styles */
     .wizard-card {
-      background: rgba(255, 255, 255, 0.45);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15), inset 0 2px 10px rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(40px) saturate(200%) !important;
+      -webkit-backdrop-filter: blur(40px) saturate(200%) !important;
+      border: 2px solid #ffffff !important;
+      box-shadow: 0 30px 70px rgba(15, 23, 42, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.8) !important;
     }
     .wizard-icon {
       font-size: 4.5rem;
@@ -906,7 +908,7 @@
     }
     .wizard-demo-container {
       position: relative;
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(241, 245, 249, 0.9);
       padding: 10px;
       border-radius: 12px;
       margin: 15px auto 0;
@@ -1197,7 +1199,7 @@
   </div>
 
   <!-- Guiding Wizard Overlay -->
-  <div id="guiding-wizard-overlay" class="def-popup-overlay" style="display: none; z-index: 10000;">
+  <div id="guiding-wizard-overlay" class="def-popup-overlay" style="display: none; z-index: 10000; background: rgba(15, 23, 42, 0.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);">
     <div class="def-popup wizard-card" style="max-width: 500px; padding: 2.5rem 2rem;">
       <div class="wizard-steps-container">
         <!-- Step 1 -->
