@@ -912,9 +912,12 @@ document.addEventListener('DOMContentLoaded', () => {
     huntDropdownSubmit.disabled = false;
     huntDropdownSkip.style.display = 'block';
 
+    // ── Fix extra whitespace in definition (from PDF extraction artefacts) ──
+    definition = definition.replace(/\s+/g, ' ').trim();
+
     const stopWords = ['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 'from', 'by', 'of', 'in', 'is', 'are', 'was', 'were', 'it', 'that', 'this', 'with'];
 
-    // simple tokenization keeping punctuation separate
+    // simple tokenization keeping punctuation and spaces separate
     const tokens = definition.match(/([a-zA-Z]+|[^a-zA-Z]+)/g) || [];
 
     // find valid words to blank
@@ -1206,11 +1209,21 @@ document.addEventListener('DOMContentLoaded', () => {
       all = ['Energy', 'Matter', 'Cell', 'Force', 'Space', 'Gene', 'Atom', 'Bond', 'Mass', 'Acid'];
     }
 
+    const targetLen = String(correctWord).length;
+
+    // ── Prefer words with similar length to the correct answer (within ±2 chars) ──
+    let similarLen = all.filter(w => {
+      const candidate = String(w).split(' ')[0];
+      return Math.abs(candidate.length - targetLen) <= 2;
+    });
+    // Fall back to full list if not enough similar-length words
+    const pool = similarLen.length >= num * 2 ? similarLen : all;
+
     let tricks = [];
     let attempts = 0;
-    while (tricks.length < num && attempts < 100) {
+    while (tricks.length < num && attempts < 200) {
       attempts++;
-      let word = all[Math.floor(Math.random() * all.length)];
+      let word = pool[Math.floor(Math.random() * pool.length)];
       word = String(word).split(' ')[0]; // Take only first word to keep dropdown options short
       if (!word) continue;
       word = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
