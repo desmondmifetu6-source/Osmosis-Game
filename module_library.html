@@ -125,8 +125,60 @@
       </div>
 
       <button id="go-home-btn" class="classic-btn blue-gradient" style="margin-top:1rem;">Return to Menu</button>
+
+      <!-- Dictionary Footer -->
+      <div style="
+        margin-top: 2.5rem;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.07) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.4);
+        box-shadow:
+          0 8px 32px rgba(0,0,0,0.25),
+          0 2px 8px rgba(0,0,0,0.15),
+          inset 0 1px 0 rgba(255,255,255,0.5),
+          inset 0 -1px 0 rgba(255,255,255,0.1);
+        position: relative;
+        overflow: hidden;
+      ">
+        <!-- inner glowing highlight blob -->
+        <div style="
+          position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
+          width: 200px; height: 80px;
+          background: radial-gradient(ellipse, rgba(255,255,255,0.25) 0%, transparent 70%);
+          pointer-events: none;
+        "></div>
+
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem 0; letter-spacing: 0.04em; font-weight: 500; text-transform: uppercase;">
+          📖 For more information on this dictionary
+        </p>
+
+        <div style="
+          display: inline-flex;
+          align-items: center;
+          gap: 0.8rem;
+          background: rgba(255,255,255,0.1);
+          border: 1px solid rgba(255,255,255,0.3);
+          border-radius: 50px;
+          padding: 0.65rem 1.6rem;
+          margin-bottom: 1.2rem;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.35);
+        ">
+          <span style="font-size: 1.1rem; color: #000000; font-weight: 700; letter-spacing: 0.01em;">Godfred Funkor</span>
+          <span style="width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.4); display: inline-block;"></span>
+          <a href="tel:0248919104" style="font-size: 1.1rem; color: #93c5fd; font-weight: 700; text-decoration: none; letter-spacing: 0.02em;">0248 919 104</a>
+        </div>
+
+        <p style="font-size: 0.75rem; color: rgba(255,255,255,0.45); margin: 0; letter-spacing: 0.03em;">
+          &copy; <span id="footer-year"></span> Osmosis STEM Dictionary &mdash; All rights reserved.
+        </p>
+      </div>
     </div>
   </div>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
   <script src="core_dictionary.js"></script>
   <script src="core_dictionary_diagrams.js"></script>
   <script src="core_shared_state.js"></script>
