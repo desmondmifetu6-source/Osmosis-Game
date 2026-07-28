@@ -1,0 +1,626 @@
+[
+  {
+    "page": 73,
+    "image_count": 1,
+    "words": [
+      "A-BAND",
+      "2-AMINO-3-METHYLBUTANOIC ACID",
+      "2-AMINO-3-METHYLBUTANOIC ACID (VALINE)",
+      "2-AMINOPROPANOIC ACID (ALANINE)",
+      "4 - A C E T A M I D O P H E N O L [ A C E T A M I N O P H E N ;",
+      "N - ( 4 - H Y D R O X Y P H E N Y L ) E T H A N A M I D E ; N - ( 4 -",
+      "HYDROXYPHENYL)ACETAMIDE; PARACETAMOL]",
+      "a",
+      "A",
+      "A BOMB (A-BOMB; ATOM BOMB; ATOMIC BOMB; NUCLEAR"
+    ],
+    "images": [
+      {
+        "bbox": [
+          615.1510009765625,
+          250.27496337890625,
+          650.1740112304688,
+          291.87799072265625
+        ],
+        "ext": "png",
+        "width": 48,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 74,
+    "image_count": 1,
+    "words": [
+      "ABATTOIR",
+      "A-ESU",
+      "A-ESU (STATAMPERE; statA; stA)",
+      "A-LAW",
+      "A-SCAN ULTRASONOGRAPHY (AMPLITUDE MODULATED",
+      "SCAN)",
+      "A-WEIGHTED DECIBELS (dB)",
+      "A+ CERTIFICATION (A-PLUS)",
+      "AB-INITIO",
+      "A/B SWITCH"
+    ],
+    "images": [
+      {
+        "bbox": [
+          20.173999786376953,
+          250.2750244140625,
+          58.73899841308594,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 53,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 75,
+    "image_count": 1,
+    "words": [
+      "ABDUCENS NERVE",
+      "ABAXIAL",
+      "ABC CONJECTURE (OESTERL\u00c9\u2013MASSER CONJECTURE)",
+      "ABC MODEL",
+      "ABCOULOMB (abC)",
+      "ABDOMEN (ABDOMINAL CAVITY)",
+      "ABDUCENS NERVE (ABDUCENT NERVE; SIXTH CRANIAL",
+      "NERVE, CN6)",
+      "ABAXIAL",
+      "A B B E N U M B E R ( A B B E"
+    ],
+    "images": [
+      {
+        "bbox": [
+          615.1510009765625,
+          250.2750244140625,
+          650.1740112304688,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 48,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 76,
+    "image_count": 1,
+    "words": [
+      "ABDUCTOR",
+      "ABERRATION",
+      "ABDUCTOR",
+      "ABEL SUMMATION (ABEL\u2019S SUMMATION)",
+      "ABEL TEST",
+      "ABEL TEST FOR UNIFORM CONVERGENCE",
+      "ABEL, NIELS HENRIK (1802-1829)",
+      "ABEL\u2019S LIMIT THEOREM",
+      "ABEL\u2019S PARTIAL SUMMATION FORMULA",
+      "ABELIAN GROUP (COMMUTATIVE GROUP)"
+    ],
+    "images": [
+      {
+        "bbox": [
+          20.173999786376953,
+          250.2750244140625,
+          58.73899841308594,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 53,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 77,
+    "image_count": 1,
+    "words": [
+      "ABO BLOOD GROUP SYSTEM",
+      "ABFARAD",
+      "ABFARAD (abF)",
+      "ABHENRY (abH)",
+      "ABHESIVE (ABHERENT)",
+      "ABIOGENESIS (AUTOGENESIS; BIOPOESIS)",
+      "ABIOTIC (ABIOTIC FACTOR)",
+      "ABIWORD (ABIWORD PROCESSOR)",
+      "ABLATION",
+      "ABLATION TILL (MELT-OUT TILL)"
+    ],
+    "images": [
+      {
+        "bbox": [
+          615.1510009765625,
+          250.2750244140625,
+          650.1740112304688,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 48,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 78,
+    "image_count": 1,
+    "words": [
+      "ABSCISIC ACID",
+      "ABOMASUM",
+      "ABOMASUM (TRUE STOMACH)",
+      "ABORT",
+      "ABORTIFACIENT",
+      "ABORTION",
+      "ABORTIVE",
+      "ABOVE",
+      "ABRASION",
+      "ABRASIVE"
+    ],
+    "images": [
+      {
+        "bbox": [
+          20.173999786376953,
+          250.2750244140625,
+          58.73899841308594,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 53,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 79,
+    "image_count": 1,
+    "words": [
+      "ABSOLUTE DIFFERENCE",
+      "ABSCISSA",
+      "ABSCISSA",
+      "ABSCISSION",
+      "ABSCISSION LAYER",
+      "ABSIEMENS (abS; ABMHO)",
+      "ABSOLUTE",
+      "ABSOLUTE ACTIVATION ANALYSIS",
+      "ABSOLUTE ADDRESS (EXPLICIT ADDRESS; SPECIFIC",
+      "ADDRESS)"
+    ],
+    "images": [
+      {
+        "bbox": [
+          615.1510009765625,
+          250.2750244140625,
+          650.1740112304688,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 48,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 80,
+    "image_count": 1,
+    "words": [
+      "ABSOLUTE ENTROPY",
+      "ABSOLUTE ZERO",
+      "ABSOLUTE ENTROPY",
+      "ABSOLUTE ERROR",
+      "ABSOLUTE EXPANSION",
+      "ABSOLUTE FITNESS",
+      "ABSOLUTE FREQUENCY",
+      "ABSOLUTE HUMIDITY",
+      "ABSOLUTE LETHAL CONCENTRATION (LC",
+      "100"
+    ],
+    "images": [
+      {
+        "bbox": [
+          20.173999786376953,
+          250.2750244140625,
+          58.73899841308594,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 53,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 81,
+    "image_count": 1,
+    "words": [
+      "ABSOLUTELY NORMAL NUMBER",
+      "ABSORPTION FIELD",
+      "ABSOLUTELY NORMAL NUMBER",
+      "ABSOLUTELY SUMMABLE",
+      "ABSOLUTELY SYMMETRIC",
+      "ABSOLUTISM",
+      "ABSORB",
+      "ABSORBANCE (OPTICAL DENSITY)",
+      "ABSORBED DOSE (D)",
+      "ABSORBED ELECTRONS"
+    ],
+    "images": [
+      {
+        "bbox": [
+          615.1510009765625,
+          250.2750244140625,
+          650.1740112304688,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 48,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 82,
+    "image_count": 1,
+    "words": [
+      "ABUNDANCE",
+      "ABSORPTION LAW",
+      "ABSORPTION LAW",
+      "ABSORPTION LINE (ATOMIC FINGERPRINT)",
+      "ABSORPTION OF COLOUR",
+      "ABSORPTION OF RADIATION",
+      "ABSORPTION SPECTROSCOPY (ABSORPTIOMETRY)",
+      "ABSORPTION SPECTRUM",
+      "ABSORPTION TOWER (ABSORPTION COLUMN)",
+      "ABSORPTIVE POWER (ABSORBENCY INDEX; ABSORPTION"
+    ],
+    "images": [
+      {
+        "bbox": [
+          20.173999786376953,
+          250.2750244140625,
+          58.73899841308594,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 53,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 83,
+    "image_count": 1,
+    "words": [
+      "ACCELERATION",
+      "ABUNDANT NUMBER",
+      "ABUNDANT NUMBER",
+      "ABVOLT (abV)",
+      "ABWATT (abW)",
+      "ABYSSAL ZONE",
+      "ABZYME",
+      "AC",
+      "AC-3 (DOLBY DIGITAL)",
+      "AC'97"
+    ],
+    "images": [
+      {
+        "bbox": [
+          615.1510009765625,
+          250.2750244140625,
+          650.1740112304688,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 48,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 84,
+    "image_count": 1,
+    "words": [
+      "ACCEPTABLE DAILY INTAKE",
+      "ACCELERATION DUE TO GRAVITY",
+      "ACCELERATION DUE TO GRAVITY (ACCELERATION OF FREE",
+      "FALL)",
+      "ACCELERATION HARDWARE",
+      "ACCELERATION SERVER (HIGH-SPEED DIALUP)",
+      "ACCELERATION STRESS",
+      "ACCELERATION-TIME-GRAPH (A-T GRAPH)",
+      "ACCELERATOR",
+      "ACCELERATOR BOARD"
+    ],
+    "images": [
+      {
+        "bbox": [
+          20.173999786376953,
+          250.2750244140625,
+          58.73899841308594,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 53,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 85,
+    "image_count": 4,
+    "words": [
+      "ACCESS PROVIDER",
+      "ACCEPTABLE USE POLICY",
+      "ACCESS KEY (ACCESS CODE)",
+      "ACCESS LOG",
+      "ACCESS METHOD",
+      "ACCESS PATH",
+      "ACCESS POINT (BASE STATION)",
+      "ACCESS POINT NAME (APN)",
+      "ACCESS PROVIDER (INTERNET ACCESS PROVIDER, IAP;",
+      "INTERNET SERVICE PROVIDER, ISP)"
+    ],
+    "images": [
+      {
+        "bbox": [
+          615.1510009765625,
+          250.2750244140625,
+          650.1740112304688,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 48,
+        "height": 57
+      },
+      {
+        "bbox": [
+          393.8800048828125,
+          549.5899658203125,
+          438.79998779296875,
+          562.14501953125
+        ],
+        "ext": "png",
+        "width": 46,
+        "height": 14
+      },
+      {
+        "bbox": [
+          421.09600830078125,
+          551.0490112304688,
+          428.7080078125,
+          554.1199951171875
+        ],
+        "ext": "png",
+        "width": 8,
+        "height": 4
+      },
+      {
+        "bbox": [
+          426.4079895019531,
+          558.6710205078125,
+          431.5,
+          563.6610107421875
+        ],
+        "ext": "png",
+        "width": 6,
+        "height": 6
+      }
+    ]
+  },
+  {
+    "page": 86,
+    "image_count": 1,
+    "words": [
+      "ACCRETION",
+      "ACCESS PRIVILEGE",
+      "ACCESS PRIVILEGE",
+      "",
+      "ACCESS RATE",
+      "ACCESS RIGHTS",
+      "ACCESS TIME (REACTION TIME)",
+      "ACCESSENUM",
+      "ACCESSORY",
+      "ACCESSORY BUD (SUPERNUMERARY BUD)"
+    ],
+    "images": [
+      {
+        "bbox": [
+          20.173999786376953,
+          250.2750244140625,
+          58.73899841308594,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 53,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 87,
+    "image_count": 1,
+    "words": [
+      "ACESULFAME-K",
+      "ACCRETION DISC",
+      "ACCRETION DISC (ACCRETION DISK)",
+      "ACCRETIONARY LAPILLI",
+      "ACCRETIONARY WEDGE",
+      "ACCUMBENT COTYLEDON",
+      "ACCUMULATION",
+      "ACCUMULATION POINT (CLUSTER POINT; LIMIT POINT)",
+      "ACCUMULATOR",
+      ""
+    ],
+    "images": [
+      {
+        "bbox": [
+          615.1510009765625,
+          250.2750244140625,
+          650.1740112304688,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 48,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 88,
+    "image_count": 2,
+    "words": [
+      "ACETONE",
+      "ACETABULUM",
+      "ACETABULUM (COTYLOID CAVITY)",
+      "ACETAL",
+      "ACETALDEHYDE (ACETIC ALDEHYDE; ETHANAL; ETHYL",
+      "ALDEHYDE)",
+      "ACETAMIDE (ETHANAMIDE)",
+      "ACETAMINOPHEN [PARACETAMOL; 4-ACETAMIDOPHENOL;",
+      "N - ( 4 - H Y D R O X Y P H E N Y L ) E T H A N A M I D E ; N - ( 4 -",
+      "HYDROXYPHENYL)ACETAMIDE]"
+    ],
+    "images": [
+      {
+        "bbox": [
+          20.173999786376953,
+          250.2750244140625,
+          58.73899841308594,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 53,
+        "height": 57
+      },
+      {
+        "bbox": [
+          290.25799560546875,
+          189.739013671875,
+          295.468994140625,
+          190.83099365234375
+        ],
+        "ext": "png",
+        "width": 6,
+        "height": 2
+      }
+    ]
+  },
+  {
+    "page": 89,
+    "image_count": 1,
+    "words": [
+      "ACETYLENE TRICHLORIDE",
+      "ACETONE BODY",
+      "ACETONE BODY",
+      "ACETONE-CHLOR-HAEMIN TEST (WAGENAAR TEST)",
+      "A",
+      "CETOPHENONE (PHENYL METHYL KETONE)",
+      "ACETYL CHLORIDE (ETHANOYL CHLORIDE; ACYL CHLORIDE)",
+      "ACETYL COENZYME A (ACETYL CoA)",
+      "ACETYL GROUP (ETHANOYL)",
+      "ACETYLACETONATO [acac; TRIS(ACETYLACETONATO)"
+    ],
+    "images": [
+      {
+        "bbox": [
+          615.1510009765625,
+          250.2750244140625,
+          650.1740112304688,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 48,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 90,
+    "image_count": 1,
+    "words": [
+      "ACID CHLORIDE",
+      "ACETYLSALICYCLIC ACID",
+      "ACETYLSALICYCLIC ACID (ASPIRIN)",
+      "ACHATINA",
+      "ACHENE (AKENE)",
+      "ACHESON PROCESS",
+      "ACHILLES TENDON",
+      "ACHIRAL",
+      "ACHLAMYDEOUS",
+      "ACHLOROPHYLLOUS"
+    ],
+    "images": [
+      {
+        "bbox": [
+          20.173999786376953,
+          250.2750244140625,
+          58.73899841308594,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 53,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 91,
+    "image_count": 1,
+    "words": [
+      "ACID-BASE REACTION",
+      "ACID DEPOSITION",
+      "ACID DEPOSITION (ACID PRECIPITATION)",
+      "ACID DISSOCIATION CONSTANT (ACIDITY CONSTANT; ACID",
+      "IONISING CONSTANT)",
+      "ACID DYE",
+      "ACID GROWTH RATE (AGR)",
+      "ACID GROWTH THEORY",
+      "ACID PROTEASE",
+      "ACID RAIN"
+    ],
+    "images": [
+      {
+        "bbox": [
+          615.1510009765625,
+          250.2750244140625,
+          650.1740112304688,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 48,
+        "height": 57
+      }
+    ]
+  },
+  {
+    "page": 92,
+    "image_count": 1,
+    "words": [
+      "ACNE",
+      "ACIDIC",
+      "ACIDIC",
+      "ACIDIC HYDROGEN (ACID HYDROGEN)",
+      "ACIDIC OXIDE",
+      "ACIDIC SOLUTION",
+      "ACIDIMETRY (ACIDOMETRY)",
+      "ACIDITY",
+      "ACIDITY CONSTANT",
+      "ACIDITY FUNCTION"
+    ],
+    "images": [
+      {
+        "bbox": [
+          20.173999786376953,
+          250.2750244140625,
+          58.73899841308594,
+          291.87701416015625
+        ],
+        "ext": "png",
+        "width": 53,
+        "height": 57
+      }
+    ]
+  }
+]

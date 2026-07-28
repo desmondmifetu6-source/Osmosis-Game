@@ -66,6 +66,41 @@ function performSearch() {
   resPhonetic.textContent = 'Osmosis STEM Dictionary';
   resMeaning.textContent = entry.definition;
 
+  // Check for Diagram
+  const diagramBox = document.getElementById('res-diagram-box');
+  const diagramContent = document.getElementById('res-diagram-content');
+  const diagramImg = document.getElementById('res-diagram-img');
+  const noDiagramMsg = document.getElementById('res-no-diagram-msg');
+  
+  let diagramSrc = null;
+  if (typeof window.DictionaryDiagrams !== 'undefined') {
+    const wordKey = entry.word.toLowerCase().trim();
+    const queryKey = query.toLowerCase().trim();
+    diagramSrc = window.DictionaryDiagrams[wordKey] || window.DictionaryDiagrams[queryKey];
+    
+    if (!diagramSrc) {
+      // Partial match search in DictionaryDiagrams
+      const diagKeys = Object.keys(window.DictionaryDiagrams);
+      const matchedKey = diagKeys.find(k => k.includes(wordKey) || wordKey.includes(k) || k.includes(queryKey));
+      if (matchedKey) {
+        diagramSrc = window.DictionaryDiagrams[matchedKey];
+      }
+    }
+  }
+
+  if (diagramBox) {
+    diagramBox.style.display = 'block';
+    if (diagramSrc && diagramImg && diagramContent) {
+      diagramImg.src = diagramSrc;
+      diagramImg.alt = `${entry.word} diagram`;
+      diagramContent.style.display = 'block';
+      if (noDiagramMsg) noDiagramMsg.style.display = 'none';
+    } else {
+      if (diagramContent) diagramContent.style.display = 'none';
+      if (noDiagramMsg) noDiagramMsg.style.display = 'block';
+    }
+  }
+
   if (entry.suggestions && entry.suggestions.length > 1) {
     const note = document.createElement('p');
     note.style.marginTop = '1rem';

@@ -14572,7 +14572,7 @@
         "definition": "The beginning of the alimentary canal which leads to the pharynx and in vertebrates to the oesophagus. In mammals, it contains the tongue and teeth, which assist in the mechanical breakdown of food and openings of the salivary duct. Side arm leading to vacuum source funnel Büchner  funnel Büchner  funnel and ﬂask for ﬁltration under reduced pressure"
     },
     {
-        "word": "BÜCHNER  FUNNEL",
+        "word": "BÜCHNER FUNNEL",
         "definition": "A type of funnel used for fi ltering by suction, consisting of a cylindrical porcelain, glass or plastic fi ltering funnel that has a perforated plate on which the flat filter paper is placed. It is used together with a Büchner flask, which is a vacuum fl ask with a side arm underneath the filter to which a vacuum can be applied to allow atmospheric pressure on the sample to force the liquid through the fi lter paper. It is named after its inventor, Ernst Büchner (1850 – 1924), a German industrial chemist. The Hirsch funnel has a similar design, but used for smaller quantities of material. The main difference is that the plate is much smaller, while the walls of the funnel angle outward instead of being vertical."
     },
     {
@@ -18396,7 +18396,7 @@
         "definition": "Unpredictable behaviour occurring in a system that should be controlled by deterministic laws. In such systems, the equations that describe the way the system changes with time are nonlinear and involve several variables. Consequently, they are very sensitive to the initial conditions and a very small initial difference may make an enormous change to the future state of the system, for example, turbulent ﬂ ow of ﬂ uids, long time unpredictability of the weather, oscillations in electrical circuits, combustion processes and oscillating reactions in chemistry."
     },
     {
-        "word": "CHAOS THEORY  (CHAOLOGY)",
+        "word": "CHAOS THEORY (CHAOLOGY)",
         "definition": "The branch of mathematics that is concerned with irregular, unpredictable systems such as weather that rely upon an underlying order, so that very simple or small systems and events can cause very complex behaviours or events."
     },
     {
@@ -36900,7 +36900,7 @@
         "definition": "A specialised type of ovuliferous scale that bears and completely encloses a single inverted ovule. It is found in the monkey- puzzle tree ( Araucaria araucana ) and in certain of the Podocarpaceae."
     },
     {
-        "word": "EPIMEDIUM (BARRENWORT;  HORNY GOAT WEED)",
+        "word": "EPIMEDIUM (BARRENWORT; HORNY GOAT WEED)",
         "definition": "A genus of ﬂ owering herbaceous perennial plants in the family Berberidaceae, found mostly in Asia, with one or two species including Epimedium alpinum being found in the Mediterranean regions of Europe. The Asian species include E. pubescens , E. wushanense , E. myrianthum , E. sagittatum , E. koreanum and E. brevicornu and E. grandiﬂ orum . The stem of Epimedium develops from an underground rhizome and may be solitary or in multiples growing closer together. The leaves are compound with spiny margins. The inﬂ orescence is an open raceme or panicle, the number of ﬂ owers varying by species. The plant contains icariin, which is a PDE5 inhibitor like sildenaﬁ l, the active ingredient of Viagra. It regulates blood ﬂ ow in the penis and increases the production of nitric oxide and used in the treatment for erectile dysfunction."
     },
     {
@@ -39836,7 +39836,7 @@
         "definition": "Any of the cells of adipose tissue, comprising white adipose tissue (WAT or white fat) and brown adipose tissue (BAT or brown fat) specialised in storing energy as fat. Fat cells contain enzymes that  can break down fat into glycerol and fatty acids, which can be transported in the blood to the liver, where they are used in fatty-acid oxidation."
     },
     {
-        "word": "FATAL EXCEPTION ERRORS  (FATAL OE)",
+        "word": "FATAL EXCEPTION ERRORS (FATAL OE)",
         "definition": "A software error that is returned by a program in the following cases: when a software program attempts to access an illegal instruction; when invalid data or other code has been accessed; or in the case of operational invalid privilege level. Depending upon the severity of the error, the exception is not recoverable and the system must either be restarted or shut down."
     },
     {
@@ -52812,7 +52812,7 @@
         "definition": "A deﬁ nite integral with one or both limits of integration inﬁ nite or having an integrand that becomes inﬁ nite between the limits of integration. The improper integral f ( x ) dx a ∞ ∫ is said to converge if f ( x ) dx a ∞ ∫ exists and to diverge otherwise. Similarly, if the integrand has a singularity at an endpoint of the interval of integration, then the integral is deﬁ ned as the limit of the proper integrals as the limit of integration tends to that endpoint from within the interval; if the singularity is in the interior of the interval, then the integral is the sum of the two improper integrals on the subintervals above and below the singularity."
     },
     {
-        "word": "IMPROPER  POINT",
+        "word": "IMPROPER POINT",
         "definition": "An ideal element of the augmented Euclidean geometry; a point at which parallel lines meet."
     },
     {
@@ -54752,7 +54752,7 @@
         "definition": "A non-proﬁ t corporation that is responsible for allocating IP addresses and managing the domain name system. The ICANN allocates blocks of IP addresses to companies, educational institutions and Internet service providers, which in turn allocate IP addresses to computers that use their Internet connections."
     },
     {
-        "word": "INTERNET MESSAGE ACCESS PROTOCOL  (IMAP)",
+        "word": "INTERNET MESSAGE ACCESS PROTOCOL (IMAP)",
         "definition": "A protocol that allows users to retrieve e-mail, but still uses SMTP for sending e-mail messages. IMAP4 is the latest version of IMAP. IMAP includes operations such as creating, deleting, renaming mailboxes, checking for new messages, permanently removing messages, searching, etc. IMAP was ﬁ rst developed by Mark Crispin while at Stanford University in 1986."
     },
     {
@@ -58404,7 +58404,7 @@
         "definition": "A branch of mathematics concerned with the rate of decay of the probabilities a family of probability measures assign increasingly unlikely events."
     },
     {
-        "word": "LARGE HADRON COLLIDER  (LHC)",
+        "word": "LARGE HADRON COLLIDER (LHC)",
         "definition": "A proton collider at CERN, which started operating in 2008 and the world’s largest and highest- energy particle accelerator. It is located in a tunnel 27 kilometres in circumference and 175 metres beneath the Franco-Swiss border near Geneva, Switzerland. It accelerates two beams of protons to very high energies and then causes the beams to collide with each other, giving effective energies of about 14 TeV. It is hoped that the LHC will address some of the most fundamental questions of physics and discover the Higgs boson and provides information on physics beyond the standard model, such as super symmetry."
     },
     {
@@ -63988,7 +63988,7 @@
         "definition": "Equations in the thermodynamics for a given mass of a homogeneous system, relating the entropy ( S ), pressure ( p ), volume ( V ) and the thermodynamic temperature ( T ). The four equations are; dT dV ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ s =− dp dS ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ V ; dT dp ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ s =− dV dS ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ p; dV dT ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟=− dS dp ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ T; and dS dV ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ s =− dp dT ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ V ."
     },
     {
-        "word": "MAYER’S F-FUNCTION",
+        "word": "MAYER’SF-FUNCTION",
         "definition": "A quantity that occurs in the calculation of virial coefﬁ cients. It is deﬁ ned by f = exp − V 2 kT ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟− 1 , where V 2 is the two body interaction potential energy, k the Boltzmann constant and T is the thermodynamic temperature. It is related to the second virial coefﬁ cient B by: B = − N A V ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟∫ dr 1 dr 2 , , where N A is the Avogadro number and V is the volume of the system. This equation is simpliﬁ ed to: in the case of closed-shell atoms and octahedral and tetrahedral molecules. When particles are so far apart from the"
     },
     {
@@ -94916,7 +94916,7 @@
         "definition": "A white lustrous extremely malleable and ductile metallic element with the symbol Ag, atomic number 47, liquid density at melting point 9.320 g/cm -3 , melting point 961.78 °C (1234.93 K) and boiling point 2162 °C (2435 K). It occurs in nature in ores and as a free metal. It has the highest thermal and electric conductivity of any substance. It is used as coins ornaments, jewellery, dental materials, solders, photographic chemicals, conductors, etc."
     },
     {
-        "word": "SILVER BROMIDE (SILVER(I) BROMIDE;  BROMYRITE)",
+        "word": "SILVER BROMIDE (SILVER(I) BROMIDE; BROMYRITE)",
         "definition": "A pale yellow insoluble crystalline salt with the chemical formula AgBr, density 6.473 g/cm 3 (solid), melting point 432 °C (705 K) and boiling point 1502 °C (1775 K). It is used for making light-sensitive photographic emulsions. It can be precipitated from silver(I) nitrate solution by adding a solution containing bromide ions. It dissolves in concentrated ammonia solutions but not in dilute ammonia."
     },
     {
@@ -100316,7 +100316,7 @@
         "definition": "A farm, where horses are kept for breeding. Many stud farms make male animals available for breeding to outside female animals that are not owned by the stud farm. This provides a source of revenue to a stud farm through the stud fees paid to obtain the services of the stud animal as well as contributing to the overall genetic diversity of the animal’s offspring. It has an overall effect of improving the quality of animals throughout an area."
     },
     {
-        "word": "STUDENT’S T DISTRIBUTION (T-DISTRIBUTION)",
+        "word": "STUDENT’ST DISTRIBUTION (T-DISTRIBUTION)",
         "definition": "A probability distribution in statistics made up of the means of random samples from a collection of samples that has a normal distribution of unknown variance. It is used to test a hypothesis."
     },
     {
@@ -103392,7 +103392,7 @@
         "definition": "A hardware device or server that provides terminals such as computers and printers, with a common connection point to a local or wide area network without the need for each terminal to have a network interface card (NIC) or modem."
     },
     {
-        "word": "A N G L E",
+        "word": "ANGLE",
         "definition": "T h e r a y w h e r e measurement of an angle stops. Where it begins on the x-axis is called initial side of an angle . Fig. 1: Forces acting on a body falling in a ﬂuid Fig. 2: Velocity-Time Graph for the motion of a body falling freely in a ﬂuid viscous force (Drag) weight accelerating Steady or constant speed Velocity (m/s) Time (seconds) .................................... V0"
     },
     {
@@ -106560,7 +106560,7 @@
         "definition": "A term used to describe ﬂ owers in which the parts of each whorl are inserted in threes or multiples of three. This arrangement is characteristic of many monocotyledons."
     },
     {
-        "word": "TRIMETHYLALUMINIUM, TMA  (ALUMINIUM TRIMETHYL)",
+        "word": "TRIMETHYLALUMINIUM, TMA (ALUMINIUM TRIMETHYL)",
         "definition": "A colourless liquid with the chemical formula Al 2 (CH 3 ) 3 , density 0.752 g/ ml, melting point 15 °C (288 K) and boiling point 125 °C (398 K). It ignites in air and reacts with water to give aluminium hydroxide and methane, usually with extreme vigour. It is prepared via a two-step process as follows: 2Al + 6CH 3 Cl + 6Na → Al 2 (CH 3 ) 6 + 6NaCl. TMA is mainly used for the production of methylaluminoxane, an activator for Ziegler-Natta catalysts for oleﬁ n polymerisation. TMA is also employed as a methylation agent; used for the preparation of Tebbe’s reagent, which is used for the methylenation of esters and ketones. It is also used in semiconductor fabrication to grow thin ﬁ lm, high-k dielectrics such as Al 2 O 3 via the processes of Chemical Vapour Deposition or Atomic Layer Deposition."
     },
     {

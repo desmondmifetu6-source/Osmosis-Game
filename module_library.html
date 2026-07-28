@@ -112,12 +112,23 @@
         <div class="dict-word" id="res-word">Word</div>
         <span class="dict-phonetic" id="res-phonetic">Osmosis STEM Dictionary</span>
         <div class="dict-meaning" id="res-meaning">Meaning goes here.</div>
+        <div id="res-diagram-box" style="display: none; margin-top: 1.5rem; text-align: center; background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.3);">
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9;">Diagram Schematic</div>
+          <div id="res-diagram-content">
+            <img id="res-diagram-img" src="" alt="Diagram illustration" class="dict-cover-preview" style="max-width: 100%; max-height: 380px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.25); cursor: pointer; object-fit: contain; background: #ffffff;">
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8; font-style: italic;">Tap diagram to enlarge</p>
+          </div>
+          <div id="res-no-diagram-msg" style="display: none; padding: 1.2rem; background: rgba(0, 0, 0, 0.08); border-radius: 12px; font-size: 0.95rem; font-style: italic; color: var(--text-secondary, #475569);">
+            🖼️ Diagram illustration is unavailable for this term.
+          </div>
+        </div>
       </div>
 
       <button id="go-home-btn" class="classic-btn blue-gradient" style="margin-top:1rem;">Return to Menu</button>
     </div>
   </div>
   <script src="core_dictionary.js"></script>
+  <script src="core_dictionary_diagrams.js"></script>
   <script src="core_shared_state.js"></script>
   <script src="dict_cover_lightbox.js"></script>
   <script src="module_library.js"></script>
