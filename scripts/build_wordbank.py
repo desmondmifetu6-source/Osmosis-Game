@@ -30,15 +30,59 @@ def build_wordbank():
         for letter in sorted(wordBank.keys()):
             f.write(f'  "{letter}": [\n')
             for entry in wordBank[letter]:
-                # escape quotes
-                w = entry['word'].replace('"', '\\"').replace('\n', ' ')
-                d = entry['definition'].replace('"', '\\"').replace('\n', ' ')
+                # escape quotes & newlines
+                w = entry['word'].replace('\\', '\\\\').replace('"', '\\"').replace('\n', ' ')
+                d = entry['definition'].replace('\\', '\\\\').replace('"', '\\"').replace('\n', ' ')
                 f.write(f'    {{ word: "{w}", definition: "{d}" }},\n')
             f.write("  ],\n")
             
-        f.write("};\n")
+        f.write("};\n\n")
         
-    print("Successfully built core_dictionary.js with massive data!")
+        # Attach STEMDictionary API with fast O(1) Map indexing
+        f.write("""
+// Initialize STEMDictionary helper engine with fast O(1) lookup
+(function() {
+  const definitionMap = new Map();
+  const allWordsArray = [];
+
+  for (const letter in wordBank) {
+    const list = wordBank[letter];
+    for (let i = 0; i < list.length; i++) {
+      const entry = list[i];
+      const wLower = entry.word.toLowerCase();
+      definitionMap.set(wLower, entry.definition);
+      allWordsArray.push(entry);
+    }
+  }
+
+  const STEMDictionary = {
+    wordBank: wordBank,
+    getDefinition: function(query) {
+      if (!query) return null;
+      const normalized = query.trim().toLowerCase();
+      return definitionMap.get(normalized) || null;
+    },
+    getWordsByLetter: function(letter) {
+      if (!letter) return [];
+      return wordBank[letter.toUpperCase()] || [];
+    },
+    getAllWords: function() {
+      return allWordsArray;
+    },
+    getRandomLetter: function() {
+      const keys = Object.keys(wordBank).filter(k => wordBank[k] && wordBank[k].length > 0);
+      return keys[Math.floor(Math.random() * keys.length)];
+    }
+  };
+
+  if (typeof window !== 'undefined') {
+    window.wordBank = wordBank;
+    window.STEMDictionary = STEMDictionary;
+  }
+})();
+""")
+        
+    print("Successfully built core_dictionary.js with STEMDictionary API!")
 
 if __name__ == "__main__":
     build_wordbank()
