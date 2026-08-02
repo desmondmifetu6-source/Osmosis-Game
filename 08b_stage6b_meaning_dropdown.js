@@ -196,46 +196,108 @@ const Stage6bController = {
       }[tag] || tag));
     }
 
-    // Prepare trick words pool from STEMDictionary
-    let globalTricks = [];
-    if (typeof window.STEMDictionary !== 'undefined' && typeof window.STEMDictionary.getRandomLetter === 'function') {
-      let attempts = 0;
-      while (globalTricks.length < 20 && attempts < 100) {
-        const randLetter = window.STEMDictionary.getRandomLetter();
-        const words = window.STEMDictionary.getWordsByLetter(randLetter);
-        if (words && words.length > 0) {
-          const wObj = words[Math.floor(Math.random() * words.length)];
-          if (wObj && wObj.definition) {
-            const parts = wObj.definition.split(/(\b[\w'-]+\b)/).filter(t => t.length > 4 && /^[a-zA-Z]+$/.test(t) && !stopWords.includes(t.toLowerCase()));
-            if (parts.length > 0) {
-              const trk = parts[Math.floor(Math.random() * parts.length)].toLowerCase();
-              if (!globalTricks.includes(trk)) globalTricks.push(trk);
-            }
-          }
-        }
-        attempts++;
-      }
-    }
+    // Helper function: Generate deceptively similar trick words for a given target word
+    function generateDeceptiveTricks(targetWord) {
+      const lower = targetWord.toLowerCase();
+      const candidates = new Set();
 
-    const defaultTricks = ["process", "system", "cell", "energy", "force", "matter", "reaction", "structure", "function", "development"];
-    if (globalTricks.length < 10) globalTricks = [...globalTricks, ...defaultTricks];
+      // 1. Morphological & Suffix Variations (Deceptive Grammatical Distractors)
+      if (lower.endsWith('ion')) {
+        candidates.add(lower.replace(/ion$/, 'ive'));
+        candidates.add(lower.replace(/ion$/, 'ing'));
+        candidates.add(lower.replace(/ion$/, 'or'));
+        candidates.add(lower.replace(/ion$/, 'ional'));
+        candidates.add(lower.replace(/ion$/, 'ions'));
+      } else if (lower.endsWith('ive')) {
+        candidates.add(lower.replace(/ive$/, 'ion'));
+        candidates.add(lower.replace(/ive$/, 'ity'));
+        candidates.add(lower.replace(/ive$/, 'ely'));
+        candidates.add(lower.replace(/ive$/, 'iveness'));
+      } else if (lower.endsWith('ic')) {
+        candidates.add(lower + 'al');
+        candidates.add(lower.replace(/ic$/, 'ism'));
+        candidates.add(lower.replace(/ic$/, 'ist'));
+        candidates.add(lower + 'ally');
+      } else if (lower.endsWith('al')) {
+        candidates.add(lower.replace(/al$/, 'ic'));
+        candidates.add(lower.replace(/al$/, 'ity'));
+        candidates.add(lower + 'ly');
+        candidates.add(lower.replace(/al$/, 'ism'));
+      } else if (lower.endsWith('ous')) {
+        candidates.add(lower.replace(/ous$/, 'ity'));
+        candidates.add(lower.replace(/ous$/, 'ive'));
+        candidates.add(lower.replace(/ous$/, 'ly'));
+        candidates.add(lower.replace(/ous$/, 'ness'));
+      } else if (lower.endsWith('ure')) {
+        candidates.add(lower.replace(/ure$/, 'ural'));
+        candidates.add(lower.replace(/ure$/, 'ured'));
+        candidates.add(lower.replace(/ure$/, 'ures'));
+        candidates.add(lower.replace(/ure$/, 'uring'));
+      } else if (lower.endsWith('y')) {
+        candidates.add(lower.replace(/y$/, 'ies'));
+        candidates.add(lower.replace(/y$/, 'ical'));
+        candidates.add(lower.replace(/y$/, 'ic'));
+        candidates.add(lower.replace(/y$/, 'ist'));
+      }
+
+      // Add common suffix variations for any word
+      if (lower.length > 4) {
+        if (!lower.endsWith('s')) candidates.add(lower + 's');
+        if (!lower.endsWith('ed')) candidates.add(lower.endsWith('e') ? lower + 'd' : lower + 'ed');
+        if (!lower.endsWith('ing')) candidates.add(lower.endsWith('e') ? lower.slice(0, -1) + 'ing' : lower + 'ing');
+        if (!lower.endsWith('al')) candidates.add(lower + 'al');
+        if (!lower.endsWith('ly')) candidates.add(lower + 'ly');
+      }
+
+      // 2. Search STEMDictionary for words with matching prefix (first 2-3 letters) and similar length
+      if (typeof window.STEMDictionary !== 'undefined' && typeof window.STEMDictionary.getWordsByLetter === 'function') {
+        const firstLetter = lower[0];
+        const prefix2 = lower.slice(0, 2);
+        const prefix3 = lower.slice(0, 3);
+        const dictWords = window.STEMDictionary.getWordsByLetter(firstLetter) || [];
+
+        for (const wObj of dictWords) {
+          if (!wObj || !wObj.word) continue;
+          const w = wObj.word.toLowerCase();
+          if (w === lower) continue;
+
+          // Match starting prefix and similar length (±2 chars)
+          if ((w.startsWith(prefix3) || w.startsWith(prefix2)) && Math.abs(w.length - lower.length) <= 2) {
+            candidates.add(w);
+          }
+          if (candidates.size >= 15) break;
+        }
+      }
+
+      // Filter candidates: remove exact answer, non-alphabetic, or tiny words
+      const validTricks = Array.from(candidates).filter(w => {
+        return w !== lower && w.length >= 3 && /^[a-zA-Z]+$/.test(w);
+      });
+
+      // Shuffle valid deceptive tricks
+      validTricks.sort(() => 0.5 - Math.random());
+
+      // Fallback if needed
+      const fallbacks = ["process", "system", "structure", "function", "element", "reaction", "compound", "property", "energy", "substance"];
+      for (const fb of fallbacks) {
+        if (validTricks.length >= 3) break;
+        if (fb !== lower && !validTricks.includes(fb)) {
+          validTricks.push(fb);
+        }
+      }
+
+      return validTricks.slice(0, 3);
+    }
 
     // Build HTML
     if (domCache.testMeaningContainer) domCache.testMeaningContainer.innerHTML = '';
-    
+
     tokens.forEach((t, i) => {
       if (validIndices.includes(i)) {
         const correctAns = t.toLowerCase();
-        
-        // Pick 3 trick words for this dropdown
-        let trickOptions = [];
-        let pool = [...globalTricks].sort(() => 0.5 - Math.random());
-        for (let w of pool) {
-          if (w !== correctAns && trickOptions.length < 3) {
-            trickOptions.push(w);
-          }
-        }
-        
+
+        // Pick 3 deceptive trick words specifically generated for this answer
+        let trickOptions = generateDeceptiveTricks(correctAns);
         let allOptions = [correctAns, ...trickOptions].sort(() => 0.5 - Math.random());
         
         // Build Custom Dropdown UI
