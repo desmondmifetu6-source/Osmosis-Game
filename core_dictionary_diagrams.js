@@ -1,6 +1,4 @@
-// =====================================================================
-// FILE: core_dictionary_diagrams.js (Auto-extracted — v2)
-// =====================================================================
+// core_dictionary_diagrams.js (Auto-extracted + Online-sourced v3)
 
 const DictionaryDiagrams = {
     "2-amino-3-methylbutanoic acid (valine)": "diagrams/dict_2_amino_3_methylbutanoic_acid_valine.png",
@@ -919,7 +917,26 @@ const DictionaryDiagrams = {
     "precessional motion": "diagrams/dict_precessional_motion.png",
     "animal cell": "diagrams/animal_cell.jpeg",
     "plant cell": "diagrams/plant_cell.jpeg",
-    "cell": "diagrams/animal_cell.jpeg"
+    "cell": "diagrams/animal_cell.jpeg",
+    "mitosis": "diagrams/dict_mitosis.png",
+    "photosynthesis": "diagrams/dict_photosynthesis.png",
+    "human eye": "diagrams/dict_human_eye.png",
+    "neuron": "diagrams/dict_neuron.png",
+    "wave": "diagrams/dict_wave.png",
+    "periodic table": "diagrams/dict_periodic_table.png",
+    "kidney": "diagrams/dict_kidney.png",
+    "dna": "diagrams/dict_dna.png",
+    "water cycle": "diagrams/dict_water_cycle.png",
+    "refraction": "diagrams/dict_refraction.png",
+    "diffraction": "diagrams/dict_diffraction.png",
+    "osmosis": "diagrams/dict_osmosis.png",
+    "diffusion": "diagrams/dict_diffusion.png",
+    "mitochondria": "diagrams/dict_mitochondria.png",
+    "pulley": "diagrams/dict_pulley.png",
+    "prism": "diagrams/dict_prism.png",
+    "volcano": "diagrams/dict_volcano.png",
+    "solar system": "diagrams/dict_solar_system.png",
+    "ecosystem": "diagrams/dict_ecosystem.png"
 };
 
 if (typeof window !== 'undefined') {
