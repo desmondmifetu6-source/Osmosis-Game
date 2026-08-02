@@ -17,10 +17,15 @@
       align-items: center;
     }
 
+    .search-bar-wrapper {
+      position: relative;
+      flex: 1;
+    }
+
     .search-bar {
       display: flex;
       gap: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 0.25rem;
       align-items: stretch;
     }
 
@@ -28,13 +33,110 @@
       margin-bottom: 0;
       text-align: left;
       border-radius: 8px;
-      flex: 1;
+      width: 100%;
     }
 
     .search-bar button {
       width: auto;
       margin-bottom: 0;
       padding: 0 1.5rem;
+    }
+
+    /* Autocomplete Dropdown — High-Contrast Frosted Glass */
+    #autocomplete-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: rgba(255, 255, 255, 0.96) !important;
+      backdrop-filter: blur(28px) saturate(1.8) !important;
+      -webkit-backdrop-filter: blur(28px) saturate(1.8) !important;
+      border: 1.5px solid rgba(79, 70, 229, 0.3) !important;
+      border-radius: 16px;
+      box-shadow:
+        0 20px 45px rgba(15, 23, 42, 0.25),
+        0 4px 12px rgba(79, 70, 229, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.80);
+      overflow: hidden;
+      max-height: 360px;
+      overflow-y: auto;
+      animation: dropdownFadeIn 0.18s ease;
+    }
+
+    @keyframes dropdownFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .stem-autocomplete-item {
+      padding: 11px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(79, 70, 229, 0.08);
+      transition: all 0.15s ease;
+      background: transparent;
+      border-left: 3px solid transparent;
+    }
+
+    .stem-autocomplete-item:last-child {
+      border-bottom: none;
+    }
+
+    .stem-autocomplete-item:hover {
+      background: rgba(79, 70, 229, 0.08) !important;
+      border-left-color: #4F46E5 !important;
+    }
+
+    .stem-autocomplete-item .ac-word {
+      color: #0f172a !important;
+      font-size: 13.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .stem-autocomplete-item .ac-match-badge {
+      display: inline-block;
+      font-size: 9px;
+      padding: 2px 7px;
+      border-radius: 6px;
+      margin-left: 6px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .ac-badge-prefix {
+      background: rgba(79, 70, 229, 0.15) !important;
+      color: #4338ca !important;
+    }
+
+    .ac-badge-synonym {
+      background: rgba(147, 51, 234, 0.15) !important;
+      color: #7e22ce !important;
+    }
+
+    .ac-badge-contains {
+      background: rgba(15, 23, 42, 0.08) !important;
+      color: #475569 !important;
+    }
+
+    .stem-autocomplete-item .ac-snippet {
+      font-size: 11.5px;
+      color: #334155 !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 3px;
+      font-weight: 500;
     }
 
     .definition-box {
@@ -92,15 +194,20 @@
   <div class="app-container">
     <div class="card">
       <div class="dict-book-hero">
-        <img src="assets/stem_dictionary_cover.png" alt="Science, Technology and Mathematics Dictionary cover" class="dict-book-thumb dict-cover-preview" title="View cover">
+        <img src="assets/stem_dictionary_cover.png" alt="Science, Technology and Mathematics Dictionary cover"
+          class="dict-book-thumb dict-cover-preview" title="View cover">
         <p class="dict-cover-hint">Tap cover to enlarge</p>
         <h2 class="dict-page-title">Dictionary</h2>
-        <p class="dict-subtitle" style="text-align:center; margin:0;">Search the official Osmosis STEM dictionary for scientific definitions.</p>
+        <p class="dict-subtitle" style="text-align:center; margin:0;">Search the official Osmosis STEM dictionary for
+          scientific definitions.</p>
         <span class="dict-source-tag">Science · Technology · Mathematics</span>
       </div>
 
       <div class="search-bar">
-        <input type="text" id="dict-input" placeholder="Search a word..." autocomplete="off">
+        <div class="search-bar-wrapper">
+          <input type="text" id="dict-input" placeholder="Search a word..." autocomplete="off">
+          <div id="autocomplete-dropdown"></div>
+        </div>
         <button id="dict-search-btn" class="classic-btn">Search</button>
       </div>
 
@@ -112,13 +219,19 @@
         <div class="dict-word" id="res-word">Word</div>
         <span class="dict-phonetic" id="res-phonetic">Osmosis STEM Dictionary</span>
         <div class="dict-meaning" id="res-meaning">Meaning goes here.</div>
-        <div id="res-diagram-box" style="display: none; margin-top: 1.5rem; text-align: center; background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.3);">
-          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9;">Diagram Schematic</div>
+        <div id="res-diagram-box"
+          style="display: none; margin-top: 1.5rem; text-align: center; background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.3);">
+          <div
+            style="font-weight: 700; font-size: 0.9rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9;">
+            Diagram Schematic</div>
           <div id="res-diagram-content">
-            <img id="res-diagram-img" src="" alt="Diagram illustration" class="dict-cover-preview" style="max-width: 100%; max-height: 380px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.25); cursor: pointer; object-fit: contain; background: #ffffff;">
-            <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8; font-style: italic;">Tap diagram to enlarge</p>
+            <img id="res-diagram-img" src="" alt="Diagram illustration" class="dict-cover-preview"
+              style="max-width: 100%; max-height: 380px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.25); cursor: pointer; object-fit: contain; background: #ffffff;">
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8; font-style: italic;">Tap diagram to enlarge
+            </p>
           </div>
-          <div id="res-no-diagram-msg" style="display: none; padding: 1.2rem; background: rgba(0, 0, 0, 0.08); border-radius: 12px; font-size: 0.95rem; font-style: italic; color: var(--text-secondary, #475569);">
+          <div id="res-no-diagram-msg"
+            style="display: none; padding: 1.2rem; background: rgba(0, 0, 0, 0.08); border-radius: 12px; font-size: 0.95rem; font-style: italic; color: var(--text-secondary, #475569);">
             🖼️ Diagram illustration is unavailable for this term.
           </div>
         </div>
@@ -126,56 +239,10 @@
 
       <button id="go-home-btn" class="classic-btn blue-gradient" style="margin-top:1rem;">Return to Menu</button>
 
-      <!-- Dictionary Footer -->
-      <div style="
-        margin-top: 2.5rem;
-        padding: 2rem 1.5rem;
-        text-align: center;
-        background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.07) 100%);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.4);
-        box-shadow:
-          0 8px 32px rgba(0,0,0,0.25),
-          0 2px 8px rgba(0,0,0,0.15),
-          inset 0 1px 0 rgba(255,255,255,0.5),
-          inset 0 -1px 0 rgba(255,255,255,0.1);
-        position: relative;
-        overflow: hidden;
-      ">
-        <!-- inner glowing highlight blob -->
-        <div style="
-          position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
-          width: 200px; height: 80px;
-          background: radial-gradient(ellipse, rgba(255,255,255,0.25) 0%, transparent 70%);
-          pointer-events: none;
-        "></div>
-
-        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem 0; letter-spacing: 0.04em; font-weight: 500; text-transform: uppercase;">
-          📖 For more information on this dictionary
-        </p>
-
-        <div style="
-          display: inline-flex;
-          align-items: center;
-          gap: 0.8rem;
-          background: rgba(255,255,255,0.1);
-          border: 1px solid rgba(255,255,255,0.3);
-          border-radius: 50px;
-          padding: 0.65rem 1.6rem;
-          margin-bottom: 1.2rem;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.35);
-        ">
-          <span style="font-size: 1.1rem; color: #000000; font-weight: 700; letter-spacing: 0.01em;">Godfred Funkor</span>
-          <span style="width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.4); display: inline-block;"></span>
-          <a href="tel:0248919104" style="font-size: 1.1rem; color: #93c5fd; font-weight: 700; text-decoration: none; letter-spacing: 0.02em;">0248 919 104</a>
-        </div>
-
-        <p style="font-size: 0.75rem; color: rgba(255,255,255,0.45); margin: 0; letter-spacing: 0.03em;">
-          &copy; <span id="footer-year"></span> Osmosis STEM Dictionary &mdash; All rights reserved.
-        </p>
-      </div>
+      <!-- Simple Copyright Footer -->
+      <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 2rem; text-align: center;">
+        &copy; <span id="footer-year"></span> Osmosis STEM Dictionary &mdash; All rights reserved.
+      </p>
     </div>
   </div>
   <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
@@ -184,6 +251,79 @@
   <script src="core_shared_state.js"></script>
   <script src="dict_cover_lightbox.js"></script>
   <script src="module_library.js"></script>
+  <script>
+    // Wire up live autocomplete after all scripts load
+    window.addEventListener('load', function () {
+      const input = document.getElementById('dict-input');
+      const dropdown = document.getElementById('autocomplete-dropdown');
+
+      if (!input || !dropdown || typeof STEMDictionary === 'undefined') return;
+
+      let debounceTimer = null;
+
+      function renderPredictions(predictions) {
+        dropdown.innerHTML = '';
+        if (!predictions || predictions.length === 0) {
+          dropdown.style.display = 'none';
+          return;
+        }
+        dropdown.style.display = 'block';
+
+        predictions.forEach(function (p) {
+          const item = document.createElement('div');
+          item.className = 'stem-autocomplete-item';
+
+          const badgeClass = p.matchType === 'prefix' ? 'ac-badge-prefix'
+            : p.matchType === 'synonym' ? 'ac-badge-synonym'
+              : 'ac-badge-contains';
+          const badgeLabel = p.matchType === 'synonym' ? 'alias' : p.matchType;
+
+          const displayWord = (p.display || p.word).toUpperCase();
+          const snippet = p.definition.length > 80
+            ? p.definition.substring(0, 80) + '...'
+            : p.definition;
+
+          item.innerHTML = `
+            <div class="ac-word">${displayWord}
+              <span class="ac-match-badge ${badgeClass}">${badgeLabel}</span>
+            </div>
+            <div class="ac-snippet">${snippet}</div>
+          `;
+
+          item.addEventListener('click', function () {
+            input.value = p.word;
+            dropdown.style.display = 'none';
+            document.getElementById('dict-search-btn').click();
+          });
+
+          dropdown.appendChild(item);
+        });
+      }
+
+      input.addEventListener('input', function (e) {
+        clearTimeout(debounceTimer);
+        const query = e.target.value.trim();
+        if (query.length < 2) {
+          dropdown.style.display = 'none';
+          return;
+        }
+        debounceTimer = setTimeout(function () {
+          const preds = STEMDictionary.predictWords(query, 7);
+          renderPredictions(preds);
+        }, 120);
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+          dropdown.style.display = 'none';
+        }
+      });
+
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') dropdown.style.display = 'none';
+      });
+    });
+  </script>
 </body>
 
 </html>
