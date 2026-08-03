@@ -1,0 +1,200 @@
+{
+  "strong": {
+    "Screenshot 2026-07-11 142817.png": {
+      "matched_to": "dict_abdomen_abdominal_cavity.png",
+      "diff": 18
+    },
+    "Screenshot 2026-07-11 142955.png": {
+      "matched_to": "dict_absorption_spectrum.png",
+      "diff": 26
+    },
+    "Screenshot 2026-08-02 151824.png": {
+      "matched_to": "dict_gravitation.png",
+      "diff": 28
+    },
+    "Screenshot 2026-08-02 152646.png": {
+      "matched_to": "dict_corm_bulbo_tuber_bulbotuber.png",
+      "diff": 28
+    }
+  },
+  "medium": {
+    "Screenshot 2026-07-11 142738.png": {
+      "matched_to": "dict_r_e_l_a_t_i_v_e_d_i_s_p_e_r_s_i_o_n.png",
+      "diff": 42
+    },
+    "Screenshot 2026-07-11 143027.png": {
+      "matched_to": "dict_access_point_base_station.png",
+      "diff": 34
+    },
+    "Screenshot 2026-07-11 143102.png": {
+      "matched_to": "dict_acephalous.png",
+      "diff": 36
+    },
+    "Screenshot 2026-07-11 143216.png": {
+      "matched_to": "dict_actinodromous_venation.png",
+      "diff": 35
+    },
+    "Screenshot 2026-07-11 143245.png": {
+      "matched_to": "dict_activated_complex.png",
+      "diff": 43
+    },
+    "Screenshot 2026-07-11 143320.png": {
+      "matched_to": "dict_adaxial.png",
+      "diff": 35
+    },
+    "Screenshot 2026-07-11 144018.png": {
+      "matched_to": "dict_annular_eclipse.png",
+      "diff": 33
+    }
+  },
+  "unmatched": {
+    "Screenshot 2026-07-11 142642.png": {
+      "matched_to": "dict_codec.png",
+      "diff": 56
+    },
+    "Screenshot 2026-07-11 142719.png": {
+      "matched_to": "dict_centipede.png",
+      "diff": 62
+    },
+    "Screenshot 2026-07-11 142800.png": {
+      "matched_to": "dict_brachiocephalic_artery.png",
+      "diff": 65
+    },
+    "Screenshot 2026-07-11 142837.png": {
+      "matched_to": "dict_frequency_polygon.png",
+      "diff": 71
+    },
+    "Screenshot 2026-07-11 142901.png": {
+      "matched_to": "dict_beckmann_rearrangement.png",
+      "diff": 83
+    },
+    "Screenshot 2026-07-11 142916.png": {
+      "matched_to": "test_page75_diag2.png",
+      "diff": 74
+    },
+    "Screenshot 2026-07-11 142931.png": {
+      "matched_to": "dict_ammonium_chloride.png",
+      "diff": 54
+    },
+    "Screenshot 2026-07-11 143047.png": {
+      "matched_to": "dict_naphthyleneethylene.png",
+      "diff": 56
+    },
+    "Screenshot 2026-07-11 143119.png": {
+      "matched_to": "dict_phloroglucinol.png",
+      "diff": 77
+    },
+    "Screenshot 2026-07-11 143135.png": {
+      "matched_to": "dict_spatulate_spathulate.png",
+      "diff": 62
+    },
+    "Screenshot 2026-07-11 143414.png": {
+      "matched_to": "dict_beta_blocker_beta_adrenoceptor_antagonist.png",
+      "diff": 75
+    },
+    "Screenshot 2026-07-11 143437.png": {
+      "matched_to": "dict_density.png",
+      "diff": 65
+    },
+    "Screenshot 2026-07-11 143456.png": {
+      "matched_to": "dict_eye.png",
+      "diff": 94
+    },
+    "Screenshot 2026-07-11 143508.png": {
+      "matched_to": "dict_carbon_dioxide_co.png",
+      "diff": 65
+    },
+    "Screenshot 2026-07-11 143548.png": {
+      "matched_to": "dict_poricidal.png",
+      "diff": 65
+    },
+    "Screenshot 2026-07-11 143603.png": {
+      "matched_to": "dict_istogram.png",
+      "diff": 63
+    },
+    "Screenshot 2026-07-11 143702.png": {
+      "matched_to": "dict_acephalous.png",
+      "diff": 58
+    },
+    "Screenshot 2026-07-11 143754.png": {
+      "matched_to": "dict_air_layering_marcotting.png",
+      "diff": 61
+    },
+    "Screenshot 2026-07-11 143811.png": {
+      "matched_to": "test_page75_diag1.png",
+      "diff": 63
+    },
+    "Screenshot 2026-07-11 143825.png": {
+      "matched_to": "dict_leclanch_cell.png",
+      "diff": 68
+    },
+    "Screenshot 2026-07-11 143848.png": {
+      "matched_to": "dict_cosine.png",
+      "diff": 64
+    },
+    "Screenshot 2026-07-11 143908.png": {
+      "matched_to": "dict_dodecahedro.png",
+      "diff": 67
+    },
+    "Screenshot 2026-07-11 143958.png": {
+      "matched_to": "dict_bijection_one_one_bijection.png",
+      "diff": 71
+    },
+    "Screenshot 2026-07-11 144050.png": {
+      "matched_to": "dict_papilionaceous.png",
+      "diff": 77
+    },
+    "Screenshot 2026-07-11 144113.png": {
+      "matched_to": "dict_amoeba.png",
+      "diff": 68
+    },
+    "Screenshot 2026-07-11 144138.png": {
+      "matched_to": "dict_nucellus.png",
+      "diff": 61
+    },
+    "Screenshot 2026-08-02 151931.png": {
+      "matched_to": "dict_obelliptic_obelliptical.png",
+      "diff": 63
+    },
+    "Screenshot 2026-08-02 152414.png": {
+      "matched_to": "dict_carbon_dioxide_co.png",
+      "diff": 67
+    },
+    "Screenshot 2026-08-02 152452.png": {
+      "matched_to": "dict_permanent_magnet_moving_coil_instrument.png",
+      "diff": 75
+    },
+    "Screenshot 2026-08-02 152505.png": {
+      "matched_to": "dict_centipede.png",
+      "diff": 59
+    },
+    "Screenshot 2026-08-02 152608.png": {
+      "matched_to": "dict_ligulate.png",
+      "diff": 66
+    },
+    "Screenshot 2026-08-02 152713.png": {
+      "matched_to": "dict_emarginate.png",
+      "diff": 67
+    },
+    "Screenshot 2026-08-02 152733.png": {
+      "matched_to": "dict_paraldehyde.png",
+      "diff": 57
+    },
+    "Screenshot 2026-08-02 152807.png": {
+      "matched_to": "test_page75_diag2.png",
+      "diff": 60
+    },
+    "Screenshot 2026-08-02 152830.png": {
+      "matched_to": "dict_coordinate_system.png",
+      "diff": 51
+    },
+    "Screenshot 2026-08-02 153709.png": {
+      "matched_to": "dict_amphetamine.png",
+      "diff": 70
+    },
+    "Screenshot 2026-08-02 153751.png": {
+      "matched_to": "dict_amoeba.png",
+      "diff": 66
+    }
+  }
+}

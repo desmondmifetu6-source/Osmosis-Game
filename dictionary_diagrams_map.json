@@ -934,5 +934,18 @@
     "prism": "diagrams/dict_prism.png",
     "volcano": "diagrams/dict_volcano.png",
     "solar system": "diagrams/dict_solar_system.png",
-    "ecosystem": "diagrams/dict_ecosystem.png"
+    "ecosystem": "diagrams/dict_ecosystem.png",
+    "corm (bulbo tuber, bulbotuber)": "diagrams/dict_corm_bulbo_tuber_bulbotuber.png",
+    "abaxial": "diagrams/dict_abaxial.png",
+    "astigmatism": "diagrams/dict_astigmatism.png",
+    "abo blood group": "diagrams/dict_abo_blood_group.png",
+    "acenaphthene": "diagrams/dict_acenaphthene.png",
+    "alimentary canal": "diagrams/dict_alimentary_canal.png",
+    "ammonia": "diagrams/dict_ammonia.png",
+    "animal husbandry": "diagrams/dict_animal_husbandry.png",
+    "anthocarp": "diagrams/dict_anthocarp.png",
+    "concave polygon": "diagrams/dict_concave_polygon.png",
+    "convex": "diagrams/dict_convex.png",
+    "grasshopper": "diagrams/dict_grasshopper.png",
+    "digestive system": "diagrams/dict_digestive_system.png"
 }
