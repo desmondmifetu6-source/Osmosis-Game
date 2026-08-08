@@ -9,3 +9,8 @@ yarn-error.log*
 android/
 dist/
 www/
+
+# Raw PDFs and backup files
+*.pdf
+*.bak.json
+
