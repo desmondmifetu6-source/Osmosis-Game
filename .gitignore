@@ -12,5 +12,5 @@ www/
 
 # Raw PDFs and backup files
 *.pdf
-*.bak.json
-
+*.bak*.json
+__pycache__/

@@ -1,0 +1,737 @@
+{
+  "total_words": 27697,
+  "truncated_endings_count": 0,
+  "ends_without_punctuation_count": 0,
+  "contains_diagram_ocr_garbage_count": 0,
+  "very_short_count": 0,
+  "suspicious_headword_count": 120,
+  "issues": {
+    "truncated_endings": [],
+    "ends_without_punctuation": [],
+    "contains_diagram_ocr_garbage": [],
+    "very_short": [],
+    "cross_ref_only": [],
+    "suspicious_headword": [
+      {
+        "letter": "A",
+        "word": "a",
+        "raw": "a",
+        "def": "A list of user permissions for a file, folder or other object. It defines what u"
+      },
+      {
+        "letter": "A",
+        "word": "a",
+        "raw": "A",
+        "def": "A list of user permissions for a file, folder or other object. It defines what u"
+      },
+      {
+        "letter": "A",
+        "word": "a-",
+        "raw": "a-",
+        "def": "1. In mathematics, it is a prefix used to denote \"not\", for example, an asymmetr"
+      },
+      {
+        "letter": "A",
+        "word": "abeo-",
+        "raw": "ABEO-",
+        "def": "The italic prefix of the form x (y → z ) -abeo-. It is used to denote bond migra"
+      },
+      {
+        "letter": "A",
+        "word": "ambo-",
+        "raw": "AMBO-",
+        "def": "A prefix used to denote that a substance is present as a mixture of racemic dias"
+      },
+      {
+        "letter": "A",
+        "word": "anthro-",
+        "raw": "ANTHRO- (ANTHROPO-)",
+        "def": "A prefix meaning human or human-like. An example is anthropology."
+      },
+      {
+        "letter": "A",
+        "word": "anti-",
+        "raw": "ANTI-",
+        "def": "1. A prefix for the inverse of a function. For example, antitrigonometric is the"
+      },
+      {
+        "letter": "A",
+        "word": "arc-",
+        "raw": "ARC-",
+        "def": "A prefix for the inverse function of a given trigonometric or hyperbolic functio"
+      },
+      {
+        "letter": "A",
+        "word": "atro-",
+        "raw": "ATRO-",
+        "def": "A prefix meaning dark or blackish."
+      },
+      {
+        "letter": "A",
+        "word": "atto-",
+        "raw": "ATTO-",
+        "def": "A prefix used in the metric system to denote 10 -18 . Its symbol is a ."
+      },
+      {
+        "letter": "A",
+        "word": "-fold",
+        "raw": "-FOLD",
+        "def": "A suffix that indicates the number of members used in some repetitive process, f"
+      },
+      {
+        "letter": "A",
+        "word": "-gon",
+        "raw": "-GON",
+        "def": "A suffix that denotes a polygon, for example, a 6-gon is a polygon with six side"
+      },
+      {
+        "letter": "A",
+        "word": "-type conductivity",
+        "raw": "-type conductivity",
+        "def": "Electrical conductivity caused by the flow of electrons in semiconductors. n."
+      },
+      {
+        "letter": "A",
+        "word": "-type semiconductors",
+        "raw": "-type semiconductors",
+        "def": "Semiconductors that contain donor impurities. They are formed when a pure (intri"
+      },
+      {
+        "letter": "A",
+        "word": "-stat",
+        "raw": "-STAT",
+        "def": "A suffix used to denote instruments such as thermostats or substances that maint"
+      },
+      {
+        "letter": "B",
+        "word": "b",
+        "raw": "B",
+        "def": "A graphical display of categorical data using rectangular bars with heights or l"
+      },
+      {
+        "letter": "B",
+        "word": "bi-",
+        "raw": "Bi- (Bis)",
+        "def": "A prefix denoting two or twice."
+      },
+      {
+        "letter": "C",
+        "word": "c",
+        "raw": "c",
+        "def": "A stem-like structure found in certain algae and bryophytes that resembles the t"
+      },
+      {
+        "letter": "C",
+        "word": "c",
+        "raw": "C",
+        "def": "A stem-like structure found in certain algae and bryophytes that resembles the t"
+      },
+      {
+        "letter": "C",
+        "word": "catena-",
+        "raw": "CATENA-",
+        "def": "An affix used in inorganic nomenclature to denote a chain structure. It is often"
+      },
+      {
+        "letter": "C",
+        "word": "cis-",
+        "raw": "CIS-",
+        "def": "A prefix used to indicate a type of isomerism that atoms or groups are located o"
+      },
+      {
+        "letter": "C",
+        "word": "closo-",
+        "raw": "CLOSO-",
+        "def": "An affix used in names to denote a cage or closed structure, especially a boron "
+      },
+      {
+        "letter": "C",
+        "word": "cyclo-",
+        "raw": "CYCLO-",
+        "def": "A prefix designating a cyclic compound, for example, a cycloalkane or a cyclosil"
+      },
+      {
+        "letter": "D",
+        "word": "d",
+        "raw": "d",
+        "def": "In physics and wave mechanics, an equation relating the frequency or energy of a"
+      },
+      {
+        "letter": "D",
+        "word": "d",
+        "raw": "D",
+        "def": "In physics and wave mechanics, an equation relating the frequency or energy of a"
+      },
+      {
+        "letter": "D",
+        "word": "d-",
+        "raw": "d-",
+        "def": "Symbol of dextrorotatory."
+      },
+      {
+        "letter": "D",
+        "word": "deca-",
+        "raw": "DECA- (DEKA-)",
+        "def": "A prefix used in the metric system to denote a factor of ten. Its symbol is Da. "
+      },
+      {
+        "letter": "D",
+        "word": "deci-",
+        "raw": "DECI-",
+        "def": "A prefix used in the metric system to denote one tenth. It is denoted by d."
+      },
+      {
+        "letter": "D",
+        "word": "dodecahedro-",
+        "raw": "DODECAHEDRO-",
+        "def": "An affix used in names to denote eight atoms bound into a dodecahedron with tria"
+      },
+      {
+        "letter": "E",
+        "word": "e",
+        "raw": "e",
+        "def": "A branching diagram or tree showing the evolutionary relationships and common an"
+      },
+      {
+        "letter": "E",
+        "word": "e",
+        "raw": "E",
+        "def": "A branching diagram or tree showing the evolutionary relationships and common an"
+      },
+      {
+        "letter": "E",
+        "word": "ennea-",
+        "raw": "ENNEA- (NONA-)",
+        "def": "A prefix denoting nine. For example, an ennead is a sequence of nine elements; a"
+      },
+      {
+        "letter": "E",
+        "word": "entero-",
+        "raw": "ENTERO-",
+        "def": "Referring to the intestine. For example, enterovirus is a group of RNA viruses w"
+      },
+      {
+        "letter": "E",
+        "word": "exa-",
+        "raw": "EXA-",
+        "def": "A prefix used in the metric system to denote 10 18 , with symbol E. Exabyte is a"
+      },
+      {
+        "letter": "F",
+        "word": "f",
+        "raw": "f",
+        "def": "Having a curved or sickle-like shape, such as the falciform ligament of the live"
+      },
+      {
+        "letter": "F",
+        "word": "f",
+        "raw": "F",
+        "def": "Having a curved or sickle-like shape, such as the falciform ligament of the live"
+      },
+      {
+        "letter": "F",
+        "word": "fuc-",
+        "raw": "FUC- (FUCO-)",
+        "def": "Prefixes used to denote seaweeds. For example, fucin and fucoidin are colloids f"
+      },
+      {
+        "letter": "G",
+        "word": "g",
+        "raw": "g",
+        "def": "A graphical plot representing the variation in Gibbs free energy of a thermodyna"
+      },
+      {
+        "letter": "G",
+        "word": "g",
+        "raw": "G",
+        "def": "A graphical plot representing the variation in Gibbs free energy of a thermodyna"
+      },
+      {
+        "letter": "G",
+        "word": "glyphosate n-",
+        "raw": "GLYPHOSATE N- (PHOSPHONOMETHYL) GLYCINE",
+        "def": "A herbicide that kills a wide range of weeds, especially perennials but shows li"
+      },
+      {
+        "letter": "H",
+        "word": "h",
+        "raw": "H",
+        "def": "A fundamental principle in quantum mechanics stating that the position and momen"
+      },
+      {
+        "letter": "H",
+        "word": "hect-",
+        "raw": "HECT-",
+        "def": "A prefix used to denote six. For example, a hectad is a set of six elements and "
+      },
+      {
+        "letter": "H",
+        "word": "hendeca-",
+        "raw": "HENDECA-",
+        "def": "A prefix denoting eleven, for example, hendecagon is a polygon having 11 angles "
+      },
+      {
+        "letter": "H",
+        "word": "hepta-",
+        "raw": "HEPTA-",
+        "def": "A prefix that denotes seven. For example, a heptagon is a seven-sided plane figu"
+      },
+      {
+        "letter": "H",
+        "word": "hexa-",
+        "raw": "HEXA-",
+        "def": "A prefix denoting six. For example, a hexagon has six sides."
+      },
+      {
+        "letter": "H",
+        "word": "hexahedro-",
+        "raw": "HEXAHEDRO-",
+        "def": "An affix used in names to denote eight atoms bound into a hexahedron such as a c"
+      },
+      {
+        "letter": "H",
+        "word": "hexaprismo-",
+        "raw": "HEXAPRISMO-",
+        "def": "An affix used in names to denote twelve atoms bound into a hexagonal prism."
+      },
+      {
+        "letter": "H",
+        "word": "hyper-",
+        "raw": "HYPER-",
+        "def": "A prefix, denoting over, above, high, etc. An example is hypersonic. In mathemat"
+      },
+      {
+        "letter": "H",
+        "word": "hypho-",
+        "raw": "HYPHO-",
+        "def": "An affix used in names to designate an open structure, especially a boron skelet"
+      },
+      {
+        "letter": "H",
+        "word": "hypo-",
+        "raw": "HYPO-",
+        "def": "A prefix denoting under, low, below, for example, hypoglycaemia or low blood glu"
+      },
+      {
+        "letter": "I",
+        "word": "i",
+        "raw": "i",
+        "def": "A colourless volatile liquid hydrocarbon with the formula CH2=C(CH3)-CH=CH2 (2-m"
+      },
+      {
+        "letter": "I",
+        "word": "i",
+        "raw": "i",
+        "def": "A colourless volatile liquid hydrocarbon with the formula CH2=C(CH3)-CH=CH2 (2-m"
+      },
+      {
+        "letter": "I",
+        "word": "i",
+        "raw": "I",
+        "def": "A colourless volatile liquid hydrocarbon with the formula CH2=C(CH3)-CH=CH2 (2-m"
+      },
+      {
+        "letter": "I",
+        "word": "icosa-",
+        "raw": "ICOSA-",
+        "def": "A prefix denoting the number twenty. An example is icosahedron , a regular polyh"
+      },
+      {
+        "letter": "I",
+        "word": "icosahedro-",
+        "raw": "ICOSAHEDRO-",
+        "def": "An affix used in names to denote twelve atoms bound into a triangular icosahedro"
+      },
+      {
+        "letter": "I",
+        "word": "infra-",
+        "raw": "INFRA-",
+        "def": "A prefix meaning below or beneath."
+      },
+      {
+        "letter": "I",
+        "word": "iso-",
+        "raw": "ISO-",
+        "def": "A prefix denoting that a compound is an isomer, for example, isopentane."
+      },
+      {
+        "letter": "J",
+        "word": "j",
+        "raw": "j",
+        "def": "1. A unit vector, usually one in the direction of the y -axis. It is conventiona"
+      },
+      {
+        "letter": "J",
+        "word": "j",
+        "raw": "j",
+        "def": "In physics, it is the symbol used for the imaginary number, √-1."
+      },
+      {
+        "letter": "J",
+        "word": "j",
+        "raw": "J",
+        "def": "The notation or symbol for joule, the derived unit of energy, work or amount of "
+      },
+      {
+        "letter": "K",
+        "word": "k",
+        "raw": "k",
+        "def": "1. The symbol for the metric prefix, kilo- with the value 1000 (10 3 ). For exam"
+      },
+      {
+        "letter": "K",
+        "word": "k",
+        "raw": "K",
+        "def": "1. The symbol for the kelvin, the SI base unit of absolute or thermodynamic temp"
+      },
+      {
+        "letter": "K",
+        "word": "kilo-",
+        "raw": "KILO-",
+        "def": "A prefix used in the metric system to denote 1000 times (10 3 ), with the symbol"
+      },
+      {
+        "letter": "L",
+        "word": "lacto-",
+        "raw": "LACTO-",
+        "def": "A prefix that denotes a relationship to milk, for example, lactoabumin."
+      },
+      {
+        "letter": "M",
+        "word": "m",
+        "raw": "m",
+        "def": "A specialized form of cell division in sexually reproducing organisms that reduc"
+      },
+      {
+        "letter": "M",
+        "word": "m",
+        "raw": "M",
+        "def": "A specialized form of cell division in sexually reproducing organisms that reduc"
+      },
+      {
+        "letter": "M",
+        "word": "micro-",
+        "raw": "MICRO-",
+        "def": "A prefix used in the metric system to denote one millionth (10 -6 ), symbol µ . "
+      },
+      {
+        "letter": "M",
+        "word": "milli-",
+        "raw": "MILLI-",
+        "def": "A prefix used in the metric system to denote one thousandth (10 -3 ). Its symbol"
+      },
+      {
+        "letter": "N",
+        "word": "n-",
+        "raw": "N-(4-HYDROXYPHENYL) ACETAMIDE [ACETAMINOPHEN; 4-ACETAMIDOPHENOL; N-(4-HYDROXYPHENYL)ETHANAMIDE; PARACETAMOL]",
+        "def": "A synthetic analgesic drug similar to aspirin having the chemical formula C8 H9 "
+      },
+      {
+        "letter": "N",
+        "word": "n",
+        "raw": "N",
+        "def": "Symbol for newton, the Systeme International (S.I.) unit of force, named after S"
+      },
+      {
+        "letter": "N",
+        "word": "nido-",
+        "raw": "NIDO-",
+        "def": "An affix used in names to denote a nest-like structure, especially a boron skele"
+      },
+      {
+        "letter": "N",
+        "word": "non-",
+        "raw": "NON-",
+        "def": "A prefix used for \"not' or the negation of some property; for example, non-biode"
+      },
+      {
+        "letter": "N",
+        "word": "nona-",
+        "raw": "NONA- (ENNEA-)",
+        "def": "A prefix that denotes nine. For example, a nonagon or enneagon is a two-dimensio"
+      },
+      {
+        "letter": "N",
+        "word": "nor-",
+        "raw": "NOR-",
+        "def": "Affix used to denote the elimination of one methylene group from a side chain of"
+      },
+      {
+        "letter": "O",
+        "word": "o- ethy ls -",
+        "raw": "O- ETHY LS - [ 2 - ( DIIS OPRO PYLA MINO ) ETHY L ] METHYLPHOSPHONOTHIOATE (VX)",
+        "def": "A highly toxic colourless oily liquid with the chemical formula C11 H26 NO2 PS, "
+      },
+      {
+        "letter": "O",
+        "word": "ob-",
+        "raw": "OB-",
+        "def": "A prefix meaning inverted, for example, obcordate describes a leaf shaped like a"
+      },
+      {
+        "letter": "O",
+        "word": "octahedro-",
+        "raw": "OCTAHEDRO-",
+        "def": "An affix used in names to denote six atoms bound into an octahedron."
+      },
+      {
+        "letter": "O",
+        "word": "octa-",
+        "raw": "OCTA-",
+        "def": "A prefix denoting the number eight. For example, an octagon is a two-dimensional"
+      },
+      {
+        "letter": "O",
+        "word": "oxo-",
+        "raw": "OXO-",
+        "def": "Prefix indicating the presence of oxygen in a chemical compound."
+      },
+      {
+        "letter": "P",
+        "word": "p",
+        "raw": "p",
+        "def": "Having a pea-green colour or resembling peas in appearance."
+      },
+      {
+        "letter": "P",
+        "word": "p",
+        "raw": "P",
+        "def": "Having a pea-green colour or resembling peas in appearance."
+      },
+      {
+        "letter": "P",
+        "word": "penta-",
+        "raw": "PENTA-",
+        "def": "A prefix denoting five. For example, a pentagon is five sided polygon."
+      },
+      {
+        "letter": "P",
+        "word": "pentaprismo-",
+        "raw": "PENTAPRISMO-",
+        "def": "An affix used in names to denote ten atoms bound into a pentagonal prism."
+      },
+      {
+        "letter": "P",
+        "word": "per-",
+        "raw": "PER-",
+        "def": "Prefix indicating that a chemical compound contains an excess of an element, for"
+      },
+      {
+        "letter": "P",
+        "word": "peta-",
+        "raw": "PETA-",
+        "def": "A prefix used to denote a multiple of 10 15 in the SI system. Its symbol is P ."
+      },
+      {
+        "letter": "P",
+        "word": "pico-",
+        "raw": "PICO-",
+        "def": "A prefix, with the symbol p used in the metric system to denote 10 -12 . For exa"
+      },
+      {
+        "letter": "P",
+        "word": "pluri-",
+        "raw": "PLURI-",
+        "def": "A prefix meaning many or several."
+      },
+      {
+        "letter": "P",
+        "word": "poly-",
+        "raw": "POLY-",
+        "def": "1. A prefix meaning more than one, for example, polyatomic. 2. Any of a series o"
+      },
+      {
+        "letter": "P",
+        "word": "pyro-",
+        "raw": "PYRO-",
+        "def": "1. A prefix used to designate fire, heat or high temperature, in the formation o"
+      },
+      {
+        "letter": "Q",
+        "word": "q",
+        "raw": "Q",
+        "def": "Symbol for the set of rational numbers."
+      },
+      {
+        "letter": "Q",
+        "word": "quad-",
+        "raw": "QUAD-",
+        "def": "1. A prefix denoting the numeral four. For example, a quadrangle is two-dimensio"
+      },
+      {
+        "letter": "Q",
+        "word": "quadri-",
+        "raw": "QUADRI-",
+        "def": "A prefix used to denote four."
+      },
+      {
+        "letter": "Q",
+        "word": "quadro-",
+        "raw": "QUADRO-",
+        "def": "An affix used in names to denote four atoms bound into a quadrangle, for example"
+      },
+      {
+        "letter": "Q",
+        "word": "quasi-",
+        "raw": "QUASI-",
+        "def": "Sharing some important property with a given class of objects, such as quasi-ana"
+      },
+      {
+        "letter": "R",
+        "word": "r",
+        "raw": "R",
+        "def": "Having a reddish-brown or rust-like colour, frequently used in biological descri"
+      },
+      {
+        "letter": "R",
+        "word": "r",
+        "raw": "R",
+        "def": "Having a reddish-brown or rust-like colour, frequently used in biological descri"
+      },
+      {
+        "letter": "R",
+        "word": "retro-",
+        "raw": "RETRO-",
+        "def": "1. A prefix which indicates a shift by one position of all single and double bon"
+      },
+      {
+        "letter": "S",
+        "word": "sapro-",
+        "raw": "SAPRO-",
+        "def": "Prefix meaning decaying or decomposition, for example, saprogenic or saprophyte."
+      },
+      {
+        "letter": "S",
+        "word": "seco-",
+        "raw": "SECO-",
+        "def": "Cleavage of a ring with addition of one or more hydrogen atoms at each terminal "
+      },
+      {
+        "letter": "S",
+        "word": "semi-",
+        "raw": "SEMI-",
+        "def": "A prefix that denotes half (1/2) of something, for example, semicircle means hal"
+      },
+      {
+        "letter": "S",
+        "word": "sept-",
+        "raw": "SEPT-",
+        "def": "Prefix for seven; for example, a septangle is a geometric figure that has seven "
+      },
+      {
+        "letter": "S",
+        "word": "sesqui-",
+        "raw": "SESQUI-",
+        "def": "A prefix denoting a ratio of 2:3 in a chemical compound. For example, a sesquiox"
+      },
+      {
+        "letter": "S",
+        "word": "sex-",
+        "raw": "SEX- (SEXI-; SEXTI-)",
+        "def": "A prefix that denotes six; for example, a sexivalent is an element having a vale"
+      },
+      {
+        "letter": "S",
+        "word": "stat-",
+        "raw": "STAT-",
+        "def": "A prefix attached to the name of an electrical unit to obtain a name for a unit "
+      },
+      {
+        "letter": "S",
+        "word": "sub-",
+        "raw": "SUB-",
+        "def": "1. A prefix denoting an element that is contained within a given structure a rel"
+      },
+      {
+        "letter": "S",
+        "word": "super-",
+        "raw": "SUPER-",
+        "def": "Prefix meaning above, over or superimpose; an example is superscript or superflu"
+      },
+      {
+        "letter": "S",
+        "word": "sym-",
+        "raw": "SYM-",
+        "def": "An affix used in names to denote symmetrical."
+      },
+      {
+        "letter": "T",
+        "word": "t",
+        "raw": "t",
+        "def": "The branch of physics and physical chemistry that deals with the relations betwe"
+      },
+      {
+        "letter": "T",
+        "word": "t",
+        "raw": "T",
+        "def": "The branch of physics and physical chemistry that deals with the relations betwe"
+      },
+      {
+        "letter": "T",
+        "word": "tera-",
+        "raw": "TERA-",
+        "def": "A prefix used in the metric system to denote one trillion times. For example, 10"
+      },
+      {
+        "letter": "T",
+        "word": "tetrahedro-",
+        "raw": "TETRAHEDRO-",
+        "def": "An affix used in names to denote four atoms bound into a tetrahedron. Tetrahedro"
+      },
+      {
+        "letter": "T",
+        "word": "tri-",
+        "raw": "TRI-",
+        "def": "A prefix used to denote three. For example, triangulate or trigonous is three-an"
+      },
+      {
+        "letter": "T",
+        "word": "triangulo-",
+        "raw": "TRIANGULO-",
+        "def": "An affix used in names to denote three atoms bound into a triangle."
+      },
+      {
+        "letter": "T",
+        "word": "triprismo-",
+        "raw": "TRIPRISMO-",
+        "def": "An affix used in names to denote six atoms bound into a triangular prism."
+      },
+      {
+        "letter": "U",
+        "word": "uns-",
+        "raw": "UNS- (UNSYM-)",
+        "def": "A chemical prefix denoting that the substituents of an organic compound are stru"
+      },
+      {
+        "letter": "V",
+        "word": "v",
+        "raw": "V",
+        "def": "In physics, it is the symbol for volt, the SI unit of electromotive force (emf) "
+      },
+      {
+        "letter": "X",
+        "word": "xero-",
+        "raw": "XERO-",
+        "def": "A prefix meaning dry."
+      },
+      {
+        "letter": "Y",
+        "word": "yocto-",
+        "raw": "YOCTO-",
+        "def": "Prefix used in the metric system to denote 10 -24 . Yocto is the smallest confir"
+      },
+      {
+        "letter": "Z",
+        "word": "zepto-",
+        "raw": "ZEPTO-",
+        "def": "A prefix with the symbol z used in the metric system to indicate 10 -21 . For ex"
+      },
+      {
+        "letter": "Z",
+        "word": "zetta-",
+        "raw": "ZETTA-",
+        "def": "A prefix with the symbol Z , used in the metric system to indicate 10 21 . For i"
+      }
+    ]
+  }
+}
