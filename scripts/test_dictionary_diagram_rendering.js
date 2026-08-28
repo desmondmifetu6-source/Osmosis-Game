@@ -58,7 +58,22 @@ const testWordsWithVerifiedDiagrams = [
   "heart",
   "neuron",
   "osmosis",
-  "photosynthesis"
+  "photosynthesis",
+  "atom",
+  "mitochondrion",
+  "electric circuit",
+  "cell membrane",
+  "solar eclipse",
+  "lunar eclipse",
+  "covalent bond",
+  "ionic bond",
+  "meiosis",
+  "synapse",
+  "magnetic field",
+  "respiratory system",
+  "skeletal system",
+  "rock cycle",
+  "plate tectonics"
 ];
 
 let failed = 0;
