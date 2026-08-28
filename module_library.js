@@ -167,7 +167,7 @@ function performSearch() {
   resPhonetic.textContent = 'Osmosis STEM Dictionary';
   resMeaning.textContent = entry.definition;
 
-  // Check for Diagram
+  // Check for Diagram (Strict exact/canonical match only — no loose substring fallbacks)
   const diagramBox = document.getElementById('res-diagram-box');
   const diagramContent = document.getElementById('res-diagram-content');
   const diagramImg = document.getElementById('res-diagram-img');
@@ -176,15 +176,14 @@ function performSearch() {
   if (typeof window.DictionaryDiagrams !== 'undefined') {
     const wordKey = entry.word.toLowerCase().trim();
     const queryKey = query.toLowerCase().trim();
-    diagramSrc = window.DictionaryDiagrams[wordKey] || window.DictionaryDiagrams[queryKey];
-    
-    if (!diagramSrc) {
-      const diagKeys = Object.keys(window.DictionaryDiagrams);
-      const matchedKey = diagKeys.find(k => k.includes(wordKey) || wordKey.includes(k) || k.includes(queryKey));
-      if (matchedKey) {
-        diagramSrc = window.DictionaryDiagrams[matchedKey];
-      }
-    }
+    const baseWordKey = wordKey.replace(/\(.*?\)/g, '').trim();
+    const rawKey = (entry.raw || '').toLowerCase().trim();
+
+    diagramSrc = window.DictionaryDiagrams[wordKey] ||
+                 window.DictionaryDiagrams[rawKey] ||
+                 window.DictionaryDiagrams[baseWordKey] ||
+                 window.DictionaryDiagrams[queryKey] ||
+                 null;
   }
 
   if (diagramBox) {
@@ -196,7 +195,10 @@ function performSearch() {
     } else {
       diagramBox.style.display = 'none';
       if (diagramContent) diagramContent.style.display = 'none';
-      if (diagramImg) diagramImg.src = '';
+      if (diagramImg) {
+        diagramImg.removeAttribute('src');
+        diagramImg.alt = '';
+      }
     }
   }
 
