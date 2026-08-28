@@ -27800,12 +27800,14 @@ const wordBank = {
         return definitionMap.get(normalized);
       }
       
-      // 2. Fallback prefix/substring search
-      for (let i = 0; i < allWordsArray.length; i++) {
-        const item = allWordsArray[i];
-        if (item.word.startsWith(normalized) || normalized.startsWith(item.word)) {
-          return item;
-        }
+      // 2. Punctuation & spacing variants (e.g. "x-ray" vs "x ray")
+      const spaceVariant = normalized.replace(/-/g, ' ');
+      if (definitionMap.has(spaceVariant)) {
+        return definitionMap.get(spaceVariant);
+      }
+      const hyphenVariant = normalized.replace(/\s+/g, '-');
+      if (definitionMap.has(hyphenVariant)) {
+        return definitionMap.get(hyphenVariant);
       }
       
       return null;

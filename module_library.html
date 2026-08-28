@@ -167,10 +167,86 @@
     }
 
     .dict-error {
-      font-style: italic;
-      text-align: center;
-      margin: 2rem 0;
       display: none;
+    }
+
+    /* Minimalist Sketch Empty State */
+    .dict-empty-sketch {
+      display: none;
+      margin: 1.5rem 0;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px dashed rgba(100, 116, 139, 0.35);
+      border-radius: 20px;
+      animation: sketchFadeIn 0.3s ease both;
+    }
+
+    @keyframes sketchFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sketch-icon-wrap {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 1rem auto;
+    }
+
+    .sketch-svg {
+      width: 100%;
+      height: 100%;
+      animation: sketchFloat 3.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes sketchFloat {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-5px) rotate(1.5deg); }
+    }
+
+    .sketch-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 0.35rem;
+    }
+
+    .sketch-desc {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .sketch-query {
+      color: #4f46e5;
+      font-weight: 600;
+    }
+
+    /* "Showing X instead of Y" Banner */
+    .dict-instead-of {
+      display: none;
+      background: rgba(79, 70, 229, 0.08);
+      border: 1px solid rgba(79, 70, 229, 0.22);
+      color: #3730a3;
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .dict-instead-of strong {
+      color: #4338ca;
+      font-weight: 700;
+    }
+
+    .dict-instead-of em {
+      color: #6b7280;
+      font-style: italic;
     }
 
     @media (max-width: 480px) {
@@ -211,11 +287,36 @@
         <button id="dict-search-btn" class="classic-btn">Search</button>
       </div>
 
-      <div id="dict-error" class="dict-error">
-        Word not found in the STEM Dictionary. Try another spelling or term.
+      <!-- Clean Minimal Sketch Empty State -->
+      <div id="dict-empty-state" class="dict-empty-sketch" role="status" aria-live="polite">
+        <div class="sketch-icon-wrap">
+          <svg class="sketch-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Notebook Page Sketch Outline -->
+            <rect x="20" y="15" width="60" height="70" rx="6" stroke="#64748b" stroke-width="2.5" stroke-dasharray="1 0" fill="#ffffff" />
+            <!-- Page corner fold -->
+            <path d="M66 15 L80 29 L66 29 Z" fill="#e2e8f0" stroke="#64748b" stroke-width="2" stroke-linejoin="round" />
+            <!-- Dictionary Header Line -->
+            <line x1="28" y1="28" x2="56" y2="28" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round" />
+            <!-- Missing Word Entry (Dashed Box) -->
+            <rect x="28" y="38" width="44" height="14" rx="4" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="3 3" fill="#f8fafc" />
+            <!-- Question mark inside missing entry -->
+            <path d="M48 42 C48 40.5 49 39.5 50.5 39.5 C52 39.5 53 40.5 53 41.8 C53 43.5 50.5 44.2 50.5 46.5" stroke="#ef4444" stroke-width="2" stroke-linecap="round" />
+            <circle cx="50.5" cy="49" r="1" fill="#ef4444" />
+            <!-- Faint Entry Lines Below -->
+            <line x1="28" y1="60" x2="72" y2="60" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" />
+            <line x1="28" y1="68" x2="64" y2="68" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" />
+            <line x1="28" y1="76" x2="52" y2="76" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <h3 class="sketch-title">No definition found</h3>
+        <p class="sketch-desc">No STEM entry found for <span id="empty-query-term" class="sketch-query"></span></p>
       </div>
 
       <div id="dict-result" class="definition-box">
+        <!-- "Showing X instead of Y" Notice Banner -->
+        <div id="res-instead-of" class="dict-instead-of"></div>
+
         <div class="dict-word" id="res-word">Word</div>
         <span class="dict-phonetic" id="res-phonetic">Osmosis STEM Dictionary</span>
         <div class="dict-meaning" id="res-meaning">Meaning goes here.</div>
@@ -229,10 +330,6 @@
               style="max-width: 100%; max-height: 380px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.25); cursor: pointer; object-fit: contain; background: #ffffff;">
             <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8; font-style: italic;">Tap diagram to enlarge
             </p>
-          </div>
-          <div id="res-no-diagram-msg"
-            style="display: none; padding: 1.2rem; background: rgba(0, 0, 0, 0.08); border-radius: 12px; font-size: 0.95rem; font-style: italic; color: var(--text-secondary, #475569);">
-            🖼️ Diagram illustration is unavailable for this term.
           </div>
         </div>
       </div>

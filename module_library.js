@@ -4,6 +4,9 @@ const inputEl = document.getElementById('dict-input');
 const searchBtn = document.getElementById('dict-search-btn');
 const resultEl = document.getElementById('dict-result');
 const errorEl = document.getElementById('dict-error');
+const emptyStateEl = document.getElementById('dict-empty-state');
+const emptyQueryTerm = document.getElementById('empty-query-term');
+const resInsteadOf = document.getElementById('res-instead-of');
 
 const resWord = document.getElementById('res-word');
 const resPhonetic = document.getElementById('res-phonetic');
@@ -17,49 +20,147 @@ inputEl.addEventListener('keypress', (e) => {
 function lookupInStemDictionary(query) {
   if (typeof window.STEMDictionary === 'undefined') return null;
 
-  const normalized = query.trim().toLowerCase();
+  const rawQuery = query.trim();
+  const normalized = rawQuery.toLowerCase();
   if (!normalized) return null;
 
-  const exactDefinition = window.STEMDictionary.getDefinition(normalized);
-  if (exactDefinition) {
-    const entry = window.STEMDictionary.getAllWords().find(
-      (e) => e.word.toLowerCase() === normalized
-    );
+  // 1. Direct exact match via STEMDictionary engine (handles exact word, synonyms, hyphens/spaces)
+  if (typeof window.STEMDictionary.getEntry === 'function') {
+    const entry = window.STEMDictionary.getEntry(normalized);
+    if (entry) {
+      return {
+        word: entry.word,
+        raw: entry.raw,
+        definition: entry.definition,
+        isExact: true
+      };
+    }
+  }
+
+  // 2. Exact match in all words bank
+  const all = window.STEMDictionary.getAllWords ? window.STEMDictionary.getAllWords() : [];
+  const exactEntry = all.find(
+    (e) => e.word.toLowerCase() === normalized || (e.raw && e.raw.toLowerCase() === normalized)
+  );
+  if (exactEntry) {
     return {
-      word: entry ? entry.word : query.trim(),
-      definition: exactDefinition
+      word: exactEntry.word,
+      raw: exactEntry.raw,
+      definition: exactEntry.definition,
+      isExact: true
     };
   }
 
-  const matches = window.STEMDictionary.getAllWords().filter((entry) => {
-    const word = entry.word.toLowerCase();
-    return word.startsWith(normalized) || word.includes(normalized);
-  });
+  // 3. Smart Word-Boundary / Phrase matching (e.g. user typed "phone" -> match "mobile phone")
+  // Check if the query is a complete standalone word within multi-word STEM entries
+  const escaped = normalized.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  const wordRegex = new RegExp(`\\b${escaped}\\b`, 'i');
 
-  if (matches.length === 0) return null;
+  const wordInTitleMatches = [];
+  const wordInRawMatches = [];
+  const startsWithMatches = [];
 
-  const best = matches.find((entry) => entry.word.toLowerCase().startsWith(normalized)) || matches[0];
-  return {
-    word: best.word,
-    definition: best.definition,
-    suggestions: matches.length > 1 ? matches.slice(0, 5).map((m) => m.word) : null
-  };
+  for (let i = 0; i < all.length; i++) {
+    const item = all[i];
+    const w = item.word.toLowerCase();
+    const raw = (item.raw || '').toLowerCase();
+
+    if (wordRegex.test(w)) {
+      wordInTitleMatches.push(item);
+    } else if (wordRegex.test(raw)) {
+      wordInRawMatches.push(item);
+    } else if (w.startsWith(normalized)) {
+      startsWithMatches.push(item);
+    }
+  }
+
+  if (wordInTitleMatches.length > 0) {
+    wordInTitleMatches.sort((a, b) => a.word.length - b.word.length);
+    const best = wordInTitleMatches[0];
+    return {
+      word: best.word,
+      raw: best.raw,
+      definition: best.definition,
+      isExact: false,
+      replacedQuery: rawQuery
+    };
+  }
+
+  if (wordInRawMatches.length > 0) {
+    wordInRawMatches.sort((a, b) => a.word.length - b.word.length);
+    const best = wordInRawMatches[0];
+    return {
+      word: best.word,
+      raw: best.raw,
+      definition: best.definition,
+      isExact: false,
+      replacedQuery: rawQuery
+    };
+  }
+
+  // 4. Close prefix / typo match (e.g. "photosynthes" -> "photosynthesis")
+  if (normalized.length >= 4 && startsWithMatches.length > 0) {
+    startsWithMatches.sort((a, b) => a.word.length - b.word.length);
+    const best = startsWithMatches[0];
+    if (best.word.length <= normalized.length + 4) {
+      return {
+        word: best.word,
+        raw: best.raw,
+        definition: best.definition,
+        isExact: false,
+        replacedQuery: rawQuery
+      };
+    }
+  }
+
+  // 5. Gibberish / unmatched inputs return null -> shows minimal sketch empty state
+  return null;
+}
+
+function showEmptyState(query) {
+  if (resultEl) resultEl.style.display = 'none';
+  if (errorEl) errorEl.style.display = 'none';
+
+  if (emptyStateEl) {
+    if (emptyQueryTerm) {
+      emptyQueryTerm.textContent = `"${query}"`;
+    }
+    emptyStateEl.style.display = 'block';
+  }
+
+  if (typeof AudioManager !== 'undefined') AudioManager.play('error');
 }
 
 function performSearch() {
   const query = inputEl.value.trim();
   if (!query) return;
 
-  resultEl.style.display = 'none';
-  errorEl.style.display = 'none';
+  // Dismiss autocomplete dropdown if visible
+  const dropdown = document.getElementById('autocomplete-dropdown');
+  if (dropdown) dropdown.style.display = 'none';
+
+  if (resultEl) resultEl.style.display = 'none';
+  if (errorEl) errorEl.style.display = 'none';
+  if (emptyStateEl) emptyStateEl.style.display = 'none';
+
   if (typeof AudioManager !== 'undefined') AudioManager.play('click');
 
   const entry = lookupInStemDictionary(query);
 
   if (!entry) {
-    errorEl.style.display = 'block';
-    if (typeof AudioManager !== 'undefined') AudioManager.play('error');
+    showEmptyState(query);
     return;
+  }
+
+  // Handle "Showing X instead of Y" message
+  if (resInsteadOf) {
+    if (!entry.isExact && entry.replacedQuery) {
+      resInsteadOf.innerHTML = `Showing definition for <strong>"${entry.word}"</strong> instead of <em>"${entry.replacedQuery}"</em>`;
+      resInsteadOf.style.display = 'block';
+    } else {
+      resInsteadOf.style.display = 'none';
+      resInsteadOf.innerHTML = '';
+    }
   }
 
   resWord.textContent = entry.word;
@@ -70,7 +171,6 @@ function performSearch() {
   const diagramBox = document.getElementById('res-diagram-box');
   const diagramContent = document.getElementById('res-diagram-content');
   const diagramImg = document.getElementById('res-diagram-img');
-  const noDiagramMsg = document.getElementById('res-no-diagram-msg');
   
   let diagramSrc = null;
   if (typeof window.DictionaryDiagrams !== 'undefined') {
@@ -79,7 +179,6 @@ function performSearch() {
     diagramSrc = window.DictionaryDiagrams[wordKey] || window.DictionaryDiagrams[queryKey];
     
     if (!diagramSrc) {
-      // Partial match search in DictionaryDiagrams
       const diagKeys = Object.keys(window.DictionaryDiagrams);
       const matchedKey = diagKeys.find(k => k.includes(wordKey) || wordKey.includes(k) || k.includes(queryKey));
       if (matchedKey) {
@@ -89,25 +188,16 @@ function performSearch() {
   }
 
   if (diagramBox) {
-    diagramBox.style.display = 'block';
     if (diagramSrc && diagramImg && diagramContent) {
       diagramImg.src = diagramSrc;
       diagramImg.alt = `${entry.word} diagram`;
       diagramContent.style.display = 'block';
-      if (noDiagramMsg) noDiagramMsg.style.display = 'none';
+      diagramBox.style.display = 'block';
     } else {
+      diagramBox.style.display = 'none';
       if (diagramContent) diagramContent.style.display = 'none';
-      if (noDiagramMsg) noDiagramMsg.style.display = 'block';
+      if (diagramImg) diagramImg.src = '';
     }
-  }
-
-  if (entry.suggestions && entry.suggestions.length > 1) {
-    const note = document.createElement('p');
-    note.style.marginTop = '1rem';
-    note.style.fontSize = '0.95rem';
-    note.style.color = 'var(--text-secondary)';
-    note.textContent = `Related entries: ${entry.suggestions.join(', ')}`;
-    resMeaning.appendChild(note);
   }
 
   resultEl.style.display = 'block';
@@ -117,3 +207,5 @@ function performSearch() {
 document.getElementById('go-home-btn').addEventListener('click', () => {
   window.location.href = '01_home_menu.html';
 });
+
+
