@@ -38,7 +38,6 @@ const DictionaryDiagrams = {
     "acetylsalicyclic acid": "diagrams/dict_acetylsalicyclic_acid_aspirin.png",
     "acetylsalicyclic acid (aspirin)": "diagrams/dict_acetylsalicyclic_acid_aspirin.png",
     "acicular": "diagrams/dict_acicular.png",
-    "acid": "diagrams/dict_acid.png",
     "acid anhydride": "diagrams/dict_acid_anhydride.png",
     "acid chloride": "diagrams/dict_acid_chloride.png",
     "acrylamide": "diagrams/dict_acrylamide.png",

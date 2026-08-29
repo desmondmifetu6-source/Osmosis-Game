@@ -181,7 +181,14 @@ const Stage7Controller = {
 
     if (domCache.memoryBoxEl) {
       domCache.memoryBoxEl.style.display = 'flex';
-      domCache.memoryBoxEl.innerHTML = `<div class="nd-word">${this.escapeHTML(word)}</div><div class="nd-meaning">${this.escapeHTML(meaning)}</div>`;
+      const formattedMeaning = (typeof window.formatScienceText === 'function')
+        ? window.formatScienceText(meaning)
+        : this.escapeHTML(meaning);
+      domCache.memoryBoxEl.innerHTML = `<div class="nd-word">${this.escapeHTML(word)}</div><div class="nd-meaning">${formattedMeaning}</div>`;
+      const mEl = domCache.memoryBoxEl.querySelector('.nd-meaning');
+      if (mEl && typeof window.renderScienceText === 'function') {
+        window.renderScienceText(mEl);
+      }
     }
 
     if (domCache.mainBtn) {
@@ -341,7 +348,15 @@ const Stage7Controller = {
     }
 
     if (domCache.revealWordEl) domCache.revealWordEl.textContent = word;
-    if (domCache.revealMeaningEl) domCache.revealMeaningEl.textContent = meaning;
+    if (domCache.revealMeaningEl) {
+      if (typeof window.renderScienceText === 'function') {
+        domCache.revealMeaningEl.removeAttribute('data-raw-content');
+        domCache.revealMeaningEl.setAttribute('data-raw-content', meaning);
+        window.renderScienceText(domCache.revealMeaningEl);
+      } else {
+        domCache.revealMeaningEl.textContent = meaning;
+      }
+    }
     if (domCache.revealEl) domCache.revealEl.style.display = 'block';
 
     this.state.phase = 'next';

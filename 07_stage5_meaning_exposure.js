@@ -36,9 +36,18 @@ function startRevisionPhase() {
   state.selectedWords.forEach(w => {
     const item = document.createElement('div'); // Make a nice box
     item.className = 'revision-item';
+    const defText = state.meanings[w] || '';
+    const formattedDef = (typeof window.formatScienceText === 'function') 
+      ? window.formatScienceText(defText) 
+      : defText;
     // Write the bold Word and then its scientific meaning directly from the backpack
-    item.innerHTML = `<strong>${w}</strong><p>${state.meanings[w]}</p>`;
+    item.innerHTML = `<strong>${w}</strong><p class="revision-def-text">${formattedDef}</p>`;
     listEl.appendChild(item); // Tape the box to the piece of paper
+
+    const pEl = item.querySelector('.revision-def-text');
+    if (pEl && typeof window.renderScienceText === 'function') {
+      window.renderScienceText(pEl);
+    }
   });
   
   // The clock! 300 seconds = exactly 5 minutes.

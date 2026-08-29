@@ -165,7 +165,13 @@ function performSearch() {
 
   resWord.textContent = entry.word;
   resPhonetic.textContent = 'Osmosis STEM Dictionary';
-  resMeaning.textContent = entry.definition;
+  if (typeof window.renderScienceText === 'function') {
+    resMeaning.removeAttribute('data-raw-content');
+    resMeaning.setAttribute('data-raw-content', entry.definition);
+    window.renderScienceText(resMeaning);
+  } else {
+    resMeaning.textContent = entry.definition;
+  }
 
   // Check for Diagram (Strict exact/canonical match only — no loose substring fallbacks)
   const diagramBox = document.getElementById('res-diagram-box');

@@ -719,3 +719,166 @@ body.dict-cover-page.library-page .app-container {
   }
 }
 
+/* ===================================================================== */
+/* STEM Formula & Mathematical Equation Styling                          */
+/* ===================================================================== */
+
+/* Chemical Formula Badge */
+.stem-chem-badge {
+  display: inline-block;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  color: #0284c7;
+  background: rgba(14, 165, 233, 0.08);
+  padding: 0.08rem 0.35rem;
+  border-radius: 4px;
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  margin: 0 0.15rem;
+  letter-spacing: 0.2px;
+  vertical-align: baseline;
+  transition: all 0.2s ease;
+}
+
+.stem-chem-badge sub,
+.stem-chem-badge sup {
+  font-size: 0.72em;
+  line-height: 0;
+  position: relative;
+}
+.stem-chem-badge sub { bottom: -0.22em; }
+.stem-chem-badge sup { top: -0.45em; font-weight: 700; color: #0369a1; }
+
+.stem-chem-badge:hover {
+  background: rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.4);
+}
+
+/* Scientific Notation */
+.stem-sci-notation {
+  font-family: 'Roboto', 'Inter', monospace;
+  font-weight: 600;
+  color: #4338ca;
+  background: rgba(99, 102, 241, 0.08);
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.stem-sci-notation sup {
+  font-size: 0.72em;
+  font-weight: 700;
+}
+
+/* Standalone Formula Callout Card */
+.stem-formula-card {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem 1.2rem;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.04) 0%, rgba(15, 23, 42, 0.08) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-left: 4px solid #4f46e5;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  position: relative;
+  overflow-x: auto;
+}
+
+.stem-formula-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dashed rgba(99, 102, 241, 0.15);
+}
+
+.stem-formula-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #4f46e5;
+}
+
+.stem-formula-copy-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.2s ease;
+}
+
+.stem-formula-copy-btn:hover {
+  background: #ffffff;
+  color: #1e293b;
+  border-color: #4f46e5;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.15);
+}
+
+.stem-formula-copy-btn.copied {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #10b981;
+}
+
+/* KaTeX Overrides & Enhancements */
+.katex {
+  font-size: 1.08em;
+  text-rendering: geometricPrecision;
+}
+
+.katex-display {
+  margin: 0.5rem 0 !important;
+  text-align: center;
+}
+
+.katex-display > .katex {
+  font-size: 1.2em;
+}
+
+/* Dark theme / Cover page compatibility for formulas */
+body.dict-cover-page .stem-formula-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(212, 175, 55, 0.3);
+  border-left-color: var(--accent-primary, #d4af37);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dict-cover-page .stem-formula-badge {
+  color: var(--accent-primary, #d4af37);
+}
+
+body.dict-cover-page .stem-formula-copy-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #cbd5e1;
+}
+
+body.dict-cover-page .stem-formula-copy-btn:hover {
+  background: rgba(212, 175, 55, 0.2);
+  color: #ffffff;
+  border-color: var(--accent-primary, #d4af37);
+}
+
+body.dict-cover-page .stem-chem-badge {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+}
+
+body.dict-cover-page .stem-sci-notation {
+  background: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.3);
+  color: #c084fc;
+}
+
+

@@ -572,7 +572,13 @@ document.addEventListener('DOMContentLoaded', () => {
       wordEl.textContent = word;
       const descEl = document.createElement('div');
       descEl.className = 'book-item-desc';
-      descEl.textContent = wordDefinitions[word] || 'A scientific term.';
+      const defText = wordDefinitions[word] || 'A scientific term.';
+      if (typeof window.renderScienceText === 'function') {
+        descEl.setAttribute('data-raw-content', defText);
+        window.renderScienceText(descEl);
+      } else {
+        descEl.textContent = defText;
+      }
       item.appendChild(wordEl);
       item.appendChild(descEl);
       bookList.appendChild(item);
@@ -886,7 +892,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showDefinitionPopup(word) {
     defTitle.textContent = word;
-    defDesc.textContent = wordDefinitions[word] || "A scientific term.";
+    const defText = wordDefinitions[word] || "A scientific term.";
+    if (typeof window.renderScienceText === 'function') {
+      defDesc.removeAttribute('data-raw-content');
+      defDesc.setAttribute('data-raw-content', defText);
+      window.renderScienceText(defDesc);
+    } else {
+      defDesc.textContent = defText;
+    }
     defOverlay.classList.add('active');
   }
 

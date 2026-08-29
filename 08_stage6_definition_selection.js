@@ -102,7 +102,15 @@ const Stage5Controller = {
     if (!gameData.meanings) gameData.meanings = {};
     const correctMeaning = gameData.meanings[currentWord] || "Definition not found.";
 
-    if (domCache.targetWordEl) domCache.targetWordEl.textContent = correctMeaning;
+    if (domCache.targetWordEl) {
+      if (typeof window.renderScienceText === 'function') {
+        domCache.targetWordEl.removeAttribute('data-raw-content');
+        domCache.targetWordEl.setAttribute('data-raw-content', correctMeaning);
+        window.renderScienceText(domCache.targetWordEl);
+      } else {
+        domCache.targetWordEl.textContent = correctMeaning;
+      }
+    }
     if (domCache.progressEl) domCache.progressEl.textContent = `${testIndex + 1}/${testSequence.length}`;
 
     const otherWords = Object.keys(gameData.meanings).filter(w => w !== currentWord);
