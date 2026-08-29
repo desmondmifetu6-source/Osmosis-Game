@@ -32,10 +32,13 @@ def clean_and_rebuild():
     with open(MAP_JSON, "r", encoding="utf-8") as f:
         diag_map = json.load(f)
 
-    with open("core_dictionary.js", "r", encoding="utf-8") as f:
-        core_dict_content = f.read()
-
-    dict_words = set(re.findall(r'word:\s*"([^"]+)"', core_dict_content))
+    with open("dictionary.json", "r", encoding="utf-8") as f:
+        dict_data = json.load(f)
+    dict_words = set()
+    for letter_entries in dict_data.values():
+        for item in letter_entries:
+            if item.get("word"):
+                dict_words.add(item["word"])
     dict_words_lower = {w.lower().strip(): w for w in dict_words}
 
     print(f"Starting audit on {len(diag_map)} mapped diagram entries...")
@@ -67,6 +70,11 @@ def clean_and_rebuild():
             reasons.append("unmatched_numeric_prefix_fragment")
         if len(clean_t) <= 2:
             reasons.append("too_short_ocr_fragment")
+
+        # Check known false positives (words without diagrams in book)
+        KNOWN_FALSE = {'abfarad', 'acid', 'cookie', 'cone', 'concave up'}
+        if clean_t in KNOWN_FALSE or base_t in KNOWN_FALSE:
+            reasons.append("known_false_positive_no_diagram_in_book")
 
         # Check image validity
         try:

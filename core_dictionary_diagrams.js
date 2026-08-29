@@ -8,7 +8,6 @@ const DictionaryDiagrams = {
     "abdomen": "diagrams/dict_abdomen_abdominal_cavity.png",
     "abdomen (abdominal cavity)": "diagrams/dict_abdomen_abdominal_cavity.png",
     "aberration": "diagrams/dict_aberration.png",
-    "abfarad": "diagrams/dict_abfarad.png",
     "abomasum": "diagrams/dict_abomasum.png",
     "abomasum (true stomach)": "diagrams/dict_abomasum_true_stomach.png",
     "abruptly pinnate": "diagrams/dict_abruptly_pinnate_even_pinnate.png",
@@ -294,9 +293,7 @@ const DictionaryDiagrams = {
     "compressional wave": "diagrams/dict_compressional_wave_primary_wave_p_wave.png",
     "compressional wave (primary wave; p-wave)": "diagrams/dict_compressional_wave_primary_wave_p_wave.png",
     "concave polygon": "diagrams/dict_concave_polygon.png",
-    "concave up": "diagrams/dict_concave_up.png",
     "concavity": "diagrams/dict_concavity.png",
-    "cone": "diagrams/dict_cone.png",
     "connate": "diagrams/dict_connate.png",
     "consecutive angles": "diagrams/dict_consecutive_angles.png",
     "constitutional heterogeneity": "diagrams/dict_constitutional_heterogeneity.png",
@@ -304,7 +301,6 @@ const DictionaryDiagrams = {
     "constructive interference (additive interference)": "diagrams/dict_constructive_interference_additive_interference.png",
     "contour": "diagrams/dict_contour.png",
     "convex": "diagrams/dict_convex.png",
-    "cookie": "diagrams/dict_cookie.png",
     "coordination isomerism": "diagrams/dict_coordination_isomerism.png",
     "corm": "diagrams/dict_corm_bulbo_tuber_bulbotuber.png",
     "corm (bulbo tuber, bulbotuber)": "diagrams/dict_corm_bulbo_tuber_bulbotuber.png",
@@ -335,7 +331,6 @@ const DictionaryDiagrams = {
     "cube": "diagrams/dict_cube.png",
     "cubic function": "diagrams/dict_cubic_function.png",
     "cubic metre": "diagrams/dict_cubic_metre.png",
-    "cubic resolvent equation": "diagrams/dict_cubic_resolvent_equation.png",
     "cuboid": "diagrams/dict_cuboid.png",
     "curare": "diagrams/dict_curare.png",
     "curve": "diagrams/dict_curve.png",
@@ -406,7 +401,7 @@ const DictionaryDiagrams = {
     "dioxin": "diagrams/dict_dioxin_polychlorinated_dib_enzo_para_dioxin.png",
     "dioxin (polychlorinated dib-enzo-para-dioxin)": "diagrams/dict_dioxin_polychlorinated_dib_enzo_para_dioxin.png",
     "dipyridyl": "diagrams/dict_dipyridyl_2_2_bipyridine_bipyridyl.png",
-    "dipyridyl (2,2’-bipyridine; bipyridyl)": "diagrams/dict_dipyridyl_2_2_bipyridine_bipyridyl.png",
+    "dipyridyl (2,2\u2019-bipyridine; bipyridyl)": "diagrams/dict_dipyridyl_2_2_bipyridine_bipyridyl.png",
     "direct drilling": "diagrams/dict_direct_drilling.png",
     "disjoint set": "diagrams/dict_disjoint_set.png",
     "displacement activity": "diagrams/dict_displacement_activity.png",
@@ -513,7 +508,7 @@ const DictionaryDiagrams = {
     "galvanometer": "diagrams/dict_galvanometer.png",
     "gas engine": "diagrams/dict_gas_engine.png",
     "geiger counter": "diagrams/dict_geiger_counter_geiger_m_ller_counter.png",
-    "geiger counter (geiger-müller counter)": "diagrams/dict_geiger_counter_geiger_m_ller_counter.png",
+    "geiger counter (geiger-m\u00fcller counter)": "diagrams/dict_geiger_counter_geiger_m_ller_counter.png",
     "gem": "diagrams/dict_gem.png",
     "generator": "diagrams/dict_generator.png",
     "geoboard": "diagrams/dict_geoboard.png",
@@ -608,8 +603,8 @@ const DictionaryDiagrams = {
     "jet engine": "diagrams/dict_jet_engine.png",
     "joint": "diagrams/dict_joint.png",
     "keel": "diagrams/dict_keel.png",
-    "kekulé structure": "diagrams/dict_kekul_structure_kerkul_formula.png",
-    "kekulé structure (kerkulé formula)": "diagrams/dict_kekul_structure_kerkul_formula.png",
+    "kekul\u00e9 structure": "diagrams/dict_kekul_structure_kerkul_formula.png",
+    "kekul\u00e9 structure (kerkul\u00e9 formula)": "diagrams/dict_kekul_structure_kerkul_formula.png",
     "ketals": "diagrams/dict_ketals.png",
     "ketamine": "diagrams/dict_ketamine.png",
     "kidney": "diagrams/dict_kidney.png",
@@ -628,7 +623,7 @@ const DictionaryDiagrams = {
     "latin square": "diagrams/dict_latin_square.png",
     "layering": "diagrams/dict_layering.png",
     "leaf": "diagrams/dict_leaf.png",
-    "leclanché cell": "diagrams/dict_leclanch_cell.png",
+    "leclanch\u00e9 cell": "diagrams/dict_leclanch_cell.png",
     "lens": "diagrams/dict_lens.png",
     "lever": "diagrams/dict_lever.png",
     "ligulate": "diagrams/dict_ligulate.png",
@@ -714,7 +709,7 @@ const DictionaryDiagrams = {
     "naphthols (naphthyl group)": "diagrams/dict_naphthols_naphthyl_group.png",
     "nephroid": "diagrams/dict_nephroid.png",
     "nephron": "diagrams/dict_nephron.png",
-    "nervines": "diagrams/dict_nervines.png",
+    "nervous system": "diagrams/dict_nervines.png",
     "net force": "diagrams/dict_net_force.png",
     "neumann condition": "diagrams/dict_neumann_condition.png",
     "neuron": "diagrams/dict_neuron.png",
@@ -750,7 +745,7 @@ const DictionaryDiagrams = {
     "offspring": "diagrams/dict_offspring_progeny.png",
     "offspring (progeny)": "diagrams/dict_offspring_progeny.png",
     "okro": "diagrams/dict_okro_okra_lady_s_finger_gumbo.png",
-    "okro (okra; lady’s finger; gumbo)": "diagrams/dict_okro_okra_lady_s_finger_gumbo.png",
+    "okro (okra; lady\u2019s finger; gumbo)": "diagrams/dict_okro_okra_lady_s_finger_gumbo.png",
     "olecranon process": "diagrams/dict_olecranon_process.png",
     "omasum": "diagrams/dict_omasum_manyplies_psalterium.png",
     "omasum (manyplies; psalterium)": "diagrams/dict_omasum_manyplies_psalterium.png",
@@ -853,7 +848,6 @@ const DictionaryDiagrams = {
     "pinnule": "diagrams/dict_pinnule.png",
     "pistil": "diagrams/dict_pistil.png",
     "piston": "diagrams/dict_piston.png",
-    "pit": "diagrams/dict_pit.png",
     "placenta": "diagrams/dict_placenta.png",
     "plane": "diagrams/dict_plane.png",
     "plastoquinone": "diagrams/dict_plastoquinone.png",
@@ -907,5 +901,9 @@ const DictionaryDiagrams = {
 };
 
 if (typeof window !== 'undefined') {
-  window.DictionaryDiagrams = DictionaryDiagrams;
+    window.DictionaryDiagrams = DictionaryDiagrams;
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = DictionaryDiagrams;
 }
