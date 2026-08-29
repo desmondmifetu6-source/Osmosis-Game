@@ -19,6 +19,7 @@
     "acenaphthene": "diagrams/dict_acenaphthene.png",
     "acentric": "diagrams/dict_acentric.png",
     "acephalous": "diagrams/dict_acephalous.png",
+    "acerose": "diagrams/dict_acerose.png",
     "acetabulum": "diagrams/dict_acetabulum.png",
     "acetal": "diagrams/dict_acetal.png",
     "acetamide": "diagrams/dict_acetamide_ethanamide.png",
@@ -894,6 +895,5 @@
     "tubule": "diagrams/dict_tubule.png",
     "volcano": "diagrams/dict_volcano.png",
     "water cycle": "diagrams/dict_water_cycle.png",
-    "wave": "diagrams/dict_wave.png",
-    "nervous system": "diagrams/dict_nervines.png"
+    "wave": "diagrams/dict_wave.png"
 }

@@ -1,6 +1,4 @@
-// core_dictionary_diagrams.js (Audited & Cleaned STEM Diagram Mappings)
-
-const DictionaryDiagrams = {
+window.DictionaryDiagrams = {
     "abacus": "diagrams/dict_abacus.png",
     "abaxial": "diagrams/dict_abaxial.png",
     "abbe prism": "diagrams/dict_abbe_prism.png",
@@ -21,6 +19,7 @@ const DictionaryDiagrams = {
     "acenaphthene": "diagrams/dict_acenaphthene.png",
     "acentric": "diagrams/dict_acentric.png",
     "acephalous": "diagrams/dict_acephalous.png",
+    "acerose": "diagrams/dict_acerose.png",
     "acetabulum": "diagrams/dict_acetabulum.png",
     "acetal": "diagrams/dict_acetal.png",
     "acetamide": "diagrams/dict_acetamide_ethanamide.png",
@@ -401,7 +400,7 @@ const DictionaryDiagrams = {
     "dioxin": "diagrams/dict_dioxin_polychlorinated_dib_enzo_para_dioxin.png",
     "dioxin (polychlorinated dib-enzo-para-dioxin)": "diagrams/dict_dioxin_polychlorinated_dib_enzo_para_dioxin.png",
     "dipyridyl": "diagrams/dict_dipyridyl_2_2_bipyridine_bipyridyl.png",
-    "dipyridyl (2,2\u2019-bipyridine; bipyridyl)": "diagrams/dict_dipyridyl_2_2_bipyridine_bipyridyl.png",
+    "dipyridyl (2,2’-bipyridine; bipyridyl)": "diagrams/dict_dipyridyl_2_2_bipyridine_bipyridyl.png",
     "direct drilling": "diagrams/dict_direct_drilling.png",
     "disjoint set": "diagrams/dict_disjoint_set.png",
     "displacement activity": "diagrams/dict_displacement_activity.png",
@@ -508,7 +507,7 @@ const DictionaryDiagrams = {
     "galvanometer": "diagrams/dict_galvanometer.png",
     "gas engine": "diagrams/dict_gas_engine.png",
     "geiger counter": "diagrams/dict_geiger_counter_geiger_m_ller_counter.png",
-    "geiger counter (geiger-m\u00fcller counter)": "diagrams/dict_geiger_counter_geiger_m_ller_counter.png",
+    "geiger counter (geiger-müller counter)": "diagrams/dict_geiger_counter_geiger_m_ller_counter.png",
     "gem": "diagrams/dict_gem.png",
     "generator": "diagrams/dict_generator.png",
     "geoboard": "diagrams/dict_geoboard.png",
@@ -603,8 +602,8 @@ const DictionaryDiagrams = {
     "jet engine": "diagrams/dict_jet_engine.png",
     "joint": "diagrams/dict_joint.png",
     "keel": "diagrams/dict_keel.png",
-    "kekul\u00e9 structure": "diagrams/dict_kekul_structure_kerkul_formula.png",
-    "kekul\u00e9 structure (kerkul\u00e9 formula)": "diagrams/dict_kekul_structure_kerkul_formula.png",
+    "kekulé structure": "diagrams/dict_kekul_structure_kerkul_formula.png",
+    "kekulé structure (kerkulé formula)": "diagrams/dict_kekul_structure_kerkul_formula.png",
     "ketals": "diagrams/dict_ketals.png",
     "ketamine": "diagrams/dict_ketamine.png",
     "kidney": "diagrams/dict_kidney.png",
@@ -623,7 +622,7 @@ const DictionaryDiagrams = {
     "latin square": "diagrams/dict_latin_square.png",
     "layering": "diagrams/dict_layering.png",
     "leaf": "diagrams/dict_leaf.png",
-    "leclanch\u00e9 cell": "diagrams/dict_leclanch_cell.png",
+    "leclanché cell": "diagrams/dict_leclanch_cell.png",
     "lens": "diagrams/dict_lens.png",
     "lever": "diagrams/dict_lever.png",
     "ligulate": "diagrams/dict_ligulate.png",
@@ -709,7 +708,6 @@ const DictionaryDiagrams = {
     "naphthols (naphthyl group)": "diagrams/dict_naphthols_naphthyl_group.png",
     "nephroid": "diagrams/dict_nephroid.png",
     "nephron": "diagrams/dict_nephron.png",
-    "nervous system": "diagrams/dict_nervines.png",
     "net force": "diagrams/dict_net_force.png",
     "neumann condition": "diagrams/dict_neumann_condition.png",
     "neuron": "diagrams/dict_neuron.png",
@@ -745,7 +743,7 @@ const DictionaryDiagrams = {
     "offspring": "diagrams/dict_offspring_progeny.png",
     "offspring (progeny)": "diagrams/dict_offspring_progeny.png",
     "okro": "diagrams/dict_okro_okra_lady_s_finger_gumbo.png",
-    "okro (okra; lady\u2019s finger; gumbo)": "diagrams/dict_okro_okra_lady_s_finger_gumbo.png",
+    "okro (okra; lady’s finger; gumbo)": "diagrams/dict_okro_okra_lady_s_finger_gumbo.png",
     "olecranon process": "diagrams/dict_olecranon_process.png",
     "omasum": "diagrams/dict_omasum_manyplies_psalterium.png",
     "omasum (manyplies; psalterium)": "diagrams/dict_omasum_manyplies_psalterium.png",
@@ -899,11 +897,3 @@ const DictionaryDiagrams = {
     "water cycle": "diagrams/dict_water_cycle.png",
     "wave": "diagrams/dict_wave.png"
 };
-
-if (typeof window !== 'undefined') {
-    window.DictionaryDiagrams = DictionaryDiagrams;
-}
-
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = DictionaryDiagrams;
-}
