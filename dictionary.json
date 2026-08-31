@@ -122455,7 +122455,7 @@
       "word": "pair production",
       "raw_headword": "PAIR PRODUCTION",
       "synonyms": [],
-      "definition": "The simultaneous creation of an electron and a positron from a photon in a strong electric field such as surrounding an atomic nucleus. The electron and the positron, each have a mass of about 9 x 10 -31 kg."
+      "definition": "The simultaneous creation of an electron and a positron from a photon in a strong electric field such as surrounding an atomic nucleus. The electron and the positron, each have a mass of about 9 x $10^{-31}$ kg."
     },
     {
       "word": "paired vector spaces",
@@ -123239,7 +123239,7 @@
       "word": "parallel circuit",
       "raw_headword": "PARALLEL CIRCUIT",
       "synonyms": [],
-      "definition": "An electrical circuit in which the current is split between two or more parallel paths or conductors. In a parallel circuit, the total resistance, R , is given by 1 R = 1 r 1 + 1 r 2 + 1 r 3 ..., where r 1 , r 2 and r 3 are the resistances of the individual elements. For capacitors in parallel, the total capacitance, C is given by C = c 1 + c 2 + c 3 ... In a parallel circuit the potential difference (voltage) across each component is the same but the current through each branch of the parallel circuit may be different, depending on the power rating of the component. Parallel Circuit Voltage supply (Vs) R1 I1 I2 I3 I4 R2 R3 R4 Ω 1 Ω 2 Ω 3 Ω 4."
+      "definition": "An electrical circuit in which the current is split between two or more parallel paths or conductors. In a parallel circuit, the total resistance, R , is given by $$\\frac{1}{R} = \\frac{1}{r_1} + \\frac{1}{r_2} + \\frac{1}{r_3}$$ ..., where r 1 , r 2 and r 3 are the resistances of the individual elements. For capacitors in parallel, the total capacitance, C is given by $$C = c_1 + c_2 + c_3$$ ... In a parallel circuit the potential difference (voltage) across each component is the same but the current through each branch of the parallel circuit may be different, depending on the power rating of the component. Parallel Circuit Voltage supply (Vs) R1 I1 I2 I3 I4 R2 R3 R4 Ω 1 Ω 2 Ω 3 Ω 4."
     },
     {
       "word": "parallel computing",
@@ -123277,7 +123277,7 @@
       "word": "parallel plate capacitor",
       "raw_headword": "PARALLEL PLATE CAPACITOR",
       "synonyms": [],
-      "definition": "A device for storing charges that is constructed from two parallel conducting plates, placed a short distance apart with an insulating material called dielectric of permittivity e filling the space between them. The plates of a charged parallel capacitor each carry charges of the same size but of opposite P sign. The capacitance, C is given by: C = k e ε o d A , where k e is the dielectric material, d is the distance between the plates, and A is the area of the plates."
+      "definition": "A device for storing charges that is constructed from two parallel conducting plates, placed a short distance apart with an insulating material called dielectric of permittivity e filling the space between them. The plates of a charged parallel capacitor each carry charges of the same size but of opposite P sign. The capacitance, C is given by: $$C = \\frac{k_e \\varepsilon_0 A}{d}$$ , where k e is the dielectric material, d is the distance between the plates, and A is the area of the plates."
     },
     {
       "word": "parallel ports",
@@ -123343,7 +123343,7 @@
       "word": "para llel ogra m",
       "raw_headword": "PARA LLEL OGRA M",
       "synonyms": [],
-      "definition": "A quadrilateral (four sided plane figure) with opposite pairs of sides equal in length and parallel. The opposite angles are equal, with the diagonals bisecting each other. The rhombus, rectangle and square arespecialtypesof parallelograms. The area ( A ) of a parallelogram is equal to the product of the lengths of its base and altitude: A = b x h , where b is the base and h is the height."
+      "definition": "A quadrilateral (four sided plane figure) with opposite pairs of sides equal in length and parallel. The opposite angles are equal, with the diagonals bisecting each other. The rhombus, rectangle and square arespecialtypesof parallelograms. The area ( A ) of a parallelogram is equal to the product of the lengths of its base and altitude: $$A = b \\times h$$ , where b is the base and h is the height."
     },
     {
       "word": "parallelogram law",
@@ -123361,7 +123361,7 @@
       "word": "parallelogram of vectors",
       "raw_headword": "PARALLELOGRAM OF VECTORS",
       "synonyms": [],
-      "definition": "A method of determining the resultant of two vector quantities. The two quantities are represented by two adjacent sides of a parallelogram and the resultant is the diagonal through their point of intersection. The method can be used either with careful scale drawing or with trigonometry. The trigonometrical relations is expressed as F = F1 2 + F2 2 + 2 F1 F2 cos θ or F2 1 + F2 2 - 2 F1 F2 (180 - θ ), where θ is the angle between F1 and F2 . FROS Parallelogram of vectors F1 F2 F2 Q F R = F1 + F2 - 2 F1 F2 Cos (180 - θ)"
+      "definition": "A method of determining the resultant of two vector quantities. The two quantities are represented by two adjacent sides of a parallelogram and the resultant is the diagonal through their point of intersection. The method can be used either with careful scale drawing or with trigonometry. The trigonometrical relations is expressed as $$F = \\sqrt{F_1^2 + F_2^2 + 2F_1 F_2 \\cos\\theta}$$, where θ is the angle between F1 and F2 . FROS Parallelogram of vectors F1 F2 F2 Q F $$\\vec{R} = \\vec{F_1} + \\vec{F_2}$$ - 2 F1 F2 Cos (180 - θ)"
     },
     {
       "word": "parallelogram of velocities",
@@ -123452,7 +123452,7 @@
       "word": "parametric equation",
       "raw_headword": "PARAMETRIC EQUATION",
       "synonyms": [],
-      "definition": "1. An equation of a curve expressed in the form of the parameters that locate points on the curve. For example, the parametric equation of a parabola is given by x = at 2 , y = 2 at . 2. An equation in which the coordinates are individually written as functions or parameters."
+      "definition": "1. An equation of a curve expressed in the form of the parameters that locate points on the curve. For example, the parametric equation of a parabola is given by $x = at^2$, $y = 2at$ . 2. An equation in which the coordinates are individually written as functions or parameters."
     },
     {
       "word": "parametric processes",
@@ -124231,7 +124231,7 @@
         "sum of states",
         "sum over states"
       ],
-      "definition": "The quantity Z defined by Z = Σ exp (- Ei / kT ), where the sum is taken over all states i of the system and where E is the energy of the system, k is Boltzmann's constant and T is the temperature. From this function all the thermodynamic properties of the system can be derived. Z is a quantity of fundamental importance in equilibrium statistical mechanics. For a system in which there are nontrivial interactions, it is very difficult to calculate the partition function exactly. For such systems, it is necessary to use approximation techniques. The partition function links results at the atomic level to thermodynamics Z . It is related to the Helmoholtz free energy ( F ) by F = kTlnZ ."
+      "definition": "The quantity Z defined by $$Z = \\sum_i \\exp\\left(-\\frac{E_i}{kT}\\right)$$, where the sum is taken over all states i of the system and where E is the energy of the system, k is Boltzmann's constant and T is the temperature. From this function all the thermodynamic properties of the system can be derived. Z is a quantity of fundamental importance in equilibrium statistical mechanics. For a system in which there are nontrivial interactions, it is very difficult to calculate the partition function exactly. For such systems, it is necessary to use approximation techniques. The partition function links results at the atomic level to thermodynamics Z . It is related to the Helmoholtz free energy ( F ) by F = kTlnZ ."
     },
     {
       "word": "partition isotherm",
@@ -125077,7 +125077,7 @@
       "word": "pell's equation",
       "raw_headword": "PELL'S EQUATION",
       "synonyms": [],
-      "definition": "In mathematics, the Diophantine quadratic equation, of the form X2 - Dy 2 = ± N , where D and N are natural numbers usually with N = 1 and with D squarefree. In Cartesian coordinates, the equation has the form of a hyperbola; solutions occur wherever the curve passes through a point whose x and y coordinates are both integers, such as the trivial solution with x = 1 and y = 0."
+      "definition": "In mathematics, the Diophantine quadratic equation, of the form $$X^2 - Dy^2 = \\pm N$$ , where D and N are natural numbers usually with N = 1 and with D squarefree. In Cartesian coordinates, the equation has the form of a hyperbola; solutions occur wherever the curve passes through a point whose x and y coordinates are both integers, such as the trivial solution with x = 1 and y = 0."
     },
     {
       "word": "pellagra",
@@ -125779,7 +125779,7 @@
       "word": "perfect cube",
       "raw_headword": "PERFECT CUBE",
       "synonyms": [],
-      "definition": "An integer is a perfect cube, if it is of the form m3 where m is an integer. For example, 8 =(2) 3 and 64 = (4) 3 ."
+      "definition": "An integer is a perfect cube, if it is of the form $m^3$ where $m$ is an integer. For example, $8 = 2^3$ and $64 = 4^3$."
     },
     {
       "word": "perfect flower",
@@ -126467,7 +126467,7 @@
       "word": "permittivity",
       "raw_headword": "PERMITTIVITY",
       "synonyms": [],
-      "definition": "The measure of the ability of a non-conducting material to retain electric energy when placed in an electric field. A high permittivity tends to reduce any electric field present. The capacitance of a capacitor can be incresed by increasing the permittivity of the dielectric material. Its symbol is ɛ . Relative permittivity , also known as dielectric constant , with the symbol ɛ r is the permittivity of a material given relative to that of free space or a vacuum or simply the ratio of the permittivity of a substance to that of free space. The permittivity of free space , also known as permittivity of vacuum or vacuum permittivity with the symbol ɛ o , is a constant that defines the strength of the electric force between electric charges in vacuum. In other words, it defines how the electric field reacts to the presence of charges in empty space. Mathematically, it is expressed as ε 0 = ( µ 0 c 2 ) , where μ 0 is the magnetic permeability of free space and c is the speed of light in vacuum.Its value is approximately 8.854 × 10 -12 F m^-1 (farads per meter)."
+      "definition": "The measure of the ability of a non-conducting material to retain electric energy when placed in an electric field. A high permittivity tends to reduce any electric field present. The capacitance of a capacitor can be incresed by increasing the permittivity of the dielectric material. Its symbol is ɛ . Relative permittivity , also known as dielectric constant , with the symbol ɛ r is the permittivity of a material given relative to that of free space or a vacuum or simply the ratio of the permittivity of a substance to that of free space. The permittivity of free space , also known as permittivity of vacuum or vacuum permittivity with the symbol ɛ o , is a constant that defines the strength of the electric force between electric charges in vacuum. In other words, it defines how the electric field reacts to the presence of charges in empty space. Mathematically, it is expressed as ε 0 = ( µ 0 c 2 ) , where μ 0 is the magnetic permeability of free space and c is the speed of light in vacuum.Its value is approximately 8.854 × $10^{-12}$ F m^-1 (farads per meter)."
     },
     {
       "word": "permselectivity",
@@ -126489,7 +126489,7 @@
       "synonyms": [
         "ordered arrangement"
       ],
-      "definition": "A specified arrangement of a group of n objects or the arrangement of n distinct objects taken r of them at a time in all possible orders. It is given by n P r = n ! ( n - r )! , where '!' stands for factorial. For example, 6 P2 = 6! (6 - 2)! = 6 x 5 x 4! 4! = 30."
+      "definition": "A specified arrangement of a group of n objects or the arrangement of n distinct objects taken r of them at a time in all possible orders. It is given by $$_nP_r = \\frac{n!}{(n-r)!}$$ , where '!' stands for factorial. For example, $_6P_2 = \\frac{6!}{(6-2)!} = \\frac{6 \\times 5 \\times 4!}{4!} = 30$."
     },
     {
       "word": "permutation group",
@@ -126567,7 +126567,7 @@
       "word": "perpendicular line",
       "raw_headword": "PERPENDICULAR LINE",
       "synonyms": [],
-      "definition": "A line drawn at right angle (90 o ) to another or to a plane or two lines are said to be perpendicular if the gradient of one is a negative reciprocal of the gradient of the other. It is given by m 1 = where m 1 and m2 are the gradients of the lines. It is sometimes symbolised as ⊥ ."
+      "definition": "A line drawn at right angle (90 o ) to another or to a plane or two lines are said to be perpendicular if the gradient of one is a negative reciprocal of the gradient of the other. It is given by $m_1 = -\\frac{1}{m_2}$ where $m_1$ and $m_2$ are the gradients of the lines. It is sometimes symbolised as ⊥ ."
     },
     {
       "word": "perpendicular bisector",
@@ -126785,7 +126785,7 @@
       "word": "peta-",
       "raw_headword": "PETA-",
       "synonyms": [],
-      "definition": "A prefix used to denote a multiple of 10 15 in the SI system. Its symbol is P ."
+      "definition": "A prefix used to denote a multiple of $10^{15}$ in the SI system. Its symbol is P ."
     },
     {
       "word": "petabit",
@@ -126793,7 +126793,7 @@
       "synonyms": [
         "pb"
       ],
-      "definition": "1. For processor storage, real and virtual storage and channel volume, it is 250 or 1 125 899 906 842 624 bits. 2. For disk storage capacity and communications volume, it is 1 000 000 000 000 000 (10 15 ) bits."
+      "definition": "1. For processor storage, real and virtual storage and channel volume, it is 250 or 1 125 899 906 842 624 bits. 2. For disk storage capacity and communications volume, it is 1 000 000 000 000 000 ($10^{15}$ ) bits."
     },
     {
       "word": "petabyte",
@@ -126801,7 +126801,7 @@
       "synonyms": [
         "pb"
       ],
-      "definition": "1. For processor storage, real and virtual storage and channel volume, it is 250 or 1 125 899 906 842 624 bytes. 2. For disk storage capacity and communications volume, it is 1 000 000 000 000 000 (10 15 ) bytes."
+      "definition": "1. For processor storage, real and virtual storage and channel volume, it is 250 or 1 125 899 906 842 624 bytes. 2. For disk storage capacity and communications volume, it is 1 000 000 000 000 000 ($10^{15}$ ) bytes."
     },
     {
       "word": "petaflops",
@@ -127166,7 +127166,7 @@
       "word": "phase equilibria",
       "raw_headword": "PHASE EQUILIBRIA",
       "synonyms": [],
-      "definition": "In thermodynamics, equilibria between substances in different phases. Phase diagram, basic to engineering, metallurgy and mineralogy, are empirical graphs showing what phases exist at different pressures and temperatures. The phase rule, deduced by Josiah Gibbs, states that, for a closed system, F = C - P + 2, where P is the number of phases, C the number of independent chemical components and F the number of degrees of freedom, i.e., the number of variables (pressure, temperature, composition) whose values must be specified to define the system."
+      "definition": "In thermodynamics, equilibria between substances in different phases. Phase diagram, basic to engineering, metallurgy and mineralogy, are empirical graphs showing what phases exist at different pressures and temperatures. The phase rule, deduced by Josiah Gibbs, states that, for a closed system, $$F = C - P + 2$$, where P is the number of phases, C the number of independent chemical components and F the number of degrees of freedom, i.e., the number of variables (pressure, temperature, composition) whose values must be specified to define the system."
     },
     {
       "word": "phase i metabolism",
@@ -127214,7 +127214,7 @@
       "word": "phase rule",
       "raw_headword": "PHASE RULE",
       "synonyms": [],
-      "definition": "The number of degrees of freedom, F , (the number of intensive properties such as temperature or pressure which are independent of other intensive variables) of a heterogeneous system is related to the number of components ( C ) such as one-component system like pure chemical or a two component system such as mixtures of water and ethanol and phase ( P ) such as solids, liquids and gases, present at equilibrium. The equation is given by P + F = C + 2."
+      "definition": "The number of degrees of freedom, F , (the number of intensive properties such as temperature or pressure which are independent of other intensive variables) of a heterogeneous system is related to the number of components ( C ) such as one-component system like pure chemical or a two component system such as mixtures of water and ethanol and phase ( P ) such as solids, liquids and gases, present at equilibrium. The equation is given by $$P + F = C + 2$$."
     },
     {
       "word": "phase separation",
@@ -127226,7 +127226,7 @@
       "word": "phase shift",
       "raw_headword": "PHASE SHIFT",
       "synonyms": [],
-      "definition": "The phase shift of the function of the form, y = a sin( k θ + c ), is - c / k . If c > 0, the shift is to the left and if c < 0 the shift is to the right. This applies to all trigonometric functions."
+      "definition": "The phase shift of the function of the form, $y = a\\sin(k\\theta + c)$, is $-c/k$ . If c > 0, the shift is to the left and if c < 0 the shift is to the right. This applies to all trigonometric functions."
     },
     {
       "word": "phase space",
@@ -129295,7 +129295,7 @@
       "word": "pico-",
       "raw_headword": "PICO-",
       "synonyms": [],
-      "definition": "A prefix, with the symbol p used in the metric system to denote 10 -12 . For example, 10 -12 farad = 1picofarad (pF)."
+      "definition": "A prefix, with the symbol p used in the metric system to denote $10^{-12}$ . For example, $10^{-12}$ farad = 1picofarad (pF)."
     },
     {
       "word": "picoline",
@@ -129817,7 +129817,7 @@
       "word": "pirani gauge",
       "raw_headword": "PIRANI GAUGE",
       "synonyms": [],
-      "definition": "Invented in 1906 by Marcello Pirani, it is an instrument used to measure low pressures in the region of between 0.5 torr to 10 -4 torr. It consists of an electrically heated filament, usually platinum, which is suspended in a tube which is connected to the system whose gas pressure is to be measured. If the gas is at high pressure, gas molecules collide frequently with the filament and absorb energy from the filament which results in cooling of the filament. As the pressure of the gas molecules decreases the number of gas molecules inside the chamber also goes down resulting in fewer collisions with the filament. As a result, the temperature of the filament increases because of decreased cooling. Electrical resistance of a wire varies with temperature. Hence by studying the variation of the resistance of the wire the vacuum surrounding the wire can be predicted."
+      "definition": "Invented in 1906 by Marcello Pirani, it is an instrument used to measure low pressures in the region of between 0.5 torr to $10^{-4}$ torr. It consists of an electrically heated filament, usually platinum, which is suspended in a tube which is connected to the system whose gas pressure is to be measured. If the gas is at high pressure, gas molecules collide frequently with the filament and absorb energy from the filament which results in cooling of the filament. As the pressure of the gas molecules decreases the number of gas molecules inside the chamber also goes down resulting in fewer collisions with the filament. As a result, the temperature of the filament increases because of decreased cooling. Electrical resistance of a wire varies with temperature. Hence by studying the variation of the resistance of the wire the vacuum surrounding the wire can be predicted."
     },
     {
       "word": "piriform",
@@ -130133,25 +130133,25 @@
       "word": "planck constant",
       "raw_headword": "PLANCK CONSTANT",
       "synonyms": [],
-      "definition": "The fundamental constant, which is equal to the ratio of the energy of a photon and the frequency of its associated electromagnetic wave having a value 6.626 0755(40) × 10 -34 Js. It is named after Max Planck (1858-1947), German physicist. In quantum-mechanical calculation, rationalised Planck constant or Dirac constant h = h /2 π = 1.054 589 x 10 -34 Js is frequently used."
+      "definition": "The fundamental constant, which is equal to the ratio of the energy of a photon and the frequency of its associated electromagnetic wave having a value 6.626 0755(40) × $10^{-34}$ Js. It is named after Max Planck (1858-1947), German physicist. In quantum-mechanical calculation, rationalised Planck constant or Dirac constant $\\hbar = h/2\\pi$ = 1.054 589 x $10^{-34}$ Js is frequently used."
     },
     {
       "word": "planck length",
       "raw_headword": "PLANCK LENGTH",
       "synonyms": [],
-      "definition": "The length scale at which a classical description of gravity ceases to be valid and quantum mechanics must be taken into account. It is given by, √( G ħ /2 π c 3 ), where G is the gravitational constant, ħ is the rationalised Planck constant and C is the speed of light. The value is equal to 1.6162 × 10 -35 m (twenty orders of magnitude smaller than the size of a proton, 10 -15 m)."
+      "definition": "The length scale at which a classical description of gravity ceases to be valid and quantum mechanics must be taken into account. It is given by, $\\sqrt{\\frac{G\\hbar}{2\\pi c^3}}$, where G is the gravitational constant, ħ is the rationalised Planck constant and C is the speed of light. The value is equal to 1.6162 × $10^{-35}$ m (twenty orders of magnitude smaller than the size of a proton, $10^{-15}$ m)."
     },
     {
       "word": "planck mass",
       "raw_headword": "PLANCK MASS",
       "synonyms": [],
-      "definition": "The mass, √(ħ c /2 π G ), of a particle whose Compton wavelength is equal to the Planck length, where ħ is the rationalised Planck constant, c is the speed of light and G is the gravitational constant. Planck mass is equal to 21.764 micrograms or 1.2209 × 10 19 GeV/ c."
+      "definition": "The mass, √(ħ c /2 π G ), of a particle whose Compton wavelength is equal to the Planck length, where ħ is the rationalised Planck constant, c is the speed of light and G is the gravitational constant. Planck mass is equal to 21.764 micrograms or 1.2209 × $10^{19}$ GeV/ c."
     },
     {
       "word": "planck time",
       "raw_headword": "PLANCK TIME",
       "synonyms": [],
-      "definition": "The time taken for light to travel in a vacuum, a distance equal to the Planck length. It is given by t p = (Għ/c 5 ), where G is the gravitational constant and ħ is the rationalised Planck constant. The value of the Planck time is of order 10 -43 s. In the big-bang cosmology, up until a time tp after the initial instant, it is necessary to use a quantum theory of gravity to describe the evolution of the universe. The unit is named after Max Planck, who was the first to propose it."
+      "definition": "The time taken for light to travel in a vacuum, a distance equal to the Planck length. It is given by $t_p = \\sqrt{\\frac{G\\hbar}{c^5}}$, where G is the gravitational constant and ħ is the rationalised Planck constant. The value of the Planck time is of order $10^{-43}$ s. In the big-bang cosmology, up until a time tp after the initial instant, it is necessary to use a quantum theory of gravity to describe the evolution of the universe. The unit is named after Max Planck, who was the first to propose it."
     },
     {
       "word": "planck units",
@@ -131093,7 +131093,7 @@
       "word": "pluto",
       "raw_headword": "PLUTO",
       "synonyms": [],
-      "definition": "The smallest and usually outermost planet of the solar system, which inclines at 17.14 o . Its mean distance from the Sun is 5.9 × 10 9 km. Pluto has a diameter of about 2,340 km, less than 1% that of Earth's mass and only about 6% of Earth's surface gravity. Its estimated average surface temperature is about^-235 °C (38 K). Its thin atmosphere contains nitrogen, methane and perhaps other heavier gases. It was discovered in 1930 by Clyde W. Tombaugh (1906-97) and named after the Greek god of the underworld. Pluto used to be the smallest planet of the nine planets until reclassified as a dwarf planet in August 2006. A dwarf planet is defined as a spherical celestial body revolving about the Sun, similar to a planet but not large enough to gravitationally clear its orbital region of most or all other celestial bodies."
+      "definition": "The smallest and usually outermost planet of the solar system, which inclines at 17.14 o . Its mean distance from the Sun is 5.9 × $10^{9}$ km. Pluto has a diameter of about 2,340 km, less than 1% that of Earth's mass and only about 6% of Earth's surface gravity. Its estimated average surface temperature is about^-235 °C (38 K). Its thin atmosphere contains nitrogen, methane and perhaps other heavier gases. It was discovered in 1930 by Clyde W. Tombaugh (1906-97) and named after the Greek god of the underworld. Pluto used to be the smallest planet of the nine planets until reclassified as a dwarf planet in August 2006. A dwarf planet is defined as a spherical celestial body revolving about the Sun, similar to a planet but not large enough to gravitationally clear its orbital region of most or all other celestial bodies."
     },
     {
       "word": "plutonic rock",
@@ -131221,7 +131221,7 @@
       "word": "pochhammer symbol",
       "raw_headword": "POCHHAMMER SYMBOL",
       "synonyms": [],
-      "definition": "The symbol ( a ) n , used to represent either the rising factorial or the falling factorial. For rising factorial, it is written as ( a ) n = a ( a + 1)...( a + n^-1) = Γ ( a + n ) Γ ( a ) ."
+      "definition": "The symbol ( a ) n , used to represent either the rising factorial or the falling factorial. For rising factorial, it is written as $(a)_n = a(a+1)\\cdots(a+n-1) = \\frac{\\Gamma(a+n)}{\\Gamma(a)}$ ."
     },
     {
       "word": "pockels cells",
@@ -131399,7 +131399,7 @@
       "word": "point of inflection",
       "raw_headword": "POINT OF INFLECTION",
       "synonyms": [],
-      "definition": "A point on a curved line in which the tangent changes direction of movement. Moving from one side of the point of inflection, the slope of the tangent to the curve increases. Moving away from it on the other side, it decreases. For example, the curve y = x 3 has a point of inflection at x = 0. If the second derivative of a function at the point x is zero then, the point x is a point of inflection."
+      "definition": "A point on a curved line in which the tangent changes direction of movement. Moving from one side of the point of inflection, the slope of the tangent to the curve increases. Moving away from it on the other side, it decreases. For example, the curve $y = x^3$ has a point of inflection at $x = 0$. If the second derivative of a function at the point x is zero then, the point x is a point of inflection."
     },
     {
       "word": "point of lay",
@@ -131482,7 +131482,7 @@
       "word": "point-slope form",
       "raw_headword": "POINT-SLOPE FORM",
       "synonyms": [],
-      "definition": "A form of equation of a line where m = y - y 1 x - x 1 , where m is the gradient or slope of the line."
+      "definition": "A form of equation of a line where $$m = \\frac{y - y_1}{x - x_1}$$ , where m is the gradient or slope of the line."
     },
     {
       "word": "point-to-point mapping",
@@ -131511,7 +131511,7 @@
       "word": "poise",
       "raw_headword": "POISE",
       "synonyms": [],
-      "definition": "A centimetre-gram-second (cgs) unit of dynamic viscosity with symbol P. It is equal to the tangential force in dynes per square centimetre required to maintain a difference in velocity of one centimetre per second between two parallel planes of a fluid separated by one centimetre. One poise is equal to 10 -1 Nsm^-2 . It is named after Jean Louis Marie Poiseuille. The International System of Units (SI) is the currently used system of units, and the pascal second (Pa·s) has replaced the poise."
+      "definition": "A centimetre-gram-second (cgs) unit of dynamic viscosity with symbol P. It is equal to the tangential force in dynes per square centimetre required to maintain a difference in velocity of one centimetre per second between two parallel planes of a fluid separated by one centimetre. One poise is equal to $10^{-1}$ Nsm^-2 . It is named after Jean Louis Marie Poiseuille. The International System of Units (SI) is the currently used system of units, and the pascal second (Pa·s) has replaced the poise."
     },
     {
       "word": "poiseuille's equation",
@@ -132262,7 +132262,7 @@
       "word": "polygonal number",
       "raw_headword": "POLYGONAL NUMBER",
       "synonyms": [],
-      "definition": "The number of equally spaced dots needed to draw a polygon. Polygonal numbers, which are a type of figurate number, include square numbers, triangular numbers, pentagonal numbers and hexagonal numbers. Polygonal numbers form an arithmetic sequence of the second order. The general term of these sequences is as follows: z n = n 2 2 a + n^-1 ( ) d ⎡⎣ ⎤⎦ , where d is one of the numbers 1, 2, 3, etc. With d = 1, the triangular numbers include: 1, 3, 6, 10, 15, etc. With d = 2 the square numbers include: 1, 4, 9, 16, 25, etc. With d = 3 the pentagonal numbers include: 1, 5, 12, 22, 35, etc."
+      "definition": "The number of equally spaced dots needed to draw a polygon. Polygonal numbers, which are a type of figurate number, include square numbers, triangular numbers, pentagonal numbers and hexagonal numbers. Polygonal numbers form an arithmetic sequence of the second order. The general term of these sequences is as follows: $$z_n = \\frac{n}{2}[2a + (n-1)d]$$ , where d is one of the numbers 1, 2, 3, etc. With d = 1, the triangular numbers include: 1, 3, 6, 10, 15, etc. With d = 2 the square numbers include: 1, 4, 9, 16, 25, etc. With d = 3 the pentagonal numbers include: 1, 5, 12, 22, 35, etc."
     },
     {
       "word": "polygranular carbon",
@@ -132348,7 +132348,7 @@
       "synonyms": [
         "jonquière's function"
       ],
-      "definition": "In mathematics, the special function related to logarithm that is defined for integral n ≥ 2 and z in the unit disk and written as Li n z = zkknk = 1 ∞ ∑ , where Li 2 is called the dilogorithm and Li 3 is called the trilogarithm ."
+      "definition": "In mathematics, the special function related to logarithm that is defined for integral n ≥ 2 and z in the unit disk and written as $$\\text{Li}_n(z) = \\sum_{k=1}^{\\infty} \\frac{z^k}{k^n}$$ , where Li 2 is called the dilogorithm and Li 3 is called the trilogarithm ."
     },
     {
       "word": "polymer",
@@ -132942,7 +132942,7 @@
       "word": "population growth model",
       "raw_headword": "POPULATION GROWTH MODEL",
       "synonyms": [],
-      "definition": "A model used in predicting the growth of human populations. In the short term geometric or exponential growth model is given by P t = p 0 (1 + r ) t or p t = p 0 e rt , where p 0 is population at time 0, p t is population at time t , r is the growth rate and t is time."
+      "definition": "A model used in predicting the growth of human populations. In the short term geometric or exponential growth model is given by $$P_t = P_0(1 + r)^t \\quad \\text{or} \\quad P_t = P_0 e^{rt}$$ , where p 0 is population at time 0, p t is population at time t , r is the growth rate and t is time."
     },
     {
       "word": "population growth rate",
@@ -132950,7 +132950,7 @@
       "synonyms": [
         "pgr"
       ],
-      "definition": "The fractional rate increase in the population that occurs when the birth rate is higher than the death rate or when immigration exceeds emigration or when a combination of these factors is present over a unit time period, often expressed as a growth rate or as a ratio of the number of individuals in the population at the beginning of that period. PGR is written as: PGR = pop . at end of period - pop . at start of the period pop . at start of the period . It can also be expressed as growth rate = crude birth rate - crude death rate + net immigration rate, or Δ P P = B P ⎛ ⎝ ⎜ ⎞ ⎠ ⎟- D P ⎛ ⎝ ⎜ ⎞ ⎠ ⎟+ I P ⎛ ⎝ ⎜ ⎞ ⎠ ⎟- E P ⎛ ⎝ ⎜ ⎞ ⎠ ⎟ , where P is the total population, B is the number of births, D is the number of deaths, I is the number of immigrants and E is the number of emigrants. The most common way to express population growth is as a ratio. Growth ratio is expressed as: Growth ratio = Growth rate x 100. A positive growth ratio (or rate) indicates that the population is increasing, while a negative growth ratio indicates the population is decreasing. A growth ratio of zero indicates the number of people at the two given times have neither increased nor decreased (net difference between births, deaths and migration is zero). It can also be obtained by plotting population size against time."
+      "definition": "The fractional rate increase in the population that occurs when the birth rate is higher than the death rate or when immigration exceeds emigration or when a combination of these factors is present over a unit time period, often expressed as a growth rate or as a ratio of the number of individuals in the population at the beginning of that period. PGR is written as: $$PGR = \\frac{\\text{pop. at end} - \\text{pop. at start}}{\\text{pop. at start}}$$ . It can also be expressed as growth rate = crude birth rate - crude death rate + net immigration rate, or Δ P P = B P ⎛ ⎝ ⎜ ⎞ ⎠ ⎟- D P ⎛ ⎝ ⎜ ⎞ ⎠ ⎟+ I P ⎛ ⎝ ⎜ ⎞ ⎠ ⎟- E P ⎛ ⎝ ⎜ ⎞ ⎠ ⎟ , where P is the total population, B is the number of births, D is the number of deaths, I is the number of immigrants and E is the number of emigrants. The most common way to express population growth is as a ratio. Growth ratio is expressed as: Growth ratio = Growth rate x 100. A positive growth ratio (or rate) indicates that the population is increasing, while a negative growth ratio indicates the population is decreasing. A growth ratio of zero indicates the number of people at the two given times have neither increased nor decreased (net difference between births, deaths and migration is zero). It can also be obtained by plotting population size against time."
     },
     {
       "word": "population inversion",
@@ -132964,7 +132964,7 @@
       "synonyms": [
         "age structure diagram"
       ],
-      "definition": "A diagram representing various age groups in a human population with the population plotted on the horizontal axis and the age on the Y- axis and often indicating the ages of males on left side and females on the right side. It can also be used to represent any two population statistical data. A population pyramid whose base is broad with narrow apex has high fertility. Population pyramids are often viewed as the most effective way to graphically depict the age and sex distribution of a population. Population Pyramid Percentage of population Age in years 00-04 05-09 10-14 15-19 20-24 25-29 30-34 35-39 40-44 45-49 50-54 55-59 60-64 65-69 70-74 75-79 80 + female male."
+      "definition": "A diagram representing various age groups in a human population with the population plotted on the horizontal axis and the age on the Y- axis and often indicating the ages of males on left side and females on the right side. It can also be used to represent any two population statistical data. A population pyramid whose base is broad with narrow apex has high fertility. Population pyramids are often viewed as the most effective way to graphically depict the age and sex distribution of a population. Population Pyramid Percentage of population Age in years 00-04 05-09 $10^{-14}$ 15-19 20-24 25-29 30-34 35-39 40-44 45-49 50-54 55-59 60-64 65-69 70-74 75-79 80 + female male."
     },
     {
       "word": "population type",
@@ -133213,7 +133213,7 @@
       "word": "positive binomial distribution",
       "raw_headword": "POSITIVE BINOMIAL DISTRIBUTION",
       "synonyms": [],
-      "definition": "A probability distribution that arises from the binomial distribution by omission of the zero value. This is given by P ( X = x ) = , where x = 1, 2, . . ., n ."
+      "definition": "A probability distribution that arises from the binomial distribution by omission of the zero value. This is given by $$P(X = x) = \\binom{n}{x} p^x (1-p)^{n-x}, \\quad x = 1, 2, \\ldots, n$$"
     },
     {
       "word": "positive charge",
@@ -133243,7 +133243,7 @@
       "word": "positive hypergeometric distribution",
       "raw_headword": "POSITIVE HYPERGEOMETRIC DISTRIBUTION",
       "synonyms": [],
-      "definition": "A probability distribution that arises from the hypergeometric distribution by omission of the zero. This is given by: P ( X = x ) = , where x = 1, . . . , min( n , r )."
+      "definition": "A probability distribution that arises from the hypergeometric distribution by omission of the zero. This is given by: $$P(X = x) = \\frac{\\binom{r}{x}\\binom{N-r}{n-x}}{\\binom{N}{n}}, \\quad x = 1, \\ldots, \\min(n, r)$$"
     },
     {
       "word": "positive ion",
@@ -133323,7 +133323,7 @@
       "word": "positronium",
       "raw_headword": "POSITRONIUM",
       "synonyms": [],
-      "definition": "A bound state consisting of an electron and a positron. The electron and positron spins can be aligned in the same direction called singlet states or in opposite directions called triplet states . There are two types of positronium: (i) orthoposistroium (the lowest triplet state), in which the spins of the two constitutes are parallel and decays into three photons in about 1.5 x 10 -7 s; and (ii) the lowest-energy singlet state called parapostronium , in which the spins are anti-parallel and decays into two photons in a shorter P time of about 10 -10 s. Positronium has a hydrogen-like spectrum, but with different values of the frequencies since a positron is much lighter than a proton."
+      "definition": "A bound state consisting of an electron and a positron. The electron and positron spins can be aligned in the same direction called singlet states or in opposite directions called triplet states . There are two types of positronium: (i) orthoposistroium (the lowest triplet state), in which the spins of the two constitutes are parallel and decays into three photons in about 1.5 x $10^{-7}$ s; and (ii) the lowest-energy singlet state called parapostronium , in which the spins are anti-parallel and decays into two photons in a shorter P time of about $10^{-10}$ s. Positronium has a hydrogen-like spectrum, but with different values of the frequencies since a positron is much lighter than a proton."
     },
     {
       "word": "possible",
@@ -133964,7 +133964,7 @@
       "word": "poynting vector",
       "raw_headword": "POYNTING VECTOR",
       "synonyms": [],
-      "definition": "A vector that gives a measure of the flow of energy in an electromagnetic field. Its Symbol is S . It is equal to the cross product of the electric-field strength and the magnetic-field strength: S = EH , where E is the electrical field strength and H is the magnetic field strength."
+      "definition": "A vector that gives a measure of the flow of energy in an electromagnetic field. Its Symbol is S . It is equal to the cross product of the electric-field strength and the magnetic-field strength: $$S = \\vec{E} \\times \\vec{H}$$, where $\\vec{E}$ is the electric field strength and H is the magnetic field strength."
     },
     {
       "word": "ppb",
@@ -134263,7 +134263,7 @@
       "word": "prefix",
       "raw_headword": "PREFIX",
       "synonyms": [],
-      "definition": "In scientific notation, a method of expressing value of units that uses some power of 10. For example, the prefix for kilogram (kg) is kilo. One kg is equal to 1 000 g or 1 × 10 3 g. Grouping the 10 3 and the g together, 10 3 can be replaced with the prefix k (kilo). Some important examples of prefixes are: yotta (10 24 ) with the symbol Y, yocto with the symbol y for 10 -24 , zetta with the symbol Z for 10 21 , zepto with the symbol z for 10 -21 , exa with the symbol E for 10 18 , atto with the symbol a for 10 -18 , peta with the symbol P for 10 15 , femto with the symbol f for 10 -15 , tera with the symbol T for 10 12 , pico with the symbol p for 10 -12 , giga with the symbol G for 10 9 , nano with the symbol n for 10 -9 , mega with the symbol M for 10 6 , micro with the symbol μ for 10 -6 , hecto with the symbol h for 10 2 , centiwith the symbol c for 10 -2 , deca with the symbol da for 10 1 and deci with the symbol d for 10 -1 ."
+      "definition": "In scientific notation, a method of expressing value of units that uses some power of 10. For example, the prefix for kilogram (kg) is kilo. One kg is equal to 1 000 g or 1 × $10^{3}$ g. Grouping the $10^{3}$ and the g together, $10^{3}$ can be replaced with the prefix k (kilo). Some important examples of prefixes are: yotta ($10^{24}$ ) with the symbol Y, yocto with the symbol y for $10^{-24}$ , zetta with the symbol Z for $10^{21}$ , zepto with the symbol z for $10^{-21}$ , exa with the symbol E for $10^{18}$ , atto with the symbol a for $10^{-18}$ , peta with the symbol P for $10^{15}$ , femto with the symbol f for $10^{-15}$ , tera with the symbol T for $10^{12}$ , pico with the symbol p for $10^{-12}$ , giga with the symbol G for $10^{9}$ , nano with the symbol n for $10^{-9}$ , mega with the symbol M for $10^{6}$ , micro with the symbol μ for $10^{-6}$ , hecto with the symbol h for $10^{2}$ , centiwith the symbol c for $10^{-2}$ , deca with the symbol da for $10^{1}$ and deci with the symbol d for $10^{-1}$ ."
     },
     {
       "word": "prefix notation",
@@ -134369,7 +134369,7 @@
       "word": "pressure",
       "raw_headword": "PRESSURE",
       "synonyms": [],
-      "definition": "The ratio of the force acting on a body to the area of the surface, expressed as Force/Area. The SI unit of pressure is pascal (newton per square metre. Pressure law is a law that relates volume and amount when pressure and temperature are held constant. It states that the pressure of a fixed mass of gas at constant volume is directly proportional to its absolute temperature. This may be expressed as P ∝ T, if V is fixed: P T = constant or P = constant × T . It can also be expressed as P1 T1 = P2 T2 , where P1 and T1 are the initial pressure and absolute temperature of a gas and P2 and T1 are its final pressure and temperature."
+      "definition": "The ratio of the force acting on a body to the area of the surface, expressed as Force/Area. The SI unit of pressure is pascal (newton per square metre. Pressure law is a law that relates volume and amount when pressure and temperature are held constant. It states that the pressure of a fixed mass of gas at constant volume is directly proportional to its absolute temperature. This may be expressed as $$P \\propto T \\text{ (if }V \\text{ fixed): } \\frac{P}{T} = \\text{constant}$$ . It can also be expressed as P1 T1 = P2 T2 , where P1 and T1 are the initial pressure and absolute temperature of a gas and P2 and T1 are its final pressure and temperature."
     },
     {
       "word": "pressure cooker",
@@ -135027,7 +135027,7 @@
       "word": "principal stretches",
       "raw_headword": "PRINCIPAL STRETCHES",
       "synonyms": [],
-      "definition": "The eigenvalues of the positive definite symmetric tensor, U , such that, for F the deformation gradient of the motion of a given body, there is an orthogonal tensor R such that F = RU ."
+      "definition": "The eigenvalues of the positive definite symmetric tensor, U , such that, for F the deformation gradient of the motion of a given body, there is an orthogonal tensor R such that $$F = RU$$ ."
     },
     {
       "word": "principal stretching",
@@ -135245,7 +135245,7 @@
       "word": "prismatoid",
       "raw_headword": "PRISMATOID",
       "synonyms": [],
-      "definition": "A polyhedron with all vertices in one or the other of two parallel planes. All lateral faces are therefore either triangular or quadrilateral. Examples of prismatoids are cube, cuboid, pyramidal frustum, prism and pyramid. Its volume can be calculated from the formula V = 1 6 h ( B1 + B2 + 4 M ), where h is the altitude, B1 and B2 are the areas of the bases and M is the area of the midsection."
+      "definition": "A polyhedron with all vertices in one or the other of two parallel planes. All lateral faces are therefore either triangular or quadrilateral. Examples of prismatoids are cube, cuboid, pyramidal frustum, prism and pyramid. Its volume can be calculated from the formula $$V = \\frac{h}{6}(B_1 + B_2 + 4M)$$, where h is the altitude, B1 and B2 are the areas of the bases and M is the area of the midsection."
     },
     {
       "word": "prismoid",
@@ -136599,7 +136599,7 @@
       "word": "proton",
       "raw_headword": "PROTON",
       "synonyms": [],
-      "definition": "A positively nuclear charged particle commonly found in the nucleus of an atom. Each proton carries one unit of positive electric charge (i.e. +1.6 × 10 -19 C). It has a charge number of +1, spin quantum number and rest mass of 1.007276470(12)u. The proton is about 1836 times heavier than the electron, so that the proton constitutes almost the entire mass of the hydrogen atom. Most of the interior of the atom is empty space, since the sizes of the proton and the electron are very small compared to the size of the atom."
+      "definition": "A positively nuclear charged particle commonly found in the nucleus of an atom. Each proton carries one unit of positive electric charge (i.e. +1.6 × $10^{-19}$ C). It has a charge number of +1, spin quantum number and rest mass of 1.007276470(12)u. The proton is about 1836 times heavier than the electron, so that the proton constitutes almost the entire mass of the hydrogen atom. Most of the interior of the atom is empty space, since the sizes of the proton and the electron are very small compared to the size of the atom."
     },
     {
       "word": "proton affinity",
@@ -136617,7 +136617,7 @@
       "word": "proton magnetic moment",
       "raw_headword": "PROTON MAGNETIC MOMENT",
       "synonyms": [],
-      "definition": "Atomic fundamental physical constant μ p = 1.41060761(47) x 10 -26 JT^-1 ."
+      "definition": "Atomic fundamental physical constant μ p = 1.41060761(47) x $10^{-26}$ JT^-1 ."
     },
     {
       "word": "proton magnetogyric ratio",
@@ -136643,7 +136643,7 @@
       "word": "proton rest mass",
       "raw_headword": "PROTON REST MASS",
       "synonyms": [],
-      "definition": "Atomic fundamental physical constant m p = 1.6726231(10) × 10 -27 kg."
+      "definition": "Atomic fundamental physical constant m p = 1.6726231(10) × $10^{-27}$ kg."
     },
     {
       "word": "proton transfer reaction",
