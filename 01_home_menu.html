@@ -72,7 +72,7 @@
     }
 
     /* Ensure contents sit above confetti canvas */
-    .book-preview-card > *:not(#book-confetti-canvas) {
+    .book-preview-card>*:not(#book-confetti-canvas) {
       position: relative;
       z-index: 1;
     }
@@ -249,8 +249,8 @@
         <!-- Falling Confetti Canvas -->
         <canvas id="book-confetti-canvas" aria-hidden="true"></canvas>
         <span class="dict-source-tag">The 6-In-1 STEM Dictionary</span>
-        <img src="assets/stem_dictionary_cover.png" alt="STEM Dictionary cover" class="home-book-badge dict-cover-preview"
-          title="View cover">
+        <img src="assets/stem_dictionary_cover.png" alt="STEM Dictionary cover"
+          class="home-book-badge dict-cover-preview" title="View cover">
         <p class="dict-cover-hint" style="margin: 0;">Tap cover to enlarge</p>
       </div>
       <h2 class="akwaaba-header">WELCOME, <span id="home-username">Scholar</span></h2>
@@ -263,7 +263,7 @@
         </button>
         <button id="personal-study-btn" class="classic-btn"
           style="background: #F59E0B; color: rgb(0, 0, 0); position: relative; overflow: visible;">
-          Personal Study (Custom Deck)
+          Exam Study
           <span
             style="position: absolute; top: -8px; right: -8px; background: var(--accent-red); color: white; font-size: 0.7rem; font-weight: 800; padding: 2px 8px; border-radius: 20px; box-shadow: 0 2px 8px rgba(220, 53, 69, 0.4); border: 2px solid var(--surface-white);">NEW</span>
         </button>
@@ -308,9 +308,11 @@
   <div id="study-popup-overlay" class="solo-popup-overlay">
     <div class="solo-popup">
       <h3 style="color: #d97706;">Personal Study</h3>
-      <p>Select your own custom set of up to 5 words from the STEM Dictionary to study and master across all game stages.</p>
+      <p>Select your own custom set of up to 5 words from the STEM Dictionary to study and master across all game
+        stages.</p>
       <button id="study-popup-continue" class="solo-btn-elegant"
-        style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);">Continue to Setup</button>
+        style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);">Continue
+        to Setup</button>
     </div>
   </div>
 
