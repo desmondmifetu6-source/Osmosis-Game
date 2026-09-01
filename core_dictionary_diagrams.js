@@ -2,13 +2,16 @@
 
 const DictionaryDiagrams = {
     "1-butene": "diagrams/dict_butene.png",
+    "2-amino-3-methylbutanoic acid": "diagrams/dict_valine.png",
     "2-methyl-1-propanol": "diagrams/dict_isobutanol.png",
     "abacus": "diagrams/dict_abacus.png",
     "abaxial": "diagrams/dict_abaxial.png",
     "abbe prism": "diagrams/dict_abbe_prism.png",
     "abbe refractometer": "diagrams/dict_abbe_refractometer.png",
-    "abdomen": "diagrams/dict_abdomen_abdominal_cavity.png",
-    "abdomen (abdominal cavity)": "diagrams/dict_abdomen_abdominal_cavity.png",
+    "abbe type critical angle refractometer": "diagrams/dict_abbe_refractometer.png",
+    "abdomen": "diagrams/dict_abdomen.png",
+    "abdomen (abdominal cavity)": "diagrams/dict_abdomen.png",
+    "abdominal cavity": "diagrams/dict_abdomen.png",
     "aberration": "diagrams/dict_aberration.png",
     "abo blood group": "diagrams/dict_abo_blood_group_system.png",
     "abo blood group system": "diagrams/dict_abo_blood_group_system.png",
@@ -1018,12 +1021,9 @@ const DictionaryDiagrams = {
     "truth table": "diagrams/dict_and_gate.png",
     "tube": "diagrams/dict_tube.png",
     "tubule": "diagrams/dict_tubule.png",
+    "val": "diagrams/dict_valine.png",
     "valine": "diagrams/dict_valine.png",
     "volcano": "diagrams/dict_volcano.png",
     "water cycle": "diagrams/dict_water_cycle.png",
     "wave": "diagrams/dict_wave.png"
 };
-
-if (typeof window !== 'undefined') {
-  window.DictionaryDiagrams = DictionaryDiagrams;
-}
