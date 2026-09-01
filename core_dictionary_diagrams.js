@@ -1,6 +1,6 @@
 // core_dictionary_diagrams.js (Audited STEM Diagram Mappings)
 
-const DictionaryDiagrams = {
+var DictionaryDiagrams = {
     "1-butene": "diagrams/dict_butene.png",
     "2-amino-3-methylbutanoic acid": "diagrams/dict_valine.png",
     "2-methyl-1-propanol": "diagrams/dict_isobutanol.png",
@@ -1027,3 +1027,8 @@ const DictionaryDiagrams = {
     "water cycle": "diagrams/dict_water_cycle.png",
     "wave": "diagrams/dict_wave.png"
 };
+
+if (typeof window !== 'undefined') {
+    window.DictionaryDiagrams = DictionaryDiagrams;
+}
+
