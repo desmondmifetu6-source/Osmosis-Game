@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Osmosis - Personal Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="core_styles.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem 1rem;
+      box-sizing: border-box;
+    }
+
+    .ps-card {
+      max-width: 580px;
+      width: 100%;
+      margin: auto;
+      padding: 2.5rem 2rem;
+      background: rgba(255, 255, 255, 0.25) !important;
+      backdrop-filter: blur(15px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.4) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .ps-title {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--text-main);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .ps-subtitle {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      opacity: 0.8;
+      margin-bottom: 1.8rem;
+      font-weight: 500;
+    }
+
+    /* Search bar — identical to library */
+    .search-bar-wrapper {
+      position: relative;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-bar-wrapper input {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.75);
+      color: #1e293b;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .search-bar-wrapper input:focus {
+      border-color: #f59e0b;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.18);
+    }
+
+    /* Autocomplete dropdown — same style as library */
+    #ps-autocomplete-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(28px) saturate(1.8);
+      -webkit-backdrop-filter: blur(28px) saturate(1.8);
+      border: 1.5px solid rgba(79, 70, 229, 0.25);
+      border-radius: 14px;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2), 0 4px 12px rgba(79, 70, 229, 0.12);
+      overflow: hidden;
+      max-height: 320px;
+      overflow-y: auto;
+      animation: dropdownFadeIn 0.15s ease;
+    }
+
+    @keyframes dropdownFadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .ps-ac-item {
+      padding: 11px 14px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(79, 70, 229, 0.07);
+      border-left: 3px solid transparent;
+      transition: background 0.13s ease, border-left-color 0.13s ease;
+    }
+
+    .ps-ac-item:last-child { border-bottom: none; }
+
+    .ps-ac-item:hover {
+      background: rgba(245, 158, 11, 0.1);
+      border-left-color: #f59e0b;
+    }
+
+    .ps-ac-item .ac-word {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .ps-ac-item .ac-snippet {
+      font-size: 11.5px;
+      color: #475569;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+
+    /* Selected words dock */
+    .ps-deck-label {
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-main);
+      opacity: 0.75;
+      margin-bottom: 0.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ps-counter {
+      font-size: 0.9rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff;
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      transition: background 0.3s;
+    }
+
+    .ps-counter.full {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .ps-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      min-height: 40px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 14px;
+      padding: 0.7rem 0.9rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .ps-empty-hint {
+      font-size: 0.85rem;
+      color: var(--text-main);
+      opacity: 0.5;
+      font-style: italic;
+      margin: 0;
+    }
+
+    .ps-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(245, 158, 11, 0.22);
+      animation: chipIn 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes chipIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+
+    .ps-chip-remove {
+      background: rgba(0,0,0,0.15);
+      border: none;
+      color: #fff;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      line-height: 1;
+    }
+
+    .ps-chip-remove:hover { background: rgba(220,38,38,0.7); }
+
+    /* Buttons */
+    .ps-btn-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    .boss-btn {
+      flex: 1;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff;
+      border: none;
+      padding: 1.1rem 1.5rem;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 22px rgba(245, 158, 11, 0.3);
+    }
+
+    .boss-btn:hover:not(:disabled) {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 14px 30px rgba(245, 158, 11, 0.4);
+      filter: brightness(1.08);
+    }
+
+    .boss-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .back-btn {
+      background: rgba(255,255,255,0.4);
+      border: 1.5px solid rgba(255,255,255,0.6);
+      color: var(--text-main);
+      padding: 1.1rem 1.4rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,0.65);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 480px) {
+      .ps-card { padding: 2rem 1.25rem; }
+      .ps-title { font-size: 1.5rem; }
+      .ps-btn-row { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body class="dict-cover-page">
+  <div class="dict-cover-bg" aria-hidden="true"></div>
+  <div class="dict-cover-overlay" aria-hidden="true"></div>
+
+  <div class="app-container">
+    <div class="card ps-card">
+
+      <h2 class="ps-title">📚 Personal Study</h2>
+      <p class="ps-subtitle">Search the STEM dictionary and select up to <strong>5 words</strong> to build your custom study deck.</p>
+
+      <!-- Search bar with live autocomplete -->
+      <div class="search-bar-wrapper">
+        <input type="text" id="ps-search-input" placeholder="Search a word..." autocomplete="off">
+        <div id="ps-autocomplete-dropdown"></div>
+      </div>
+
+      <!-- Selected words dock -->
+      <div class="ps-deck-label">
+        <span>Your Deck</span>
+        <span class="ps-counter" id="ps-counter">0 / 5</span>
+      </div>
+      <div class="ps-chips" id="ps-chips">
+        <p class="ps-empty-hint" id="ps-empty-hint">No words selected yet — search above and click a word to add it.</p>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="ps-btn-row">
+        <button class="back-btn" id="ps-back-btn">← Back</button>
+        <button class="boss-btn" id="ps-begin-btn" disabled>Begin Study ▶</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="core_dictionary.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="core_shared_state.js"></script>
+  <script src="02b_personal_study_setup.js"></script>
+</body>
+
+</html>

@@ -331,14 +331,18 @@ const ResultsController = {
       domCache.playAgainBtn.addEventListener('click', () => {
         if (typeof AudioManager !== 'undefined') AudioManager.play('click');
 
+        const isPersonalStudy = gameData.personalStudyMode;
+
         if (typeof sharedState.clearGameSession === 'function') {
           sharedState.clearGameSession(true);
         }
 
+        const targetUrl = isPersonalStudy ? '02b_personal_study_setup.html' : '02_campaign_setup.html';
+
         setTimeout(() => {
-          if (typeof window.navigateWithTransition === 'function') navigateWithTransition('02_campaign_setup.html');
-          else window.location.href = '02_campaign_setup.html';
-        }, 200);
+          if (typeof window.navigateWithTransition === 'function') navigateWithTransition(targetUrl);
+          else window.location.href = targetUrl;
+        }, 100);
       });
     }
 

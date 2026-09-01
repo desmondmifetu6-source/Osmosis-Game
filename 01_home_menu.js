@@ -65,6 +65,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 5b. Personal Study Logic — show popup first
+  const personalStudyBtn = document.getElementById('personal-study-btn');
+  const studyOverlay = document.getElementById('study-popup-overlay');
+  const studyContinueBtn = document.getElementById('study-popup-continue');
+
+  if (personalStudyBtn && studyOverlay) {
+    personalStudyBtn.addEventListener('click', () => {
+      studyOverlay.classList.add('active');
+    });
+
+    studyOverlay.addEventListener('click', (e) => {
+      if (e.target === studyOverlay) {
+        studyOverlay.classList.remove('active');
+      }
+    });
+  }
+
+  if (studyContinueBtn) {
+    studyContinueBtn.addEventListener('click', () => {
+      if (typeof sharedState.clearGameSession === 'function') {
+        sharedState.clearGameSession(true);
+      }
+      navigate('02b_personal_study_setup.html');
+    });
+  }
+
   // 6. Play Friends Logic (Local or Online)
   const playFriendsBtn = document.getElementById('play-friends-btn');
   const multiplayerBtn = document.getElementById('multiplayer-btn');

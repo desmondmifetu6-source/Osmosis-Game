@@ -240,7 +240,6 @@ const Stage2Controller = {
 
     const inputVal = domCache.lap1Input ? domCache.lap1Input.value.trim().toLowerCase() : '';
     if (!inputVal) {
-      this.triggerFeedback("Type the full word first.", 'error');
       if (domCache.lap1Input) domCache.lap1Input.focus();
       return;
     }
