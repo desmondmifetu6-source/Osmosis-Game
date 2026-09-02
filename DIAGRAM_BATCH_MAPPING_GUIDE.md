@@ -75,19 +75,57 @@ Source Folder: `section a-b images/`
 
 ---
 
-### Batch 3 (Queued) — Screenshots 21 to 30
+### Batch 3 & 4 (Completed) — Screenshots 21 to 40
 Source Folder: `section a-b images/`
 
-- `Screenshot 2026-08-03 162637.png`
-- `Screenshot 2026-08-03 162648.png`
-- `Screenshot 2026-08-03 162714.png`
-- `Screenshot 2026-08-03 162725.png`
-- `Screenshot 2026-08-03 162733.png`
-- `Screenshot 2026-08-03 162744.png`
-- `Screenshot 2026-08-03 162804.png`
-- `Screenshot 2026-08-03 162814.png`
-- `Screenshot 2026-08-03 162822.png`
-- `Screenshot 2026-08-03 162834.png`
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 21 | `Screenshot 2026-08-03 162637.png` | Chemical structure of Acetyl-CoA | `dict_acetyl_coa.png`, `dict_acetyl_coenzyme_a_acetyl_coa.png` | `acetyl coenzyme a`, `acetyl-coa`, `acetyl coa` |
+| 22 | `Screenshot 2026-08-03 162648.png` | Achromatic Lens | `dict_achromatic_lens.png`, `dict_achromat.png` | `achromatic lens`, `achromat` |
+| 23 | `Screenshot 2026-08-03 162714.png` | Chemical Structure of Acid Anhydride | `dict_acid_anhydride.png` | `acid anhydride` |
+| 24 | `Screenshot 2026-08-03 162725.png` | Chemical structure of acrylamide | `dict_acrylamide.png` | `acrylamide` |
+| 25 | `Screenshot 2026-08-03 162733.png` | Chemical Structure of Acrylonitrile | `dict_acrylonitrile.png`, `dict_acrylonitrile_propenenitrile.png`, `dict_propenenitrile.png` | `acrylonitrile`, `propenenitrile`, `acrylic` |
+| 26 | `Screenshot 2026-08-03 162744.png` | Activation energy / SN2 reaction coordinate | `dict_activation_energy.png`, `dict_reaction_coordinate.png`, `dict_transition_state.png` | `activation energy`, `reaction coordinate`, `transition state` |
+| 27 | `Screenshot 2026-08-03 162804.png` | Activity Series of Metals in Aqueous Solution | `dict_activity_series.png`, `dict_reactivity_series.png`, `dict_electrochemical_series.png` | `activity series`, `reactivity series`, `electrochemical series` |
+| 28 | `Screenshot 2026-08-03 162814.png` | Structure of an acuminate leaf | `dict_acuminate.png`, `dict_acuminate_leaf.png` | `acuminate`, `acuminate leaf` |
+| 29 | `Screenshot 2026-08-03 162822.png` | Acute angle (54°) | `dict_acute_angle.png` | `acute angle` |
+| 30 | `Screenshot 2026-08-03 162834.png` | Chemical Structure of Acyclovir | `dict_acyclovir.png` | `acyclovir` |
+| 31 | `Screenshot 2026-08-03 162845.png` | Collisions from random frequency hopping | `dict_adaptive_frequency_hopping.png`, `dict_frequency_hopping.png` | `adaptive frequency hopping`, `frequency hopping` |
+| 32 | `Screenshot 2026-08-03 162858.png` | Adaxial & Abaxial leaf surfaces | `dict_adaxial.png`, `dict_abaxial.png` | `adaxial`, `abaxial` |
+| 33 | `Screenshot 2026-08-03 162910.png` | Addition of Vectors (Triangle law) | `dict_addition_of_vectors.png`, `dict_vector_addition.png` | `addition of vectors`, `vector addition` |
+| 34 | `Screenshot 2026-08-03 162919.png` | Chemical Structure of Adenosine Triphosphate (ATP) | `dict_adenosine_triphosphate.png`, `dict_atp.png` | `adenosine triphosphate`, `adenosine triphosphate (atp)`, `atp` |
+| 35 | `Screenshot 2026-08-03 162927.png` | Chemical Structure of Adipic Acid | `dict_adipic_acid.png`, `dict_hexanedioic_acid.png` | `adipic acid`, `hexanedioic acid` |
+| 36 | `Screenshot 2026-08-03 162934.png` | Adipocyte (Fat Cell) anatomical cross-section | `dict_adipocyte.png`, `dict_adipocyte_fat_cell.png`, `dict_fat_cell.png` | `adipocyte`, `adipocyte (fat cell)`, `fat cell` |
+| 37 | `Screenshot 2026-08-03 162941.png` | Adjacent angles & Adjacent of right triangle | `dict_adjacent_angles.png`, `dict_adjacent.png`, `dict_adjacent_side.png` | `adjacent`, `adjacent angles`, `adjacent side` |
+| 38 | `Screenshot 2026-08-03 162948.png` | Chemical Structure of Adrenaline | `dict_adrenaline.png`, `dict_epinephrine.png` | `adrenaline`, `epinephrine` |
+| 39 | `Screenshot 2026-08-03 211010.png` | Chemical structure of Aflatoxin B1 | `dict_aflatoxin.png`, `dict_aflatoxin_b1.png` | `aflatoxin`, `aflatoxin b1` |
+| 40 | `Screenshot 2026-08-03 211033.png` | Air layering (marcotting) 4-step process | `dict_air_layering.png`, `dict_air_layering_marcotting.png`, `dict_marcotting.png` | `air layering`, `air layering (marcotting)`, `marcotting` |
+
+---
+
+### Batch 5 (Queued) — Screenshots 41 to 60
+Source Folder: `section a-b images/`
+
+- `Screenshot 2026-08-03 211050.png`
+- `Screenshot 2026-08-03 211113.png`
+- `Screenshot 2026-08-03 211140.png`
+- `Screenshot 2026-08-03 211200.png`
+- `Screenshot 2026-08-03 211219.png`
+- `Screenshot 2026-08-03 211232.png`
+- `Screenshot 2026-08-03 211240.png`
+- `Screenshot 2026-08-03 211254.png`
+- `Screenshot 2026-08-03 211321.png`
+- `Screenshot 2026-08-03 211341.png`
+- `Screenshot 2026-08-03 211349.png`
+- `Screenshot 2026-08-03 211401.png`
+- `Screenshot 2026-08-03 211408.png`
+- `Screenshot 2026-08-03 211416.png`
+- `Screenshot 2026-08-03 211426.png`
+- `Screenshot 2026-08-03 211439.png`
+- `Screenshot 2026-08-03 211510.png`
+- `Screenshot 2026-08-03 211525.png`
+- `Screenshot 2026-08-03 211534.png`
+- `Screenshot 2026-08-03 211544.png`
 
 ---
 
