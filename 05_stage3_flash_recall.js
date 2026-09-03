@@ -40,13 +40,33 @@ const Stage3Controller = {
       feedbackEl: document.getElementById('flash-feedback'),
       submitBtn: document.getElementById('submit-btn'),
       nextBtn: document.getElementById('next-btn'),
-      progressEl: document.getElementById('quiz-progress')
+      progressEl: document.getElementById('quiz-progress'),
+      voiceToggleBtn: document.getElementById('voice-toggle-btn'),
+      voiceToggleIcon: document.getElementById('voice-toggle-icon'),
+      voiceToggleLabel: document.getElementById('voice-toggle-label'),
+      replayVoiceBtn: document.getElementById('replay-voice-btn')
     };
   },
 
   renderInitialUI() {
     if (this.state.domCache.scoreEl) {
       this.state.domCache.scoreEl.textContent = this.state.gameData.score || 0;
+    }
+    this.updateVoiceToggleUI();
+  },
+
+  updateVoiceToggleUI() {
+    const { domCache } = this.state;
+    if (!domCache.voiceToggleBtn || typeof VoiceManager === 'undefined') return;
+    const enabled = VoiceManager.isEnabled();
+    if (enabled) {
+      domCache.voiceToggleBtn.classList.remove('muted');
+      if (domCache.voiceToggleIcon) domCache.voiceToggleIcon.textContent = '🔊';
+      if (domCache.voiceToggleLabel) domCache.voiceToggleLabel.textContent = 'Voice: ON';
+    } else {
+      domCache.voiceToggleBtn.classList.add('muted');
+      if (domCache.voiceToggleIcon) domCache.voiceToggleIcon.textContent = '🔇';
+      if (domCache.voiceToggleLabel) domCache.voiceToggleLabel.textContent = 'Voice: OFF';
     }
   },
 
@@ -55,6 +75,25 @@ const Stage3Controller = {
 
     if (domCache.startBtn) {
       domCache.startBtn.addEventListener('click', () => this.startFlashRecall());
+    }
+
+    if (domCache.voiceToggleBtn) {
+      domCache.voiceToggleBtn.addEventListener('click', () => {
+        if (typeof VoiceManager !== 'undefined') {
+          VoiceManager.toggle();
+          this.updateVoiceToggleUI();
+        }
+      });
+    }
+
+    if (domCache.replayVoiceBtn) {
+      domCache.replayVoiceBtn.addEventListener('click', () => {
+        const { sequence, currentIndex } = this.state;
+        const currentWord = sequence[currentIndex];
+        if (currentWord && typeof VoiceManager !== 'undefined') {
+          VoiceManager.speak(currentWord, { force: true });
+        }
+      });
     }
 
     if (domCache.submitBtn) {
@@ -131,7 +170,15 @@ const Stage3Controller = {
       domCache.flashWordEl.textContent = currentWord;
       domCache.flashWordEl.classList.remove('hidden');
     }
+    if (domCache.replayVoiceBtn) {
+      domCache.replayVoiceBtn.style.display = 'flex';
+    }
     if (domCache.hintEl) domCache.hintEl.textContent = 'Memorize it...';
+
+    // Automatic voice reading as the word flashes!
+    if (typeof VoiceManager !== 'undefined') {
+      VoiceManager.speak(currentWord);
+    }
 
     const baseFlashMs = 2000;
     const wordLengthExtra = Math.max(0, currentWord.length - 6) * 200;
@@ -175,6 +222,7 @@ const Stage3Controller = {
   },
 
   advanceFlashRow() {
+    if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
     this.state.currentIndex++;
     if (this.state.currentIndex < this.state.sequence.length) {
       this.beginFlashRow();
@@ -201,6 +249,7 @@ const Stage3Controller = {
   },
 
   finishFlashRecall() {
+    if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
     sharedState.save(this.state.gameData);
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
 

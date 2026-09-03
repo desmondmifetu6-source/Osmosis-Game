@@ -52,8 +52,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ── Diagram Modal Display ──────────────────────────────────────────
+  var currentModalWord = '';
+  var currentModalDef = '';
+  var modalPronounceBtn = document.getElementById('ps-modal-pronounce-btn');
+  var modalReadDefBtn = document.getElementById('ps-modal-read-def-btn');
+
   function showDiagram(word, diagramSrc, definition) {
     if (!modalEl || !diagramSrc) return;
+    currentModalWord = word || '';
+    currentModalDef = definition || '';
     if (modalWordEl) modalWordEl.textContent = (word || 'DIAGRAM').toUpperCase();
     if (modalImgEl) {
       modalImgEl.src = diagramSrc;
@@ -68,9 +75,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function closeDiagramModal() {
     if (!modalEl) return;
+    if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
     modalEl.classList.remove('active');
     if (modalImgEl) modalImgEl.removeAttribute('src');
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+  }
+
+  if (modalPronounceBtn) {
+    modalPronounceBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (currentModalWord && typeof VoiceManager !== 'undefined') {
+        VoiceManager.speak(currentModalWord, { force: true });
+      }
+    });
+  }
+
+  if (modalReadDefBtn) {
+    modalReadDefBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (currentModalDef && typeof VoiceManager !== 'undefined') {
+        VoiceManager.speak(currentModalDef, { force: true, rate: 0.95 });
+      }
+    });
   }
 
   if (modalBackBtn) {
@@ -112,13 +138,27 @@ document.addEventListener('DOMContentLoaded', function () {
       var diagSrc = getWordDiagram(p.word, p.raw || p.display);
 
       var headerHtml = '<div class="ps-ac-header">' +
+        '<div style="display: flex; align-items: center; gap: 6px;">' +
         '<span class="ac-word">' + displayWord + '</span>' +
+        '<button type="button" class="ps-pronounce-mini-btn" title="Pronounce word">🔊</button>' +
+        '</div>' +
         (diagSrc ? '<button type="button" class="ps-diagram-btn" title="View diagram schematic">🖼️ Diagram ▾</button>' : '') +
         '</div>';
 
       item.innerHTML =
         headerHtml +
         '<div class="ac-snippet">' + snippet + '</div>';
+
+      // Wire pronounce button
+      var voiceBtn = item.querySelector('.ps-pronounce-mini-btn');
+      if (voiceBtn) {
+        voiceBtn.addEventListener('click', function (e) {
+          e.stopPropagation(); // Do not add word when clicking voice button
+          if (typeof VoiceManager !== 'undefined') {
+            VoiceManager.speak(p.word, { force: true });
+          }
+        });
+      }
 
       // Wire diagram button
       if (diagSrc) {

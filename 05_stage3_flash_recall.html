@@ -38,6 +38,59 @@
       letter-spacing: 1px;
     }
 
+    .voice-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1.5px solid rgba(16, 185, 129, 0.5);
+      color: #065f46;
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(16, 185, 129, 0.15);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .voice-toggle-btn:hover {
+      background: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
+    }
+
+    .voice-toggle-btn.muted {
+      border-color: rgba(239, 68, 68, 0.5);
+      color: #991b1b;
+      box-shadow: 0 3px 10px rgba(239, 68, 68, 0.15);
+    }
+
+    .replay-voice-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+      z-index: 3;
+    }
+
+    .replay-voice-btn:hover {
+      transform: scale(1.1);
+      background: #ffffff;
+    }
+
     .flash-zone {
       min-height: 180px;
       display: flex;
@@ -139,12 +192,19 @@
 
     <div id="quiz-container" class="card stage4f-card" style="display:none;">
       <div class="s4f-header">
-        <h2>Stage 3: Flash Recall</h2>
-        <div id="quiz-progress" style="font-size:1.2rem; font-weight:bold;">1 / 10</div>
+        <div>
+          <h2>Stage 3: Flash Recall</h2>
+          <div id="quiz-progress" style="font-size:1.1rem; font-weight:bold; color:var(--text-secondary); margin-top:4px;">1 / 10</div>
+        </div>
+        <button id="voice-toggle-btn" class="voice-toggle-btn" title="Toggle Voice Pronunciation">
+          <span id="voice-toggle-icon">🔊</span>
+          <span id="voice-toggle-label">Voice: ON</span>
+        </button>
       </div>
 
       <div class="flash-zone">
         <div id="flash-word" class="flash-word">READY</div>
+        <button id="replay-voice-btn" class="replay-voice-btn" title="Hear word again" style="display:none;">🔊</button>
       </div>
       <p id="flash-hint" class="hint">Watch closely.</p>
 

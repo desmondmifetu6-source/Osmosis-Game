@@ -313,7 +313,7 @@
       "word": "abelian theorem",
       "raw_headword": "ABELIAN THEOREM",
       "synonyms": [],
-      "definition": "A theorem stating that the convergence of series or integral implies summability, with respect to some summability method. It is named after Norwegian mathematician Niels Henrik Abel (1802 - 1829). Abel's theorem states that if a power series in z converges to f ( z ) for | z | < 1 and to a for $z = 1$, then the limit of f ( z ) as z approaches 1 equals a . In other words, it is a theorem stating that if a power series in z converges for $z = a$, it converges absolutely for $$$$$$$$$|z| < |a|$$$$$$$$$. It can also be defined as a theorem, which states that if the three series with n th term a n , b n and $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ , respectively, converge, then the third series equals the product of the first two series."
+      "definition": "A theorem stating that the convergence of series or integral implies summability, with respect to some summability method. It is named after Norwegian mathematician Niels Henrik Abel (1802 - 1829). Abel's theorem states that if a power series in z converges to f ( z ) for | z | < 1 and to a for $z = 1$, then the limit of f ( z ) as z approaches 1 equals a . In other words, it is a theorem stating that if a power series in z converges for $z = a$, it converges absolutely for $$$$$$$$$$|z| < |a|$$$$$$$$$$. It can also be defined as a theorem, which states that if the three series with n th term a n , b n and $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ , respectively, converge, then the third series equals the product of the first two series."
     },
     {
       "word": "abend",
@@ -9443,7 +9443,7 @@
       "word": "annihilation",
       "raw_headword": "ANNIHILATION",
       "synonyms": [],
-      "definition": "1. In radiochemistry, it is an interaction between a particle and its antiparticle in which they both disappear. 2. In physics, it is the process in which the entire mass of two colliding particles, one of matter and one of antimatter, is converted into radiant energy (according to Einstein's famous formula $$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$ ) in the form of gamma rays or mesons. It occurs within when a particle meets in anti-particle. For example, in the case of a collision between an electron and a positron (anti-electron), which have a combined rest mass of 1.02 MeV, the result is two gamma rays each with a characteristic energy of 0.511 MeV. When nucleons annihilate each other the result is mesons. Electron-positron annihilation is made use of in PET scanning, where the source of each pair of gamma photons can be traced allowing an image to be constructed that shows where a positron-emitting tracer is located in a patient's body."
+      "definition": "1. In radiochemistry, it is an interaction between a particle and its antiparticle in which they both disappear. 2. In physics, it is the process in which the entire mass of two colliding particles, one of matter and one of antimatter, is converted into radiant energy (according to Einstein's famous formula $$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$ ) in the form of gamma rays or mesons. It occurs within when a particle meets in anti-particle. For example, in the case of a collision between an electron and a positron (anti-electron), which have a combined rest mass of 1.02 MeV, the result is two gamma rays each with a characteristic energy of 0.511 MeV. When nucleons annihilate each other the result is mesons. Electron-positron annihilation is made use of in PET scanning, where the source of each pair of gamma photons can be traced allowing an image to be constructed that shows where a positron-emitting tracer is located in a patient's body."
     },
     {
       "word": "annihilator",
@@ -17148,6 +17148,15 @@
       "raw_headword": "BASALT",
       "synonyms": [],
       "definition": "A dark glass-like extrusive igneous rock. It is the main type of rock under the sediments on ocean floors and it is also found on the Moon. which the whole structure can be generated. 7. A base for a topology, in particular, a collection of open sets such that every member of the topology is a union of members of the collection. 8. A base at a point , local base , a base for the neighbourhood system , more particularly, a subcollection of neighbourhoods of the given point with the property that every neighbourhood of the point contains a member of the subcollection. 9. In botany, it is the bottom or lower portion of the leaf blade nearest to the point of attachment."
+    },
+    {
+      "word": "base",
+      "raw_headword": "BASE",
+      "synonyms": [
+        "alkali",
+        "radix"
+      ],
+      "definition": "1. In chemistry, it is a substance which reacts with an acid to form salt and water only, or according to the Brønsted-Lowry theory it is a proton (hydrogen ion) acceptor, while the Lewis theory defines it as an electron pair donor. Bases are usually metal oxides or hydroxides. A soluble base is referred to as an alkali if it contains and releases hydroxide ions (OH-) quantitatively. Examples of common bases are sodium hydroxide and ammonia. Metal oxides, hydroxides and especially alkoxides are basic and counter anions of weak acids are weak bases. A base accepts protons from hydronium ions or donates hydroxide ions to a solution, thus lowering the concentration of hydronium ions and raising the pH. However, an acid donates protons to a solution or accepts OH-, thus increasing the concentration of hydronium and lowering the pH. The pH level of a basic solution is higher than 7. A strong base is a base which hydrolyses completely, raising the pH of the solution toward 14. Common examples of strong bases are the hydroxides of alkali metals and alkaline earth metals like NaOH and Ca(OH)2. Bases turn red litmus paper blue, phenolphthalein pink, keep bromothymol blue in its natural colour of blue and turns methyl orange yellow. Bases feel slimy or soapy on fingers, due to saponification of the lipids in human skin; however, concentrated bases are caustic on organic matter and react violently with acidic substances. Aqueous solutions or molten bases dissociate in ions and conduct electricity. 2. In mathematics, also called radix, it is the number of different single digit symbols used in a particular number system. In the usual decimal counting system of numbers 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 the base is 10. 3. A number that when raised to a potential power or when multiplied by itself a number of times has a logarithm equal to the power. For example, 10^3 = 10 × 10 × 10 = 1,000. 4. The side or face of a geometric figure, usually the one at the bottom, to which an altitude is or is thought to be drawn. 5. The number of distinct residues in a system of modular arithmetic. 6. A substructure of a given mathematical structure from which the whole structure can be generated. 7. A base for a topology; a collection of open sets such that every member of the topology is a union of members of the collection. 8. In botany, it is the bottom or lower portion of the leaf blade nearest to the point of attachment."
     },
     {
       "word": "base address",
@@ -55719,13 +55728,13 @@
       "synonyms": [
         "1879-1955"
       ],
-      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
+      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
     },
     {
       "word": "einstein's equation",
       "raw_headword": "EINSTEIN'S EQUATION",
       "synonyms": [],
-      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
+      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
     },
     {
       "word": "einsteinium",
@@ -60081,7 +60090,7 @@
       "word": "equations of motion",
       "raw_headword": "EQUATIONS OF MOTION",
       "synonyms": [],
-      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
+      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
     },
     {
       "word": "equator",
@@ -71669,7 +71678,7 @@
       "synonyms": [
         "universal molar gas constant"
       ],
-      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
+      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
     },
     {
       "word": "gas cooled reactor",
@@ -84596,7 +84605,7 @@
       "word": "ideal gas",
       "raw_headword": "IDEAL GAS",
       "synonyms": [],
-      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
+      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
     },
     {
       "word": "ideal gas law",
@@ -92920,7 +92929,7 @@
       "synonyms": [
         "equations of motion"
       ],
-      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
+      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
     },
     {
       "word": "kinematic viscosity",
@@ -95454,7 +95463,7 @@
       "word": "law",
       "raw_headword": "LAW",
       "synonyms": [],
-      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$."
+      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$."
     },
     {
       "word": "law of averages",
@@ -103364,7 +103373,7 @@
       "word": "mass-energy equation",
       "raw_headword": "MASS-ENERGY EQUATION",
       "synonyms": [],
-      "definition": "The equation $$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
+      "definition": "The equation $$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
     },
     {
       "word": "mass-energy relationship",
@@ -114393,7 +114402,7 @@
       "word": "newton's laws of motion",
       "raw_headword": "NEWTON'S LAWS OF MOTION",
       "synonyms": [],
-      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
+      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
     },
     {
       "word": "newton's method",
@@ -118557,13 +118566,13 @@
       "word": "ohm's law",
       "raw_headword": "OHM'S LAW",
       "synonyms": [],
-      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
+      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
     },
     {
       "word": "ohmic device",
       "raw_headword": "OHMIC DEVICE",
       "synonyms": [],
-      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
+      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
     },
     {
       "word": "ohmic heating",
@@ -131221,7 +131230,7 @@
       "word": "pochhammer symbol",
       "raw_headword": "POCHHAMMER SYMBOL",
       "synonyms": [],
-      "definition": "The symbol ( a ) n , used to represent either the rising factorial or the falling factorial. For rising factorial, it is written as $(a)_n = a(a+1)\\cdots(a+n-1) = \\frac{\\Gamma(a+n)}{\\Gamma(a)}$ ."
+      "definition": "The symbol ( a ) n , used to represent either the rising factorial or the falling factorial. For rising factorial, it is written as $(a)_n = a(a+1)\\cdots(a+n^-1) = \\frac{\\Gamma(a+n)}{\\Gamma(a)}$ ."
     },
     {
       "word": "pockels cells",
@@ -132262,7 +132271,7 @@
       "word": "polygonal number",
       "raw_headword": "POLYGONAL NUMBER",
       "synonyms": [],
-      "definition": "The number of equally spaced dots needed to draw a polygon. Polygonal numbers, which are a type of figurate number, include square numbers, triangular numbers, pentagonal numbers and hexagonal numbers. Polygonal numbers form an arithmetic sequence of the second order. The general term of these sequences is as follows: $$z_n = \\frac{n}{2}[2a + (n-1)d]$$ , where d is one of the numbers 1, 2, 3, etc. With d = 1, the triangular numbers include: 1, 3, 6, 10, 15, etc. With d = 2 the square numbers include: 1, 4, 9, 16, 25, etc. With d = 3 the pentagonal numbers include: 1, 5, 12, 22, 35, etc."
+      "definition": "The number of equally spaced dots needed to draw a polygon. Polygonal numbers, which are a type of figurate number, include square numbers, triangular numbers, pentagonal numbers and hexagonal numbers. Polygonal numbers form an arithmetic sequence of the second order. The general term of these sequences is as follows: $$z_n = \\frac{n}{2}[2a + (n^-1)d]$$ , where d is one of the numbers 1, 2, 3, etc. With d = 1, the triangular numbers include: 1, 3, 6, 10, 15, etc. With d = 2 the square numbers include: 1, 4, 9, 16, 25, etc. With d = 3 the pentagonal numbers include: 1, 5, 12, 22, 35, etc."
     },
     {
       "word": "polygranular carbon",
@@ -149253,7 +149262,7 @@
       "synonyms": [
         "physical law"
       ],
-      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
+      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
     },
     {
       "word": "scientific method",
@@ -157696,7 +157705,7 @@
       "word": "speed of light",
       "raw_headword": "SPEED OF LIGHT",
       "synonyms": [],
-      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$ ."
+      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$ ."
     },
     {
       "word": "speed of sound",

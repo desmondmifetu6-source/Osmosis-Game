@@ -70,6 +70,47 @@
       font-style: italic;
       color: var(--text-secondary);
     }
+
+    .rev-word-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .rev-word-header strong {
+      margin-bottom: 0;
+    }
+
+    .rev-audio-btns {
+      display: inline-flex;
+      gap: 0.4rem;
+    }
+
+    .rev-voice-btn {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      color: #0f172a;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .rev-voice-btn:hover {
+      background: #ffffff;
+      border-color: #10b981;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(16, 185, 129, 0.2);
+    }
   </style>
 </head>
 

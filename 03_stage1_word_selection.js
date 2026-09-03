@@ -248,6 +248,7 @@ const Stage1Controller = {
       this.state.localSelectedWord = word;
       tile.dataset.collected = "true";
       if (typeof AudioManager !== 'undefined') AudioManager.play('success');
+      if (typeof VoiceManager !== 'undefined') VoiceManager.speak(word);
 
       this.rewardPoints(5, tile);
 
@@ -307,6 +308,7 @@ const Stage1Controller = {
   // You clicked finish! We save your new word to the global save file (cooldown memory)
   // so you don't get the same word again for 3 days. Then we move you along!
   handleProceed() {
+    if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
     const { gameData, localSelectedWord } = this.state;
 
     if (localSelectedWord) {

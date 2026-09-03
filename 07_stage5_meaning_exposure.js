@@ -40,9 +40,36 @@ function startRevisionPhase() {
     const formattedDef = (typeof window.formatScienceText === 'function') 
       ? window.formatScienceText(defText) 
       : defText;
-    // Write the bold Word and then its scientific meaning directly from the backpack
-    item.innerHTML = `<strong>${w}</strong><p class="revision-def-text">${formattedDef}</p>`;
+    // Write the bold Word, audio buttons, and scientific meaning
+    item.innerHTML = `
+      <div class="rev-word-header">
+        <strong>${w}</strong>
+        <div class="rev-audio-btns">
+          <button type="button" class="rev-voice-btn rev-pronounce-btn" title="Pronounce word">🔊 Word</button>
+          <button type="button" class="rev-voice-btn rev-def-btn" title="Read meaning aloud">📖 Meaning</button>
+        </div>
+      </div>
+      <p class="revision-def-text">${formattedDef}</p>
+    `;
     listEl.appendChild(item); // Tape the box to the piece of paper
+
+    const pronounceBtn = item.querySelector('.rev-pronounce-btn');
+    if (pronounceBtn) {
+      pronounceBtn.addEventListener('click', () => {
+        if (typeof VoiceManager !== 'undefined') {
+          VoiceManager.speak(w, { force: true });
+        }
+      });
+    }
+
+    const defBtn = item.querySelector('.rev-def-btn');
+    if (defBtn) {
+      defBtn.addEventListener('click', () => {
+        if (typeof VoiceManager !== 'undefined') {
+          VoiceManager.speak(defText, { force: true, rate: 0.95 });
+        }
+      });
+    }
 
     const pEl = item.querySelector('.revision-def-text');
     if (pEl && typeof window.renderScienceText === 'function') {
@@ -81,6 +108,7 @@ function startRevisionPhase() {
 // Function: endRevisionPhase
 // Throws the player out of the reading room and right into Stage 5!
 function endRevisionPhase() {
+  if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
   navigateWithTransition('08_stage6_definition_selection.html');
 }
 

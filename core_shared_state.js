@@ -524,6 +524,113 @@ const AudioManager = {
 };
 
 // =====================================================================
+// VoiceManager: Educational Text-to-Speech Engine
+// =====================================================================
+const VoiceManager = {
+  synth: typeof window !== 'undefined' ? window.speechSynthesis : null,
+  enabledKey: 'osmosis_voice_enabled',
+  selectedVoice: null,
+
+  init: function () {
+    if (!this.synth) return;
+    if (this.selectedVoice) return;
+
+    const findVoice = () => {
+      const voices = this.synth.getVoices();
+      if (!voices || voices.length === 0) return;
+      // Preference: Natural, Google, British/US English voices
+      this.selectedVoice = voices.find(v => (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Serena')) && v.lang.startsWith('en')) ||
+                           voices.find(v => v.lang === 'en-GB') ||
+                           voices.find(v => v.lang.startsWith('en')) ||
+                           voices[0];
+    };
+
+    findVoice();
+    if (this.synth.onvoiceschanged !== undefined) {
+      this.synth.onvoiceschanged = findVoice;
+    }
+  },
+
+  isEnabled: function () {
+    const val = localStorage.getItem(this.enabledKey);
+    return val === null ? true : val === 'true';
+  },
+
+  setEnabled: function (enabled) {
+    localStorage.setItem(this.enabledKey, enabled ? 'true' : 'false');
+    if (!enabled) this.stop();
+  },
+
+  toggle: function () {
+    const nextState = !this.isEnabled();
+    this.setEnabled(nextState);
+    return nextState;
+  },
+
+  cleanTextForSpeech: function (text) {
+    if (!text) return '';
+    return text
+      .replace(/\$\$\\frac\{([^}]+)\}\{([^}]+)\}\$\$/g, '$1 over $2')
+      .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '$1 over $2')
+      .replace(/\\sqrt\{([^}]+)\}/g, 'square root of $1')
+      .replace(/\^2\b/g, ' squared')
+      .replace(/\^3\b/g, ' cubed')
+      .replace(/\\pm/g, ' plus or minus ')
+      .replace(/\\times/g, ' times ')
+      .replace(/\\cdot/g, ' dot ')
+      .replace(/\\alpha/g, ' alpha ')
+      .replace(/\\beta/g, ' beta ')
+      .replace(/\\gamma/g, ' gamma ')
+      .replace(/\\pi/g, ' pi ')
+      .replace(/\$+/g, '')
+      .replace(/\\[a-zA-Z]+/g, ' ')
+      .replace(/[{}]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  },
+
+  speak: function (text, options = {}) {
+    if (!this.synth) return;
+    if (!this.isEnabled() && !options.force) return;
+
+    this.init();
+    this.stop(); // Stop previous speech immediately
+
+    const cleaned = this.cleanTextForSpeech(text);
+    if (!cleaned) return;
+
+    const utterance = new SpeechSynthesisUtterance(cleaned);
+    if (this.selectedVoice) utterance.voice = this.selectedVoice;
+    
+    // Clear, comfortable educational pacing
+    utterance.rate = options.rate || 0.92;
+    utterance.pitch = options.pitch || 1.0;
+    utterance.volume = options.volume || 1.0;
+
+    if (options.onend) utterance.onend = options.onend;
+    if (options.onerror) utterance.onerror = options.onerror;
+
+    try {
+      this.synth.speak(utterance);
+    } catch (err) {
+      console.warn('VoiceManager speak error:', err);
+    }
+  },
+
+  stop: function () {
+    if (this.synth) {
+      try {
+        this.synth.cancel();
+      } catch (err) {}
+    }
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.VoiceManager = VoiceManager;
+}
+
+// =====================================================================
 // Global Event Listeners (The Lookouts)
 // =====================================================================
 

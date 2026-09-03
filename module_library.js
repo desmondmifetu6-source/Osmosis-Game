@@ -208,11 +208,33 @@ function performSearch() {
     }
   }
 
+  currentLoadedEntry = entry;
   resultEl.style.display = 'block';
   if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
 }
 
+let currentLoadedEntry = null;
+const pronounceBtn = document.getElementById('dict-pronounce-btn');
+const readDefBtn = document.getElementById('dict-read-def-btn');
+
+if (pronounceBtn) {
+  pronounceBtn.addEventListener('click', () => {
+    if (currentLoadedEntry && typeof VoiceManager !== 'undefined') {
+      VoiceManager.speak(currentLoadedEntry.word, { force: true });
+    }
+  });
+}
+
+if (readDefBtn) {
+  readDefBtn.addEventListener('click', () => {
+    if (currentLoadedEntry && typeof VoiceManager !== 'undefined') {
+      VoiceManager.speak(currentLoadedEntry.definition, { force: true, rate: 0.95 });
+    }
+  });
+}
+
 document.getElementById('go-home-btn').addEventListener('click', () => {
+  if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
   window.location.href = '01_home_menu.html';
 });
 
