@@ -1,7 +1,8 @@
 // =====================================================================
 // FILE: 02b_personal_study_setup.js
 // Personal Study — uses the exact same STEMDictionary.predictWords()
-// autocomplete engine as the Dictionary Library.
+// autocomplete engine as the Dictionary Library, now with interactive
+// diagram preview and full modal display with back navigation.
 // =====================================================================
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -17,17 +18,74 @@ document.addEventListener('DOMContentLoaded', function () {
   var selectedWords = [];   // array of { word, definition }
 
   // DOM refs
-  var input      = document.getElementById('ps-search-input');
-  var dropdown   = document.getElementById('ps-autocomplete-dropdown');
-  var chipsEl    = document.getElementById('ps-chips');
-  var emptyHint  = document.getElementById('ps-empty-hint');
-  var counterEl  = document.getElementById('ps-counter');
-  var beginBtn   = document.getElementById('ps-begin-btn');
-  var backBtn    = document.getElementById('ps-back-btn');
+  var input       = document.getElementById('ps-search-input');
+  var dropdown    = document.getElementById('ps-autocomplete-dropdown');
+  var chipsEl     = document.getElementById('ps-chips');
+  var emptyHint   = document.getElementById('ps-empty-hint');
+  var counterEl   = document.getElementById('ps-counter');
+  var beginBtn    = document.getElementById('ps-begin-btn');
+  var backBtn     = document.getElementById('ps-back-btn');
+
+  // Modal DOM refs
+  var modalEl     = document.getElementById('ps-diagram-modal');
+  var modalWordEl = document.getElementById('ps-modal-word');
+  var modalImgEl  = document.getElementById('ps-modal-img');
+  var modalDefEl  = document.getElementById('ps-modal-def');
+  var modalBackBtn= document.getElementById('ps-modal-back-btn');
 
   function navigate(url) {
     if (typeof window.navigateWithTransition === 'function') navigateWithTransition(url);
     else window.location.href = url;
+  }
+
+  // ── Diagram Lookup Helper ──────────────────────────────────────────
+  function getWordDiagram(word, raw) {
+    if (typeof window.DictionaryDiagrams === 'undefined' || !word) return null;
+    var wKey = word.toLowerCase().trim();
+    var rawKey = (raw || '').toLowerCase().trim();
+    var baseWordKey = wKey.replace(/\(.*?\)/g, '').trim();
+
+    return window.DictionaryDiagrams[wKey] ||
+           (rawKey && window.DictionaryDiagrams[rawKey]) ||
+           window.DictionaryDiagrams[baseWordKey] ||
+           null;
+  }
+
+  // ── Diagram Modal Display ──────────────────────────────────────────
+  function showDiagram(word, diagramSrc, definition) {
+    if (!modalEl || !diagramSrc) return;
+    if (modalWordEl) modalWordEl.textContent = (word || 'DIAGRAM').toUpperCase();
+    if (modalImgEl) {
+      modalImgEl.src = diagramSrc;
+      modalImgEl.alt = (word || 'STEM') + ' diagram';
+    }
+    if (modalDefEl) {
+      modalDefEl.textContent = definition || 'Visual scientific schematic from the 6-In-1 STEM Dictionary.';
+    }
+    modalEl.classList.add('active');
+    if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+  }
+
+  function closeDiagramModal() {
+    if (!modalEl) return;
+    modalEl.classList.remove('active');
+    if (modalImgEl) modalImgEl.removeAttribute('src');
+    if (typeof AudioManager !== 'undefined') AudioManager.play('click');
+  }
+
+  if (modalBackBtn) {
+    modalBackBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      closeDiagramModal();
+    });
+  }
+
+  if (modalEl) {
+    modalEl.addEventListener('click', function (e) {
+      if (e.target === modalEl) {
+        closeDiagramModal();
+      }
+    });
   }
 
   // ── Autocomplete (identical logic to module_library.html) ──────────
@@ -51,9 +109,27 @@ document.addEventListener('DOMContentLoaded', function () {
         ? p.definition.substring(0, 80) + '...'
         : p.definition;
 
+      var diagSrc = getWordDiagram(p.word, p.raw || p.display);
+
+      var headerHtml = '<div class="ps-ac-header">' +
+        '<span class="ac-word">' + displayWord + '</span>' +
+        (diagSrc ? '<button type="button" class="ps-diagram-btn" title="View diagram schematic">🖼️ Diagram ▾</button>' : '') +
+        '</div>';
+
       item.innerHTML =
-        '<div class="ac-word">' + displayWord + '</div>' +
+        headerHtml +
         '<div class="ac-snippet">' + snippet + '</div>';
+
+      // Wire diagram button
+      if (diagSrc) {
+        var diagBtn = item.querySelector('.ps-diagram-btn');
+        if (diagBtn) {
+          diagBtn.addEventListener('click', function (e) {
+            e.stopPropagation(); // Do not add word when clicking diagram button
+            showDiagram(p.word, diagSrc, p.definition);
+          });
+        }
+      }
 
       item.addEventListener('click', function () {
         dropdown.style.display = 'none';
@@ -86,8 +162,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  input.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') dropdown.style.display = 'none';
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      if (modalEl && modalEl.classList.contains('active')) {
+        closeDiagramModal();
+      } else {
+        dropdown.style.display = 'none';
+      }
+    }
   });
 
   // ── Deck management ────────────────────────────────────────────────
@@ -143,9 +225,24 @@ document.addEventListener('DOMContentLoaded', function () {
       selectedWords.forEach(function (item) {
         var chip = document.createElement('div');
         chip.className = 'ps-chip';
+
+        var diagSrc = getWordDiagram(item.word);
+
         chip.innerHTML =
           '<span>' + sharedState.escapeHTML(item.word) + '</span>' +
-          '<button class="ps-chip-remove" title="Remove">✕</button>';
+          (diagSrc ? '<button type="button" class="ps-chip-diagram-btn" title="View diagram schematic">🖼️ ▾</button>' : '') +
+          '<button type="button" class="ps-chip-remove" title="Remove">✕</button>';
+
+        if (diagSrc) {
+          var chipDiagBtn = chip.querySelector('.ps-chip-diagram-btn');
+          if (chipDiagBtn) {
+            chipDiagBtn.addEventListener('click', function (e) {
+              e.stopPropagation();
+              showDiagram(item.word, diagSrc, item.definition);
+            });
+          }
+        }
+
         chip.querySelector('.ps-chip-remove').addEventListener('click', function (e) {
           e.stopPropagation();
           removeWord(item.word);
