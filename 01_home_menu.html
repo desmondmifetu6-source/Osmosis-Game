@@ -128,15 +128,75 @@
       margin-top: 1.5rem;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 540px) {
+      body {
+        align-items: flex-start;
+        padding: 0.4rem 0;
+      }
+
+      .app-container {
+        padding: 0.4rem;
+      }
+
       .card {
-        padding: 1.8rem 1.2rem !important;
-        margin: 0.5rem;
+        padding: 1.2rem 0.85rem !important;
+        margin: 0;
+        max-width: 100% !important;
+        border-radius: 20px !important;
+      }
+
+      .book-preview-card {
+        padding: 0.8rem 0.75rem 0.6rem;
+        margin-bottom: 0.85rem;
+        border-radius: 16px;
+      }
+
+      .home-book-badge {
+        width: 50px;
+        margin: 0.35rem auto 0.25rem;
+      }
+
+      .dict-source-tag {
+        font-size: 0.72rem;
+        letter-spacing: 0.8px;
+      }
+
+      .dict-cover-hint {
+        font-size: 0.68rem;
       }
 
       .akwaaba-header {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         letter-spacing: 1px;
+        margin-bottom: 0.2rem;
+        padding-bottom: 0.35rem;
+      }
+
+      .menu-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.55rem;
+        margin-top: 0.85rem;
+      }
+
+      .classic-btn {
+        padding: 0.75rem 0.45rem !important;
+        font-size: 0.74rem !important;
+        letter-spacing: 0.4px !important;
+        min-height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.25;
+        border-radius: 12px !important;
+      }
+
+      .classic-btn span[style*="accent-red"] {
+        top: -6px !important;
+        right: -4px !important;
+        font-size: 0.58rem !important;
+        padding: 1px 5px !important;
       }
     }
 

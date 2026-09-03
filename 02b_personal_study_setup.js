@@ -58,16 +58,29 @@ document.addEventListener('DOMContentLoaded', function () {
   var modalReadDefBtn = document.getElementById('ps-modal-read-def-btn');
 
   function showDiagram(word, diagramSrc, definition) {
-    if (!modalEl || !diagramSrc) return;
+    if (!modalEl) return;
     currentModalWord = word || '';
     currentModalDef = definition || '';
-    if (modalWordEl) modalWordEl.textContent = (word || 'DIAGRAM').toUpperCase();
-    if (modalImgEl) {
-      modalImgEl.src = diagramSrc;
-      modalImgEl.alt = (word || 'STEM') + ' diagram';
+    if (modalWordEl) modalWordEl.textContent = (word || 'DEFINITION').toUpperCase();
+
+    var subtitleEl = modalEl.querySelector('.ps-diagram-subtitle');
+    var imgWrapperEl = modalEl.querySelector('.ps-diagram-img-wrapper');
+
+    if (diagramSrc) {
+      if (modalImgEl) {
+        modalImgEl.src = diagramSrc;
+        modalImgEl.alt = (word || 'STEM') + ' diagram';
+      }
+      if (imgWrapperEl) imgWrapperEl.style.display = 'flex';
+      if (subtitleEl) subtitleEl.textContent = 'Osmosis STEM Diagram & Definition';
+    } else {
+      if (modalImgEl) modalImgEl.removeAttribute('src');
+      if (imgWrapperEl) imgWrapperEl.style.display = 'none';
+      if (subtitleEl) subtitleEl.textContent = 'Osmosis STEM Dictionary Definition';
     }
+
     if (modalDefEl) {
-      modalDefEl.textContent = definition || 'Visual scientific schematic from the 6-In-1 STEM Dictionary.';
+      modalDefEl.textContent = definition || 'Scientific definition from the 6-In-1 STEM Dictionary.';
     }
     modalEl.classList.add('active');
     if (typeof AudioManager !== 'undefined') AudioManager.play('click');
@@ -137,12 +150,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var diagSrc = getWordDiagram(p.word, p.raw || p.display);
 
+      var actionBtnHtml = diagSrc
+        ? '<button type="button" class="ps-diagram-btn" title="View diagram schematic & definition">🖼️ Diagram ▾</button>'
+        : '<button type="button" class="ps-def-btn" title="View definition">📖 Meaning ▾</button>';
+
       var headerHtml = '<div class="ps-ac-header">' +
         '<div style="display: flex; align-items: center; gap: 6px;">' +
         '<span class="ac-word">' + displayWord + '</span>' +
         '<button type="button" class="ps-pronounce-mini-btn" title="Pronounce word">🔊</button>' +
         '</div>' +
-        (diagSrc ? '<button type="button" class="ps-diagram-btn" title="View diagram schematic">🖼️ Diagram ▾</button>' : '') +
+        actionBtnHtml +
         '</div>';
 
       item.innerHTML =
@@ -160,15 +177,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }
 
-      // Wire diagram button
-      if (diagSrc) {
-        var diagBtn = item.querySelector('.ps-diagram-btn');
-        if (diagBtn) {
-          diagBtn.addEventListener('click', function (e) {
-            e.stopPropagation(); // Do not add word when clicking diagram button
-            showDiagram(p.word, diagSrc, p.definition);
-          });
-        }
+      // Wire view detail (diagram or definition) button
+      var viewDetailBtn = item.querySelector('.ps-diagram-btn, .ps-def-btn');
+      if (viewDetailBtn) {
+        viewDetailBtn.addEventListener('click', function (e) {
+          e.stopPropagation(); // Do not add word when clicking details button
+          showDiagram(p.word, diagSrc, p.definition);
+        });
       }
 
       item.addEventListener('click', function () {
@@ -267,20 +282,21 @@ document.addEventListener('DOMContentLoaded', function () {
         chip.className = 'ps-chip';
 
         var diagSrc = getWordDiagram(item.word);
+        var chipActionBtn = diagSrc
+          ? '<button type="button" class="ps-chip-diagram-btn" title="View diagram schematic & definition">🖼️ ▾</button>'
+          : '<button type="button" class="ps-chip-def-btn" title="View definition">📖 ▾</button>';
 
         chip.innerHTML =
           '<span>' + sharedState.escapeHTML(item.word) + '</span>' +
-          (diagSrc ? '<button type="button" class="ps-chip-diagram-btn" title="View diagram schematic">🖼️ ▾</button>' : '') +
+          chipActionBtn +
           '<button type="button" class="ps-chip-remove" title="Remove">✕</button>';
 
-        if (diagSrc) {
-          var chipDiagBtn = chip.querySelector('.ps-chip-diagram-btn');
-          if (chipDiagBtn) {
-            chipDiagBtn.addEventListener('click', function (e) {
-              e.stopPropagation();
-              showDiagram(item.word, diagSrc, item.definition);
-            });
-          }
+        var chipViewBtn = chip.querySelector('.ps-chip-diagram-btn, .ps-chip-def-btn');
+        if (chipViewBtn) {
+          chipViewBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            showDiagram(item.word, diagSrc, item.definition);
+          });
         }
 
         chip.querySelector('.ps-chip-remove').addEventListener('click', function (e) {

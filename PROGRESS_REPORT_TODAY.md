@@ -98,6 +98,35 @@ Applied vocal pronunciation and read-aloud features across 4 additional key stag
 
 ---
 
+## 8. 📱 Mobile 2-Column Responsive Layout Upgrades
+* **Files Modified:**
+  * [`01_home_menu.html`](file:///c:/Users/Desmond/Desktop/final_osmosis/01_home_menu.html)
+  * [`module_about.html`](file:///c:/Users/Desmond/Desktop/final_osmosis/module_about.html)
+  * [`module_library.html`](file:///c:/Users/Desmond/Desktop/final_osmosis/module_library.html)
+  * [`07_stage5_meaning_exposure.html`](file:///c:/Users/Desmond/Desktop/final_osmosis/07_stage5_meaning_exposure.html)
+  * [`02b_personal_study_setup.html`](file:///c:/Users/Desmond/Desktop/final_osmosis/02b_personal_study_setup.html)
+* **What was accomplished:**
+  * **Main Menu:** Replaced the single-column 10-button vertical stack with a sleek **2-column mobile grid** (`1fr 1fr`), scaling button paddings, book badges, and font sizes to fit comfortably on small screens without endless scrolling.
+  * **About Page:** Maintained the side-by-side split movie layout (`1.15fr 0.85fr`) for all 7 tournament stages and official document cards on phones, eliminating single-column collapse.
+  * **Dictionary Library:** Transformed search bar and audio controls into a compact mobile touch row.
+  * **Stage 5 & Personal Study:** Added responsive padding, font clamp, and scaled modal sizing.
+
+---
+
+## 9. 🔍 Universal Definition Viewer in Exam Study Setup
+* **Files Modified:** [`02b_personal_study_setup.html`](file:///c:/Users/Desmond/Desktop/final_osmosis/02b_personal_study_setup.html), [`02b_personal_study_setup.js`](file:///c:/Users/Desmond/Desktop/final_osmosis/02b_personal_study_setup.js)
+* **What was accomplished:**
+  * Upgraded the modal viewer to allow viewing word definitions **regardless of whether the word has a schematic diagram or not**.
+  * Autocomplete search predictions now display:
+    * `[ 🖼️ Diagram ▾ ]` when a diagram schematic is available.
+    * `[ 📖 Meaning ▾ ]` when only the text definition is present.
+  * Selected deck chips now feature:
+    * `[ 🖼️ ▾ ]` for diagram-equipped words.
+    * `[ 📖 ▾ ]` for text-definition words.
+  * The modal intelligently toggles the diagram image section on/off, displays scientific formatting, and enables voice pronunciation (`🔊 Pronounce`) and text-to-speech reading (`📖 Read Aloud`) for all words.
+
+---
+
 ## 🧪 Verification & Health Check
 * All JavaScript files validated with `node -c` (zero syntax errors).
 * All 17 image references verified on disk (100% path resolution).

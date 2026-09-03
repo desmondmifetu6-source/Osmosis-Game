@@ -252,15 +252,65 @@
       font-style: italic;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 520px) {
+      .card {
+        padding: 1.2rem 0.9rem !important;
+        border-radius: 20px !important;
+      }
+
+      .dict-book-hero {
+        margin-bottom: 1.2rem;
+      }
+
+      .dict-book-thumb {
+        width: 60px;
+        height: auto;
+      }
+
+      .dict-page-title {
+        font-size: 1.6rem;
+      }
+
+      .dict-subtitle {
+        font-size: 0.85rem;
+      }
+
       .search-bar {
-        flex-direction: column;
-        gap: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        gap: 0.4rem;
+        align-items: stretch;
+      }
+
+      .search-bar input {
+        font-size: 0.9rem;
+        padding: 0.75rem 0.9rem;
       }
 
       .search-bar button {
-        width: 100%;
-        padding: 0.8rem;
+        padding: 0.75rem 1.1rem !important;
+        font-size: 0.82rem !important;
+        white-space: nowrap;
+        width: auto !important;
+      }
+
+      .dict-word {
+        font-size: 1.6rem;
+      }
+
+      .dict-audio-bar {
+        gap: 0.4rem !important;
+        margin: 0.5rem 0 0.9rem !important;
+      }
+
+      .dict-audio-bar button {
+        padding: 0.45rem 0.9rem !important;
+        font-size: 0.78rem !important;
+      }
+
+      .dict-meaning {
+        font-size: 0.95rem;
+        line-height: 1.6;
       }
     }
   </style>
