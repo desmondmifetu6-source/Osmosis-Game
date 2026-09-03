@@ -131,7 +131,94 @@ Source Folder: `section a-b images/`
 
 ---
 
+### Final Batch (Completed) — Screenshots 61 to 138
+Source Folder: `section a-b images/`
+
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 61 | `Screenshot 2026-08-03 211552.png` | Angle of elevation | `dict_angle_of_elevation.png` | `angle of elevation` |
+| 62 | `Screenshot 2026-08-03 211605.png` | Animal husbandry (cow, goat, pig external features) | `dict_animal_husbandry.png`, `dict_cow_external_features.png`, `dict_goat_external_features.png`, `dict_pig_external_features.png` | `animal husbandry`, `cow external features`, `goat external features`, `pig external features` |
+| 63 | `Screenshot 2026-08-03 211627.png` | Anomalous expansion of water | `dict_anomalous_expansion_of_water.png` | `anomalous expansion of water` |
+| 64 | `Screenshot 2026-08-03 211638.png` | Anomer (alpha and beta glucose) | `dict_anomer.png`, `dict_alpha_glucose.png`, `dict_beta_glucose.png` | `anomer`, `alpha glucose`, `beta glucose` |
+| 65 | `Screenshot 2026-08-03 211647.png` | Antheridia of moss / Antheridium | `dict_antheridia_of_moss.png`, `dict_antheridium.png` | `antheridia of moss`, `antheridium` |
+| 66 | `Screenshot 2026-08-03 211654.png` | Anthocarp of fruit | `dict_anthocarp.png`, `dict_anthocarp_of_fruit.png` | `anthocarp`, `anthocarp of fruit` |
+| 67 | `Screenshot 2026-08-03 211704.png` | Anti-magic square | `dict_anti_magic_square.png` | `anti-magic square` |
+| 68 | `Screenshot 2026-08-03 211715.png` | Antinode, node & standing wave | `dict_antinode.png`, `dict_node.png`, `dict_standing_wave.png` | `antinode`, `node`, `standing wave` |
+| 69 | `Screenshot 2026-08-03 211725.png` | Antipodal cell | `dict_antipodal_cell.png` | `antipodal cell` |
+| 70 | `Screenshot 2026-08-03 211739.png` | Apollonius circle | `dict_apollonius_circle.png` | `apollonius circle` |
+| 71 | `Screenshot 2026-08-03 211748.png` | Apothem | `dict_apothem.png` | `apothem` |
+| 72 | `Screenshot 2026-08-03 211759.png` | Arc of a circle | `dict_arc.png`, `dict_arc_of_a_circle.png` | `arc`, `arc of a circle` |
+| 73 | `Screenshot 2026-08-03 211810.png` | Archimedean spiral | `dict_archimedean_spiral.png` | `archimedean spiral` |
+| 74 | `Screenshot 2026-08-03 211822.png` | Argand diagram | `dict_argand_diagram.png` | `argand diagram` |
+| 75 | `Screenshot 2026-08-03 211828.png` | Argument of a complex number | `dict_argument_of_a_complex_number.png` | `argument of a complex number` |
+| 76 | `Screenshot 2026-08-03 211841.png` | Artery / Structure of an artery | `dict_artery.png`, `dict_structure_of_an_artery.png` | `artery`, `structure of an artery` |
+| 77 | `Screenshot 2026-08-03 211854.png` | Chemical structure of Aspirin | `dict_aspirin.png` | `aspirin` |
+| 78 | `Screenshot 2026-08-03 211904.png` | Chemical structure of Ascorbic Acid (Vitamin C) | `dict_ascorbic_acid.png`, `dict_vitamin_c.png` | `ascorbic acid`, `vitamin c` |
+| 79 | `Screenshot 2026-08-03 211914.png` | Chemical structure of Aspartame | `dict_aspartame.png` | `aspartame` |
+| 80 | `Screenshot 2026-08-03 211921.png` | Chemical structure of Aspartic acid | `dict_aspartic_acid.png` | `aspartic acid` |
+| 81 | `Screenshot 2026-08-03 211932.png` | Astronomical telescope (near point & infinity) | `dict_astronomical_telescope.png`, `dict_astronomical_telescope_near_point.png`, `dict_astronomical_telescope_infinity.png` | `astronomical telescope`, `astronomical telescope near point`, `astronomical telescope at infinity` |
+| 82 | `Screenshot 2026-08-03 212055.png` | Asymptote | `dict_asymptote.png` | `asymptote` |
+| 83 | `Screenshot 2026-08-03 212355.png` | Normal curve / Bell curve | `dict_normal_curve.png`, `dict_bell_curve.png` | `normal curve`, `bell curve` |
+| 84 | `Screenshot 2026-08-03 212421.png` | Atomic weight / mass table | `dict_atomic_weight_table.png`, `dict_atomic_mass_table.png` | `atomic weight table`, `atomic mass table` |
+| 85 | `Screenshot 2026-08-03 212447.png` | Chemical structure of Atropine | `dict_atropine.png` | `atropine` |
+| 86 | `Screenshot 2026-08-03 212456.png` | Auricle of a leaf | `dict_auricle_of_a_leaf.png` | `auricle of a leaf` |
+| 87 | `Screenshot 2026-08-03 212506.png` | Autotransformer | `dict_autotransformer.png` | `autotransformer` |
+| 88 | `Screenshot 2026-08-03 212515.png` | Chemical structure of Auxin (Indole-3-acetic acid) | `dict_auxin.png`, `dict_indole_3_acetic_acid.png` | `auxin`, `indole-3-acetic acid` |
+| 89 | `Screenshot 2026-08-03 212523.png` | Awn of a spikelet | `dict_awn_of_a_spikelet.png`, `dict_awn.png` | `awn`, `awn of a spikelet` |
+| 90 | `Screenshot 2026-08-03 212536.png` | Parabola line of symmetry | `dict_axis_of_symmetry_parabola.png` | `axis of symmetry of a parabola` |
+| 91 | `Screenshot 2026-08-03 212543.png` | Axis vertebra of a mammal | `dict_axis_vertebra.png` | `axis vertebra` |
+| 92 | `Screenshot 2026-08-03 212555.png` | Baermann funnel | `dict_baermann_funnel.png` | `baermann funnel` |
+| 93 | `Screenshot 2026-08-03 212602.png` | Beam balance | `dict_beam_balance.png` | `beam balance` |
+| 94 | `Screenshot 2026-08-03 212642.png` | Vertical & Horizontal bar chart/graph | `dict_bar_chart.png`, `dict_bar_graph.png` | `bar chart`, `bar graph`, `vertical bar chart`, `horizontal bar chart` |
+| 95 | `Screenshot 2026-08-03 212657.png` | Chemical structure of Barbiturate | `dict_barbiturate.png` | `barbiturate` |
+| 96 | `Screenshot 2026-08-03 212704.png` | Mercury Barometer | `dict_barometer.png`, `dict_mercury_barometer.png` | `barometer`, `mercury barometer` |
+| 97 | `Screenshot 2026-08-03 212712.png` | Baryon Number Table | `dict_baryon_number_table.png` | `baryon number table`, `baryon` |
+| 98 | `Screenshot 2026-08-03 212726.png` | Basal placentation | `dict_basal_placentation.png` | `basal placentation` |
+| 99 | `Screenshot 2026-08-03 212741.png` | Base Station System (BSS) | `dict_base_station_system.png`, `dict_bss.png` | `base station system`, `bss` |
+| 100 | `Screenshot 2026-08-03 212749.png` | Base pairing (Thymine-Adenine & Cytosine-Guanine) | `dict_base_pairing.png` | `base pairing`, `base pairing thymine adenine`, `base pairing cytosine guanine` |
+| 101 | `Screenshot 2026-08-03 212811.png` | Categories of rays (Parallel, Convergent, Divergent) | `dict_beam_of_rays.png` | `beam of rays`, `parallel rays`, `convergent rays`, `divergent rays` |
+| 102 | `Screenshot 2026-08-03 212827.png` | Bell curve / Normal distribution graph | `dict_bell_curve_normal_distribution.png` | `bell curve normal distribution`, `normal distribution` |
+| 103 | `Screenshot 2026-08-03 212834.png` | Bell Jar | `dict_bell_jar.png` | `bell jar` |
+| 104 | `Screenshot 2026-08-03 213041.png` | Chemical structure of Butene (1-butene, trans-2-butene) | `dict_butene.png` | `butene`, `1-butene`, `trans-2-butene` |
+| 105 | `Screenshot 2026-08-03 213048.png` | Chemical structure of Isobutanol (2-methyl-1-propanol) | `dict_isobutanol.png` | `isobutanol`, `2-methyl-1-propanol` |
+| 106 | `Screenshot 2026-08-03 213056.png` | Chemical structure of Butane (n-butane, Isobutane) | `dict_butane.png` | `butane`, `n-butane`, `isobutane` |
+| 107 | `Screenshot 2026-08-03 213108.png` | Burdisso castrator | `dict_burdizzo_castrator.png` | `burdizzo castrator` |
+| 108 | `Screenshot 2026-08-03 213114.png` | Bunsen Burner | `dict_bunsen_burner.png` | `bunsen burner` |
+| 109 | `Screenshot 2026-08-03 213126.png` | Bundle scar | `dict_bundle_scar.png` | `bundle scar` |
+| 110 | `Screenshot 2026-08-03 213138.png` | Budding processes (flowering plants, yeast, hydra) | `dict_budding.png` | `budding`, `budding in flowering plants`, `budding in yeast`, `budding in hydra` |
+| 111 | `Screenshot 2026-08-03 213154.png` | Bulbel | `dict_bulbel.png` | `bulbel` |
+| 112 | `Screenshot 2026-08-03 213212.png` | Bud scales | `dict_bud_scales.png` | `bud scales` |
+| 113 | `Screenshot 2026-08-03 213223.png` | Bubble chamber | `dict_bubble_chamber.png` | `bubble chamber` |
+| 114 | `Screenshot 2026-08-03 213233.png` | Buchner funnel & flask for filtration | `dict_buchner_funnel.png` | `buchner funnel`, `buchner flask` |
+| 115 | `Screenshot 2026-08-03 213302.png` | Chemical structure of Bromothymol Blue | `dict_bromothymol_blue.png` | `bromothymol blue` |
+| 116 | `Screenshot 2026-08-03 213320.png` | Brewster's Law | `dict_brewsters_law.png` | `brewsters law` |
+| 117 | `Screenshot 2026-08-03 213426.png` | Bridge rectifier circuit diagram | `dict_bridge_rectifier.png` | `bridge rectifier` |
+| 118 | `Screenshot 2026-08-03 213437.png` | Generation of Bremsstrahlung | `dict_bremsstrahlung.png` | `bremsstrahlung` |
+| 119 | `Screenshot 2026-08-03 213451.png` | Box-And-Whisker Plot | `dict_box_and_whisker_plot.png` | `box-and-whisker plot`, `box plot` |
+| 120 | `Screenshot 2026-08-03 213502.png` | Born-Haber cycle | `dict_born_haber_cycle.png` | `born-haber cycle` |
+| 121 | `Screenshot 2026-08-03 213609.png` | Chemical Structure of Borane | `dict_borane.png` | `borane` |
+| 122 | `Screenshot 2026-08-03 213616.png` | Microscopic structure of bone | `dict_bone_microscopic_structure.png` | `bone microscopic structure`, `haversian system` |
+| 123 | `Screenshot 2026-08-03 213622.png` | Bomb calorimeter | `dict_bomb_calorimeter.png` | `bomb calorimeter` |
+| 124 | `Screenshot 2026-08-03 213630.png` | Boiling Point Composition Diagram | `dict_boiling_point_composition_diagram.png` | `boiling point composition diagram` |
+| 125 | `Screenshot 2026-08-03 213641.png` | Block and tackle | `dict_block_and_tackle.png` | `block and tackle` |
+| 126 | `Screenshot 2026-08-03 213651.png` | Blastodisc of an egg | `dict_blastodisc.png` | `blastodisc`, `blastodisc of egg` |
+| 127 | `Screenshot 2026-08-03 213731.png` | Blast furnace | `dict_blast_furnace.png` | `blast furnace` |
+| 128 | `Screenshot 2026-08-03 213759.png` | Biternate leaves | `dict_biternate_leaves.png` | `biternate leaves` |
+| 129 | `Screenshot 2026-08-03 213808.png` | Biserrate leaf | `dict_biserrate_leaf.png` | `biserrate leaf` |
+| 130 | `Screenshot 2026-08-03 213847.png` | Bipolar integrated circuit | `dict_bipolar_integrated_circuit.png` | `bipolar integrated circuit` |
+| 131 | `Screenshot 2026-08-03 213917.png` | Bipinnate leaflets & Bipinnatifid leaf | `dict_bipinnate_leaflets.png` | `bipinnate leaflets`, `bipinnatifid leaf` |
+| 132 | `Screenshot 2026-08-03 213926.png` | Bipartite leaf & Complete Bipartite Graph | `dict_bipartite_leaf.png` | `bipartite leaf`, `complete bipartite graph` |
+| 133 | `Screenshot 2026-08-03 213932.png` | Chemical Structure of Biotin | `dict_biotin.png` | `biotin` |
+| 134 | `Screenshot 2026-08-03 214015.png` | Bimetallic strip & Bimetallic strip thermometer | `dict_bimetallic_strip.png` | `bimetallic strip`, `bimetallic strip thermometer` |
+| 135 | `Screenshot 2026-08-03 214026.png` | Bilobed stigma & Bilocular ovary | `dict_bilobed_stigma.png` | `bilobed stigma`, `bilocular ovary` |
+| 136 | `Screenshot 2026-08-03 214038.png` | Bimagic square | `dict_bimagic_square.png` | `bimagic square` |
+| 137 | `Screenshot 2026-08-03 214049.png` | Bidentate leaf | `dict_bidentate_leaf.png` | `bidentate leaf` |
+| 138 | `Screenshot 2026-08-03 214101.png` | Biconcave lens | `dict_biconcave_lens.png` | `biconcave lens` |
+
+---
+
 ## 4. Quality Standards
 1. **Pristine Author Framing**: High-resolution user captures preserved with complete clarity.
 2. **Dual Map Consistency**: `dictionary_diagrams_map.json` and `core_dictionary_diagrams.js` remain synchronized and sorted.
+
 
