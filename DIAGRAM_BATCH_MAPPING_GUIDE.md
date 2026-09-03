@@ -103,29 +103,31 @@ Source Folder: `section a-b images/`
 
 ---
 
-### Batch 5 (Queued) — Screenshots 41 to 60
+### Batch 5 (Completed) — Screenshots 41 to 60
 Source Folder: `section a-b images/`
 
-- `Screenshot 2026-08-03 211050.png`
-- `Screenshot 2026-08-03 211113.png`
-- `Screenshot 2026-08-03 211140.png`
-- `Screenshot 2026-08-03 211200.png`
-- `Screenshot 2026-08-03 211219.png`
-- `Screenshot 2026-08-03 211232.png`
-- `Screenshot 2026-08-03 211240.png`
-- `Screenshot 2026-08-03 211254.png`
-- `Screenshot 2026-08-03 211321.png`
-- `Screenshot 2026-08-03 211341.png`
-- `Screenshot 2026-08-03 211349.png`
-- `Screenshot 2026-08-03 211401.png`
-- `Screenshot 2026-08-03 211408.png`
-- `Screenshot 2026-08-03 211416.png`
-- `Screenshot 2026-08-03 211426.png`
-- `Screenshot 2026-08-03 211439.png`
-- `Screenshot 2026-08-03 211510.png`
-- `Screenshot 2026-08-03 211525.png`
-- `Screenshot 2026-08-03 211534.png`
-- `Screenshot 2026-08-03 211544.png`
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 41 | `Screenshot 2026-08-03 211050.png` | Chemical structure of Aldosterone | `dict_aldosterone.png` | `aldosterone` |
+| 42 | `Screenshot 2026-08-03 211113.png` | Quadratic curve — algebraic curve of order two (a>0 & a<0) | `dict_algebraic_curve.png`, `dict_quadratic_curve.png` | `algebraic curve`, `quadratic curve` |
+| 43 | `Screenshot 2026-08-03 211140.png` | Fig I: Alimentary canal of a human / Fig II: Alimentary canal of a rabbit | `dict_alimentary_canal.png`, `dict_alimentary_canal_human.png`, `dict_alimentary_canal_rabbit.png` | `alimentary canal`, `alimentary canal (human)`, `alimentary canal (rabbit)` |
+| 44 | `Screenshot 2026-08-03 211200.png` | Fig I: Allotrope of graphite / Fig II: Allotrope of diamond | `dict_allotrope.png`, `dict_allotrope_graphite.png`, `dict_allotrope_diamond.png`, `dict_graphite.png`, `dict_diamond.png` | `allotrope`, `allotrope of graphite`, `allotrope of diamond`, `graphite`, `diamond` |
+| 45 | `Screenshot 2026-08-03 211219.png` | Table of Important Alloys, Composition and Uses | `dict_alloy.png` | `alloy` |
+| 46 | `Screenshot 2026-08-03 211232.png` | Alternate angles (transversal line diagram) | `dict_alternate_angles.png` | `alternate angles` |
+| 47 | `Screenshot 2026-08-03 211240.png` | Alternate leaves (e.g., Rosa) | `dict_alternate_leaves.png`, `dict_alternate_leaf_arrangement.png` | `alternate leaves`, `alternate leaf arrangement` |
+| 48 | `Screenshot 2026-08-03 211254.png` | Altitude of a triangle (Triangle ABC) | `dict_altitude.png`, `dict_altitude_of_a_triangle.png` | `altitude`, `altitude of a triangle` |
+| 49 | `Screenshot 2026-08-03 211321.png` | Amide structures — Fig I–VI: general, ethanamide, amides, methanamide, N-methyltharcamide, N-methyl-N-ethylethanamide | `dict_amide.png`, `dict_ethanamide.png`, `dict_methanamide.png`, `dict_primary_amide.png`, `dict_tertiary_amide.png` | `amide`, `ethanamide`, `methanamide`, `primary amide`, `tertiary amide` |
+| 50 | `Screenshot 2026-08-03 211341.png` | Preparation of NH₃ (ammonia) — lab apparatus | `dict_ammonia.png`, `dict_preparation_of_ammonia.png` | `ammonia`, `preparation of ammonia` |
+| 51 | `Screenshot 2026-08-03 211349.png` | Hot-wire ammeter (labelled diagram) | `dict_ammeter.png`, `dict_hot_wire_ammeter.png` | `ammeter`, `hot-wire ammeter` |
+| 52 | `Screenshot 2026-08-03 211401.png` | Single stage amplifier (circuit diagram) | `dict_amplifier.png`, `dict_single_stage_amplifier.png` | `amplifier`, `single stage amplifier` |
+| 53 | `Screenshot 2026-08-03 211408.png` | Amplexicaul leaf (leaf shape diagram) | `dict_amplexicaul.png`, `dict_amplexicaul_leaf.png` | `amplexicaul`, `amplexicaul leaf` |
+| 54 | `Screenshot 2026-08-03 211416.png` | Amplitude of a sinusoid / oscillating system | `dict_amplitude.png` | `amplitude` |
+| 55 | `Screenshot 2026-08-03 211426.png` | Block diagram of analogue-to-digital converter (ADC) | `dict_analogue_to_digital_converter.png`, `dict_adc.png` | `analogue-to-digital converter`, `analogue to digital converter`, `adc` |
+| 56 | `Screenshot 2026-08-03 211439.png` | AND gate circuit + truth table | `dict_and_gate.png`, `dict_and_gate_truth_table.png` | `and gate` |
+| 57 | `Screenshot 2026-08-03 211510.png` | Angle — arc length / radius (radian definition) | `dict_angle.png`, `dict_angle_in_radians.png` | `angle`, `angle in radians` |
+| 58 | `Screenshot 2026-08-03 211525.png` | Angle of depression (observer & object) | `dict_angle_of_depression.png` | `angle of depression` |
+| 59 | `Screenshot 2026-08-03 211534.png` | Angle of deviation in a prism / angle of minimum deviation | `dict_angle_of_deviation.png`, `dict_angle_of_minimum_deviation.png` | `angle of deviation`, `angle of minimum deviation` |
+| 60 | `Screenshot 2026-08-03 211544.png` | Angle between two vectors (Fig 1, 2, 3) | `dict_angle_between_two_vectors.png` | `angle between two vectors` |
 
 ---
 
