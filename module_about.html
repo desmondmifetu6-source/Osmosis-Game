@@ -3,92 +3,1243 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Osmosis - The Origins</title>
+  <title>About Osmosis - The 6-In-1 STEM Game & Dictionary</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
-    .bio-text {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      text-align: justify;
+    :root {
+      --stem-blue: #0284c7;
+      --stem-indigo: #4f46e5;
+      --stem-cyan: #06b6d4;
+      --stem-emerald: #10b981;
+      --stem-amber: #f59e0b;
+      --dark-navy: #090d16;
+      --glass-bg: rgba(255, 255, 255, 0.85);
+      --glass-border: rgba(255, 255, 255, 0.7);
+      --glass-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      overflow-x: hidden;
+    }
+
+    /* Fixed Header Navigation Bar */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 72px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #1e1b4b;
+      text-decoration: none;
+    }
+
+    .nav-brand span {
+      background: linear-gradient(135deg, var(--stem-blue), var(--stem-indigo));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+    }
+
+    .nav-link {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--stem-indigo);
+    }
+
+    .nav-btn {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      border: none;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    }
+
+    /* Scroll Progress Bar */
+    .progress-bar-container {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(226, 232, 240, 0.5);
+      z-index: 1001;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--stem-cyan), var(--stem-indigo), var(--stem-emerald));
+      transition: width 0.1s linear;
+    }
+
+    /* Hero Section - Electric Dark Glassmorphism */
+    .hero-section {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 2rem 5rem;
+      background: url('about_hero_bg.jpg') center/cover no-repeat fixed;
+      overflow: hidden;
+      color: white;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(15, 23, 42, 0.7) 0%, rgba(9, 13, 22, 0.94) 100%);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-text-box {
+      text-align: left;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 1.1rem;
+      background: rgba(14, 165, 233, 0.18);
+      border: 1px solid rgba(14, 165, 233, 0.5);
+      border-radius: 999px;
+      color: #38bdf8;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 20px rgba(14, 165, 233, 0.25);
+    }
+
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 0 0 1.2rem;
+      background: linear-gradient(135deg, #ffffff 30%, #bae6fd 70%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #94a3b8;
       margin-bottom: 2rem;
     }
 
-    .credits {
+    .subject-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .tag-chip {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .hero-book-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 28px;
+      padding: 2.2rem;
       text-align: center;
-      border-top: 1px dashed var(--text-secondary);
-      padding-top: 1.5rem;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .hero-book-card:hover {
+      transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
+    }
+
+    .hero-book-img {
+      width: 190px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      margin-bottom: 1.2rem;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-book-img:hover {
+      transform: scale(1.04);
+    }
+
+    /* Content Sections Styling */
+    .content-section {
+      padding: 90px 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-label {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--stem-indigo);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+      margin: 0 0 1rem;
+    }
+
+    .section-desc {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #64748b;
+    }
+
+    /* Side Fly-In Animation Classes */
+    .fly-in-left {
+      opacity: 0;
+      transform: translateX(-70px) scale(0.96);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .fly-in-right {
+      opacity: 0;
+      transform: translateX(70px) scale(0.96);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .fly-in-active {
+      opacity: 1 !important;
+      transform: translateX(0) scale(1) !important;
+    }
+
+    /* Split Movie Layout Row */
+    .movie-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 5.5rem;
+    }
+
+    .movie-row.reverse {
+      grid-template-columns: 1fr 1fr;
+      direction: rtl;
+    }
+
+    .movie-row.reverse > * {
+      direction: ltr;
+    }
+
+    /* Glass Panels */
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: var(--glass-shadow);
+      position: relative;
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--stem-blue), var(--stem-indigo));
+      border-radius: 24px 24px 0 0;
+    }
+
+    .glass-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #1e293b;
+      margin: 0 0 1rem;
+    }
+
+    .glass-card p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #475569;
+      margin: 0 0 1.2rem;
+    }
+
+    /* Image Media Card Frame */
+    .media-card-frame {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      background: #ffffff;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .media-card-frame:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 25px 60px rgba(14, 165, 233, 0.22);
+      border-color: var(--stem-cyan);
+    }
+
+    .media-card-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+      object-fit: cover;
+    }
+
+    .media-card-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .media-caption-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.9) 100%);
+      color: white;
+      padding: 1.5rem 1.2rem 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .media-caption-title {
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.5px;
+    }
+
+    .media-zoom-badge {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      padding: 3px 9px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    /* Official Documents Gallery Grid */
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .doc-item-card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .doc-item-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+      border-color: var(--stem-blue);
+    }
+
+    .doc-img-container {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      background: #f1f5f9;
+      cursor: pointer;
+    }
+
+    .doc-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.4s ease;
+    }
+
+    .doc-img-container:hover img {
+      transform: scale(1.05);
+    }
+
+    .doc-body {
+      padding: 1.6rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .doc-agency-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--stem-indigo);
+      margin-bottom: 0.4rem;
+    }
+
+    .doc-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 0.6rem;
+      line-height: 1.3;
+    }
+
+    .doc-desc {
+      font-size: 0.92rem;
+      color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .doc-view-btn {
+      background: rgba(14, 165, 233, 0.1);
+      border: 1.5px solid rgba(14, 165, 233, 0.3);
+      color: var(--stem-blue);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+      width: 100%;
+    }
+
+    .doc-view-btn:hover {
+      background: var(--stem-blue);
+      color: white;
+      border-color: var(--stem-blue);
+    }
+
+    /* Comparison Grid */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
       margin-top: 2rem;
     }
 
-    .credit-role {
-      font-family: var(--font-serif);
+    .comp-card {
+      border-radius: 20px;
+      padding: 2.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .comp-card.bad {
+      background: #fef2f2;
+      border: 1.5px solid #fecaca;
+    }
+
+    .comp-card.good {
+      background: #f0fdf4;
+      border: 1.5px solid #bbf7d0;
+    }
+
+    .comp-card h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 0 0 0.8rem;
+    }
+
+    .comp-card.bad h4 { color: #dc2626; }
+    .comp-card.good h4 { color: #16a34a; }
+
+    .comp-card p {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: #334155;
+      margin: 0;
+    }
+
+    /* Fullscreen High-Res Document Lightbox Modal */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 13, 22, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 9999;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-card {
+      position: relative;
+      max-width: 900px;
+      width: 100%;
+      max-height: 92vh;
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .lightbox-header {
+      padding: 1.2rem 1.8rem;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f8fafc;
+    }
+
+    .lightbox-header h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin: 0;
+      color: #0f172a;
+    }
+
+    .lightbox-close-btn {
+      background: rgba(0, 0, 0, 0.06);
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
       font-size: 1.2rem;
-      color: var(--accent-primary);
-      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+      font-weight: 800;
+      color: #475569;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .lightbox-close-btn:hover {
+      background: #dc2626;
+      color: white;
+    }
+
+    .lightbox-img-wrapper {
+      padding: 1.5rem;
+      overflow-y: auto;
+      text-align: center;
+      background: #0f172a;
+      max-height: calc(92vh - 80px);
+    }
+
+    .lightbox-img-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Credits Section */
+    .credits-card {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      color: white;
+      border-radius: 28px;
+      padding: 3.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.3);
+      margin-top: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .credits-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .credits-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 0 0 2rem;
+      color: #ffffff;
+    }
+
+    .credits-grid {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .credit-role {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--stem-cyan);
+      margin-bottom: 0.4rem;
+      font-weight: 700;
     }
 
     .credit-name {
-      font-weight: bold;
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      color: var(--text-main);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #f8fafc;
     }
 
-    @media (max-width: 480px) {
-      .bio-text {
-        font-size: 0.95rem;
-        text-align: left;
-      }
+    /* Footer Back CTA */
+    .footer-cta {
+      text-align: center;
+      padding: 4rem 2rem 6rem;
+    }
 
-      h2[style] {
-        font-size: 1.8rem !important;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-      .credit-name {
-        font-size: 1.1rem;
+    @media (max-width: 900px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
       }
-
-      .credit-role {
-        font-size: 1rem;
+      .hero-text-box {
+        text-align: center;
+      }
+      .movie-row, .movie-row.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 2rem;
+      }
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="app-container">
-    <div class="card">
-      <h2 style="text-align:center; font-size: 2.5rem; margin-bottom: 2rem;">The Origins</h2>
-      <p class="bio-text">
-        <strong>Osmosis</strong> was created under the psychological principle that genuine knowledge is absorbed best
-        through repeated, pressure-free exposure coupled with final active recall. Traditional methods rely extensively
-        on brute-force rote memorization. In contrast, Osmosis naturally integrates advanced scholarly and scientific
-        terminologies directly into the mind—much like water permeating a cellular membrane seamlessly.
+
+  <!-- Floating Sticky Nav Bar -->
+  <nav class="nav-bar">
+    <a href="01_home_menu.html" class="nav-brand">
+      🚀 <span>Osmosis STEM</span>
+    </a>
+    <div class="nav-links">
+      <a href="#official-documents" class="nav-link">Official Documents</a>
+      <a href="#osmosis-approach" class="nav-link">The Osmosis Method</a>
+      <a href="#gameplay-stages" class="nav-link">7 Gameplay Stages</a>
+      <a href="#scoring-charts" class="nav-link">Scoring Charts</a>
+      <a href="#benefits" class="nav-link">UNICEF Benefits</a>
+      <button onclick="window.location.href='01_home_menu.html'" class="nav-btn">← Return to Menu</button>
+    </div>
+  </nav>
+
+  <!-- Scroll Progress Indicator Bar -->
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" id="scroll-progress"></div>
+  </div>
+
+  <!-- HERO SECTION: Glassmorphic STEM Portal -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text-box">
+        <div class="badge-pill">
+          ⚡ The 6-In-1 STEM Dictionary & Tournament
+        </div>
+        <h1 class="hero-title">Master Science & Math Effortlessly</h1>
+        <p class="hero-subtitle">
+          A revolutionary educational approach to acquiring scientific vocabulary, laws, principles, and formulas. Approved and strongly recommended by national science authorities, university heads, and education boards.
+        </p>
+        <div class="subject-tags">
+          <span class="tag-chip">🧬 Biology</span>
+          <span class="tag-chip">🧪 Chemistry</span>
+          <span class="tag-chip">⚡ Physics</span>
+          <span class="tag-chip">📐 Mathematics</span>
+          <span class="tag-chip">💻 ICT</span>
+          <span class="tag-chip">🌱 Agriculture</span>
+        </div>
+      </div>
+      <div>
+        <div class="hero-book-card">
+          <img src="assets/stem_dictionary_cover.png" alt="STEM Dictionary Book Cover" class="hero-book-img" onclick="openLightbox('The 6-In-1 STEM Dictionary Book Cover', 'assets/stem_dictionary_cover.png')">
+          <h3 style="font-family:'Outfit'; font-size:1.4rem; font-weight:800; margin:0 0 0.4rem; color:white;">The 6-In-1 STEM Dictionary</h3>
+          <p style="font-size:0.9rem; color:#cbd5e1; margin:0 0 0.8rem;">With Automatic Knowledge Acquisition Game</p>
+          <span class="media-zoom-badge" onclick="openLightbox('The 6-In-1 STEM Dictionary Book Cover', 'assets/stem_dictionary_cover.png')">🔍 Tap to enlarge</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: Official Institutional Documents & Approvals -->
+  <section class="content-section" id="official-documents">
+    <div class="section-header">
+      <span class="section-label">Official Endorsements</span>
+      <h2 class="section-title">Government & Institutional Approvals</h2>
+      <p class="section-desc">
+        Inspected, evaluated, and officially recommended by Ghana's foremost scientific and educational bodies. Tap any document to inspect the high-resolution scanned letter from the book.
       </p>
+    </div>
 
-      <div class="credits">
-        <div class="credit-role">Publisher / Author</div>
-        <div class="credit-name">Godfred Funkor</div>
-
-
-        <div class="credit-role"> Game Developers </div>
-        <div class="credit-name"> Godfred Funkor and Desmond Mifetu </div>
-
+    <div class="docs-grid">
+      <!-- NaCCA Ministry of Education Letter -->
+      <div class="doc-item-card">
+        <div class="doc-img-container" onclick="openLightbox('Ministry of Education NaCCA Approval Letter (Page 11)', 'assets/about_pdf_pages/page_11.jpg')">
+          <img src="assets/about_pdf_pages/page_11.jpg" alt="Ministry of Education NaCCA Approval Letter">
+        </div>
+        <div class="doc-body">
+          <div>
+            <span class="doc-agency-badge">Ministry of Education</span>
+            <h3 class="doc-title">NaCCA Official Approval Letter</h3>
+            <p class="doc-desc">Official recommendation letter from the National Council for Curriculum and Assessment (NaCCA) for Secondary, Technical, and Vocational institutions.</p>
+          </div>
+          <button class="doc-view-btn" onclick="openLightbox('Ministry of Education NaCCA Approval Letter (Page 11)', 'assets/about_pdf_pages/page_11.jpg')">
+            🔍 Inspect Official Letter (Page 11)
+          </button>
+        </div>
       </div>
 
-      <button id="go-home-btn" class="classic-btn blue-gradient" style="margin-top:2rem;">Return to Menu</button>
+      <!-- CSIR Assessment -->
+      <div class="doc-item-card">
+        <div class="doc-img-container" onclick="openLightbox('Council for Scientific and Industrial Research CSIR Assessment (Page 5)', 'assets/about_pdf_pages/page_5.jpg')">
+          <img src="assets/about_pdf_pages/page_5.jpg" alt="CSIR Assessment Letter">
+        </div>
+        <div class="doc-body">
+          <div>
+            <span class="doc-agency-badge">Scientific Body</span>
+            <h3 class="doc-title">CSIR Assessment & Recommendation</h3>
+            <p class="doc-desc">Submitted by the Governing body of the Council for Scientific and Industrial Research to the Minister of Education praising the Osmosis game approach.</p>
+          </div>
+          <button class="doc-view-btn" onclick="openLightbox('Council for Scientific and Industrial Research CSIR Assessment (Page 5)', 'assets/about_pdf_pages/page_5.jpg')">
+            🔍 Inspect CSIR Letter (Page 5)
+          </button>
+        </div>
+      </div>
+
+      <!-- GAST Assessment -->
+      <div class="doc-item-card">
+        <div class="doc-img-container" onclick="openLightbox('Ghana Association of Science Teachers GAST Assessment (Page 9)', 'assets/about_pdf_pages/page_9.jpg')">
+          <img src="assets/about_pdf_pages/page_9.jpg" alt="GAST Assessment">
+        </div>
+        <div class="doc-body">
+          <div>
+            <span class="doc-agency-badge">Teachers Association</span>
+            <h3 class="doc-title">GAST Assessment of STEM Dictionary</h3>
+            <p class="doc-desc">Official review by the Ghana Association of Science Teachers on how this dictionary dispels the fear of science and addresses examiners' concerns.</p>
+          </div>
+          <button class="doc-view-btn" onclick="openLightbox('Ghana Association of Science Teachers GAST Assessment (Page 9)', 'assets/about_pdf_pages/page_9.jpg')">
+            🔍 Inspect GAST Document (Page 9)
+          </button>
+        </div>
+      </div>
+
+      <!-- CHASS & ACP -->
+      <div class="doc-item-card">
+        <div class="doc-img-container" onclick="openLightbox('Conference of Heads of Assisted Secondary Schools CHASS Assessment (Page 12)', 'assets/about_pdf_pages/page_12.jpg')">
+          <img src="assets/about_pdf_pages/page_12.jpg" alt="CHASS Assessment">
+        </div>
+        <div class="doc-body">
+          <div>
+            <span class="doc-agency-badge">Secondary School Principals</span>
+            <h3 class="doc-title">ACP & CHASS President Recommendation</h3>
+            <p class="doc-desc">Assessment by Samuel Ofori-Adjei, President of the African Confederation of Principals and Headmaster of Accra Academy after four decades in education.</p>
+          </div>
+          <button class="doc-view-btn" onclick="openLightbox('Conference of Heads of Assisted Secondary Schools CHASS Assessment (Page 12)', 'assets/about_pdf_pages/page_12.jpg')">
+            🔍 Inspect CHASS Letter (Page 12)
+          </button>
+        </div>
+      </div>
+
+      <!-- National PTA -->
+      <div class="doc-item-card">
+        <div class="doc-img-container" onclick="openLightbox('National Council of Parent-Teacher Associations Recommendation (Page 13)', 'assets/about_pdf_pages/page_13.jpg')">
+          <img src="assets/about_pdf_pages/page_13.jpg" alt="NCPTA Recommendation">
+        </div>
+        <div class="doc-body">
+          <div>
+            <span class="doc-agency-badge">Parents Council</span>
+            <h3 class="doc-title">National Council of PTAs Endorsement</h3>
+            <p class="doc-desc">Nationwide Parent-Teacher Association adoption recommending the book and game for students to demystify complex science jargon in homes and schools.</p>
+          </div>
+          <button class="doc-view-btn" onclick="openLightbox('National Council of Parent-Teacher Associations Recommendation (Page 13)', 'assets/about_pdf_pages/page_13.jpg')">
+            🔍 Inspect PTA Letter (Page 13)
+          </button>
+        </div>
+      </div>
+
+      <!-- Expert Contributors List -->
+      <div class="doc-item-card">
+        <div class="doc-img-container" onclick="openLightbox('Editorial & Subject Consultants List (Page 3)', 'assets/about_pdf_pages/page_7.jpg')">
+          <img src="assets/about_pdf_pages/page_7.jpg" alt="Expert Contributors List">
+        </div>
+        <div class="doc-body">
+          <div>
+            <span class="doc-agency-badge">University Scholars</span>
+            <h3 class="doc-title">Academic & Editorial Board</h3>
+            <p class="doc-desc">Authored and vetted by department heads from University of Ghana, KNUST, Nuclear Regulatory Authority, and high-profile STEM educationists.</p>
+          </div>
+          <button class="doc-view-btn" onclick="openLightbox('Editorial & Subject Consultants List (Page 7)', 'assets/about_pdf_pages/page_7.jpg')">
+            🔍 Inspect Editorial Page (Page 7)
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: The Osmosis Approach -->
+  <section class="content-section" id="osmosis-approach" style="background:#f1f5f9; border-radius:32px; margin: 3rem auto;">
+    <div class="section-header">
+      <span class="section-label">Core Philosophy</span>
+      <h2 class="section-title">The Gentle Learning Gradient</h2>
+      <p class="section-desc">
+        Why traditional memorization fails, and how the Osmosis biological immersion approach delivers effortless, long-term scientific fluency.
+      </p>
+    </div>
+
+    <div class="comparison-grid">
+      <div class="comp-card bad">
+        <h4>❌ The Neck-Breaking Memorization Gradient</h4>
+        <p>
+          Traditional textbooks suddenly thrust massive, dense vocabularies onto students. Memorizing without context causes intense anxiety, early mental exhaustion, rapid forgetting after exams, and high failure rates in STEM.
+        </p>
+      </div>
+      <div class="comp-card good">
+        <h4>✅ The Osmosis Automatic Approach</h4>
+        <p>
+          Just like children learn native languages through immersion and unconscious initiation, Osmosis exposes students to technical terms through playful stages. The brain absorbs definitions naturally without stressful cramming!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: The 7 Gameplay Stages (Split Movie Side-Fly-In) -->
+  <section class="content-section" id="gameplay-stages">
+    <div class="section-header">
+      <span class="section-label">The Tournament Architecture</span>
+      <h2 class="section-title">The 7 Stages of the Osmosis Game</h2>
+      <p class="section-desc">
+        Watch each stage come together as you scroll down. Images and rule scans from the original book fly in side-by-side to showcase the exact tournament flow:
+      </p>
+    </div>
+
+    <!-- STAGE 1: Section Locating -->
+    <div class="movie-row">
+      <div class="glass-card fly-in-left">
+        <span class="doc-agency-badge">Stage 1 of 7</span>
+        <h3>Stage 1: Section Locating Competition</h3>
+        <p>
+          The referee shakes the container with the 26 letters of the alphabet and draws one at random. Competitors race to flip their dictionaries to that letter's exact section!
+        </p>
+        <p>
+          <strong>Scoring:</strong> The first competitor to open their dictionary to the target letter scores <strong>5 marks</strong> for their group. Teaches lightning-fast structural navigation.
+        </p>
+      </div>
+      <div class="media-card-frame fly-in-right" onclick="openLightbox('Stage 1: Competing in Locating Sections (PDF Page 27)', 'assets/about_pdf_pages/page_27.jpg')">
+        <img src="assets/about_pdf_pages/page_27.jpg" alt="Stage 1 PDF Page 27">
+        <div class="media-caption-bar">
+          <span class="media-caption-title">Page 27: Stage 1 Instructions & Photos</span>
+          <span class="media-zoom-badge">🔍 Inspect</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 2: Word Finding -->
+    <div class="movie-row reverse">
+      <div class="glass-card fly-in-right">
+        <span class="doc-agency-badge">Stage 2 of 7</span>
+        <h3>Stage 2: Word Finding & Assembly</h3>
+        <p>
+          The referee selects a number card and a letter card simultaneously (e.g. <strong>4C</strong>). Competitors must find any 4-letter scientific entry in the C section!
+        </p>
+        <p>
+          <strong>Scoring:</strong> The first participant to spot and verify a valid term wins points matching the letter count. Builds vocabulary recognition and spelling precision under pressure.
+        </p>
+      </div>
+      <div class="media-card-frame fly-in-left" onclick="openLightbox('Stage 2: Word Finding Competition (PDF Page 29)', 'assets/about_pdf_pages/page_29.jpg')">
+        <img src="assets/about_pdf_pages/page_29.jpg" alt="Stage 2 PDF Page 29">
+        <div class="media-caption-bar">
+          <span class="media-caption-title">Page 29: Stage 2 Rules & Student Gameplay</span>
+          <span class="media-zoom-badge">🔍 Inspect</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 3: Oral Revision & Flash Recall -->
+    <div class="movie-row">
+      <div class="glass-card fly-in-left">
+        <span class="doc-agency-badge">Stage 3 of 7</span>
+        <h3>Stage 3: Oral Revision & Flash Recall</h3>
+        <p>
+          The words discovered in previous stages are presented on the board. The books are put aside, and players must reproduce the words orally and respond to rapid visual cues.
+        </p>
+        <p>
+          <strong>In the Digital App:</strong> This is our high-speed <strong>Flash Recall</strong> stage, where words flash on screen with automatic voice pronunciation to build instant auditory & visual recognition!
+        </p>
+      </div>
+      <div class="media-card-frame fly-in-right" onclick="openLightbox('Stage 3: Oral Revision Stage (PDF Page 30)', 'assets/about_pdf_pages/page_30.jpg')">
+        <img src="assets/about_pdf_pages/page_30.jpg" alt="Stage 3 PDF Page 30">
+        <div class="media-caption-bar">
+          <span class="media-caption-title">Page 30: Stage 3 & 4 Tournament Photos</span>
+          <span class="media-zoom-badge">🔍 Inspect</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 4: Word Definition Finding -->
+    <div class="movie-row reverse">
+      <div class="glass-card fly-in-right">
+        <span class="doc-agency-badge">Stage 4 of 7</span>
+        <h3>Stage 4: Word Definition Competition</h3>
+        <p>
+          Target words are shaken in a container and drawn at random. Participants race to find the full definition in their STEM Dictionary.
+        </p>
+        <p>
+          <strong>Bonus Marks:</strong> Finding the meaning first earns <strong>10 points</strong>. Reading the full technical definition accurately earns an additional <strong>5 bonus marks</strong>!
+        </p>
+      </div>
+      <div class="media-card-frame fly-in-left" onclick="openLightbox('Stage 4: Word Definition Competition (PDF Page 32)', 'assets/about_pdf_pages/page_32.jpg')">
+        <img src="assets/about_pdf_pages/page_32.jpg" alt="Stage 4 PDF Page 32">
+        <div class="media-caption-bar">
+          <span class="media-caption-title">Page 32: Stage 4 Rules & Contestant Photos</span>
+          <span class="media-zoom-badge">🔍 Inspect</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 5: Meaning Exposure Study Room -->
+    <div class="movie-row">
+      <div class="glass-card fly-in-left">
+        <span class="doc-agency-badge">Stage 5 of 7</span>
+        <h3>Stage 5: Meaning Exposure (The Reading Desk)</h3>
+        <p>
+          Players are given a dedicated quiet revision window (up to 20 minutes in physical play; 5 minutes in digital play) to thoroughly absorb the full scientific meanings.
+        </p>
+        <p>
+          <strong>Digital Voice Feature:</strong> In our digital game, players can tap <strong>🔊 Word</strong> to pronounce or <strong>📖 Meaning</strong> to have formulas and definitions read aloud!
+        </p>
+      </div>
+      <div class="media-card-frame fly-in-right" onclick="openLightbox('Stage 5: Meaning Exposure & Finding (PDF Page 31)', 'assets/about_pdf_pages/page_31.jpg')">
+        <img src="assets/about_pdf_pages/page_31.jpg" alt="Stage 5 PDF Page 31">
+        <div class="media-caption-bar">
+          <span class="media-caption-title">Page 31: Stage 5 Setup & Student Teams</span>
+          <span class="media-zoom-badge">🔍 Inspect</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 6: Written Revision & Gap Filling -->
+    <div class="movie-row reverse">
+      <div class="glass-card fly-in-right">
+        <span class="doc-agency-badge">Stage 6 of 7</span>
+        <h3>Stage 6: Written Revision (Keyword Fill-In)</h3>
+        <p>
+          Contestants are tested on their deep comprehension by filling in missing technical keywords omitted from definition sentences.
+        </p>
+        <p>
+          <strong>Advanced Testing:</strong> In serious tournaments, contestants enter a separate quiet room to write out definitions, diagrams, formulas, and real-world applications for up to <strong>25 marks per word</strong>!
+        </p>
+      </div>
+      <div class="media-card-frame fly-in-left" onclick="openLightbox('Stage 6: Written Revision of Meaning (PDF Page 33)', 'assets/about_pdf_pages/page_33.jpg')">
+        <img src="assets/about_pdf_pages/page_33.jpg" alt="Stage 6 PDF Page 33">
+        <div class="media-caption-bar">
+          <span class="media-caption-title">Page 33: Stage 6 Written Competition Rules</span>
+          <span class="media-zoom-badge">🔍 Inspect</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAGE 7: Final Definition Mastery & Awards -->
+    <div class="movie-row">
+      <div class="glass-card fly-in-left">
+        <span class="doc-agency-badge">Stage 7 of 7</span>
+        <h3>Stage 7: Final Definition Mastery & Awards</h3>
+        <p>
+          All points across all 7 stages are aggregated on the master scoring chart. The grand total of each group and the overall winners are announced, applauded, and rewarded!
+        </p>
+        <p>
+          <strong>Proven Results:</strong> Photos in the book capture students at <strong>West Africa Senior High School, Accra</strong> enthusiastically participating and receiving prestigious awards!
+        </p>
+      </div>
+      <div class="media-card-frame fly-in-right" onclick="openLightbox('Stage 7: Final Scoring & Awards at West Africa SHS (PDF Page 35)', 'assets/about_pdf_pages/page_35.jpg')">
+        <img src="assets/about_pdf_pages/page_35.jpg" alt="Stage 7 PDF Page 35">
+        <div class="media-caption-bar">
+          <span class="media-caption-title">Page 35: West Africa SHS Awards & Students</span>
+          <span class="media-zoom-badge">🔍 Inspect</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Official Scoring Charts from the PDF -->
+  <section class="content-section" id="scoring-charts" style="background:#f8fafc; border-top: 1px dashed #cbd5e1; border-bottom: 1px dashed #cbd5e1;">
+    <div class="section-header">
+      <span class="section-label">Master Scorecard</span>
+      <h2 class="section-title">The Official Scoring Charts</h2>
+      <p class="section-desc">
+        Pages 25 & 26 of the book contain the official detachable scoring chart used by tournament coordinators and score masters. Tap either page to inspect the complete layout:
+      </p>
+    </div>
+
+    <div class="movie-row">
+      <div class="media-card-frame fly-in-left" onclick="openLightbox('Official Scoring Chart: Letters A to M (PDF Page 25)', 'assets/about_pdf_pages/page_25.jpg')">
+        <img src="assets/about_pdf_pages/page_25.jpg" alt="Scoring Chart Page 25">
+        <div class="media-caption-bar">
+          <span class="media-caption-title">Scoring Chart Part 1: Letters A to M (Page 25)</span>
+          <span class="media-zoom-badge">🔍 Inspect</span>
+        </div>
+      </div>
+      <div class="media-card-frame fly-in-right" onclick="openLightbox('Official Scoring Chart: Letters N to Z (PDF Page 26)', 'assets/about_pdf_pages/page_26.jpg')">
+        <img src="assets/about_pdf_pages/page_26.jpg" alt="Scoring Chart Page 26">
+        <div class="media-caption-bar">
+          <span class="media-caption-title">Scoring Chart Part 2: Letters N to Z (Page 26)</span>
+          <span class="media-zoom-badge">🔍 Inspect</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Proven Benefits Backed by UNICEF -->
+  <section class="content-section" id="benefits">
+    <div class="section-header">
+      <span class="section-label">Pedagogical Research</span>
+      <h2 class="section-title">Proven Benefits of Learning Through Play</h2>
+      <p class="section-desc">
+        Documented in Pages 37-39 of the book, aligning directly with UNICEF Education Section guidelines on play-based learning:
+      </p>
+    </div>
+
+    <div class="docs-grid" style="margin-top:0;">
+      <div class="glass-card" style="padding:1.8rem;">
+        <div style="font-size:2rem; margin-bottom:0.6rem;">🧠</div>
+        <h4 style="font-family:'Outfit'; font-size:1.25rem; font-weight:800; margin:0 0 0.5rem; color:#0f172a;">Powerful Memory Builder</h4>
+        <p style="font-size:0.95rem; color:#475569; margin:0; line-height:1.6;">Playing content-specific games activates working memory to recall intricate definitions and formulas far more effectively than passive reading.</p>
+      </div>
+
+      <div class="glass-card" style="padding:1.8rem;">
+        <div style="font-size:2rem; margin-bottom:0.6rem;">😌</div>
+        <h4 style="font-family:'Outfit'; font-size:1.25rem; font-weight:800; margin:0 0 0.5rem; color:#0f172a;">Eliminates Study Stress</h4>
+        <p style="font-size:0.95rem; color:#475569; margin:0; line-height:1.6;">Transforms intimidating technical terminology into joyful team play. Players laugh, collaborate, and absorb concepts without examination fear.</p>
+      </div>
+
+      <div class="glass-card" style="padding:1.8rem;">
+        <div style="font-size:2rem; margin-bottom:0.6rem;">🤝</div>
+        <h4 style="font-family:'Outfit'; font-size:1.25rem; font-weight:800; margin:0 0 0.5rem; color:#0f172a;">Equalizes Performance</h4>
+        <p style="font-size:0.95rem; color:#475569; margin:0; line-height:1.6;">Mixed-ability teams help less-endowed students rise to the level of top performers through peer encouragement and active participation.</p>
+      </div>
+    </div>
+
+    <!-- CREDITS & PUBLICATION BANNER -->
+    <div class="credits-card">
+      <h3 class="credits-title">Osmosis Project Credits</h3>
+      <div class="credits-grid">
+        <div>
+          <div class="credit-role">Publisher & Author</div>
+          <div class="credit-name">Godfried Funkor</div>
+        </div>
+        <div>
+          <div class="credit-role">Game Engineering</div>
+          <div class="credit-name">Godfried Funkor & Desmond Mifetu</div>
+        </div>
+      </div>
+      <p style="font-size:0.9rem; opacity:0.75; margin:0;">
+        Published by UCYDE Centre (The University Child & Youth Development Centre, Accra) &bull; ISBN: 978-9988-2-4532-0
+      </p>
+    </div>
+  </section>
+
+  <!-- Return Button Footer -->
+  <div class="footer-cta">
+    <button onclick="window.location.href='01_home_menu.html'" class="classic-btn green-gradient" style="font-size:1.15rem; padding:1.2rem 3.5rem; border-radius:999px; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);">
+      ← Return to Main Menu
+    </button>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightboxOnBackdrop(event)">
+    <div class="lightbox-card">
+      <div class="lightbox-header">
+        <h3 id="lightbox-title">Document Inspection</h3>
+        <button class="lightbox-close-btn" onclick="closeLightbox()">&times;</button>
+      </div>
+      <div class="lightbox-img-wrapper">
+        <img id="lightbox-img" src="" alt="Enlarged document preview">
+      </div>
     </div>
   </div>
-  <script src="core_dictionary.js"></script>
-  <script src="core_shared_state.js"></script>
+
   <script>
-    initModal();
-    document.getElementById('go-home-btn').addEventListener('click', () => {
-      window.location.href = '01_home_menu.html';
+    // Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const fill = document.getElementById('scroll-progress');
+      if (fill) fill.style.width = scrolled + '%';
+    });
+
+    // Side Fly-In Intersection Observer (Split Movie Animation)
+    const flyInObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fly-in-active');
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.fly-in-left, .fly-in-right').forEach(el => flyInObserver.observe(el));
+
+    // Fullscreen Document Lightbox
+    const modalEl = document.getElementById('lightbox-modal');
+    const modalImg = document.getElementById('lightbox-img');
+    const modalTitle = document.getElementById('lightbox-title');
+
+    function openLightbox(title, imgSrc) {
+      if (!modalEl || !modalImg || !modalTitle) return;
+      modalTitle.textContent = title;
+      modalImg.src = imgSrc;
+      modalEl.classList.add('active');
+      document.body.style.overflow = 'hidden'; // prevent background scrolling
+    }
+
+    function closeLightbox() {
+      if (!modalEl) return;
+      modalEl.classList.remove('active');
+      document.body.style.overflow = '';
+      if (modalImg) modalImg.src = '';
+    }
+
+    function closeLightboxOnBackdrop(e) {
+      if (e.target === modalEl) {
+        closeLightbox();
+      }
+    }
+
+    // Keyboard ESC to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
     });
   </script>
 </body>
