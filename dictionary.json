@@ -45947,6 +45947,16 @@
       "definition": "A family of microcomputer programs used for manipulating large quantities of data."
     },
     {
+      "word": "dc motor",
+      "raw_headword": "DC MOTOR (DIRECT CURRENT MOTOR)",
+      "synonyms": [
+        "direct current motor"
+      ],
+      "definition": "An electric motor that converts direct current (DC) electrical energy into mechanical energy. It operates on the principle that a current-carrying conductor placed in a magnetic field experiences a force (the motor effect). Key components include the armature (rotor), field magnets (stator), commutator, and brushes. The commutator reverses the current direction every half turn to maintain continuous rotation. DC motors are widely used in battery-powered devices, electric vehicles, and industrial machinery.",
+      "subject": "Physics",
+      "diagram": "dc motor"
+    },
+    {
       "word": "dce",
       "raw_headword": "DCE",
       "synonyms": [],
