@@ -179,17 +179,22 @@ function performSearch() {
   const diagramImg = document.getElementById('res-diagram-img');
   
   let diagramSrc = null;
-  if (typeof window.DictionaryDiagrams !== 'undefined') {
+  const diagMap = window.DictionaryDiagrams || window.DICTIONARY_DIAGRAMS;
+  if (typeof diagMap !== 'undefined') {
     const wordKey = entry.word.toLowerCase().trim();
     const queryKey = query.toLowerCase().trim();
     const baseWordKey = wordKey.replace(/\(.*?\)/g, '').trim();
     const rawKey = (entry.raw || '').toLowerCase().trim();
 
-    diagramSrc = window.DictionaryDiagrams[wordKey] ||
-                 window.DictionaryDiagrams[rawKey] ||
-                 window.DictionaryDiagrams[baseWordKey] ||
-                 window.DictionaryDiagrams[queryKey] ||
+    diagramSrc = diagMap[wordKey] ||
+                 diagMap[rawKey] ||
+                 diagMap[baseWordKey] ||
+                 diagMap[queryKey] ||
                  null;
+  }
+
+  if (diagramSrc && !diagramSrc.startsWith('diagrams/') && !diagramSrc.startsWith('/') && !diagramSrc.startsWith('http')) {
+    diagramSrc = 'diagrams/' + diagramSrc;
   }
 
   if (diagramBox) {

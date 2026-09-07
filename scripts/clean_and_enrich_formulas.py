@@ -188,6 +188,18 @@ def process_dictionary(input_json_path, output_json_path, output_js_path=None):
           }
         }
       }
+    } else if (typeof list === 'string') {
+      const wLower = letter.toLowerCase();
+      const entry = {
+        word: letter,
+        raw: letter,
+        definition: list,
+        synonyms: []
+      };
+      if (!definitionMap.has(wLower)) {
+        definitionMap.set(wLower, entry);
+      }
+      allWordsArray.push(entry);
     }
   }
 
