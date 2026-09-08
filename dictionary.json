@@ -629,7 +629,7 @@
       "word": "abelian theorem",
       "raw_headword": "ABELIAN THEOREM",
       "synonyms": [],
-      "definition": "A theorem stating that the convergence of a series or integral implies summability with respect to some summability method. Named after Norwegian mathematician Niels Henrik Abel (1802–1829). Abel's theorem states that if a power series in $z$ converges to $f(z)$ for $|z| < 1$ and to $a$ for $z = 1$, then $\\lim_{z \\to 1^-} f(z) = a$. In other words, if a power series converges for $z = a$, it converges absolutely for $$$$$$$|z| < |a|$$$$$$$. It also states that if three series with $n$-th terms $a_n$, $b_n$ and: $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ respectively converge, then the third series equals the product of the first two series."
+      "definition": "A theorem stating that the convergence of a series or integral implies summability with respect to some summability method. Named after Norwegian mathematician Niels Henrik Abel (1802–1829). Abel's theorem states that if a power series in $z$ converges to $f(z)$ for $|z| < 1$ and to $a$ for $z = 1$, then $\\lim_{z \\to 1^-} f(z) = a$. In other words, if a power series converges for $z = a$, it converges absolutely for $$$$$$$$|z| < |a|$$$$$$$$. It also states that if three series with $n$-th terms $a_n$, $b_n$ and: $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ respectively converge, then the third series equals the product of the first two series."
     },
     {
       "word": "abend",
@@ -9844,7 +9844,7 @@
       "word": "annihilation",
       "raw_headword": "ANNIHILATION",
       "synonyms": [],
-      "definition": "In subatomic physics, a high-energy process in which a subatomic particle collides with its corresponding antiparticle, converting their entire rest mass into energy in accordance with Einstein's mass-energy equivalence principle: $$$$$$$$$$E = mc^2$$$$$$$$$$ In electron-positron annihilation, an electron ($e^-$) and a positron ($e^+$) annihilate at low kinetic energy to produce two gamma-ray photons: $$e^- + e^+ \\longrightarrow 2\\gamma$$ Each gamma photon carries energy $E_\\gamma = m_e c^2 = 0.511\\text{ MeV}$, giving a total energy release of $1.022\\text{ MeV}$."
+      "definition": "In subatomic physics, a high-energy process in which a subatomic particle collides with its corresponding antiparticle, converting their entire rest mass into energy in accordance with Einstein's mass-energy equivalence principle: $$$$$$$$$$$$E = mc^2$$$$$$$$$$$$ In electron-positron annihilation, an electron ($e^-$) and a positron ($e^+$) annihilate at low kinetic energy to produce two gamma-ray photons: $$e^- + e^+ \\longrightarrow 2\\gamma$$ Each gamma photon carries energy $E_\\gamma = m_e c^2 = 0.511\\text{ MeV}$, giving a total energy release of $1.022\\text{ MeV}$."
     },
     {
       "word": "annihilator",
@@ -32128,7 +32128,7 @@
       "synonyms": [
         "trichloro methane"
       ],
-      "definition": "An odourless, toxic carcinogenic liquid, with the chemical formula CHCl 3 , melting point^-63.5 °C (210 K) and boiling point 61.2 °C (334 K). It has a characteristic pungent, sickly sweet smell and taste. It is produced by reaction of chlorine with ethanol and by the reduction of carbon tetrachloride with moist iron. It dissolves freely in ethanol and ether but does not mix with water. When exposed to sunlight and air it reacts slowly to form phosgene (COCl 2 ), a very poisonous gas. It was once used as a general anaesthetic in surgery but has been replaced by less toxic, safer anaesthetics, such as ether. It is employed as a solvent and in the synthesis of organic chemical compounds."
+      "definition": "An odourless, toxic carcinogenic liquid with the chemical formula $\\text{CHCl}_3$, melting point $-63.5^\\circ\\text{C}$ ($210\\text{ K}$) and boiling point $61.2^\\circ\\text{C}$ ($334\\text{ K}$). It has a characteristic pungent, sickly sweet smell and taste. It is produced by reaction of chlorine with ethanol and by the reduction of carbon tetrachloride with moist iron. When exposed to sunlight and air, it reacts slowly to form phosgene ($\\text{COCl}_2$), a very poisonous gas."
     },
     {
       "word": "chloromethane",
@@ -32138,7 +32138,7 @@
         "r-40",
         "hcc 40"
       ],
-      "definition": "A colourless flammable gas, with the chemical formula CH3 Cl, relative density 2.22, melting point^-97.7 °C (176 K) and boiling point^-24.2 °C (249 K). It is a haloalkene made by direct chlorination of methane and used as a local anaesthetic and once used as a refrigerant. Due to concerns about its toxicity, it is no longer present in consumer products."
+      "definition": "A colourless flammable gas with the chemical formula $\\text{CH}_3\\text{Cl}$, relative density $2.22$, melting point $-97.7^\\circ\\text{C}$ ($176\\text{ K}$) and boiling point $-24.2^\\circ\\text{C}$ ($249\\text{ K}$). It is a haloalkane made by direct chlorination of methane and was once used as a local anaesthetic and refrigerant."
     },
     {
       "word": "chlorophenol",
@@ -32213,7 +32213,7 @@
       "synonyms": [
         "chol esky factorisation"
       ],
-      "definition": "The factorisation of a positive definite matrix A as LL * = R * R , where L is lower-triangular, R is upper-triangular and L * and R * are their respective transposes. The matrix R is sometimes called a Cholesky factor or 'square root' of A and can be computed directly from element-by-element comparison, starting in the first row."
+      "definition": "The factorisation of a symmetric positive-definite matrix $A$ as $A = L L^* = R^* R$, where $L$ is lower-triangular, $R$ is upper-triangular, and $L^*$ and $R^*$ are their respective conjugate transposes. The matrix $R$ is called the Cholesky factor or 'square root' of $A$ and can be computed directly from element-by-element comparison."
     },
     {
       "word": "cholagoguescarnallite",
@@ -32229,7 +32229,7 @@
         "calciol",
         "vitamin d3"
       ],
-      "definition": "A form of vitamin D with a white colour and needle-like crystals. The chemical formula is C27 H44 O and melting point is 83 °C^-86 °C (356.15 K^-359 K). It is found naturally in fish-liver oils and egg yolks. Cholecalciferol is also produced industrially from lanolin found in sheep's wool for use in vitamin supplements and to fortify foods. C Vitamin D deficiency causes rickets in children and results in bony deformities including bowed long bones. Deficiency in adults leads to the disease osteomalacia, a disease occurring mainly in women, causing softening of the bones and resulting in pain and weakness."
+      "definition": "A form of vitamin D (vitamin $\\text{D}_3$) with needle-like crystals and chemical formula $\\text{C}_{27}\\text{H}_{44}\\text{O}$, with melting point $83^\\circ\\text{C} - 86^\\circ\\text{C}$ ($356.15\\text{ K} - 359\\text{ K}$). It is found naturally in fish-liver oils and egg yolks, and is synthesized in skin exposed to ultraviolet B radiation."
     },
     {
       "word": "cholecystectomy",
@@ -32261,7 +32261,7 @@
       "word": "cholesterol",
       "raw_headword": "CHOLESTEROL",
       "synonyms": [],
-      "definition": "A fatty substance, with the chemical formula C27 H45 OH, relative density 1.052, melting point 148 °C^-150 °C (421 K^-423 K) and boiling point 360 °C (633.15 K) and decomposes. It is found in animal fluids and tissue. The principal component is sterol. It is involved in the manufacture of steroid hormones and fat- soluble vitamins including Vitamins A, D, E and K. It is provided in the diet by foods such as eggs, meat and butter. A high level of serum cholesterol causes hardening or blockage of the arteries, an indicator for heart disease."
+      "definition": "A sterol lipid with the chemical formula $\\text{C}_{27}\\text{H}_{45}\\text{OH}$, relative density $1.052$, melting point $148^\\circ\\text{C} - 150^\\circ\\text{C}$ ($421\\text{ K} - 423\\text{ K}$) and boiling point $360^\\circ\\text{C}$ ($633.15\\text{ K}$) with decomposition. It is essential for the structural integrity of animal cell membranes and serves as a precursor for steroid hormones, bile acids, and vitamin D."
     },
     {
       "word": "choline",
@@ -32442,7 +32442,7 @@
       "word": "chromatic number",
       "raw_headword": "CHROMATIC NUMBER",
       "synonyms": [],
-      "definition": "The minimum number of colours needed to colour the vertices of a connected graph so that the edges at a common vertex have distinct colours and no two adjacent vertices have the same colour. The chromatic number of a square, tube or sphere, for example, is 4, as it is impossible to place more than four differently coloured regions on one of these figures so that any pair has a common boundary. A graph with ( G ) = k is said to be k -colourable. All bipartite graphs are two-colourable; and all planar graphs are four-colourable as a consequence of the four colour theorem."
+      "definition": "The minimum number of colours needed to colour the vertices of a graph $G$ such that no two adjacent vertices share the same colour, denoted by $\\chi(G)$. A graph with $\\chi(G) = k$ is said to be $k$-colourable. For example, all bipartite graphs are $2$-colourable, and all planar graphs are $4$-colourable by the Four Colour Theorem."
     },
     {
       "word": "chromatic silencing",
@@ -32722,7 +32722,7 @@
         "chromium oxychloride",
         "chro mium ( vi"
       ],
-      "definition": "A dark red liquid with the chemical formula CrO2 Cl 2 , boiling point 117 °C (390 K) and melting point^-96.5 °C (176.65 K). It is evolved as a dark red vapour on addition of concentrated sulfuric acid to a mixture of sodium potassium dichromate and sodium chloride. The compound is a powerful oxidising agent, exploding on contact with phosphorus and inflaming sulfur and many organic compounds."
+      "definition": "A dark red liquid with chemical formula $\\text{CrO}_2\\text{Cl}_2$, boiling point $117^\\circ\\text{C}$ ($390\\text{ K}$) and melting point $-96.5^\\circ\\text{C}$ ($176.65\\text{ K}$). It is evolved as dark red vapour on addition of concentrated sulfuric acid to a mixture of potassium dichromate and sodium chloride. It is a powerful oxidising agent."
     },
     {
       "word": "chronic",
@@ -33022,7 +33022,7 @@
       "word": "circle of convergence",
       "raw_headword": "CIRCLE OF CONVERGENCE",
       "synonyms": [],
-      "definition": "A circle on the Argand diagram such that a given power series converges at all points within the circle and diverges at all points outside it. For any power series c i i ∑ ( z - a ) i , there is an R such that the series converges, if R ≠ 0, for all z such that z - a < R , and diverges for all z such that z - a > R . The radius R may also be infinite, in which case the circle of convergence is the entire plane or zero so that it is a single point and is the absolute value of the limit of the ratio of each term to the next. The series may either converge or diverge at points for which z - a equals the radius that lies on the circumference of the circle."
+      "definition": "A circle in the complex plane for a power series $\\sum_{n=0}^\\infty c_n (z - a)^n$ centered at $a$ with radius $R$ (radius of convergence). The series converges absolutely for all $z$ satisfying $|z - a| < R$ and diverges for $|z - a| > R$."
     },
     {
       "word": "circle of curvature",
@@ -33030,7 +33030,7 @@
       "synonyms": [
         "osculating circle"
       ],
-      "definition": "The circle that touches a curve on the concave side and has the same tangent and curvature as a given curve at a given point with its radius equal to the radius of curvature at the point. For a function y = f ( x ), the formula for the curvature and radius of curvature (its radius), at a point [ x , f ( x )] on the curve y = f ( x ), the circle of curvature is tangent to the curve and has a radius r ( x ). The radius of curvature is normal to the concave side of the curve at the point and is equal to the reciprocal of its curvature."
+      "definition": "The circle that is tangent to a curve $y = f(x)$ at a given point, shares the same principal normal and tangent line, and has a radius equal to the radius of curvature: $$r = \\frac{1}{\\kappa} = \\frac{[1 + (f'(x))^2]^{3/2}}{|f''(x)|}$$"
     },
     {
       "word": "circle of willis",
@@ -33042,7 +33042,7 @@
       "word": "circle theorem",
       "raw_headword": "CIRCLE THEOREM",
       "synonyms": [],
-      "definition": "Any of a set of theorems used in solving circle problems in plane geometry as follows: (i) Theorem 1 states that the angle subtended at the centre of a circle is twice the angle subtended at the circumference: <BOC = 2 × <BAC or <BOC = 2y and <BAC = y. (ii) Theorem2 states that angles subtended by an arc in the same segment of a circle are equal: <EBF = <EAF = ECF or x = y = z. (iii) Theorem3 states that opposite angles in a cyclic quadrilateral sum up to 180°: < BAD + <BCD = 180° or<ABC + <ADC = 180°. (iv) Theorem 4 states that the angle in a semicircle is a right angle (90°). In other words the angle subtended by a diameter on the circumference of the circle is a right angle or 90°: < ABC = 90°. (v) Theorem 5 states that the angle between a tangent and the radius drawn to the point of contact is 90°: <OBC = 90°. (vi) Theorem 6 states that only two tangents can be drawn from a point outside a circle: |AB|= |AC|. The tangents are also equal in length. (vii) Theorem 7 states that the angle between the tangent of a chord through the point of contact is equal to the angle subtended by the chord in the alternate segment: <CAD = <DEA, <BAE = <EDA. Circle Theorem 1 Circle Theorem2 Circle Theorem 5 Circle Theorem 6 Circle Theorem 7 Circle Theorem3 Circle Theorem 4 yyABCoyAFzxECEDABCC Euler circuit uses every edge of a graph exactly once; a Hamiltonian circuit uses each every vertex of a graph exactly once."
+      "definition": "Fundamental theorems in Euclidean plane geometry: (i) The angle subtended by an arc at the centre is twice the angle subtended at the circumference: $\\angle\\text{BOC} = 2\\angle\\text{BAC}$. (ii) Angles in the same segment are equal: $\\angle\\text{EBF} = \\angle\\text{EAF} = \\angle\\text{ECF}$. (iii) Opposite angles of a cyclic quadrilateral sum to $180^\\circ$: $\\angle\\text{BAD} + \\angle\\text{BCD} = 180^\\circ$. (iv) The angle in a semicircle is a right angle: $\\angle\\text{ABC} = 90^\\circ$. (v) The angle between a tangent and radius at the point of contact is $90^\\circ$: $\\angle\\text{OBC} = 90^\\circ$. (vi) Tangents drawn from an external point are equal in length: $|AB| = |AC|$. (vii) Alternate segment theorem: the angle between a tangent and chord equals the angle subtended in the alternate segment: $\\angle\\text{CAD} = \\angle\\text{DEA}$."
     },
     {
       "word": "circuit bending",
@@ -33090,7 +33090,7 @@
       "word": "circular cone",
       "raw_headword": "CIRCULAR CONE",
       "synonyms": [],
-      "definition": "A cone whose base is a circle. To find the volume V of a circular cone with height h and radius r , the following formula is applied: V = 1 3 π r 2 h . The total surface area is calculated as A = π r ( L + r ), where r is the radius of the circular base and L is the length of the slant edge."
+      "definition": "A cone with a circular base. For a cone of base radius $r$ and perpendicular height $h$, its volume is: $$V = \\frac{1}{3}\\pi r^2 h$$ and its total surface area is $A = \\pi r(l + r)$, where $l = \\sqrt{r^2 + h^2}$ is the slant height."
     },
     {
       "word": "circular dichroism",
@@ -33122,7 +33122,7 @@
       "word": "circular permutation",
       "raw_headword": "CIRCULAR PERMUTATION",
       "synonyms": [],
-      "definition": "The arrangement of n objects in a circular form. This is given by (n^-1)!."
+      "definition": "The number of unique ways of arranging $n$ distinct objects in a circle. Because rotations are considered identical, the total number of circular permutations is given by: $$(n^-1)!$$"
     },
     {
       "word": "circular point",
@@ -33161,7 +33161,7 @@
       "word": "circulation",
       "raw_headword": "CIRCULATION",
       "synonyms": [],
-      "definition": "1. The movement of blood round the body from and back to the heart. 2. The free movement of something such as air, water or any fluid in an enclosed space. 3. The curvilinear integral C ( Γ , t ) defined as the Γ ∫ v . dx , around a curve Γ in the configuration of a body t , where v is the velocity at the point with position vector x . Circular Cone radius slant height Height vertical angle θ."
+      "definition": "In fluid dynamics and vector calculus, the line integral of the fluid velocity vector $\\mathbf{v}$ around a closed curve $\\Gamma$: $$\\Gamma = \\oint_\\Gamma \\mathbf{v} \\cdot d\\mathbf{x}$$ By Stokes' theorem, circulation equals the surface integral of the vorticity $\\nabla \\times \\mathbf{v}$ through any surface bounded by $\\Gamma$."
     },
     {
       "word": "circulation preserving motion",
@@ -33211,7 +33211,7 @@
       "word": "circumference",
       "raw_headword": "CIRCUMFERENCE",
       "synonyms": [],
-      "definition": "The curved line that encloses a curved plane figure, such as a circle or an ellipse or a line that marks out a circle or other curved figure or a distance round a circle. The formula for finding the circumference C of a circle is: C = 2 πr , where r is the radius."
+      "definition": "The distance around the boundary of a circle or curved figure. For a circle of radius $r$ or diameter $d$: $$C = 2\\pi r = \\pi d$$"
     },
     {
       "word": "circumlunar rhythm",
@@ -33351,7 +33351,7 @@
       "word": "cissoid",
       "raw_headword": "CISSOID",
       "synonyms": [],
-      "definition": "A plane curve with the equation y 2 (2 a - x )= x 3 . The polar equation is r = 2atanθSinθ . It has all points on a variable line passing through a fixed point and whose distance from the fixed point is equal to the distance between the intersections of the line with two given curves."
+      "definition": "A curve generated from a circle of radius $a$. In Cartesian coordinates, the Cissoid of Diocles is given by: $$y^2(2a - x) = x^3$$ and in polar coordinates by: $$r = 2a\\tan\\theta\\sin\\theta$$"
     },
     {
       "word": "cissus",
@@ -33389,7 +33389,7 @@
       "word": "citric acid",
       "raw_headword": "CITRIC ACID",
       "synonyms": [],
-      "definition": "citric acid, for example, triethyl citrate. Chemical structure of Citric Acid O OH OH OH HO O O CITRIC ACID (2-HYDROXYPROPANE^-1,2,3-TRICARBOXYLIC A C I D ; 3 - C A R B O X Y^-3 - HYDROXYPENTANEDIOIC ACID):A weak organic acid, with the chemical formula C3H5O(COOH)3,"
+      "definition": "A weak tricarboxylic acid found naturally in citrus fruits, with chemical formula $\\text{C}_6\\text{H}_8\\text{O}_7$ (or $\\text{C}_3\\text{H}_5\\text{O}(\\text{COOH})_3$) and systematic IUPAC name 2-hydroxypropane^-1,2,3-tricarboxylic acid. It is a key intermediate in the citric acid cycle (Krebs cycle) of cellular respiration."
     },
     {
       "word": "citric acid cycle",
@@ -33479,13 +33479,13 @@
       "word": "clairaut's equation",
       "raw_headword": "CLAIRAUT'S EQUATION",
       "synonyms": [],
-      "definition": "The differential equation written as xy ' - y + f ( y ') = 0."
+      "definition": "A first-order non-linear ordinary differential equation of the form: $$y = x y' + f(y')$$ or $x y' - y + f(y') = 0$, having general linear solutions $y = C x + f(C)$ and a singular solution representing their envelope."
     },
     {
       "word": "clairaut's form",
       "raw_headword": "CLAIRAUT'S FORM",
       "synonyms": [],
-      "definition": "A first-order ordinary or partial differential equation written as z = x i ∂ z ∂ x i i = 1 n ∑ + f ∂ z ∂ x 1 , ∂ z ∂ x 2 ,..., ∂ z ∂ x n ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ , where f is a differential function. If n >1, it has the complete solution z = a i i ∑ x i + f ( a 1 , a 2 ,... a n ), where a 1 , a 2 , ... a n are arbitary constants; the general solution for n = 1 has the same form. The equation may also have a singular solution or a solution that is not obtainable from the complete solution."
+      "definition": "A first-order partial differential equation of the form: $$z = \\sum_{i=1}^n x_i \\frac{\\partial z}{\\partial x_i} + f\\left(\\frac{\\partial z}{\\partial x_1}, \\dots, \\frac{\\partial z}{\\partial x_n}\\right)$$ with the complete integral solution $z = \\sum_{i=1}^n a_i x_i + f(a_1, \\dots, a_n)$, where $a_1, \\dots, a_n$ are arbitrary constants."
     },
     {
       "word": "claisen condensation",
@@ -33572,7 +33572,7 @@
       "word": "clarke generalized directional derivative",
       "raw_headword": "CLARKE GENERALIZED DIRECTIONAL DERIVATIVE",
       "synonyms": [],
-      "definition": "The function associated with a real-valued locally Lipschitz function, f on a normed space X , by the formula f 0 ( a ; h ) = limsup x → t ; t → 0 + f ( y + th ) - f ( y ) t . The function f 0 ( x ;) is always sublinear and coincides with the ordinary directional derivative for a convex or a continuously differentiable function. The Clarke generalized gradient is defined as the set of linear functionals with φ ( h ) ≤ f 0 ( x ; h ) for all h in X. This set is nonempty, weak-star compact and convex. It coincides with the subgradient for a convex function and with the gradient for a continuously differentiable function. If the space is finite dimensional it C can be realised as the closed convex hull of all limit points of sequences of gradients of the function at arguments approaching the point."
+      "definition": "For a locally Lipschitz function $f$ on a normed space $X$, defined at $x$ in direction $h$ by: $$f^\\circ(x; h) = \\limsup_{y \\to x, \\, t \\to 0^+} \\frac{f(y + th) - f(y)}{t}$$ The Clarke generalized gradient $\\partial f(x)$ is the set of all continuous linear functionals $\\varphi$ satisfying $\\varphi(h) \\le f^\\circ(x; h)$ for all $h \\in X$."
     },
     {
       "word": "clarke orbit",
@@ -33616,7 +33616,7 @@
       "word": "class equation",
       "raw_headword": "CLASS EQUATION",
       "synonyms": [],
-      "definition": "The equation G = Z ( G ) + cl ( x i ) i ∑ , where G is a finite group, Z ( G ) is its centre and cl ( x i ) ... cl ( x n ) are all the distinct non-singleton conjugacy classes of G ."
+      "definition": "In finite group theory, the equation partitioning a group $G$ into its center $Z(G)$ and non-singleton conjugacy classes: $$|G| = |Z(G)| + \\sum_{i=1}^k [G : C_G(x_i)]$$ where $C_G(x_i)$ is the centraliser of representative element $x_i$."
     },
     {
       "word": "class frequency",
@@ -33640,7 +33640,7 @@
       "word": "class mark",
       "raw_headword": "CLASS MARK",
       "synonyms": [],
-      "definition": "A value within the class interval, usually the average of the upper class limit and the lower class limit. For example, in a class interval of 1 - 5 the class mark is expressed as 1 + 5 Clasping leaf for a class interval of 6-10, it is 6 + 10 = 8, as shown in the table."
+      "definition": "The midpoint of a class interval in statistics, calculated as the arithmetic mean of the lower and upper class limits: $$\\text{Class Mark} = \\frac{\\text{Lower Limit} + \\text{Upper Limit}}{2}$$ For example, for the interval $1 - 5$, the class mark is $\\frac{1 + 5}{2} = 3$, and for $6 - 10$, it is $\\frac{6 + 10}{2} = 8$."
     },
     {
       "word": "class number",
@@ -33678,7 +33678,7 @@
       "word": "classical eigenvalue problem",
       "raw_headword": "CLASSICAL EIGENVALUE PROBLEM",
       "synonyms": [],
-      "definition": "It consists of finding a scalar λ and a non-zero vector x such that Ax = λBx , where A is a square, complex or real matrix and B is the identity matrix or operator."
+      "definition": "The problem of determining scalars $\\lambda$ (eigenvalues) and non-zero vectors $\\mathbf{x}$ (eigenvectors) satisfying: $$A\\mathbf{x} = \\lambda\\mathbf{x}$$ or generalized form $A\\mathbf{x} = \\lambda B\\mathbf{x}$, where $A$ and $B$ are square matrices."
     },
     {
       "word": "classical field theory",
@@ -34533,7 +34533,7 @@
       "word": "closed form",
       "raw_headword": "CLOSED FORM",
       "synonyms": [],
-      "definition": "An expression for a given function or quantity, especially an integral, in terms of known and well-understood quantities such as the evaluation of exp( - x 2 ) dx -∞ ∞ ∫ as √ π ."
+      "definition": "An expression for a mathematical function or definite integral evaluated in terms of a finite number of well-known elementary operations and functions. For example, the Gaussian integral: $$\\int_{-\\infty}^\\infty e^{-x^2} \\, dx = \\sqrt{\\pi}$$"
     },
     {
       "word": "closed graph theorem",
@@ -35256,7 +35256,7 @@
       "word": "codomain",
       "raw_headword": "CODOMAIN",
       "synonyms": [],
-      "definition": "For a given function or mapping, a set within which the values of the function lie. This is different from the set of values, known as the range that the function actually takes. For example, the function y = - 1 x for integral values of x can be said to have the interval [-1,1] as codomain, although 0 is not the value of the function for any argument; its range is in fact only the set of rationals of the form 1 x ."
+      "definition": "The set containing all possible outputs of a function $f: X \\to Y$, where $Y$ is the codomain. The range or image $f(X) \\subseteq Y$ consists of the values the function actually takes. For example, $f(x) = -\\frac{1}{x}$ on integers can have codomain $[-1, 1]$, whereas its image is the discrete set $\\{ -\\frac{1}{x} \\mid x \\in \\mathbb{Z} \\setminus \\{0\\} \\}$."
     },
     {
       "word": "codominance",
@@ -35274,7 +35274,7 @@
       "word": "coefficient",
       "raw_headword": "COEFFICIENT",
       "synonyms": [],
-      "definition": "1. Proportionality constant between two quantities of different dimension. It can also be defined as the quantity placed in front of an algebraic term, signifying multiplication. For example, in 4 x 2 + 2 xy - x , the coefficient of x 2 is 4, that of xy is 2 and that of x is^-1. 2. The multiplier of a given power of a variable in an expression. For example, the coefficient of x in 3 xyz + zx 2 is 3 yz . 3. In physics, a measure of a specified property of a substance under specified conditions, for example, coefficient of expansion."
+      "definition": "A constant multiplicative factor assigned to a variable or term in an algebraic expression. For example, in $4x^2 + 2xy - x$, the coefficient of $x^2$ is $4$, that of $xy$ is $2$, and that of $x$ is $-1$."
     },
     {
       "word": "coefficient of determination",
@@ -35323,7 +35323,7 @@
       "word": "coefficient of probability",
       "raw_headword": "COEFFICIENT OF PROBABILITY",
       "synonyms": [],
-      "definition": "The single-valued real function, P that determines the probability that a member of a system lies within an elemental volume, dv , of phase space. This probability may be represented by an expression of the form dp = P dv . P also fulfils the condition ∫P dv = 1, where the integral is over all phase space; otherwise P is arbitrary."
+      "definition": "A probability density function $P$ such that the probability $dp$ of finding a system in phase space volume element $dv$ is $dp = P \\, dv$, subject to the normalization condition: $$\\int P \\, dv = 1$$"
     },
     {
       "word": "coefficient of relationship",
@@ -35355,7 +35355,7 @@
       "word": "coefficient of volume expansion",
       "raw_headword": "COEFFICIENT OF VOLUME EXPANSION",
       "synonyms": [],
-      "definition": "Fractional change in volume per degree change in temperature. Its symbol is γ."
+      "definition": "The fractional change in volume of a substance per degree rise in temperature, denoted by $\\gamma$: $$\\gamma = \\frac{\\Delta V}{V_0 \\Delta T}$$ For isotropic solids, $\\gamma \\approx 3\\alpha$, where $\\alpha$ is the coefficient of linear expansion."
     },
     {
       "word": "coelacanth",
@@ -35556,7 +35556,7 @@
       "synonyms": [
         "complementary function"
       ],
-      "definition": "A trigonometric function whose values for any argument are equal to the given function of the complementary angle. Each trigonometric function has a cofunction. Cosine is the cofunction for sine, since sin θ = cos π 2 - θ ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , cotangent is the cofunction for tangent and cosecant is the cofunction for secant. The cofunction of the trigonometric function f (θ) is equal to f π 2 - θ ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ . It is a cofunction because π 2 - θ is a complement of θ. For example, cos θ = sin π 2 - θ ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ ."
+      "definition": "A trigonometric function that yields equal values when evaluated at the complementary angle: $$\\sin\\theta = \\cos\\left(\\frac{\\pi}{2} - \\theta\\right), \\quad \\tan\\theta = \\cot\\left(\\frac{\\pi}{2} - \\theta\\right), \\quad \\sec\\theta = \\csc\\left(\\frac{\\pi}{2} - \\theta\\right)$$"
     },
     {
       "word": "cogeneration",
@@ -36450,13 +36450,13 @@
       "word": "column space",
       "raw_headword": "COLUMN SPACE",
       "synonyms": [],
-      "definition": "The vector space generated by the columns of a matrix, which is the set of all possible linear combinations of its column vectors. The dimension of this space is called the column rank and coincides with both the row-rank and the rank of the matrix. For example, for a matrix, A = ⎛ ⎝ ⎜⎜⎜⎜⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟ , the row vectors are (1, 0), (0, 1) and (0, 0). The row space is the subspace of ! 2 spanned by these vectors. Since the first two vectors are the standard basis vectors for ! 2 , the row space is ! 2 . The column vectors are (1, 0, 0) and (0,1, 0). The column space is the subspace of ! 3 spanned by these vectors. Thus, the column space consists of all vectors of the form a ⋅ (1,0,0) + b ⋅ (0,1,0 = ( a , b ,0)."
+      "definition": "The vector space spanned by the column vectors of a matrix $A$. The column space consists of all linear combinations of the columns: $$c_1 \\mathbf{v}_1 + c_2 \\mathbf{v}_2 + \\dots + c_n \\mathbf{v}_n$$ The dimension of the column space equals the rank of the matrix."
     },
     {
       "word": "column vector",
       "raw_headword": "COLUMN VECTOR",
       "synonyms": [],
-      "definition": "The single column of a matrix with its elements, written as n x 1, where n is the number of elements in the column. C For example, for a matrix , A = ⎛ ⎝ ⎜⎜⎜⎜⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟ , the column vectors are (1,0,0) and (0,1,0)."
+      "definition": "A matrix consisting of a single column of $n$ elements, representing an $n \\times 1$ matrix: $$\\mathbf{v} = \\begin{pmatrix} v_1 \\\\ v_2 \\\\ \\vdots \\\\ v_n \\end{pmatrix}$$"
     },
     {
       "word": "column-reduced echelon form",
@@ -36987,7 +36987,7 @@
         "commutative property",
         "commutativity"
       ],
-      "definition": "Two closely related laws of number operations relating to addition and multiplication that is independent of the order of the numbers or symbols concerned, expressed as: a + b = b + a and ab = ba . Multiplication and addition of numbers have commutative properties, but multiplication does not necessarily hold for multiplication of conditionally convergent series. Quantities to be added or multiplied can be combined in any order. For example, addition is commutative; that is, the result of adding 4 + 2, for example, is the same as that of adding2 + 4. Division and subtraction are not commutative; for example, for subtration, 8 - 2 ≠ 2 - 8 or 8 - 2 is not the same as 2 - 8. Scalar multiplication of two vectors to give the dot product is commutative: a · b = b · a , but vector multiplication to give the cross product is not: a × b = - b × a . Multiplication of matrices is not commutative. Set operations for intersection and union are commutative, i.e., A B = B A and A B = B A."
+      "definition": "Algebraic laws stating that the order of operations does not alter the result: Addition: $a + b = b + a$, Multiplication: $a \\cdot b = b \\cdot a$. Vector dot product is commutative: $\\mathbf{a} \\cdot \\mathbf{b} = \\mathbf{b} \\cdot \\mathbf{a}$, while cross product is anticommutative: $\\mathbf{a} \\times \\mathbf{b} = -(\\mathbf{b} \\times \\mathbf{a})$. Set union and intersection are commutative: $A \\cup B = B \\cup A$ and $A \\cap B = B \\cap A$."
     },
     {
       "word": "commutative ring",
@@ -36999,7 +36999,7 @@
       "word": "commutator",
       "raw_headword": "COMMUTATOR",
       "synonyms": [],
-      "definition": "1. Of two elements of a group, of the form [ x , y ] = x^-1 y^-1 xy , for x and y in the group. It is equal to the group's identity if and only if x and y commute (i.e., if and only if xy = yx . The subgroup of a group generated by all commutators is the derived subgroup. 2. The operator PQ - QP , where P and Q are given operators. 3. A rotary device for altering the direction of an electric current in direct current types of electric motors or electrical generators. It reverses the current direction in the moving coil of a motor's armature to provide a steady torque or rotating force. In a generator, it reverses the coil's connection to the external circuit to provide direct current to the external circuit."
+      "definition": "1. In group theory, the element $[x, y] = x^{-1}y^{-1}xy$. Elements $x$ and $y$ commute if and only if $[x, y] = e$. 2. In quantum mechanics and operator algebra, the operator: $$[P, Q] = PQ - QP$$ 3. In electrical engineering, a mechanical rotary switch on DC motors or generators that periodically reverses current direction between rotor and external circuit."
     },
     {
       "word": "commutator subgroup",
@@ -37122,7 +37122,7 @@
       "word": "companion matrix",
       "raw_headword": "COMPANION MATRIX",
       "synonyms": [],
-      "definition": "A matrix that is obtained from a given polynomial, such as p ( x ) = xn - b n^-1 xn^-1 - ... - b 1 x - b 0 by placing the negatives of the coefficients of the polynomial in ascending order of degree in the last row of a unit super-diagonal matrix."
+      "definition": "For a monic polynomial $p(x) = x^n - b_{n^-1}x^{n^-1} - \\dots - b_1 x - b_0$, the companion matrix is a square matrix whose characteristic polynomial equals $p(x)$."
     },
     {
       "word": "comparable",
@@ -37178,7 +37178,7 @@
       "word": "comparison test",
       "raw_headword": "COMPARISON TEST",
       "synonyms": [],
-      "definition": "The test that gives the absolute convergence of a series by verifying that the terms are dominated by the terms of a convergent series with positive terms. The first series is said to be subordinate to the second series. For example, since k ( k^-1) k = 1 ∞ ∑ is convergent and k (k + 1) ≥ 1 k 2 , it follows by the comparison test that k 2 k = 1 ∞ ∑ converges."
+      "definition": "A convergence test for infinite series stating that if $0 \\le a_n \\le b_n$ for all $n$, then if $\\sum b_n$ converges, $\\sum a_n$ must also converge. For example, because $\\frac{1}{k^2} \\le \\frac{1}{k(k^-1)}$ for $k \\ge 2$ and $\\sum_{k=2}^\\infty \\frac{1}{k(k^-1)}$ converges, $\\sum_{k=1}^\\infty \\frac{1}{k^2}$ converges."
     },
     {
       "word": "compass",
@@ -37479,7 +37479,7 @@
       "word": "complete residue system",
       "raw_headword": "COMPLETE RESIDUE SYSTEM",
       "synonyms": [],
-      "definition": "Any set of representatives chosen one from each residue class. The most frequently used systems are the system of smallest positive residues 0, 1, 2, ..., m^-1 and the system of absolutely smallest residues: - ( m^-1 ) , ..., - 1, 0,1, ( m^-1 ) for odd m and - m2 , - 1, 0,1,..., m for even m . A complete residue system modulo m is a set v = 0,1,..., m^-1 , of integers containing one and only one representant from every residue class modulo m . Thus the numbers aν may be ordered such that for all ν = 0, 1,..., m^-1 , they satisfy aν ≡ ν (mod m )."
+      "definition": "A set of integers containing exactly one element from every residue class modulo $m$. The standard least non-negative residue system is: $$\\{0, 1, 2, \\dots, m^-1\\}$$ where every integer $a_\\nu$ satisfies $a_\\nu \\equiv \\nu \\pmod{m}$."
     },
     {
       "word": "completely monotone function",
@@ -37730,7 +37730,7 @@
       "word": "composite function",
       "raw_headword": "COMPOSITE FUNCTION",
       "synonyms": [],
-      "definition": "A function that consists of two functions arranged in such a way that the output of one function becomes the input of the other function. For example, if f ( x ) = 2 x + 5 and g ( x ) = 6 x , then the composite function f ( g ( x )) is the function 2(6 x ) + 5 = 12 x + 5. Composite of functions is not a commutative operation; that is, f ( g ( x )) is not equal to g ( f ( x )); g ( f ( x ) is also denoted by f g ( x ), i.e., the function g followed by the function f ."
+      "definition": "A function formed by applying one function to the result of another: $(f \\circ g)(x) = f(g(x))$. For example, if $f(x) = 2x + 5$ and $g(x) = 6x$, then: $$f(g(x)) = 2(6x) + 5 = 12x + 5$$"
     },
     {
       "word": "composite index number",
@@ -37809,7 +37809,7 @@
       "word": "composition",
       "raw_headword": "COMPOSITION",
       "synonyms": [],
-      "definition": "The operation that forms a single function from two given functions by applying the second function to the value of the first for any argument; it is only defined when the range of the first is contained in the domain of the second. The composition of functions f and g is written f ! g and pronounced as \"f composed with g, ' f circle g ' or ' f of g '.\" The formula for f ° g is written ( f ° g )( x ) and pronounced as \" f composed with g of x .\" The composition of, for example, x + 3 with x 2 is x 2 + 3; and that of x 2 with x + 3 is ( x + 3) 2 . Repeated composition is denoted by a superscript numeral f n , for example, f ! f ! f ! f = f (4) ."
+      "definition": "The operation combining two functions $f$ and $g$ to form $(f \\circ g)(x) = f(g(x))$. For instance, the composition of $x + 3$ with $x^2$ is $(x + 3)^2$ or $x^2 + 3$. Repeated $n$-fold composition is denoted $f^{(n)}(x)$."
     },
     {
       "word": "composition series",
@@ -37845,7 +37845,7 @@
       "word": "compound angle formulae",
       "raw_headword": "COMPOUND ANGLE FORMULAE",
       "synonyms": [],
-      "definition": "It is any of the trigonometric sum or difference functions, which are given as follows: sin(A ± B) = sinA cosB ± cosAsinB, cos(A ± B) = cosA cosB ± sinA sinB, and tan( A ± tan B ) = tan A ± tan B1 ∓ tan A tan B ."
+      "definition": "Fundamental trigonometric identities for angle sums and differences: $$\\sin(A \\pm B) = \\sin A \\cos B \\pm \\cos A \\sin B$$ $$\\cos(A \\pm B) = \\cos A \\cos B \\mp \\sin A \\sin B$$ $$\\tan(A \\pm B) = \\frac{\\tan A \\pm \\tan B}{1 \\mp \\tan A \\tan B}$$"
     },
     {
       "word": "compound document",
@@ -37877,7 +37877,7 @@
       "word": "compound interest",
       "raw_headword": "COMPOUND INTEREST",
       "synonyms": [],
-      "definition": "The interest calculated on an amount composed of the principal and the previous interest earned together forming the new principal for another term. Compound interest on principal ( p ), rate( r ) and time ( t ) is given by C . I . = p The formula for calculating the amount A to be paid on a compound interest is A = p(1 + r ) nt , where A is the amount of money after a certain period of time, P is the principal, r represents the interest rate, always represented as a decimal, t represents the period of time in which repayment is done and n is the number of times interest is compounded in a year."
+      "definition": "Interest calculated on both initial principal $P$ and accumulated past interest. The accumulated amount $A$ is given by: $$A = P\\left(1 + \\frac{r}{n}\\right)^{nt}$$ and compound interest earned is $\\text{CI} = A - P$, where $r$ is the annual interest rate, $n$ is compounding frequency per year, and $t$ is time in years."
     },
     {
       "word": "compound leaf",
@@ -37889,7 +37889,7 @@
       "word": "compound microscope",
       "raw_headword": "COMPOUND MICROSCOPE",
       "synonyms": [],
-      "definition": "A microscope that uses two lenses or systems of lenses, with the second magnifying the real image formed by the first. It consists essentially of two lenses (objective and eyepiece lenses) mounted in a tube. The objective lens has a short focal length with the object placed at a distance greater than the focal length. This forms a real image view by the eye piece which has a long focal length. The final image produced by the eye piece is virtual, inverted and magnified. The total magnification produced by the microscope is the product of the magnification produced by the objective and the eyepiece lenses. The angular magnification of the compound microscope is given by M = , where V is the image distance of the objective lens, f 0 is the focal length of the objective lens, f e is the focal length of the eyepiece lens, D is the least distance of distinct vision. objective lens eye piece A compound microscope construction lines only FOOQATBEFOFeFeO= object Fo= focal length of the objective lens fe= focal length of the eye-piece lens BE= inverted real image formed by the objective lens (image height) TQ= inverted real image (magnified) formed by the eye-piece lens(image height)"
+      "definition": "An optical instrument using two convex lenses (objective and eyepiece) to achieve high magnification. The total angular magnification $M$ is given by: $$M = m_o \\times m_e = -\\frac{v_o}{u_o}\\left(1 + \\frac{D}{f_e}\\right) \\approx -\\frac{L}{f_o} \\left(\\frac{D}{f_e}\\right)$$ where $f_o$ and $f_e$ are objective and eyepiece focal lengths, $L$ is tube length, and $D$ is the least distance of distinct vision ($25\\text{ cm}$)."
     },
     {
       "word": "compound number",
@@ -37937,7 +37937,7 @@
       "word": "compressibility",
       "raw_headword": "COMPRESSIBILITY",
       "synonyms": [],
-      "definition": "1. A measure of the fractional change in volume of a fluid or solid as a response to a pressure or mean stress change, expressed as (increase in volume/increase in pressure) multiplied by the original volume. An increase in pressure compresses the specimen. A decrease in volume is a negative change, so the negative sign in the equation keeps the compressibility positive. Gases have much larger compressibility than solid and liquids. Its SI unit is pascal^-1 . 2. In soil, it is the ability of a soil to decrease easily in volume when subjected to a mechanical load. Compressible is the ability of a body to change its volume when pressure is applied to it."
+      "definition": "The measure of fractional volume change per unit change in pressure: $$\\beta = -\\frac{1}{V}\\frac{\\Delta V}{\\Delta P}$$ The negative sign ensures $\\beta$ remains positive. Its SI unit is reciprocal pascal ($\\text{Pa}^{-1}$)."
     },
     {
       "word": "compressibility factor",
@@ -38231,7 +38231,7 @@
       "word": "concave down",
       "raw_headword": "CONCAVE DOWN",
       "synonyms": [],
-      "definition": "Of or pertaining to a curve on an interval, having a decreasing derivative as the independent variable increases between two points. In other words, having a negative second derivative and curvature and being concave or having a positive second derivative and curvature and being concave. A differentiable function on an interval I , with f' ( x ) also differentiable on I , is concave up on I , if and only if f'' ( x ) is ≤ 0 on I ."
+      "definition": "A curve where the tangent line lies above the curve on an interval, corresponding to a decreasing first derivative and non-positive second derivative: $$f''(x) \\le 0$$"
     },
     {
       "word": "concave lens",
@@ -38261,7 +38261,7 @@
       "word": "concave up",
       "raw_headword": "CONCAVE UP",
       "synonyms": [],
-      "definition": "Of or pertaining to a curve on an interval, having an increasing derivative as the independent variable increases between two points. In other words, having a positive second derivative and curvature and being convex. A differentiable function on an interval I , with f' ( x ) also differentiable on I , is concave down on I , if and only if f'' ( x ) is ≤ 0 and if and only if f ''( x ) ≥ 0 on I ."
+      "definition": "A curve where the tangent line lies below the curve on an interval, corresponding to an increasing first derivative and non-negative second derivative: $$f''(x) \\ge 0$$"
     },
     {
       "word": "concavity",
@@ -38397,7 +38397,7 @@
       "word": "conchoid",
       "raw_headword": "CONCHOID",
       "synonyms": [],
-      "definition": "A plane curve derived from a fixed point (the pole), with two branches situated about a line to which they are asymptotic, so that a line from the fixed point intersecting both branches is of constant length between asymptote and either branch. Mathematically, its equation is ( x - a ) 2 ( x 2 + y 2 ) = b 2 x 2 , or in polar coordinates, it is r cos θ = a ± b cos θ , where a is the distance between the pole and a vertical asymptote and b is the length of the constant segment."
+      "definition": "A curve determined from a fixed pole and line. In Cartesian coordinates: $$(x - a)^2(x^2 + y^2) = b^2 x^2$$ and in polar coordinates: $$r = \\frac{a}{\\cos\\theta} \\pm b$$ where $a$ is the distance to the directrix line and $b$ is the offset parameter."
     },
     {
       "word": "conclusion",
@@ -38539,7 +38539,7 @@
       "word": "conditional",
       "raw_headword": "CONDITIONAL",
       "synonyms": [],
-      "definition": "1. Of an equation or inequality, true only for certain of the variables for which it can be solved. An example is x^-1 = x + 1 is a conditional equation, as it is true only for x = 2 and x = -1. 2. In statistics, with respect to some random variable of which the value is taken to be fixed."
+      "definition": "An equation or inequality that holds true only for specific values of its variables. For example, $x^2 - 1 = x + 1$ is a conditional equation valid only for $x = 2$ and $x = -1$."
     },
     {
       "word": "conditional distribution",
@@ -38563,7 +38563,7 @@
       "word": "conditional probability",
       "raw_headword": "CONDITIONAL PROBABILITY",
       "synonyms": [],
-      "definition": "The conditional probability that event A will occur, given that event B has occurred is written as P r ( A|B ) (read as \"A given B). It can be found from the formula: P r ( A|B )= ."
+      "definition": "The probability of event $A$ occurring given that event $B$ has already occurred: $$P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}, \\quad \\text{for } P(B) > 0$$"
     },
     {
       "word": "conditional relative frequency",
@@ -38601,7 +38601,7 @@
       "word": "conditionally convergent",
       "raw_headword": "CONDITIONALLY CONVERGENT",
       "synonyms": [],
-      "definition": "The series a n n = 1 ∞ ∑ converges conditionally if and only if a n n = 1 ∞ ∑ converges but a n n = 1 ∞ ∑ diverges. Convergent but not absolutely, so that although the given series converges, the series of its absolute values does not. For example, the convergent series ( - 1) n^-1 n n = 1 ∞ ∑ = 1 - 1 2 + 1 3 + 1 4 + ... is only conditionally convergent, since ( - 1) n^-1 n n = 1 ∞ ∑ = 1 + 1 2 + 1 3 + 1 4 + ... is divergent."
+      "definition": "A series $\\sum_{n=1}^\\infty a_n$ that converges, but whose series of absolute values $\\sum_{n=1}^\\infty |a_n|$ diverges. For example, the alternating harmonic series: $$\\sum_{n=1}^\\infty \\frac{(-1)^{n^-1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\dots = \\ln(2)$$ is conditionally convergent because $\\sum_{n=1}^\\infty \\frac{1}{n}$ diverges."
     },
     {
       "word": "conditioned reflex",
@@ -38629,7 +38629,7 @@
       "word": "conductance",
       "raw_headword": "CONDUCTANCE",
       "synonyms": [],
-      "definition": "The ability of a material to carry an electrical current, usually represented by the symbol G . For a direct current with resistance R , conductance G is the reciprocal of R : G = . In an alternating current circuit, conductance is the resistance R divided by the impedance Z : G = R Z . The SI unit of conductance is siemens. One siemens equals one ampere per volt. Siemens was formerly called the mho or reciprocal of ohm."
+      "definition": "The ability of an electrical component to conduct electric current, denoted by $G$: $$G = \\frac{1}{R}$$ In AC circuits, $G = \\frac{R}{R^2 + X^2}$. Measured in siemens ($\\text{S}$), where $1\\text{ S} = 1\\ \\Omega^{-1}$."
     },
     {
       "word": "conductimetric titration",
@@ -38676,7 +38676,7 @@
       "word": "conductivity",
       "raw_headword": "CONDUCTIVITY",
       "synonyms": [],
-      "definition": "A measure of the ability of a substance to conduct heat or electricity. Electrical conductivity, with the symbol σ, is the reciprocal of the resistivity (ρ) of a material. It is measured in siemens per metre (or (Ωm) -1 ): σ = ."
+      "definition": "A material's intrinsic ability to conduct electric current, denoted by $\\sigma$: $$\\sigma = \\frac{1}{\\rho}$$ where $\\rho$ is electrical resistivity. Measured in siemens per metre ($\\text{S}\\cdot\\text{m}^{-1}$ or $(\\Omega\\cdot\\text{m})^{-1}$)."
     },
     {
       "word": "conductometric titration",
@@ -38712,7 +38712,7 @@
       "word": "cone",
       "raw_headword": "CONE",
       "synonyms": [],
-      "definition": "1. Also known as cone cell , it is a type of photo-sensitive receptor cell, found in the retinas of all diurnal vertebrate eyes. Cones are concerned with the discrimination of colour and of fine detail. In humans, they contain three types of photosensitive pigment, compared to just one in rod cells. They also have a much faster response to light than do rods, so that they can perceive more rapid changes in stimuli. 2. A solid or surface with a plane base consisting of the set of all straight lines passing through a fixed point called the vertex or the points of a circle or ellipse whose plane does not contain the vertex. If the base is a circle, the shape is a circular cone ; if the line or axis , from the centre of the base to the vertex is perpendicular to the circular base, then it is a right cone , for example, an ice-cream cone is a right circular cone; otherwise it is an oblique cone . The volume of a circular cone is 1 3 π r 2 h , where r is the radius of the base and h is the perpendicular height of the cone. The curved lateral surface of the cone is called a nappe. If the cone is extended in both directions from the vertex, the result is a double cone or bicone. A section through a double cone that has been extended indefinitely in both directions to form a conic surface is known as a conic section. 3. In a vector space, a cone is a subset of any set that is closed under positive multiplication and must be convex and include the original. 4. It is A reproductive structure occurring in gymnosperms such as cycads."
+      "definition": "A three-dimensional geometric solid tapering smoothly from a flat base to an apex. For a circular cone with base radius $r$ and perpendicular height $h$, the volume is: $$V = \\frac{1}{3}\\pi r^2 h$$"
     },
     {
       "word": "confidence interval",
@@ -38732,7 +38732,7 @@
       "word": "confidence limit",
       "raw_headword": "CONFIDENCE LIMIT",
       "synonyms": [],
-      "definition": "The lower and upper limits or the numbers at the upper and lower ends of a confidence interval, between which the true value of a population parameter lies in at least the specified percentage of estimates of the limits. Mathematically, it can be defined as: Y ± t 1 - α N standard deviation, N the sample size, α is the desired significance level and t 1 is the 100(1- α /2) percentile of the t distribution with N^-1 degrees of freedom. Note that the confidence coefficient is 1 - α ."
+      "definition": "The lower and upper bounds of a confidence interval containing the true population parameter: $$\\bar{Y} \\pm t_{1 - \\alpha/2, \\, N^-1} \\frac{s}{\\sqrt{N}}$$ where $\\bar{Y}$ is sample mean, $s$ is sample standard deviation, and $N$ is sample size."
     },
     {
       "word": "config.sys file",
@@ -38918,7 +38918,7 @@
       "word": "congruence",
       "raw_headword": "CONGRUENCE",
       "synonyms": [],
-      "definition": "1. The relationship between two integers relative to another (the modulus of the congruence) when the difference between the given numbers is an exact multiple of the modulus, usually written x ≡ y (mod m ). For example, 8 ≡ 2 (mod 3), since 8 - 2 = 6 = 2 x 3. It C is an equivalence relation fundamental to number theory. In general, a congruence equation seeks to solve f ( x ) = 0 (mod m ), where f is an integral polynomial. 2. In geometry, the fact or relation of being congruent, an isometry. 3. In logic, any equivalence relation preserved by every operation in the given structure, so that if x ≡ y , then f ( x ) ≡ y for every operation f ."
+      "definition": "A relation between integers stating that their difference is divisible by a fixed integer modulus $m$: $$x \\equiv y \\pmod{m} \\iff m \\mid (x - y)$$ For example, $8 \\equiv 2 \\pmod{3}$ since $8 - 2 = 6 = 2 \\times 3$."
     },
     {
       "word": "congruence class",
@@ -38930,19 +38930,19 @@
       "word": "congruent",
       "raw_headword": "CONGRUENT",
       "synonyms": [],
-      "definition": "1. Having the same shape and size, as applied to two dimensional or solid figures. Congruent figures are two geometric figures that are identical in size and shape. In diagrams, the corresponding congruent sides may be marked with the same number of hash marks. The symbol of \"congruent to\" is . 2. Of two matrices A and B , having the property that B = PAP t , where P t is the transpose of a non-singular matrix P. Every real symmetric matrix of rank, r , is congruent (over the reals) to a diagonal matrix with rentries equal to ±1 and all others 0."
+      "definition": "1. In geometry, shapes having identical dimensions and angles. 2. In matrix theory, two matrices $A$ and $B$ are congruent if $B = P A P^T$ for an invertible matrix $P$."
     },
     {
       "word": "congruent modulo h",
       "raw_headword": "CONGRUENT MODULO H",
       "synonyms": [],
-      "definition": "Of a pair of two elements, x and y , of a group, G, relative to a subgroup, H, of G being related by a left or right congruence relation. If the elements are left congruent modulo H, it is written x ≡ l y (mod H ), if x^-1 is in the subgroup. If they are right congruent modulo H, it is written as x ≡ r y (mod H ), if yx^-1 is in the subgroup."
+      "definition": "In group theory, elements $x, y \\in G$ are left-congruent modulo subgroup $H$ ($x \\equiv_l y \\pmod{H}$) if $x^{-1}y \\in H$, and right-congruent ($x \\equiv_r y \\pmod{H}$) if $yx^{-1} \\in H$."
     },
     {
       "word": "congruent modulo m",
       "raw_headword": "CONGRUENT MODULO M",
       "synonyms": [],
-      "definition": "Of a pair of integers, differing by an exact multiple of m , related by congruence to the given modulus. If two numbers b and c have the property that their difference b - c is integrally divisible by a number m ( b - c ) c is an integer, then b and c are said to be \"congruent modulo m .\" The number m is called the modulus and the statement \" b is congruent to c (modulo m )\" is written mathematically as b ≠ c (mod m )."
+      "definition": "Two integers $b$ and $c$ whose difference $b - c$ is an integral multiple of modulus $m$: $$b \\equiv c \\pmod{m}$$"
     },
     {
       "word": "congruent transition",
@@ -38960,7 +38960,7 @@
       "word": "conic",
       "raw_headword": "CONIC",
       "synonyms": [],
-      "definition": "1. Relating to a cone; having the form of, resembling or pertaining to a cone. 2. Any expression that represents a conic section; any second degree equation, for example, x 2 + bxy + cy 2 + dx + ey + f = 0. The general conic in Cartesian coordinates can be represented by ( p 2 + q 2 )[( x - a ) 2 + ( y - β ) 2 ] = e 2 ( px + qy + r ) 2 , where e is the eccentricity, ( α , β ) the focus and px + qy + r is the equation of the directrix of the conic. In the vertex form, it is represented by y 2 = 2 px - (1 - ε 2 ) x 2 , where 2 p is the parameter of the conic, i.e., the length of the Latus rectum, which in the ellipse and hyperbola equals b 2 / a ( b and a are the lengths of the semi-axes of the conic) and ε is the numerical eccentricity, e / a . 3. Conic section is a two dimensional curve such as an ellipse and a hyperbola obtained by the intersection of a plane and a right circular cone. For a plane perpendicular to the axis of the cone, a circle is produced. If the plane is at any other angle at which the intersection is a closed curve, it produces an ellipse; if it is parallel to any line joining the vertex of the cone to a point on its base and intersects only a single nappe, a parabola is produced; if the plane is at any other angle and intersects both nappes, it produces a hyperbola. Lines and points are degenerate conics obtained when the intersecting plane includes the vertex of the cone. Conic sections can be conceived geometrically as the loci of points satisfying certain distance relations from a given point, the focus and a given line, the directrix; the eccentricity is the ratio of these distance, which is constant for a particular family of similar curves; these are described algebraically by the conic equations."
+      "definition": "A plane curve formed by the intersection of a plane with a double right cone. In Cartesian coordinates: $$A x^2 + B xy + C y^2 + D x + E y + F = 0$$ In vertex form: $y^2 = 2px - (1 - e^2)x^2$, where $e$ is eccentricity and $p$ is the semi-latus rectum."
     },
     {
       "word": "conic section",
@@ -39012,7 +39012,7 @@
       "word": "conjugacy class",
       "raw_headword": "CONJUGACY CLASS",
       "synonyms": [],
-      "definition": "The set cl ( a ) of all elements in a group that are conjugate to a given element, a , in the group. Each element in a group belongs to exactly one class and the identity element (I=1) is always in its own class. The conjugacy classes partition the group and all elements conjugate to one another, have the same order. The order of the conjugacy class in a finite group is the index of the centraliser of one such element in the group."
+      "definition": "The set of elements in a group $G$ conjugate to a given element $a$: $$\\text{cl}(a) = \\{g a g^{-1} \\mid g \\in G\\}$$"
     },
     {
       "word": "conjugacy problem",
@@ -39020,13 +39020,13 @@
       "synonyms": [
         "transformation problem"
       ],
-      "definition": "The problem of finding an algorithm that decides whether the elements represented by two words x and y in G are conjugate elements of G. There exists a finitely presented semigroup for which this problem is insoluble. The problem is to determine whether there exists an element z of G such that y = zxz^-1 ."
+      "definition": "The algorithmic decision problem of determining whether two given elements $x, y \\in G$ are conjugate, i.e., whether there exists $z \\in G$ such that $y = z x z^{-1}$."
     },
     {
       "word": "conjugate",
       "raw_headword": "CONJUGATE",
       "synonyms": [],
-      "definition": "1. With respect to angles, two angles that sum up to four right angles or 360°. 2. Any set of numbers that satisfy the same irreducible polynomial. For example, the complex conjugate of 2 + 3 i is 2 - 3 i ; the complex conjugate of 4 - 5 i is 4 + 5 i ; and the complex conjugate of the complex number 2 is just 2. 3. Of two complex numbers, differing only in the sign of their imaginary parts; for example, 2 + 3 i and 2 - 3 i are conjugate. 4. Of two algebraic numbers, being roots of the same irreducible algebraic equation with rational coefficients. For example, 3 + 2 and 3 - 2 are conjugate roots of the equation x 2 - 6 x + 1 = 0. 4. Related by an automorphism that leaves the base field fixed, so that one algebraic number is the image of the other under the automorphism. 5. Of two elements of a matrix, interchanged when the rows and columns are interchanged; for example, if a ij is the element at the intersection of the i th row and the j th column, then a ji is its conjugate entry. 6. Of two lines, such that one passes through the pole of the other. 7. Of two points, such that one lies on the polar of the other. 8. Of two potential functions, being C the real and imaginary parts of a given analytic function. The pair of functions is then called conjugate harmonics . 9. In chemistry, conjugate refers to (i) a conjugate compound formed by the joining of two or more chemical compounds; (ii) an acid and base that differ from each other by a proton. 10. To combine two substances in such a way that they can easily be separated again, especially in chemical reactions."
+      "definition": "1. Complex conjugate: $\\overline{a + bi} = a - bi$. 2. Conjugate roots: irrational roots of a polynomial with rational coefficients occurring in pairs, such as $3 + \\sqrt{2}$ and $3 - \\sqrt{2}$ for $x^2 - 6x + 7 = 0$."
     },
     {
       "word": "conjugate acid",
@@ -39058,7 +39058,7 @@
       "word": "conjugate exponents",
       "raw_headword": "CONJUGATE EXPONENTS",
       "synonyms": [],
-      "definition": "Any two positive numbers whose reciprocals sum up to unity. 1 and ∞ are a conjugate pair. If p and q meet the following conditions: 1 p + 1 q = 1, they are conjugate exponents."
+      "definition": "Any two positive real numbers $p, q > 1$ satisfying Hölder's exponent condition: $$\\frac{1}{p} + \\frac{1}{q} = 1$$"
     },
     {
       "word": "conjugate gradient methods",
@@ -39162,7 +39162,7 @@
       "word": "conjunctive",
       "raw_headword": "CONJUNCTIVE",
       "synonyms": [],
-      "definition": "Of two matrices A and B , such that B = PAP* with P* the Hermitian transpose or adjoint of a non-singular matrix P. Every matrix of rank r is conjunctive (over the complex field) to a diagonal matrix with r entries equal to ±I and all others zero."
+      "definition": "Two complex matrices $A$ and $B$ such that $B = P A P^*$, where $P^*$ is the conjugate transpose (Hermitian adjoint) of an invertible matrix $P$."
     },
     {
       "word": "conjunctive name",
@@ -56207,7 +56207,7 @@
       "word": "einstein's equation",
       "raw_headword": "EINSTEIN'S EQUATION",
       "synonyms": [],
-      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
+      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
     },
     {
       "word": "einstein, albert",
@@ -56215,7 +56215,7 @@
       "synonyms": [
         "1879-1955"
       ],
-      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
+      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
     },
     {
       "word": "einstein-smoluchowski equation",
@@ -60577,7 +60577,7 @@
       "word": "equations of motion",
       "raw_headword": "EQUATIONS OF MOTION",
       "synonyms": [],
-      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
+      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
     },
     {
       "word": "equator",
@@ -72165,7 +72165,7 @@
       "synonyms": [
         "universal molar gas constant"
       ],
-      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
+      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
     },
     {
       "word": "gas cooled reactor",
@@ -85098,7 +85098,7 @@
       "word": "ideal gas",
       "raw_headword": "IDEAL GAS",
       "synonyms": [],
-      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
+      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
     },
     {
       "word": "ideal gas law",
@@ -93416,7 +93416,7 @@
       "synonyms": [
         "equations of motion"
       ],
-      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
+      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
     },
     {
       "word": "kinematic viscosity",
@@ -95950,7 +95950,7 @@
       "word": "law",
       "raw_headword": "LAW",
       "synonyms": [],
-      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
+      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
     },
     {
       "word": "law of averages",
@@ -103860,7 +103860,7 @@
       "word": "mass-energy equation",
       "raw_headword": "MASS-ENERGY EQUATION",
       "synonyms": [],
-      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
+      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
     },
     {
       "word": "mass-energy relationship",
@@ -114873,7 +114873,7 @@
       "word": "newton's laws of motion",
       "raw_headword": "NEWTON'S LAWS OF MOTION",
       "synonyms": [],
-      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
+      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
     },
     {
       "word": "newton's method",
@@ -119051,7 +119051,7 @@
       "word": "ohm's law",
       "raw_headword": "OHM'S LAW",
       "synonyms": [],
-      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
+      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
     },
     {
       "word": "ohm, george simon",
@@ -119065,7 +119065,7 @@
       "word": "ohmic device",
       "raw_headword": "OHMIC DEVICE",
       "synonyms": [],
-      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
+      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
     },
     {
       "word": "ohmic heating",
@@ -149763,7 +149763,7 @@
       "synonyms": [
         "physical law"
       ],
-      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
+      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
     },
     {
       "word": "scientific method",
@@ -158206,7 +158206,7 @@
       "word": "speed of light",
       "raw_headword": "SPEED OF LIGHT",
       "synonyms": [],
-      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ."
+      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ."
     },
     {
       "word": "speed of sound",
