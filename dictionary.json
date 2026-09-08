@@ -629,7 +629,7 @@
       "word": "abelian theorem",
       "raw_headword": "ABELIAN THEOREM",
       "synonyms": [],
-      "definition": "A theorem stating that the convergence of a series or integral implies summability with respect to some summability method. Named after Norwegian mathematician Niels Henrik Abel (1802–1829). Abel's theorem states that if a power series in $z$ converges to $f(z)$ for $|z| < 1$ and to $a$ for $z = 1$, then $\\lim_{z \\to 1^-} f(z) = a$. In other words, if a power series converges for $z = a$, it converges absolutely for $$$$$$|z| < |a|$$$$$$. It also states that if three series with $n$-th terms $a_n$, $b_n$ and: $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ respectively converge, then the third series equals the product of the first two series."
+      "definition": "A theorem stating that the convergence of a series or integral implies summability with respect to some summability method. Named after Norwegian mathematician Niels Henrik Abel (1802–1829). Abel's theorem states that if a power series in $z$ converges to $f(z)$ for $|z| < 1$ and to $a$ for $z = 1$, then $\\lim_{z \\to 1^-} f(z) = a$. In other words, if a power series converges for $z = a$, it converges absolutely for $$$$$$$|z| < |a|$$$$$$$. It also states that if three series with $n$-th terms $a_n$, $b_n$ and: $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ respectively converge, then the third series equals the product of the first two series."
     },
     {
       "word": "abend",
@@ -9844,7 +9844,7 @@
       "word": "annihilation",
       "raw_headword": "ANNIHILATION",
       "synonyms": [],
-      "definition": "In subatomic physics, a high-energy process in which a subatomic particle collides with its corresponding antiparticle, converting their entire rest mass into energy in accordance with Einstein's mass-energy equivalence principle: $$$$$$$$E = mc^2$$$$$$$$ In electron-positron annihilation, an electron ($e^-$) and a positron ($e^+$) annihilate at low kinetic energy to produce two gamma-ray photons: $$e^- + e^+ \\longrightarrow 2\\gamma$$ Each gamma photon carries energy $E_\\gamma = m_e c^2 = 0.511\\text{ MeV}$, giving a total energy release of $1.022\\text{ MeV}$."
+      "definition": "In subatomic physics, a high-energy process in which a subatomic particle collides with its corresponding antiparticle, converting their entire rest mass into energy in accordance with Einstein's mass-energy equivalence principle: $$$$$$$$$$E = mc^2$$$$$$$$$$ In electron-positron annihilation, an electron ($e^-$) and a positron ($e^+$) annihilate at low kinetic energy to produce two gamma-ray photons: $$e^- + e^+ \\longrightarrow 2\\gamma$$ Each gamma photon carries energy $E_\\gamma = m_e c^2 = 0.511\\text{ MeV}$, giving a total energy release of $1.022\\text{ MeV}$."
     },
     {
       "word": "annihilator",
@@ -30372,7 +30372,7 @@
       "word": "changing the subject ofa formula",
       "raw_headword": "CHANGING THE SUBJECT OFA FORMULA",
       "synonyms": [],
-      "definition": "The transformation or rearrangement of a formula to find the value of a subject of formula . For example, if s = ut + ½ at 2 , , then in a = 2( s - ut ) 2 t 2 , a is made the subject of formula by transforming or rearranging the formula."
+      "definition": "The transformation or rearrangement of a formula to find the value of a subject of formula. For example, if $s = ut + \\frac{1}{2}at^2$, then in $a = \\frac{2(s - ut)}{t^2}$, $a$ is made the subject of formula."
     },
     {
       "word": "channel",
@@ -33548,7 +33548,7 @@
         "clausius-clapeyron equation",
         "clapeyron equation"
       ],
-      "definition": "A differential equation that governs the phase transition of a substance. In a two-phase system of the same substance, for example, solid and liquid, heat change is done very slowly so that one phase can convert reversibly into the other while the system remains at equilibrium. If the two phases are denoted by A and B , the Clapeyron-Clausius equation is given by: = = where p is the pressure, T is the thermodynamic temperature, ∆ H is the change in heat content per mole in the change from A to B and V B and V A are the volumes of B and A respectively. In the case of a transition from liquid to vapour, the volume of the liquid can be ignored."
+      "definition": "A differential equation that governs the phase transition of a substance. In a two-phase system of the same substance, if the two phases are denoted by A and B, the Clapeyron-Clausius equation is given by: $$\\frac{dp}{dT} = \\frac{\\Delta H}{T(V_B - V_A)}$$ where $p$ is the pressure, $T$ is the thermodynamic temperature, $\\Delta H$ is the change in enthalpy per mole in the change from A to B, and $V_B$ and $V_A$ are the volumes of B and A respectively."
     },
     {
       "word": "clapper",
@@ -33775,7 +33775,7 @@
       "word": "clausius-mossoti equation",
       "raw_headword": "CLAUSIUS-MOSSOTI EQUATION",
       "synonyms": [],
-      "definition": "A relationship between polarisability of a molecule and the dielectric constant of a dielectric substance made up of molecules with this polarisability. The Clausius- Mossotiequation is given by: where ε is the dielectric constant of a substance, ε 0 is the permittivity of a vacuum, M is the molar mass of the substance, d is its density, N A is Avogadro's constant and α is the molecular polarisability."
+      "definition": "A relationship between polarisability of a molecule and the dielectric constant of a dielectric substance. It is given by: $$\\frac{\\varepsilon^-1}{\\varepsilon + 2} = \\frac{d N_A \\alpha}{3 M \\varepsilon_0}$$ where $\\varepsilon$ is the dielectric constant of a substance, $\\varepsilon_0$ is the permittivity of a vacuum, $M$ is the molar mass, $d$ is its density, $N_A$ is Avogadro's constant and $\\alpha$ is the molecular polarisability."
     },
     {
       "word": "clavate",
@@ -35280,7 +35280,7 @@
       "word": "coefficient of determination",
       "raw_headword": "COEFFICIENT OF DETERMINATION",
       "synonyms": [],
-      "definition": "The percentage of the variance of the dependent variable that is explained by the independent variables used to fit the data. Normally the symbol r 2 is used to represents the coefficient of determination. This is given by r 2 = (explained variation)/(total variance)."
+      "definition": "The percentage of the variance of the dependent variable that is explained by the independent variables used to fit the data. Normally the symbol $r^2$ is used to represents the coefficient of determination. This is given by: $$r^2 = \\frac{\\text{explained variation}}{\\text{total variance}}$$"
     },
     {
       "word": "coefficient of expansion",
@@ -35311,13 +35311,13 @@
       "word": "coefficient of kinetic friction",
       "raw_headword": "COEFFICIENT OF KINETIC FRICTION",
       "synonyms": [],
-      "definition": "The ratio of the frictional force, parallel to the surface of contact that opposes the motion of a body which is sliding or rolling over another, to the force, normal to the surface of contact, with which the bodies press against each other. It is expressed mathematically as μ k = F k / N , where μ k is the coefficient of kinetic friction, F k is the force of kinetic friction and N isthe normal force or the force perpendicular to the contacting surfaces. It is the friction that applies when an object is moving along a surface and the force of friction points in a direction parallel to the surface and directly opposing the direction of motion of the object along the surface."
+      "definition": "The ratio of the frictional force, parallel to the surface of contact that opposes the motion of a body which is sliding, to the force, normal to the surface of contact, with which the bodies press against each other: $$\\mu_k = \\frac{F_k}{N}$$ where $\\mu_k$ is the coefficient of kinetic friction, $F_k$ is the force of kinetic friction and $N$ is the normal force."
     },
     {
       "word": "coefficient of linear expansion",
       "raw_headword": "COEFFICIENT OF LINEAR EXPANSION",
       "synonyms": [],
-      "definition": "It is the fractional change in length per degree rise in temperature. It is represented by the symbol α . Different materials expand by different amounts. How much a particular material expands depends on the forces of cohesion between neighbouring atoms or molecules. If these forces are strong, the material can only expand slightly for a given rise in temperature. A metal such as lead which has a low melting point and is relatively easily compressed, expands a great deal for a given rise in temperature. Coefficient of linear expansion is expressed as α = where l 1 = original length, l 2 = final length and Δθ = change in temperature."
+      "definition": "The fractional change in length per degree rise in temperature, represented by the symbol $\\alpha$. It is expressed as: $$\\alpha = \\frac{l_2 - l_1}{l_1 \\Delta\\theta}$$ where $l_1 = \\text{original length}$, $l_2 = \\text{final length}$ and $\\Delta\\theta = \\text{change in temperature}$."
     },
     {
       "word": "coefficient of probability",
@@ -35337,19 +35337,19 @@
       "word": "coefficient of restitution",
       "raw_headword": "COEFFICIENT OF RESTITUTION",
       "synonyms": [],
-      "definition": "The ratio of the velocity of an object after impact to that before impact. The coefficient of restitution is given by C R = for two colliding objects, where V1 is the final velocity of the first object after impact, V2 the final velocity of the second object after impact, u 1 the initial velocity of the first object before impact and u 2 the initial velocity of the second object before impact."
+      "definition": "The ratio of relative speeds after and before an impact along the line of impact. The coefficient of restitution is given by: $$C_R = \\frac{V_2 - V_1}{u_1 - u_2}$$ where $V_1, V_2$ are the final velocities after impact and $u_1, u_2$ are the initial velocities before impact."
     },
     {
       "word": "coefficient of static friction",
       "raw_headword": "COEFFICIENT OF STATIC FRICTION",
       "synonyms": [],
-      "definition": "The ratio of the maximum possible frictional force, parallel to the surface of contact that acts to prevent two bodies in contact at rest from sliding, to the force that is normal to the surface of contact. It is expressed mathematically as µ s = FsFn , where F s is static friction, μ s is the coefficient of static friction and F n is the normal force."
+      "definition": "The ratio of the maximum possible frictional force, parallel to the surface of contact that acts to prevent two bodies in contact at rest from sliding, to the normal force: $$\\mu_s = \\frac{F_s}{F_n}$$ where $F_s$ is static friction, $\\mu_s$ is the coefficient of static friction and $F_n$ is the normal force."
     },
     {
       "word": "coefficient of variation",
       "raw_headword": "COEFFICIENT OF VARIATION",
       "synonyms": [],
-      "definition": "The coefficient of variation for a list of numbers is equal to the standard deviation for those numbers divided by the mean. The coefficient can be used to compare the dispersions of quantitative variables that are not expressed in the same units (for example, when comparing the salaries in different countries, given different currencies) or the dispersions of variables that have very different means. It is expressed as: Coefficient of Variation (Cv) = Standard Deviation/Mean."
+      "definition": "The coefficient of variation for a list of numbers is equal to the standard deviation for those numbers divided by the mean: $$C_v = \\frac{\\sigma}{\\mu}$$ It is used to compare the dispersions of quantitative variables."
     },
     {
       "word": "coefficient of volume expansion",
@@ -36601,7 +36601,7 @@
       "synonyms": [
         "gibbs fundamental equation"
       ],
-      "definition": "The mathematical summation of the first law of thermodynamics ( dU = dQ + PdV ) and the second law of thermodynamics ( dQ ≤ TdS ) subsumed into a single mathematical expression. It is expressed as dU - TdS + PdV ≤ 0, where dU is a variation in internal energy, T is temperature, dS is variation entropy, P is pressure and dV is variation in volume of a simple working body in which there are no flows of particles or out of the body nor external forces, other than gravity, acting on the body."
+      "definition": "The mathematical summation of the first law of thermodynamics ($dU = dQ - PdV$) and the second law of thermodynamics ($dQ \\le TdS$) subsumed into a single mathematical expression: $$dU - TdS + PdV \\le 0$$ where $dU$ is a variation in internal energy, $T$ is temperature, $dS$ is variation in entropy, $P$ is pressure and $dV$ is variation in volume."
     },
     {
       "word": "combined sample",
@@ -36649,7 +36649,7 @@
       "word": "comfort index",
       "raw_headword": "COMFORT INDEX",
       "synonyms": [],
-      "definition": "An index which gives a numerical value, in the general range of 70-80, of how tolerable conditions are for humans during the warm seasons of the year. It is calculated as the temperature in Degree Fahrenheit (32 o F = 0 o C) plus a quarter of the relative humidity expressed as a percentage. It is expressed as; Comfort Index = T + RH4 , where T is temperature in degrees Fahrenheit and RH is the relative humidity. The presence of wind allows higher values to be tolerated; therefore, when the comfort index is above 95 o and the wind speed is low, it may be necessary to acclimatise to the conditions before attempting very strenuous activity. Discomfort Index is the impact of heat stress on an individual taking into account the combined effect of temperature and humidity."
+      "definition": "An index which gives a numerical value of how tolerable conditions are for humans during the warm seasons. It is expressed as: $$\\text{Comfort Index} = T + \\frac{RH}{4}$$ where $T$ is temperature in degrees Fahrenheit and $RH$ is the relative humidity."
     },
     {
       "word": "comma-separated values",
@@ -37417,7 +37417,7 @@
       "word": "complete elliptic integral",
       "raw_headword": "COMPLETE ELLIPTIC INTEGRAL",
       "synonyms": [],
-      "definition": "Any elliptic integral expressed in terms of the functions, K , which denotes the complete elliptic integral of the first kind and E , for the second kind. The first kind and second kind are related by Legendre's identity that for any 0 < k < 1, K ( k ) E (1 - k 2 ) ⎡ ⎣ ⎢ ⎤ ⎦ ⎥+ E ( k ) K (1 - k 2 ) ⎡ ⎣ ⎢ ⎤ ⎦ ⎥- K ( k ) K (1 - k 2 ) ⎡ ⎣ ⎢ ⎤ ⎦ ⎥= π 2 . They are useful in finding the arc length of an ellipse and the period of a pendulum and also arise in a natural way from the theory of theta functions."
+      "definition": "Any elliptic integral expressed in terms of the functions $K$ and $E$, which denote the complete elliptic integral of the first and second kind. They are related by Legendre's identity for any $0 < k < 1$: $$K(k)E(1 - k^2) + E(k)K(1 - k^2) - K(k)K(1 - k^2) = \\frac{\\pi}{2}$$"
     },
     {
       "word": "complete fertiliser",
@@ -37505,7 +37505,7 @@
       "word": "completing the square",
       "raw_headword": "COMPLETING THE SQUARE",
       "synonyms": [],
-      "definition": "A way of solving a quadratic equation by simplifying the quadratic equation by, adding an expression to the equation making it a perfect square. For example, the quadratic equation, 2 x 2 - 4 x^-3 = 0 can be expressed as 2 x 2 - 2 x^-3 ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥= 0. The linear term in this equation is divided by 2, the result squared and added to the expression on the right hand side in such a way that the equation is not altered. Thus 2 x 2 - 2 x^-3 ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥= 0, simplifying the equation becomes 2 ( x^-1) 2 - 5 ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥= 0. Thus a pure quadratic equation without a linear term is obtained and the solution is then obtained as 2( x^-1) 2 - 5 = 0 2( x^-1) 2 = 5 ( x^-1) 2 = 5 x^-1 = ± 5 x = 1 ±."
+      "definition": "A way of solving a quadratic equation by adding an expression to make it a perfect square. For example, $2x^2 - 4x - 3 = 0$ can be expressed as $2[x^2 - 2x] - 3 = 0$. Completing the square yields $2(x^-1)^2 - 5 = 0$. Solving gives: $$x = 1 \\pm \\sqrt{\\frac{5}{2}}$$"
     },
     {
       "word": "completion",
@@ -37567,7 +37567,7 @@
       "synonyms": [
         "compound fraction"
       ],
-      "definition": "A fraction in which either the numerator or denominator or both contains fractions. For example, is a complex fraction. To simplify the complex fraction, multiply both the numerator and the denominator by the reciprocal of the denominator: = = 1 3 × 7 2 = 7 6 ."
+      "definition": "A fraction in which either the numerator or denominator or both contains fractions. For example, $\\frac{\\frac{1}{3}}{\\frac{2}{7}}$ is a complex fraction. To simplify, multiply by the reciprocal of the denominator: $$\\frac{\\frac{1}{3}}{\\frac{2}{7}} = \\frac{1}{3} \\times \\frac{7}{2} = \\frac{7}{6}$$"
     },
     {
       "word": "complex gain",
@@ -56207,7 +56207,7 @@
       "word": "einstein's equation",
       "raw_headword": "EINSTEIN'S EQUATION",
       "synonyms": [],
-      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
+      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
     },
     {
       "word": "einstein, albert",
@@ -56215,7 +56215,7 @@
       "synonyms": [
         "1879-1955"
       ],
-      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
+      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
     },
     {
       "word": "einstein-smoluchowski equation",
@@ -60577,7 +60577,7 @@
       "word": "equations of motion",
       "raw_headword": "EQUATIONS OF MOTION",
       "synonyms": [],
-      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
+      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
     },
     {
       "word": "equator",
@@ -72165,7 +72165,7 @@
       "synonyms": [
         "universal molar gas constant"
       ],
-      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
+      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
     },
     {
       "word": "gas cooled reactor",
@@ -85098,7 +85098,7 @@
       "word": "ideal gas",
       "raw_headword": "IDEAL GAS",
       "synonyms": [],
-      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
+      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
     },
     {
       "word": "ideal gas law",
@@ -93416,7 +93416,7 @@
       "synonyms": [
         "equations of motion"
       ],
-      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
+      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
     },
     {
       "word": "kinematic viscosity",
@@ -95950,7 +95950,7 @@
       "word": "law",
       "raw_headword": "LAW",
       "synonyms": [],
-      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
+      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
     },
     {
       "word": "law of averages",
@@ -103860,7 +103860,7 @@
       "word": "mass-energy equation",
       "raw_headword": "MASS-ENERGY EQUATION",
       "synonyms": [],
-      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
+      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
     },
     {
       "word": "mass-energy relationship",
@@ -114873,7 +114873,7 @@
       "word": "newton's laws of motion",
       "raw_headword": "NEWTON'S LAWS OF MOTION",
       "synonyms": [],
-      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
+      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
     },
     {
       "word": "newton's method",
@@ -119051,7 +119051,7 @@
       "word": "ohm's law",
       "raw_headword": "OHM'S LAW",
       "synonyms": [],
-      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
+      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
     },
     {
       "word": "ohm, george simon",
@@ -119065,7 +119065,7 @@
       "word": "ohmic device",
       "raw_headword": "OHMIC DEVICE",
       "synonyms": [],
-      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
+      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
     },
     {
       "word": "ohmic heating",
@@ -149763,7 +149763,7 @@
       "synonyms": [
         "physical law"
       ],
-      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
+      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
     },
     {
       "word": "scientific method",
@@ -158206,7 +158206,7 @@
       "word": "speed of light",
       "raw_headword": "SPEED OF LIGHT",
       "synonyms": [],
-      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ."
+      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ."
     },
     {
       "word": "speed of sound",
