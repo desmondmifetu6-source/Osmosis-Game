@@ -517,7 +517,7 @@
         "rela tive disp ersi on",
         "v-value"
       ],
-      "definition": "The reciprocal of the dispersive power of a substance, which is a measure of light dispersion in an optical medium. It is used to classify optically transparent materials. It is given by a function of the refractive index of a material at the Fraunhofer spectral lines f (486.1nm), d (587.6nm) and c (656.3nm) wavelengths. Its symbol is V and expressed as $$V = \\frac{n_d - 1}{n_f - n_c}$$ , where $n_d$ , $n_f$ and $n_c$ are the refractive indices for the Fraunhofer spectral lines d (587.6 nm), f (486.1 nm) and c (656.3 nm). A material with a high Abbe number produces less chromatic aberration than one with a low number. Abbe numbers are used to classify optically transparent materials. For example, values of Abbe range from around 20 for very dense flint glass, around 30 for polycarbonate plastics and up to 58 for crown glass. Abbe prism."
+      "definition": "The reciprocal of the dispersive power of a substance, which is a measure of light dispersion in an optical medium. It is used to classify optically transparent materials. It is given by a function of the refractive index of a material at the Fraunhofer spectral lines $f$ (486.1 nm), $d$ (587.6 nm) and $c$ (656.3 nm) wavelengths. Its symbol is $V$ and expressed as: $$V = \\frac{n_d - 1}{n_f - n_c}$$ where $n_d$, $n_f$ and $n_c$ are the refractive indices for the Fraunhofer spectral lines $d$ (587.6 nm), $f$ (486.1 nm) and $c$ (656.3 nm). A material with a high Abbe number produces less chromatic aberration than one with a low number. Abbe numbers range from around 20 for very dense flint glass, around 30 for polycarbonate plastics, and up to 58 for crown glass."
     },
     {
       "word": "abbe prism",
@@ -537,7 +537,7 @@
       "synonyms": [
         "oesterlé-masser conjecture"
       ],
-      "definition": "A conjecture that is, in number theory, stated in terms of three positive integers, a , b and c , which have no common factor and satisfy $a + b = c$ . If d denotes the product of the distinct prime factors of abc , the conjecture essentially states that d cannot be much smaller than c . It was proposed in 1985 by Joseph Oesterle of the University of Paris and David Masser of the Mathematics Institute of the University of Basel in Switzerland. It is now considered one of the most important unsolved problems in number theory."
+      "definition": "A conjecture in number theory stated in terms of three positive integers, $a, b$ and $c$, which have no common factor and satisfy: $$a + b = c$$ If $d$ denotes the product of the distinct prime factors of $abc$, the conjecture essentially states that $d$ cannot be much smaller than $c$. It was proposed in 1985 by Joseph Oesterlé of the University of Paris and David Masser of the University of Basel. It is considered one of the most important unsolved problems in number theory."
     },
     {
       "word": "abc model",
@@ -589,13 +589,13 @@
       "word": "abel test",
       "raw_headword": "ABEL TEST",
       "synonyms": [],
-      "definition": "An infinite series test used in testing its convergence. The test states that if ∑ d n is a convergent sequence and { c n } is monotonically decreasing, that is c n + 1 ≤ c n for all n , then ∑ dncn is also convergent."
+      "definition": "An infinite series test used in testing its convergence. The test states that if $\\sum a_n$ is a convergent series and $\\{b_n\\}$ is a sequence of real numbers that is monotonic and bounded (i.e. $b_{n+1} \\le b_n$ for all $n$), then the series: $$\\sum_{n=1}^{\\infty} a_n b_n$$ is also convergent."
     },
     {
       "word": "abel test for uniform convergence",
       "raw_headword": "ABEL TEST FOR UNIFORM CONVERGENCE",
       "synonyms": [],
-      "definition": "A uniform convergence test of an infinite series, stating that if { a n ( z )} and { b n ( z )} are sequences of complex functions on a compact set K, such that { a n ( z )} is bounded in K , Σ a n ( z ) - a ( n + 1) ( z ) is convergent and has a sum that is bounded in K, ∑ b n ( z ) is uniformly convergent in K then ∑ a n ( z ) b n ( z )is uniformly convergent on K."
+      "definition": "A uniform convergence test for infinite series of functions, stating that if $\\{a_n(z)\\}$ is a sequence of real-valued functions that is uniformly bounded and monotonic for every $z$ in a compact set $K$, and $\\sum b_n(z)$ converges uniformly on $K$, then the series: $$\\sum_{n=1}^{\\infty} a_n(z) b_n(z)$$is uniformly convergent on $K$."
     },
     {
       "word": "abel's limit theorem",
@@ -607,7 +607,7 @@
       "word": "abel's partial summation formula",
       "raw_headword": "ABEL'S PARTIAL SUMMATION FORMULA",
       "synonyms": [],
-      "definition": "The formula of summability theory that for two arbitrary sequences { a n } and { b n } and with $$\\sum_{k=m}^{n} a_k b_k = A_n b_{n+1} - A_{m^-1} b_m + \\sum_{k=m}^{n} A_k (b_k - b_{k+1})$$ ."
+      "definition": "The formula of summability theory that for two arbitrary sequences $\\{a_n\\}$ and $\\{b_n\\}$, with $A_n = \\sum_{k=1}^n a_k$: $$\\sum_{k=m}^{n} a_k b_k = A_n b_{n+1} - A_{m^-1} b_m + \\sum_{k=m}^{n} A_k (b_k - b_{k+1})$$"
     },
     {
       "word": "abel, niels henrik",
@@ -623,13 +623,13 @@
       "synonyms": [
         "commutative group"
       ],
-      "definition": "A group in which the binary operation is commutative, that is, the result of applying the group operation to two group elements does not depend on their order. It was named after a Norwegian mathematician called Niels Henrik Abel (1802 - 1829). Therefore, $ab = ba$ or $a + b = b + a$ , for all elements a and b in the group. Abelian groups generalise the arithmetic of addition of integers."
+      "definition": "A group in which the binary operation is commutative, that is, the result of applying the group operation to two group elements does not depend on their order. Named after Norwegian mathematician Niels Henrik Abel (1802–1829). Therefore, for all elements $a$ and $b$ in the group: $$a \\cdot b = b \\cdot a \\quad \\text{or} \\quad a + b = b + a$$ Abelian groups generalise the arithmetic of addition of integers."
     },
     {
       "word": "abelian theorem",
       "raw_headword": "ABELIAN THEOREM",
       "synonyms": [],
-      "definition": "A theorem stating that the convergence of series or integral implies summability, with respect to some summability method. It is named after Norwegian mathematician Niels Henrik Abel (1802 - 1829). Abel's theorem states that if a power series in z converges to f ( z ) for | z | < 1 and to a for $z = 1$, then the limit of f ( z ) as z approaches 1 equals a . In other words, it is a theorem stating that if a power series in z converges for $z = a$, it converges absolutely for $$$$$$$$$$$$$$$$$|z| < |a|$$$$$$$$$$$$$$$$$. It can also be defined as a theorem, which states that if the three series with n th term a n , b n and $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ , respectively, converge, then the third series equals the product of the first two series."
+      "definition": "A theorem stating that the convergence of a series or integral implies summability with respect to some summability method. Named after Norwegian mathematician Niels Henrik Abel (1802–1829). Abel's theorem states that if a power series in $z$ converges to $f(z)$ for $|z| < 1$ and to $a$ for $z = 1$, then $\\lim_{z \\to 1^-} f(z) = a$. In other words, if a power series converges for $z = a$, it converges absolutely for $$$$$|z| < |a|$$$$$. It also states that if three series with $n$-th terms $a_n$, $b_n$ and: $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ respectively converge, then the third series equals the product of the first two series."
     },
     {
       "word": "abend",
@@ -863,7 +863,7 @@
       "word": "absolute",
       "raw_headword": "ABSOLUTE",
       "synonyms": [],
-      "definition": "1. Denoting a number or measurement that does not depend on a standard reference value or relating to a scale that has as its lowest temperature, absolute zero, which is zero Kelvin (0°K), equivalent to^-273.16 o C. It is the point at which all molecular motion ceases. 2. Also known as numerical of a value, it is a term used in mathematics to refer to the distance of a value from zero or the magnitude or value of numbers, without regard to their sign. For example, the numbers^-3 and 3 have the same absolute value, written as |3| = |-3| = 3. However, the absolute value of 0, |0| is 0. 3. True for all values of a variable in an algebraic expression. 4. Relating to or using basic units of length, time, mass and charge. 5. Involving or relating to measurements made relative to the vacuum state. 6. Not containing an algebraic variable. 7. Not changing in value, in varying mathematical expressions."
+      "definition": "1. Denoting a number or measurement that does not depend on a standard reference value, or relating to a scale that has absolute zero as its lowest temperature, which is $0\\text{ K}$, equivalent to $-273.15^\\circ\\text{C}$. It is the point at which all molecular motion ceases. 2. In mathematics, the absolute value or numerical value denotes the distance of a number from zero without regard to its sign: $$|x| = \\begin{cases} x & \\text{if } x \\ge 0 \\\\ -x & \\text{if } x < 0 \\end{cases}$$ For example, $|-3| = |3| = 3$. 3. True for all values of a variable in an algebraic expression (e.g. an absolute inequality). 4. Relating to or using basic units of length, time, mass, and charge."
     },
     {
       "word": "absolute activation analysis",
@@ -895,7 +895,7 @@
         "pure alcohol",
         "grain alcohol"
       ],
-      "definition": "A volatile, flammable, colourless chemical compound, with molecular formula C2 H6 O, density 0.789 g/cm3 (at 25°C), molar mass 46 g/mol, melting point^-114 °C (159 K) and boiling point 78°C (351 K) that contains not more than 1% water. It is used in making alcoholic beverages."
+      "definition": "A volatile, flammable, colourless chemical compound with molecular formula $\\text{C}_2\\text{H}_6\\text{O}$ (or $\\text{C}_2\\text{H}_5\\text{OH}$), density $0.789\\text{ g/cm}^3$ (at $25^\\circ\\text{C}$), molar mass $46.07\\text{ g/mol}$, melting point $-114^\\circ\\text{C}$ ($159\\text{ K}$) and boiling point $78.3^\\circ\\text{C}$ ($351.5\\text{ K}$), containing not more than 1% water. Used in chemical synthesis and alcoholic beverages."
     },
     {
       "word": "absolute cell",
@@ -923,7 +923,7 @@
       "word": "absolute continuity",
       "raw_headword": "ABSOLUTE CONTINUITY",
       "synonyms": [],
-      "definition": "1. For a real valued function f(x) on an interval [ a,b ], the property that, for every ∈ > 0 , there is a σ > 0 such that if {( a j ,b j )} are intervals contained in [ a,b ] with ∑( b j - a j ) < σ then ∑| f ( b j ) - f ( a j ) | < ∈ . 2. For two measures μ and υ , absolute continuity of μ with respect to υ (written μ < υ ) means that whenever E is a υ - measurable set with υ ( E ) = 0, E is μ -measurable and μ ( E ) = 0."
+      "definition": "1. For a real-valued function $f(x)$ on an interval $[a,b]$, the property that for every $\\varepsilon > 0$, there exists $\\delta > 0$ such that for any finite collection of disjoint sub-intervals $(a_j, b_j) \\subset [a,b]$, if: $$\\sum_{j} (b_j - a_j) < \\delta \\implies \\sum_{j} |f(b_j) - f(a_j)| < \\varepsilon$$ 2. For two measures $\\mu$ and $\\nu$, absolute continuity of $\\mu$ with respect to $\\nu$ (written $\\mu \\ll \\nu$) means that whenever $E$ is a $\\nu$-measurable set with $\\nu(E) = 0$, then $\\mu(E) = 0$."
     },
     {
       "word": "absolute convergence",
@@ -931,7 +931,7 @@
       "synonyms": [
         "absolutely summable"
       ],
-      "definition": "A series S n = ∑ S1 + S2 + S3 + ... + S n + ... that converges when all terms are replaced by their absolute values, i.e, a series that is mixed up with positive and negative terms, called absolutely convergent. If a series is absolutely convergent, then the sum is independent of the order in which the terms are summed. If the series is multiplied by another absolutely convergent series, the product series will also converge absolutely. Any series that converges absolutely is itself convergent. For example, the series: ... is absolutely convergent because is also convergent. The ratio test can be used to test for absolute convergence. For an infinite integral ∫ s f ( x ) dx of real or complex valued function is said to be absolute convergence if ∫ s | f ( x )| dx < ∞ . A series with mixed absolute terms is absolutely convergent if; lim n →+ ∞ S n + 1 S n < 1 and divergent if lim n →+∞ S n + 1 S n > 1."
+      "definition": "A series $\\sum_{n=1}^{\\infty} a_n$ is said to converge absolutely (or be absolutely convergent) if the series of absolute values: $$\\sum_{n=1}^{\\infty} |a_n| < \\infty$$ converges. If a series is absolutely convergent, then the sum is independent of the order in which terms are rearranged. By the ratio test, a series converges absolutely if: $$\\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right| < 1$$ and diverges if the limit is greater than 1. For an improper integral, $\\int_{a}^{\\infty} f(x)dx$ converges absolutely if $\\int_{a}^{\\infty} |f(x)|dx < \\infty$."
     },
     {
       "word": "absolute convex set",
@@ -955,7 +955,7 @@
       "word": "absolute entropy",
       "raw_headword": "ABSOLUTE ENTROPY",
       "synonyms": [],
-      "definition": "The increase in the entropy of a substance as it moves from a perfectly ordered crystalline form at^-273 o C (0 K), where its entropy is zero, to the temperature in question. Entropy is a measure of the energy in a system that is unavailable for work. Absolute entropy values are different at different temperatures and all compounds have an absolute entropy level that is an indication of the level of randomness of the molecules. For example, at 20 °C (293K), liquid water has an absolute entropy level of 70 J mol^-1 K^-1 and water in the vapour phase has an absolute entropy value of 189 J mol^-1 K^-1 ."
+      "definition": "The increase in the entropy of a substance as it moves from a perfectly ordered crystalline form at $0\\text{ K}$ ($-273.15^\\circ\\text{C}$), where by the Third Law of Thermodynamics its entropy is zero, to the temperature in question: $$S = \\int_0^T \\frac{C_p}{T} dT$$ Entropy is a measure of molecular randomness. For example, at $20^\\circ\\text{C}$ ($293\\text{ K}$), liquid water has an absolute entropy of $70\\text{ J mol}^{-1}\\text{K}^{-1}$ and water vapour has an absolute entropy of $189\\text{ J mol}^{-1}\\text{K}^{-1}$."
     },
     {
       "word": "absolute error",
@@ -1064,7 +1064,7 @@
       "word": "absolute temperature",
       "raw_headword": "ABSOLUTE TEMPERATURE",
       "synonyms": [],
-      "definition": "The absolute measure of temperature, using a scale that uses absolute zero as its lowest temperature that is independent of the properties of thermometric substance. An example is the Kelvin scale, whose zero is equivalent to^-273.15 o C. The standard measure of temperature in the International System of Units (S.I.) is the Kelvin scale, with a zero point (0 K) equivalent to^-273.15 o C. The Kelvin scale is equivalent to the Celsius (C) temperature scale with the points shifted by 273.15 degrees. An example of absolute temperature is the Kelvin scale, whose zero is equivalent to^-273.15 o C."
+      "definition": "The temperature measured on a thermodynamic scale where zero represents absolute zero ($-273.15^\\circ\\text{C}$), independent of the properties of any particular thermometric substance. In SI units, absolute temperature is measured in Kelvins ($\\text{K}$), related to Celsius ($^\\circ\\text{C}$) by: $$T(\\text{K}) = \\theta(^\\circ\\text{C}) + 273.15$$"
     },
     {
       "word": "absolute time",
@@ -1084,13 +1084,13 @@
       "synonyms": [
         "modulus"
       ],
-      "definition": "1. Also known as numerical value , it is a term used in mathematics to refer to the magnitude or value of numbers, without regard to their sign. For example, the numbers^-3 and 3 have the same absolute value, written as |3| = |-3| = 3. However, the absolute value of 0, |0| is 0. In other words, for a real number x the absolute value is | x |= x if x ≥ 0 and | x |=- x if x < 0. 2. The square root of the sum of the squares of the real and imaginary parts of a given complex number z = x + iy , z = x 2 + y 2 . Geometrically, it represents the distance from 0 ∈ C."
+      "definition": "1. Also known as numerical value or modulus, the magnitude of a real number without regard to its sign: $$|x| = \\begin{cases} x & \\text{if } x \\ge 0 \\\\ -x & \\text{if } x < 0 \\end{cases}$$ For example, $|-3| = |3| = 3$. 2. For a complex number $z = x + iy$, its absolute value (modulus) is the Euclidean distance from the origin in the complex plane: $$|z| = \\sqrt{x^2 + y^2}$$"
     },
     {
       "word": "absolute value function",
       "raw_headword": "ABSOLUTE VALUE FUNCTION",
       "synonyms": [],
-      "definition": "A function that contains an algebraic expression within absolute value symbols. It is written as f ( x ) = | x |. It is a function in which the outputs of non-negative (i.e., x ≥ 0) inputs equal the inputs, for example, | 3 | = 3, | 6 | = 6. If the outputs are negative (i.e., x < 0) inputs are the opposites of the inputs, for example, | - 3 | = 3, | - 6 | = 6."
+      "definition": "A mathematical function that maps a real number to its non-negative magnitude, defined by: $$f(x) = |x| = \\begin{cases} x & \\text{if } x \\ge 0 \\\\ -x & \\text{if } x < 0 \\end{cases}$$ Its graph forms a V-shape with its vertex at the origin $(0,0)$."
     },
     {
       "word": "absolute weight",
@@ -1102,7 +1102,7 @@
       "word": "absolute zero",
       "raw_headword": "ABSOLUTE ZERO",
       "synonyms": [],
-      "definition": "The lowest temperature theoretically possible. It is zero on the Kelvin scale and it is equal to^-273.15°C. At or near this temperature molecules are theoretically motionless and the physical properties of some materials change considerably. For example, some metals lose their electrical resistance and become superconducting. The third law of thermodynamics shows that A absolute zero temperature cannot be reached, nonetheless in 1994, scientists at the National Institute of Standards and Technology (NIST) achieved a temperature of 700 nK (1 nK = 10 -9 K), using optical lattice laser equipment to adiabatically cool caesium atoms; and in 2003, scientists at Massachusetts Institute of Technology (MIT) reached 450 pK (0.45 nK)."
+      "definition": "The lowest temperature theoretically possible, at which entropy reaches its minimum and molecular kinetic energy ceases. It corresponds to $0\\text{ K}$ on the Kelvin thermodynamic scale, precisely $-273.15^\\circ\\text{C}$ ($-459.67^\\circ\\text{F}$). By the Third Law of Thermodynamics, absolute zero cannot be attained in a finite number of steps, though temperatures within nanokelvins ($1\\text{ nK} = 10^{-9}\\text{ K}$) have been reached in laboratory optical lattices."
     },
     {
       "word": "absolutely normal number",
@@ -1140,7 +1140,7 @@
       "synonyms": [
         "optical density"
       ],
-      "definition": "In physics, it is the capacity of a substance to absorb radiation. Its symbol is A λ and expressed as A λ = , where I0 is the intensity of the incident ray and I is the intensity of the transmitted ray."
+      "definition": "In optics and spectroscopy, a logarithmic measure of the capacity of a substance to absorb radiant energy at a specific wavelength $\\lambda$. It is defined by the Beer-Lambert relation: $$A_\\lambda = -\\log_{10}\\left(\\frac{I}{I_0}\\right) = \\log_{10}\\left(\\frac{I_0}{I}\\right)$$ where $I_0$ is the intensity of the incident radiation and $I$ is the intensity of the transmitted radiation."
     },
     {
       "word": "absorbed dose",
@@ -1190,13 +1190,13 @@
       "word": "absorbing state",
       "raw_headword": "ABSORBING STATE",
       "synonyms": [],
-      "definition": "A state of a Markov chain from which the probability of exit is zero: a state that cannot be exited once entered. Expressed mathematically, state i is absorbing when P ( i , j ) = 1, hence P ( i , j ) = 0 for all j ≠ i ."
+      "definition": "A state in a Markov chain from which the probability of transition to any other state is zero. Mathematically, state $i$ is an absorbing state if its transition probability satisfies: $$P_{ii} = 1 \\quad \\text{and} \\quad P_{ij} = 0 \\quad \\text{for all } j \\neq i$$"
     },
     {
       "word": "absorptance",
       "raw_headword": "ABSORPTANCE",
       "synonyms": [],
-      "definition": "A measure of the ability of an object or substance to absorb radiant energy. Its symbol is α and it is given by the ratio of the radiant or luminous flux absorbed by a body to the incident radiation falling on it."
+      "definition": "A measure of the ability of a body to absorb radiant energy, denoted by $\\alpha$. It is defined as the ratio of radiant or luminous flux absorbed by the body ($\\Phi_{\\text{abs}}$) to the incident flux ($\\Phi_{\\text{inc}}$): $$\\alpha = \\frac{\\Phi_{\\text{abs}}}{\\Phi_{\\text{inc}}}$$ For a black body, $\\alpha = 1$."
     },
     {
       "word": "absorptiometer",
@@ -1220,7 +1220,7 @@
       "word": "absorption coefficient",
       "raw_headword": "ABSORPTION COEFFICIENT",
       "synonyms": [],
-      "definition": "1. A quantity that characterises the absorption of light or any other type of electromagnetic radiation as it passes through the absorbing material. Its symbol is ε and it has the dimensions of 1/(concentration x length). The absorption coefficient depends on the absorbing material and also on the wavelength of light being absorbed. Its highest value occurs where the absorption is most intense. 2. The volume of a given gas measured at a standard temperature and pressure that will dissolve in a unit volume of a given liquid."
+      "definition": "1. In spectroscopy, a parameter quantifying how strongly a chemical species attenuates light at a given wavelength, defined by the Beer-Lambert law: $$I = I_0 e^{-\\alpha x} \\quad \\text{or} \\quad A = \\varepsilon c l$$ where $\\varepsilon$ is the molar absorption coefficient (with dimensions $\\text{L mol}^{-1}\\text{cm}^{-1}$), $c$ is molar concentration, and $l$ is optical path length. 2. In acoustics, the fraction of sound energy absorbed by a surface relative to total incident energy."
     },
     {
       "word": "absorption field",
@@ -1234,7 +1234,7 @@
       "word": "absorption law",
       "raw_headword": "ABSORPTION LAW",
       "synonyms": [],
-      "definition": "The law appearing in the definition of Boolean algebra and lattice which is stated as A ∩ ( A ∩ B ) = A and A ∪ ( A ∪ B ) = A . The two parts of the absorption law are sometimes called the absorption identities ."
+      "definition": "Fundamental algebraic identities in Boolean algebra and lattice theory stating that for any elements $A$ and $B$: $$A \\cap (A \\cup B) = A$$ $$A \\cup (A \\cap B) = A$$ These identities state that a smaller set absorbs a larger set containing it under dual operations."
     },
     {
       "word": "absorption line",
@@ -1292,7 +1292,7 @@
         "absorption constant",
         "absortivity"
       ],
-      "definition": "Any measure of the extent to which the intensity of a beam of light is reduced by passing through a distance of a solution having a molar concentration of a dissolved substance. It is also called molar absorptivity in the Beer's Law (Beer's law, Beer-Lambert law, Lambert-Beer law or the Beer-Lambert-Bouguer law), which relates the absorption of light to the properties of the material through which the light is travelling). It is the constant, a , in the Beer's law relation A = ebc , where A is absorbance (no units, since A = log 10 P0 / P), e is the molar absorbtivity with units of L mol^-1 cm^-1 , b is the path length of the sample, i.e., the path length of the cuvette in which the sample is contained. This measurement in centimetres c is the concentration of the compound in solution, expressed in mol L^-1 . Therefore, if all the light passes through a solution without any absorption, then absorbance is zero and percent transmittance is 100%. If all the light is absorbed, then percent transmittance is zero and absorption is infinite. The reason for stating the law with this equation is because absorbance is directly proportional to the other parameters, as long as the law is obeyed."
+      "definition": "The measure of light attenuation through a solution of absorbing solute, governed by the Beer-Lambert Law: $$A = \\varepsilon b c$$ where $A = \\log_{10}(P_0 / P)$ is absorbance, $\\varepsilon$ is the molar absorptivity (in $\\text{L mol}^{-1}\\text{cm}^{-1}$), $b$ is the path length of the cuvette (in $\\text{cm}$), and $c$ is the concentration (in $\\text{mol L}^{-1}$)."
     },
     {
       "word": "abstract",
@@ -1522,7 +1522,7 @@
       "word": "acceleration",
       "raw_headword": "ACCELERATION",
       "synonyms": [],
-      "definition": "The rate at which the velocity of a body changes with time. Its unit is metre per second per second (m/s 2 or ms^-2 ) or kilometre per hour per hour (km/ hr 2 ). It is a vector quantity denoted by a and expressed as a = change in velocity/time interval (Δ v / t ). The slope of the velocity-time graph gives the acceleration of the body. A Since it is a vector ∆ v ∆ t t/s v/ms^-1 Fig (ii) Instantaneous Acceleration Graph a t quantity, the direction of the acceleration vector depends on two things: whethertheobjectis speeding up or slowing down and whether the object is moving in the positive or negative direction. When an accelerating object changes its velocity by the same amount each second, for example, by 10 m/s in each consecutive second, it is referred to as a constant acceleration . Abody travelling at constant speed may be said to be accelerating if its direction keeps changing as in a body moving in a circular path. There are two kinds of acceleration: average and instantaneous. Average acceleration is determined over a long time interval. The velocity at the beginning of this interval is called the initial velocity ( v 0 ) and the velocity at the end is called the final velocity ( v ). It is calculated as follows: a v = v - v 0 ( ) Δ t . Instantaneous acceleration is the limiting value of the acceleration calculated over a very short time interval at the appropriate instant of time. It can also be defined as the limit of average acceleration as the time interval approaches zero. It is the slope of the tangent of the velocity-time graph at the same instant of time. Instantaneous acceleration is calculated as follows: lim t → 0 δ y δ t = δ y δ t . Acceleration due to gravity t 2 /s displacement/m."
+      "definition": "The rate of change of velocity of an object with respect to time. It is a vector quantity with SI unit $\\text{m/s}^2$ (or $\\text{ms}^{-2}$). Average acceleration over a time interval $\\Delta t$ is given by: $$a_{\\text{avg}} = \\frac{v - v_0}{\\Delta t} = \\frac{\\Delta v}{\\Delta t}$$ Instantaneous acceleration is the limit of average acceleration as the time interval approaches zero, given by the derivative of velocity: $$a = \\lim_{\\Delta t \\to 0} \\frac{\\Delta v}{\\Delta t} = \\frac{dv}{dt} = \\frac{d^2s}{dt^2}$$ Graphically, acceleration represents the gradient (slope) of a velocity-time graph."
     },
     {
       "word": "acceleration due to gravity",
@@ -1530,7 +1530,7 @@
       "synonyms": [
         "acceleration of free fall"
       ],
-      "definition": "The acceleration of a body towards the earth's surface when the body is acted on by its weight only. In other words, it is the acceleration of a body falling freely under the influence of the Earth's gravitational pull or the acceleration experienced by any massive object falling freely in the earth's gravitational field. Its symbol is g . In a vacuum, all bodies accelerate in a gravitational field at the same rate relative to the centre of mass and this is true regardless of the mass or composition of the body. In a medium such as air or sea, the actual acceleration of a body is reduced by its buoyancy and the viscosity of the atmosphere. On the surface of the Earth, all objects fall in a vacuum with acceleration between 9.78 ms^-2 and 9.82 ms^-2 depending on latitude. Acceleration due to gravity has a typical value of 9.81 ms^-2 close to the earth's surface. The acceleration due to gravity, g , can be calculated from a distance-time graph by plottting a graph of distance, s against the square of the time, t 2 . Two times the slope yields the accelaration due to gravity, g . Referring to thediag ra m , y = mx + ccanbecompa re dtos = 1 2 gt 2 , hence the slope m = 1 2 g . This implies that acceleration due to gravity, g equals twice the slope of a displacement -time graph."
+      "definition": "The acceleration experienced by a body falling freely in a gravitational field in the absence of air resistance, denoted by $g$. Near the Earth's surface, $g \\approx 9.81\\text{ ms}^{-2}$. From kinematic equations for free fall from rest: $$s = \\frac{1}{2}gt^2$$ When plotting distance $s$ against $t^2$, the resulting graph is a straight line through the origin with slope $m = \\frac{1}{2}g$. Therefore, the acceleration due to gravity is equal to twice the slope: $$g = 2m$$"
     },
     {
       "word": "acceleration hardware",
@@ -2326,7 +2326,7 @@
         "acidity constant",
         "acid ionising constant"
       ],
-      "definition": "A quantitative measure of the strength of an acid in solution. Its symbol is K a and it is the equilibrium constant for the dissociation reaction HA ⇋ A - + H + , where HA is a generic acid that dissociates into A - , known as the conjugate base of the acid and the hydrogen ion or proton, H + . In aqueous solution the H + exists as a solvated hydronium ion H3 O + . The dissociation constant is usually written as a quotient of the equilibrium concentrations (in mol/L), as follows: K a = [H + ][A - ] [HA - ] ."
+      "definition": "A quantitative measure of the strength of an acid in solution, denoted by $K_a$. For the dissociation equilibrium of a generic weak acid $\\text{HA}$ in aqueous solution: $$\\text{HA} \\rightleftharpoons \\text{A}^- + \\text{H}^+ \\quad (\\text{or } \\text{HA} + \\text{H}_2\\text{O} \\rightleftharpoons \\text{A}^- + \\text{H}_3\\text{O}^+)$$ The acid dissociation constant is defined as: $$K_a = \\frac{[\\text{H}^+][\\text{A}^-]}{[\\text{HA}]}$$ The logarithmic constant is given by $\\text{p}K_a = -\\log_{10} K_a$, where lower $\\text{p}K_a$ values indicate a stronger acid."
     },
     {
       "word": "acid dye",
@@ -2596,7 +2596,7 @@
       "synonyms": [
         "sound impedance"
       ],
-      "definition": "The complex ratio of the sound pressure on a given surface to the sound flux through that surface with the symbol Z , defined as the product of the density of the medium ( p ) and acoustic velocity within the medium ( V ): Z = pV . Its unit is rayls per square metre. Acoustic resistance is the real component of acoustic impedance and acoustic reactance is the imaginary component. Acoustic impedance is important in the determination of acoustic transmission and reflection at the boundary of two materials having different acoustic impedances, the design of ultrasonic transducers and assessing absorption of sound in a medium."
+      "definition": "The ratio of acoustic sound pressure $p$ on a surface to the volume acoustic flux $U$ through that surface, denoted by $Z$. For a plane acoustic wave propagating through a medium of density $\\rho$ at acoustic velocity $c$: $$Z = \\rho c$$ Its SI unit is the acoustic ohm (or $\\text{Pa}\\cdot\\text{s/m}^3$), or specific acoustic impedance in rayls ($\\text{kg}\\cdot\\text{m}^{-2}\\text{s}^{-1}$)."
     },
     {
       "word": "acoustic intensity",
@@ -2984,7 +2984,7 @@
       "word": "action",
       "raw_headword": "ACTION",
       "synonyms": [],
-      "definition": "1. In mathematics, a group action is an operation such that for a group G, on a non-empty set, S, it is a homomorphism Φ from the group to the group of permutations on S. For g in G and s in S the image Φ ( g )( s ) may be written gs , sg or s ( gΦ ). Thus, there is an associative mapping with an identity from G × S into S, under which the product of any member of the group with any member of the set is a member of the set, such that for each g , h in G and s in S, g ( hs ) = ( gh ) s and 1 s = s . 2. In physics, the definite integral of the Langrarian of a given body or a discrete set of particles from some reference time to the current time. It is the product of energy and time and its SI unit is joule-second. It is a mathematical functional which takes the trajectory, of the system as its argument and has a real number as its result. The action is typically represented as an integral over time, taken along the path of the system between the initial time and the final time of the development of the system, S = L dt t 1 t 2 ∫ , where the integrand L is called the Lagrangian."
+      "definition": "1. In physics, a numerical value describing how a physical system has changed over time, defined as the integral of the Lagrangian $L = T - V$ (kinetic energy minus potential energy) over time along the system's path between times $t_1$ and $t_2$: $$S = \\int_{t_1}^{t_2} L(q, \\dot{q}, t) \\, dt$$ By Hamilton's Principle of Least Action, the path actually taken by the system makes this action stationary ($\\delta S = 0$). The SI unit of action is joule-second ($\\text{J}\\cdot\\text{s}$). 2. In mathematics, a group action of a group $G$ on a set $S$ is a homomorphism from $G$ to the symmetric group of permutations of $S$."
     },
     {
       "word": "action and reaction forces",
@@ -3318,7 +3318,7 @@
       "word": "activity",
       "raw_headword": "ACTIVITY",
       "synonyms": [],
-      "definition": "1. Also known as disintegration rate or decay rate , it is the number of nuclear decays, which occur in a given quantity of material in a small time interval, divided by that time interval. Its symbol is A and expressed as follows: A = dN / dt . The SI unit of activity is the becquerel (Bq), named after a French physicist, Henri Becquerel (1852-1908), who discovered radioactivity. One Bq is defined as one transformation or decay per second. 2. A thermodynamic parameter used in place of concentration in equilibrium constants for reactions involving non-ideal gases and solutions. It is a measure of the \"effective concentration\" of a species in a mixture."
+      "definition": "1. In nuclear physics, the rate of nuclear disintegrations occurring in a radioactive sample, denoted by $A$: $$A = -\\frac{dN}{dt} = \\lambda N$$ where $N$ is the number of radioactive nuclei and $\\lambda$ is the decay constant. The SI unit of activity is the becquerel ($\\text{Bq}$), where $1\\text{ Bq} = 1\\text{ decay/second}$. 2. In chemical thermodynamics, the effective concentration of a species under non-ideal conditions, denoted by $a = \\gamma c$, where $\\gamma$ is the activity coefficient."
     },
     {
       "word": "activity series",
@@ -3750,13 +3750,13 @@
       "word": "addition formula",
       "raw_headword": "ADDITION FORMULA",
       "synonyms": [],
-      "definition": "1. Any analogous formula for a function f that gives the value of f ( x + y ) in terms of f ( x ), f ( y ) and related functions. 2. Any equation that expresses trigonometric functions of the sum or difference of two angles in terms of separate functions of the angles. They are used to simplify trigonometric expressions, for example, in solving an equation. The fundamental formulae of angle addition in trigonometry are given by the following identities: sin( A + B ) = sin A cos B + cos A sin B ; sin( A - B ) = sin A cos B - cos A sin B ; cos( A + B ) = cos A cos B - sin A sin B ; cos( A - B ) = cos A cos B + sin A sin B ; tan( A + B ) = ; tan( A - B ) = ."
+      "definition": "1. In trigonometry, fundamental identities expressing trigonometric functions of the sum or difference of two angles: $$\\sin(A + B) = \\sin A \\cos B + \\cos A \\sin B$$ $$\\sin(A - B) = \\sin A \\cos B - \\cos A \\sin B$$ $$\\cos(A + B) = \\cos A \\cos B - \\sin A \\sin B$$ $$\\cos(A - B) = \\cos A \\cos B + \\sin A \\sin B$$ $$\\tan(A + B) = \\frac{\\tan A + \\tan B}{1 - \\tan A \\tan B}$$ $$\\tan(A - B) = \\frac{\\tan A - \\tan B}{1 + \\tan A \\tan B}$$ 2. In calculus and functional analysis, any relation giving $f(x + y)$ in terms of $f(x)$ and $f(y)$."
     },
     {
       "word": "addition law of probability",
       "raw_headword": "ADDITION LAW OF PROBABILITY",
       "synonyms": [],
-      "definition": "A statistical property that states the probability of one and/or two events occurring at the same time is equal to the probability of the first event occurring, plus the probability of the second event occurring, minus the probability that both events occur at the same time. For example, if A and B are two events then the addition law states that P ( A ∪ B ) = P ( A ) + P (B) - P ( A ∩ B ). If the events A and B are mutually exclusive events this reduces to P( A ∪ B ) = P ( A ) + P ( B ), where P ( A ∩ B ) = 0."
+      "definition": "A fundamental probability theorem stating that for any two events $A$ and $B$, the probability of their union is: $$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$$ If $A$ and $B$ are mutually exclusive (disjoint) events, $P(A \\cap B) = 0$, simplifying to: $$P(A \\cup B) = P(A) + P(B)$$"
     },
     {
       "word": "addition mutation",
@@ -3774,19 +3774,19 @@
       "word": "addition of fractions",
       "raw_headword": "ADDITION OF FRACTIONS",
       "synonyms": [],
-      "definition": "Fractions can be added only if they are expressed with the same denominator. For example, the lowest common denominator of 1 2 , 1 3 , 1 15 is 30 and fractions can be stated as 15 30 , 10 30 and 2 30 . They can now be added as 2 + 1 3 + 1 15 = 15 + 10 + 2 = 27 = 9 ."
+      "definition": "Fractions can only be combined by addition when converted to a common denominator: $$\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + bc}{bd}$$ For example, finding the lowest common denominator for fractions with denominators 2, 3 and 15 (which is 30): $$\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{15} = \\frac{15}{30} + \\frac{10}{30} + \\frac{2}{30} = \\frac{15 + 10 + 2}{30} = \\frac{27}{30} = \\frac{9}{10}$$"
     },
     {
       "word": "addition of matrices",
       "raw_headword": "ADDITION OF MATRICES",
       "synonyms": [],
-      "definition": "If two or more matrices are of the same order they can be added. The order that should be followed is the number of rows, followed by the number of columns. For example, if A = abcd ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ is added to B = efgh ⎛ ⎝ ⎜⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟⎟ this becomes A + B = abcd ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ + efgh ⎛ ⎝ ⎜⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟⎟ = a + e b + f c + g d + h ⎛ ⎝ ⎜⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟⎟ . Addition of Vectors C A a + b = caBcb."
+      "definition": "Two matrices $A$ and $B$ can be added if and only if they have identical dimensions (same number of rows and columns). Addition is performed component-wise: $$\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} + \\begin{pmatrix} e & f \\\\ g & h \\end{pmatrix} = \\begin{pmatrix} a+e & b+f \\\\ c+g & d+h \\end{pmatrix}$$ Matrix addition is commutative ($A + B = B + A$) and associative ($(A + B) + C = A + (B + C)$)."
     },
     {
       "word": "addition of vectors",
       "raw_headword": "ADDITION OF VECTORS",
       "synonyms": [],
-      "definition": "A vector is a quantity that has both magnitude and direction and is usually symbolised by a letter with an arrow above it, for example, When a lower case letter is used for a vector, for example, vector a , it can also be denoted by The vector AB   is the movement from point A to B , vector AC   is the movement from point A to C , and vector BC  is the movement from point B to C . AC   is the vector sum or resultant of AB   and BC  , i.e., AB   + BC  = AC ! \" !! . Addition of vectors obey the commutative and associative laws. It is done by adding the head of one to the tail of the other vector. This is known as head-to-tail addition."
+      "definition": "The operation of combining two or more vectors into a single resultant vector. By the triangle rule (head-to-tail method), placing the tail of vector $\\vec{b}$ at the head of vector $\\vec{a}$ gives the resultant: $$\\vec{AC} = \\vec{AB} + \\vec{BC}$$ In Cartesian coordinate components, vector addition is performed component-wise: $$\\vec{a} + \\vec{b} = (a_x + b_x)\\hat{i} + (a_y + b_y)\\hat{j} + (a_z + b_z)\\hat{k}$$ Vector addition is both commutative ($\\vec{a} + \\vec{b} = \\vec{b} + \\vec{a}$) and associative."
     },
     {
       "word": "addition polymer",
@@ -3840,7 +3840,7 @@
       "word": "additive function",
       "raw_headword": "ADDITIVE FUNCTION",
       "synonyms": [],
-      "definition": "A function in which f ( a + b ) = f ( a ) + f ( b ). For example, f ( a ) = 4 a is an additive function since f ( a + b ) = 4( a + b ), but g ( a ) = √ a is not additive since ( a+b ) is not equal to √ a + √ b ."
+      "definition": "A mathematical function preserving the addition operation: $$f(x + y) = f(x) + f(y)$$ For example, $f(x) = cx$ is additive since $c(x + y) = cx + cy$. In contrast, non-linear functions such as $g(x) = \\sqrt{x}$ or $h(x) = x^2$ are not additive since $\\sqrt{x + y} \\neq \\sqrt{x} + \\sqrt{y}$."
     },
     {
       "word": "additive group",
@@ -3852,13 +3852,13 @@
       "word": "additive identity",
       "raw_headword": "ADDITIVE IDENTITY",
       "synonyms": [],
-      "definition": "An identity element under the operation addition (+). The number zero is the additive identity element because it satisfies the property that the addition of zero does not change a number: x + 0 = 0 + x = x for all x ."
+      "definition": "An identity element under addition. For any number or algebraic structure under addition, the element $0$ satisfies: $$x + 0 = 0 + x = x$$ for all elements $x$."
     },
     {
       "word": "additive inverse",
       "raw_headword": "ADDITIVE INVERSE",
       "synonyms": [],
-      "definition": "The inverse of an element under the addition operation. For example the inverse of 2 under additive operation is^-2. It is a number that gives zero, when added to a given number. The additive inverse of b ( b ∊ R ) is also called the negative or opposite of b (written as -b ), thus b + (- b ) = b - b = 0. For example, -2 is the additive inverse of 2 and 6 is the additive inverse of^-6."
+      "definition": "The element that yields the additive identity ($0$) when added to a given element $x$: $$x + (-x) = 0$$ The additive inverse of $x$ is denoted $-x$ (the negative or opposite of $x$)."
     },
     {
       "word": "additive name",
@@ -4074,7 +4074,7 @@
       "synonyms": [
         "adiabatic process"
       ],
-      "definition": "1. A term used to describe any thermodynamic process that occurs with neither a gain nor loss of energy between the system and its surroundings; or any thermodynamic process that occurs without heat entering or leaving a system. Since no heat enters nor leaves the system, heat (Q) is zero, hence the first law of thermodynamic becomes: ΔE in = -W, where ΔE in is the internal energy of the system and W is the work done. This process generally involves a fall or rise in temperature of the system. The term can be applied in several contexts as follows: (i) Electronically adiabatic is a reaction in which there is no change of electronic state or multiplicity. (ii) Vibrational adiabaticity is a reaction in which there is no change of vibrational state during the course of reaction. The term also applies to a process in which excess vibrational energy in the reactants appears as vibrational energy in the products or in which ground-state vibration in the reactants leads to ground state vibration in the products. (iii) Rotational adiabatic is a reaction in which excess rotational energy in the reactants appears as rotational energy in the products or in which ground- state rotation in the reactants leads to ground-state rotation in the products. 2. In the Rice-Ramsperger-Kassel-Marcus (RRKM) theory of unimolecular reactions, a degree of freedom whose quantum number is more or less preserved during energisation."
+      "definition": "A thermodynamic process that occurs without heat transfer between a system and its surroundings ($Q = 0$). By the First Law of Thermodynamics ($\\Delta U = Q - W$), the change in internal energy equals the work done on the system: $$\\Delta U = -W$$ For an ideal gas undergoing a reversible adiabatic process: $$PV^\\gamma = \\text{constant} \\quad \\text{and} \\quad TV^{\\gamma^-1} = \\text{constant}$$ where $\\gamma = C_p / C_v$ is the heat capacity ratio (adiabatic index)."
     },
     {
       "word": "adiabatic approximation",
@@ -4164,7 +4164,7 @@
       "word": "adjoint",
       "raw_headword": "ADJOINT",
       "synonyms": [],
-      "definition": "1. Relating to or denoting a function or quantity related to a given function or quantity by a particular process of transposition. 2. Also known as Hermitian conjugate and often denoted A *, A ' or A ⊥ , it is the matrix that is the transpose of the matrix of the complex conjugates of the entries of a given matrix. Alternatively, it is also known as dual and is the the operator A* that is conjugate to a given linear operator A between normed spaces X and Y. 3. Hilbert space adjoint is the operator A * that is conjugate to a given linear operator A . It is defined on Hilbert space by Ax , y = x , A * y . 4. Also known as adjugate , the adjoint of a square matrix A , denoted by adj A , is the transpose of the matrix of cofactors of A . For A = ( a ij ), A ij denote the cofactor of the entry a ij . The adjoint of a 2 x 2 matrix A = abcd ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ is Adj. A = d - b - c a ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ ."
+      "definition": "1. For an $n \\times n$ square matrix $A$, the classical adjoint (also called the adjugate matrix, $\\operatorname{adj}(A)$) is the transpose of its cofactor matrix $C$: $$\\operatorname{adj}(A) = C^T$$ For a $2 \\times 2$ matrix $A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$, its adjugate is: $$\\operatorname{adj}(A) = \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$$ and satisfies $A \\cdot \\operatorname{adj}(A) = \\det(A) I$. 2. In functional analysis, the Hermitian adjoint $A^*$ of an operator $A$ on a Hilbert space satisfies $\\langle Ax, y \\rangle = \\langle x, A^*y \\rangle$."
     },
     {
       "word": "adjoint equation",
@@ -5735,7 +5735,7 @@
       "word": "airy function",
       "raw_headword": "AIRY FUNCTION",
       "synonyms": [],
-      "definition": "Any of the functions Ai( z ) and Bi( z ), which are the special solutions of the second-order differential equation ∅ '' = t ∅ = 0; which is ∅ ( t ) = 1 π cos tx + x 3 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ ∞ ∫ dx . There are four varieties of Airy functions: Ai( z ), Bi( z ), Gi( z ) and Hi( z ). Ai( z ) and Bi( z ) are used more frequently than Gi( z ) and Hi( z ). Airy functions commonly appear in physics, especially in optics, quantum mechanics, electromagnetics and radiative transfer."
+      "definition": "The special functions $\\text{Ai}(x)$ and $\\text{Bi}(x)$, which are linearly independent solutions to the second-order Airy differential equation: $$\\frac{d^2y}{dx^2} - xy = 0$$ The Airy function of the first kind is defined by the improper integral: $$\\text{Ai}(x) = \\frac{1}{\\pi} \\int_0^{\\infty} \\cos\\left(\\frac{t^3}{3} + xt\\right) dt$$ Airy functions frequently appear in wave physics, optics (caustics and rainbow diffraction), and quantum mechanics (WKB approximation turning points)."
     },
     {
       "word": "aitken particles",
@@ -5747,7 +5747,7 @@
       "word": "aitken's method",
       "raw_headword": "AITKEN'S METHOD",
       "synonyms": [],
-      "definition": "A numerical method used to accelerate the convergence of an equation. Normally, the formula X t +1 = f ( X t ) is used to solve the equation. The method uses initial value and the first two values obtained by the formula, to calculate a good approximation than the results of the iterative formula."
+      "definition": "A numerical acceleration technique (also called Aitken's $\\Delta^2$ process) used to accelerate the rate of convergence of a sequence generated by an iterative fixed-point iteration $x_{n+1} = f(x_n)$. Given three consecutive approximations $x_n, x_{n+1}, x_{n+2}$, the accelerated estimate is calculated as: $$x'_n = x_n - \\frac{(x_{n+1} - x_n)^2}{x_{n+2} - 2x_{n+1} + x_n} = \\frac{x_n x_{n+2} - x_{n+1}^2}{x_{n+2} - 2x_{n+1} + x_n}$$"
     },
     {
       "word": "akinete",
@@ -5907,13 +5907,13 @@
       "word": "aldaric acids",
       "raw_headword": "ALDARIC ACIDS",
       "synonyms": [],
-      "definition": "Polyhydroxy dicarboxylic acids having the general formula HOC(=O)[CH(OH)] n C(=O)OH. They are formed by oxidation of both terminal groups of an aldose to carboxyl groups."
+      "definition": "Polyhydroxy dicarboxylic acids having the general formula: $$\\text{HOOC}-(\\text{CHOH})_n-\\text{COOH} \\quad \\text{or} \\quad \\text{HOC}(=\\text{O})[\\text{CH}(\\text{OH})]_n\\text{C}(=\\text{O})\\text{OH}$$ They are formed by the oxidation of both terminal carbon groups (the aldehyde and primary alcohol groups) of an aldose to carboxyl groups."
     },
     {
       "word": "aldehydes",
       "raw_headword": "ALDEHYDES",
       "synonyms": [],
-      "definition": "Organic compounds with the general formula RC(=O)H, in which a carbon atom is bonded to one hydrogen atom with a single covalent bond and oxygen atom with a double covalent bond and single-bonded to another chemical group such as methane, benzene, another hydrogen, etc. The carbon oxygen double bond part is known as a carbonyl group (C=O), often referred to as a formyl or methanoyl group. Aldehydes are formed by oxidation of primary alcohols. Further oxidation yields carboxylic acids. Examples of aldehydes are methanol (formaldehyde) and ethanol (acetaldehyde). Ethanol is a carbonyl group single-bonded to a hydrogen and single-bonded to a methane. They are reducing agents. Some other types of organic compounds containg carbonyl groups are ketones and carboxylic acids."
+      "definition": "A class of organic chemical compounds containing a carbonyl group bonded to at least one hydrogen atom, with the general formula: $$\\text{R}-\\text{CHO} \\quad \\text{or} \\quad \\text{RC}(=\\text{O})\\text{H}$$ where $\\text{R}$ is a hydrogen atom or an alkyl/aryl hydrocarbon radical. Aldehydes are formed by the oxidation of primary alcohols: $$\\text{R}-\\text{CH}_2\\text{OH} \\xrightarrow{[\\text{O}]} \\text{R}-\\text{CHO} \\xrightarrow{[\\text{O}]} \\text{R}-\\text{COOH}$$ Common examples include methanal (formaldehyde, $\\text{HCHO}$) and ethanal (acetaldehyde, $\\text{CH}_3\\text{CHO}$)."
     },
     {
       "word": "aldicarb",
@@ -5952,7 +5952,7 @@
       "word": "aldonic acids",
       "raw_headword": "ALDONIC ACIDS",
       "synonyms": [],
-      "definition": "Polyhydroxy acids such as D-gluconic acid and D-gluconolactone having the general formula HOCH2 [CH(OH)] n C(=O)OH. They are derived from an aldose by oxidation of the aldehydic group."
+      "definition": "Polyhydroxy monocarboxylic acids with the general formula: $$\\text{HOCH}_2-(\\text{CHOH})_n-\\text{COOH} \\quad \\text{or} \\quad \\text{HOCH}_2[\\text{CH}(\\text{OH})]_n\\text{C}(=\\text{O})\\text{OH}$$ Derived from an aldose by the mild oxidation of the terminal aldehyde group ($-\\text{CHO}$) to a carboxyl group ($-\\text{COOH}$), such as D-gluconic acid."
     },
     {
       "word": "aldose",
@@ -5984,7 +5984,7 @@
       "synonyms": [
         "aleph numbers"
       ],
-      "definition": "In set theory, they are a sequence of infinite numbers used to represent the cardinality or size of infinite sets. They are represented by the symbol ℵ , the first Hebrew letter. Aleph-null , also known as aleph-nought is the smallest infinite cardinal number and is a set of cardinal numbers that can be put into a bijection or one-to-one correspondence between it and the natural numbers, which implies that it is countably infinite; the sets are countable or denumerable. It is represented by ℵ 0 . .Aleph-one, with the symbol ℵ 1 , is the cardinality of the set of all countable ordinal numbers, called ω 1 or Ω. It is an ordinal number larger than all countable ones; therefore it is an uncountable set."
+      "definition": "In set theory, the sequence of transfinite cardinal numbers used to represent the cardinality of infinite sets, denoted by the Hebrew letter $\\aleph$ (aleph). $\\aleph_0$ (aleph-null or aleph-nought) is the smallest infinite cardinal, representing the cardinality of the set of natural numbers $\\mathbb{N}$ (countably infinite sets). $\\aleph_1$ (aleph-one) is the cardinality of the set of all countable ordinal numbers, representing an uncountable set. By Cantor's Continuum Hypothesis: $$2^{\\aleph_0} = \\aleph_1$$"
     },
     {
       "word": "aleph-null",
@@ -6075,7 +6075,7 @@
       "word": "algebra",
       "raw_headword": "ALGEBRA",
       "synonyms": [],
-      "definition": "1. A system of arithmetic that applies to any set of non- numerical symbols, usually letters, axioms and rules by which they are combined or operated upon. In other words, it is the branch of mathematics in which symbols, usually letters of alphabets, represent numbers or quantities and express general relationship that hold for all members of a specified set, for example x + y = y + x . 2. Also called abstract algebra , it is the study of structures that deal with algebraic systems rather than the usual number systems and includes groups, rings and fields. 3. Any formal calculus used to model and study the properties of the entities that are the intended interpretation of their symbols, such as the algebra of logic and the algebra of classes. 4. A Boolean algebra or sigma-algebra (σ-algebra) and in particular, the algebra of subsets or algebra of propositions. 5. Any formal system with only functions and constants, but no relations except possibly identity."
+      "definition": "1. A fundamental branch of mathematics in which symbols (typically letters such as $x, y, z$) represent numbers or quantities in equations and formulas, expressing universal arithmetic relationships such as the commutative property: $$x + y = y + x \\quad \\text{and} \\quad xy = yx$$ 2. Abstract algebra investigates algebraic structures including groups, rings, fields, and vector spaces. 3. Boolean algebra formalises logic operations where variables take values in $\\{0, 1\\}$."
     },
     {
       "word": "algebra of propositions",
@@ -6090,7 +6090,7 @@
         "algebra of subsets",
         "field of sets"
       ],
-      "definition": "The properties and laws of sets, which includes the set-theoretic operations of union ( ∪ ), intersection ( ∩ ) and complementation and the relations of set equality and set inclusion. It also provides systematic procedures for evaluating expressions and performing calculations, involving these operations and relations. The binary operations of set union ( ∪ ) and intersection ( ∩ ) satisfy many identities. Several of these identities or laws have the following names: (i) Commutative laws: A ∪ B = B ∪ A and A ∩ B = B ∩ A; (ii) Associative laws: A ∪ (B ∪ C) = (A ∪ B) U C and (A ∩ B) ∩ C = A ∩ (B ∩ C). (iii) Distributive laws : A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) and A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C). There are also some more important laws of set algebra. For example, Proposition 3 states that for any subsets A and B of a universal set ∪ , the following identities hold: idempotent laws given by (i) A ∪ A = A and (ii) A ∩ A = A. The de Morgan's laws are given by (i) (A ∪ B)' = A' ∩ B' and (ii) (A ∩ B)' = A' ∪ B' ."
+      "definition": "The systematic mathematical framework and laws governing set operations of union ($\\cup$), intersection ($\\cap$), and complementation ($'$). Key set-theoretic laws include: $$\\text{Commutative: } A \\cup B = B \\cup A, \\quad A \\cap B = B \\cap A$$ $$\\text{Associative: } (A \\cup B) \\cup C = A \\cup (B \\cup C), \\quad (A \\cap B) \\cap C = A \\cap (B \\cap C)$$ $$\\text{Distributive: } A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C), \\quad A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)$$ $$\\text{De Morgan's Laws: } (A \\cup B)' = A' \\cap B', \\quad (A \\cap B)' = A' \\cup B'$$"
     },
     {
       "word": "algebra over a field",
@@ -6114,7 +6114,7 @@
       "word": "algebraic addition theorem",
       "raw_headword": "ALGEBRAIC ADDITION THEOREM",
       "synonyms": [],
-      "definition": "1. Any theorem or identity that gives an addition formula for a function f in terms of a polynomial P in three complex variables such that P ( f ( x ), f ( y ), f ( x + y )) = 0 for all complex arguments. 2. A classical result in elliptic function theory that for every elliptic function there is an algebraic addition theorem. A meromorphic function has such an addition theorem if and only if it is rational, trigonometric or elliptic. For example, exp( x + y ) = exp( x ) exp( y ) is an addition theorem for the exponential with P ( x , y , z ) = xy = z ."
+      "definition": "1. Any relation expressing a function of a sum $f(x + y)$ in terms of algebraic combinations of $f(x)$ and $f(y)$ through a polynomial relation: $$P(f(x), f(y), f(x + y)) = 0$$ For example, the exponential function satisfies the addition theorem: $$\\exp(x + y) = \\exp(x) \\cdot \\exp(y)$$ 2. In elliptic function theory, Abel's theorem proves that every elliptic function satisfies an algebraic addition theorem."
     },
     {
       "word": "algebraic closure",
@@ -6126,19 +6126,19 @@
       "word": "algebraic curve",
       "raw_headword": "ALGEBRAIC CURVE",
       "synonyms": [],
-      "definition": "A plane curve satisfying a polynomial equation in two variables x and y , for example, p ( x , y ) = 0. These are functions that, in their most general form, can be written as a sum of polynomials in x multiplied by powers of y , equals to zero. A curve in the real plane that is algebraic is defined by p ( x , y ) = 0, where p is a real polynomial. For example, if p = x 2 + y 2 - 1, then p ( x , y ) = 0 defines a circle. Examples of algebraic curves are (i) quadratic curve , an algebraic curve of degree two and includes circle, ellipse, hyperbola,and parabola. In standard form, a quadratic function is written as y = ax 2 + bx + c . (ii) Cubic curve , an algebraic curve of degree three. Examples are the cissoid of Diocles, conchoid of de Sluze, folium of Descartes, Maclaurin trisectrix, Maltese cross curve, right strophoid, semicubical parabola and serpentine curve. (iii) Quartic Curve , an algebraic curve of degree four. Examples are ampersand curve, bean curve, bicorn, bicuspid curve, bifoliate, bifolium, bitangent-rich curve, bow, bullet nose, butterfly curve, capricornoid, cardioid and Cartesian ovals. (iv) Quintic Curve , an algebraic curve of degree five. Examples include the Burnside curve, butterfly catastrophe curve and stirrup curve. (v) Sextic Curve , an algebraic curve of degree six. Examples include the astroid, atriphtaloid, Cayley's sextic, cornoid, cycloid of Ceva, dumbbell curve, ellipse evolute, epicycloid, Freeth's nephroid and heart curve (first). (vi) Octic Curve is an algebraic curve of degree eight, for example, the pear curve. (vii) Dodecic curve is an algebraic curve of degree twelve, for example, the ranunculoid. x y n Quadratic curve, an algebraic curve of order two y a<0 a>0 x y = ax + c,where n = , where n = -2, -1, 1, 2 and 3."
+      "definition": "A curve in the coordinate plane whose points $(x, y)$ satisfy a polynomial equation: $$P(x, y) = 0$$ where $P(x, y)$ is a polynomial with real or complex coefficients. Algebraic curves are classified by their degree: degree 1 curves are straight lines ($ax + by + c = 0$); degree 2 curves are conic sections (circle $x^2 + y^2 = r^2$, ellipse $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$, parabola $y = ax^2 + bx + c$, hyperbola); degree 3 curves are cubic curves; and degree 4 curves are quartic curves."
     },
     {
       "word": "algebraic equation",
       "raw_headword": "ALGEBRAIC EQUATION",
       "synonyms": [],
-      "definition": "An equation of the form f ( x ) = 0, where f is a polynomial. It shows the equality of two expressions formulated by applying to a set of variables, the algebraic operations namely, addition, subtraction, multiplication, division, raising to power and extraction of root. An example is 4 x 3 + 6 x 2 - 7 x + 4 = 0."
+      "definition": "A mathematical equation formed by setting a polynomial equal to zero: $$P(x) = a_n x^n + a_{n^-1} x^{n^-1} + \\dots + a_1 x + a_0 = 0$$ where $a_n \\neq 0$ and exponents are non-negative integers. By the Fundamental Theorem of Algebra, any non-zero polynomial equation of degree $n$ with complex coefficients has exactly $n$ complex roots (counted with multiplicity)."
     },
     {
       "word": "algebraic expression",
       "raw_headword": "ALGEBRAIC EXPRESSION",
       "synonyms": [],
-      "definition": "An expression containing a collection of numbers, variables and signs, positive or negative and arithmetic operations that must make mathematical and logical sense, for example, 5 x 3 - 3 y 2 + 2 xy . Two types exist: simple and compound. Simple algebraic expression has one term, called a monomial, for example, 3 a . Compound algebraic expression has two or more terms: the one with two terms, for example, 4 x + 3 y is a binomial; the one with three terms, for example, 2 x 2 - 3 x + 1, 3 m^-2 n + 5 z , is a trinomial; and the one with more than three terms is a multinomial. Alternatively, an algebraic expression may not contain any individual quantifiers and is expressed only in terms of variables and intended to be interpreted as being true for all members of some set; for example, x ( y + z ) = xy + xz ."
+      "definition": "A mathematical phrase combining numbers, variables, and arithmetic operations (addition, subtraction, multiplication, division, and exponentiation), such as: $$5x^3 - 3y^2 + 2xy$$ Classified by the number of terms: a monomial has one term ($3a$), a binomial has two terms ($4x + 3y$), a trinomial has three terms ($2x^2 - 3x + 1$), and expressions with more terms are polynomials."
     },
     {
       "word": "algebraic extension",
@@ -6152,7 +6152,7 @@
       "word": "algebraic function",
       "raw_headword": "ALGEBRAIC FUNCTION",
       "synonyms": [],
-      "definition": "A function that may be expressed in a finite number of terms, of only the elementary algebraic operations of addition, subtraction, multiplication, division and root extraction, for example, f ( x ) = nx 3 + x 4 - 2 x . They are distinguished from transcendental functions, such as the exponential, logarithmic and trigonometric functions, which can be expressed only by an infinite series. Another way of saying this is that the function f ( x ) is algebraic if y = f ( x ) is a solution of an equation of the form p n ( x ) y n + ... + p 1 ( x ) + p 0 ( x ) = 0, where p 0 ( x ), p 1 ( x ), ..., p n ( x ) are polynomials in x . All polynomials are algebraic. A function that satisfies no such equation is transcendental. There are various types of algebraic functions. A rational function does not have any fractional powers of the variable or variables. Integral functions do not include the operation of division in any of their terms. A homogeneous function is one in which the terms are all of the same degree, i.e., the sum of the indices of the variables in each term is the same for every term. For example, u 4 + u 3 v + u 2 v 2 + uv 3 + v 4 is a rational, integral, homogeneous function of the fourth degree in u and v ."
+      "definition": "A function $y = f(x)$ that satisfies a polynomial equation whose coefficients are themselves polynomials in $x$: $$p_n(x) y^n + p_{n^-1}(x) y^{n^-1} + \\dots + p_1(x) y + p_0(x) = 0$$ Algebraic functions are constructed using a finite number of basic algebraic operations ($+, -, \\times, \\div$) and root extractions ($n$-th roots). Functions that cannot be expressed this way (such as $\\sin x, \\cos x, e^x, \\ln x$) are transcendental functions."
     },
     {
       "word": "algebraic geometry",
@@ -6170,13 +6170,13 @@
       "word": "algebraic integer",
       "raw_headword": "ALGEBRAIC INTEGER",
       "synonyms": [],
-      "definition": "The root of a polynomial with integer coefficients, where the coefficient of the highest power is 1. The polynomial is of the form x n + a 1 x n^-1 + ... + a n = 0, where a 1 , ..., a n are integers; For example, x 1 = 2 + 3 is an algebraic integer, since A x 1 2 + 4 x 1 + 1 = 0 . The set of all algebraic integers is closed under addition and multiplication and therefore, a subring of complex numbers denoted by A."
+      "definition": "A complex number $\\alpha$ that is a root of a monic polynomial with integer coefficients: $$x^n + a_{n^-1} x^{n^-1} + \\dots + a_1 x + a_0 = 0 \\quad (a_i \\in \\mathbb{Z})$$ For example, $\\sqrt{2}$ is an algebraic integer because it satisfies $x^2 - 2 = 0$. The set of all algebraic integers forms an integral domain, closed under addition, subtraction, and multiplication."
     },
     {
       "word": "algebraic number",
       "raw_headword": "ALGEBRAIC NUMBER",
       "synonyms": [],
-      "definition": "A number that is the root of an algebraic polynomial. For example, in the expression x 2 = 2, the square root of 2 (√2) is an algebraic number because it is a solution of the equation x 2 = 2. Another source defines it as any number that is the root of a polynomial equation with coefficients drawn from a given field, in particular the rationals; in that case, √2 is an algebraic number, but π is not. A number which is not algebraic is called transcendental. The algebraic numbers form a field."
+      "definition": "A real or complex number that is a root of a non-zero polynomial in one variable with rational (or integer) coefficients: $$a_n x^n + a_{n^-1} x^{n^-1} + \\dots + a_1 x + a_0 = 0 \\quad (a_i \\in \\mathbb{Q}, a_n \\neq 0)$$ For example, $\\sqrt{2}$ and the golden ratio $\\phi = \\frac{1 + \\sqrt{5}}{2}$ are algebraic numbers. Numbers that are not algebraic, such as $\\pi$ and $e$, are transcendental numbers."
     },
     {
       "word": "algebraic number field",
@@ -6206,7 +6206,7 @@
       "word": "algebraic sum",
       "raw_headword": "ALGEBRAIC SUM",
       "synonyms": [],
-      "definition": "The total of a set of quantities, with regard to their signs, as + or -, according to the rules of addition in algebra. For example, the algebraic sum of^-2, 8 and^-1 is 5."
+      "definition": "The resultant sum obtained by adding a set of quantities while taking their respective positive ($+$) and negative ($-$) signs into account: $$\\sum_{i=1}^n x_i = x_1 + x_2 + \\dots + x_n$$ For example, the algebraic sum of $-2, 8$ and $-1$ is $(-2) + 8 + (-1) = 5$."
     },
     {
       "word": "algebraic system",
@@ -6669,7 +6669,7 @@
       "word": "allometric growth",
       "raw_headword": "ALLOMETRIC GROWTH",
       "synonyms": [],
-      "definition": "A phenomenon in which parts and organs of the same organism grow at different rates. In other words, it is the growth in part of an organism in relation to its whole body. An example is legs increasing in length faster than the arms. It is studied by measuring the mass and size of any organ or part of the body and expressed in relation to the total mass or size of the entire organism using the relation Y = bx ⍺ , where Y is the mass of the organ, x is the mass of the organism, ⍺ is the coefficient of the organ and b is a constant. It is important in studying relative growth rates."
+      "definition": "The differential growth rate of different organs or parts of an organism in relation to the growth of the whole body, modeled by Huxley's allometric equation: $$Y = b X^\\alpha \\quad \\text{or in logarithmic form} \\quad \\log Y = \\log b + \\alpha \\log X$$ where $Y$ is the size or mass of the organ, $X$ is the size or mass of the organism, $\\alpha$ is the allometric growth coefficient, and $b$ is a proportionality constant. When $\\alpha = 1$, growth is isometric; when $\\alpha > 1$, it is positive allometry; and when $\\alpha < 1$, it is negative allometry."
     },
     {
       "word": "allometry",
@@ -6856,7 +6856,7 @@
       "word": "almost perfect number",
       "raw_headword": "ALMOST PERFECT NUMBER",
       "synonyms": [],
-      "definition": "The powers of 2, because the aliquot parts (proper divisors) of 2 n sum to 2 n^-1. The only known almost perfect numbers are 1, 2, 4, 8, 16, 32, ..., which form the powers of 2."
+      "definition": "A natural number $n$ such that the sum of its proper divisors equals $n^-1$, or equivalently the sum-of-divisors function satisfies: $$\\sigma(n) = 2n - 1$$ All known almost perfect numbers are powers of 2 ($2^k$ for $k \\ge 0$): $1, 2, 4, 8, 16, 32, \\dots$, since: $$\\sum_{i=0}^{k^-1} 2^i = 2^k^-1$$"
     },
     {
       "word": "almost surely",
@@ -6935,7 +6935,7 @@
       "synonyms": [
         "decay"
       ],
-      "definition": "The disintegration of certain radioactive isotopes, causing the spontaneous emission of an alpha ( ) particle. An alpha particle is a stable particle formed from two protons and two neutrons and is identical to the nucleus of the helium atom. The general reaction for alpha decay is A Z X → A^-2 Z^-4 Y + 2 4 He , where X is the parent nuclide, Y is the daughter nuclide, Z is the atomic mass of X and A is the atomic number of X . The atomic number or the number of protons decreases by two and the mass number decreases by four as a result. Alpha decay commonly occurs in elements such as bismuth with atomic numbers greater than 83. It can occur in some rare-earth elements such as neodymium and lutetium with atomic numbers between 60 and 71."
+      "definition": "A type of radioactive decay in which an unstable atomic nucleus spontaneously disintegrates by emitting an alpha particle ($\\alpha$, a helium^-4 nucleus, ${}_2^4\\text{He}$). The nuclear decay equation is: $${}_Z^A\\text{X} \\longrightarrow {}_{Z^-2}^{A^-4}\\text{Y} + {}_2^4\\text{He}$$ where $\\text{X}$ is the parent nuclide, $\\text{Y}$ is the daughter nuclide, $A$ is the mass number, and $Z$ is the atomic number. The atomic number decreases by 2 and the mass number decreases by 4. Common in heavy radioisotopes such as uranium and radium."
     },
     {
       "word": "alpha diversity",
@@ -7100,7 +7100,7 @@
       "word": "alternate angles",
       "raw_headword": "ALTERNATE ANGLES",
       "synonyms": [],
-      "definition": "Either pair of angles contained between two given lines and a transversal, when a transversal cuts or crosses the two lines. They are non-adjacent and are on the opposite sides of the transversal. Alternate angles are equal if and only if the lines are parallel. For example, in the diagram, angles a and b alternate, which means a is equal to b ( a = b ), so are c and d ( c = d )."
+      "definition": "Pairs of non-adjacent interior angles situated on opposite sides of a transversal line intersecting two coplanar lines. If the two intersected lines are parallel, the alternate interior angles are equal: $$\\angle a = \\angle b$$"
     },
     {
       "word": "alternate host",
@@ -7128,7 +7128,7 @@
       "synonyms": [
         "ac"
       ],
-      "definition": "Electric current that changes direction periodically. If a graph of the current against time is plotted it is in a wave form, with its value varying periodically around zero. AC can come in a number of forms, as long as the voltage and current are alternating. The most common type of AC is the sine wave. The AC in homes and offices have an oscillating voltage that produces a sine wave. There are three parts to a sine wave: amplitude, frequency and phase. Some other waveforms include ths square waves, often used in digital and switching electronics to test their operation; and triangle waves, found in sound synthesis and are useful for testing linear electronics like amplifiers. The frequency of alternating current (AC) is measured in hertz. Typical equations describing an AC current and AC voltage are: I = I O sin ωt = I O sin2 πft and V = V o sin ω t = V o sin2 π ft , where ωt = 2 π f and f = 1/ T , T is the period of the signal in seconds, f is the frequency in Hz, ωt is the angular velocity in radian per second, I and V are the instantaneous values of the current and voltage respectively and I O and V O are the peak current and voltage respectively. The frequency of the domestic supply is different in different parts of the world. In Europe and most parts of the world, it is 50 Hz and in the U.S., it is 60 Hz."
+      "definition": "An electric current that periodically reverses its direction of flow and continuously changes its magnitude with time. For a standard sinusoidal alternating current (AC) and voltage: $$I(t) = I_0 \\sin(\\omega t) = I_0 \\sin(2\\pi f t)$$ $$V(t) = V_0 \\sin(\\omega t) = V_0 \\sin(2\\pi f t)$$ where $I_0$ and $V_0$ are peak current and voltage, $\\omega = 2\\pi f = \\frac{2\\pi}{T}$ is angular frequency, $f$ is frequency in Hertz (Hz), and $T$ is period. The root-mean-square (RMS) effective values are: $$I_{\\text{rms}} = \\frac{I_0}{\\sqrt{2}} \\approx 0.707 I_0 \\quad \\text{and} \\quad V_{\\text{rms}} = \\frac{V_0}{\\sqrt{2}} \\approx 0.707 V_0$$"
     },
     {
       "word": "alternating group",
@@ -7148,7 +7148,7 @@
       "synonyms": [
         "leibniz's alternating series test"
       ],
-      "definition": "A method used to prove that an alternating series with terms that decrease in absolute value is a convergent series; and to establish conditional convergence of an alternating series one need only to verify that the terms decrease monotonically to zero in absolute value. In this case the error after adding n terms is always less than the magnitude of the next. For example, 1 - 1 3 + 1 5 - 1 7 + 1 9 - ... is convergent, since a n = - 1 ( ) n 2 n + 1 = 2 n + 1 decreases monotonically to zero as n tends to infinity; its sum is π /4."
+      "definition": "Leibniz's criterion for testing the convergence of an alternating series $\\sum_{n=1}^{\\infty} (-1)^{n^-1} b_n$ (where $b_n > 0$). The series converges if: 1. The terms decrease monotonically: $b_{n+1} \\le b_n$ for all $n$. 2. The limit of the terms is zero: $\\lim_{n \\to \\infty} b_n = 0$. A classic example is the alternating harmonic series: $$\\sum_{n=1}^{\\infty} \\frac{(-1)^{n^-1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\dots = \\ln 2$$ and the Gregory-Leibniz series for $\\pi$: $$1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\dots = \\frac{\\pi}{4}$$"
     },
     {
       "word": "alternation",
@@ -8178,7 +8178,7 @@
       "synonyms": [
         "ampere-laplace law"
       ],
-      "definition": "A law used to determine the magnetic flux density B and the distance r from a conductor of length l, carrying a current I. It is of the form dB = ( µ ο I sin θ dl )/ πr 2 where dB is the infinitesimal element of the magnitude of the magnetic flux density at a distance r at point P from the element length dl of a conductor, µ 0 is the magnetic permeability of free space, l is the length of the line joining the element of the conductor and P."
+      "definition": "A fundamental law of electromagnetism relating the integrated magnetic field around a closed loop to the electric current passing through the loop: $$\\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{enc}}$$ where $\\vec{B}$ is the magnetic flux density, $d\\vec{l}$ is an infinitesimal element of the closed path, $\\mu_0$ is the permeability of free space ($4\\pi \\times 10^{-7}\\text{ T}\\cdot\\text{m/A}$), and $I_{\\text{enc}}$ is the enclosed net electric current. In the differential Biot-Savart form, the magnetic field contribution from a current element $I\\,d\\vec{l}$ is: $$d\\vec{B} = \\frac{\\mu_0 I \\, d\\vec{l} \\times \\hat{r}}{4\\pi r^2} \\implies dB = \\frac{\\mu_0 I \\sin\\theta \\, dl}{4\\pi r^2}$$"
     },
     {
       "word": "ampere's rule",
@@ -8394,7 +8394,7 @@
       "word": "amplitude",
       "raw_headword": "AMPLITUDE",
       "synonyms": [],
-      "definition": "1. The farthest distance that a vibrating or oscillating system such as a pendulum travels from a mean or equilibrium point; or the maximum displacement of a wave, for example, a sine wave from its mean position during a cycle. Since the sine function varies from +1 to^-1, the amplitude is 1. A sine wave is given by the formula a sin( ωt ), where a is the amplitude. The energy associated with either a simple harmonic oscillation or a waveform is proportional to the square of the amplitude. With sound waves, the greater the amplitude, the louder is the sound. 2. In mathematics, it is also known as argument , anomaly or azimuth , it is the angle that describes the direction of a complex number when it is plotted in a complex plane using polar coordinates. It is measured in radians as an angle in standard position. Peak-to-peak value Mean position amplitude Amplitude of a sinusoid or oscillating system."
+      "definition": "1. The maximum displacement or distance moved by a point on a vibrating body or wave from its equilibrium (mean) position. For a sinusoidal wave described by: $$y(t) = A \\sin(\\omega t + \\phi)$$ where $A$ is the amplitude, $\\omega = 2\\pi f$ is angular frequency, and $\\phi$ is the phase constant. The energy transported by a wave is directly proportional to the square of its amplitude ($E \\propto A^2$). 2. In complex analysis, also known as the argument ($\\arg z$), the angle $\\theta$ formed by a complex number $z = x + iy$ with the positive real axis."
     },
     {
       "word": "amplitude modulation",
@@ -8692,7 +8692,7 @@
       "word": "analyser",
       "raw_headword": "ANALYSER",
       "synonyms": [],
-      "definition": "1. A device, used in the polarisation of light, that is placed in the eyepiece of a polarimeter to observe plane-polarised light. The analyser, which may be a Nicol prism or Polaroid, can be oriented in different directions to investigate in which plane an incoming wave is polarised or if the light is plane polarised. If the analyser is horizontal when extinction of light takes place, the polarisation of light must have been in the vertical plane. The intensity of a beam of light transmitted through an analyser is proportional to cos2θ, where θ is the angle between the plane of polarisation and the plane of the analyser. Extinction is said to be produced by 'crossing' the polariser and analyser. 2. The left cerebral hemisphere of the brain that, in sport, is concerned with learning new skills, correcting flaws in technique and developing strategy."
+      "definition": "An optical device (such as a Nicol prism or Polaroid sheet) placed in the optical path to detect and determine the plane of polarization of light. By Malus's Law, when completely plane-polarized light of initial intensity $I_0$ passes through an analyzer whose transmission axis is oriented at an angle $\\theta$ relative to the plane of polarization, the transmitted intensity $I$ is given by: $$I = I_0 \\cos^2\\theta$$ Extinction ($I = 0$) occurs when the polarizer and analyzer are crossed at $\\theta = 90^\\circ$."
     },
     {
       "word": "analysis",
@@ -9276,7 +9276,7 @@
       "word": "angle between two vectors",
       "raw_headword": "ANGLE BETWEEN TWO VECTORS",
       "synonyms": [],
-      "definition": "Angle between two vectors p and q. If p and q are two non-zero vectors and θ is the angle between them, then the angle between is defined by θ = Cos^-1 p . q p q . This is the dot product or scalar product. θ p q > > θ > > p q θ > > q p Fig. 1 Fig. 2 Fig. 3 Angle between two vectors."
+      "definition": "For two non-zero vectors $\\vec{p}$ and $\\vec{q}$, the angle $\\theta$ ($0 \\le \\theta \\le \\pi$) between them is determined from their scalar (dot) product: $$\\vec{p} \\cdot \\vec{q} = |\\vec{p}| |\\vec{q}| \\cos\\theta \\implies \\cos\\theta = \\frac{\\vec{p} \\cdot \\vec{q}}{|\\vec{p}| |\\vec{q}|}$$ Therefore, the angle is: $$\\theta = \\arccos\\left(\\frac{\\vec{p} \\cdot \\vec{q}}{|\\vec{p}| |\\vec{q}|}\\right) = \\arccos\\left(\\frac{p_x q_x + p_y q_y + p_z q_z}{\\sqrt{p_x^2 + p_y^2 + p_z^2}\\sqrt{q_x^2 + q_y^2 + q_z^2}}\\right)$$"
     },
     {
       "word": "angle brackets",
@@ -9308,7 +9308,7 @@
       "word": "angle of deviation",
       "raw_headword": "ANGLE OF DEVIATION",
       "synonyms": [],
-      "definition": "The angle through which the emergent ray deviates from the direction of incident ray. When a ray of light passes through a prism it undergoes two refractions. Referring to the diagram, if PQ is a monochromatic light incidenting on side AB at Q , it is refracted and travels along QR and again gets refracted and emerges out along RS. The sum of deviations at Q and R is the total deviation, D . Minimum deviation D M is obtained, when the deviation at Q ( r 1 ) equals the deviation at R ( r 2 ), that is at minimum deviation, ( r 1 = r 2 = r ) ⇒ 2 r = D M ; therefore r = D M /2. Angle of deviation in a prism known as angle of minimum deviation angle of deviation emergent ray air ....... ......................... PRSQBACDr 1 r 2."
+      "definition": "The angle $D$ through which an incident ray of light is deviated upon passing through an optical prism. For a prism with refracting angle $A$, the deviation is $D = (i_1 + i_2) - A$. At the position of minimum deviation ($D = D_m$), the light ray passes symmetrically through the prism ($i_1 = i_2 = i$ and $r_1 = r_2 = r = A/2$), giving $D_m = 2i - A$. The refractive index $n$ of the prism material is given by the prism formula: $$n = \\frac{\\sin\\left(\\frac{A + D_m}{2}\\right)}{\\sin\\left(\\frac{A}{2}\\right)}$$"
     },
     {
       "word": "angle of dip",
@@ -9330,7 +9330,7 @@
       "word": "angle of friction",
       "raw_headword": "ANGLE OF FRICTION",
       "synonyms": [],
-      "definition": "The angle of a plane to the horizontal when a body placed on the plane will just start to slide. It is given by \" λ \", which is the angle tan λ = μ s , where μ s is the coefficient of static friction."
+      "definition": "The angle $\\lambda$ of an inclined plane to the horizontal at which an object placed on the plane is on the verge of sliding down under gravity. It is related to the coefficient of static friction $\\mu_s$ by: $$\\tan\\lambda = \\mu_s \\implies \\lambda = \\arctan(\\mu_s)$$"
     },
     {
       "word": "angle of incidence",
@@ -9414,7 +9414,7 @@
       "word": "angular acceleration",
       "raw_headword": "ANGULAR ACCELERATION",
       "synonyms": [],
-      "definition": "The rate of change of angular velocity with respect to time. In SI units, it is measured in radians per second squared (rad/s 2 ). Its symbol is α (alpha). The average angular acceleration of an object whose angular velocity changes from ω 1 to ω 2 over time t is (ω 2 - ω 1 )/ t . Instantaneous acceleration is the value approached as t becomes smaller."
+      "definition": "The time rate of change of angular velocity, denoted by the Greek letter $\\alpha$. Measured in radians per second squared ($\\text{rad/s}^2$). Average angular acceleration over a time interval $\\Delta t$ is: $$\\alpha_{\\text{avg}} = \\frac{\\omega_2 - \\omega_1}{\\Delta t} = \\frac{\\Delta\\omega}{\\Delta t}$$ Instantaneous angular acceleration is the first derivative of angular velocity and second derivative of angular position: $$\\alpha = \\frac{d\\omega}{dt} = \\frac{d^2\\theta}{dt^2}$$ By Newton's rotational second law, torque $\\tau$ is related to angular acceleration by $\\tau = I\\alpha$, where $I$ is moment of inertia."
     },
     {
       "word": "angular cobbly",
@@ -9487,7 +9487,7 @@
       "synonyms": [
         "magnifying power"
       ],
-      "definition": "The ratio of the angle subtended by the image at the eye to the angle subtended by the object at the eye. It is represented by angular magnification, M θ = θ 1 θ 0 , where θ 0 is the angular size of an object and θ 1 is the angular size of the image after passing through an optical system."
+      "definition": "The ratio of the angle $\\theta_i$ subtended at the observer's eye by the magnified virtual image to the angle $\\theta_o$ subtended by the object at the unaided eye: $$M_\\theta = \\frac{\\theta_i}{\\theta_o}$$ For a simple magnifying glass viewing an object at the near point ($D = 25\\text{ cm}$), the angular magnification is $M = 1 + \\frac{D}{f}$."
     },
     {
       "word": "angular mass",
@@ -9509,7 +9509,7 @@
       "word": "angular momentum",
       "raw_headword": "ANGULAR MOMENTUM",
       "synonyms": [],
-      "definition": "The momentum that a body has as a result of its rotation about an axis or the momentum of a body, calculated as the product of its mass and its angular velocity or the product of the angular velocity of a body and its moment of inertia about the axis of rotation. Its symbol is L . The angular momentum, of an orbiting body of mass, m , travelling at a velocity, V , along a circular orbit of radius, r , is given by L = mvr . Angular momentum is conserved; in that if the radius of the orbit is increased, the other values such as velocity will also increase so as to compensate the effect and maintain, the value of angular momentum."
+      "definition": "A vector measure of the rotational momentum of a system about a reference axis or origin, denoted by $\\vec{L}$. For a single particle of mass $m$ and linear velocity $\\vec{v}$ at position vector $\\vec{r}$: $$\\vec{L} = \\vec{r} \\times \\vec{p} = \\vec{r} \\times (m\\vec{v})$$ For a circular orbit of radius $r$ where $\\vec{r} \\perp \\vec{v}$, its magnitude is: $$L = mvr$$ For a rigid body rotating with angular velocity $\\vec{\\omega}$ about a principal axis of moment of inertia $I$: $$\\vec{L} = I\\vec{\\omega}$$ By the Principle of Conservation of Angular Momentum, if the net external torque is zero ($\\sum \\vec{\\tau} = 0$), then $\\vec{L}$ remains constant."
     },
     {
       "word": "angular overlap model",
@@ -9541,13 +9541,13 @@
       "word": "angular speed",
       "raw_headword": "ANGULAR SPEED",
       "synonyms": [],
-      "definition": "It is the magnitude of the angular velocity or the speed element of angular velocity. The average angular speed ( w ) is obtained by dividing the angular distance through which the body rotates by the time taken, expressed mathematically as w = θ/ t , where θ is the angular distance and t the time taken in seconds."
+      "definition": "The scalar magnitude of angular velocity, representing the rate of rotation about an axis: $$\\omega = \\frac{\\Delta\\theta}{\\Delta t} = \\frac{2\\pi}{T} = 2\\pi f$$ where $\\theta$ is angular displacement in radians, $T$ is the period of revolution, and $f$ is rotational frequency in Hertz."
     },
     {
       "word": "angular velocity",
       "raw_headword": "ANGULAR VELOCITY",
       "synonyms": [],
-      "definition": "A vector quantity, which is the rate of angular displacement with respect to time. It specifies the angular speed or the rotational speed of an object and the axis about which the object rotates. The SI unit of angular velocity is radians per second (rad s^-1 ). It may also be measured in degrees, radians or revolutions per unit time. Its symbol is ω (omega)."
+      "definition": "The vector rate of change of angular displacement with respect to time, denoted by $\\vec{\\omega}$. Its SI unit is radians per second ($\\text{rad/s}$ or $\\text{rad s}^{-1}$). Mathematically defined as: $$\\vec{\\omega} = \\frac{d\\theta}{dt}\\hat{n}$$ where $\\hat{n}$ is the unit vector along the axis of rotation given by the right-hand rule. The linear tangential velocity $\\vec{v}$ of a rotating particle at radius $\\vec{r}$ is: $$\\vec{v} = \\vec{\\omega} \\times \\vec{r} \\implies v = r\\omega$$"
     },
     {
       "word": "angustiseptate",
@@ -9844,7 +9844,7 @@
       "word": "annihilation",
       "raw_headword": "ANNIHILATION",
       "synonyms": [],
-      "definition": "1. In radiochemistry, it is an interaction between a particle and its antiparticle in which they both disappear. 2. In physics, it is the process in which the entire mass of two colliding particles, one of matter and one of antimatter, is converted into radiant energy (according to Einstein's famous formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) in the form of gamma rays or mesons. It occurs within when a particle meets in anti-particle. For example, in the case of a collision between an electron and a positron (anti-electron), which have a combined rest mass of 1.02 MeV, the result is two gamma rays each with a characteristic energy of 0.511 MeV. When nucleons annihilate each other the result is mesons. Electron-positron annihilation is made use of in PET scanning, where the source of each pair of gamma photons can be traced allowing an image to be constructed that shows where a positron-emitting tracer is located in a patient's body."
+      "definition": "In subatomic physics, a high-energy process in which a subatomic particle collides with its corresponding antiparticle, converting their entire rest mass into energy in accordance with Einstein's mass-energy equivalence principle: $$$$$$E = mc^2$$$$$$ In electron-positron annihilation, an electron ($e^-$) and a positron ($e^+$) annihilate at low kinetic energy to produce two gamma-ray photons: $$e^- + e^+ \\longrightarrow 2\\gamma$$ Each gamma photon carries energy $E_\\gamma = m_e c^2 = 0.511\\text{ MeV}$, giving a total energy release of $1.022\\text{ MeV}$."
     },
     {
       "word": "annihilator",
@@ -10529,7 +10529,7 @@
       "word": "antiaromaticity",
       "raw_headword": "ANTIAROMATICITY",
       "synonyms": [],
-      "definition": "Those cyclic molecules with a conjugated pi electron system. The molecule must have 4n pi electrons, where n is any integer. Antiaromatic compounds are unstable and highly reactive than that of similar nonaromatic species. An example of antiaromatic compound is cyclobuta^-1,3-diene. Antiaromatic ones are prone to reactions causing changes in their structural type and display tendency to alternation of bond lengths and fluxional behaviour both in solution and in the solid. In antiaromatic molecules, an external magnetic field induces a paramagnetic electron current."
+      "definition": "A property of cyclic, planar, completely conjugated systems containing $4n$ $\\pi$-electrons (where $n \\ge 1$ is an integer), in contrast to Hückel's $(4n + 2)$ aromatic rule. Antiaromatic compounds (such as cyclobuta^-1,3-diene with $4\\pi$ electrons) are exceptionally thermodynamically unstable and chemically reactive."
     },
     {
       "word": "antiatom",
@@ -10704,7 +10704,7 @@
       "synonyms": [
         "indefinite integral"
       ],
-      "definition": "The antiderivative of a function ƒ ( x ) is a function F ( x ) whose derivative equals ƒ ( x ). The process of solving antiderivatives is called antidifferentiation or indefinite integration and its opposite operation is called differentiation , which is the process of finding a derivative. For example, the function F ( x ) = x 5 /5 is an antiderivative of f ( x ) = x 4 . Since the derivative of a constant is zero, x 4 has an infinite number of antiderivatives such as ( x 5 /5) - 10, ( x 5 /5) + 2, etc. Thus, all the antiderivatives of x 4 can be obtained by changing the value of C in F ( x ) = ( x 5 /5) + C ; where C is an arbitrary constant known as the constant of integration. Basically, the graphs of antiderivatives of a given function are vertical translations of each other, with each graph's location depending on the value of C . Antiderivatives are related to definite integrals through the fundamental theorem of calculus and they are important because they can be used to compute definite integrals."
+      "definition": "A differentiable function $F(x)$ whose derivative equals the original function $f(x)$ on an open interval: $$F'(x) = f(x) \\iff \\int f(x) \\, dx = F(x) + C$$ where $C$ is an arbitrary constant of integration. For example, an antiderivative of $x^n$ (for $n \\neq^-1$) is: $$\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C$$"
     },
     {
       "word": "antideuterium",
@@ -11517,7 +11517,7 @@
       "word": "apollonius' theorem",
       "raw_headword": "APOLLONIUS' THEOREM",
       "synonyms": [],
-      "definition": "The equation that relates the length of a median in a triangle to the lengths of its sides. If a is the length of one side and b is the length of another, the third side is divided into two equal lengths c by a median of length m , then a 2 + b 2 = 2 m2 + 2 c 2 ."
+      "definition": "In plane Euclidean geometry, a theorem relating the lengths of the sides of any triangle to the length of a median. In $\\triangle ABC$, if $M$ is the midpoint of side $BC$ such that $AM = m$ is the median, and $BM = MC = c/2$, then: $$AB^2 + AC^2 = 2AM^2 + 2BM^2 \\implies a^2 + b^2 = 2m^2 + 2\\left(\\frac{c}{2}\\right)^2$$"
     },
     {
       "word": "apolune",
@@ -12209,7 +12209,7 @@
       "word": "arc length",
       "raw_headword": "ARC LENGTH",
       "synonyms": [],
-      "definition": "The measure of the distance along the curved line making up an arc. It is longer than the chord. If an arc of a circle of radius r subtends an angle θ at the centre of a circle, then the length A is r θ. The length of the arc of a curve from r = a and r = b is given by 1 + dy dx ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ dx a b ∫ ."
+      "definition": "The measure of the distance along a curved path between two points. 1. For a circular arc of radius $r$ subtending an angle $\\theta$ (in radians) at the center: $$s = r\\theta$$ 2. For a smooth plane curve $y = f(x)$ between $x = a$ and $x = b$, the arc length is given by the definite integral: $$L = \\int_a^b \\sqrt{1 + \\left(\\frac{dy}{dx}\\right)^2} dx$$"
     },
     {
       "word": "arc-",
@@ -12462,7 +12462,7 @@
       "synonyms": [
         "archimedes' law"
       ],
-      "definition": "A law of physics named after its discoverer, Archimedes of Syracuse that concerns the upward force or upthrust on any object fully or partly submerged in a fluid. It states that the buoyant force on an object is equal to the weight of the fluid it displaces. Mathematically, (buoyant force) Fb = m f g ... ., where m f is the mass of the fluid displaced by the body. Archimedes' principle can be expressed in other words that an object in a fluid such as water experiences an upthrust from the fluid which is equal to the weight of the fluid that the body displaces. The upward force is called the upthrust or buoyant force, expressed mathematically as: Upthrust = weight in air - weight in liquid. The resultant force on the A body is the difference between the upthrust and the body's weight. This difference is zero for a floating body, ie. upthrust and weight are equal and opposite. Hot air displaces a balloon, producing upthrust. This upthrust is balanced by the weight of the balloon. A hot air balloon rises when the upthrust on it is greater than its weight. A diver may attach lead weight to his suit if he wants to reach a greater depth. His weight will then be greater than the upthrust on him. For a given body to float in a given fluid depends on its weight and volume or the relative density (weight per unit volume). This is compared to that of the fluid in order to determine its buoyant force. If the body is less dense than the fluid, it will float. If the body is denser than the fluid, it will sink. The principle applies to both floating and submerged bodies and to all fluids, i.e., liquids and gases. Archimedes' principle is an important and underlying concept in the field of fluid mechanics."
+      "definition": "A foundational law of fluid statics stating that any body completely or partially submerged in a fluid experiences an upward buoyant force ($F_b$, or upthrust) equal in magnitude to the weight of the fluid displaced by the body: $$F_b = m_f g = \\rho_f V_{\\text{disp}} g$$ where $\\rho_f$ is fluid density, $V_{\\text{disp}}$ is displaced fluid volume, and $g$ is acceleration due to gravity. The apparent weight of the submerged object is: $$W_{\\text{apparent}} = W_{\\text{actual}} - F_b$$ A body floats when its buoyant force equals its total weight ($F_b = W$), meaning its average density is less than or equal to that of the fluid."
     },
     {
       "word": "archimedes' screw",
@@ -12535,13 +12535,13 @@
       "word": "area ofsu rfac eof revolution",
       "raw_headword": "AREA OFSU RFAC EOF REVOLUTION",
       "synonyms": [],
-      "definition": "The area of a surface obtained as a result of rotating, through one revolution about the x -axis, the arc of the curve y = f ( x ) between x = a and x = b is given by 2 π y 1 + dy dx ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ a b ∫ dx , where y = f ( x ) is a graph of the function f ( x ) such that f '( x ) is continuous on the interval [ a , b ] and f ( x ) ≥ 0 for all x in [ a , b ]."
+      "definition": "The surface area $S$ generated by rotating the arc of a smooth curve $y = f(x) \\ge 0$ (for $a \\le x \\le b$) through $2\\pi$ radians ($360^\\circ$) about the $x$-axis: $$S = 2\\pi \\int_a^b y \\sqrt{1 + \\left(\\frac{dy}{dx}\\right)^2} dx$$ For rotation about the $y$-axis: $$S = 2\\pi \\int_c^d x \\sqrt{1 + \\left(\\frac{dx}{dy}\\right)^2} dy$$"
     },
     {
       "word": "area under a curve",
       "raw_headword": "AREA UNDER A CURVE",
       "synonyms": [],
-      "definition": "The area enclosed by a curve can be found by finding the definite integral between two limits or points. To find the area enclosed under the curve y = f ( x ) the lines x = a and x = b , the equation of the curve y = f ( x ) is integrated between the limits between the limits x = a and x = b , thus the required area is A = f ( x ) dx . a b ∫ If the area is between the curve y = f ( x ) and the lines y = a and y = b , the required area is A = x dy . a b ∫ If the area is enclosed between two curves y a and y b , then the required area is A = ( y a - y b ) x 1 x 2 ∫ dx , where y a is the curve bounding the area above and y b the curve bounding the area below; x 1 and x 2 are the points of intersection of the two curves."
+      "definition": "In integral calculus, the net geometric area bounded by a continuous curve $y = f(x)$, the $x$-axis, and the vertical boundary lines $x = a$ and $x = b$: $$A = \\int_a^b f(x) \\, dx$$ The area enclosed between two continuous curves $y_1 = f(x)$ and $y_2 = g(x)$ where $f(x) \\ge g(x)$ between intersection points $x_1$ and $x_2$ is: $$A = \\int_{x_1}^{x_2} [f(x) - g(x)] \\, dx$$"
     },
     {
       "word": "arecaceae",
@@ -12689,7 +12689,7 @@
       "synonyms": [
         "complex argument"
       ],
-      "definition": "The angle describing the direction of a complex number on the complex plane. The numeric value is given by the angle in radians and is positive if measured counter- clockwise. For a complex number in polar form r (cos θ + i sin θ), the argument is θ. Algebraically, it is a complex number z of the form z = x + yi , where x and y are real numbers and i is the imaginary unit, with the property i 2 = -1. The real number x is called the real part of the complex number. It is denoted by Re (z). The real number y is the imaginary part. It is denoted by Im ( z ). In the diagram shown, line OP is called modulus z , where ∣ z ∣ = x 2 + y 2 . The argument of z = x + y' is given by arg z = tan^-1 y x ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ ."
+      "definition": "For a non-zero complex number $z = x + iy = r(\\cos\\theta + i\\sin\\theta) = r e^{i\\theta}$, the argument $\\arg(z)$ is the oriented angle $\\theta$ made with the positive real axis in the Argand plane: $$\\tan\\theta = \\frac{y}{x} \\implies \\theta = \\arctan\\left(\\frac{y}{x}\\right)$$ The principal argument $\\operatorname{Arg}(z)$ is conventionally restricted to the interval $(-\\pi, \\pi]$. The modulus $|z|$ is given by: $$|z| = r = \\sqrt{x^2 + y^2}$$"
     },
     {
       "word": "arhizous",
@@ -12787,13 +12787,13 @@
       "synonyms": [
         "linear sequence"
       ],
-      "definition": "A number pattern which increases or decreases by the same amount known as the common difference each time. It is generated by writing down the terms in a definite order, for example, increasing or decreasing by the same amount, such as 4, 8, 12, 16 with an increase of 4. The terms are connected by the formula U n = a +( n^-1) d , where a is the first term, d is the common difference and n is the number of terms."
+      "definition": "A sequence of numbers in which the difference between any two consecutive terms is a constant known as the common difference $d$. The $n$-th term $u_n$ of an arithmetic progression with first term $a$ is given by: $$u_n = a + (n^-1)d$$ where $d = u_n - u_{n^-1}$."
     },
     {
       "word": "arithmetic series",
       "raw_headword": "ARITHMETIC SERIES",
       "synonyms": [],
-      "definition": "The sum of an arithmetic sequence or the indicated sum of a sequence of terms, with each term being added to those that precede it. The sum of an arithmetic series is found by multiplying the number of terms by the average of the first and last terms. Given that the first term is a 1 , the common difference is d and the number of terms is n , then the following formula can be used to find the sum of terms in an arithmetic sequence: S n = n 2 a + u n ⎡⎣⎢ ⎤⎦⎥ or S n = n 2 2 a + ( n^-1) d ⎡⎣⎢ ⎤⎦⎥ ."
+      "definition": "The indicated sum of the terms of an arithmetic progression. For a series with $n$ terms, first term $a$, and common difference $d$, the sum $S_n$ is: $$S_n = \\frac{n}{2}(a + l) = \\frac{n}{2}\\left[2a + (n^-1)d\\right]$$ where $l = u_n = a + (n^-1)d$ is the last term."
     },
     {
       "word": "arithmetic-geometric mean inequality",
@@ -12805,7 +12805,7 @@
       "word": "arithmetic-geometric mean iteration",
       "raw_headword": "ARITHMETIC-GEOMETRIC MEAN ITERATION",
       "synonyms": [],
-      "definition": "The two term iteration in which one repeatedly computes both the arithmetic mean and the geometric mean of two positive numbers: a 0 = a , b 0 = b and a n + 1 = 1 2 ( a n + b n ); b n + 1 = ( anbn ) ."
+      "definition": "An algorithm that computes the arithmetic-geometric mean (AGM) of two positive real numbers $a_0 = a$ and $b_0 = b$ via coupled recurrence relations: $$a_{n+1} = \\frac{a_n + b_n}{2} \\quad (\\text{arithmetic mean})$$ $$b_{n+1} = \\sqrt{a_n b_n} \\quad (\\text{geometric mean})$$ Both sequences converge quadratically to a common limit, $\\operatorname{AGM}(a, b)$, fundamental in computing complete elliptic integrals and digits of $\\pi$."
     },
     {
       "word": "arity",
@@ -12900,7 +12900,7 @@
       "word": "aromaticity",
       "raw_headword": "AROMATICITY",
       "synonyms": [],
-      "definition": "A state in which three (3) or more carbon atoms present in an unsaturated organic compound joined in a ring that exhibit delocalisation of π -electrons as in benzene and its compounds. In other words, it is a term used to describe the cyclic delocalisation of a π -electron system of a conjugated compound. A molecule or ion with such delocalised electrons is represented by several contributing structures called resonance structures or canonical forms. When a molecule cannot be completely represented by a single structure but its chemical and physical properties can be described by two or more different structures, then the true structure is said to be resonance hybrid, which is the overall combination of all canonical forms. It is more stable than all canonical forms and shows all the characteristics of the molecule. This phenomenon is called resonance effect. All C-C bonds are equivalent and the ring is flat or almost flat. The total number of delocalised π -electrons must obey the Hὕkel Rule, 4 n + 2, where n takes the values 0, 1, 2, 3,..."
+      "definition": "A chemical property of cyclic, planar, conjugated unsaturated molecules possessing enhanced thermodynamic stability due to electron delocalization. By Hückel's Rule, a monocyclic planar ring exhibits aromatic stability if it possesses $(4n + 2)$ $\\pi$-electrons: $$N_\\pi = 4n + 2 \\quad (n = 0, 1, 2, 3, \\dots)$$ Benzene ($\\text{C}_6\\text{H}_6$) has $6$ $\\pi$-electrons ($n = 1$) and exhibits complete resonance delocalization."
     },
     {
       "word": "aronszajn tree",
@@ -12944,7 +12944,7 @@
       "word": "arrhenius equation",
       "raw_headword": "ARRHENIUS EQUATION",
       "synonyms": [],
-      "definition": "A mathematical relation, named after Svante Arrhenius (1859-1927), which expresses the exponential relationship between the rate constant and the activation energy of a reaction at a particular temperature. It is expressed as k = A exp( - E a / RT ), where k is the rate constant of a given reaction and Ea the activation energy. A is a constant for a given reaction, called the pre-exponential factor. Often the equation is written in logarithmic form ln k = ln A - E a / RT . A graph of ln k against 1/ T is a straight line with a gradient - E a / R and an intercept on the ln k axis of ln A ."
+      "definition": "A fundamental formula in chemical kinetics proposed by Svante Arrhenius, modeling the temperature dependence of reaction rate constants: $$k = A \\exp\\left(-\\frac{E_a}{RT}\\right) \\quad \\text{or in logarithmic form} \\quad \\ln k = \\ln A - \\frac{E_a}{RT}$$ where $k$ is the rate constant, $A$ is the pre-exponential frequency factor, $E_a$ is activation energy (in $\\text{J/mol}$), $R$ is the universal gas constant ($8.314\\text{ J}\\cdot\\text{mol}^{-1}\\text{K}^{-1}$), and $T$ is absolute temperature in Kelvins. An Arrhenius plot of $\\ln k$ versus $1/T$ yields a straight line with slope $m = -\\frac{E_a}{R}$."
     },
     {
       "word": "arrhenotoky",
@@ -13996,7 +13996,7 @@
       "word": "asymptote",
       "raw_headword": "ASYMPTOTE",
       "synonyms": [],
-      "definition": "A line or a curve that approaches a given curve arbitrarily closely. In other words, it is a straight line whose perpendicular distance from a curve decreases to zero as the distance from the origin increases without limit. For example, a curve in the form y = R( x ), where R( x ) is a rational function of x and its asymptotes are at the point where the denominator disappears or where the function ceases to exist. A function y = 1/( x^-1) does not exist at x = 1, therefore, the line x = 1 is an asymptote to the curve y = 1/( x^-1). A line, x = a to a curve is a vertical asymptote, the line y = b to a curve is a horizontal asymptote and the line y = mx + b to a curve is an oblique asymptote. The graph of y = 1/( x^-1) with the asymptote x = 1 is a tangent to the curve at infinity. Asymptote Vertical asymptote Horizontal asymptote y x Scores Frequency Normal Curve."
+      "definition": "A straight line $L$ associated with a curve $y = f(x)$ such that the perpendicular distance between the curve and the line approaches zero as points on the curve diverge to infinity: $$\\lim_{x \\to \\infty} |f(x) - (mx + c)| = 0$$ 1. Vertical asymptote at $x = a$ if $\\lim_{x \\to a} f(x) = \\pm \\infty$. 2. Horizontal asymptote at $y = b$ if $\\lim_{x \\to \\pm \\infty} f(x) = b$. 3. Oblique (slant) asymptote $y = mx + c$ if $\\lim_{x \\to \\pm \\infty} \\frac{f(x)}{x} = m$ and $\\lim_{x \\to \\pm \\infty} [f(x) - mx] = c$."
     },
     {
       "word": "asymptotic",
@@ -14339,7 +14339,7 @@
       "word": "atomic mass constant",
       "raw_headword": "ATOMIC MASS CONSTANT",
       "synonyms": [],
-      "definition": "One twelfth (1/12th) of the mass of a carbon^-12 atom in its nuclear and electronic ground state, m u = 1.6605402 (10) x 10 -27 kg. It is equal to the unified atomic mass unit."
+      "definition": "A physical constant defined as one-twelfth of the rest mass of an unbound carbon^-12 atom at ground state, denoted by $m_u$: $$m_u = \\frac{1}{12} m({}^{12}\\text{C}) = 1.66053907 \\times 10^{-27}\\text{ kg} = 931.494\\text{ MeV/}c^2$$ It defines the unified atomic mass unit ($\\text{u}$, or Dalton $\\text{Da}$)."
     },
     {
       "word": "atomic mass unit",
@@ -14449,7 +14449,7 @@
       "word": "atomic weight",
       "raw_headword": "ATOMIC WEIGHT",
       "synonyms": [],
-      "definition": "Former name for relative atomic mass , defined as weighted average of the masses of the constituent isotopes of a chemical element or the ratio of the average mass of a chemical element's atoms to 1/12 th the mass of an atom of the carbon^-12 isotope. Its symbol is Ar. Measuring the masses of atoms in grams, for example, would imply dealing with extremely small numbers, thus, the mass of an atom is compared with that of an atom of carbon^-12. In calculating the relative atomic mass of an element with isotopes, the relative mass and proportion of each is taken into account. For example, naturally occurring chlorine consists of atoms of relative isotopic masses 35 (75%) and 37 (25%). Its relative atomic mass is 35.5. That is A r = 100 × 35 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟+ 25 100 × 37 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟= 35 . 5 . The relative masses of atoms are measured using an instrument called A a mass spectrometer, invented by the English physicist Francis William Aston (1877-1945). The cations formed are brought down on to a detector in turn according to their mass-to-charge ratio. The instrument provides a measure of the relative mass (compared to 12 C) and the relative number of each isotope. Through the use of this instrument he discovered the existence of isotopes of elements. Relative atomic masses have no units."
+      "definition": "The dimensionless relative atomic mass ($A_r$) of an element, defined as the weighted average mass of its naturally occurring isotopes relative to 1/12 of the mass of a carbon^-12 atom: $$A_r = \\frac{\\sum_{i} (m_i \\times p_i)}{100}$$ where $m_i$ is the isotopic mass of isotope $i$ and $p_i$ is its natural percentage abundance. For chlorine with ${}^{35}\\text{Cl}$ (75.77%, $34.97\\text{ u}$) and ${}^{37}\\text{Cl}$ (24.23%, $36.97\\text{ u}$): $$A_r(\\text{Cl}) = \\frac{(35 \\times 75) + (37 \\times 25)}{100} = 35.5$$"
     },
     {
       "word": "atomicity",
@@ -15470,7 +15470,7 @@
       "word": "auxiliary equation",
       "raw_headword": "AUXILIARY EQUATION",
       "synonyms": [],
-      "definition": "Any simpler equation that assists the solution of a given more difficult one, usually obtained by taking transforms; especially an equation of the same form as a given A differential equation but with seal variables replacing the derivatives. For example, the auxiliary equation d 2 x dy 2 + b dx dy + cy = 0 is D2 + bD + c = 0."
+      "definition": "In differential equations, the algebraic characteristic equation obtained by replacing derivatives in a homogeneous linear differential equation with powers of a variable $r$: $$a \\frac{d^2y}{dx^2} + b \\frac{dy}{dx} + cy = 0 \\implies ar^2 + br + c = 0$$ The nature of the roots $r_1, r_2$ governs the complementary function: 1. Real distinct roots: $y = C_1 e^{r_1 x} + C_2 e^{r_2 x}$. 2. Repeated real root $r$: $y = (C_1 + C_2 x) e^{rx}$. 3. Complex conjugate roots $\\alpha \\pm i\\beta$: $y = e^{\\alpha x}(C_1 \\cos\\beta x + C_2 \\sin\\beta x)$."
     },
     {
       "word": "auxin",
@@ -15564,7 +15564,7 @@
       "synonyms": [
         "mean absolute deviation"
       ],
-      "definition": "It is the arithmetic mean of the absolute deviations. Its symbol is μ . Statistically, it is defined as μ = X i - X i = 1 N ∑ N = X1 - X + X2 - X + ... + X N - X N , where X1 , X2 , ..., X N are the sample points and X is the sample mean based on X1 , X2 , ..., X N ."
+      "definition": "In statistics, the mean absolute deviation (MAD) measuring dispersion in a dataset of $N$ observations: $$\\text{MAD} = \\frac{1}{N} \\sum_{i=1}^N |X_i - \\bar{X}|$$ where $X_i$ are individual data points and $\\bar{X} = \\frac{1}{N}\\sum X_i$ is the arithmetic mean."
     },
     {
       "word": "average rate of flow",
@@ -15677,7 +15677,7 @@
       "word": "avogadro's number",
       "raw_headword": "AVOGADRO'S NUMBER",
       "synonyms": [],
-      "definition": "The number of particles in a mole of any substance, which is equal to 6.022 × 10 23 mol^-1 ."
+      "definition": "The fundamental physical constant representing the number of constituent particles (atoms, molecules, or ions) in one mole of substance, denoted by $N_A$: $$N_A = 6.02214076 \\times 10^{23}\\text{ mol}^{-1}$$ It connects the macroscopic molar mass of a substance to its microscopic atomic mass: $M = m \\cdot N_A$."
     },
     {
       "word": "avogadro, amedeo",
@@ -15829,7 +15829,7 @@
       "word": "axiomatic probability",
       "raw_headword": "AXIOMATIC PROBABILITY",
       "synonyms": [],
-      "definition": "The study of probability in terms of probability measure. . Consider the event A, the probability that the event A will occur is given by P(A), which gives the precise measure of the chance that A will occur. The probability axioms are given by (i) for any event A, P(A)≥0, (ii) P(A) = 1, (iii) If A1 , A2 , A3 , . . ., is an infinite collection of disjoint events, then P( A1 ∪ A2 ∪ A3 ,...,) = A1 . i = 1 ∞ ∑."
+      "definition": "The mathematical foundation of probability theory formulated by Andrey Kolmogorov via three fundamental axioms on a sample space $\\Omega$: 1. Non-negativity: For every event $A$, $P(A) \\ge 0$. 2. Normalization: The probability of the sample space is unity, $P(\\Omega) = 1$. 3. Countable additivity: For any sequence of mutually exclusive (pairwise disjoint) events $A_1, A_2, A_3, \\dots$: $$P\\left(\\bigcup_{i=1}^\\infty A_i\\right) = \\sum_{i=1}^\\infty P(A_i)$$"
     },
     {
       "word": "axiomatic set theory",
@@ -15950,7 +15950,7 @@
         "orbital angular momentum quantum number",
         "second quantum number"
       ],
-      "definition": "One of the four quantum numbers of an atomic orbital that determines its orbital angular momentum and describes the shape of the orbital. In other words, it is one of the four quantum numbers that determines the magnitude of the angular momentum of the electron around the nucleus. It also describes the shape of the orbital. It is denoted as l and takes the values 0, 1, 2, ..., n^-1, where n is the principal quantum number. Azimuthal quantum numbers 0, 1, 2 and 3, correspond to the s , p , d and f orbitals, respectively."
+      "definition": "The secondary (orbital angular momentum) quantum number of an electron orbital, denoted by $l$. For a principal quantum number $n$, $l$ takes integer values: $$l \\in \\{0, 1, 2, \\dots, n^-1\\}$$ Values $l = 0, 1, 2, 3$ correspond to $s, p, d, f$ orbitals. The magnitude of the orbital angular momentum is quantized as: $$L = \\sqrt{l(l+1)}\\,\\hbar$$ where $\\hbar = \\frac{h}{2\\pi}$ is the reduced Planck constant."
     },
     {
       "word": "azine",
@@ -16778,7 +16778,7 @@
       "synonyms": [
         "balmer lines"
       ],
-      "definition": "Visible atomic spectrum of hydrogen, consisting of a unique series of energy emission levels (transition involving the second energy levels) which appears as lines at four wavelengths: 410 nm, 434 nm, 486 nm and 656 nm. The Balmer series is calculated using the Balmer formula, an empirical equation discovered by Johann Jakob Balmer (1825-1898), Swiss mathematician and physicist in 1885. The wavelength may be represented by 1 λ = R1 2 2 - 1 n 2 ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ where n = 3, 4, 5, etc. and R is the Rydberg constant, whose value is 1.097 x 10 7 m^-1 ."
+      "definition": "The spectral emission series of atomic hydrogen corresponding to electron transitions from higher energy levels ($n \\ge 3$) to the second principal energy level ($n = 2$), appearing in the visible spectrum at four distinct wavelengths: $410\\text{ nm}$ (violet), $434\\text{ nm}$ (blue), $486\\text{ nm}$ (cyan), and $656\\text{ nm}$ (red, $H_\\alpha$). The wavelengths are given by the empirical Balmer-Rydberg formula: $$\\frac{1}{\\lambda} = R_H \\left(\\frac{1}{2^2} - \\frac{1}{n^2}\\right) = R_H \\left(\\frac{1}{4} - \\frac{1}{n^2}\\right) \\quad (n = 3, 4, 5, \\dots)$$ where $R_H \\approx 1.097373 \\times 10^7\\text{ m}^{-1}$ is the Rydberg constant for hydrogen."
     },
     {
       "word": "balsam",
@@ -17465,7 +17465,7 @@
       "synonyms": [
         "base dissociation constant"
       ],
-      "definition": "The equilibrium constant K b for the base ionisation; or a reaction in which a weak base is in equilibrium with its conjugate acid in aqueous solution. For example, ammonia ionizes in water as follows: NH3( aq ) + H2 O ( l )  NH4 + ( aq ) + OH - ( aq ) The base-ionisation equilibrium constant is the mathematical product of the equilibrium concentrations of the products of this reaction divided by the equilibrium concentration of the original base. In other words, Kb is the product of the concentrations of the products over the concentration of the reactants (not including water). As the Kb value of a base increases, so does the strength of the base. For a strong base: K b > 1 and for a weak base: K b < 1. The value is sometimes expressed as the logarithm of its reciprocal, called pK b . Therefore pK b = -logK b . The smaller the value of pK b , the stronger the base. K b is a better measure of the strength of a base than pH because adding more water to the base solution will not change the value of the equilibrium constant K b , but it will change the H + ion concentration. Water is not included in the base-ionisation equilibrium expression because the [H2 O] has no effect on the equilibrium."
+      "definition": "The equilibrium constant $K_b$ describing the ionization of a weak base in aqueous solution. For a generic base $\\text{B}$ in water: $$\\text{B}(\\text{aq}) + \\text{H}_2\\text{O}(\\text{l}) \\rightleftharpoons \\text{BH}^+(\\text{aq}) + \\text{OH}^-(\\text{aq})$$ The base ionization constant is defined as: $$K_b = \\frac{[\\text{BH}^+][\\text{OH}^-]}{[\\text{B}]}$$ Water is omitted because its concentration is essentially constant. The base strength is expressed logarithmically as: $$\\text{p}K_b = -\\log_{10} K_b$$ where a smaller $\\text{p}K_b$ denotes a stronger base. For any conjugate acid-base pair, $K_a \\times K_b = K_w = 10^{-14}$ at $25^\\circ\\text{C}$."
     },
     {
       "word": "base metal",
@@ -17976,7 +17976,7 @@
         "bayes' rule",
         "bayes' law"
       ],
-      "definition": "The equation used in probability which allows the user to calculate the probability of an event occurring provided that another event whose probability is already known has occurred. Mathematically, Bayes' theorem gives the relationship between the probabilities of A and B , P ( A ) and P ( B ) and the conditional probabilities of A given B and B given A , P ( A │ B ) and P ( B │ A ), respectively. In its most common form, it is expressed as P ( A │ B )= , the meaning of this statement depends on the interpretation of probability ascribed to the terms. Bayes' theorem was named after the Reverend Thomas Bayes (1702-61), who studied how to compute a distribution for the probability parameter of a binomial distribution. It has applications in fields such as science, engineering, medicine and law."
+      "definition": "A foundational probability theorem named after Reverend Thomas Bayes (1702–1761) that determines the posterior probability of an event based on prior knowledge of conditions related to the event: $$P(A \\mid B) = \\frac{P(B \\mid A) \\, P(A)}{P(B)}$$ In the partitioned form with mutually exclusive hypotheses $A_1, A_2, \\dots, A_n$: $$P(A_k \\mid B) = \\frac{P(B \\mid A_k) \\, P(A_k)}{\\sum_{i=1}^n P(B \\mid A_i) \\, P(A_i)}$$ where $P(A)$ is the prior probability, $P(B \\mid A)$ is the likelihood, and $P(A \\mid B)$ is the posterior probability."
     },
     {
       "word": "bayesian",
@@ -18156,7 +18156,7 @@
       "word": "beat frequency",
       "raw_headword": "BEAT FREQUENCY",
       "synonyms": [],
-      "definition": "The absolute value of the difference in frequency of two waves. It is the fluctuation produced in musical acoustic when two notes of nearly equal pitch or frequency are heard together. Beats result from the interference between the sound waves of the notes. The beat frequency equals the difference in frequency of the notes. Given oscillations at two frequencies, f 1 and f 2 , their beat frequency is f beat = | f 1 - f 2 |, where f 1 > f 2 ."
+      "definition": "The frequency of the periodic fluctuation in acoustic intensity (amplitude modulation) heard when two sound waves of slightly different frequencies $f_1$ and $f_2$ interfere with each other: $$f_{\\text{beat}} = |f_1 - f_2|$$ The combined wave oscillates with carrier frequency $f_{\\text{avg}} = \\frac{f_1 + f_2}{2}$ while its envelope beats at frequency $f_{\\text{beat}}$."
     },
     {
       "word": "beaters",
@@ -18297,7 +18297,7 @@
         "beer-lambert law",
         "beer-lambert-bouguer law"
       ],
-      "definition": "It states that the fraction of incident light absorbed by a solution at a given wavelength is related to the thickness of the absorbing layer and the concentration of the absorbing substance. It is commonly written in the form A = εcl , where A is the absorbance, c is the concentration in moles per litre, l is the path length in centimetres and ε is a constant of proportionality known as the molar absorptivity. The law is accurate only for dilute solutions; deviations from the law occur in concentrated solutions because of interactions between molecules of the solute, the substance dissolved in the solvent."
+      "definition": "Also known as the Beer-Lambert law, stating that the absorbance $A$ of monochromatic light passing through an absorbing solution is directly proportional to the path length $l$ and the molar concentration $c$: $$A = \\varepsilon c l$$ where $A = -\\log_{10}\\left(\\frac{I}{I_0}\\right) = \\log_{10}\\left(\\frac{I_0}{I}\\right)$, $\\varepsilon$ is the molar absorptivity (in $\\text{L}\\cdot\\text{mol}^{-1}\\text{cm}^{-1}$), $c$ is concentration in $\\text{mol/L}$, and $l$ is the cuvette path length in $\\text{cm}$."
     },
     {
       "word": "beeswax",
@@ -18389,7 +18389,7 @@
         "gaussian distribution",
         "normal distribution"
       ],
-      "definition": "A probability distribution, f ( x ), of a random variable, x that is assumed by many statistical methods. This is given by f ( x )= σ 2 π exp -­‐ 1 ( x -­‐ µ ) 2 σ 2 ⎡ ⎣ ⎢⎢⎢ ⎤ ⎦ ⎥⎥⎥ , where μ is the mean and σ 2 is the variance. All normal distributions are symmetric and have bell- shaped density curves with a single peak. Probably less than others Same as others Probably more than others Definitely more than others Definitely less than others 2% SD = Standard Deviation A graph of the Bell curve, the mean is zero 2% 14% 14% 34% 34% + 1 SD + 2 SD^-1 SD + 2 SD Mean Score Bell Jar."
+      "definition": "The symmetric, bell-shaped probability density function of the Gaussian normal distribution, completely characterized by its mean $\\mu$ and standard deviation $\\sigma$: $$f(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} \\exp\\left(-\\frac{(x - \\mu)^2}{2\\sigma^2}\\right)$$ By the Empirical Rule: approximately 68.27% of values fall within $\\mu \\pm 1\\sigma$, 95.45% within $\\mu \\pm 2\\sigma$, and 99.73% within $\\mu \\pm 3\\sigma$."
     },
     {
       "word": "bell jar",
@@ -18806,7 +18806,7 @@
       "word": "bernoulli equation",
       "raw_headword": "BERNOULLI EQUATION",
       "synonyms": [],
-      "definition": "A differential equation of the form dy dx + φ y = ψ y n , where ϕ and ψ are functions of x alone. It may be written in linear form by the change of variable z = y 1- n and is closely related to the Jacobi equation."
+      "definition": "In differential calculus, a non-linear first-order ordinary differential equation of the form: $$\\frac{dy}{dx} + P(x)y = Q(x)y^n \\quad (n \\neq 0, 1)$$ Solved by substituting the transformation $v = y^{1-n}$, which transforms the non-linear equation into a standard linear first-order differential equation: $$\\frac{dv}{dx} + (1 - n)P(x)v = (1 - n)Q(x)$$"
     },
     {
       "word": "bernoulli family",
@@ -18818,13 +18818,13 @@
       "word": "bernoulli number",
       "raw_headword": "BERNOULLI NUMBER",
       "synonyms": [],
-      "definition": "The sequence { B n } of coefficients of the power series, defined by z e z^-1 + z 2 = B2 m m = 0 ∞ ∑ z 2 m (2 m )! These numbers allow evaluation of even values of the zeta function."
+      "definition": "A sequence of rational numbers $B_m$ arising in number theory, defined via the generating function: $$\\frac{t}{e^t^-1} = \\sum_{m=0}^{\\infty} B_m \\frac{t^m}{m!}$$ The first several values are $B_0 = 1$, $B_1 = -\\frac{1}{2}$, $B_2 = \\frac{1}{6}$, $B_4 = -\\frac{1}{30}$, $B_6 = \\frac{1}{42}$, with $B_m = 0$ for all odd $m > 1$. Bernoulli numbers yield exact values for the Riemann zeta function at positive even integers: $$\\zeta(2k) = \\frac{(-1)^{k^-1} (2\\pi)^{2k} B_{2k}}{2(2k)!}$$"
     },
     {
       "word": "bernoulli trial",
       "raw_headword": "BERNOULLI TRIAL",
       "synonyms": [],
-      "definition": "An experiment in which there are two possible independent outcomes, named after Swiss mathematician and physicist, Jacob Bernoulli (1654-1705). It usually denotes success and failure, with the properties that the probability of occurrence of each outcome is the same in each trial and the occurrence of one excludes the occurrence of the other in any given trial. For example, in tossing a coin, the outcome has only two possibilities: either the coin lands head or tail. Let p be the probability of success in a Bernoulli trial and q , the probability of a failure, then the probability of failure, q is given by: q = 1 - p . Random variables describing Bernoulli trials are often encoded using the convention that 1 = \"success\", 0 = \"failure\". Therefore, the probability distribution of such a random variable (termed a Bernoulli distribution) is given by P ( x = r ) = nCrPrqn- r ."
+      "definition": "A random experiment with exactly two mutually exclusive outcomes, conventionally termed 'success' (with probability $p$) and 'failure' (with probability $q = 1 - p$). In $n$ independent Bernoulli trials, the probability of obtaining exactly $k$ successes is given by the binomial distribution: $$P(X = k) = \\binom{n}{k} p^k (1 - p)^{n-k} \\quad (k = 0, 1, \\dots, n)$$"
     },
     {
       "word": "bernoulli's principle",
@@ -18838,7 +18838,7 @@
       "synonyms": [
         "bernoulli's law"
       ],
-      "definition": "A law which states that at any point in a pipe through which a fluid is flowing the sum of the pressure energy, the kinetic energy and the potential energy of a given mass of the fluid is constant. In a horizontal flow the sum of kinetic energy and pressure energy is constant or + = K , where P is the static pressure, ρ is the density, V is the air speed and K is a constant. From this law, it follows that where there is a velocity increase in a fluid flow, there must be a corresponding pressure decrease."
+      "definition": "A fundamental principle in fluid dynamics stating that for an incompressible, inviscid fluid undergoing steady streamline flow, the sum of pressure energy, kinetic energy per unit volume, and potential energy per unit volume is constant along a streamline: $$P + \\frac{1}{2}\\rho v^2 + \\rho gh = \\text{constant}$$ where $P$ is static fluid pressure, $\\rho$ is fluid density, $v$ is flow speed, $g$ is gravitational acceleration, and $h$ is elevation. It implies that an increase in fluid velocity occurs simultaneously with a decrease in static pressure (the Venturi effect)."
     },
     {
       "word": "bernoulli, daniel",
@@ -18866,7 +18866,7 @@
       "word": "bernstein polynomials",
       "raw_headword": "BERNSTEIN POLYNOMIALS",
       "synonyms": [],
-      "definition": "The sequence of polynomials defined for a given continuous function f on the interval [0,1] by the formula B n ( f )( x ) = B n ( x ) = f k = 0 n ∑ k n ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ n k ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ x k 1 - x ( ) n - k . The polynomials B n ( f ) converge in uniform norm to f ; yielding a proof of the Weierstrass approximation theorem."
+      "definition": "A sequence of polynomials approximating a continuous function $f(x)$ on the closed interval $[0, 1]$, defined by Sergei Bernstein: $$B_n(f)(x) = \\sum_{k=0}^{n} f\\left(\\frac{k}{n}\\right) \\binom{n}{k} x^k (1 - x)^{n-k}$$ As $n \\to \\infty$, $B_n(f)(x)$ converges uniformly to $f(x)$ on $[0, 1]$, providing a constructive proof of the Stone-Weierstrass Approximation Theorem."
     },
     {
       "word": "berry",
@@ -18964,13 +18964,13 @@
       "word": "bessel function",
       "raw_headword": "BESSEL FUNCTION",
       "synonyms": [],
-      "definition": "A special function that results from solving the wave equation in cylindrical coordinates. It is used in branches of mathematical physics. The Bessel function is given by J n (x) = ."
+      "definition": "Canonical solutions $J_\\alpha(x)$ and $Y_\\alpha(x)$ to Bessel's second-order differential equation: $$x^2 \\frac{d^2y}{dx^2} + x \\frac{dy}{dx} + (x^2 - \\alpha^2)y = 0$$ The Bessel function of the first kind of integer order $n$ is defined by the power series: $$J_n(x) = \\sum_{m=0}^{\\infty} \\frac{(-1)^m}{m! \\, (m + n)!} \\left(\\frac{x}{2}\\right)^{2m + n}$$ Bessel functions describe wave propagation in cylindrical geometries, circular drum vibrations, and optical Airy diffraction patterns."
     },
     {
       "word": "bessel inequality",
       "raw_headword": "BESSEL INEQUALITY",
       "synonyms": [],
-      "definition": "The Fourier series inequality stating that the sum of the squares of the moduli of the Fourier coefficients of a function f on the interval [0, 2 π ) is dominated by the integral of the squared function and so satisfies c n n = 0 ∞ ∑ ≤ f ( x ) 2 dx. 2 π ∫."
+      "definition": "In inner product spaces and Fourier analysis, an inequality stating that for an orthonormal sequence $(e_n)$ in a Hilbert space $H$ and any vector $x \\in H$: $$\\sum_{n=1}^{\\infty} |\\langle x, e_n \\rangle|^2 \\le \\|x\\|^2$$ For Fourier series on $[0, 2\\pi]$, this implies: $$\\sum_{n=-\\infty}^{\\infty} |c_n|^2 \\le \\frac{1}{2\\pi} \\int_0^{2\\pi} |f(x)|^2 dx$$ When the orthonormal set is complete, the inequality becomes an equality (Parseval's identity)."
     },
     {
       "word": "bessemer process",
@@ -19009,13 +19009,13 @@
       "word": "beta decay",
       "raw_headword": "BETA DECAY",
       "synonyms": [],
-      "definition": "The spontaneous emission of beta particle from a nucleus. Beta decay is accompanied by neutrino emission and a release of energy. It is any of three processes of radioactive decay: electron emission, positron emission and electron capture in which a nucleus emits an electron or beta particle. With this sort of decay the electrons or beta particles are known as beta radiation. Beta decay is a slower process than gamma or alpha decay, but capable of penetrating hundreds of times farther than alpha particles. There are two types of beta decay where the beta particle is either an electron, called beta-minus (β - ) decay or a positron called beta-plus (β + ) decay. In beta-plus decay, a proton in an atomic nucleus decays into a neutron, a positron and a neutrino. The positron and neutrino are emitted from the nucleus, while the neutron remains by the reaction: where X is the parent atom, Y is the daughter atom, Z is the atomic mass of X , A is the atomic number of X . The electron and antineutrino are emitted from the nucleus, while the proton remains. The atomic number of the atom is thereby increased by 1. An example of beta-minus decay is the decay of Carbon^-14 into Nitrogen^-14, used in carbon dating."
+      "definition": "A radioactive decay process mediated by the weak nuclear force, in which an unstable nucleus transforms by emitting a beta particle. 1. Beta-minus ($\\beta^-$) decay: A neutron decays into a proton, emitting an electron and an electron antineutrino: $${}_Z^A\\text{X} \\longrightarrow {}_{Z+1}^A\\text{Y} + e^- + \\bar{\\nu}_e \\quad (n \\to p + e^- + \\bar{\\nu}_e)$$ 2. Beta-plus ($\\beta^+$, positron emission) decay: A proton transforms into a neutron, emitting a positron and an electron neutrino: $${}_Z^A\\text{X} \\longrightarrow {}_{Z^-1}^A\\text{Y} + e^+ + \\nu_e \\quad (p \\to n + e^+ + \\nu_e)$$ The mass number $A$ remains constant while atomic number $Z$ changes by $\\pm 1$."
     },
     {
       "word": "beta distribution",
       "raw_headword": "BETA DISTRIBUTION",
       "synonyms": [],
-      "definition": "A distribution often used as a prior distribution for a proportion. The probability density function, for a random variable X having a beta distribution is f ( x ) = B ( α , β ) x α - 1 (1 - x ) β - 1 ,0 < x < 1, where α and β are positive parameters and B is the beta function. Beta distribution has a variety of shapes on the values of α and β."
+      "definition": "A continuous probability distribution defined on the interval $[0, 1]$, parameterized by shape parameters $\\alpha > 0$ and $\\beta > 0$: $$f(x; \\alpha, \\beta) = \\frac{1}{\\text{B}(\\alpha, \\beta)} x^{\\alpha^-1} (1 - x)^{\\beta^-1} \\quad (0 \\le x \\le 1)$$ where $\\text{B}(\\alpha, \\beta)$ is the beta function. Widely used as the conjugate prior distribution for Bernoulli and binomial proportions in Bayesian statistics."
     },
     {
       "word": "beta diversity",
@@ -19030,7 +19030,7 @@
       "word": "beta function",
       "raw_headword": "BETA FUNCTION",
       "synonyms": [],
-      "definition": "The function B( p, q ) = x p^-1 ∫ (1 - x ) q^-1 dx that has the relation to the gamma function that B( p, q ) = Γ ( p ) Γ ( q ) Γ ( p + q ) ."
+      "definition": "A special function in calculus, also called the Euler integral of the first kind, defined for $\\text{Re}(p) > 0, \\text{Re}(q) > 0$ by: $$\\text{B}(p, q) = \\int_0^1 x^{p^-1} (1 - x)^{q^-1} \\, dx$$ It is fundamentally related to the Gamma function $\\Gamma(z)$ by: $$\\text{B}(p, q) = \\frac{\\Gamma(p) \\, \\Gamma(q)}{\\Gamma(p + q)}$$"
     },
     {
       "word": "beta haemolysis",
@@ -19115,7 +19115,7 @@
       "synonyms": [
         "bezout's identity"
       ],
-      "definition": "The generalisation, to polynomials over a field, of a result known to Euclid for integers, that if d is the greatest common divisor of f and g , it can be written as d = af + bg for two other polynomials a and b ."
+      "definition": "A fundamental theorem in elementary number theory stating that for any non-zero integers $a$ and $b$, their greatest common divisor $d = \\gcd(a, b)$ can be expressed as a linear combination of $a$ and $b$ with integer coefficients $x, y \\in \\mathbb{Z}$: $$ax + by = \\gcd(a, b)$$ The integers $x$ and $y$ (Bézout coefficients) can be computed using the Extended Euclidean Algorithm."
     },
     {
       "word": "bezout's theorem",
@@ -19302,7 +19302,7 @@
       "word": "bieberbach's conjecture",
       "raw_headword": "BIEBERBACH'S CONJECTURE",
       "synonyms": [],
-      "definition": "The conjecture, proved by Louis de Branges in 1985 that if S is the class of normalised injective holomorphic function so that S consists of one-to-one holomorphic functions from the unit disk with power series of the form z + a 2 z 2 + ... + anzn + ... that for z ≤ 1, and for every function in S, the coefficients satisfy a n ≤ n for all n ."
+      "definition": "A celebrated conjecture in complex analysis proposed by Ludwig Bieberbach (1916) and proved by Louis de Branges (1984), stating that if $f(z) = z + \\sum_{n=2}^\\infty a_n z^n$ is an univalent (injective holomorphic) function on the open unit disk $|z| < 1$, then for every $n \\ge 2$: $$|a_n| \\le n$$ with equality holding if and only if $f$ is a rotation of the Koebe function $f(z) = \\frac{z}{(1 - e^{i\\theta} z)^2}$."
     },
     {
       "word": "biennial plant",
@@ -19786,13 +19786,13 @@
       "word": "binomial coefficients",
       "raw_headword": "BINOMIAL COEFFICIENTS",
       "synonyms": [],
-      "definition": "Coefficients or positive integers of the terms that arise in any binomial expansion that equal the number of combinations of r items that can be selected from a set of n items. It is usually written n r ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ , n C r , or C( n , r ) and read as \" n combination r .\" For the binomial expression, ( 1 + x ) 2 =1 + 2 x + x 2 , 2 is the coefficient of x and 1 is the coefficient of x 2 . The general coefficient of the binomial expansion . Binomial coefficients also represent an entry in Pascal's triangle. Arranging binomial coefficients into rows for successive values of n and in which r ranges from 0 to n , gives Pascal's triangle."
+      "definition": "The positive integer coefficients appearing in the algebraic expansion of powers of a binomial $(a + b)^n$: $$\\binom{n}{r} = {}^n\\text{C}_r = \\frac{n!}{r!(n - r)!}$$ representing the number of ways to choose an unordered subset of $r$ elements from a fixed set of $n$ elements. Satisfies Pascal's identity: $\\binom{n}{r} = \\binom{n^-1}{r^-1} + \\binom{n^-1}{r}$."
     },
     {
       "word": "binomial distribution",
       "raw_headword": "BINOMIAL DISTRIBUTION",
       "synonyms": [],
-      "definition": "Statistical distribution generated by a binomial expansion and the probability of an event occurring. For the probability, p of an event happening in a single attempt, the probability q that it will not happen is 1 - p . If there are n attempts the probability of an event happening b times is given as n C b . p b . q n - b with the distribution as p n + n C1 . p n^-1 q + n C2 . p n^-2 q 2 +...."
+      "definition": "The discrete probability distribution of the number of successes $k$ in $n$ independent Bernoulli trials with constant success probability $p$: $$P(X = k) = \\binom{n}{k} p^k (1 - p)^{n-k} \\quad (k = 0, 1, 2, \\dots, n)$$ Its mean is $\\mu = np$ and its variance is $\\sigma^2 = np(1 - p) = npq$."
     },
     {
       "word": "binomial expansion",
@@ -19822,7 +19822,7 @@
       "word": "binomial theorem",
       "raw_headword": "BINOMIAL THEOREM",
       "synonyms": [],
-      "definition": "A rule for the expansion of a binomial expression ( x + y ), consisting of two variables raised to any positive integer power. Examples of the powers of binomial include the following: ( x + y ) 0 = 1, ( x + y ) 1 = x + y , ( x + y ) 2 = x 2 + 2 xy + y 2 , ( x + y ) 3 = x 3 + 3 x 2 y + 3 xy 2 + y 3 , ( x + y ) 4 = x 4 + 4 x 3 y + 6 x 2 y 2 + 4 xy 3 + y 4 , Another form of binomial theorem is given as: B ( a + b ) n = ncran - rb r n r ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ . r = 0 n ∑ Binomialtheoremisalsogivenby : ( a + b ) n = a n + $n_c$ 1 a n^-1 b + $n_c$ 2 a n^-2 b 2 + ... + b n . This formula holds for only positive integer ( n ∈ z + ) and (1 + x ) n = 1 + nx + n ( n^-1) 2! x 2 + n ( n^-1)( n^-2) 3! x 3 + ... This formula also holds for all real numbers ( n ∈ℜ ). The series is valid for^-1 < × < 1. Binomial theorem can also be given by the following: ( a + b ) n = a n + n C1 a n^-1 b + n C2 a n^-2 b 2 + ... b n . This formula holds for only positive integer n ( ∊ z +) and (1 + x ) n = 1 + nx + n ( n^-1) 2! x 2 + n ( n^-1) n ( n^-2) 3! x 3 + ... The last formula holds for positive and negative integers of n , i.e., ( n ∊ z ). Before the formula is used, the expression must be stated in the form ( n + x ) n ."
+      "definition": "A fundamental algebraic theorem describing the algebraic expansion of powers of a binomial expression $(a + b)^n$: $$(a + b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k = a^n + \\binom{n}{1} a^{n^-1}b + \\binom{n}{2} a^{n^-2}b^2 + \\dots + b^n$$ For any real power $\\alpha \\in \\mathbb{R}$ where $|x| < 1$, Newton's generalized binomial series states: $$(1 + x)^\\alpha = 1 + \\alpha x + \\frac{\\alpha(\\alpha^-1)}{2!} x^2 + \\frac{\\alpha(\\alpha^-1)(\\alpha^-2)}{3!} x^3 + \\dots = \\sum_{k=0}^{\\infty} \\binom{\\alpha}{k} x^k$$"
     },
     {
       "word": "binormal",
@@ -20566,7 +20566,7 @@
       "word": "biot-savart law",
       "raw_headword": "BIOT-SAVART LAW",
       "synonyms": [],
-      "definition": "A principle in electromagnetism that states that the magnetic flux density, B of a magnetic field produced by a current, I in a long straight conductor is directly proportional to I and inversely proportional to the perpendicular distance, r from the conductor. Its vector equation can be represented as d ! B = µ o Id ! L x1 ! r 4 π r 2 ."
+      "definition": "An inverse-square equation in classical electromagnetism relating magnetic field $\\vec{B}$ to steady electric current $I$. The differential magnetic field $d\\vec{B}$ contributed by an infinitesimal current-carrying element $d\\vec{l}$ at displacement vector $\\vec{r}$ is: $$d\\vec{B} = \\frac{\\mu_0 I}{4\\pi} \\frac{d\\vec{l} \\times \\hat{r}}{r^2} = \\frac{\\mu_0 I}{4\\pi} \\frac{d\\vec{l} \\times \\vec{r}}{r^3}$$ For an infinitely long straight wire carrying current $I$, integration yields the circular magnetic field at radial distance $r$: $$B = \\frac{\\mu_0 I}{2\\pi r}$$"
     },
     {
       "word": "biota",
@@ -21441,7 +21441,7 @@
       "word": "bloch's theorem",
       "raw_headword": "BLOCH'S THEOREM",
       "synonyms": [],
-      "definition": "A theorem relating to the quantum mechanics of crystals that specifies the form Ψ (r) = exp(ik . r)U(r) of the wave function and characterises electron energy levels in a periodic crystal, where K is the wave vector, which can assume any value, r is a position vector and U(r) is a periodic function that satisfies U(r+R)=U r for all vectors R of the Bravais lattice of the crystal. It is interpreted to B mean that the wave function for an electron in a periodic potential is a plane wave modulated by a periodic function."
+      "definition": "A quantum mechanical theorem stating that energy eigenstates for an electron in a spatially periodic crystal potential $V(\\vec{r} + \\vec{R}) = V(\\vec{r})$ can be written in the form of plane waves modulated by a periodic function (Bloch wave function): $$\\psi_{\\vec{k}}(\\vec{r}) = e^{i\\vec{k} \\cdot \\vec{r}} u_{\\vec{k}}(\\vec{r})$$ where $\\vec{k}$ is the crystal wave vector and $u_{\\vec{k}}(\\vec{r})$ satisfies $u_{\\vec{k}}(\\vec{r} + \\vec{R}) = u_{\\vec{k}}(\\vec{r})$ for all Bravais lattice vectors $\\vec{R}$."
     },
     {
       "word": "block",
@@ -21907,19 +21907,19 @@
       "synonyms": [
         "bohr atomic model"
       ],
-      "definition": "A model of the atom conceived by Neil Bohr (1885-1962) in 1913 based on his observations of the atomic emissions spectrum of the hydrogen atom. The model assumes the following: (i) that the electrons revolve in orbits of specific radius around the nucleus without emitting or absorbing radiation; (ii) that within each orbit, an electron has a fixed amount of energy; and (iii) that emission or absorption of energy (photons) occurs between transitions. The energy absorbed or emitted can be calculated using the relation E2 - E1 = hf = h c λ , where E is the energy level, h is the Planck's constant (6.63 x 10 -34 Js, f is the frequency of the emitted photon, c is the speed of light (3.0 x 10 8 m/s) and λ is the wavelength."
+      "definition": "The atomic model of hydrogen proposed by Niels Bohr (1913), postulating that electrons orbit the nucleus in discrete, stable, non-radiating circular orbits. The orbital energy levels are quantized according to: $$E_n = -\\frac{13.6\\text{ eV}}{n^2} \\quad (n = 1, 2, 3, \\dots)$$ A transition between levels $E_2$ and $E_1$ emits or absorbs a photon of energy: $$\\Delta E = E_2 - E_1 = hf = \\frac{hc}{\\lambda}$$ where $h = 6.626 \\times 10^{-34}\\text{ J}\\cdot\\text{s}$ and $c = 3.0 \\times 10^8\\text{ m/s}$."
     },
     {
       "word": "bohr radius",
       "raw_headword": "BOHR RADIUS",
       "synonyms": [],
-      "definition": "A physical constant, approximately equal to the most probable distance between the proton and electron in a hydrogen atom in its ground state. Its symbol is a 0 . Its value in metres is a 0 ≈ 5.29×10 -11 m, its value in picometres: ≈ 52.9 pm and value in angstroms: ≈ 0.53 Å."
+      "definition": "A physical constant representing the most probable radius of the ground-state electron orbit in the Bohr model of the hydrogen atom, denoted by $a_0$: $$a_0 = \\frac{4\\pi \\varepsilon_0 \\hbar^2}{m_e e^2} \\approx 5.29177 \\times 10^{-11}\\text{ m} = 0.529\\text{ \\AA}$$ where $\\varepsilon_0$ is electric permittivity, $\\hbar = \\frac{h}{2\\pi}$, $m_e$ is electron rest mass, and $e$ is elementary charge."
     },
     {
       "word": "bohr's theory",
       "raw_headword": "BOHR'S THEORY",
       "synonyms": [],
-      "definition": "A theory published in 1913 by Neils Bohr (1885-1962), a Danish physicist, which explains the line spectrum of hydrogen. It assumed that a single electron of mass m travelled in a circular orbit of radius r , at a velocity v , around a positively charged nucleus. The angular momentum of the electron would then be mvr . Bohr proposed that electrons could only occupy orbits in which this angular momentum had certain fixed values, h /2 π , 2 h /2 π , 3 h /2 π , ..., nh /2 π , where h is the Planck constant. This means that the angular momentum is quantized, i.e. it can only have certain values, each of which is a multiple of n . Each permitted value of n is associated with an orbit of different radius and Bohr assumed that when the atom emitted or absorbed radiation of frequency ν , the electron jumped from one orbit to another, with the energy emitted or absorbed by each jump being equal to hν . This theory gave good results in predicting the lines observed in the spectrum of hydrogen and simple ions such as He + , Li 2+ , etc. The idea of quantized values of angular momentum was later explained by the wave nature of the electron. Each orbit has a whole number of wavelengths around it; i.e. nλ = 2 πr , where λ is the wavelength and n a whole number. The wavelength of a particle is given by h / mv , so nh / mv = 2 πr , which leads to mvr = nh /2 π . Modern atomic theory does not allow subatomic particles to be treated in the same way as large objects and Bohr's reasoning is somewhat discredited. However, the idea of quantized angular momentum has been retained."
+      "definition": "Bohr's quantum hypothesis that the orbital angular momentum $L$ of an electron moving in a circle of radius $r$ with velocity $v$ is quantized in integer multiples of $\\hbar = \\frac{h}{2\\pi}$: $$L = mvr = \\frac{nh}{2\\pi} = n\\hbar \\quad (n = 1, 2, 3, \\dots)$$ Equating the centripetal force to the electrostatic Coulomb attraction: $$\\frac{m v^2}{r} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{e^2}{r^2}$$ yields quantized radii $r_n = n^2 a_0$."
     },
     {
       "word": "bohr, neils henrik david",
@@ -22049,7 +22049,7 @@
       "word": "boltzmann constant",
       "raw_headword": "BOLTZMANN CONSTANT",
       "synonyms": [],
-      "definition": "The physical constant relating energy at the particle level with temperature observed at the bulk level, with the symbol k or k B . It is given by the universal gas constant divided by the Avogadro's constant, k = R/N A . It may be thought of, therefore, as the gas constant per molecule. It was named after Ludwig Boltzmann (1844-1906), an Austrian physicist."
+      "definition": "The fundamental physical constant relating absolute temperature $T$ to microscopic kinetic energy per degree of freedom, denoted by $k$ or $k_B$: $$k_B = \\frac{R}{N_A} = 1.380649 \\times 10^{-23}\\text{ J/K}$$ where $R = 8.314\\text{ J}\\cdot\\text{mol}^{-1}\\text{K}^{-1}$ is the molar gas constant and $N_A = 6.022 \\times 10^{23}\\text{ mol}^{-1}$ is Avogadro's number."
     },
     {
       "word": "boltzmann equation",
@@ -22063,7 +22063,7 @@
       "word": "boltzmann formula",
       "raw_headword": "BOLTZMANN FORMULA",
       "synonyms": [],
-      "definition": "An equation concerning the entropy S of a system derived from statistical mechanics. The formula is S = k ln W , where k is the Boltzmann constant and W is the number of distinguishable ways of describing the system. It expresses in quantitative terms the concept that entropy is a measure of the disorder of a system."
+      "definition": "A foundational formula in statistical thermodynamics connecting macroscopic thermodynamic entropy $S$ to microscopic statistical multiplicity $W$: $$S = k_B \\ln W$$ where $k_B$ is the Boltzmann constant and $W$ is the thermodynamic probability (the number of microscopic microstates corresponding to the macrostate)."
     },
     {
       "word": "boltzmann, ludwig eduard",
@@ -22978,7 +22978,7 @@
       "word": "boyle's law",
       "raw_headword": "BOYLE'S LAW",
       "synonyms": [],
-      "definition": "One of the three ideal gas la Graphical illustration of Boyle's law P I/V P V ws which states that the pressure of a fixed mass of gas at a constant temperature is inversely proportional to its volume. Mathematically, it is given by: P α 1 V or PV = k, where k is a constant, it follows that P1 V1 = P2 V2 . It was formulated in 1662 by Robert Boyle (1627-1691), an English chemist and physicist."
+      "definition": "An experimental gas law stating that for a fixed mass of an ideal gas kept at constant temperature, the absolute pressure $P$ is inversely proportional to its volume $V$: $$P \\propto \\frac{1}{V} \\iff PV = \\text{constant} \\iff P_1 V_1 = P_2 V_2$$ A plot of $P$ versus $V$ at constant temperature produces a set of rectangular hyperbolas known as isotherms."
     },
     {
       "word": "boyle, robert",
@@ -23119,7 +23119,7 @@
       "synonyms": [
         "bragg relation"
       ],
-      "definition": "A law first proposed by William Lawrence Bragg and his father, William Henry Bragg in 1913, which states that when a beam of x-rays with wavelength λ, strike a crystal surface in which the layer of atoms or ions are separated by a distance d, the maximum intensity of the reflected ray occurs when sinθ = nλ⁄2 d , where θ, known as the Bragg angle is the angle between an incident x-ray beam and a set of crystal planes for which the secondary radiation displays maximum intensity as a result of constructive interference. The Bragg law is useful for measuring wavelengths and for determining the lattice spacings of crystals."
+      "definition": "A foundational law in X-ray crystallography formulated by W. H. Bragg and W. L. Bragg (1913), describing the condition for constructive interference of X-rays reflected from parallel lattice planes of a crystal spaced distance $d$ apart: $$2d \\sin\\theta = n\\lambda$$ where $\\theta$ is the glancing (Bragg) angle between the incident beam and the crystal plane, $\\lambda$ is X-ray wavelength, and $n \\in \\{1, 2, 3, \\dots\\}$ is the order of reflection."
     },
     {
       "word": "braille display",
@@ -23486,7 +23486,7 @@
       "word": "brewster's law",
       "raw_headword": "BREWSTER'S LAW",
       "synonyms": [],
-      "definition": "A law named after a Scottish physicist, Sir David Brewster, who first proposed it in 1811. It states that the extent of polarisation of light reflected from a transparent surface is at maximum when the reflected ray is at right angle to the refracted ray. It relates the refractive index n of a substance to the Brewster angle (ϕ) by: n = tan φ . It defines how an unpolarised light can be plane polarised, using a rectangular block. Air Glass Incident light (Unpolarized light) Normal Reflected light (Polarized light) 57 ° 57 ° Refracted wave Brewster's Law."
+      "definition": "An optical law stating that light reflected from a transparent dielectric medium is completely plane-polarized when the reflected ray is perpendicular to the refracted ray ($\\theta_r + \\theta_B = 90^\\circ$). The Brewster polarizing angle $\\theta_B$ is given by: $$\\tan\\theta_B = \\frac{n_2}{n_1} = n$$ where $n_1$ and $n_2$ are the refractive indices of the surrounding medium and the reflecting substance."
     },
     {
       "word": "brianchon's theorem",
@@ -24278,7 +24278,7 @@
       "word": "bulk modulus",
       "raw_headword": "BULK MODULUS",
       "synonyms": [],
-      "definition": "A numerical constant that describes the elastic properties of a solid or fluid under pressure from all sides; or a numerical constant that measures a substance's resistance to uniform compression, symbol K . It is defined as the pressure increase needed to cause a given relative decrease in volume or the ratio of the compressive force per unit surface area to the change in volume per unit volume of the solid or fluid. It can be expressed as K =- V ∂ P ∂ V ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , where P is pressure, V is volume and ∂ P /∂ V denotes the partial derivative of pressure with respect to volume. The inverse of the bulk modulus gives a substance's compressibility. Matter that is difficult to compress has a large bulk modulus. Its base unit is the pascal."
+      "definition": "An elastic modulus measuring a substance's resistance to uniform volumetric compression under hydrostatic pressure, denoted by $K$: $$K = -V \\frac{dP}{dV} = -V \\left(\\frac{\\partial P}{\\partial V}\\right)_T$$ where $P$ is pressure, $V$ is volume, and the negative sign ensures $K > 0$ since volume decreases as pressure increases. Its SI unit is the pascal ($\\text{Pa}$ or $\\text{N/m}^2$). The reciprocal of bulk modulus is compressibility: $\\beta = \\frac{1}{K}$."
     },
     {
       "word": "bulk power system",
@@ -56207,7 +56207,7 @@
       "word": "einstein's equation",
       "raw_headword": "EINSTEIN'S EQUATION",
       "synonyms": [],
-      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
+      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
     },
     {
       "word": "einstein, albert",
@@ -56215,7 +56215,7 @@
       "synonyms": [
         "1879-1955"
       ],
-      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
+      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
     },
     {
       "word": "einstein-smoluchowski equation",
@@ -60577,7 +60577,7 @@
       "word": "equations of motion",
       "raw_headword": "EQUATIONS OF MOTION",
       "synonyms": [],
-      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
+      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
     },
     {
       "word": "equator",
@@ -72165,7 +72165,7 @@
       "synonyms": [
         "universal molar gas constant"
       ],
-      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
+      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
     },
     {
       "word": "gas cooled reactor",
@@ -85098,7 +85098,7 @@
       "word": "ideal gas",
       "raw_headword": "IDEAL GAS",
       "synonyms": [],
-      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
+      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
     },
     {
       "word": "ideal gas law",
@@ -93416,7 +93416,7 @@
       "synonyms": [
         "equations of motion"
       ],
-      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
+      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
     },
     {
       "word": "kinematic viscosity",
@@ -95950,7 +95950,7 @@
       "word": "law",
       "raw_headword": "LAW",
       "synonyms": [],
-      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
+      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
     },
     {
       "word": "law of averages",
@@ -103860,7 +103860,7 @@
       "word": "mass-energy equation",
       "raw_headword": "MASS-ENERGY EQUATION",
       "synonyms": [],
-      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
+      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
     },
     {
       "word": "mass-energy relationship",
@@ -114873,7 +114873,7 @@
       "word": "newton's laws of motion",
       "raw_headword": "NEWTON'S LAWS OF MOTION",
       "synonyms": [],
-      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
+      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
     },
     {
       "word": "newton's method",
@@ -119051,7 +119051,7 @@
       "word": "ohm's law",
       "raw_headword": "OHM'S LAW",
       "synonyms": [],
-      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
+      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
     },
     {
       "word": "ohm, george simon",
@@ -119065,7 +119065,7 @@
       "word": "ohmic device",
       "raw_headword": "OHMIC DEVICE",
       "synonyms": [],
-      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
+      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
     },
     {
       "word": "ohmic heating",
@@ -149763,7 +149763,7 @@
       "synonyms": [
         "physical law"
       ],
-      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
+      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
     },
     {
       "word": "scientific method",
@@ -158206,7 +158206,7 @@
       "word": "speed of light",
       "raw_headword": "SPEED OF LIGHT",
       "synonyms": [],
-      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ."
+      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ."
     },
     {
       "word": "speed of sound",

@@ -1,0 +1,150 @@
+1. [b*-algebra]
+A Banach algebra that satisfies the condition x ** = x 2 , for all x in the given B*-algebra. It automatically implies that the *-involution is isometric, i.e., x ** = x 2 . Hence xx * = x ** = x x * , and therefore, a B*-algebra is also a C*- algebra. Conversely, the C*-condition implies the B*-condition.
+==================================================
+2. [backward difference]
+A finite difference operator, with the symbol , with an equation of the form ∇ f ( x ) = f ( x ) - f ( x - h ), where h is a constant denoting the difference between successive points of interpolation or calculation.
+==================================================
+3. [baire category]
+A measure of the size of sets in a topological space, named after the French analyst, René Baire (1874 - 1932). A set A , in a metric space is called nowhere dense if the closure A has an empty interior ( A ) o = φ . A set A that can be written as a countable union of nowhere dense sets is said to be first category or meagre and any other set is second category. The complement of a first category set is called residual . The rationals form a first category subset of the reals, as does the Cantor ternary set.
+==================================================
+4. [baker's transformation]
+The transformation of the unit square with Lebesgue measure that is given analytically by T( x , y ) = (2 x , y /2) for 0 ≤ x < 1/2 and T( x , y ) = (2 x^-1, 1/2[y + 1]) for 1/2 ≤ x < 1. This corresponds to first deforming the unit square into a rectangle twice as wide and half as tall and then cutting this rectangle along the line x = 1 and placing the right-hand part above the left to reform a square.
+==================================================
+5. [balmer series]
+Visible atomic spectrum of hydrogen, consisting of a unique series of energy emission levels (transition involving the second energy levels) which appears as lines at four wavelengths: 410 nm, 434 nm, 486 nm and 656 nm. The Balmer series is calculated using the Balmer formula, an empirical equation discovered by Johann Jakob Balmer (1825-1898), Swiss mathematician and physicist in 1885. The wavelength may be represented by 1 λ = R1 2 2 - 1 n 2 ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ where n = 3, 4, 5, etc. and R is the Rydberg constant, whose value is 1.097 x 10 7 m^-1 .
+==================================================
+6. [barcan formula]
+In logic, the expression of modal logic ( ∀ x ) Fx → ◊ ( ∀ x ) Fx that asserts that if everything has some necessary property, then it is necessary that everything has that property, hence, since ◊( ∀ x ) Fx = -◊ ( ∃ x ) - Fx , it is not even possible that something (else) might exist that would lack that property. (Here is the 'necessity" and ◊ the 'possibility' operator).
+==================================================
+7. [barrycentric coordinates]
+The unique set of non-negative coefficients, λ i with ∑ i λ i = 1 that identifies a given point, x , in a simplex of n + 1 points, p i that do not all lie in the same hyperplane, as a convex combination x = ∑ i λ i p i .
+==================================================
+8. [baryon number]
+A quantum number, with the symbol B, which is equal to the difference between the number of baryons and the number of antibaryons in a system of subatomic particles. It remains the same throughout any reaction. Baryons have a baryon number of +1, while antibaryons have a baryon number of^-1. Quarks and antiquarks have baryon numbers of + 1 / 3 and^-1 / 3 , respectively (baryons consists of three quarks). Mesons, bosons and leptons all have baryon numbers of 0. Q +1 +1 -1 -1 B S^-1 -1 -1 -1 -2 -2 QUARK CONTENT uud uud uds uus dds uds dss uss NAME Proton Neutron Lambda Sigma plus Sigma minus Sigma zero Xi minus Xi zero Baryon Number Table.
+==================================================
+9. [base ionisation constant]
+The equilibrium constant K b for the base ionisation; or a reaction in which a weak base is in equilibrium with its conjugate acid in aqueous solution. For example, ammonia ionizes in water as follows: NH3( aq ) + H2 O ( l )  NH4 + ( aq ) + OH - ( aq ) The base-ionisation equilibrium constant is the mathematical product of the equilibrium concentrations of the products of this reaction divided by the equilibrium concentration of the original base. In other words, Kb is the product of the concentrations of the products over the concentration of the reactants (not including water). As the Kb value of a base increases, so does the strength of the base. For a strong base: K b > 1 and for a weak base: K b < 1. The value is sometimes expressed as the logarithm of its reciprocal, called pK b . Therefore pK b = -logK b . The smaller the value of pK b , the stronger the base. K b is a better measure of the strength of a base than pH because adding more water to the base solution will not change the value of the equilibrium constant K b , but it will change the H + ion concentration. Water is not included in the base-ionisation equilibrium expression because the [H2 O] has no effect on the equilibrium.
+==================================================
+10. [base number]
+The number of chromosomes in a genome, usually between six and thirteen and is represented by the symbol x. In diploid organisms the number of chromosomes in the genome is equivalent to the haploid number n and so 2 n = 2 x . However in tetraploid organisms 2 n = 4 x , in hexaploid organisms 2 n = 6 x , etc.
+==================================================
+11. [base unit]
+Any of a set of seven International System of Units (SI) without combination from which all units of physical quantities can be derived.The seven S.I. base units are as follows: metre with the symbol m for length, kilogram with the symbol kg for mass, second with the symbol s for time, ampere with the symbol A for electric current, kelvin with the symbol K for temperature, candela with the symbol cd for luminous intensity, and mole with the symbol mol for amount of substance. These seven units are called base units because none of them can be expressed as combinations of the other six. Some combination base units are given special names, for example, the kilogram metre per second squared (kg·m·s^-2 ) is called the newton (N) and the kilogram metre squared per second squared (kg·m2 ·s^-2 ) is called the joule (J).
+==================================================
+12. [basic facts]
+In mathematics, it refers to a number, a fact or idea that can be instantly recalled without having to use any special operations to recall them. For example, in basic classes some additions (such as 1 + 1 = 2, 2 + 2 = 4, 1 + 0 = 1, etc.); subtractions (such as 1 - 1 = 0, 2 - 1 = 1, etc.); and multiplications (1 - 10 multiplication tables), etc., are memorised forever so that there is no need to use any special operations to recall them.
+==================================================
+13. [basis]
+1. Any set of vectors that determines a space as the set of sums of their multiples. It is also called Hamel basis , especially when the basis vectors are orthogonal. 2. In a Euclidean space, a maximal set of mutually orthogonal vectors in terms of which all the elements of the space are uniquely expressible, at the number of which is the dimension of the space; thus the vectors x , y and z , in the positive directions of the coordinate axes, form a basis of the three-dimensional space, whose members can be written as linear combinations ax + by + c z . 3. Any linearly independent subset of a vector space that generates the space. The cardinality of such a subset is the dimension of the space. For example, the dimension of the vector space of all polynomials over a field is 0 and the set with elements 1, x , x 2 , ... , x n , ..., forms a basis; the vectors (1,0,0), (0,1,0), (0,0,1) are a basis for three-dimensional Euclidean space. 4. In a free module, any linearly independent set that spans the module. 5. Also called Schauder basis , in a separable normed space, a sequence of vectors { x i } in terms of which each element can be expressed uniquely as an infinite combination: x = vixii = 1 ∞ ∑ .
+==================================================
+14. [bayes' theorem]
+The equation used in probability which allows the user to calculate the probability of an event occurring provided that another event whose probability is already known has occurred. Mathematically, Bayes' theorem gives the relationship between the probabilities of A and B , P ( A ) and P ( B ) and the conditional probabilities of A given B and B given A , P ( A │ B ) and P ( B │ A ), respectively. In its most common form, it is expressed as P ( A │ B )= , the meaning of this statement depends on the interpretation of probability ascribed to the terms. Bayes' theorem was named after the Reverend Thomas Bayes (1702-61), who studied how to compute a distribution for the probability parameter of a binomial distribution. It has applications in fields such as science, engineering, medicine and law.
+==================================================
+15. [beat frequency]
+The absolute value of the difference in frequency of two waves. It is the fluctuation produced in musical acoustic when two notes of nearly equal pitch or frequency are heard together. Beats result from the interference between the sound waves of the notes. The beat frequency equals the difference in frequency of the notes. Given oscillations at two frequencies, f 1 and f 2 , their beat frequency is f beat = | f 1 - f 2 |, where f 1 > f 2 .
+==================================================
+16. [beattie-bridgman equation]
+An equation of state that relates the pressure, volume and temperature of a gas and the gas constant. It uses empirical constants to assess the reduction in the effective number of molecules due to various types of molecular aggregation. It is expressed as: P = , where P is the pressure, V the volume, R the gas constant, T the thermodynamic temperature and A , B and ε are constants related to five empirical constants, A o , B o , a , b and c by A = A o , B = B o and ε = C VT3 .
+==================================================
+17. [becquerel]
+The SI unit for the measurement of radioactivity. Its symbol is Bq and it is named after Henri Becquerel, who shared a Nobel Prize with Pierre and Marie Curie for their work in discovering radioactivity. One Bq is defined as the activity of a radioisotope decaying at the rate of 1 nucleus disintegration per second. The Bq unit is equivalent to s^-1 .
+==================================================
+18. [bee]
+Any of 3000 species of bees divided into 19 families in the order Hymenoptera. It is a large insect of about 2 mm^-4 cm long; solitary or social in habit and living on nectar and pollen to produce wax and honey. Some species of bees have stingers. Bees are dependent on pollen as a protein source and on flower nectar or oils as an energy source. Adult females collect pollen primarily to feed their larvae. The pollen they inevitably lose in going from flower to flower is important to plants because some pollen lands on the pistils of other flowers of the same species, resulting in cross-pollination. They are the most important pollinating insects and their interdependence with plants makes them good examples of the type of symbiosis called mutualism. Most bees have specialised branched or feathery body B hairs that help in the collection of pollen. Female bees, like many other hymenopterans, have a defensive sting. Some bees produce honey from flower nectar. Honey bees and stingless bees commonly store large quantities of honey, which is exploited by beekeepers, who harvest the honey for human consumption.
+==================================================
+19. [beer's law]
+It states that the fraction of incident light absorbed by a solution at a given wavelength is related to the thickness of the absorbing layer and the concentration of the absorbing substance. It is commonly written in the form A = εcl , where A is the absorbance, c is the concentration in moles per litre, l is the path length in centimetres and ε is a constant of proportionality known as the molar absorptivity. The law is accurate only for dilute solutions; deviations from the law occur in concentrated solutions because of interactions between molecules of the solute, the substance dissolved in the solvent.
+==================================================
+20. [bell curve]
+A probability distribution, f ( x ), of a random variable, x that is assumed by many statistical methods. This is given by f ( x )= σ 2 π exp -­‐ 1 ( x -­‐ µ ) 2 σ 2 ⎡ ⎣ ⎢⎢⎢ ⎤ ⎦ ⎥⎥⎥ , where μ is the mean and σ 2 is the variance. All normal distributions are symmetric and have bell- shaped density curves with a single peak. Probably less than others Same as others Probably more than others Definitely more than others Definitely less than others 2% SD = Standard Deviation A graph of the Bell curve, the mean is zero 2% 14% 14% 34% 34% + 1 SD + 2 SD^-1 SD + 2 SD Mean Score Bell Jar.
+==================================================
+21. [bellman's principle of optimality]
+The fundamental principle of dynamic programming stating that the optimal solution to an n -step dynamic process must come from an optimal solution of the ( n^-1)-step process that commences with the optimal outcome of the first step. This principle can be extended to permit the recursive solution of many dynamic programming problems. Bellman's principle of optimality is not the same as Lewis Carroll's 'Bellman's principle' that what is said thrice is true.
+==================================================
+22. [benz alde hyde]
+A yellowish volatile oily liquid with the chemical formula C6 H5 CHO, density 1.0415 g/ml (liquid), melting point^-26 °C (247 K) and boiling point 178.1 °C (451.25 K) with an almond-like smell, which occurs in almond kernels. It is used in flavourings, perfumery and the dyestuffs industry.
+==================================================
+23. [benzene 1,4-diol]
+A white crystalline aromatic compound, with the chemical formula C6 H4 (OH) 2 , density 1.3 gcm^-3 (solid), melting point 172 °C (445 K) and boiling point 287°C (560 K). It is normally used for making dyes and also used as a bleaching agent, photographic developer, in paints, in motor vehicle oils and in medicines.
+==================================================
+24. [benzene hexachloride, bhc]
+Any of several stereoisomers of 1,2,3,4,5,6-hexachlorocyclohexane formed by the light-induced addition of chlorine to benzene with the molecular formula C6 H6 Cl 6 . B An example is lindane, also known as gamma-hexachlorocyclohexane (γ-HCH) or gammaxene, used as an insecticide. Lindane is carcinogenic in animals and also probably in humans and its use is very much restricted because of its toxicity and persistence in the environment.
+==================================================
+25. [benzenesulfonic acid]
+A colourless deliquescent solid, with the chemical formula C6 H5 SO3 H, molar mass 158.18 gmol^-1 , density 1.32 g/ cm3 , melting point 44°C for the hydrate and 51°C for the anhydrous, boiling point 190°C. It is a colourless crystalline solid; made by treating benzene with concentrated sulfuric acid. Its alkyl derivatives are used as detergents. Certain pharmaceutical drugs are prepared as salts of benzenesulfonic acid and are known as besylates or besilates . An example is amlodipine besylate, used in treating hypertension and other heart diseases.
+==================================================
+26. [benzilic acid rearrangement]
+An organic rearrangement reaction in which benzil (1,2-diphenylethan^-1,2-dione) is treated with hydroxide and then acid to give benzilic acid (2-hydroxy^-2,2- diphenylethanoic acid), first performed by Justus Liebig in 1838. In the reaction a phenyl group (C6 H5 - ) migrates from one carbon atom to another. This type of reaction is displayed by 1,2-diketones in general and the reaction product is an -hydroxy-carboxylic acid. Benzilic Acid Rearrangement HCl KOH (aq.) MeOH, reflux HO HO OH OOOO OK.
+==================================================
+27. [benzofuran]
+A heterocyclic compound having a benzene ring fused to a five-membered furan ring. Its molecular formula is C8 H6 O, molar mass 118.13 g mol^-1 , melting point^-18 °C (255 K) and boiling point 173 °C (446 K). Benzofuran is a component of coal tar; and can also be obtained by dehydrogenation of 2-ethylphenol. Its derviatives have shown antifungal, antimicrobial and as antagonists for the H3 receptor and angiotensin II.
+==================================================
+28. [benzpyrene]
+General structure of benzopyrene A class of highly carcinogenic polycyclic aromatic compound with the molecular formula C20 H12 , molar mass 252.3 gmol^-1 , density 1.24 g/cm3 , melting point 179 °C and boiling point 495 °C. It consists of a benzene ring fused to a pyrene molecule and occurs in coal tar, cigarette smoke, grilled or smoked fish and meat, the incomplete combustion of organic materials such as petroleum products, wood and as a by-product of many industrial processes. In coal tar, it occurs together with other related pentacyclic aromatic species such as picene, benzofluoranthenes and perylene. They intercalate into DNA, interfering with transcription and are treated as pollutants and carcinogens.
+==================================================
+29. [benzyl alcohol]
+A colourless liquid slightly aromatic liquid with the chemical formula C6 H5 CH2 OH, density 1.044 g/cm3 , melting point^-15 °C and boiling point 205 °C. It is partially soluble in water (4 g/100 mL) and completely miscible in alcohols and B diethyl ether. It occurs naturally in many plants and is commonly found OH General structure of benzyl alcohol in fruits and teas. It is also found in a variety of essential oils including jasmine, hyacinth and its esters are found in flowers and used in perfumes. Benzyl alcohol is prepared by the hydrolysis of benzyl chloride using sodium hydroxide: C6 H5 CH2 Cl + NaOH → C6 H5 CH2 OH + NaCl. It can also be prepared via a Grignard reaction by reacting phenylmagnesium bromide (C6 H5 MgBr) with formaldehyde, followed by acidification. It is also used in colour-film developing and in dyeing. It is used as a solvent for inks, paints, lacquers and epoxy resin coatings. It is also a precursor to a variety of esters, used in the soap, perfume and flavour industries.
+==================================================
+30. [benzyl chloride]
+An organic compound, with the chemical formula C6 H5 CH2 CI, molar mass 126.58 g/mol, density 1.100 g/cm3 , melting point^-39 °C and boiling point 179 °C. It is a colourless liquid with a sharp odour; obtained industrially by passing chlorine through toluene that has been heated to 90 - 100 ° C in the reaction C6 H5 CH3 + Cl 2 → C6 H5 CH2 Cl + HCl. It is not water-soluble and miscible in alcohol, chloroform and other organic solvents. When heated with water, benzyl chloride gradually hydrolyses to form benzyl alcohol. Benzyl chloride is used to obtain benzyl alcohol and, more importantly, benzyl cellulose, which is widely used in the production of plastics, films, electrical insulating materials and lacquers. NH2.
+==================================================
+31. [berkelium]
+A radioactive metallic synthetic transuranic element belonging to the actinoids with the symbol Bk and atomic number 97. Berkelium was the fifth transuranic element to be synthesised by bombarding americium^-241 with alpha particles (helium ions) at the University of California at Berkeley.
+==================================================
+32. [bernoulli equation]
+A differential equation of the form dy dx + φ y = ψ y n , where ϕ and ψ are functions of x alone. It may be written in linear form by the change of variable z = y 1- n and is closely related to the Jacobi equation.
+==================================================
+33. [bernoulli number]
+The sequence { B n } of coefficients of the power series, defined by z e z^-1 + z 2 = B2 m m = 0 ∞ ∑ z 2 m (2 m )! These numbers allow evaluation of even values of the zeta function.
+==================================================
+34. [bernoulli trial]
+An experiment in which there are two possible independent outcomes, named after Swiss mathematician and physicist, Jacob Bernoulli (1654-1705). It usually denotes success and failure, with the properties that the probability of occurrence of each outcome is the same in each trial and the occurrence of one excludes the occurrence of the other in any given trial. For example, in tossing a coin, the outcome has only two possibilities: either the coin lands head or tail. Let p be the probability of success in a Bernoulli trial and q , the probability of a failure, then the probability of failure, q is given by: q = 1 - p . Random variables describing Bernoulli trials are often encoded using the convention that 1 = "success", 0 = "failure". Therefore, the probability distribution of such a random variable (termed a Bernoulli distribution) is given by P ( x = r ) = nCrPrqn- r .
+==================================================
+35. [bernoulli's theorem]
+A law which states that at any point in a pipe through which a fluid is flowing the sum of the pressure energy, the kinetic energy and the potential energy of a given mass of the fluid is constant. In a horizontal flow the sum of kinetic energy and pressure energy is constant or + = K , where P is the static pressure, ρ is the density, V is the air speed and K is a constant. From this law, it follows that where there is a velocity increase in a fluid flow, there must be a corresponding pressure decrease.
+==================================================
+36. [bernstein polynomials]
+The sequence of polynomials defined for a given continuous function f on the interval [0,1] by the formula B n ( f )( x ) = B n ( x ) = f k = 0 n ∑ k n ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ n k ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ x k 1 - x ( ) n - k . The polynomials B n ( f ) converge in uniform norm to f ; yielding a proof of the Weierstrass approximation theorem.
+==================================================
+37. [berthelot equation]
+An equation of state that relates the pressure, volume and temperature of a gas and the gas constant. It is given by: PV = RT , where p is the pressure, V the volume, R the gas constant and T the thermodynamic temperature and pressure of the gas.
+==================================================
+38. [beryllium oxide]
+An insoluble solid compound, with the chemical formula BeO, density 3.01 g cm^-3 , melting point 2507 °C (2780 K) and boiling point 3900 °C (4173 K). It occurs naturally as bromellite and can be made by burning beryllium in oxygen. It is an important amphoteric oxide, reacting with acids to form salts and with alkalis to form compounds known as beryllates. Beryllium oxide is used in the production of beryllium and beryllium-copper refractories, transistors and integrated circuits.
+==================================================
+39. [bessel function]
+A special function that results from solving the wave equation in cylindrical coordinates. It is used in branches of mathematical physics. The Bessel function is given by J n (x) = .
+==================================================
+40. [bessel inequality]
+The Fourier series inequality stating that the sum of the squares of the moduli of the Fourier coefficients of a function f on the interval [0, 2 π ) is dominated by the integral of the squared function and so satisfies c n n = 0 ∞ ∑ ≤ f ( x ) 2 dx. 2 π ∫.
+==================================================
+41. [beta decay]
+The spontaneous emission of beta particle from a nucleus. Beta decay is accompanied by neutrino emission and a release of energy. It is any of three processes of radioactive decay: electron emission, positron emission and electron capture in which a nucleus emits an electron or beta particle. With this sort of decay the electrons or beta particles are known as beta radiation. Beta decay is a slower process than gamma or alpha decay, but capable of penetrating hundreds of times farther than alpha particles. There are two types of beta decay where the beta particle is either an electron, called beta-minus (β - ) decay or a positron called beta-plus (β + ) decay. In beta-plus decay, a proton in an atomic nucleus decays into a neutron, a positron and a neutrino. The positron and neutrino are emitted from the nucleus, while the neutron remains by the reaction: where X is the parent atom, Y is the daughter atom, Z is the atomic mass of X , A is the atomic number of X . The electron and antineutrino are emitted from the nucleus, while the proton remains. The atomic number of the atom is thereby increased by 1. An example of beta-minus decay is the decay of Carbon^-14 into Nitrogen^-14, used in carbon dating.
+==================================================
+42. [beta distribution]
+A distribution often used as a prior distribution for a proportion. The probability density function, for a random variable X having a beta distribution is f ( x ) = B ( α , β ) x α - 1 (1 - x ) β - 1 ,0 < x < 1, where α and β are positive parameters and B is the beta function. Beta distribution has a variety of shapes on the values of α and β.
+==================================================
+43. [beta function]
+The function B( p, q ) = x p^-1 ∫ (1 - x ) q^-1 dx that has the relation to the gamma function that B( p, q ) = Γ ( p ) Γ ( q ) Γ ( p + q ) .
+==================================================
+44. [beta radiation]
+A stream of beta particles moving at high speed of up to 98% of the speed of light from certain sources. It was discovered by the British physicist Ernest Rutherford in 1899. They carry negative charges and energy but they can be stopped by elements with a low atomic number, such as aluminium sheet of 5 mm thick. Beta radiation can penetrate human skin to the germinal layer. Examples of some pure beta emitters are strontium^-90, carbon^-14.
+==================================================
+45. [beta sheet]
+A structure that occurs in many globular proteins in which extended polypeptide chains lie parallel to each other and are linked by hydrogen bonds between the N-H and C=O groups.
+==================================================
+46. [bezout's lemma]
+The generalisation, to polynomials over a field, of a result known to Euclid for integers, that if d is the greatest common divisor of f and g , it can be written as d = af + bg for two other polynomials a and b .
+==================================================
+47. [bi-orthogonal]
+Of two sequences ( a n ) and ( b n ) in Hilbert space such that ( a n , b m ) is unity when m = n and zero otherwise.
+==================================================
+48. [bias]
+1. In statistics, it is a measure of how closely the mean value in a series of replicate measurements approaches the true value. It is the difference between the expected value of a statistic and the true value of the corresponding parameter. If the mean of a large number of unbiased estimation is calculated, the correct value is found. The bias indicates the distance of the estimator from the true value of the parameter. 2. The expected value of (T - θ), for T an estimator of the parameter θ.
+==================================================
+49. [bicarbonate]
+A salt of carbonic acid in which one hydrogen atom has been replaced, usually by a metal. A Bicarbonate ion is the chemical compound containing the bicarbonate radical, HCO^-3 or with the empirical formula HCO^-3 and a molar mass of 61.0168g/mol. It consists of one central carbon atom surrounded by three oxygen atoms in a trigonal planar arrangement, with a hydrogen atom attached to one of the oxygens. It carries a negative one formal charge. It is the conjugate base of carbonic acid H2 CO3 and the conjugate acid of CO3 2-. A bicarbonate salt forms when a positively charged ion attaches to the negatively charged oxygen atoms of the ion, forming an ionic compound. In inorganic chemistry, it is an intermediate form in the deprotonation of carbonic acid. Many bicarbonates are soluble in water at standard temperature and pressure. Bicarbonate is alkaline and it is a vital component of the pH buffering system of the human body. The most common salt of the bicarbonate ion is sodium bicarbonate, NaHCO3 , which is used as baking powder. The flow of bicarbonate ions from rocks weathered by the carbonic acid in rainwater is an important part of the carbon cycle.
+==================================================
+50. [bicarbonate ions]
+Chemical compound such as sodium bicarbonate (baking soda) containing the bicarbonate radical, HCO^-3 .
+==================================================
