@@ -1,0 +1,159 @@
+48. [cauchy integral formula]
+The fundamental formula f ( z ) = 1 2 π i f ( w )[ w - z ] - 1 , C ∫ for a function that is analytic on a region, where C is any positively oriented simple closed curve surrounding z and lying inside the region.
+==================================================
+49. [cauchy principal value]
+The evaluation of an improper integral on the interval [-∞, ∞] as the symmetric (two-sided limit) of the integral on intervals of the form [- n , n ]. This may well converge even if the sum of the two ordinary improper integrals over [-∞, a ] and [ a , ∞] does not. This is the case for odd functions such as x or sin x .
+==================================================
+50. [cauchy product]
+The convolution of two sequences given by C n = a n - kbkk = 0 n ∑ . If the series ∑ a n sums to A and ∑ b n to B, then the Cauchy product series sums to AB if one of the series is absolutely convergent.
+==================================================
+51. [cauchy's inequality]
+The special case of Cauchy-Schwarz inequality in Euclidean space: aibii = 1 n ∑ ≤ a i i = 1 n ∑ ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ b i i = 1 n ∑ ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ . This follows from the cosine law.
+==================================================
+52. [cauchy's integral theorem]
+The theorem of complex analysis stating that the countour integral of an analytic function around a simple closed curve is zero.
+==================================================
+53. [cauchy's mean-value theorem]
+It states that if f and g are differentiable in an interval ( a , b ) and continuous on [ a , b ] then f '( c )[ g ( b ) - g ( a )] = g '( c )[ f ( b ) - f ( a ) for some point c in the open interval.
+==================================================
+54. [cauchy's ratio test]
+A test for a complex series a n n = 1 ∞ ∑ is absolutely convergent the limit of the ratio of the absolute values of successive terms is tested. If the term lim n →∞ a n + 1 a n is less than unity, the series converges absolutely; if it is greater than unity, it diverges.
+==================================================
+55. [cauchy's residue theorem]
+A tool used to evaluate line integrals of analytic functions over closed curves. It generalises the Cauchy integral theorem and Cauchy's integral formula that if a function f is analytic in a simply connected domain D except for finitely many isolated singularities, then the contour integral of f over any simple closed curve that misses the singularities is equal to 2 πi times the sum of the residues of f at singularities inside the contour. An equivalent definition is that the integral of a complex function round a Jordan contour is the sum of residues of that function inside the curve multiplied by 2 πiw , where w is the winding number of the curve about that point. This is of great use for evaluating curvilinear integrals of meromorphic functions and so certain classes of definite integrals of real functions.
+==================================================
+56. [cauchy's root test]
+The test for whether a complex series ∑ a n is absolutely convergent by considering L = lim sup a n 1/n ; if L is less than unity, the series converges absolutely and if it is greater than unity, the series diverges. The radius of convergence of a power series is the reciprocal of L when the { a n } are the coefficients of the series.
+==================================================
+57. [cauchy's stress theorem]
+The theorem which states that the stress vector at a point on a given surface of a body is given by σ n , where σ is a symmetric second order Cartesian tensor and n is the unit outward normal to the surface at that point.
+==================================================
+58. [cauchy's vorticity formula]
+The relation, for a given body executing a circulation preserving motion, of the vorticities ω r and ω t respectively in the reference and current configurations; this states that ω t = F ω r det F , where F is the deformation gradient.
+==================================================
+59. [cauchy-hadamard theorem]
+The theorem that the radius of convergence of a Taylor series with coefficients { a ) is lim n →∞ | a n | n .
+==================================================
+60. [cauchy-kowalski theorem]
+The theorem that if S r is a system of r partial differential equations in r unknown functions, v 1 , ..., v r , of p +1 real variables, x 1 , ..., x p +1 of the form ∂ v j dx p + 1 = H j x 1 ,..., x p + 1 , v 1 ,..., v r , ∂ v 1 ∂ x 1 , ∂ v 2 ∂ x 2 ,..., ∂ v r ∂ x p ⎛ ⎝ ⎜⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟⎟ , where there are no derivatives with respect to x p +1 on the right-hand side and the H j are real analytic functions, then there exists a neighbourhood of the origin in ( p + 1)-dimensional Euclidean space in which S r may be uniquely solved for analytic functions v 1 , ..., v r . : The equations linking the partial derivatives of the real and imaginary parts of an analytic function of z with real part, x and imaginary part, y . When f = u + iv , with u and v real valued, these are ∂ u ∂ x = ∂ v ∂ y and ∂ u dy = dv ∂ x . When the partial derivatives are continuous, these equations are also sufficient for analiticity, when the domain of analyticity is a region.
+==================================================
+61. [cauchy-riemann equationscauchy-schwarz inequality]
+The inequality, valid for any inner product, that x , y ≤ x . y . ln a Euclidean space this can be written as Cauchys inequality.
+==================================================
+62. [caustic soda]
+A strongly alkaline compound, with the chemical formula NaOH, density 2.13 g cm^-3 , melting point 318 °C (591 K) and boiling point 1388 °C (1661 K). It is hygroscopic and readily absorbs carbon dioxide from the air and should be stored in an airtight container. It is very soluble in water and is highly exothermic when dissolved in water. It also dissolves in ethanol and methanol. It is used in the manufacture of chemicals and soaps and in petroleum refining.
+==================================================
+63. [cayley representation theorem]
+The result that every group is isomorphic to a group of permutations;named after the the English mathematician, Arthur Cayley (1821-1895).
+==================================================
+64. [cayley-hamilton theorem]
+When we consider the characteristics of the polynomial p ( λ ) of an m × m matrix A , it is defined by p ( λ ) = det(A - λ I). The theorem about the characteristics polynomial is known as Cayley-Hamilton theorem, which states that every square matrix over a commutative ring satisfies its own characteristic equation. According to Cayley-Hamilton's theorem, if the characteristics p ( λ ) of an m × m matrix A is p ( λ ) = (-1) n ( λ n + b n^-1 λ n^-1 + ... + b 1 λ + b 0 ), then A n + b n^-1 A n^-1 + . . . + b 1 A + b 0 I = 0.
+==================================================
+65. [ceiling function]
+In mathematics and computer science, the ceiling function of x is the smallest integer greater than or equal to x . For example, ceiling( x ) = x is the smallest integer not less than x . In the same way that the floor function maps a real number, the smallest following integer: floor( x ) = x is the largest integer not greater than x .
+==================================================
+66. [celsius temperature]
+A physical quantity, a temperature, now defined in terms of thermodynamic temperature. It is expressed in the SI unit as degree Celsius (0 o ). Its symbol is o C. Celsius temperature scale is defined from the absolute temperature scale through the relation: θ = T^-273.15, where θ is the temperature in degree Celsius and T is the temperature in Kelvin (K).
+==================================================
+67. [central limit theorem]
+The fundamental statistical result that if a sequence of independent identically distributed random variables C each has finite variance, then as their number increases, their sum (or, equivalently, their arithmetic mean) approaches a normally distributed random variable. Hence, in particular, if sufficiently many samples are successively drawn from any population, the sum or mean of the sample values can be thought of, approximately, as an outcome from a normally distributed random variable. Mathematically, if we let x 1 , x 2 , ..., x n be n independent random variables that are identically distributed (with any distribution) with mean μ and a finite variance σ 2 , the sum S n = x 1 + x 2 + ...+ x n is defined and the ratio: is established, where n, μ and σ . represent the mean and the standard deviation of S n respectively. The central limit theorem establishes that the distribution of the ratio tends to the standard normal distribution when n tends to infinity. This means that P φ ( x ), where φ ( x ) is the distribution function of the normal distribution expressed by φ ( x )= dx ,-∞< x <∞.
+==================================================
+68. [centre of mass]
+1. The weighted mean position of finite discrete set of particles with position vectors x 1 , x 2 ,..., x n and masses m 1 , ..., m n . Its position vector is given by x = mixii = 1 n ∑ ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ / m i i = 1 n ∑ ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ . 2. For a continuous body, the position vector given by the corresponding ratio of integrals over the volume of the configuration of the body at time t , that is, x ( t ) = ρ x dv ∫ ( ) ρ dv ∫ ( ) , where ρ is the density at the point of position vector x .
+==================================================
+69. [centripetal acceleration]
+The acceleration of a body which travels along a circular track at constant speed. The acceleration is directed radially toward the centre of the circle and has a magnitude equal to the square of the body's speed along the curve divided by the distance from the centre of the circle to the moving body. The force causing this acceleration is directed also toward the centre of the circle and is named centripetal force. An example of centripetal acceleration is the acceleration toward the centre that holds a satellite in an elliptical orbit. The magnitude of centripetal acceleration, a c = v 2 / r , where a c is centripetal acceleration, v is velocity in metres per second and r is the radius of the circle in metres. The higher the velocity, the greater the centripetal acceleration; and the smaller the curve of the path being travelled, the greater the centripetal acceleration.
+==================================================
+70. [centripetal force]
+The force which makes an object move on a circular path or acts radially inward on an object moving in a curved path or acts tangentially to the object's path. It is that part of total gravitational force that keeps a body in its circular track and it is always directed towards the centre of the circle. For example, with a ball whirled in a circle at the end of a length of string, the centripetal force is the tension in the string and the reaction to this force is the centrifugal force. If the string breaks, the ball will move offin a straight line. The straight line motion in the absence of the constraining force is an example of Newton's first law. For a body of mass, m , moving at constant speed, v , around a circle of radius, r , the magnitude of the centripetal force, F c is expressed as F c = mv 2 / r . The gravitational attraction of the Sun is acentripetal force acting on Earth. This force produces the centripetal acceleration of the orbital motion.
+==================================================
+71. [ceva's theorem]
+The theorem about triangles in Euclidean plane geometry that three Cevians, one through each vertex of a triangle, are concurrent if and only if the product of the ratios in which they divide the opposite sides is unity. In other words, given a triangle ABC, with the points D,E and F lying on lines BC, CA and AB respectively, the lines AD, BE and CF are concurrent if and only if (AF/FB)(BD/DC)(CE/EA) = 1.
+==================================================
+72. [chain reaction]
+1. A series of chemical reactions in which the product of each reaction causes the next one to occur. For example, the fission of uranium^-235 nucleus by a slow neutron can produce chain reactions because neutrons released by the splitting of the first uranium^-235 nucleus go on to split more nuclei, releasing even more neutrons. Uncontrolled chain reaction produces a nuclear explosion, for example as in an atom bomb. 2. A chemical change forming products which themselves cause more changes so that new compounds are produced or a succession of reactions usually involving free radicals, where the products of one stage are the reactants of the next. There are three separate stages involved which are initiation, propagation and termination. A typical chain reaction is the chlorination of methane in presence of sunlight.
+==================================================
+73. [chain rule]
+A theorem that may be used in the differentiation of compositions of functions. It states that dy dx = dy dt x dt dx , where y is a differentiable function of t and t is a differentiable function of x . This enables a function y = f ( x ) to be differentiated by finding a suitable function u , such that f is a composition of y and u , y is a differentiable function of u and u is a differentiable function of x . Similarly, for partial differentiation, ∂ f ∂ x = ∂ f ∂ u x ∂ u dx ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟+ ∂ f ∂ v x ∂ v dx ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , where f is a function of u and v , each of which is a function of x .
+==================================================
+74. [chal cone]
+An aromatic ketone, 1,3-Diphenyl^-2-propen^-1-one, with the molecular formula C15 H12 O, density 1.071 g/cm3 , melting point 55-57°C (328-330 K) and boiling point 345-348°C (618-621 K). It forms the central core for a variety of important biological compounds known collectively as chalcones . Chalcones are intermediates in the biosynthesis of flavonoids. They show antibacterial, antifungal, anti-tumour and antiinflammatory properties.
+==================================================
+75. [changing the subject ofa formula]
+The transformation or rearrangement of a formula to find the value of a subject of formula . For example, if s = ut + ½ at 2 , , then in a = 2( s - ut ) 2 t 2 , a is made the subject of formula by transforming or rearranging the formula.
+==================================================
+76. [character encoding]
+A mapping of a coded character set onto a character representation for manipulation in a computer. A single character set may have more than one character encoding. Many character encodings, such as the ISO8859 series, assign a single byte to each character. Other character encodings, such as the Unicode UTF^-8, UTF^-16 and UTF^-32 encoding forms, define a number of ways of encoding the same character.
+==================================================
+77. [characteristic equation]
+1. An equation derived from a given square matrix A in which the characteristic polynomial is set equal to 0. It is of the form det[A - t I], where A is the square matrix, I is the unit matrix and t is a scalar variable. 2. The second order partial differential equation for which a dy dx ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟- b dy dx ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟+ c = 0, where au xx + bu xy + cu yy + du x + eu y + fu = h is the general form of a second order partial differential equation whose solutions give the characteristic curves of the partial differential equation, allowing it to be written in a simpler canonical form.
+==================================================
+78. [characteristic function]
+1. Of a set, the function taking the value 1 for arguments that are members of the given set and 0 otherwise. 2. Also known as characteristic polynomial , it is a function derived from the probability distribution function that in particular enables the distribution of the sums of random variables to be analysed since two distributions have the same characteristic function only if they are identical almost everywhere. 3. Also known as characteristic polynomial , it is the polynomial det[A - t I] derived from a given square matrix A, where I is the unit matrix and t is a scalar variable. For example, the characteristic polynomial of^-1 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ is t 2 - 3 t +1.
+==================================================
+79. [characteristic polynomial]
+The polynomial det[A - t I] derived from a given square matrix A, where I is the unit matrix and t is a scalar variable. For example, the characteristic polynomial of^-1 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ is t 2 - 3 t +1.
+==================================================
+80. [characteristic root]
+In a characteristic polynomial, for a square matrix A, in which x is a nonzero vector called the eigenvector that does not change its direction under the associated linear transformation and satisfies the equation A x = λ x , the scalar, λ is the eigenvalue. In other words, it is a root, λ, of the characteristic equation det( A - t I). For a linear operator A, it is a solution, λ, of the equation AX = λ X(X ≠ 0).
+==================================================
+81. [characteristic vector]
+For a square matrix or linear operator, A, it is a nonzero vector, x that does not change its direction under the associated linear transformation and satisfies the equation A x = λ x , where λ is a scalar of A called an eigenvalue.
+==================================================
+82. [charge]
+A fundamental property of matter, which defines the extent to which matter has more or fewer electrons than protons. It occurs in nature in two forms, conventionally described as positive and negative in order to distinguish between the two kinds of interaction between particles. Two particles that have similar charges (both negative or both positive) interact by repelling each other; two particles that have dissimilar charges (one positive, one negative) interact by attracting each other. The size of the interaction is determined by Coulomb's Law. Protons and the nuclei of atoms have a positive charge; electrons have a negative charge; neutrons have no charge. Generally charged substances have an imbalance of positive and negative charges and a net charge that exerts a force on other charged substances. The unit of electrical charge quantity in the International System of Units is the coulomb. One coulomb (1 C) is equal to approximately 6.24 x 10 18 elementary charges. This is a very large quantity and therefore, measured in micro-coulombs (1 μC =1 × 10 -6 C) and nanocoulombs (1 nC = 1 × 10 -9 C). Elementary charge , with the symbol e is defined as the amount of charge carried by one electron (electrons have negative charge). The value of elementary charge is approximately 1.602 x 10 -19 coulombs (C), and the charge of the electron is approximately^-1.602 x 10 -19 C. Charge quantization is the principle that the charge of all other objects in the universe is an integer multiple of the elementary charge and has many times the charge of a single electron it has.
+==================================================
+83. [charles' law]
+One of the three Gas Laws, which states that the volume of a given mass of gas at constant pressure is directly proportional to its absolute temperature, i.e. V = kT, where V = volume of gas and T = absolute temperature and k is a constant.
+==================================================
+84. [charles' theorem]
+Any general displacement of a rigid body can be represented by a translation plus a rotation.
+==================================================
+85. [charles, jacques alexandra césar]
+French chemist and physicist and aeronaut, best remembered for discovering Charles' law (1787), relating to the volume and temperature of a gas. He became Professor of Physics at the Paris Conservatoire des Arts et Métiers. In 1783 he made the first balloon using hydrogen gas and ascended to a height of nearly 3 km. He also discovered the relationship between the volume of gas and temperature, known as Gay-Lussac's law or Charles's law in 1787; and was elected to the French Academy in 1785. Graphical illustration of Charles' law V t/°C^-273.15°C T/K V V= Volume T= Absolute temperature.
+==================================================
+86. [charpit's method]
+A method for solving a first-order partial differential equation of the form F x , y , z , ∂ z ∂ x , dz dy ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟= 0, in which a solution a solution of a specimen of Lagrange's linear equation is used to provide a second first-order partial differential equation f x , y , z , ∂ z ∂ x , dz dy ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟= 0, that has the property that solving these equations for ∂ z dx and ∂ z dy produces an integrable total differential equation ∂ z = ∂ z ∂ x dx + ∂ z ∂ y dy .
+==================================================
+87. [chebyshev norm]
+The norm placed on continuous or bounded functions on a set S that assigns to each function the supremum of the moduli of the values of the function on the set: f ∞ = sup f ( x ) : x ∈ S { } . The real or complex continuous functions on a compact set S form a Banach space that is denoted C(S).
+==================================================
+88. [chebyshev polynomials of the first kind]
+The orthogonal polynomials defined by T n ( x ) = cos( n arccos x ). These arise as the polynomials of degree n of smallest Chebyshev norm on [-1, 1], with leading coefficient unity.
+==================================================
+89. [chebyshev's inequality]
+1. In statistics, the fundamental theorem that the probability of a random variable differing from its mean by more than k standard deviations is less than or equal to 1/k 2 . More generally, the result that, for all > 0, P X - c > ε ( ) ≤ 1 ε 2 E X - c ( ) ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ , where X is a random variable and c is a constant. 2. In statistics, the inequality for two non-increasing sequences of real numbers, a 1 , ..., a n and b 1 , ..., b n that 1 n 2 a j j = 1 n ∑ b i i = 1 n ∑ ≤ 1 nakk = 1 n ∑ b k , with identity if and only if all the a i and all the b i are equal.
+==================================================
+90. [chemical equation]
+A way of denoting the essential features of a chemical reaction using chemical symbols for the participating particles such as atoms, molecules and ions. In other words, it is an expression representing a chemical reaction using chemical symbols and formulae. By convention, reactants are put on the left and products on the right. A single arrow between them denotes an irreversible reaction, a double arrow a reversible reaction. Sometimes the reaction conditions (temperature, pH, catalyst, etc.) are put on top or below the arrow. A chemical equation gives information on the reactants, the reacting proportions and how many units of each reactant and product are involved. For example, xA + yB → mC + rD , where x , y , m and r show the relative numbers of molecules reacting and are called stoichiometric coefficient s. An example is the dissociation of salt into sodium and chloride ions: NaCl → Na + + Cl - .
+==================================================
+91. [chemical formula]
+A symbolic representation of the composition of a molecule. It identifies each constituent element by its chemical symbol and indicates the number of atoms of each element found in each discrete molecule of that compound. If a molecule contains more than one atom of a particular element, this quantity is indicated using a subscript after the chemical symbol. An example is the hexane molecule with 6 carbon atoms and 14 hydrogen atoms, written as C6 H14 .
+==================================================
+92. [chemical potential]
+The change in Gibbs free energy (thermodynamic property which determines whether a chemical reaction is spontaneous or not) with respect to a change in the amount of the component, with pressure, temperature and amounts of other components being constant. It was first described by the American engineer, chemist and mathematical physicist Josiah Willard Gibbs (1839-1903). Its symbol is μ B .
+==================================================
+93. [chemical reaction equation]
+A symbolic representation of a chemical reaction, in which the reactant entities are given on the left hand side and the product entities on the right hand side. The coefficients next to the symbols and formulae of entities are the absolute values of the stoichiometric numbers. Different symbols are used to connect the reactants and products with the following meanings: for a stoichiometric relation; → for a netforward reaction; for a reaction in both directions; and for equilibrium.
+==================================================
+94. [chinese remainder theorem]
+In number theory, the basic result that if a set of integers, m i , are pairwise relatively prime, then the congruences x a 1 (mod m i ) have a unique solution for x , modulo the product of all the m i . In other words, the Chinese remainder theorem determines a number n that, when divided by some given divisors, leaves given remainders.
+==================================================
+95. [chirality axis]
+An axis about which a set of ligands is held so that it results in a spatial arrangement which is not superposable on its mirror image. For example, with an allene the chiral axis is defined by the C=C=C bonds; and withan ortho - substitutedbiphe ny lthe atoms C^-1, C^-1', C^-4 and C^-4' lie on the chiral axis.
+==================================================
+96. [chlorine]
+A greenish-yellow gaseous non-metallic element with a pungent smell with the symbol Cl, atomic number 17, relative atomic mass 35.455, freezing point^-100.98 °C (374.13 K), boiling point^-34.6 °C (238.55 K) and specific gravity 1.56 at^-33.6 °C (239.55 K). It is a member of the halogen group and is widely distributed in combination with the alkali metals such as sodium chloride (NaCl), potassium chloride (KCl), magnesium chloride (MgCl 2 ), etc. It occurs in acid compounds such as hydrochloric acid (HCl), perchloric acid (HClO4 ), phosphorus chloride (PCl 5 ), etc. Chlorine gas can be made in various ways; one such method is reacting concentrated hydrochloric acid (HCl), which contains 97% chlorine, with an oxidising agent such as potassium manganate(VII) or Manganese(IV) Oxide (MnO2 ). It is an important bleaching agent and germicide, used for disinfection of drinking water, wastewater and swimming pool water. Heat oxidising agent Water to remove hydrogen chloride Concentrated tetraoxosurphate(IV) acid (sulphuric acid) to dry the gas Chlorine Concentrated hydrochloric acid Delivery tube Preparation of chlorine from concentrated hydrochloric acid with oxidising agents.
+==================================================
+97. [chlorine dioxide]
+A yellowish-red explosive gas, with the chemical formula ClO2 , melting point^-59 °C (214.15 K) and boiling point 11 °C (284.15 K). It is soluble in cold water but decomposes in hot water to give chlorine and oxygen. It is one of the oxides of chlorine. It is a potent and useful oxidising agent. Chlorine dioxide is widely used as bleach and in water purification.
+==================================================
+98. [chlorobenzene]
+An aromatic organic compound, colourless and highly flammable, with the chemical formula C6 H5 Cl, melting point^-45 °C (228 K) and boiling point 131 °C (404 K). It is prepared by the direct chlorination of benzene using a halogen carrier such as iron or FeCl 3 . It is used mainly as industrial solvent and as an intermediate in the production of some herbicides, dyestuffs and rubber.
+==================================================
+99. [chloroethane]
+A colourless flammable gaseous compound, with the chemical formula C2 H5 Cl, melting point^-139 °C (134 K) and boiling point 12.3 °C (285.4 K). It is made by the reaction of ethane and hydrogen chloride over an aluminium chloride catalyst at temperatures ranging from 130 °C^-250 °C (403.15 K^-523.15 K). It is used in making lead tetraethyl for petrol. Its use in petrol has been banned in most parts of the world due to the negative health effect of lead on man and other organisms.
+==================================================
+100. [chloroethene]
+A colourless, flammable, toxic, gaseous compound belonging to the family of organic compounds of halogens, with the chemical formula CHClCH2 , melting point^-153.8 °C (119.4 K) and boiling point^-13.4 °C (259.8 K). It C is made by reacting ethylene or acetylene with hydrochloric acid. It is produced in very large quantities and used principally in making polyvinylchloride (PVC).
+==================================================

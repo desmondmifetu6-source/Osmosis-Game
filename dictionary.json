@@ -629,7 +629,7 @@
       "word": "abelian theorem",
       "raw_headword": "ABELIAN THEOREM",
       "synonyms": [],
-      "definition": "A theorem stating that the convergence of a series or integral implies summability with respect to some summability method. Named after Norwegian mathematician Niels Henrik Abel (1802–1829). Abel's theorem states that if a power series in $z$ converges to $f(z)$ for $|z| < 1$ and to $a$ for $z = 1$, then $\\lim_{z \\to 1^-} f(z) = a$. In other words, if a power series converges for $z = a$, it converges absolutely for $$$$$|z| < |a|$$$$$. It also states that if three series with $n$-th terms $a_n$, $b_n$ and: $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ respectively converge, then the third series equals the product of the first two series."
+      "definition": "A theorem stating that the convergence of a series or integral implies summability with respect to some summability method. Named after Norwegian mathematician Niels Henrik Abel (1802–1829). Abel's theorem states that if a power series in $z$ converges to $f(z)$ for $|z| < 1$ and to $a$ for $z = 1$, then $\\lim_{z \\to 1^-} f(z) = a$. In other words, if a power series converges for $z = a$, it converges absolutely for $$$$$$|z| < |a|$$$$$$. It also states that if three series with $n$-th terms $a_n$, $b_n$ and: $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ respectively converge, then the third series equals the product of the first two series."
     },
     {
       "word": "abend",
@@ -9844,7 +9844,7 @@
       "word": "annihilation",
       "raw_headword": "ANNIHILATION",
       "synonyms": [],
-      "definition": "In subatomic physics, a high-energy process in which a subatomic particle collides with its corresponding antiparticle, converting their entire rest mass into energy in accordance with Einstein's mass-energy equivalence principle: $$$$$$E = mc^2$$$$$$ In electron-positron annihilation, an electron ($e^-$) and a positron ($e^+$) annihilate at low kinetic energy to produce two gamma-ray photons: $$e^- + e^+ \\longrightarrow 2\\gamma$$ Each gamma photon carries energy $E_\\gamma = m_e c^2 = 0.511\\text{ MeV}$, giving a total energy release of $1.022\\text{ MeV}$."
+      "definition": "In subatomic physics, a high-energy process in which a subatomic particle collides with its corresponding antiparticle, converting their entire rest mass into energy in accordance with Einstein's mass-energy equivalence principle: $$$$$$$$E = mc^2$$$$$$$$ In electron-positron annihilation, an electron ($e^-$) and a positron ($e^+$) annihilate at low kinetic energy to produce two gamma-ray photons: $$e^- + e^+ \\longrightarrow 2\\gamma$$ Each gamma photon carries energy $E_\\gamma = m_e c^2 = 0.511\\text{ MeV}$, giving a total energy release of $1.022\\text{ MeV}$."
     },
     {
       "word": "annihilator",
@@ -25123,7 +25123,7 @@
       "word": "cahn-hilliard model",
       "raw_headword": "CAHN-HILLIARD MODEL",
       "synonyms": [],
-      "definition": "An equation of mathematical physics describing the process of phase separation, named after John W. Cahn and J. E. Hilliard, in which the dynamics is dissipative and the order parameter is conserved. The two components of a binary fluid spontaneously separate and form domains pure in each component. If c is the concentration of the fluid, with c = ±1 indicating domains, then the equation is written as = D2 (c 3 - c- γ 2 c), where D is a diffusion coefficient with units length square over time and gives the length of the transition regions between the domains, is the partial time derivative and 2 is the Laplacian in n dimension. Additionally μ = c 3 - c- γ 2 c is identified as a chemical potential."
+      "definition": "A non-linear fourth-order partial differential equation in mathematical physics describing the process of spontaneous phase separation (spinodal decomposition) in a binary fluid mixture: $$\\frac{\\partial c}{\\partial t} = D \\nabla^2 \\mu = D \\nabla^2 \\left(c^3 - c - \\gamma \\nabla^2 c\\right)$$where $c(\\vec{r}, t)$ is the conserved scalar concentration order parameter (with $c = \\pm 1$ representing pure domains), $D$ is the diffusion mobility coefficient, and $\\mu = \\frac{\\delta F}{\\delta c} = c^3 - c - \\gamma \\nabla^2 c$ is the chemical potential."
     },
     {
       "word": "caiman",
@@ -26095,7 +26095,7 @@
       "synonyms": [
         "hamilton's equations of motion"
       ],
-      "definition": "A set of first-order, highly symmetrical equations describing the motion of a classical dynamical system. They are given by: ! q ∂ H ∂ p , ! p = -∂ H ∂ q , where H is the Hamiltonian function p = ∂ L ∂ ! q ."
+      "definition": "In Hamiltonian mechanics, the symmetric first-order differential equations governing the time evolution of a dynamical system in phase space: $$\\dot{q}_i = \\frac{\\partial H}{\\partial p_i} \\quad \\text{and} \\quad \\dot{p}_i = -\\frac{\\partial H}{\\partial q_i}$$ where $q_i$ are generalized coordinates, $p_i = \\frac{\\partial L}{\\partial \\dot{q}_i}$ are conjugate momenta, and $H(q, p, t) = \\sum p_i \\dot{q}_i - L$ is the Hamiltonian function representing total mechanical energy."
     },
     {
       "word": "canonical rate constant",
@@ -26194,7 +26194,7 @@
       "synonyms": [
         "cantor-schroeder-bernstein"
       ],
-      "definition": "The theorem that establishes that two sets are equipollent if there is an injective mapping from each to the other. For example, if there is an injection for two sets A B and B A, then the two sets are of the same cardinality: there is a bijection A B. It can also be stated that if |A| ≤ |B| and |B| ≤ |A|, then |A| = |B|."
+      "definition": "A fundamental theorem in set theory stating that if there exist injective mappings $f: A \\to B$ and $g: B \\to A$ between two sets $A$ and $B$, then there exists a bijective mapping between them, establishing that both sets have identical cardinality: $$|A| \\le |B| \\quad \\text{and} \\quad |B| \\le |A| \\implies |A| = |B|$$"
     },
     {
       "word": "canyon",
@@ -26232,7 +26232,7 @@
       "word": "capacitance",
       "raw_headword": "CAPACITANCE",
       "synonyms": [],
-      "definition": "An electrical property of a capacitor that determines how much charge can be stored in it for a given potential difference between its terminals. In other words, capacitance is the amount of electrical charge that a capacitor can store for each volt of applied potential or the ratio of the magnitude of charge, Q, on either plate to its electric potential V , between the plate. It is expressed as Capacitance ( C) = charge stored/potential difference: = Q V and measured in farads (the S.I unit of capacitance), with the symbol F . The farad is a very large unit and capacitors are more often rated in terms of microfarads (1 μ F = 10 -6 Farad). A capacitor in an ac circuit limits the current flow, similar to a resistor. This applies to an isolated conductor and does not apply to a charged insulator because an insulator cannot have a potential since charge cannot flow across the insulator to equalise the potential."
+      "definition": "The ability of a system of electrical conductors and dielectrics to store electric charge per unit potential difference: $$C = \\frac{Q}{V}$$ where $Q$ is the stored charge in coulombs and $V$ is electric potential difference in volts. Its SI unit is the farad ($\\text{F}$). For an ideal parallel-plate capacitor with plate area $A$ separated by distance $d$: $$C = \\frac{\\varepsilon_0 \\varepsilon_r A}{d}$$ where $\\varepsilon_0 \\approx 8.854 \\times 10^{-12}\\text{ F/m}$ is permittivity of free space and $\\varepsilon_r$ is relative permittivity (dielectric constant)."
     },
     {
       "word": "capacitance hygrometer",
@@ -26252,7 +26252,7 @@
       "synonyms": [
         "xc"
       ],
-      "definition": "The opposition of capacitance to alternating current, caused by the inductance and capacitance in a circuit rather than by resistance. It is equal to the reciprocal of the product of the angular frequency of the current times the capacitance. C Its symbol is X C . The equation for calculating the amount of capacitive reactance in an ac circuit is given by: X c = 2 π fc , where X C is the capacitive reactance in ohms, f is the frequency in hertz and C is the capacitance in farads. A capacitor in an ac circuit limits the current flow similar to a resistor, therefore, applying Ohm's Law directly to a capacitor, gives V C = ICxC , where V C is the voltage across the capacitor, I C the current through the capacitor and X C the capacitive reactance. When capacitors are connected in parallel, the total charge, Q t that is stored for the same potential difference, V , equals the sum of the charges stored on the individual capacitors in the circuit: Q t = q 1 + q 2 + ... + q n . For capacitors connected in series, the total charge 1 Q t = 1 q 1 + 1 q 2 + ... + 1 q n . The total capacitance, 1 Q t , of capacitors in series is always less than the least capacitance in the circuit."
+      "definition": "The opposition to the flow of alternating current caused by a capacitor's capacitance, denoted by $X_C$: $$X_C = \\frac{1}{\\omega C} = \\frac{1}{2\\pi f C}$$ where $X_C$ is measured in ohms ($\\Omega$), $f$ is frequency in Hertz, and $C$ is capacitance in farads. By Ohm's Law for capacitive AC circuits: $V_C = I_C X_C$. For capacitors in parallel: $C_{\\text{total}} = C_1 + C_2 + \\dots + C_n$. For capacitors in series: $\\frac{1}{C_{\\text{total}}} = \\frac{1}{C_1} + \\frac{1}{C_2} + \\dots + \\frac{1}{C_n}$."
     },
     {
       "word": "capacitor",
@@ -27184,7 +27184,7 @@
       "word": "cardano's formula",
       "raw_headword": "CARDANO'S FORMULA",
       "synonyms": [],
-      "definition": "The name commonly given to the formula for the solution by radicals of the general (normalised) cubic equation, x 3 + ax 2 + bx + c = 0. On substituting, x = y^-1 a the reduced form of the cubic is obtained, where y 3 + py + q = 0, the quadratic form is missing. The discriminant of the cubic is Δ 2 = q 2 4 + p 3 ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ in order to have repeated roots if and only if ∆ 2 = 0, when ∆ 2 > 0 the unique real solution to the reduced cubic form is - q 2 2 + Δ ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ + - q 2 2 - Δ ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ . In the case where ∆ 2 < 0, there are three real solutions best expressed trigonometrically. A corresponding solution to the general quartic equation exists and is associated with the names of Ludovico Ferrari and Geralamo Cardano, which proceeds by producing a cubic resolvent equation to which the previous formula applies. Although named after Geralamo Cardano, he did not find the solution to the cubic, he published it in his treatise, based on the formula of Niccolò Tartaglia and the solution of the quartic by Ludovico Ferrari."
+      "definition": "The algebraic solution for the roots of a reduced cubic equation $y^3 + py + q = 0$, published by Gerolamo Cardano (1545): $$y = \\sqrt[3]{-\\frac{q}{2} + \\sqrt{\\Delta}} + \\sqrt[3]{-\\frac{q}{2} - \\sqrt{\\Delta}}$$ where the cubic discriminant $\\Delta$ is given by: $$\\Delta = \\left(\\frac{q}{2}\\right)^2 + \\left(\\frac{p}{3}\\right)^3$$ If $\\Delta > 0$, there is one real root and two complex conjugate roots; if $\\Delta = 0$, there are multiple real roots; and if $\\Delta < 0$ (casus irreducibilis), there are three distinct real roots."
     },
     {
       "word": "cardiac cycle",
@@ -27246,7 +27246,7 @@
       "word": "cardioid",
       "raw_headword": "CARDIOID",
       "synonyms": [],
-      "definition": "A heart-shaped curve generated by a fixed point on the circumference of a circle as it rolls around another circle of equal radius, R . It has an equation of p = n (1 ± cos θ ) or p = a (1 ± sin θ) in polar coordinates. Its cartesianequationis ( x 2 + y 2 - 2 Rx ) 2 = 4 R2 ( x 2 + y 2 )."
+      "definition": "A heart-shaped plane curve traced by a fixed point on the perimeter of a circle of radius $a$ rolling without slipping around an equal fixed circle of radius $a$. In polar coordinates, its equation is: $$r = 2a(1 \\pm \\cos\\theta) \\quad \\text{or} \\quad r = 2a(1 \\pm \\sin\\theta)$$ In Cartesian coordinates: $$(x^2 + y^2 - 2ax)^2 = 4a^2(x^2 + y^2)$$"
     },
     {
       "word": "cardiology",
@@ -27304,7 +27304,7 @@
       "synonyms": [
         "pseudoprime"
       ],
-      "definition": "An odd composite number ' n ' which satisfies Fermat's little theorem b n^-1 ≡ 1(mod n ). The first ten Carmichael numbers are 561, 1105, 1729, 2465, 2821, 6601, 8911, 10585, 15841, 29341. Only one composite pseudo-prime, 561 is less than 1000."
+      "definition": "A composite positive integer $n$ that satisfies Fermat's Little Theorem congruence for all integers $b$ coprime to $n$: $$b^{n^-1} \\equiv 1 \\pmod n \\quad \\text{for all } \\gcd(b, n) = 1$$ Also known as absolute pseudoprimes. By Korselt's criterion, a composite integer $n$ is a Carmichael number if and only if $n$ is square-free and for every prime divisor $p$ of $n$, $(p^-1)$ divides $(n^-1)$. The smallest Carmichael number is $561 = 3 \\times 11 \\times 17$."
     },
     {
       "word": "carminatives",
@@ -27604,7 +27604,7 @@
       "synonyms": [
         "euclidean distance"
       ],
-      "definition": "In mathematics, the distance between two points in Euclidean space, defined as the square root of the sum of the squares of the differences between the corresponding coordinates of the points. In a 2-dimensional Euclidean space, the distance PQ between P = ( x 1 , y 1 ) and Q = ( x 2 , y 2 ), is ( x 1 - x 2 ) 2 + ( y 1 - y 2 ) 2 . In n dimensions, the Euclidean distance between two points p and q is ( p i - q i ) 2 i = 1 n ∑ , where p i or q i is the coordinate of p or q in dimension i ."
+      "definition": "The straight-line Euclidean distance between two points in Cartesian coordinate space. In 2-dimensional space between points $P(x_1, y_1)$ and $Q(x_2, y_2)$: $$d(P, Q) = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$ In $n$-dimensional Euclidean space $\\mathbb{R}^n$ between vectors $\\vec{p}$ and $\\vec{q}$: $$d(\\vec{p}, \\vec{q}) = \\sqrt{\\sum_{i=1}^n (p_i - q_i)^2}$$"
     },
     {
       "word": "cartesian geometry",
@@ -27632,7 +27632,7 @@
       "word": "cartesian product",
       "raw_headword": "CARTESIAN PRODUCT",
       "synonyms": [],
-      "definition": "A set of all pairs of elements ( a , b ) that can be constructed from given sets, A and B, such that a is a member of A and b is a member of B and is denoted by A × B. The elements ( a , b ) of A × B are ordered pairs, where a A and b B. The cross product of two or three dimensional vectors a = ( a 1 , a 2 , a 3 ) and b = ( b 1 , b 2 , b 3 ) is a × b = [( a 2 b 3 - a 3 b 2 ),( a 3 b 1 - a 1 b 3 ),( a 1 b 2 - a 2 b 1 )]; a x b (read a cross b ) is a vector with the following properties: (i) ǁ a x b ǁ = ǁ a ǁ . ǁ b ǁ . sinθ ab , where θ ab is the angle between a and b and ǁ a ǁ is the length of vector a. (ii) a × b is perpendicular to both a and b . (iii) The direction of a × b is determined by the right hand rule: if you put your right hand so that your finger point in the direction from a to b , then your thumb points in the direction of a × b . (iv) a × b = 0, if a and b are parallel, i.e, if θ = 0 . (v) ǁ a × b ǁ = ǁ a ǁ . ǁ b ǁ if a and b are perpendicular. (vi) The cross product is not cumulative since a × b = - b × a . The Cartesian product of n sets, also known as a n -fold Cartesian product, can be represented by an array of n dimensions, where each element is an n -tuple. An ordered pair is a 2-tuple or couple ."
+      "definition": "1. For two sets $A$ and $B$, the set of all ordered pairs $(a, b)$ where $a \\in A$ and $b \\in B$: $$A \\times B = \\{(a, b) : a \\in A \\text{ and } b \\in B\\}$$ The cardinality satisfies $|A \\times B| = |A| \\times |B|$. 2. For two 3-dimensional Cartesian vectors $\\vec{a}$ and $\\vec{b}$, their vector cross product is: $$\\vec{a} \\times \\vec{b} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ a_x & a_y & a_z \\\\ b_x & b_y & b_z \\end{vmatrix} = (a_y b_z - a_z b_y)\\hat{i} + (a_z b_x - a_x b_z)\\hat{j} + (a_x b_y - a_y b_x)\\hat{k}$$ with magnitude $|\\vec{a} \\times \\vec{b}| = |\\vec{a}| |\\vec{b}| \\sin\\theta$."
     },
     {
       "word": "cartesian space",
@@ -27976,13 +27976,13 @@
       "word": "catalan numbers",
       "raw_headword": "CATALAN NUMBERS",
       "synonyms": [],
-      "definition": "The integers of the form2 n ! n !9( n + 1)! = n + 1 2 n n ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ . It is denoted by C( n ) or C n . Catalan numbers form a sequence of natural numbers that occur in various counting problems, often involving recursively-defined objects. The first four are 2, 3, 10 and 420. Catalan number was named after Eugène Charles Catalan (1814-1894), a Belgian mathematician. Catalan numbers arise in a number of problems in combinatorial mathematics and can be used among other things to, for example, describe the following: (i) the number of binary trees with n vertices; (ii) the number of ways to use n rectangles to tile a stairstep shape (1, 2, ..., n^-1, n ); (iii) the number of ways a polygon with n + 2 sides can be cut into n triangles; (iv) the number of well formed sequences of 2 n parentheses; and (v) the number of ways 2 n ballots can be counted, in order, with n positive and n negative, so that the running sum is never negative."
+      "definition": "A sequence of positive integers $C_n$ appearing in combinatorial counting problems, defined by the formula: $$C_n = \\frac{1}{n + 1} \\binom{2n}{n} = \\frac{(2n)!}{(n + 1)! \\, n!} \\quad (n \\ge 0)$$ The first several terms are $1, 1, 2, 5, 14, 42, 132, 429, 1430$. Catalan numbers enumerate the number of correct bracket pairings of $n$ pairs of parentheses, full binary trees with $n+1$ leaves, and triangulations of a convex polygon with $n+2$ vertices."
     },
     {
       "word": "catalan's constant",
       "raw_headword": "CATALAN'S CONSTANT",
       "synonyms": [],
-      "definition": "A constant, denoted by K that is the sum of the alternating series ( - 1) n (2 n + 1) - 2 = 1 - 1 n = 0 ∞ ∑ + 1 25 - 1 49 ... It is approximately equal to 0.915965. It commonly appears in estimates of combinatorial functions and in certain classes of sums and definite integrals."
+      "definition": "A mathematical constant, denoted by $G$ or $K$, appearing in combinatorics and definite integrals, defined as the sum of the alternating Dirichlet beta series: $$K = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n + 1)^2} = 1 - \\frac{1}{9} + \\frac{1}{25} - \\frac{1}{49} + \\dots \\approx 0.91596559$$"
     },
     {
       "word": "catalase",
@@ -28396,7 +28396,7 @@
       "word": "cauchy condensation test",
       "raw_headword": "CAUCHY CONDENSATION TEST",
       "synonyms": [],
-      "definition": "The test for the convergence of a series that relies on the fact that if { p n } are decreasing positive terms, then ∑ p n and ∑2 p 2n converge or diverge together."
+      "definition": "A convergence test for an infinite series $\\sum_{n=1}^\\infty a_n$ of non-negative, monotonically decreasing terms ($a_1 \\ge a_2 \\ge \\dots \\ge 0$): $$\\sum_{n=1}^{\\infty} a_n \\text{ converges} \\iff \\sum_{k=0}^{\\infty} 2^k a_{2^k} \\text{ converges}$$ For example, applying this test to the $p$-series $\\sum \\frac{1}{n^p}$ yields $\\sum 2^k \\frac{1}{(2^k)^p} = \\sum (2^{1-p})^k$, which converges if and only if $p > 1$."
     },
     {
       "word": "cauchy condition",
@@ -28408,7 +28408,7 @@
       "word": "cauchy integral formula",
       "raw_headword": "CAUCHY INTEGRAL FORMULA",
       "synonyms": [],
-      "definition": "The fundamental formula f ( z ) = 1 2 π i f ( w )[ w - z ] - 1 , C ∫ for a function that is analytic on a region, where C is any positively oriented simple closed curve surrounding z and lying inside the region."
+      "definition": "A central theorem in complex analysis stating that if a function $f(z)$ is holomorphic (analytic) within and on a simple closed positively oriented contour $C$, then for every point $z_0$ inside $C$: $$f(z_0) = \\frac{1}{2\\pi i} \\oint_C \\frac{f(z)}{z - z_0} \\, dz$$ Higher derivatives of $f$ are given by: $$f^{(n)}(z_0) = \\frac{n!}{2\\pi i} \\oint_C \\frac{f(z)}{(z - z_0)^{n+1}} \\, dz$$"
     },
     {
       "word": "cauchy principal value",
@@ -28420,7 +28420,7 @@
       "word": "cauchy product",
       "raw_headword": "CAUCHY PRODUCT",
       "synonyms": [],
-      "definition": "The convolution of two sequences given by C n = a n - kbkk = 0 n ∑ . If the series ∑ a n sums to A and ∑ b n to B, then the Cauchy product series sums to AB if one of the series is absolutely convergent."
+      "definition": "The discrete convolution product of two infinite series $\\sum_{n=0}^\\infty a_n$ and $\\sum_{n=0}^\\infty b_n$, defined as $\\sum_{n=0}^\\infty c_n$ where: $$c_n = \\sum_{k=0}^{n} a_k b_{n-k} = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ By Mertens' theorem, if both series converge and at least one converges absolutely, their Cauchy product converges to the product of their sums: $$\\sum_{n=0}^{\\infty} c_n = \\left(\\sum_{n=0}^{\\infty} a_n\\right) \\left(\\sum_{n=0}^{\\infty} b_n\\right)$$"
     },
     {
       "word": "cauchy sequence",
@@ -28434,13 +28434,13 @@
       "word": "cauchy's inequality",
       "raw_headword": "CAUCHY'S INEQUALITY",
       "synonyms": [],
-      "definition": "The special case of Cauchy-Schwarz inequality in Euclidean space: aibii = 1 n ∑ ≤ a i i = 1 n ∑ ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ b i i = 1 n ∑ ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ . This follows from the cosine law."
+      "definition": "The fundamental Cauchy-Schwarz inequality for sequences of real numbers: $$\\left(\\sum_{i=1}^n a_i b_i\\right)^2 \\le \\left(\\sum_{i=1}^n a_i^2\\right) \\left(\\sum_{i=1}^n b_i^2\\right)$$ Equality holds if and only if the sequences are proportional ($a_i = \\lambda b_i$). In vector dot-product notation: $$|\\vec{a} \\cdot \\vec{b}| \\le \\|\\vec{a}\\| \\|\\vec{b}\\|$$"
     },
     {
       "word": "cauchy's integral theorem",
       "raw_headword": "CAUCHY'S INTEGRAL THEOREM",
       "synonyms": [],
-      "definition": "The theorem of complex analysis stating that the countour integral of an analytic function around a simple closed curve is zero."
+      "definition": "A foundational theorem of complex analysis stating that if a function $f(z)$ is analytic throughout a simply connected domain $D$, then its contour integral around any closed rectifiable path $C$ in $D$ is zero: $$\\oint_C f(z) \\, dz = 0$$"
     },
     {
       "word": "cauchy's lemma",
@@ -28454,7 +28454,7 @@
       "synonyms": [
         "generalized mean-value theorem"
       ],
-      "definition": "It states that if f and g are differentiable in an interval ( a , b ) and continuous on [ a , b ] then f '( c )[ g ( b ) - g ( a )] = g '( c )[ f ( b ) - f ( a ) for some point c in the open interval."
+      "definition": "Also known as the Extended Mean Value Theorem, stating that if real-valued functions $f$ and $g$ are continuous on $[a, b]$ and differentiable on $(a, b)$, then there exists at least one $c \\in (a, b)$ such that: $$[f(b) - f(a)] g'(c) = [g(b) - g(a)] f'(c) \\iff \\frac{f'(c)}{g'(c)} = \\frac{f(b) - f(a)}{g(b) - g(a)}$$ provided $g'(c) \\neq 0$ and $g(b) \\neq g(a)$. This theorem forms the basis of L'Hôpital's Rule."
     },
     {
       "word": "cauchy's ratio test",
@@ -28462,7 +28462,7 @@
       "synonyms": [
         "ratio test"
       ],
-      "definition": "A test for a complex series a n n = 1 ∞ ∑ is absolutely convergent the limit of the ratio of the absolute values of successive terms is tested. If the term lim n →∞ a n + 1 a n is less than unity, the series converges absolutely; if it is greater than unity, it diverges."
+      "definition": "D'Alembert's ratio test for the absolute convergence of a complex or real series $\\sum_{n=1}^\\infty a_n$ with non-zero terms: $$L = \\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|$$ 1. If $L < 1$, the series converges absolutely. 2. If $L > 1$ (or $L = \\infty$), the series diverges. 3. If $L = 1$, the test is inconclusive."
     },
     {
       "word": "cauchy's residue theorem",
@@ -28470,7 +28470,7 @@
       "synonyms": [
         "residue theorem of cauchy"
       ],
-      "definition": "A tool used to evaluate line integrals of analytic functions over closed curves. It generalises the Cauchy integral theorem and Cauchy's integral formula that if a function f is analytic in a simply connected domain D except for finitely many isolated singularities, then the contour integral of f over any simple closed curve that misses the singularities is equal to 2 πi times the sum of the residues of f at singularities inside the contour. An equivalent definition is that the integral of a complex function round a Jordan contour is the sum of residues of that function inside the curve multiplied by 2 πiw , where w is the winding number of the curve about that point. This is of great use for evaluating curvilinear integrals of meromorphic functions and so certain classes of definite integrals of real functions."
+      "definition": "A powerful integration theorem stating that if $f(z)$ is analytic in a simply connected domain $D$ except for a finite set of isolated singularities $z_1, z_2, \\dots, z_k$, then the contour integral along a positively oriented simple closed path $C$ enclosing the singularities is: $$\\oint_C f(z) \\, dz = 2\\pi i \\sum_{k=1}^n \\operatorname{Res}(f, z_k)$$ where $\\operatorname{Res}(f, z_k)$ is the residue of $f(z)$ at pole $z_k$ (the coefficient $b_1$ in its Laurent series expansion)."
     },
     {
       "word": "cauchy's root test",
@@ -28478,7 +28478,7 @@
       "synonyms": [
         "root test"
       ],
-      "definition": "The test for whether a complex series ∑ a n is absolutely convergent by considering L = lim sup a n 1/n ; if L is less than unity, the series converges absolutely and if it is greater than unity, the series diverges. The radius of convergence of a power series is the reciprocal of L when the { a n } are the coefficients of the series."
+      "definition": "A convergence test for an infinite series $\\sum_{n=1}^\\infty a_n$, by calculating: $$L = \\limsup_{n \\to \\infty} \\sqrt[n]{|a_n|}$$ 1. If $L < 1$, the series converges absolutely. 2. If $L > 1$, the series diverges. 3. If $L = 1$, the test is inconclusive. For a power series $\\sum a_n (z - z_0)^n$, its radius of convergence is $R = \\frac{1}{L}$ (Cauchy-Hadamard theorem)."
     },
     {
       "word": "cauchy's stress principle",
@@ -28530,7 +28530,7 @@
       "synonyms": [
         "buniakovski's inequality"
       ],
-      "definition": "The inequality, valid for any inner product, that x , y ≤ x . y . ln a Euclidean space this can be written as Cauchys inequality."
+      "definition": "1. The Cauchy-Riemann equations are the necessary and sufficient conditions for a complex function $f(z) = u(x, y) + i v(x, y)$ to be complex differentiable (holomorphic): $$\\frac{\\partial u}{\\partial x} = \\frac{\\partial v}{\\partial y} \\quad \\text{and} \\quad \\frac{\\partial u}{\\partial y} = -\\frac{\\partial v}{\\partial x}$$ 2. The Cauchy-Schwarz inequality for any vectors $x, y$ in an inner product space states: $$|\\langle x, y \\rangle|^2 \\le \\langle x, x \\rangle \\langle y, y \\rangle \\iff |\\langle x, y \\rangle| \\le \\|x\\| \\|y\\|$$"
     },
     {
       "word": "cauda equina",
@@ -28794,7 +28794,7 @@
       "word": "cayley-hamilton theorem",
       "raw_headword": "CAYLEY-HAMILTON THEOREM",
       "synonyms": [],
-      "definition": "When we consider the characteristics of the polynomial p ( λ ) of an m × m matrix A , it is defined by p ( λ ) = det(A - λ I). The theorem about the characteristics polynomial is known as Cayley-Hamilton theorem, which states that every square matrix over a commutative ring satisfies its own characteristic equation. According to Cayley-Hamilton's theorem, if the characteristics p ( λ ) of an m × m matrix A is p ( λ ) = (-1) n ( λ n + b n^-1 λ n^-1 + ... + b 1 λ + b 0 ), then A n + b n^-1 A n^-1 + . . . + b 1 A + b 0 I = 0."
+      "definition": "A fundamental linear algebra theorem stating that every square $n \\times n$ matrix $A$ over a commutative ring satisfies its own characteristic polynomial: $$p(\\lambda) = \\det(\\lambda I - A) = \\lambda^n + c_{n^-1} \\lambda^{n^-1} + \\dots + c_1 \\lambda + c_0 = 0$$ Substituting matrix $A$ yields: $$p(A) = A^n + c_{n^-1} A^{n^-1} + \\dots + c_1 A + c_0 I = \\mathbf{0}$$ This allows higher powers of $A$ and matrix inverses $A^{-1}$ to be expressed as linear combinations of lower powers of $A$."
     },
     {
       "word": "cd spectrum",
@@ -29342,7 +29342,7 @@
       "synonyms": [
         "centigrade temperature"
       ],
-      "definition": "A physical quantity, a temperature, now defined in terms of thermodynamic temperature. It is expressed in the SI unit as degree Celsius (0 o ). Its symbol is o C. Celsius temperature scale is defined from the absolute temperature scale through the relation: θ = T^-273.15, where θ is the temperature in degree Celsius and T is the temperature in Kelvin (K)."
+      "definition": "A scale of temperature defined relative to the Kelvin thermodynamic temperature scale: $$\\theta(^\\circ\\text{C}) = T(\\text{K}) - 273.15$$ where $0^\\circ\\text{C}$ is defined as $273.15\\text{ K}$ (the freezing point of pure water at $1\\text{ atm}$) and $100^\\circ\\text{C}$ is $373.15\\text{ K}$ (the normal boiling point of water). A temperature difference of $1^\\circ\\text{C}$ equals $1\\text{ K}$."
     },
     {
       "word": "cement",
@@ -29478,7 +29478,7 @@
       "word": "central limit theorem",
       "raw_headword": "CENTRAL LIMIT THEOREM",
       "synonyms": [],
-      "definition": "The fundamental statistical result that if a sequence of independent identically distributed random variables C each has finite variance, then as their number increases, their sum (or, equivalently, their arithmetic mean) approaches a normally distributed random variable. Hence, in particular, if sufficiently many samples are successively drawn from any population, the sum or mean of the sample values can be thought of, approximately, as an outcome from a normally distributed random variable. Mathematically, if we let x 1 , x 2 , ..., x n be n independent random variables that are identically distributed (with any distribution) with mean μ and a finite variance σ 2 , the sum S n = x 1 + x 2 + ...+ x n is defined and the ratio: is established, where n, μ and σ . represent the mean and the standard deviation of S n respectively. The central limit theorem establishes that the distribution of the ratio tends to the standard normal distribution when n tends to infinity. This means that P φ ( x ), where φ ( x ) is the distribution function of the normal distribution expressed by φ ( x )= dx ,-∞< x <∞."
+      "definition": "A foundational probability theorem stating that given a sequence of independent, identically distributed (i.i.d.) random variables $X_1, X_2, \\dots, X_n$ with finite mean $\\mu$ and finite variance $\\sigma^2$, the normalized sample mean converges in distribution to a standard normal distribution $\\mathcal{N}(0, 1)$ as $n \\to \\infty$: $$Z_n = \\frac{\\bar{X}_n - \\mu}{\\sigma / \\sqrt{n}} = \\frac{\\sum_{i=1}^n X_i - n\\mu}{\\sigma \\sqrt{n}} \\xrightarrow{d} \\mathcal{N}(0, 1)$$"
     },
     {
       "word": "central meridian",
@@ -29554,7 +29554,7 @@
       "word": "centre of mass",
       "raw_headword": "CENTRE OF MASS",
       "synonyms": [],
-      "definition": "1. The weighted mean position of finite discrete set of particles with position vectors x 1 , x 2 ,..., x n and masses m 1 , ..., m n . Its position vector is given by x = mixii = 1 n ∑ ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ / m i i = 1 n ∑ ⎛ ⎝ ⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟ . 2. For a continuous body, the position vector given by the corresponding ratio of integrals over the volume of the configuration of the body at time t , that is, x ( t ) = ρ x dv ∫ ( ) ρ dv ∫ ( ) , where ρ is the density at the point of position vector x ."
+      "definition": "1. The unique position vector $\\vec{R}_{\\text{cm}}$ representing the weighted mean position of a discrete system of particles with masses $m_i$ and positions $\\vec{r}_i$: $$\\vec{R}_{\\text{cm}} = \\frac{\\sum_{i=1}^n m_i \\vec{r}_i}{\\sum_{i=1}^n m_i} = \\frac{1}{M} \\sum_{i=1}^n m_i \\vec{r}_i$$ 2. For a continuous body with mass density $\\rho(\\vec{r})$ over volume $V$: $$\\vec{R}_{\\text{cm}} = \\frac{1}{M} \\int_V \\vec{r} \\, \\rho(\\vec{r}) \\, dV$$"
     },
     {
       "word": "centre of origin",
@@ -29666,13 +29666,13 @@
       "word": "centripetal acceleration",
       "raw_headword": "CENTRIPETAL ACCELERATION",
       "synonyms": [],
-      "definition": "The acceleration of a body which travels along a circular track at constant speed. The acceleration is directed radially toward the centre of the circle and has a magnitude equal to the square of the body's speed along the curve divided by the distance from the centre of the circle to the moving body. The force causing this acceleration is directed also toward the centre of the circle and is named centripetal force. An example of centripetal acceleration is the acceleration toward the centre that holds a satellite in an elliptical orbit. The magnitude of centripetal acceleration, a c = v 2 / r , where a c is centripetal acceleration, v is velocity in metres per second and r is the radius of the circle in metres. The higher the velocity, the greater the centripetal acceleration; and the smaller the curve of the path being travelled, the greater the centripetal acceleration."
+      "definition": "The radial acceleration directed toward the center of curvature experienced by any body traveling in a circular path of radius $r$ at tangential speed $v$: $$a_c = \\frac{v^2}{r} = \\omega^2 r = \\frac{4\\pi^2 r}{T^2}$$ where $\\omega = \\frac{v}{r}$ is angular speed and $T$ is the period of revolution."
     },
     {
       "word": "centripetal force",
       "raw_headword": "CENTRIPETAL FORCE",
       "synonyms": [],
-      "definition": "The force which makes an object move on a circular path or acts radially inward on an object moving in a curved path or acts tangentially to the object's path. It is that part of total gravitational force that keeps a body in its circular track and it is always directed towards the centre of the circle. For example, with a ball whirled in a circle at the end of a length of string, the centripetal force is the tension in the string and the reaction to this force is the centrifugal force. If the string breaks, the ball will move offin a straight line. The straight line motion in the absence of the constraining force is an example of Newton's first law. For a body of mass, m , moving at constant speed, v , around a circle of radius, r , the magnitude of the centripetal force, F c is expressed as F c = mv 2 / r . The gravitational attraction of the Sun is acentripetal force acting on Earth. This force produces the centripetal acceleration of the orbital motion."
+      "definition": "The net inward radial force required to keep a body of mass $m$ moving in a circular path of radius $r$ at speed $v$: $$F_c = m a_c = \\frac{m v^2}{r} = m \\omega^2 r$$ Centripetal force is not an independent physical force, but rather the net resultant of real forces (such as tension, gravity, or friction) directed toward the center."
     },
     {
       "word": "centripetal inflorescence",
@@ -30067,7 +30067,7 @@
       "word": "ceva's theorem",
       "raw_headword": "CEVA'S THEOREM",
       "synonyms": [],
-      "definition": "The theorem about triangles in Euclidean plane geometry that three Cevians, one through each vertex of a triangle, are concurrent if and only if the product of the ratios in which they divide the opposite sides is unity. In other words, given a triangle ABC, with the points D,E and F lying on lines BC, CA and AB respectively, the lines AD, BE and CF are concurrent if and only if (AF/FB)(BD/DC)(CE/EA) = 1."
+      "definition": "A theorem in Euclidean plane geometry concerning concurrent lines in a triangle. In $\\triangle ABC$, if points $D, E, F$ lie on sides $BC, CA, AB$ respectively, the lines $AD, BE, CF$ are concurrent at a common point if and only if: $$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$$"
     },
     {
       "word": "cevian",
@@ -30205,7 +30205,7 @@
       "word": "chain rule",
       "raw_headword": "CHAIN RULE",
       "synonyms": [],
-      "definition": "A theorem that may be used in the differentiation of compositions of functions. It states that dy dx = dy dt x dt dx , where y is a differentiable function of t and t is a differentiable function of x . This enables a function y = f ( x ) to be differentiated by finding a suitable function u , such that f is a composition of y and u , y is a differentiable function of u and u is a differentiable function of x . Similarly, for partial differentiation, ∂ f ∂ x = ∂ f ∂ u x ∂ u dx ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟+ ∂ f ∂ v x ∂ v dx ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , where f is a function of u and v , each of which is a function of x ."
+      "definition": "A fundamental formula for computing the derivative of the composite of two or more differentiable functions. If $y = f(u)$ and $u = g(x)$, then: $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx} = f'(g(x)) \\cdot g'(x)$$ For multivariable functions where $z = f(u, v)$ with $u = u(x, y)$ and $v = v(x, y)$: $$\\frac{\\partial z}{\\partial x} = \\frac{\\partial z}{\\partial u} \\frac{\\partial u}{\\partial x} + \\frac{\\partial z}{\\partial v} \\frac{\\partial v}{\\partial x}$$"
     },
     {
       "word": "chain scission",
@@ -30547,7 +30547,7 @@
       "word": "characteristic equation",
       "raw_headword": "CHARACTERISTIC EQUATION",
       "synonyms": [],
-      "definition": "1. An equation derived from a given square matrix A in which the characteristic polynomial is set equal to 0. It is of the form det[A - t I], where A is the square matrix, I is the unit matrix and t is a scalar variable. 2. The second order partial differential equation for which a dy dx ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟- b dy dx ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟+ c = 0, where au xx + bu xy + cu yy + du x + eu y + fu = h is the general form of a second order partial differential equation whose solutions give the characteristic curves of the partial differential equation, allowing it to be written in a simpler canonical form."
+      "definition": "For an $n \\times n$ square matrix $A$, the algebraic polynomial equation obtained by setting the characteristic polynomial equal to zero: $$\\det(A - \\lambda I) = 0$$ The roots $\\lambda_1, \\lambda_2, \\dots, \\lambda_n$ of this equation are the eigenvalues (characteristic values) of the matrix."
     },
     {
       "word": "characteristic function",
@@ -30837,7 +30837,7 @@
       "synonyms": [
         "gay-lussac's law"
       ],
-      "definition": "One of the three Gas Laws, which states that the volume of a given mass of gas at constant pressure is directly proportional to its absolute temperature, i.e. V = kT, where V = volume of gas and T = absolute temperature and k is a constant."
+      "definition": "An experimental gas law discovered by Jacques Charles (1787), stating that for a fixed mass of an ideal gas at constant pressure, volume $V$ is directly proportional to absolute temperature $T$: $$V \\propto T \\iff \\frac{V}{T} = \\text{constant} \\iff \\frac{V_1}{T_1} = \\frac{V_2}{T_2}$$ Extrapolating the linear volume-temperature isobar to zero volume identifies absolute zero at $-273.15^\\circ\\text{C}$."
     },
     {
       "word": "charles' theorem",
@@ -30952,13 +30952,13 @@
       "word": "chebyshev polynomials of the first kind",
       "raw_headword": "CHEBYSHEV POLYNOMIALS OF THE FIRST KIND",
       "synonyms": [],
-      "definition": "The orthogonal polynomials defined by T n ( x ) = cos( n arccos x ). These arise as the polynomials of degree n of smallest Chebyshev norm on [-1, 1], with leading coefficient unity."
+      "definition": "A family of orthogonal polynomials $T_n(x)$ on the interval $[-1, 1]$, defined by: $$T_n(x) = \\cos(n \\arccos x)$$ Satisfying the recurrence relation: $$T_{n+1}(x) = 2x T_n(x) - T_{n^-1}(x) \\quad (T_0(x) = 1, T_1(x) = x)$$ The first several polynomials are $T_0 = 1$, $T_1 = x$, $T_2 = 2x^2 - 1$, $T_3 = 4x^3 - 3x$, and $T_4 = 8x^4 - 8x^2 + 1$."
     },
     {
       "word": "chebyshev's inequality",
       "raw_headword": "CHEBYSHEV'S INEQUALITY",
       "synonyms": [],
-      "definition": "1. In statistics, the fundamental theorem that the probability of a random variable differing from its mean by more than k standard deviations is less than or equal to 1/k 2 . More generally, the result that, for all > 0, P X - c > ε ( ) ≤ 1 ε 2 E X - c ( ) ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ , where X is a random variable and c is a constant. 2. In statistics, the inequality for two non-increasing sequences of real numbers, a 1 , ..., a n and b 1 , ..., b n that 1 n 2 a j j = 1 n ∑ b i i = 1 n ∑ ≤ 1 nakk = 1 n ∑ b k , with identity if and only if all the a i and all the b i are equal."
+      "definition": "A fundamental probabilistic bound stating that for any random variable $X$ with finite mean $\\mu$ and finite standard deviation $\\sigma$, the probability of deviation by $k$ or more standard deviations is bounded by: $$P(|X - \\mu| \\ge k\\sigma) \\le \\frac{1}{k^2} \\quad (k > 0)$$ Equivalently, at least $1 - \\frac{1}{k^2}$ of the distribution's values fall within $k$ standard deviations of the mean."
     },
     {
       "word": "check bits",
@@ -31274,7 +31274,7 @@
       "word": "chemical potential",
       "raw_headword": "CHEMICAL POTENTIAL",
       "synonyms": [],
-      "definition": "The change in Gibbs free energy (thermodynamic property which determines whether a chemical reaction is spontaneous or not) with respect to a change in the amount of the component, with pressure, temperature and amounts of other components being constant. It was first described by the American engineer, chemist and mathematical physicist Josiah Willard Gibbs (1839-1903). Its symbol is μ B ."
+      "definition": "The partial molar Gibbs free energy of a thermodynamic component, measuring how total Gibbs free energy changes with the quantity of substance: $$\\mu_i = \\left(\\frac{\\partial G}{\\partial n_i}\\right)_{T, P, n_{j \\neq i}}$$ For chemical equilibrium or phase equilibrium across a multi-component system, the chemical potential of each species must be equal in all phases: $$\\mu_i^{(\\alpha)} = \\mu_i^{(\\beta)}$$"
     },
     {
       "word": "chemical property",
@@ -31735,7 +31735,7 @@
       "word": "chinese remainder theorem",
       "raw_headword": "CHINESE REMAINDER THEOREM",
       "synonyms": [],
-      "definition": "In number theory, the basic result that if a set of integers, m i , are pairwise relatively prime, then the congruences x a 1 (mod m i ) have a unique solution for x , modulo the product of all the m i . In other words, the Chinese remainder theorem determines a number n that, when divided by some given divisors, leaves given remainders."
+      "definition": "A foundational result in number theory stating that if $m_1, m_2, \\dots, m_k$ are pairwise coprime positive integers, then for any given integers $a_1, a_2, \\dots, a_k$, the system of simultaneous congruences: $$x \\equiv a_1 \\pmod{m_1}, \\quad x \\equiv a_2 \\pmod{m_2}, \\quad \\dots, \\quad x \\equiv a_k \\pmod{m_k}$$ has a unique integer solution modulo the product $M = m_1 m_2 \\cdots m_k$."
     },
     {
       "word": "chip",
@@ -56207,7 +56207,7 @@
       "word": "einstein's equation",
       "raw_headword": "EINSTEIN'S EQUATION",
       "synonyms": [],
-      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
+      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
     },
     {
       "word": "einstein, albert",
@@ -56215,7 +56215,7 @@
       "synonyms": [
         "1879-1955"
       ],
-      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
+      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
     },
     {
       "word": "einstein-smoluchowski equation",
@@ -60577,7 +60577,7 @@
       "word": "equations of motion",
       "raw_headword": "EQUATIONS OF MOTION",
       "synonyms": [],
-      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
+      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
     },
     {
       "word": "equator",
@@ -72165,7 +72165,7 @@
       "synonyms": [
         "universal molar gas constant"
       ],
-      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
+      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
     },
     {
       "word": "gas cooled reactor",
@@ -85098,7 +85098,7 @@
       "word": "ideal gas",
       "raw_headword": "IDEAL GAS",
       "synonyms": [],
-      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
+      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
     },
     {
       "word": "ideal gas law",
@@ -93416,7 +93416,7 @@
       "synonyms": [
         "equations of motion"
       ],
-      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
+      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
     },
     {
       "word": "kinematic viscosity",
@@ -95950,7 +95950,7 @@
       "word": "law",
       "raw_headword": "LAW",
       "synonyms": [],
-      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
+      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
     },
     {
       "word": "law of averages",
@@ -103860,7 +103860,7 @@
       "word": "mass-energy equation",
       "raw_headword": "MASS-ENERGY EQUATION",
       "synonyms": [],
-      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
+      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
     },
     {
       "word": "mass-energy relationship",
@@ -114873,7 +114873,7 @@
       "word": "newton's laws of motion",
       "raw_headword": "NEWTON'S LAWS OF MOTION",
       "synonyms": [],
-      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
+      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
     },
     {
       "word": "newton's method",
@@ -119051,7 +119051,7 @@
       "word": "ohm's law",
       "raw_headword": "OHM'S LAW",
       "synonyms": [],
-      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
+      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
     },
     {
       "word": "ohm, george simon",
@@ -119065,7 +119065,7 @@
       "word": "ohmic device",
       "raw_headword": "OHMIC DEVICE",
       "synonyms": [],
-      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
+      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
     },
     {
       "word": "ohmic heating",
@@ -149763,7 +149763,7 @@
       "synonyms": [
         "physical law"
       ],
-      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
+      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
     },
     {
       "word": "scientific method",
@@ -158206,7 +158206,7 @@
       "word": "speed of light",
       "raw_headword": "SPEED OF LIGHT",
       "synonyms": [],
-      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ."
+      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ."
     },
     {
       "word": "speed of sound",
