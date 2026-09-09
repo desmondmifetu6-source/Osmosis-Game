@@ -53,6 +53,22 @@ Total Screenshots to Process: **94**
 
 ---
 
+### Batch 3: Screenshots 21 – 30
+| # | File Name | Visual Content Observed (Native Vision) | Extracted Captions & Labels | Mapped Dictionary Term(s) | Status |
+|---|---|---|---|---|---|
+| 21 | `Screenshot_8-9-2026_113637_.jpeg` | Single leaf outline with notched/indented apex | Leaf shape with emarginate (notched) tip. Caption: *Emarginate leaf* | `emarginate leaf` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 22 | `Screenshot_8-9-2026_12313_.jpeg` | Figure-eight / infinity-loop curve on x-y axes | Symmetric lemniscate curve. Caption: *Eight Curve* | `eight curve`, `lemniscate` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 23 | `Screenshot_8-9-2026_123244_.jpeg` | *(Duplicate of Screenshot 16)* | Electrophilic substitution in aromatics — identical diagram. Caption: *Electrophilic substitution in aromatics* | *(Skipped — already mapped in Batch 2)* | ⏭️ Duplicate skipped |
+| 24 | `Screenshot_8-9-2026_123345_.jpeg` | Cross-section of embryo sac inside curved ovule wall | Embryo sac labeled inside ovule. Caption: *Embryo sac* | `embryo sac`, `ovule` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 25 | `Screenshot_8-9-2026_123414_.jpeg` | Light refraction through glass block | Incident ray → glass block → emergent ray with lateral shift (dashed line). Caption: *Emergent Ray* | `emergent ray`, `lateral shift` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 26 | `Screenshot_8-9-2026_12352_.jpeg` | Eye diagram showing normal focus (emmetropia) | Two eye cross-sections with parallel rays converging at retina R′. Caption: *Emmetropia (Normal)* | `emmetropia`, `normal vision` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 27 | `Screenshot_8-9-2026_123547_.jpeg` | Oak-like leaf with enation protrusion | Leaf with small outgrowth labeled *Enation on a leaf*. Caption: *(Enation on a leaf)* | `enation` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 28 | `Screenshot_8-9-2026_123653_.jpeg` | Full human endocrine system body diagram | Hypothalamus, Pituitary gland, Para-thyroid gland, Thyroid gland, Pancreas, Duodenum, Stomach, Adrenal gland, Left kidney, Ovary (female), Testis (males). Caption: *The endocrine glands* | `endocrine glands`, `hypothalamus`, `pituitary gland`, `thyroid gland`, `parathyroid gland`, `adrenal gland`, `para-thyroid gland` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 29 | `Screenshot_8-9-2026_123755_.jpeg` | Two endoparasites: Roundworm & Tapeworm | Fig I: Roundworm (mouth, anus). Fig II: Tapeworm (head, mouth, genital pores, immature proglottids, mature proglottids). Caption: *Examples of endoparasite* | `roundworm`, `tapeworm`, `proglottid` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 30 | `Screenshot_8-9-2026_123842_.jpeg` | Reaction profile / energy diagram for endothermic reaction | Potential energy (KJmol⁻¹) vs. Reaction Coordinate. A+B=reactants, C+D=products, $E_a$=activation energy, $\Delta H$=+ve (endothermic), P & Q = potential energies of reactants & products. Caption: *Reaction profile diagram for endothermic reaction* | `endothermic reaction`, `reaction profile`, `enthalpy change` | ✅ Integrated in `core_dictionary_diagrams.js` |
+
+---
+
 ## 📐 Part 2: Section E Formula Enrichment
 
 ### Pipeline Workflow:
