@@ -37,6 +37,22 @@ Total Screenshots to Process: **94**
 
 ---
 
+### Batch 2: Screenshots 11 – 20
+| # | File Name | Visual Content Observed (Native Vision) | Extracted Captions & Labels | Mapped Dictionary Term(s) | Status |
+|---|---|---|---|---|---|
+| 11 | `Screenshot_8-9-2026_112525_.jpeg` | 3D electric motor with rotating coil | N/S pole magnets, Commutator, Carbon brush, Current-carrying conductor, direction of motion arrow. Caption: *Simple electric motor* | `electric motor`, `simple electric motor`, `commutator`, `carbon brush` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 12 | `Screenshot_8-9-2026_112635_.jpeg` | Electrolytic cell setup with battery | Battery (+/−), Anode, Cathode, Electric tank, Electrolyte with ion symbols. Caption: *Electrolytic cell* | `electrolytic cell`, `electrolysis`, `anode`, `cathode`, `electrolyte` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 13 | `Screenshot_8-9-2026_112647_.jpeg` | Transverse EM wave propagation diagram | Electric field (vertical oscillations), Magnetic fields (horizontal oscillations), direction of propagation arrow. Caption: *Electromagnetic radiation showing the electric/magnetic fields* | `electromagnetic radiation`, `electromagnetic wave` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 14 | `Screenshot_8-9-2026_112730_.jpeg` | Full electromagnetic spectrum chart | Wavelength (nm) axis top, Frequency (Hz⁻¹) axis bottom. Gamma ray, X-ray, UV, Visible (400–750nm; violet, indigo, blue, green, yellow, orange, red), Infrared, Microwave, Radio frequency. Caption: *Electromagnetic Spectrum* | `electromagnetic spectrum`, `visible spectrum`, `gamma ray`, `infrared`, `ultraviolet`, `microwave`, `radio wave` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 15 | `Screenshot_8-9-2026_11279_.jpeg` | Electromagnetic induction setup | Permanent magnet (S–N), Magnetic flux lines (curved arrows), Coil, Conductor, Galvanometer, Motion arrow. Caption: *Electromagnetic induction* | `electromagnetic induction`, `magnetic flux` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 16 | `Screenshot_8-9-2026_112926_.jpeg` | Electrophilic aromatic substitution mechanism | Phenol + E⁺ → para-product + ortho-product + H⁺. Benzene ring structural formulas with OH group. Caption: *Electrophilic substitution in aromatics* | `electrophilic substitution`, `electrophilic substitution in aromatics`, `electrophile` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 17 | `Screenshot_8-9-2026_113049_.jpeg` | Two elliptic curves on Cartesian plane | Left curve: $y^2 = x^3 - x$, Right curve: $y^2 = x^3 - x + 1$. Caption: *An elliptic curve on a Cartesian plane* | `elliptic curve` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 18 | `Screenshot_8-9-2026_11309_.jpeg` | Gold-Leaf Electroscope cross-section | Drought-proof case, a pair of gold leaves, glass window, Earth connection. Caption: *Gold-Leaf Electroscope* | `gold-leaf electroscope`, `gold leaf electroscope` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 19 | `Screenshot_8-9-2026_113613_.jpeg` | Ellipsoid on 3D Cartesian axes | x, y, z axes; semi-axes $a$, $b$, $c$ labeled from center $o$. Caption: *An ellipsoid on a three dimensional plane* | `ellipsoid` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 20 | `Screenshot_8-9-2026_11362_.jpeg` | Ellipse geometry diagram | Major axis, Minor axis, Semi-major axis, two Focus points. Caption: *An ellipse with its various parts* | `ellipse`, `major axis`, `semi-major axis` | ✅ Integrated in `core_dictionary_diagrams.js` |
+
+---
+
 ## 📐 Part 2: Section E Formula Enrichment
 
 ### Pipeline Workflow:
@@ -52,4 +68,5 @@ Total Screenshots to Process: **94**
 
 ## 📦 Part 3: Git Commit & Push Log
 - **2026-09-09 04:38 UTC:** `[main aeab046]` *Complete Section D formula enrichment (133 terms) and initialize Section E-F tracker* $\to$ Pushed to GitHub.
+- **2026-09-09 12:31 UTC:** `[main 14d3654]` *Diagrams for section E-F (Batch 1: Screenshots 1–10, 17 diagram files)* $\to$ Pushed to GitHub.
 - *(Upcoming batch commits will be appended here automatically)*
