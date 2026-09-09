@@ -1,7 +1,4 @@
-
-"?;.lk,jmnhgfduiokpl[;]'\
-7\=[-p09876554678u9i-p[]\
-"# 📜 Autonomous Mission Log: Sections E & F (Diagrams & Formulas)
+# 📜 Autonomous Mission Log: Sections E & F (Diagrams & Formulas)
 
 > **Architect:** Desmond Mifetu  
 > **Session Initiation:** September 9, 2026 (~05:00 AM)  
@@ -230,7 +227,46 @@ Total Screenshots Processed: **94 / 94 (100% COMPLETE)** across Batches 1 to 10.
 
 ---
 
-## 📦 Part 3: Git Commit & Push Log
+---
+
+## 🛠️ Part 3: Engine Architecture & Stability Milestones
+
+### 1. IIFE Search & Autocomplete Engine Restoration (`scripts/rebuild_core_dictionary.py`)
+- **Issue:** Batch 1 formula serialization initially exported a flat object `const CoreDictionary = {...}`, omitting the IIFE wrapper and the `STEMDictionary` class. This caused `predictWords()`, `getEntry()`, and `getAllWords()` to be undefined, breaking the dictionary search and game stages.
+- **Resolution:** Engineered `scripts/rebuild_core_dictionary.py` which extracts and injects the complete search & autocomplete engine around the enriched `dictionary.json` data, restoring `window.STEMDictionary`, `window.wordBank`, and `window.STEM_DICTIONARY_DATA`.
+- **Validation:** Tested with `test_lookup.js` and `test_predict.js` (100% pass across all stages).
+
+### 2. KaTeX Delimiter Preservation Fix (`core_formula_renderer.js`)
+- **Issue:** In JavaScript, `str.replace(pattern, replacementString)` interprets `$$` inside the replacement string as an escape token for a single `$`. When formula blocks were restored after plain-text preprocessing, `$$...$$` was collapsed to `$ ... $`, causing KaTeX's display math parser (`delimiters: [{left: '$$', right: '$$', display: true}]`) to fail to match and render display equations.
+- **Resolution:** Updated `res.replace(t.id, () => t.content)` using a function replacer. In JavaScript, function return values are treated as raw literals, preventing `$` escape mutation and preserving math delimiters with 100% fidelity.
+
+### 3. Offline KaTeX Local Bundling (`assets/katex/`)
+- **Issue:** Relying on external CDN URLs (`https://cdn.jsdelivr.net/npm/katex...`) caused formulas to fail to render during offline sessions or network drops.
+- **Resolution:** Downloaded and bundled KaTeX 0.16.9 locally into `assets/katex/` (including `katex.min.css`, `katex.min.js`, `auto-render.min.js`, and all 10 essential WOFF2 math fonts).
+- **Offline Reliability:** Updated `module_library.html` and `core_formula_renderer.js` to prioritize local assets served directly from `server.js` with zero network latency, with a resilient fallback renderer for edge cases.
+
+### 4. Two-Pass Headword Precedence Indexing
+- **Issue:** Single-pass index traversal caused words with parenthetical synonyms (e.g. `characteristic root` in Section C, which listed `(EIGENVALUE; LATENT ROOT)`) to register the synonym in `definitionMap` before reaching the actual primary headword entry in Section E (`eigenvalue`). Searching `eigenvalue` returned `characteristic root` with unformatted OCR text instead of the newly enriched Section E KaTeX formula.
+- **Resolution:** Re-architected `definitionMap` construction into a **Two-Pass Priority Indexer**:
+  - **Pass 1:** Registers all primary headwords (`entry.word`) across all letters A–Z first. Exact headwords have absolute priority.
+  - **Pass 2:** Indexes parenthetical synonyms only if the term has not already been claimed by an exact primary headword.
+- **Validation:** Verified via Node and browser: searching `eigenvalue` returns the true Section E entry with interactive display formula $$Ax = \lambda x$$, while searching `characteristic root` returns its proper entry.
+
+---
+
+## 📦 Part 4: Git Commit & Push Log
 - **2026-09-09 04:38 UTC:** `[main aeab046]` *Complete Section D formula enrichment (133 terms) and initialize Section E-F tracker* $\to$ Pushed to GitHub.
 - **2026-09-09 12:31 UTC:** `[main 14d3654]` *Diagrams for section E-F (Batch 1: Screenshots 1–10, 17 diagram files)* $\to$ Pushed to GitHub.
-- *(Upcoming batch commits will be appended here automatically)*
+- **2026-09-09 12:44 UTC:** `[main 50345ab]` *Section E-F Batch 2: 10 diagrams (electric motor, electrolytic cell, EM spectrum, ellipse, ellipsoid, electrophilic sub, etc.)* $\to$ Pushed to GitHub.
+- **2026-09-09 13:03 UTC:** `[main b04cdeb]` *Section E-F Batch 3: 9 diagrams (emarginate leaf, eight curve, embryo sac, emergent ray, emmetropia, enation, endocrine glands, endoparasite, endothermic reaction)* $\to$ Pushed to GitHub.
+- **2026-09-09 13:16 UTC:** `[main cfe6a27]` *Section E-F Batches 4 & 5: energy band, enolate, ensiform, entire, enzyme, epicycle, epicycloid, epiphyte, epoxide, epoxyethane, equiangular, equilateral, equipotential, ergotamine, erose, ergosterol, paraldehyde, euglena, eustachian tube, xor gate* $\to$ Pushed to GitHub.
+- **2026-09-09 13:27 UTC:** `[main cf30fcb]` *Section E-F Batch 6: excretory system, excurrent leaf, exothermic reaction, explanate flower, exterior angles, external work done on expansion, extrinsic semiconductor, mammalian eye, face-centred cube, fact triangle* $\to$ Pushed to GitHub.
+- **2026-09-09 13:38 UTC:** `[main f9f64ab]` *Section E-F Batch 7: factor tree, falcate leaf, flight feather, fermi level, ferrocene, fern, fibre-optic cable, feynman diagram, filter pump, field-emission microscope* $\to$ Pushed to GitHub.
+- **2026-09-09 13:49 UTC:** `[main 6300c6e]` *Section E-F Batch 8: filtration, fischer projection, bony fish, flabellate structure, flavonoids, flemings left-hand rule, flemings right-hand rule, flower anatomy, fluorescein, focal length* $\to$ Pushed to GitHub.
+- **2026-09-09 14:02 UTC:** `[main 5aad0bb]` *Section E-F Batch 9: food chain energy, food web, four-stroke engine, domestic fowl, fractional distillation, frame of reference, free electrons, frequency polygon, frost diagram, friedel-crafts* $\to$ Pushed to GitHub.
+- **2026-09-09 14:15 UTC:** `[main 12f11a1]` *Section E-F Batch 10 (FINAL): fumaric acid, frustum of cone, funiculus, funnelform flower - 94/94 screenshots complete!* $\to$ Pushed to GitHub.
+- **2026-09-09 14:24 UTC:** `[main 4ee2b95]` *Section E Formula Enrichment Batch 1: 37 terms enriched with KaTeX (economy, eddington limit, effective nuclear charge, efficiency, effort, eigenvalue, einstein equation, elastance, electric charge/flux/field/power, etc.)* $\to$ Pushed to GitHub.
+- **2026-09-09 15:57 UTC:** `[main 674760d]` *Fix core_dictionary.js: restore IIFE search & autocomplete engine (predictWords, getEntry, wordBank)* $\to$ Pushed to GitHub.
+- **2026-09-09 16:16 UTC:** `[main d041229]` *Fix formula rendering: bundle offline KaTeX locally in assets/katex and fix delimiter preservation in core_formula_renderer.js* $\to$ Pushed to GitHub.
+- **2026-09-09 17:01 UTC:** `[main dcca82d]` *formulas new style: 2-pass headword precedence indexing & mission log header cleanup (Committed & pushed by Desmond)* $\to$ Pushed to GitHub.
+

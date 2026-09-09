@@ -1,0 +1,59 @@
+Remaining in E: 19
+
+=== [28] earnshaw's theorem ===
+DEF: It states that a collection of point charges cannot be maintained in a stable static equilibrium configuration solely by the electrostatic interaction of the charges. This theorem was first proved by Samuel Earnshaw in 1842 and it is a fundamental result concerning bodies that interact according to inverse square laws, such as Coulomb's law of electrostatics and Newton's law of gravitation. It applies to the classical law forces (electric and gravitational) and also to the magnetic forces of permanent magnets and paramagnetic materials but not diamagnetic materials.
+
+=== [49] eberlein-smulian theorem ===
+DEF: The theorem, named after William Frederick Eberlein and Witold Lwowitsch Schmulian that asserts the equivalence of compactness (Heine-Borel compactness), sequential compactness and limit point compactness in the weak topology for a Banach space.
+
+=== [53] ebullioscope constant ===
+DEF: The ratio of the elevation of the boiling point of a solvent caused by dissolving a solute to the molality of the solution, taken at extremely low concentrations and relates molality to boiling point elevation. Its symbol is Kb.
+
+=== [198] ehrenfest theorem ===
+DEF: The theorem that a quantum-mechanical wave packet obeys the equations of motion of the corresponding classical particle when the position, momentum and force acting on the particle are replaced by the expectation values of these quantities.
+
+=== [332] electromagnetic potentials ===
+DEF: Name for a scalar field, φ and a vector field, A, in terms of which the electric field and magnetic field, E and B respectively, may be expressed completely. This results in a degree of simplification in the use of Maxwell's equations, particularly in their relativistic formulation.
+
+=== [352] electron capture ===
+DEF: 1. A radioactive transformation process for isotopes that have too many protons in the nucleus and insufficient energy to emit a positron. In this case, one of the orbital electrons, usually from the K or L shell is captured by a proton in nucleus, thus forming a neutron and a neutrino (neutral elementary particle). Since the proton is changed to a neutron the atomic number decreases by 1, the nuclide is transformed into a new element. But the atomic mass number remains unchanged. Examples of nuclides that undergo electron capture are 41 Ca, 51 Cr, 56 Ni, etc. 2. The formation of a negative ion by an atom or molecule when it acquires an extra free electron or a radioactive transformation in which a nucleus acquires an electron from an inner orbit of the atom thereby transforming initially into a nucleus with the same mass number but an atomic number one less than that of the original nucleus. It is accompanied by emission of an x-ray photon or Auger electron as the vacancy in the inner orbit is filled by an outer electron. If the energy difference between the parent atom and the daughter atom is less than 1.022 MeV, positron emission is forbidden and electron capture is the sole decay mode. For example, Rubidium^-83 will decay to Krypton^-83 only by electron capture (the energy difference is about 0.9 MeV).
+
+=== [418] electrophilic addition ===
+DEF: A chemical reaction that involves the addition of a molecule to an unsaturated organic compound across a double or triple bond. In this reaction, a π bond is broken and two new σ bonds are formed in a chemical compound. The sustaining force for this reaction is the formation of an electrophile X + that forms a covalent bond with an electron-rich unsaturated C=C bond. The positive charge on X is transferred to the carbon-carbon bond, with the formation of a carbocation.
+
+=== [456] elementarily equivalent ===
+DEF: Of models, such that every sentence in one model is true in the other. Two structures M and N of the same signature, σ are elementarily equivalent if every first-order sentence (formula without free variables) over σ is true in M if and only if it is true in N. This is a weaker relation than isomorphism; that is isomorphic models are elementarily equivalent, but not necessarily vice versa. For example, the non-standard real numbers and the ordinary real numbers are elementarily equivalent.
+
+=== [667] energy balance equation ===
+DEF: The result that the rate of change of the sum of the kinetic energy and internal energy of a sub-body is equal to the sum of the power and the heating of that sub-body.
+
+=== [707] enormous theorem ===
+DEF: The largest theorem in mathematics; it concerns the classification of finite simple groups and encapsulates the work of hundreds of mathematicians over many years.
+
+=== [710] enrichment ===
+DEF: 1. The process of increasing the abundance of a specified isotope in a mixture of isotopes. In a nuclear reactor or weapon, it is normally applied to increase the proportion of U^-235 or the addition of Pu^-239 to natural uranium for use by the reactor. 2. In analytical chemistry, the process of increasing the concentration of trace components of a solution by preconcentration. Metal ions in natural waters can be enriched using cation exchange chromatography.
+
+=== [850] epoxy compounds ===
+DEF: Compounds in which an oxygen atom is directly attached to two adjacent or non-adjacent carbon atoms of a carbon chain or ring system; thus cyclic ethers. The term epoxides represents a subclass of epoxy compounds containing a saturated three-membered cyclic ether; thus oxirane derivatives. Examples are 1,2-epoxypropane or 2-methyloxirane (an epoxide); 9,10-epoxy^-9,10- dihydroanthracene (an epoxy compound).
+
+=== [870] equals sign ===
+DEF: 1. The symbol '=' used between two expressions to indicate the identity of their references or values. 2. Symbol used for definitions, usually written either with 'df' subscript to the right, with a small triangle superscript or with the word 'definition' or 'defn' in the same line. The equals sign written with a colon to the left is used both for definitions and in computing for the assignment of values to variables, where x := x + y means that the new value of the variable labelled x is to be the sum of the previous values of x and y .
+
+=== [873] equation of time ===
+DEF: The length of time that must be added to the mean solar time as shown on a clock to give the apparent solar time, as shown by a sundial. The amount varies during the year, being at a minimum of^-14.2 minutes in February and a maximum of +10.4 minutes in October. Apparent solar time has annual variation as a result of the Sun's inclination in the ecliptic and the eccentricity of the Earth's elliptical orbit.
+
+=== [1209] excluded middle law ===
+DEF: A law in (two-valued) logic which states that there is no third alternative to truth or falsehood. In other words, for any statement A, either A or not-A must be true and the other must be false. This law no longer holds in three-valued logic, in which "undecided" is a valid state, nor does it hold in fuzzy logic.
+
+=== [1289] explicit function ===
+DEF: A function, in which the dependent variable can be expressed directly in terms of the independent variable, so that its values may be directly calculated from those of the independent variables. Examples are y = x 2 - 3 and y = log2 x .
+
+=== [1328] extended real numbers ===
+DEF: The set [-∞, ∞] of real numbers, together with the positive and negative infinite cardinals. It is usually denoted by R . Often the field and order operations are partially extended to [-∞, ∞], so that, for example, r + ∞ = + ∞ for r ≠ -∞; the extended real line is then order equivalent and topologically equivalent to [0, 1].
+
+=== [1348] external direct product ===
+DEF: 1. Also known as external direct sum of groups, it is the Cartesian product M = M1 × M2 × ... × M n , of a finite or infinite set of modules over a ring, but with only finitely many non-zero entries in each sequence, where multiplication by a member of the ring, r , is defined as r x 1 ,..., x n = rx 1 ,..., rx n . 2. Also known as Cartesian product , it is an external direct sum over infinitely many spaces in which the sum is not required to be finite.
+
+=== [1349] external division ===
+DEF: In geometry, the external division of a segment is the construction of a point E, lying beyond the endpoints A and B of a given line segment AB, in such a way that the ratio of the directed lengths | AE | to | EB | is some given negative number λ i .
+

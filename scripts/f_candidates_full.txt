@@ -1,0 +1,306 @@
+=== 1. [5] f-sigma set ===
+DEF: A subset of a topological space expressible as the union of countably many closed sets, usually denoted F σ . In a metric space all open sets are of this form, as are the rationals as a subset of the reals.
+
+=== 2. [26] fact extensions ===
+DEF: Calculations involving larger numbers based on knowledge of basic arithmetic facts. For example, knowing the addition fact of 5 × 10 = 50 makes it easier to solve problems such as 50 × 10 = 500 and 500 ÷ 10 = 50. Fact extensions apply to all the four basic arithmetic operations.
+
+=== 3. [27] fact family ===
+DEF: In mathematics, a set of three numbers that can be added and subtracted, or divided and multiplied together to link two inverse operations. For example, in the arithmetic operations of 10 + 6 = 16, 6 + 10 = 16; or 16 - 6 = 10 and 16 - 10 = 6 is an addition/subtraction fact family. Also, 4 × 6 = 24 or 6 × 4 = 24, 24 ÷ 6 = 4, or 24 ÷ 4 = 6 are a multiplication/ division fact family. In the addition/subtraction fact family, the three set of numbers in operation are 10, 6 and 16. In the multiplication/ division fact family the three set of numbers in operation are 4, 6 and 24. A fact family helps to understand the inverse relationship, or opposite relationship, between addition and subtraction and between Addition/Subtraction Fact Triangle Multiplication/Division Fact Triangle ×, ÷ +, - multiplication and division in early stages of education.
+
+=== 4. [29] factor ===
+DEF: 1. Also known as divisor or submultiple , any integer or polynomial that divides into another number or polynomial exactly. For example, the factors of 24 are: 1, 2, 3, 4, 6, 8, 12 and 24; factors of the polynomial f ( x )= 2 x 3 + 3 x 2 - 5 x^-6 are ( x + 1), ( x + 2) and (2 x^-3). 2. Any analogous quantity or entity whose product with another is a given quantity or entity, such as any of a set of cycles of which the composition is a given permutation. 3. In statistics, a postulated causal influence derived from and used to explain a cluster of responses. 4. Anything that affects an organism living in a habitat; for example, abiotic and biotic factors. 5. Any substance that functions in a specific biochemical process such as blood coagulation or physiological process such as growth factors.
+
+=== 5. [31] factor formulae ===
+DEF: Trigonometric identities given by the following: i.sin A + sin B = 2sin A + B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ cos A - B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , ii.sin A - sin B = 2sin A - B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ cos A + B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , iii.cos A + cos B = 2cos A + B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ cos A - B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , and iv.cos A - cos B =- 2sin A + B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ sin A - B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ .
+
+=== 6. [39] factor theorem ===
+DEF: A theorem in algebra, which is a special case of the polynomial remainder theorem and shows that a number or expression is the outcome of two or more factors multiplied together. It states that a polynomial f ( x ) has a factor Factor Tree of 18 ( x - k ) if and only if f ( k ) = 0. For example, if f ( x ) = x 3 + 2 x 2 + 3 x^-6. then ( x^-1) is a factor, since f (1) = (1) 3 + 2(1) 2 + 3(1) - 6 = 0, thus f (1) = 0.
+
+=== 7. [43] factorial ===
+DEF: The function, symbolised ! that computes the product of the first n natural numbers, written n ! = n ( n^-1)!. In other words, it is the product of a given number and all the whole numbers below it. For example, the factorial of 0 is written as 0! = 1; 1! = 1; 2! = 2 x 1 = 2; 3! = 3 x 2 x 1 = 6; 4! = 4 × 3 × 2 × 1 = 24.
+
+=== 8. [45] factorial series ===
+DEF: A series of the form, z ≠ 0, -1, -2,... It converges or diverges together with the ordinary Dirichlet series except at z = 0, -1, -2, ... .
+
+=== 9. [54] fahrenheit, gabriel daneil ===
+DEF: German physicist, who became an instrument maker in Amsterdam. In 1714 he developed the first thermometer, employing mercury instead of alcohol and devised the Fahrenheit scale. He discovered that other liquids besides water have a fixed boiling point and that these boiling points vary with changes in atmospheric pressure. To convert Fahrenheit temperatures to Celsius, subtract 32 from the Fahrenheit reading, multiply by 5 and divide by 9, i.e., °C = (°F^-32) × 5 ⁄ 9 . To convert Celcius into Fahrenheit, multiply the Celsius reading by 9/5 and add 32, i.e., °F = (°C × 9 ⁄ 5 ) + 32.
+
+=== 10. [55] failure rate ===
+DEF: The probability of failure of a component or the death of an organism, within the next unit of time, ∆ t , given survival to time t . It is defined mathematically as Δ t ⋅ h ( t ) = P[X ≤ ( t + Δ t ): X > t ].
+
+=== 11. [73] false position ===
+DEF: A method of solving equations by using trial and error values for the variables and then adjusting the values accordingly. For example, in solving x 2 + y 2 = 50, test values like x = 5, y = 6 might be attempted, which gives x 2 + y 2 = 25 + 36 = 61, which is more than 50; therefore smaller values for the variables would have to be guessed until the equation is solved. There are two types of false position methods: (i) simple false position for solving problems involving direct proportion that can be written algebraically in the form ax = b , for the value of x to be found if the values of a and b are known. (ii) Double false position is used for solving more difficult problems that can be written algebraically in the form: f ( x ) = b for the value of x to be determined, if it is known that f ( x 1 ) = b 1 and f ( x 2 ) = b 2 .
+
+=== 12. [79] family of confocal central conics ===
+DEF: The family of curves given by + = 1. The differential equation of this family of plane curves is ( xy ' - y )( yy ' + x ) = ( a 2 - b 2 ) y '.
+
+=== 13. [80] family of curves ===
+DEF: A set of similar curves that display a particular geometric pattern and whose equations can be obtained by varying a finite number of parameters in a particular general equation. For example, y = 2 x 2 + c , where c is a constant representing family of curves.
+
+=== 14. [89] farad ===
+DEF: The SI unit of capacitance, named after the English physicist, Michael Faraday. A capacitance of 1 farad is defined as a capacitor that carries a charge of 1 coulomb when a potential difference of 1 volt is applied across it. Its symbol is F. 1F = 1CV -1 .
+
+=== 15. [96] faraday constant ===
+DEF: The magnitude of electric charge carried by one mole of electrons or singly ionised ions that is the product of the Avogadro constant and the charge on an electron. Its symbol is F and it has the value 9.648670 x 10 4 coulombs per mole.
+
+=== 16. [99] faraday's law of electromagnetic induction ===
+DEF: A law which states that whenever the magnetic flux linking a coil is charged, electromotive force (emf) is induced in the coil whose magnitude is proportional to the rate of change of the magnetic flux.
+
+=== 17. [100] faraday's laws of electrolysis ===
+DEF: Faraday's 1 st Law of Electrolysis states that for a given quantity of electricity (electric F charge), the amount of chemical change during electrolysis is proportional to the charge passed or the mass of an element discharged at the electrodes during electrolysis is directly proportional to the quantity of electricity passing through the electrolyte. Faraday's 2 nd Law of Electrolysis states that for a given quantity of electricity (electric charge), the charge required to deposit or liberate a mass, m is given by Q = Fz/m, where F is the faraday constant, z the charge of the ion and M the relative ionic mass.
+
+=== 18. [105] farkas' lemma ===
+DEF: The result that a linear inequality ( f 0 , x ) ≤ 0 is a consequence of a system ( f 1 , x ) ≤ 0, ..., f n , x ≤ 0, if and only if there are non-negative real numbers λ 1 , ..., λ n with λ kfkk = 1 n ∑ = f 0 . The result holds with certain of the inequalities replaced by equalities if the corresponding multipliers are now arbitrary real numbers. This is the key result underpinning the Kuhn-Tucker theorem or linear programming duality.
+
+=== 19. [135] fatou's lemma ===
+DEF: The theorem that establishes an inequality relating the integral (in the sense of Lebesgue) of the limit inferior of a sequence of functions to the limit inferior of integrals of these functions. If { f n } is a sequence of non-negative measurable functions, then ∫ liminf n →∞ f $n_d$ µ ≤ liminf n →∞ ∫ f $n_d$ µ . The theorem can be used to prove the Fatou-Lebesgue theorem and Lebesgue's dominated convergence theorem.
+
+=== 20. [166] feit-thompson theorem ===
+DEF: The theorem of group theory that asserts that every finite simple non-abelian group has even order. In other words, there is no non-abelian finite simple groups of odd order; or every finite group of odd order is solvable. It was named after mathematicians Walter Feit and John G. Thompson.
+
+=== 21. [167] fejer's theorem ===
+DEF: It states that the arithmetic means of the partial sums of the Fourier series of any periodic function continuous of the interval [- π , π ] are uniformly convergent to the functions.
+
+=== 22. [181] fenchel's duality theorem ===
+DEF: One of the central duality results in convex optimisation theory that if f : X → ] -∞ , ∞ ] and g : X → ]-∞, ∞] are respectively a convex and a concave functions, then, if there is a point at which one function is continuous and the other is finite, inf x f ( x ) = max 1 ∗ { g ∗ ( x ∗ ) - f ∗ ( x ∗ )}, where f * is the Fenchel conjugate of f and g *( g *) = - (- g )*(- x *).
+
+=== 23. [188] fermat's last theorem ===
+DEF: It states that there is no solution to the equation a n + b n = c n where a , b , c and n are all positive integers and n > 2. If n = 2, then there are many solutions. The theorem acquired its name because Fermat mentioned the theorem and claimed to have discovered a proof of it, but did not have space to write it down. Nobody has ever discovered a counterexample, but it has turned out to be very difficult to prove this theorem. Over the years several proofs have been proposed, but closer analysis has revealed they have flaws. Prior to being proved, this statement should more properly be called a conjecture rather than a theorem. In 1993, Andrew Wiles proposed a proof, based on elliptic curves, which needed revision but was then shown to be correct.
+
+=== 24. [189] fermat's little theorem ===
+DEF: The result in number theory that for any integer n and prime p that is not its factor, n P^-1 is congruent to 1 modulo p . F Fermat's principle can be used to describe the properties of light rays reflected offmirrors, refracted through different media or undergoing total internal reflection.
+
+=== 25. [191] fermat's spiral ===
+DEF: In mathematics, it is the curve traced by a point moving such that the square of its distance from the pole is proportional to its polar angle. Its equation in polar coordinates is r 2 = k θ.
+
+=== 26. [197] fermi constant ===
+DEF: The coupling constant associated with the weak interaction which gives rise to beta decay and which expresses the strength of the interaction between the transforming nucleon and the electron-neutrino field. It has a value of 1.435 × 10 -36 Joule metre 3 , with the symbol G w .
+
+=== 27. [214] ferrel's law ===
+DEF: A law proposed by the US meteorologist, William Ferrel (1817 - 1891). It states that a body moving across the surface of the Earth will tend to be deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere as a result of the Earth's rotation.
+
+=== 28. [253] fibonacci distribution ===
+DEF: The probability distribution of the number of observations needed to obtain a run of two successes in a series of Bernoulli trials with probability of success equalling to half. It is given by P ( X = x ) = 2 - x F2. x^-2 , where the F2. x are Fibonacci numbers.
+
+=== 29. [281] fick's laws ===
+DEF: Laws derived by Adolf Fick in the year 1855 that describe the rate of diffusion in a medium from a higher concentration to a lower concentration, when solutions of different concentrations are brought together and can be used to solve for the diffusion coefficient, D . It can be summarised as Rate of diffusion, α = surface area × difference in concentration length of diffusion path . Ficks law equation can be applied to different locations and parts of a tissue. Gas diffusion across thicker portions of tissue will decrease the time of gas diffusion as opposed to thinner tissue. Also, bigger area affect the rate of diffusion, by showing an increase in the volume of gas diffused.
+
+=== 30. [292] field of fractions ===
+DEF: The full ring of quotients of an integral domain. In other words, it is the smallest field in which an integral domain can be embedded. For example, the field of fractions of the ring of integers is the field of rationals, Q = Quot( Z ).
+
+=== 31. [294] field of sets ===
+DEF: The properties and laws of sets, the set-theoretic operations of union ( ∪ ), intersection ( ∩ ) and complementation and the relations of set equality and set inclusion. It also provides systematic procedures for evaluating expressions and performing calculations involving these operations and relations. The binary operations of set union ( ∪ ) and intersection ( ∩ ) satisfy many identities. Several of these identities or laws have the following names: (i) Commutative laws : A ∪ B = B ∪ A and A ∩ B = B ∩ A (ii) Associative laws : A ∪ (B ∪ C) = (A ∪ B) ∪ C , (A ∩ B) ∩ C = A ∩ (B ∩ C), A ∪ (B ∪ C) = (A ∪ B) ∪ C = (A ∪ C) ∪ B and (A ∩ B) ∩ C = A ∩ (B ∩ C) = (A ∩ C) ∩ C (iii) Distributive laws : A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) and A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C). There are also some more important laws of set algebra. For example, Proposition 3 states that for any subsets A and B of a universal set ∪ , the following identities hold: idempotent laws given by (i) A ∪ A = A and (ii) A ∩ A = A. The de Morgan's laws are given by (i) (A ∪ B )' = A'∩B' and (ii) (A∩B)' = A'∪B' .
+
+=== 32. [342] filter ===
+DEF: 1. A porous material on which solid particles present in air or other fluid which flows through it are largely caught and retained. Filters are made with a variety of materials: cellulose and derivatives, glass fibre, ceramic, synthetic plastics and fibres. Filters may be naturally porous or be made so by mechanical or other means. Membrane/ceramic filters are prepared with highly controlled pore size in a sheet of suitable material such as polyfluoroethylene, polycarbonate or cellulose esters. Nylon mesh is sometimes used for reinforcement. The pores constitute 80-85% of the filter volume commonly and several pore sizes are available for air sampling (0.45 - 0.8 μm are commonly employed). 2. In mathematics, the filter on a set is a family of non-empty subsets of the given set that contains any superset of a member and such that the family is closed under finite intersection. A filter is said to converge to a point x if every neighbourhood of x lies in the filter. This leads to a convergence theory essentially equivalent to that of net convergence. 3. A device that allows only one band of wavelength to pass through it or absorbs some part of visible spectrum and transmits others. 4. A device placed in the path of a beam of radiation to alter its frequency distribution. 5. A circuit that transmits a signal of some frequencies than others. F6. A computer program or device that allows the passage of some frequencies or digital elements and blocks others. 7. A tinted glass or dyed gelation screen placed on a camera lens to control light or colour or distant image.
+
+=== 33. [359] fine structure constant ===
+DEF: The dimensionless constant, with the symbol α . It was introduced by Arnold Sommerfeld in 1916 with a value of about 1/137, that characterises the strength of the electromagnetic interaction. It is given by α = , where e is the charge on an electron, h is the Dirac constant and c is the speed of light in free space.
+
+=== 34. [368] finite ===
+DEF: Limited in extent or scope. In mathematics, a finite set is such that the number of elements it contains can be described by a natural number. For example, the set of integers between^-18 and 5 is finite, because it has a natural number (17) of elements. The set of all prime numbers, on the other hand, is not finite. Liquid with insoluble solid Filter funnel Conical flask Filtered solid-residue Filter paper Filtered liquid-filtrate Filtration.
+
+=== 35. [373] finite fourier transform ===
+DEF: In mathematics, the problem of determining the coefficients the unique polynomial p of degree n that interpolates given values a i ; at w i for i = 0, 1, ..., n where w is a primitive ( n + 1) th root of unity either in the complex field or in a finite field. This finds application in fields such as digital signal processing, where it is widely used in signal processing and analysis. It converts a finite list of equally spaced samples of a function into the list of coefficients of a finite combination of complex sinusoids ordered by their frequencies, that has those same sample values. It can be said to convert the sampled function from its original domain (often time or position along a line) to the frequency domain. They are extremely useful because they reveal periodicities in input data as well as the relative strengths of any periodic components.
+
+=== 36. [415] first isomorphism theorem ===
+DEF: Any theorem stating that some specific algebraic structure, G, has the property that if θ is a homomorphism, then G/ kerθ, where kerθ is the kernel of the homomorphism, is isomorphic to the image of G under the homomorphism.
+
+=== 37. [416] first law of thermodynamics ===
+DEF: It says that any increase in internal energy ∆ U of the system, is the sum of the heat ∆ Q flowing into the system and the work done ∆ W on the system. It can be expressed as: ∆ U = ∆ Q + ∆ W . For work done by the system it is expressed as ∆ U = ∆ Q - ∆ W . The first law makes use of the key concepts of internal energy, heat and system work. It is used extensively in the discussion of heat engines. The standard unit for all these quantities would be the joule.
+
+=== 38. [418] first principles ===
+DEF: A differentiation method that does not depend on any theorem. For example, if y = x 3 , then f' ( x ) = 3 x 3 . To find this using the first principles method requires the following process: f ' ( x ) = lim h → 0 f ( x + h ) - f ( x ) h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥= lim h → 0 f ( x + h ) 3 - x 3 h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ = lim h → 0 x 3 + 3 x 2 h + 3 xh 2 + h 3 - x 3 h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ = lim h → 0 x 3 + 3 x 3 h + 3 xh 2 + h 3 - x 3 h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥= lim h → 0 3 x 2 h + 3 xh 2 + h 3 h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ = lim h → 0 h (3 x 2 ) + 3 xh + h 2 h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥= 3 x 2 + 3 x (0) + (0) 2 = 3 x 2 . Also, the following method can be used: y = x 3 ------ ( i ) y + Δ y = ( x + Δ x ) 3 ------ ( ii ) y + Δ y - y = ( x + Δ x ) 3 - x 3 Δ y = x 3 + 3 x 2 Δ x + 3 x ( Δ x ) 2 + ( Δ x ) 3 - x 3 Δ y = 3 x 2 Δ x + 3 x ( Δ x ) 2 + ( Δ x ) 2 Δ y = Δ x (3 x 2 + 3 x Δ x + ( Δ x ) 2 ) lim Δ y Δ x = dy dx = 3 x 2 + 3 x (0) + (0) 2 as Δ x → 0 dy dx = 3 x 2.
+
+=== 39. [421] first-order differential equations ===
+DEF: A differential equation in which the highest derivative of the dependent variable is a first derivative. For example, 3 x dy dx + 4 = 0.
+
+=== 40. [434] fission ===
+DEF: 1. The splitting or breaking of a heavy atomic nucleus such as uranium into two or more major fragments or a form of radioactivity in which an unstable nucleus splits into two roughly equal parts. The process proceeds with the emission of neutrons and gamma rays. The neutrons are available to initiate further fissions and thus a nuclear chain reaction. Some nuclides such as Californium^-252 (Cf^-252) can undergo spontaneous fission, although fission is induced in other nuclides such as Uranium^-235 (U^-235) by incoming neutrons. The fission fragments can undergo further radioactive decay, producing a host of fission products. The following are examples of fission reaction: . 2. An asexual production in unicellular organisms in which the main or parent cell divides to form two or more daughter cells.
+
+=== 41. [449] fixed point ===
+DEF: 1. A temperature that can be accurately reproduced to enable it to be used as the basis of a temperature scale. In the Celsius scale, for example, the fixed points are the melting ice temperature at 0 °C (273.15 K) and boiling water temperature at 100 °C (373.15 K). 2. Also known as invariant point , it is the point of a function that is mapped into itself by a given transformation; for example, 0 and 1 are fixed points of f ( x ) = x 2 , since f (0) = 0 and f (1) = 1. 3. A point that lies in its own image under a given correspondence. 4. Of, relating to or being a mathematical notation, as in a decimal system, writing numerical quantities in full with the point separating the integral from the fraction part being fixed as contrasted with floating point notation in which variable multiples of the base are extracted as factors.
+
+=== 42. [450] fixed point iteration ===
+DEF: An approximate method for finding the root of an equation p ( x ) = 0. The first step is to write the equation as x = f ( x ). The next procedure is to choose a value x 0 to be an approximation to the true root. Subsequently, approximate values of the root are found by using the equation x n + 1 = f ( x n ). If the values of x n tend to a limiting value of L as n increases then L = f ( L ). This means L is the root of the equation p ( x ) = 0.
+
+=== 43. [451] fixed point theorem ===
+DEF: A theorem that gives conditions for a mapping to have a fixed point. Examples are Banach fixed point theorem and Brouwer's fixed point theorem. For Banach fixed point theorem, for example, let f be a contraction mapping from a closed subset F of a Banach space E into F ; then there exists a unique z ∈ F such that f ( z ) = z.
+
+=== 44. [538] floating point number ===
+DEF: A binary number carried out to a specific number of digits and containing a radix (or decimal) point somewhere in the digit sequence. Such numbers are stored in three parts: the sign (either plus or minus), the mantissa (sequence of meaningful digits) and the exponent (power or order of magnitude), which determines the position in the mantissa. Examples are 5.5, 0.001 and^-2,345.6789. Numbers that do not have decimal places are called integers . The main operations of the FPU consist of conventional arithmetic such as addition and multiplication. Some FPUs can also perform more sophisticated functions such as exponentials, logarithms and trigonometry.
+
+=== 45. [550] floor function ===
+DEF: The floor function of x is the greatest integer less than or equal to x or floor( x ) = x is the largest integer not greater than x .
+
+=== 46. [553] floquet theorem ===
+DEF: A second-order linear differential equation whose coefficients are periodic single-valued functions of an independent variable x has a solution of the form e μx P ( x ), where μ is a constant and P ( x ) a periodic function.
+
+=== 47. [557] floral formula ===
+DEF: A symbolic representation of the structure of a flower using specific letters, numbers and symbols. Each kind of floral part is represented by the letter K for calyx, C for corolla, P for perianth, A for androecium, G for gynoecium and a number to indicate the quantity of the part present, for example, C5 for a flower with five petals. It also indicates whether the ovary is inferior or superior.
+
+=== 48. [583] fluctuation-dissipation theorem ===
+DEF: It relates quantities in equilibrium and non-equilibrium statistical mechanics and microscopic and macroscopic quantities. The principle underlying this theorem is that a non-equilibrium state may have been reached either as a result of a random fluctuation or an external force such as an electric or magnetic field and that the evolution towards equilibrium is the same in both cases. The fluctuation-dissipation theorem enables transport coefficients to be calculated in terms of response to external fields.
+
+=== 49. [617] fluorine ===
+DEF: A chemically reactive, poisonous, gaseous element in Group 17 (VIIA) elements in the Periodic Table. Its chemical symbol is F, atomic number 9, atomic weight 18.9984, freezing point^-219.62 °C (53.53 K), melting point^-223 °C (50 K) and boiling point^-188.14 °C (85 K), specific gravity of liquid 1.108 (at boiling point) and valence 1. It is the most chemically active nonmetallic element and the most electronegative of all the elements. Its chief source is fluorite. It also occurs in cryolite, fluorapatite, seawater, bones and teeth. Hydrogen fluoride (HF) is a raw material for many other fluorides. It can be produced only by electrolysis under special conditions. It is an essential trace element needed for the healthy development of bones and teeth and to prevent tooth decay. Fluorine compound, fluorite is used as a flux in refining iron; another compound, cryolite serves as the electrolyte in the production of aluminium. Compounds of fluorine are also used in the ceramic and glass industries. Hydrofluoric acid is used to etch glass and in the manufacture of light bulbs. Sodium fluoride (NaF) is added to water and tin fluoride (SnF2 ) to dental-care products to reduce dental caries.
+
+=== 50. [666] fokker-planck equation ===
+DEF: An equation in non-equilibrium statistical mechanics that describes a superposition of a dynamic friction process and a diffusion process for the evolution of variables in a system. Mathematically, the general Fokker-Planck equation for one variable x is given by, ∂ w ∂ t = -∂ ∂ x D (1) ( x ) + ∂ 2 dx 2 D (2) ( x ) ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ , where D (1) (x) is the drift coefficient and D (2) (x)>0 is the diffusion coefficient.
+
+=== 51. [682] folium ===
+DEF: 1. Folium of descartes is an algebraic plane curve consisting of a loop whose two ends, intersects at a node and are asymptotic to the same line. Its equation is of the form x 2 + y 2 = 3 axy , where x + y + a = 0 is the equation of the line. 2. A thin, leaf-like layer or stratum occurring especially in metamorphic rock.
+
+=== 52. [735] force ===
+DEF: Any influence (push or pull) that causes an object to accelerate, slowdown or change shape or any influence that tends to change the state of rest or the uniform motion in the straight line of a body. A force has both magnitude and direction, making it a vector quantity; and expressed as Force = mass x acceleration. Its symbol is F and the unit is the Newton (N), defined as the force required to cause a mass of one kilogram to accelerate at a rate of one meter per second squared in the absence of other force-producing effects which is equal to 1 kg m/s 2 .
+
+=== 53. [737] force constant ===
+DEF: A value which is unique to a bond which characterises the strength of the bond in a diatomic molecule. The force constant is a measure of the resistance offered to stretching and vibration of a bond, the magnitude of which indicates how strongly the atoms are held together and hence stability.
+
+=== 54. [745] force of mortality ===
+DEF: The probability of failure of a component or the death of an organism, within the next unit of time, ∆ t , given survival to time t . It is defined mathematically as Δ t ⋅ h ( t ) = P[X ≤ ( t + Δ t ): X > t ].
+
+=== 55. [770] formal equivalence ===
+DEF: In logic, it is the relationship etween two open sentences that holds when their universal closures are materially equivalent, as between the two sides of a mathematical idetity such as a + b = b + a .
+
+=== 56. [774] formal system ===
+DEF: A mathematical formalism in which statements can be constructed and manipulated with logical rules as between the two sides of a mathematical identity such as a + b = b + a . Some formal systems, such as Euclidean geometry, are built around a few basic axioms and can be expanded with theorems that can be deduced through proofs.
+
+=== 57. [775] formaldehyde ===
+DEF: A toxic colourless gaseous compound belonging to the family of organic compounds called aldehydes. Its chemical formula is CH2 O, density 0.8153 g/cm³ (-20°C, 253 K), melting point^-92°C (181 K) and a boiling point of^-19°C (254 K). It is used for manufacturing melamine and phenolic resins, fertilisers, dyes and embalming fluids and in aqueous solution as a preservative and disinfectant.
+
+=== 58. [780] formation constant ===
+DEF: The equilibrium constant for the formation of a complex ion from its components in solution. It is a measure of the strength of the interaction between the reagents that come together to form the complex.
+
+=== 59. [781] formation rules ===
+DEF: In logic, the set of rules that specify the syntax of a formal calculus. It is the algorithm that generates all and only the well-formed formulae (wff) of the system. The rules are: (i) an expression consisting of a predicate variable of degree n followed by n individual variables is a wff; (ii) if α is a wff, so is ∼ α ; (iii) if α and β are wffs, so is ( α ∨ β; and (iv) if α is a wffand a is an individual variable, then ( ∀ a ) α is a wff, where α is said to be the scope of the quantifier.
+
+=== 60. [783] formazans ===
+DEF: The parent compound H2 NN=CHN=NH and its derivatives formed by substitution at carbon and/or nitrogen.
+
+=== 61. [786] formula ===
+DEF: 1. A set of symbols and numbers that expresses a fact, a rule or a relationship. For example, A = πr 2 is the formula for calculating the area of a circle; and C = πD , expresses the relationship between the circumference and diameter of a circle. 2. A formal expression of some rule or other result, for example, Stirling's formula or Frenet formulae. 3. A representation of a molecule, ion or radical in which the compound's chemical elements are represented by the chemical symbol. 4. Functions within computer programs often contain formulas, which are used to process data that is passed through the function and output the result. For example, a basic formula might convert miles to kilometres.
+
+=== 62. [787] formula bar ===
+DEF: A section in Microsoft Excel and other spreadsheets that displays the data or formula stored in the active cell and allows users to enter formulas instead of static data. In Microsoft Excel, it is located above the work area of the spreadsheet.
+
+=== 63. [788] formula unit ===
+DEF: The lowest reduced ratio of ions in a compound. It is the empirical formula of an ionic or covalent network compound used as an independent entity for stoichiometric calculations. Examples include ionic sodium chloride (NaCl), Potassium oxide (K2 O) and covalent networks such as silicon dioxide (SiO2 ) and C (as diamond or graphite).
+
+=== 64. [789] formula weight ===
+DEF: The sum of the atomic weights of all atoms in a molecule. The term is generally applied to a substance that consists of ions rather than individual molecules. An example of such a substance is sodium chloride (NaCl). Such a substance's chemical formula describes the simplest ratio of the number of atoms of the constituent elements.
+
+=== 65. [790] formulation ===
+DEF: 1. Putting together of components in appropriate relationships or structures, according to a formula. 2. The particular mixture of base chemicals and additives required for a product. In pharmacy, it is a mixture or a structure such as a capsule, a pill, tablet or an emulsion, prepared according to a specific procedure. 3. Formulation science is concerned with the knowledge and practice of blending and mixing of various components (chemical molecules) in a way that they do not react, but interact to provide a final product with very specific desirable properties or functions. Formulation science covers the core of physical and colloid chemistries, as well as analytical chemistry, chemical engineering, pharmaceutical and biological sciences.
+
+=== 66. [791] formyl trichloride ===
+DEF: A colourless volatile sweet-smelling liquid haloform with the chemical formula CHCl 3 , relative density 1.48, melting point^-63.5 °C (209.5 K) and boiling point 61.7 °C (334.7 K). It can be made by chlorination of methane followed by separation of the mixture of products or by the haloform reaction. It is an effective anaesthetic but can cause liver damage and it has now been replaced by other halogenated hydrocarbons. It is used as a solvent and raw material for making other compounds.
+
+=== 67. [801] forward difference ===
+DEF: A series of quantities obtained from a function whose values are known at a series of equally spaced points by repeatedly applying the forward difference operator, ∆ to these values. The forward difference operator, ∆ is defined as ∆ f ( x ) = f ( x + h ) - f ( x ). The expression f ( x + h ) - f ( x ) gives the first forward difference of f ( x ) and the operator ∆ is called the first forward difference operator . The second forward difference operator , denoted by ∆ 2 , is defined as Δ 2 f ( x ) = Δ [ Δ f ( x )] = Δ f ( x + h ) - Δ f ( x ). It is used in interpolation or numerical calculation and integration of functions.
+
+=== 68. [820] four ierc oeff icie nts ===
+DEF: Thecoefficientsan = 1 π f ( x )cos(nx)dx( n ≥ 0), 2 π ∫ b n = 1 π f ( x )sin(nx)dx( n ≥ 1), 2 π ∫ andincomplextermsCn = a n - ib n = 1 2 π f ( x )exp( - inx)dx 2 π ∫ that can be used to express a function formally in terms of its Fourier series.
+
+=== 69. [821] four squares theorem ===
+DEF: The theorem that every positive integer can be expressed as the sum of not more than squares of four positive integers, exactly four non-negative integers. For example, 1 = 1 2 + 0 2 + 0 2 ,5 = 2 2 + 1 2 + 0 2 + 0 2 and 15 = 3 2 + 2 2 + 1 2 + 1 2 .
+
+=== 70. [825] four-colour theorem ===
+DEF: The theorem that any planar map can be coloured using at most four colours in such a way that no two adjacent areas are of the same colour. Two American mathematicians, Kenneth Ira Appel (1932-2013) at the University of Illinois and his colleague Wolfgang Haken (1928 - ) provided a mathematical proof in 1978 that solved the long-standing four-colour map problem.
+
+=== 71. [834] fourier's law of conduction ===
+DEF: An empirical law based on observation. It states that the rate of heat flow, dQ/dt, through a homogeneous solid is directly proportional to the area, A, of the section at right angles to the direction of heat flow and to the temperature difference along the path of heat flow, dT/dx .
+
+=== 72. [852] fractile ===
+DEF: The value of the item that is a given fraction of the way through a distribution. An item in the distribution that is hundredths of the way through the distribution is called a percentile; for example, 85 th percentile is 85 th 100 of the way through the distribution. Its location is 85 100 ∑ f . The item in the distribution that divides the distribution into four quarters is called the quartile . The first quartile, Q1 is the item that is one-quarter of the way through the distribution; the second quartile, Q2 is the item that is the median of the distribution; the third quartile, Q3 is the item that is three-quarters of the way through the distribution. The locations in the distribution are Q1 = f ∑ , Q2 = f ∑ , and Q3 = 3 f ∑ . The following formula can be used to calculate any required fractile: L + fractile location - sum of frequencies above fractile class frequency of fractile class , where L is the lower class boundary of the fractile class. An item that is tenths of the way through a distribution is called a decile , for example, the third decile is 3 10 th of the way through the distribution. The location of the third decile is 3 f ∑ and f + 1 ∑ for odd sum of frequencies. The fractiles can be determined from the cumulative frequency curve (the ogive).
+
+=== 73. [853] fraction ===
+DEF: 1. A number that indicates one or more equal parts of a unit. In other words, it is a ratio of two integers or any number that can be expressed as such a ratio, a b , where a is not a multiple of b and b is not zero or one. In this case, a is the number of equal parts the unit have taken, called the numerator ; and b represents the total number of parts into which the unit has been divided, called the denominator . The rules for addition/subtraction, division and multiplication of fractions are a b ± c d = ad ± cb bd , a b ÷ c d = a b × d c . 2. A group of similar compounds, the boiling point of which fall within a particular range and which are separated during fractional distillation.
+
+=== 74. [858] fractional linear transformation ===
+DEF: A rational invertible transformation of the complex plane of the form, w = az + b cz + d with ad ≠ bc . These are conformal mappings.
+
+=== 75. [859] fractional part ===
+DEF: The difference between the given real number and its integral part. For example, the fractional part of 3.42 written as {3.42}, is 0.42 and that of^-3.42 is 0.58.
+
+=== 76. [883] frattini subgroup ===
+DEF: The subgroup, Φ(G), of a given group G defined to be the intersection of all maximal subgroups of G. If G has no maximal subgroups, its Frattini subgroup is defined as Φ(G) = G.
+
+=== 77. [887] fredholm alternative ===
+DEF: In mathematics, the alternative theorem, holding for a continuous linear operator, A , with closed range or its representation as a matrix, that either A is surjective or else the adjoint A * has a non-trivial kernel. Hence, either the inhomogeneous equation Ax = b is always solvable or that the homogeneous equation A * y = 0 has a non-zero solution.
+
+=== 78. [898] free group ===
+DEF: 1. In mathematics, it is a group with a generating set such that the only products of generators and their inverses that equal identities are of the form aa^-1 or a^-1 a . 2. The set, F x , of equivalence classes, [ u ], of words in a non-empty set, X , where a pair of elements are equivalent if and only if there is a finite sequence of words starting with one and finishing with the other, such that each is obtained from the preceding by elementary reduction. Multiplication is defined on F x by [ u ] [ v ] = [ uv ].
+
+=== 79. [900] free module ===
+DEF: In mathematics, it is a module that has as a basis a subset { a 1 , a 2 , ..., a n } in terms of which every non-zero element can be written uniquely in the form ∑ iuiai , where the u i are elements of the ring over which the module is a left module. Every vector space is a free module and an Abelian group is free if and only if it has no element of finite period. Submodules of a free module are not in general free unless the underlying ring is a principal ideal domain.
+
+=== 80. [907] free space propagation model ===
+DEF: In teleommunications, it refers to the loss in signal as it travels through space. It is defined as , where P L = path loss, λ = signal wavelength and d = distance from transmitter.
+
+=== 81. [930] frenet formulae ===
+DEF: The fundamental formulae that describe the kinematic properties of a particle moving along a continuous, differentiable curve in three- dimensional Euclidean space or the geometric properties of the curve itself irrespective of any motion. In other words, the formulae are for a space curve that recaptures the unit vector tangent (to the curve, pointing in the direction of motion) denoted T , the normal unit vector (the derivative of T with respect to the arclength parameter of the curve, divided by its length), denoted N and the binormal unit vector B (the cross product of T and N) , from the curvature κ and torsion τ of the curve. The formulae are: (i) N ' = - κT + τB , (ii) B ' = - τN and (iii) T ' = κN.
+
+=== 82. [934] frequency ===
+DEF: 1. A property of waves that describes how many wave patterns or cycles that pass a fixed reference point in one second. It describes the number of cycles of a periodic motion such as sound pressure, electrical intensity, radio or other quantities per unit time. It is named in honour of German physicist, Heinrich Rudolf Hertz (1857 - 1894). The unit of frequency (f) is the hertz (Hz), which is equal to 1 cycle per second (1/s). Its symbol is Hz. It is expressed as f = ω/2π, where f is the frequency of the vibrating article and ω is the angular speed.
+
+=== 83. [952] fresnel integrals ===
+DEF: The two definite integrals, denoted S ( x ) and C ( x ) used in optical theory and given as: S ( x ) = sin( t 2 x ∫ )d t , and C ( x ) = sin( t 2 x ∫ )d t .
+
+=== 84. [955] friction factor ===
+DEF: 1. Quotient of frictional force and normal force, for a sliding body. Its symbol is μ . This is given by , where F is the frictional force and R is the reaction. 2. A tensor correlating the frictional force, opposing the motion of a particle in a viscous fluid and the velocity of this particle relative to the fluid. In the case of an isolated spherical particle in a viscous isotropic fluid, it is a constant.
+
+=== 85. [963] fritz john conditions/theorem ===
+DEF: A theorem that asserts the existence of Lagrange multipliers for constrained optimisation problems. For a constrained minimisation, one adds an additional non-negative multiplier, λ 0 , for the objective function and asserts that not all the multipliers are simultaneously zero. A constraint qualification can be viewed as ensuring that λ 0 is nonzero and so can be scaled to unity.
+
+=== 86. [964] frobenius group ===
+DEF: Named after Ferdinand Frobenius, it is a group that has a proper subgroup, H, such that, for every x in the relative complement G \ H, the intersection of H with x^-1 is the identity element.
+
+=== 87. [965] frobenius method ===
+DEF: The method of solving ordinary differential equations near a regular singular point, a , by positing a solution of the form ( x - a ) α P( x - a ) for some power series P and index α that are then found by iteration by substituting the potential solution into the equation.
+
+=== 88. [966] frobenius norm ===
+DEF: The norm on matrices that arises by treating a matrix as a vector and using the Euclidean norm of that vector: A2 = a ij j = 1 m ∑ i = 1 n ∑ . This quantity is also the trace of AA *.
+
+=== 89. [977] frontier ===
+DEF: 1. The set of points (frontier- points) that are members both of the closure of a given set and of the closure of its complement. 2. The set of points in the closure but not in the interior of the given set, usually written FrA , for example, Fr (0, 1) = {0, 1}. The frontier of the rationals is the set of all real numbers.
+
+=== 90. [1003] fréchet differential ===
+DEF: Named after Maurice Fréchet, French mathematician, the function δ f ( x ;), derived from a given function f between normed spaces and defined on an open domain for which lim Δ x → 0 f ( x + Δ x ) - f ( x ) - δ f ( x ; Δ x ) Δ x = 0. If the limit SF( x :) is continuous and linear in Δ x , then the function is Fréchet differential at x and the associated linear operator SF( x :) is the Fréchet derivative f at x , often written f ( x ).
+
+=== 91. [1006] fubini's theorem ===
+DEF: Named after the Italian mathematician, Guido Fubini (1879-1943), it is the result that gives conditions under which it is possible for the evaluation of multiple integrals as iterated integrals and changing the order of integration of an iterated integral.
+
+=== 92. [1033] function ===
+DEF: 1. The natural or usual duty or purpose of a person or something or the way something works or operates. 2. Function rule is a rule that maps each element in a given set (the domain) onto just one element (or image) in another set (the range) or any operation or procedure that relates one variable to one or more other variables. If y is a function of x , written y = f ( x ), a change in x produces a change in y and if x is known, y can be determined. 3. A small part of a program in a computer that supplies a specific value. An example is the square root of a specified value or the current date. 4. A characteristic role or action of a structure or process in the normal metabolism or behaviour of an organism.
+
+=== 93. [1041] functional equations ===
+DEF: 1. The branch of mathematics that studies equations in which the variables are functions and that attempts to establish the properties of functions from the equations that they satisfy. 2. The study of equations of the form A = 0, where A is a term containing a finite number of independent variables, a finite number of known functions and a finite number of unknown functions. 3. Functional equation is an equation of this form f ( x + y ) = f ( x ) + f ( y ), the condition for a function to be additive.
+
+=== 94. [1051] fundamental constants ===
+DEF: The parameters that do not change throughout the universe or the physical constants which play a fundamental role in the basic theories of physics. Examples include the charge of an electron, the speed of light in free space and the gravitational constant, Planck's constant.
+
+=== 95. [1054] fundamental form ===
+DEF: First fundamental form is the quadratic equation of the form ds 2 = Adu 2 + 2 Bdudv + Cdv 2 , where A = ∂ x ∂ u ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , B = ∂ x ∂ u ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ ∂ x 2 ∂ v ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ , and C = ∂ x 2 ∂ v ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ that determines the metric and arc length on a given surface. The second fundamental form is quadratic equation of the form Ddu 2 + 2D'dudv + D''dv 2 , where D = x i ∑ i ∂ 2 x i ∂ u 2 , D' = x i ∑ i ∂ 2 x i ∂ u ∂ v and D'' = x i ∑ i ∂ 2 x i ∂ v 2 , with x i is the direction cosine of the normal to the surface. This enables points of the surface to be classified as flat elliptic, parabolic or hyperbolic.
+
+=== 96. [1057] fundamental matrix ===
+DEF: 1. The matrix whose columns are the linearly independent fundamental sets of solutions of a linear homogeneous system of ordinary differential equations or matrix equation, y ' = A(t) y , where y has dimension n . 2. In computer vision, a 3×3 matrix that relates corresponding points in stereo images. It is a relationship between any two images of the same scene that constrains where the projection of points from the scene can occur in both images.
+
+=== 97. [1063] fundamental theorem of algebra ===
+DEF: The theorem states that every polynomial equation having complex coefficients and degree ≥ 1 has at least one complex root. This theorem was first proven by Gauss. It is equivalent to the statement that a polynomial P ( z ) of degree n has n values z i (some of them possibly degenerate) for which P ( z i ) = 0. Such values are called polynomial roots. An example of a polynomial with a single root of multiplicity > 1 is z 2 - 2 z + 1 = ( z^-1)( z^-1), which has z = 1 as a root of multiplicity 2.
+
+=== 98. [1064] fundamental theorem of arithmetic ===
+DEF: The theorem stating that any positive integer can be expressed as a unique product of prime numbers.
+
+=== 99. [1065] fundamental theorem of calculus ===
+DEF: A theorem that links the concept of the derivative of a function with the concept of the integral. The first part of the theorem, sometimes called the first fundamental theorem of calculus is that an indefinite integration can be reversed by a differentiation. This part of the theorem is also important because it guarantees the existence of antiderivatives for continuous functions. The second part, sometimes called the second fundamental theorem of calculus states that the definite integral of a function can be computed by using any one of its infinitely many antiderivatives. This part of the theorem has key practical applications because it markedly simplifies the computation of definite integrals.
+
+=== 100. [1066] fundamental theorem of projectivity ===
+DEF: The theorem that three distinct corresponding pairs of points uniquely determine a projectivity.
+
+=== 101. [1082] furan ===
+DEF: A heterocyclic organic compound, consisting of a five-membered aromatic ring with four carbon atoms and one oxygen. Its molecular formula is C4 H4 O, density 0.936 g/ml, melting point^-85.6 °C (187.55 K), boiling point 31.3 °C (304.45 K) and flash point^-69 °C (204 K). It is colourless, flammable and highly volatile liquid. It is toxic and may be carcinogenic.
+
+=== 102. [1086] furfural ===
+DEF: A colourless, viscous liquid with a pleasant aromatic odour, with the molecular formula C5 H4 O2 , density 1.16 g/ml (20 °C), melting point^-37 °C (236 K), boiling point 162 °C (435 K) and flash point 62 °C (335 K), which darkens on standing in air. It is soluble in ethanol and ether and somewhat soluble in water. It is prepared commercially by dehydration of pentose sugars obtained from cornstalks and corncobs, husks of oat and peanut and other waste products. It is the aldehyde derivative of furan and occurs in various essential oils and in fusel oil. It is used as a solvent for extracting mineral oils and natural resins and by itself forms resins with some aromatic compounds. It is also used in the manufacture of pesticides, phenolfurfural resins and tetrahydrofuran.
+

@@ -1,0 +1,150 @@
+=== 91. [1035] ethanoic anhydride ===
+DEF: A colourless liquid with a sharp, pungent odour. Its molecular formula is C4 H6 O3 , boiling point 139.8 °C (412.9 K) and a melting point of^-73.1 °C (200.1 K). It is produced by carbonylation of methyl acetate. It is mainly used in converting cellulose to cellulose acetate, a coating material used in the production of plastics, photographic film and fabrics. It is also used in the production of aspirin (acetylsalicylic acid) and as a wood preservative. It can be safely used to substitute ethanoyl (acetyl) group (CH3 CO-) into organic compounds.
+
+=== 92. [1036] ethanol ===
+DEF: A colourless, limpid, volatile, flammable, toxic liquid with a pleasant odour and a pungent taste and the molecular formula C2 H5 OH, relative density 0.7851 at 20 °C, melting point at^-112.3 °C (160.85 K) and boiling point at 78.4°C (351.55 K). It is soluble in water and most organic liquids. It is produced by chemical synthesis and by fermentation or biosynthetic processes. It is the alcohol found in alcoholic drinks such as beer, wine and spirits. Apart from being a key input into alcoholic beverages, it is used as a solvent, extractant, antifreeze and intermediate in the synthesis of innumerable organic chemicals.
+
+=== 93. [1038] ethanoyl chloride ===
+DEF: A colourless pungent liquid acid chloride with the chemical formula CH3 COCl, density 1.104 g/ml (liquid), melting point^-112 °C (161 K) and boiling point 52 °C (325 K). It is derived from acetic acid. It is made by reacting ethanoic acid with a halogenating agent such as phosphorus(III) chloride, phosphorus(V) chloride or sulfur dichloride oxide. It is used to introduce ethanoyl groups into organic compounds containing -OH, -NH2 and -SH groups. It does not exist in nature, because contact with water would hydrolyse it into acetic acid and hydrogen chloride.
+
+=== 94. [1040] ethene ===
+DEF: A colourless, flammable, gaseous hydrocarbon with the molecular formula C2 H4, which is derived from natural gas and petroleum. It is the first member of the alkene series of hydrocarbons. It is made by cracking hydrocarbons from petroleum and is a major raw material for making other organic chemicals such as ethanal, ethanol and ethane^-1,2-diol. It can be polymerised to polyethene. It occurs naturally in plants, in which it acts as a growth substance. Its best-known effect is the stimulation of fruit ripening. Fruits such as bananas, apple and avocados naturally produce ethylene during the later stages of their ripening and ethylene gas is used to induce ripening in fruits, which are picked green. It also suppresses flowering, except in members of the pineapple family, where flowering may be synchronised by releasing ethylene into the growing plant. It is used as a source of many organic compounds, in welding and cutting metals, to colour citrus fruits and as an anaesthetic.
+
+=== 95. [1048] ethoxyethane ===
+DEF: A colourless flammable volatile liquid with a low boiling point and a characteristic odour. Its chemical formula is C2 H5 OC2 H5 , density 0.7134 g/cm3 (liquid), melting point^-116.3 °C (156.9 K) and boiling point 34.6 °C (307.8 K). It is sparingly soluble in water (6.9 g/100 mL). It is the most common member of a class of chemical compounds known generically as ethers. It is an anaesthetic and useful organic solvent.
+
+=== 96. [1049] ethy lami ne ===
+DEF: A colourless, flammable and volatile liquid, with the chemical formula C2 H5 NH2 , density 0.689 g/cm3 , melting point^-81 °C (192 K) and boiling point 16.6 °C (290 K). It is a primary amine made by reacting chloroethane with ammonia. It is used in petroleum refining, in detergents and in organic synthesis.
+
+=== 97. [1051] ethyl alcohol ===
+DEF: A colourless, limpid, volatile, flammable, toxic liquid with a pleasant odour and a pungent taste and the molecular formula C2 H5 OH, relative density 0.7851 at 20 °C, melting point at^-112.3 °C (160.85) and boiling point at 78.4 °C (351.55 K). It is soluble in water and most organic liquids. It is produced by chemical synthesis and by fermentation or biosynthetic processes. It is the alcohol found in alcoholic drinks such as beer, wine and spirits. Apart from being a key input into alcoholic beverages, it is used as a solvent, extractant, antifreeze and intermediate in the synthesis of innumerable organic chemicals.
+
+=== 98. [1053] ethyl ethanoate ===
+DEF: A colourless liquid with a characteristic sweet smell, with the molecular formula C4 H8 O2 , density 0.897 g/cm³, melting point^-83.6 °C (190 K) and boiling point 77.1 °C (350 K). It is produced by reacting ethanol and ethanoic acid and used as a solvent in glues and paints.
+
+=== 99. [1055] ethylbenzene ===
+DEF: A colourless flammable liquid, with the chemical formula C6 H5 CH2 CH3 , density 0.8665 g/ml, melting point^-95 °C (178 K) and boiling point 136 °C (409 K). It is produced commercially by combining benzene and ethylene in an acid-catalysed chemical reaction: C6 H6 + C2 H4 → C6 H5 CH2 CH3 . It is an aromatic hydrocarbon, whose greatest use (over 99 percent) is as an intermediate in the production of styrene monomer. It is also used as a solvent for coatings and in the production of synthetic rubber and cellulose acetate.
+
+=== 100. [1056] ethylene ===
+DEF: A colourless, flammable, gaseous hydrocarbon, with the molecular formula C2 H4 . It is derived from natural gas and petroleum. It is the first member of the alkene series of hydrocarbons. It is made by cracking hydrocarbons from petroleum and is a major raw material for making other organic chemicals such as ethanal, ethanol, ethane^-1,2-diol. It can be polymerised to polyethene. It occurs naturally in plants, in which it acts as a growth substance. Its best-known effect is the stimulation of fruit ripening. Fruits such as bananas, apple and avocados naturally produce ethylene during the later stages of their ripening and ethylene gas is used to induce ripening in fruits picked green. It also suppresses flowering, except in members of the pineapple family, where flowering may be synchronised by releasing ethylene into the growing plant. It is used as a source of many organic compounds, in welding and cutting metals, to colour citrus fruits and as an anaesthetic.
+
+=== 101. [1059] ethyne ===
+DEF: A colourless gas or chemical compound that is an unsaturated hydrocarbon as well as the simplest alkyne, with the molecular formula C2 H2 , density 1.097 kg m^-3 , melting point^-80.8 °C E (192.4 K - triple point and boiling point^-75.0 °C (98 K). It is made by adding water to solid calcium carbide. It burns in pure oxygen with a flame temperature of over 3000 °C (3273 K), hot enough to weld and cut steel. It is unstable in the pure form, thus it is usually handled as a solution. It is unsaturated because its two carbon atoms are bonded together in a triple bond. The carbon-carbon triple bond puts all of its atoms in the same straight line, with CCH bond angles of 180° and since it is a linear symmetrical molecule, it possesses the D ∞h point group. It is widely used as a fuel and a chemical building block.
+
+=== 102. [1075] euclidean distance ===
+DEF: The standard distance in Euclidean space, R n . Geometrically, it is the length of a line segment connecting two points. It is calculated as the square root of the sum of the squares of the arithmetical differences of the corresponding coordinates of the two points. The distance between points x and y in a Euclidean space R n is given by d(x, y ) = ( x i - y i ) 2 i = 1 n ∑ , where x = ( x 1 , x 2 , ... x n ) and y = ( y 1 , y 2 , ... y n ). In two-dimensional Euclidean space, the distance between points A = ( a 1 , a 2 ) and B = ( b 1 , b 2 ) is given by the Pythagorean theorem ( a 1 - b 1 ) 2 + ( a 2 - b 2 ) 2 . In n dimensions, the Euclidean distance between two points p and q is ( p i - q i ) 2 i = 1 n ∑ , where p i or q i is the coordinate of p or q in dimension i .
+
+=== 103. [1078] euclidean norm ===
+DEF: The norm imposed on a vector by taking the square root of the sum of the squares of its entries. The standard Euclidean norm on R n is defined by || x || = x . x .
+
+=== 104. [1080] euclidean topology ===
+DEF: The topology on Euclidean n -space R n , where n belongs to the set of natural numbers. Euclidean topology states that the subsets of R n are open sets and is supposed to follow the following axioms: (i) An open subset is a subset containing an open circle or ball surrounding all its points; (ii) union and intersection of open sets are open sets themselves; and (iii) A metric topology in which the distance within R n is given by the function: d = ( x 1 - y 1 ) 2 + ( x 2 - y 2 ) 2 + ... + ( x n - y n ) 2 = ( x 1 - y 1 ) 2 . i = 1 n ∑.
+
+=== 105. [1092] euler characteristic ===
+DEF: 1. One of the important quantities, known as a topological invarient that describes the shape or structure of topological space. Leonhard Euler (1707-1783), a Swiss mathematician originally formulated the characteristic for polyhedra and used it to prove various theorems about them, including the classification of the Platonic solids. For the special case of polyhedra, the Euler characteristic equals 2. If F is the number of faces of a polygon, E the number of edges and V the number of vertices, Euler's formula can be written as F - E + V = 2. For example, if the surface of a cube has six (square) faces, twelve edges and eight vertices, therefore, 6 - 12 + 8 = 2.
+
+=== 106. [1096] euler phi function ===
+DEF: The number theoretic function, written φ( n ), that counts the number of distinct positive integers less than or equal to n that are relatively prime to n . φ is multiplicative and so determined by its value on prime powers, for which φ( p k +1 ) = p k ( p^-1).
+
+=== 107. [1098] euler summation formula ===
+DEF: A formula used in the numerical evaluation of integrals, which states that the value of an integral is equal to the sum of the value given by the trapezoidal rule and a series of terms involving the odd-numbered derivatives of the function at the end points of the interval over which the integral is evaluated. In other words, it gives an estimation of the sum f ( i ) i = 0 n ∑ through the integral f ( t ) dt n ∫ with an error term given by an integral which involves Bernoulli numbers.
+
+=== 108. [1100] euler's constant ===
+DEF: The constant 0.5772157 ..., usually denoted by the Greek letter γ that is the limit as n tends to infinity of the difference between the sum of n terms of the harmonic series and the natural logarithm of n . It is not known whether this number is algebraic or transcendental, nor even whether it is rational or irrational.
+
+=== 109. [1101] euler's equation ===
+DEF: A linear equation of the form ( ax + b ) n y n + A1 ( ax + b ) n^-1 y n^-1 + ... + A n^-1 ( ax + b ) y + A n y = f ( x ), where a , b , A1 are constants. Putting ax + b = e t , then y ' = ae - t dy dt , y '' = a 2 e^-2 t d 2 y dt 2 - dy dt ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ , y ''' = a 3 e^-3 t d 3 y dt 3 - 3 d 2 y dt 2 + 2 dy dt ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ , etc. Euler's equation is therefore, transformed into a linear equation with constant coefficients. For the homogeneous Euler equation, xnyn + A1 x ( n^-1) y ( n^-1) + ... + A n^-1 xy ' + y = 0, in the form y = x k , the solution may be found, if k is a real root of the characteristic equation mulplicity m , then to its corresponding m linearly independent solution. The exponent k can be found if y , y ' ..., y ( n ) put into the equation to get a characteristic equation.
+
+=== 110. [1102] euler's equations of motion ===
+DEF: A set of three differential equations expressing relations between the force moments, angular velocities and angular accelerations of a rotating rigid body with a fixed point in terms of its principal axes. They are as follows: (i) I1 ! ω 1 + ( I3 - I2 ) ω 2 ω 3 = M1 , (ii) I2 ! ω 2 + ( I1 - I3 ) ω 3 ω 1 = M2 , (iii) I3 ! ω 3 + ( I2 - I1 ) ω 1 ω 2 = M3 , where M1 , M2 and M3 are the components of the applied torques, I1 , I2 and I3 are the principal moments of inertia and ω 1 , ω 2 and ω 3 are the components of the angular velocity about the principal axes.
+
+=== 111. [1103] euler's formula for polyhedral ===
+DEF: An equation in topology, which states that if F is the number of faces of a polygon, E the number of edges and V the number of vertices, Euler's formula can be written as F - E + V = 2. For example, a cube has six square faces, twelve edges and eight vertices, therefore, 6 - 12 + 8 = 2. The quantity F - E + V is known as the Euler characteristic .
+
+=== 112. [1104] euler's laws of motion ===
+DEF: Two laws of motion, which extend Newton's laws of motion for point particle to rigid body motion, which state as follows: (i) the first law states that the force acting on a body is equal to the rate of change of its linear momentum; and (ii) the second law states that the torque on any body is equal to the rate of change of its angular momentum.
+
+=== 113. [1105] euler's method ===
+DEF: It provides a way to approximate the solution to a differential equation. The goal is to calculate the function y = f ( x ). The differential equation allows the calculation of = f ' ( x ) at each point. If an initial condition is known, ( x 0 y 0 = f ( x 0 )), then calculate at that point and calculate the new point ( x 0 + h , f ( x 0 + h )) ; f ( x 0 + h ) ≈ f ( x 0 ) + f '( x 0 ) h . A smaller value of h will lead to a more accurate approximation, but it will require more work to calculate the curve.
+
+=== 114. [1106] euler's number ===
+DEF: The irrational number named after the Swiss mathematician Leonhard Euler and defined as the unique real number such that the value of the derivative (slope of the tangent line) of the function f ( x ) = e x at the point x = 0 is equal to 1. It has the value 2.718 28. It is used as the base of natural logarithms and occurs in the exponential function, e x .
+
+=== 115. [1108] euler-bernoulli law ===
+DEF: Named after Swiss mathematicians, Leonhard Euler (1707-1783) and Daniel Bernoulli (1700-1782), it states that the torque on a thin elastic beam under gravity is EIk , where E is Young's modulus and I is the moment of inertia of the cross- section about an axis through the centre of mass and perpendicular to the plane of the couple.
+
+=== 116. [1109] euler-lagrange equations ===
+DEF: Any of the fundamental necessary conditions in the calculus of variations. For the simplest problems this requires that the extremal y 0 that f ( y , y ', x ) b a ∫ dx minimises the functional should satisfy Euler's equation at any point where y 0 ' is smooth.
+
+=== 117. [1110] euler-riemann zeta function ===
+DEF: In mathematics, it is the special function, denoted ζ( s ) that is defined over the complex plane for one complex variable, s . The sum of the infinite series ζ ( s ) = n s n = 1 ∞ ∑ , is infinite when s = 1; when s is greater than 1, the it converges to a finite number as successive terms are added; if s is less than 1, the sum is again infinite. It is a very important function in numbertheory.
+
+=== 118. [1116] eulerian strain rate ===
+DEF: The symmetric part of velocity gradient; that is, the Eulerian strain rate = 1 ∑ (L + L T ), where L is the velocity gradient.
+
+=== 119. [1141] evaluate ===
+DEF: To calculate a numerical value for a mathematical expression. For example, to evaluate y = x 2 at x = 3 is to calculate the value of 3 2 .
+
+=== 120. [1175] exact ===
+DEF: 1. Also known as accurate , strictly correct, precise, without any approximation. 2. Of a differential equation, obtained by putting the exact differential of a function equal to zero, so that when written in the form y ' g ( x , y ) - h ( x , y ) = 0, the left-hand side is the derivative of some F ( x , y ). This holds if and only if the coefficients of the differentials in each variable are continuously differentiable and satisfy the Integrability condition g x = h . The possibility exists that one can usefully obtain exactness by multiplying both g and h by the lntegrating factor m ( x , y ). 3. Of a differential form, being the derivative of another form. This forces the form to be closed and if the region on which it is defined as simply connected then this form is also exact.
+
+=== 121. [1191] exchangeable cation percentage ===
+DEF: The extent to which the adsorption complex of a soil is occupied by a particular cation. It is expressed as: ECP= exchangeable cation(meq /100g soil) cation exchange capacity (meq /100g soil) × 100.
+
+=== 122. [1194] exchangeable sodium percentage ===
+DEF: The extent to which the adsorption complex of a soil is occupied by sodium. It is expressed as: ESP= exchangeable sodium (meq /100g soil) cation exchange capacity (meq /100g soil) × 100.
+
+=== 123. [1209] excluded middle law ===
+DEF: A law in (two-valued) logic which states that there is no third alternative to truth or falsehood. In other words, for any statement A, either A or not-A must be true and the other must be false. This law no longer holds in three-valued logic, in which "undecided" is a valid state, nor does it hold in fuzzy logic.
+
+=== 124. [1257] exothermic reaction ===
+DEF: A reaction in which heat energy is produced or released from the reactants to the surroundings. Rusting and combustion both involve combination with air to produce oxide and are both exothermic reactions. Also, if sulfuric acid is added to water, the reaction which occurs is exothermic. At the end of an exothermic reaction, the temperature of the reactants is higher than that before the reaction owing to the heat given out. It can be expressed in a chemical equation as follows: Reactants → Products + Energy. The reaction releases energy usually not only in the form of heat, but also in the form of light such as a spark, flame or explosion, electricity such as from a battery or sound such as coming from burning hydrogen. The concept is frequently applied in the physical sciences, to chemical reactions where chemical bond energy is converted to thermal energy (heat). Endothermic reaction is a reaction in which energy is absorbed in the form of heat. Ea A Reaction Coordinate Potential energy or Enthalpy change (KJmol^-1 ) B P + C D ∆H = -ve Q + Reaction profile diagram for exothermic reaction A + B = Reactants; C + D = Products; Ea = Activation energy; ∆H = enthalpy change; P and Q denote potential energies of reactants and products respectively.
+
+=== 125. [1273] expected outcome ===
+DEF: The average outcome over a large number of repetitions of a random experiment. In other words, it is an average over infinitely many repetitions. For example, the expected outcome of rolling one die is the average number of spots landing up over a large number of rolls. Because each face of a fair die has equal probability of landing up, the expected outcome is: (1 + 2 + 3 + 4 + 5 + 6) = 21 6 = 3.5. This means that the average of many rolls of a fair die is expected to be about 3.5.
+
+=== 126. [1275] expected value ===
+DEF: In statistics, the sum or integral of all possible values of a random variable or any given function of it, multiplied by the respective probabilities of the values of the variable. Its symbol is E ( X ). E ( X ) is the mean of the distribution; E ( X - c ) = E ( X ) - c , where c is a constant.
+
+=== 127. [1289] explicit function ===
+DEF: A function, in which the dependent variable can be expressed directly in terms of the independent variable, so that its values may be directly calculated from those of the independent variables. Examples are y = x 2 - 3 and y = log2 x .
+
+=== 128. [1297] exponent ===
+DEF: A number or symbol that indicates the power to which another number or expression is raised or a number that indicates the number of times a term is multiplied by itself. For example, x 2 = x ∙ x and 5 4 = 5 x 5 x 5 x 5. For example, in the expression x n the letter n is the exponent of the base x . Fractions, zero and negative numbers are also used as exponents. For example, a negative exponent indicates the reciprocal of the quantity, for example, x^-2 means 1/ x 2 . Any nonzero quantity raised to the zero power equals one, for example, x 0 = 5 0 = ( a 2 + b 2 ) 0 = 1. A fractional exponent such as 1 / 3 or 1/ n indicates the third or n th root, respectively, of the base. When quantities of the same base are multiplied together, their exponents are added. For example, x 4 ∙ x 2 = x 6 but when they are divided, the exponents are subtracted, for example, x 3 / x 2 = x 3 - 2 = x 1 = x . When a quantity already containing an exponent is raised to a power, the exponents are multiplied; for example, ( x 2 ) 3 n = x 6n .
+
+=== 129. [1298] exponential ===
+DEF: 1. A term describing a mathematical entity that involves the transcendental number e , the base of natural logarithms, raised to an exponent or a function in which the variable quantity is an exponent or a function that varies as the power of another quantity. For example, if, y = a x then y varies exponentially with x . 2. A mathematical entity such as a curve, function, equation or series that contains, is expressed as or involves numbers or quantities raised to an exponent.
+
+=== 130. [1299] exponential decay ===
+DEF: A function shows exponential decay if its value becomes smaller over time according to a function of the form: x = x 0 e - pt (assume p > 0).
+
+=== 131. [1300] exponential distribution ===
+DEF: A continuous probability distribution, whose density function is given by ƒ ( x ) = ae -ax , where a > 0 for x > 0 and ƒ(x) = 0 for x ≤ 0. The mean and standard deviation are both 1/ a .
+
+=== 132. [1301] exponential function ===
+DEF: The real or complex function f ( x ) = e x or a mathematical expression with the formula e x , in which e is the base of natural logarithms. Its symbol is exp.
+
+=== 133. [1304] exponential series ===
+DEF: A series derived from the expansion of an exponential expression of the form z n n ! n = 0 ∞ ∑ = 1 + z + z 2 2 + z 3 6 + z 4 24 + ..., which converges for any complex number z to the exponential function exp z .
+
+=== 134. [1328] extended real numbers ===
+DEF: The set [-∞, ∞] of real numbers, together with the positive and negative infinite cardinals. It is usually denoted by R . Often the field and order operations are partially extended to [-∞, ∞], so that, for example, r + ∞ = + ∞ for r ≠ -∞; the extended real line is then order equivalent and topologically equivalent to [0, 1].
+
+=== 135. [1346] exterior product ===
+DEF: Of vectors, an algebraic construction used in Euclidean geometry to study areas, volumes and their higher-dimensional analogues. The exterior product of two vectors α and β is denoted by α ∧ β. If α and β are differential k -forms of degrees p and q , respectively, then α ∧ β = (-1) β ∧α . The magnitude of α and β can be interpreted as the area of the parallelogram with sides α and β , which in three dimensions can also be computed using the cross product of the two vectors. The exterior algebra or Grassmann algebra is the algebraic system whose product is the exterior product.
+
+=== 136. [1348] external direct product ===
+DEF: 1. Also known as external direct sum of groups, it is the Cartesian product M = M1 × M2 × ... × M n , of a finite or infinite set of modules over a ring, but with only finitely many non-zero entries in each sequence, where multiplication by a member of the ring, r , is defined as r x 1 ,..., x n = rx 1 ,..., rx n . 2. Also known as Cartesian product , it is an external direct sum over infinitely many spaces in which the sum is not required to be finite.
+
+=== 137. [1349] external division ===
+DEF: In geometry, the external division of a segment is the construction of a point E, lying beyond the endpoints A and B of a given line segment AB, in such a way that the ratio of the directed lengths | AE | to | EB | is some given negative number λ i .
+
+=== 138. [1356] external work ===
+DEF: Work done, w by a substance expanding against an external resistance. It is expressed as w = ∫ V1 V2 pdv, where V1 and V2 are the initial and final volumes respectively. In the diagram shown, P1 is the applied external pressure. The work done per cycle is given by the area enclosed by the cycle or the area under the curve which goes from P1 V1 to P2 V2 . Therefore, there are many possible curves, which would connect the points P1 V1 and P2 V2 and each curve would have a different area and give a different value for the work done, w .
+
+=== 139. [1359] extinction coefficient ===
+DEF: Any measure of the extent to which the intensity of a beam of light is reduced by passing through a distance of a solution having a molar concentration of a dissolved substance. It is also called Molar Absorptivity in the Beer's Law (Beer's law, Beer-Lambert law, Lambert-Beer law or the External work done on expansion Pressure Volume P P P1 v v dv v 2 Beer-Lambert-Bouguer law), which relates the absorption of light to the properties of the material through which the light is travelling). It is the constant, a, in the Beer's law relation A=ebc , where A is absorbance (no units, since A = log 10 P0 / P), e is the molar absorbtivity with units of L mol^-1 cm^-1 , b is the path length of the sample - i.e. the path length of the cuvette in which the sample is contained. This measurement in centimetres c is the concentration of the compound in solution, expressed in mol L^-1 . Therefore, if all the light passes through a solution without any absorption, then absorbance is zero and percent transmittance is 100%. If all the light is absorbed, then percent transmittance is zero and absorption is infinite. The reason for stating the law with this equation is because absorbance is directly proportional to the other parameters, as long as the law is obeyed.
+
+=== 140. [1385] extreme point ===
+DEF: Any point of a convex set that cannot be expressed as the average of distinct points of the set; a corner of a polytope. Let C be a convex subset of a vector space X . A point x ∈ C is called an extreme point if it is not an interior point of any line segment in C . In other words, x is extreme if and only if whenever x = ty + (1 - t ) z , t ∈ (0,1), z ≠ y , implies either y ∉ C or z ∉ C . For example, the set [0,1] ∈ R is a convex set and 0 and 1 are the extreme points. Every compact convex subset of Euclidean space is the convex hull of its extreme points.
+
