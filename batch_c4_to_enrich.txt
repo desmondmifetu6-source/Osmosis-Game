@@ -1,0 +1,258 @@
+[201] connected
+1. Of a relation, such that either it or its converse holds between any two members of the domain. 2. Of an ordering, constituting a total ordering. 3. Of a set of real numbers, having the property that if a and b are in the set and c lies between them, then c is also in the set, constituting a continuum. 4. Of a topological set, not able to be partitioned into two non-empty open subsets, such that each subset has no points in common with the set closure of the other. For example, the rationals are not connected, although the reals are. If X is a topological space, a connected set in X is a set A subset = X that cannot be partitioned into two non-empty subsets which are open in the relative topology induced on the set A . The set is called path-, arc-, pathwise or arcwise connected if each is joined by a path in the set; a connected set is not necessarily connected. 5. Of a graph, having the property that there is a path between every pair of vertices along a sequence of edges in the graph.
+==================================================
+[202] conservation law
+A law stating that the total magnitude of a certain physical property of a system such as mass, energy or charge, remain unchanged even though there may be exchanges of that property between components of the system. Conservation laws make it possible to predict the macroscopic behaviour of a system without having to consider the microscopic details of a physical process or chemical reaction.
+==================================================
+[203] consistency theorem
+In logic, the result that open theory is consistent exactly when no disjuntion of negations of instances of its non-logical axioms is a quasi-tautology.
+==================================================
+[204] consistent
+1. In mathematics, consistent equations are two or more equations that can be solved simultaneously by using one set of values for the variables or infinite number of solutions. Examples are x + y + z = 3, x + y + 2 z = 4 as well as y = - 3 x^-1, , 3 x + y = - 1 . If the graphs of equations intersect, then there is one solution that is true for both equations, or If the graphs of equations are the same, then there are an infinite number of solutions that are true for both equations, and are therefore, consistent. 2. In logic, it is also known as sound and defines a set of statements, capable of all being true at the same time in the same circumstances or under the same interpretation. 3. In statistics, of a sequence such that as the sample size increases the probability of accepting a fixed alternative hypothesis when it is true tends to unity. 4. Of a congruence or an equation, possessing a solution. Alternatively, able to be simultaneously satisfied, possessing a solution, as in a system of equations. 5. Of a formal system, not enabling the deduction of a contradiction from the axioms or generally, not having an atomic sentence as a theorem.
+==================================================
+[205] constant
+1. A fixed quantity or one that does not change in value in an expression. For example, in the expression y 2 = 5 x^-3, the numbers^-3 and 5 are constants. 2. A quantity that is regarded as fixed and unchanging for the purposes of a paticular calculation. For example, y = mx + c , the general equation of a line, m and c are constants, i.e., the terms independent of x are termed as constants; while x and y are variables. 3. A specific invariant quantity whose value is determined a priori, such as π or e , the base of the natural logarithms. 4. An unspecified numerical value, for example, if a is proportional to b then a / b is a constant. 5. In physics, it is a number that appears in equations and formulae that does not vary or change. Examples are Planck's constant and the speed of light in a vacuum.
+==================================================
+[206] constant deviation prism
+A prism which has the property that the minimum deviation is always at the same angle. In other words, it is a prism whose deviation is constant and does not depend on the index of refraction or wavelength. Examples include the Pellin- Broca prism and Abbe prism.
+==================================================
+[207] constant matrix
+A matrix whose entries are constant.
+==================================================
+[208] constant of integration
+If g ( x ) is an antiderivative of the function h ( x ), which is continuous, then the antiderivative of h ( x ) differs from g ( x ) by a constant k ; which can be written as ∫ h ( x ) dx = g ( x ) + k , where k is an arbitrary constant, which is the constant of integration.
+==================================================
+[209] constant-boiling mixture
+A solution of two or more substances that retains the same composition in the vapour state as in the liquid state when distilled or partially evaporated under a certain pressure. The composition of the liquid phase at the boiling point is identical to that of the vapour in equilibrium with it and such mixtures or azeotropes form constant-boiling solutions.
+==================================================
+[210] constantan
+An alloy of 55% copper and 45% nickel having electrical resistance which is constant over a wide range of temperatures. Another alloy that shows similar low temperature coefficient is manganin, containing copper, manganese and nickel.
+==================================================
+[211] constitutive equation
+An equation describing the form of the stress tensor and other quantities for a given body. For example, the constitutive equation for the stress in an incompressible Newtonian viscous fluid is σ = - p ( x , t ) I + 2 η Σ - 1 3 ( tr Σ I ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ , where p is a scalar function of the density (pressure), η, is a constant (the viscosity) and Σ is the Eulerian strain rate.
+==================================================
+[212] constitutive equations
+A relation between two physical quantities often described by tensors that is specific to a material or substance and approximates the response of that material to external forces. An example is the equation D = E and B = µH , where D is the electric displacement, permittivity of the medium, E is the electric field intensity, B is the magnetic flux density, µ is the permeability of the medium and H is the magnetic field strength.
+==================================================
+[214] contact force
+In continuum mechanics, it is the force experienced by the points of a body due to their contact with other points of the body or with external boundaries, such as by the application of an external pressure to its boundary or if elastic, by its need to return to its original position. Formally, the effect of the contact forces on a sub-body is given by the integral deformation: t ( × , ∂ ! t ) da ∫ over the surface, ∂ ! t of its current configuration, where t ( × , ∂ ! t ) is the contact force density (load, traction or stress vector on the surface.
+==================================================
+[215] contact torque
+In continuum mechanics, it is the torque experienced by the points of a body due to their contact with other points of the body or with external boundaries, for example, due to the internal magnetic interactions of its material points. Formally, the effect of the contact torque on a sub-body, ! is given by the sum of the integrals: x . t ( × , ∂ ! t ) da + ∫ c ∫ ( × , ∂ ! t ) da over the surface, ∂ ! t where t ( × , ∂ ! t ) and are respectively the contact force density and the contact torque density on the surface and x is the position vector of a point of ! .
+==================================================
+[216] continued fraction
+A number that is an integer plus a fraction whose denominator is itself an integer plus a fraction and so on. For example, the continued fraction representation of a real number x is one of the form: x = a 0 + b 1 a 1 + b 2 a 2 + b 3 a 3 + ..., where a 0 , a 1 , ... a 3 and b 1 , b 2 , b 3 , are integers. Every irrational number can be represented as a continued fraction.
+==================================================
+[217] continuity equation
+In physics, it is a mathematical statement about the conservation of mass in a continuum material body defined as ρ + ρ div v = 0, where v is the velocity of the particles of a body with density ρ and the divergence is taken with respect to its current configuration.
+==================================================
+[218] continuous
+1. In botany, it refers to not jointed or not separating at maturity along well-defined line of dehiscence. 2. A function is said to be continuous if it has a value that changes gradually as the independent variable or variables change, so that at every a of the independent variable, the difference between f ( x ) and f ( a ) approaches zero as x approaches a . A real function y = f ( x ) is continuous at a point a if and only if at x - a , f ( x ) - f ( a ) precisely, if for every ε > 0, there exists a δ > 0 such that f ( x ) - f ( a ) < ε for all x such that f ( x ) - f ( a ) < δ . A function is continuous on the left at the point if the above condition holds only for values x less than a and continuous on the right if it holds for values greater than a . It is continuous at a point if and only if it is continuous both on the left and on the right at that point. The function itself is said to be continuous if it is continuous at all points. The function is said to be uniformly continuous on a set if the value of δ depends only on ε and not on the point a in the set. 3. Of a curve, representing a continuous function. 4. Defining any mathematical entity in terms of simpler entities and operations, such as those of set theory.
+==================================================
+[219] continuous distribution function
+The distribution function of a continuous random variable is defined to be the probability that the random variable takes a value less than or equal to a real number. The function is defined by F ( b ) = P ( X ≤ b ) = is called the distribution function of a continuous random variable.
+==================================================
+[220] convergent in mean
+Of a sequence of integrable functions on a set, having the property that integral of the absolute value of the differences of the functions from the limit function tends to zero. Thus, the sequence { f n } converges to f in mean on an interval [ a , b ] if f n ( x ) - f ( x ) a b ∫ dx → 0 , as tends to ∞ . Convergence in mean requires that f n ( x ) - f ( x ) a b ∫ dx → 0 .
+==================================================
+[221] conversion fact
+A fixed relationship such as 1 inch = 2.54 centimetres that can be used to convert measurements within or between systems of measurement.
+==================================================
+[222] convex
+1. Of a geometric surface, having all edges curving outwards or towards the eye, with no part of its curves or faces pointing inwards. For example, the outer surface of a ball appears convex. 2. A convex polygon is one that has no interior angle greater than 180 O and a line segment drawn between any two points on the shape lies entirely inside the shape. 3. A convex function is a continuous function whose value at the midpoint of every interval in its domain does not exceed the arithmetic mean of its values at the ends of the interval. Alternatively, it is a real-valued function f ( x ) defined on an interval if the chord joining any two points on its graph lies above it, in a Euclidean space or a vector space of at least two dimensions such that for arguments x and y in the a p p ro priateabst ra ctspaceandtintheinter va l [0,1], tf ( x ) + (1 - t ) f ( y ) ≥ f ( tx + (1 - t ) y ). Equivalently, a function is convex if the set of points in a real vector space are in the set then so are all the points on the line segment joining them so that if x and y are any two points in the set, then so is tx + (1 - t ) y , for all t between 0 and 1. Examples of convex functions are the quadratic function f ( x ) = x 2 and the exponential function f ( x ) = e x for any real number x .
+==================================================
+[223] convex combination
+A linear combination, ∑ tiai , of a finite set of elements, a i , such that all coefficients, t i , of the elements are non-negative and ∑ t i sums to 1.
+==================================================
+[224] convex polyhedron
+A polyhedron that has no interior angle greater than 180 o and a line segment drawn between any two points on the shape lies entirely inside the shape. Algebraically, it is defined as the set of solutions to a system of linear inequalities mx < = b , where m is a real s × 3 matrix and b is a real s-vector.
+==================================================
+[225] convolution
+1. A function or series derived from two given functions or series by integration. The integral convolution of f ( x ) and g ( x ) is given by f ( t ) g ( x - t ) x ∫ dt , while the convolution of two sets produces the Cauchy product. 2. In statistics, a method of determination of the sum of two random variables by integration or summation. 3. Also known as gyrus , any of the irregular convex folds or ridges of the surface of the brain especially of the cerebrum.
+==================================================
+[226] correlation
+1. Also called association , it is the degree of relationship between two sets of information. If one set of data increases at the same time as the other, the relationship is said to be positive or direct and if one set of data increases as the other decreases the relationship is said to be negative or inverse. Mathematically, a correlation is expressed by a correlation coefficient that ranges from^-1 (never occur together), through 0 (absolutely independent), to 1 (always occur together). 2. A bijection of the set of points of projective geometry onto the set of highest-dimension subgeometries of another or itself.
+==================================================
+[227] correlation coefficient
+A standardised statistical measure of the linear relationship between two variables. Its range is from^-1.0 (perfect negative correlation), through 0 (no correlation), to +1.0 (perfect positive correlation). The correlation coefficient between two random variables X and Y , written as r or ρ , is defined as r = Cov ( X , Y ) σ X , σ Y = E ( XY ) - E ( X ) E ( Y ) [ E ( X2 ) - ( E ( X )) 2 ][ E ( Y2 ) - ( E ( Y ) 2 ] . Cov ( X , Y ) is the covariance between X and Y : σ X and σ Y are the standard deviations of X and Y , respectively and E stands for expectation. The correlation coefficient is always between^-1 and 1. It tells whether or not there is a linear relationship between X and Y . if Y = ax + b , where a and b are constants and a > 0, then r will be close to 1. If X and Y are completely independently, then r = 0.
+==================================================
+[228] correlation coefficient sample
+Where n pairs of values of random variables X and Y in a random sample are denoted by ( x 1 , y 1 ) , ( x 2 , y 2 ), ..., ( x n , y n ), the correlation coefficient sample is given by r = S xy S xx S yy , where S xy = xjyj^-1 n j = 1 n ∑ xjyjj = 1 n ∑ j = 1 n ∑ ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ , S xx = x j 2 - 1 n j = 1 n ∑ x j j = 1 n ∑ ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ and S is analogously defined to S xx . Alternatively, S xy = xjyjj = 1 n ∑ - nx y and S xx = x 2 j j = 1 n ∑ - n ( x ) 2 .
+==================================================
+[229] correspondence theorem
+In algebra, the result that there is a bijectlon from the set of subgroups of the image of a group under a homomorphism onto the set of subgroups that contain the kernel of the homomorphism; similar results hold for rings, modules, etc. ABDCEFHG Corresponding Angles A = E, C = G, B = F, D =.
+==================================================
+[230] cosecant
+The reciprocal of the sine of an angle, expressed as cosec A = SinA . In a right-angled triangle, it is the ratio of the hypotenuse to the side opposite the angle A . Its abbreviation and symbol is cosec ( csc ). The symbol for its hyperbolic function, hyperbolic cosecant, which is the reciprocal of the hyperbolic sine function, sinh is cosech^-1 . If θ is the angle measured in radians from the x -axis of a coordinate system towards an anticlockwise direction by a radius of length r centred on the orignal point, then cosec θ = r y , where y is the ordinate of the end of the radius.
+==================================================
+[231] cosh
+The symbol for the hyperbolic cosine, which is related to the cosine function by the identity cosh z = cos iz , for z a complex number and i = √-1. It can be defined in terms of the exponential function as cosh z = 1 2 e z + e - z ( ) . It is an even function of which an antiderivative or indefinite integral is the sine function, sinh and the hyperbolic sine function. The functions, cos z and sin z both satisfy cosh 2 z - sinh 2 z = 1 cosh(2 z ) = cosh 2 z - sinh 2 z.
+==================================================
+[232] cosine
+A trigonometric function of an angle in a right-angled triangle, found by dividing the length of the side adjacent to the angle by the length of the hypotenuse, the longest side. Its symbol and abbreviation is cos . Its symbol for the inverse function, arc- cosin is cos^-1 . Cosh is the symbol for the hyperbolic cosine, which is related to the cosine function by the identity cosh z = cos iz , for z a complex number and i = - 1. In other words, if θ is the angle measured in radians from the x -axis of a coordinate system towards an anticlockwise direction by a radius r centred on the origin, then cos θ = x r , where r is the abcissa of the end radius. It is an even function of which an antiderivative or indefinite integral is the sine function, sin and the derivative,is -sin. The functions, cos z and sin z both satisfy cos 2 z + sin 2 z = 1 and cos(2 z ) = cos 2 z . The cosine law or rule in any triangle, with sides of length a , b and c , is c 2 = a 2 + b 2 - 2 ab cos C , b 2 = a 2 + c 2 - 2 ac cos B or a 2 = b 2 + c 2 - 2 bc cos A . Cosine law/rule bBAca=|BC|,b=AC|,c=AB aCabc bc CosA b a c ac CosB c a b ab CosC = + = + = +.
+==================================================
+[233] cosine law
+Cosine law/rule b B A c a=|BC|,b=AC|,c=AB a C 2 2 2 2 2 2 2
+==================================================
+[234] cosmological constant
+A term proposed by Albert Einstein to be added to the Einstein field equation for general relativity theory. It is independent of space and time and should allow for the possibility of a static universe. It is believed that the constant is small and has a non zero value, which has not been yet determined.
+==================================================
+[235] cotangent
+A trigonometric function, which is the reciprocal of the tangent of an angle in a right-angled triangle and is equal to the ratio of cosine to sine or to the length of the side adjacent to the angle divided by that of the side opposite the angle: cot θ = adjacent/ opposite. It is one of the six fundamental ratios of trigonometry, together with tangent, sine, cosine, secant and cosecant. The abbreviation and symbol for cotangent is cot or cotan . The symbol for the inverse cotangent function, arc-cotangent is cot^-1 or cotan^-1 . The symbol for the hyperbolic cotangent is cotanh or coth . The hyperbolic cotangent is the reciprocal of hyperbolic tangent function tanh and equal to the ratio of cosh to sinh. Its derivative is -cosech2 x , with an antiderivative or indefinite integral of logsinh x . Cotanh^-1 or cot is the inverse hyperbolic contagent function or arc-cotanh .
+==================================================
+[236] coulomb force
+The electrostatic force of attraction or repulsion between two charged particles or bodies. The magnitude of the force F is proportional to the product of the charges q 1 and q 2 and inversely proportional to the square of the distance between them r 2 : F = where k is a constant that depends on the measurement system being used; q 1 and q 2 are expressed in coulombs, r is expressed in metres and F is given in newtons. The Coulomb force can be one of repulsion, such as the force between two objects having like charges or it can be attractive, such as the force between two objects having opposite charges.
+==================================================
+[237] coulomb's law
+The law that the force exerted between two electric or magnetic charges is directly proportional to the product of the charges and inversely proportional to the square of the distance between them. Mathematically, it is given by F = , where k is a constant that depends on the measurement system being used, q 1 and q 2 are the charges expressed in coulombs, r is the distance between the charges expressed in metres and F is given in newtons. If the bodies are oppositely charged, one positive and one negative, they are attracted toward one another; if the bodies are similarly charged, both positive or both negative, the force between them is repulsive. Coulomb's law applies exactly only when the charged bodies are much smaller than the distance separating them and therefore can be treated approximately as point charges. When combined with principles of quantum physics, Coulomb's law helps describe the forces that bind electrons to an atomic nucleus, that bind atoms together into molecules and that hold together solids and liquids. The law was deduced in 1785 by C. A. de Coulomb from experimental measures of the forces between charged bodies. The experiments were made using his torsion balance.
+==================================================
+[238] coulombmeter
+An instrument which measures electric charge in coulombs. The charge Q to be measures is allowed to flow on to a capacitor of known capacitance C . The potential difference V across the capacitor is then measured and the value of the charge calculated using the capacitor equation, Q = CV .
+==================================================
+[239] countably additive
+Of a set function, S, defined on a class of sets, having the property that, for any countable pairwise disjoint family of sets {A n } n N in the class, S ∪ n ∈ N A n ( ) = S(A n ) n ∈ N ∑ , whenever the union lies in the given class. For example, by definition, a measure is countably additive on its sigma-algebra.
+==================================================
+[240] counter example
+An example that refutes or disproves a general statement, a proposed theorem or that shows an argument to be invalid by satisfying its antecedent or premises while rendering its consequent or conclusion obviously false. For example, the proposed theorem "All integers have rational square roots" can be disproved by finding a counterexample - in this case, by showing that √2 is not rational.
+==================================================
+[241] counting-up subtracting
+Subtracting two numbers by counting or adding up from the smaller number to the larger number. For example, to calculate 87 - 49, start at 49, add 30 to reach 79, and then add 8 more to reach 87. The difference is 30 + 8 = 38.
+==================================================
+[242] couple
+In mechanics, it is a pair of equal and parallel forces that are acting on a body in opposite directions. The turning effect or moment, of a couple is measured by the product of the magnitude of either force and the perpendicular distance between the action lines of the forces. A body acted upon by a couple will rotate in a clockwise direction or anticlockwise direction. The turning effect or moment of a couple is the product of the magnitude of either force and the perpendicular distance between the action lines of the forces. If the two forces acting on the body have the same line of action, then the moment becomes zero and there is no turning effect. Some examples of the turning effect of two equal and opposite forces not acting in the same straight line are the steering wheel and the pedals of a bicycle. For example, in a steering wheel, when making a turn to the left, the left hand pulls with force F on the steering wheel towards anticlockwise direction, while the right hand pushes with the same force F, but in a clockwise direction. In riding a bicycle, one pedal is being pushed forward while the other is being pushed back. This rotates the sprocket wheel and the attached chain anticlockwise. Some other examples are the forces exerted by the tip of a screw-driver on the head of a screw; and drag forces acting on a spinning propeller. In the diagram , the turning effect or moment, is Moment = Force (N) x Perp. Distance (m) between the forces = 5 N x 2 m = 10 Nm. (Fig. I) (Fig. II) FFFF Two equal, but opposite and parallel forces acting along different lines of a couple (Fig. III) 5N5N2m Moment of a couple.
+==================================================
+[243] coupling constant
+1. A physical constant that is a measure of the strength of interaction between particles. Its symbol is g. 2. Also known as coefficient of coupling or coupling coefficient , it is a measure of the strength of the coupling between two systems, especially electric circuits. The maximum coupling is 1 and no coupling is 0.
+==================================================
+[244] covariance
+In probability theory, covariance is a measure of how much two random variables change together. Covariance of two random variables is the difference between the expected value of their product and the product of their separate expected values. Mathematically, it is given by where X and Y are random variables. If X and Y are independent then Cov ( X , Y ) = 0 not necessarily independent.
+==================================================
+[245] covariance matrix
+A square matrix, usually denoted ∑ in which variance [Var(X i )] and covariance Cov(X i , X j ) are displayed with the variances appearing along the main diagonal and the off-diagonal elements (those in the i, j position) contain the covariances between all possible pairs of variables. The matrix is then symmetrical and non-negative definite. If X1 , X2 ,..., X n are random variables then the variance-covariance matrix is given by Σ ij = cov(xi, xj) = [( x i - µ i )( x i - µ i )].
+==================================================
+[246] cpt theorem
+The theorem that the combined operation of changing charge conjugation C , parity P and time reversal T , denoted by CPT, is a fundamental symmetry of relativistic quantum field theory. No violation of the CPT theorem is known experimentally. When C , P and T or any two of them are violated, the principles of relativistic quantum field theory are not affected. However, violation of CPT invariance would drastically alter the fundamentals of relativistic quantum field theory. It is not known whether superstrings obey versions of the CPT theorem.
+==================================================
+[247] cramer's rule
+A method for solving a set of simultaneous linear equations using determinants. It was named after Gabriel Cramer (1704-1752), who published the rule for an arbitrary number of unknowns in 1750. For the 2 x 2 system: a 1 x + b 1 y = k 1 , a 2 x + b 2 y = k 2 . The rule states that: x = a nd y = . The vertical lines symbolise determinant of the whole matrix of coefficients. This determinant appears in the denominator of the solution for each variable. To calculate the numerator of the solution for x , set up the same matrix but make one substitution: cross out the column that contains the coefficients of x and replace the column with the column of constants from the other side of the equal sign. To use the rule to solve a system of n equations in n unknowns, you will have to calculate n +1 determinants of dimension n x n . For an example of the method, we can find the solution of this two equation system: 3 x^-2 y = 5 and 2 x + y = 7. The determinant in the denominator is = 3 × 1 - 2 × (-2) = 7. The following are the two determinants in the numerators: = 5 × 1 - 7 × (-2) = 19 and = 3 × 7 - 5 × 2 = 11; then x = .
+==================================================
+[248] cresol
+One of the three poisonous, colourless isomeric mythylphenols, comprising o-cresol, m-cresol and p-cresol with the chemical formula CH3 C6 H4 OH. It is used in the production of phenolic resins, disinfectants and also as solvents. crest crest Crest of a wave λ.
+==================================================
+[249] critical angle
+1. The angle of incidence in a dense medium at which the angle of refraction is 90 o . When a light ray emerges from a denser medium into a less dense medium, it is refracted and bends away from the normal. As the angle of incidence ( i ) increases so is the angle of refraction ( r ). When the angle of incidence ( i ) equals the critical angle, the refracted ray is just touching the glass surface making an angle of 90 o with the normal. Critical angle is a function of frequency; the higher the frequency the larger the critical angle. The relationship between the refractive index ( μ ) of a medium and the critical angle (c) is given as µ = sin i c .
+==================================================
+[250] critical density
+1. The density of a substance at its critical temperature and under its critical pressure. Below this density, saturated granular material will lose strength and above it will gain strength when subjected to rapid deformation. 2. The minimum density of matter that stops the universe from expansion. Its unit is ρc. Its value which depends on the Hubble Constant, H can be calculated as: ρ c = 3 H2 8 π G , where G is Newton's gravitational constant. Its value is approximately 10 -26 kg/m3 (or 10 hydrogen atoms per cubic metre.
+==================================================
+[251] cross multiplication
+1. The process of rewriting a proportion by calculating its cross products. It can be used in solving open proportions. 2. The process of solving a fractional equation by multiplying the numerator of each fraction by the other's denominator and equating the two products obtained. For example, a b = c d ⇒ a × d = b × c = ad = bc .
+==================================================
+[252] cross product
+The product of two vectors A and B , with components a 1 , a 2 , a 3 and b 1 , b 2 , b 3 , respectively. This can be expressed as A × B = a 2 a 3 b 2 b 3 i - a 1 a 3 b 1 b 3 j + a 1 a 2 b 1 b 3 k or A x B = ( a 2 b 3 - a 3 b 2 ) i + ( a 3 b 1 - a 1 b 3 ) j + ( a 1 b 2 - a 2 b 1 ) k . The vector product is itself a vector, perpendicular to both A and B and of length AB sin θ , where θ is the angle between A and B . The cross product of two vectors is a vector rather than a number, unlike the dot product. The determinant notation is a useful scheme for remembering the cross product. If A = a 1 a 2 a 3 ⎛ ⎝ ⎜⎜⎜⎜⎜⎜⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟ and B = b 1 b 2 b 3 ⎛ ⎝ ⎜⎜⎜⎜⎜⎜⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟ , then the determinant notation is ikja 1 a 2 a 3 b 1 b 2 b 3 . The symbols i , j and k are vectors while the other elements are numbers.
+==================================================
+[253] cross ratio
+If P , Q , R and S are four points lying on a straight line, the ratio of PQ to QR divided by the ratio of PS t o SR is called the anharmonic or cross-ratio of the four points and is denoted by (PQRS). Thus ( PQRS ) = PQ QR ÷ PS SR = PQ QR ⋅ SR PS = PQ ⋅ RS OR ⋅ SP .
+==================================================
+[254] cruciform
+1. Having the shape of a cross. In architecture, it is usually used to describe the plan of a church. 2. In botany, it refers to structures or organs such as flowers, which are shaped like a cross, as shown in the diagram. 3. In mathematics, it defines a geometric curve, shaped like a cross and has four similar branches asymptotic to two mutually perpendicular pairs of lines. For example, in the equation x ² y ² - a ² x ² - a ² y ² = 0, where x = y = ± a are the four lines.
+==================================================
+[255] cryogenics
+The science of very low temperatures defined as below^-123.15 o C (150 K). Some of the phenomena that occur at cryogenic temperatures include liquefaction and solidification of ambient gases; loss of ductility and embrittlement of some structural materials such as carbon steel; increase in the thermal conductivity C of relatively pure metals, ionic compounds and crystalline dielectrics such as diamond, sapphire, solidified gases and so forth to a maximum value, followed by a decrease as the temperature is lowered further; decrease in the thermal conductivity of metal alloys and plastics; decrease in the electrical resistance of relatively pure metals; decrease in the heat capacity of solids; decrease in thermal noise and disorder of matter; and appearance of quantum effects such as superconductivity and superfluidity.
+==================================================
+[256] cryoscopic constant
+In thermodynamics, the cryoscopic constant, with the symbol K f , relates molality to freezing point depression and used to calculate the freezing-point-depression effects of a solute. In the expression, Δ t = KfCm , C m is the molar concentration of dissolved solute and K f is the cryoscopic constant for the solvent used. K f is expressed in degrees per mole of pure solvent. For example, the K f for water is 1.853 K·kg/mol.
+==================================================
+[257] cube root
+A number raised to the number one third. For example, x 1/3 = 3 √ x .
+==================================================
+[258] cubic equation
+An equation in which the highest power of the variable is three. For example, ax 3 + bx 2 + cx + d = 0, where a is nonzero. In other words, it is a polynomial of degree three. The derivative of a cubic function is a quadratic function. The integral of a cubic function is a quartic function. Setting ƒ ( x ) = 0 and assuming a ≠ 0 it produces a cubic equation of the form: ax 3 + bx 2 + cx + d = 0 . Usually, the coefficients a , b , c , d are real numbers. However, most of the theory is also valid if they belong to a field of characteristic other than 2 or 3. Solving a cubic equation amounts to finding the roots of a cubic function.
+==================================================
+[259] cubic expansion
+The fractional change in volume of a substance per kelvin rise in temperature. It expressed mathematically as γ = V2 - V1 V1 ( θ 2 - θ 1 ) , where γ is the coefficient of volumetric expansion, V1 is the volume at θ 1 and V2 is the volume at θ 2 . Example of a Cubic function y=x 3 y x.
+==================================================
+[260] cubic function
+A polynomial of the third degree. Its general formula is f ( x ) = ax 3 + bx 2 + cx + d , where a is not equal to zero.
+==================================================
+[261] cubic polynomial
+A polynomial of degree 3. Examples are x 3 - 1, 4 a 3 - 100 a 2 + a^-6 and m2 n + mn 2 .
+==================================================
+[262] cubic resolvent equation
+An intermediate equation that can be used to solve for the roots of quartic in terms of the root of the cubic which can in turn be solved for using the cubic equation.
+==================================================
+[263] cuboid
+A six sided three-dimensional prism whose faces are all rectangles, forming a convex polyhedron. If the lengths of the sides are denoted by a , b and c , a cuboid with all sides equal ( a = b = c ) is called a cube and a cuboid with integer edge lengths a > b > c and face diagonals is called an Euler brick . If the space diagonal is also an integer, the cuboid is called a perfect cuboid .The volume of a cuboid is given by V = abc ; its total surface area is given by S = 2( ab + bc + ca ).
+==================================================
+[264] cumulant
+In statistics, any of the coefficients, K n , of tn / n ! in the Taylor series of the natural logarithm of the moment generating function, M x ( t ), random variable. K1 is the mean and K2 is the variance. If the moment-generating function of a distribution exists, then its natural logarithm exists and is called the cumulant generating function (cgf). The coefficient of t r e ! in the Taylor expansion of the cgf is called the r th cumulant and is denoted by K (where K is kappa). The cumulant can be expressed in terms of the central moments and vice versa in particular, denoting the mean by µ and the central moment by µ 1 , µ 2 ; K1 = µ , K2 = µ 2 , K3 = µ 3 , K4 = µ 4 3 - 3 µ 2 2 , K5 = µ 5 - 10 µ 3 µ 2 .
+==================================================
+[265] cumulative distribution function
+In statistics, a function that gives the probability that a random variable at each point will be less than or equal to a specific value. The function F, for a random variable X, is defined for all real values x by F( x ) = P(X ≤ x ). From the definition, F ( -∞ ) = 0 and F(∞) =1 are the limits of F( x ) as x tends to -∞ and ∞ respectively. The function is a non-decreasing function such that if x 2 > x 1 then F( x 2 ) ≥ F( x 1 ). If X is a continuous random variable then F is a continuous function and conversely, if X has probability density function f , the F( x ) = f ( t ) dt -∞ ∞ ∫ and f ( x ) = F'( x ), where F'( x ) is the derivative of F( x ).
+==================================================
+[266] cumulative odds ratio
+A function used in models for ordinal variables. Let j denote a possible value of the ordinal variable, Y and let E1 and E2 be two possible events, the ratio R j given by R j = P ( Y ≤ j | E1 ) P ( Y > j | E1 ) P ( Y ≤ j | E2 ) P ( Y > j | E2 ) is called cumulative odds ratio. If E1 and E2 represent different values for a vector of explanatory variables, the model R j = R, where R is a constant, is a proportional odds model.
+==================================================
+[267] cumulative probability
+The probability that the value of a random variable falls within a specified range. For discrete random variable X that can take only the ordered values x 1 < x 2 < ... the cumulative probability of the value less than or equal to x k is P ( X = x ( j ) ) j = 1 k ∑ .
+==================================================
+[268] cumulenes
+Hydrocarbons (and by extension, derivatives formed by substitution) having three or more cumulative double bonds, for example, R2 C=C=C=CR2 .
+==================================================
+[269] curie
+A law relating the magnetic susceptibility chi of a paramagnetic substance to its absolute temperature T: chi = C / (T - theta), where C is the Curie constant and theta is the Weiss constant.
+==================================================
+[270] curie's law
+A law which states that the susceptibility (x) of a paramagnetic substance is inversely proportional to the thermodynamic temperature ( T ). This can be expressed as M = C . B / T , where M is the resulting magnetisation, B is the magnetic field, measured in teslas, T is absolute temperature, measured in kelvins and C is a material-specific Curie constant. The law is named after Pierre Curie (1859-1906), a French physicist, a pioneer in crystallography, magnetism, piezoelectricity and radioactivity.
+==================================================
+[272] curvature vector
+Of a space curve, the derivative of a unit tangent vector with respect to arc length; the second derivative of the position vector of the curve when parametrized by arc length; the product of the curvature and the unit vector in the normal direction. y^-1 -2 An example of a curve on the Cartesian plane x.
+==================================================
+[273] curve of constant width
+A curve that, when rotated in a square, makes continuous contact with all four sides.
+==================================================
+[274] curvilinear
+1. Consisting of or characterised by bounded by curved lines or lines. 2. Of a set of coordinates, determined by or determining a system of three usually orthogonal surfaces, which are the coordinate planes in a Cartesian coordinates system. C n -dimensional Euclidean space, with respect to i th position variable; if C can be represented as x( t ), in terms of a parameter, t in the interval [a, b], then it is equal to φ (x a b ∫ ( t )x i )d t . Cusp Cusp of a leaf.
+==================================================
+[275] cut
+1. To remove a portion of the complex plane, leaving a cut plane, so that some function has an analytic branch in the remaining region; thus the principal value of logarithm lies in the cut plane excluding ]-∞, 0]. 2. In topology, to remove a point, a cut point, from a set so that the remainder of the set is disconnected. For example, the interval (-1, 1) is disconnected by cutting zero. 3. In logic, a rule of elimlnation in sequent calculus, according to which A, C D can be derived from A B and B, C D. 4. In optimisation, to remove a portion of the feasible set by adding a linear inequality, called a cutting plane, as in integer programming so as to remove the current estimate of the solution while maintaining all possible solutions. 5. In computer science, it is a command located under the edit menu, allowing users to cut desired text, graph or picture and move text or files to a new location on the computer.
+==================================================
+[276] cyanic acid
+An unstable explosive acid, with the chemical formula HOCN, relative density 1.14, melting point^-86°C (187K) and boiling point 23.5°C (296.65K). The compound has the structure H-O-C≡N. Its salts and esters are cyanates or fulminates. It is a volatile liquid, which readily polymerises. In water, it hydrolyses to ammonia and carbon dioxide. Its salts and esters are isocyanates.
+==================================================
+[277] cyanogen
+A colourless, highly poisonous gas, with the chemical formula C2 N2 , relative density 0.95, melting point^-28 °C (245 K) and boiling point^-21 °C (252 K). It is made by the action of acids on cyanides. It is very toxic, as it readily undergoes reduction to cyanide and can poison the cytochrome c oxidase complex, thus interrupting the mitochondrial electron transfer chain. It is used as a rocket propellant, an insecticide and a chemical weapon.
+==================================================
+[278] cycle
+1. A single recurring series of changes in, for instance, a wave, a vibration or rotation. In other words, it is a process or series of events that ends at the point at which it begins or that repeats itself continuously at regular intervals. 2. A permutation in which one subset of elements are moved cyclically and the remainder are not moved, for exa m ple, (1,2,5,4,5) (1,4,5,2,5). If γ is a cycle that permutes exactly l elements, then l is the length of the cycle and γ has order l , that is y l = e , where e is the identity permutation. Every permutation has a unique factorisation as a product of disjoint cycles. 3. A simple closed graph.
+==================================================
+[279] cyclic permutation
+A set that results from mapping each element of an ordered set to its successor. This is given by ( n^-1)!. The number is ( n^-1)!. instead of the usual factorial n ! since all cyclic permutations of objects are equivalent because the circle can be rotated.
+==================================================
+[280] cyclo-octatetraene
+A flammable yellow liquid cyclic compound, with the chemical formula C8 H8 , melting point^-5 to^-3 °C (268-270 K) and boiling point 142-143 °C (415-416 K). It has eight carbon atoms and four double bonds in its ring. It is not aromatic and made by polymerising ethyne (acetylene) in the presence of nickel salts. Its reactivity is characteristic of an ordinary polyene.
+==================================================
+[281] cyclohexadiene
+cyclohexadiene^-1,4-dione (benzoquinone or quinone) O O CYCLOHEXADIENE^-1,4-DIONE (BENZOQUINONE; QUINONE): A yellow solid, with the chemical formula C6H4O2, relative density 1.3 and melting point 116 °C (389 K). It has a six- membered ring of carbon atoms with two opposite carbon atoms linked to oxygen atoms (C=O) and the other two pairs of carbon atoms linked by double bonds (HC=CH). The compound is used in making dyes. CYCLOHEXANE: A colourless liquid
+==================================================
+[282] cyclohexadiene-1,4-dione
+A yellow solid, with the chemical formula C6 H4 O2 , relative density 1.3 and melting point 116 °C (389 K). It has a six- membered ring of carbon atoms with two opposite carbon atoms linked to oxygen atoms (C=O) and the other two pairs of carbon atoms linked by double bonds (HC=CH). The compound is used in making dyes.
+==================================================
+[283] cycloid
+A curve traced by a point on the circumference of a circle that rolls along straight lines. It can be defined by the parametric equations x = x 0 + a ( θ - sin θ ), y = y 0 + a (1-cos θ ). Its applications include the study of the motion of wheeled vehicles along roads and tracks. 4 π 8 π -12 A cycloid drawn on the Cartesian plane.
+==================================================
+[284] cyclometric functions
+Functions defined in terms of angle and sides of a right-angled triangle and widely used in the solution of many mathematical problems; or any of the six functions: sine, cosine, tangent, cotangent, secant and cosecant that represent ratios of sides of right angle triangle. For example, for acute angle x in a right triangle ABC, the trigonometric functions are as follows: sin x = opposite hypotenuse , cos x = adjacent hypotenuse tan x = opposite adjacent , cot x = adjacent opposite sec x = hypotenuse adjacent , co sec x = hypotenuse opposite .
+==================================================
+[285] cyclotomic
+Of or pertaining to nth roots of unity. The cyclotomic equation is z n^-1 = 0. The n th cyclotomic polynomial is the polynomial, whose roots are all the primitive roots of unity and thus, for prime n , is the cyclotomic equation of degree n . A cyclotomic field is an extension field of the rationals obtained by adjoining a root of unity. A B so The magnetic field is perpendicular to the plane of the paper Cyclotron.
+==================================================
+[286] cylinder
+1. A tube-like solid figure with a circular base or a solid or hollow curved body with circular ends and straight sides. In its everyday us Height Radius Cylinder Radius e, the term applies to a right cylinder, the curved surface of which is at right angles to the base. 2. A three-dimensional geometric solid bounded by two equal parallel circles and a curved surface formed by moving a straight line so that its ends lie on the circles. For a closed curve, the total surface area (T.S.A.) = 2 πrh + 2 πr 2 . The curved surface area = 2 πrh . 3. A three-dimensional geometric surface formed by a straight line moving in a circle around and parallel to a fixed straight line, forming a hollow tube shape. 4. In a Cartesian product, it is a set that is the direct product of a set and non- trivial vector space. 5. A rotating part of a revolver containing chambers into which cartridges are loaded. 6. A revolving drum of a printing press that produces or receives the impression.
+==================================================
+[287] cylindrical polar coodinates
+A three-dimensional coordinate system that specifies point positions by the distance from a chosen reference axis, the direction from the axis relative to a chosen reference direction and the distance from a chosen reference plane perpendicular to the axis (r, θ, z). The radius and the azimuth are together called the polar coordinates, as they correspond to a two-dimensional polar coordinate system in the plane through the point, parallel to the reference plane and z is the same as cartesian coordinates.
+==================================================
+[288] cysteine
+cysteine SH CH2 C H COO- H3N + C Y S T E I N E ( β- M E R C A P T O A L A N I N E ; - A M I N O - β- THIOLPROPIONIC ACID; 2-AMINO^-3-MERCAPTOPROPANOIC ACID): A natural sulfur-containing nonessential amino acid, with the chemical formula C3H7NO2S. It is converted to cystine during metabolism. Cysteine is involved in
+==================================================

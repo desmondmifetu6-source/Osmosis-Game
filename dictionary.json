@@ -629,7 +629,7 @@
       "word": "abelian theorem",
       "raw_headword": "ABELIAN THEOREM",
       "synonyms": [],
-      "definition": "A theorem stating that the convergence of a series or integral implies summability with respect to some summability method. Named after Norwegian mathematician Niels Henrik Abel (1802–1829). Abel's theorem states that if a power series in $z$ converges to $f(z)$ for $|z| < 1$ and to $a$ for $z = 1$, then $\\lim_{z \\to 1^-} f(z) = a$. In other words, if a power series converges for $z = a$, it converges absolutely for $$$$$$$$|z| < |a|$$$$$$$$. It also states that if three series with $n$-th terms $a_n$, $b_n$ and: $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ respectively converge, then the third series equals the product of the first two series."
+      "definition": "A theorem stating that the convergence of a series or integral implies summability with respect to some summability method. Named after Norwegian mathematician Niels Henrik Abel (1802–1829). Abel's theorem states that if a power series in $z$ converges to $f(z)$ for $|z| < 1$ and to $a$ for $z = 1$, then $\\lim_{z \\to 1^-} f(z) = a$. In other words, if a power series converges for $z = a$, it converges absolutely for $$$$$$$$$|z| < |a|$$$$$$$$$. It also states that if three series with $n$-th terms $a_n$, $b_n$ and: $$c_n = a_0 b_n + a_1 b_{n^-1} + \\dots + a_n b_0$$ respectively converge, then the third series equals the product of the first two series."
     },
     {
       "word": "abend",
@@ -9844,7 +9844,7 @@
       "word": "annihilation",
       "raw_headword": "ANNIHILATION",
       "synonyms": [],
-      "definition": "In subatomic physics, a high-energy process in which a subatomic particle collides with its corresponding antiparticle, converting their entire rest mass into energy in accordance with Einstein's mass-energy equivalence principle: $$$$$$$$$$$$E = mc^2$$$$$$$$$$$$ In electron-positron annihilation, an electron ($e^-$) and a positron ($e^+$) annihilate at low kinetic energy to produce two gamma-ray photons: $$e^- + e^+ \\longrightarrow 2\\gamma$$ Each gamma photon carries energy $E_\\gamma = m_e c^2 = 0.511\\text{ MeV}$, giving a total energy release of $1.022\\text{ MeV}$."
+      "definition": "In subatomic physics, a high-energy process in which a subatomic particle collides with its corresponding antiparticle, converting their entire rest mass into energy in accordance with Einstein's mass-energy equivalence principle: $$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$ In electron-positron annihilation, an electron ($e^-$) and a positron ($e^+$) annihilate at low kinetic energy to produce two gamma-ray photons: $$e^- + e^+ \\longrightarrow 2\\gamma$$ Each gamma photon carries energy $E_\\gamma = m_e c^2 = 0.511\\text{ MeV}$, giving a total energy release of $1.022\\text{ MeV}$."
     },
     {
       "word": "annihilator",
@@ -39509,7 +39509,7 @@
       "word": "consistent",
       "raw_headword": "CONSISTENT",
       "synonyms": [],
-      "definition": "1. In mathematics, consistent equations are two or more equations that can be solved simultaneously by using one set of values for the variables or infinite number of solutions. Examples are x + y + z = 3, x + y + 2 z = 4 as well as y = - 3 x^-1, , 3 x + y = - 1 . If the graphs of equations intersect, then there is one solution that is true for both equations, or If the graphs of equations are the same, then there are an infinite number of solutions that are true for both equations, and are therefore, consistent. 2. In logic, it is also known as sound and defines a set of statements, capable of all being true at the same time in the same circumstances or under the same interpretation. 3. In statistics, of a sequence such that as the sample size increases the probability of accepting a fixed alternative hypothesis when it is true tends to unity. 4. Of a congruence or an equation, possessing a solution. Alternatively, able to be simultaneously satisfied, possessing a solution, as in a system of equations. 5. Of a formal system, not enabling the deduction of a contradiction from the axioms or generally, not having an atomic sentence as a theorem."
+      "definition": "1. In mathematics, a system of equations that possesses at least one solution (or infinitely many solutions). For example, the linear system $x + y + z = 3$ and $x + y + 2z = 4$ is consistent. 2. In mathematical logic, a set of statements or formal system from which no contradiction can be deduced. 3. In statistics, an estimator whose probability of differing from the true parameter by more than any given amount tends to zero as sample size $n \\to \\infty$."
     },
     {
       "word": "consistent estimator",
@@ -39562,7 +39562,7 @@
       "word": "constant",
       "raw_headword": "CONSTANT",
       "synonyms": [],
-      "definition": "1. A fixed quantity or one that does not change in value in an expression. For example, in the expression y 2 = 5 x^-3, the numbers^-3 and 5 are constants. 2. A quantity that is regarded as fixed and unchanging for the purposes of a paticular calculation. For example, y = mx + c , the general equation of a line, m and c are constants, i.e., the terms independent of x are termed as constants; while x and y are variables. 3. A specific invariant quantity whose value is determined a priori, such as π or e , the base of the natural logarithms. 4. An unspecified numerical value, for example, if a is proportional to b then a / b is a constant. 5. In physics, it is a number that appears in equations and formulae that does not vary or change. Examples are Planck's constant and the speed of light in a vacuum."
+      "definition": "1. A fixed numerical value or invariant quantity that does not vary within a given context. For example, in the linear equation $y = mx + c$, $m$ and $c$ are constants while $x$ and $y$ are variables. 2. Fundamental mathematical constants include $\\pi \\approx 3.14159$ and Euler's number $e \\approx 2.71828$. 3. In physics, an invariant physical quantity such as Planck's constant $h$ or the speed of light in vacuum $c$."
     },
     {
       "word": "constant deviation prism",
@@ -39580,7 +39580,7 @@
       "word": "constant of integration",
       "raw_headword": "CONSTANT OF INTEGRATION",
       "synonyms": [],
-      "definition": "If g ( x ) is an antiderivative of the function h ( x ), which is continuous, then the antiderivative of h ( x ) differs from g ( x ) by a constant k ; which can be written as ∫ h ( x ) dx = g ( x ) + k , where k is an arbitrary constant, which is the constant of integration."
+      "definition": "An arbitrary constant $C$ added to the antiderivative of a function to represent the entire family of antiderivatives: $$\\int f(x) \\, dx = F(x) + C$$ where $F'(x) = f(x)$."
     },
     {
       "word": "constant-boiling mixture",
@@ -39648,13 +39648,13 @@
       "word": "constitutive equation",
       "raw_headword": "CONSTITUTIVE EQUATION",
       "synonyms": [],
-      "definition": "An equation describing the form of the stress tensor and other quantities for a given body. For example, the constitutive equation for the stress in an incompressible Newtonian viscous fluid is σ = - p ( x , t ) I + 2 η Σ - 1 3 ( tr Σ I ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ , where p is a scalar function of the density (pressure), η, is a constant (the viscosity) and Σ is the Eulerian strain rate."
+      "definition": "A relation between physical quantities specific to a material describing its response to applied external forces. For example, for an incompressible Newtonian viscous fluid, the Cauchy stress tensor is given by: $$\\boldsymbol{\\sigma} = -p \\mathbf{I} + 2\\eta \\left( \\boldsymbol{\\Sigma} - \\frac{1}{3} \\operatorname{tr}(\\boldsymbol{\\Sigma})\\mathbf{I} \\right)$$ where $p$ is hydrostatic pressure, $\\eta$ is dynamic viscosity, and $\\boldsymbol{\\Sigma}$ is the strain-rate tensor."
     },
     {
       "word": "constitutive equations",
       "raw_headword": "CONSTITUTIVE EQUATIONS",
       "synonyms": [],
-      "definition": "A relation between two physical quantities often described by tensors that is specific to a material or substance and approximates the response of that material to external forces. An example is the equation D = E and B = µH , where D is the electric displacement, permittivity of the medium, E is the electric field intensity, B is the magnetic flux density, µ is the permeability of the medium and H is the magnetic field strength."
+      "definition": "Material-dependent relations connecting electromagnetic or mechanical fields. In electromagnetism: $$\\mathbf{D} = \\varepsilon \\mathbf{E}, \\quad \\mathbf{B} = \\mu \\mathbf{H}$$ where $\\mathbf{D}$ is electric displacement, $\\varepsilon$ is permittivity, $\\mathbf{E}$ is electric field, $\\mathbf{B}$ is magnetic flux density, $\\mu$ is magnetic permeability, and $\\mathbf{H}$ is magnetic field intensity."
     },
     {
       "word": "constitutive promoter",
@@ -39765,7 +39765,7 @@
       "word": "contact force",
       "raw_headword": "CONTACT FORCE",
       "synonyms": [],
-      "definition": "In continuum mechanics, it is the force experienced by the points of a body due to their contact with other points of the body or with external boundaries, such as by the application of an external pressure to its boundary or if elastic, by its need to return to its original position. Formally, the effect of the contact forces on a sub-body is given by the integral deformation: t ( × , ∂ ! t ) da ∫ over the surface, ∂ ! t of its current configuration, where t ( × , ∂ ! t ) is the contact force density (load, traction or stress vector on the surface."
+      "definition": "In continuum mechanics, the surface force experienced by material points of a body due to physical contact across internal surfaces or external boundaries. The total contact force on a sub-body with boundary $\\partial \\mathcal{B}_t$ is: $$\\mathbf{F}_c = \\int_{\\partial \\mathcal{B}_t} \\mathbf{t}(\\mathbf{x}, \\mathbf{n}) \\, da$$ where $\\mathbf{t}(\\mathbf{x}, \\mathbf{n})$ is the Cauchy traction vector."
     },
     {
       "word": "contact herbicide",
@@ -39805,7 +39805,7 @@
       "word": "contact torque",
       "raw_headword": "CONTACT TORQUE",
       "synonyms": [],
-      "definition": "In continuum mechanics, it is the torque experienced by the points of a body due to their contact with other points of the body or with external boundaries, for example, due to the internal magnetic interactions of its material points. Formally, the effect of the contact torque on a sub-body, ! is given by the sum of the integrals: x . t ( × , ∂ ! t ) da + ∫ c ∫ ( × , ∂ ! t ) da over the surface, ∂ ! t where t ( × , ∂ ! t ) and are respectively the contact force density and the contact torque density on the surface and x is the position vector of a point of ! ."
+      "definition": "In continuum mechanics, the total moment of surface traction forces and surface couples acting across a boundary $\\partial \\mathcal{B}_t$: $$\\mathbf{M}_c = \\int_{\\partial \\mathcal{B}_t} \\mathbf{x} \\times \\mathbf{t}(\\mathbf{x}, \\mathbf{n}) \\, da + \\int_{\\partial \\mathcal{B}_t} \\mathbf{m}(\\mathbf{x}, \\mathbf{n}) \\, da$$ where $\\mathbf{x}$ is position, $\\mathbf{t}$ is traction, and $\\mathbf{m}$ is surface couple density."
     },
     {
       "word": "contact transformation",
@@ -39959,7 +39959,7 @@
       "word": "continued fraction",
       "raw_headword": "CONTINUED FRACTION",
       "synonyms": [],
-      "definition": "A number that is an integer plus a fraction whose denominator is itself an integer plus a fraction and so on. For example, the continued fraction representation of a real number x is one of the form: x = a 0 + b 1 a 1 + b 2 a 2 + b 3 a 3 + ..., where a 0 , a 1 , ... a 3 and b 1 , b 2 , b 3 , are integers. Every irrational number can be represented as a continued fraction."
+      "definition": "A representation of a real number as an integer part plus the reciprocal of another number, which in turn is written similarly: $$x = a_0 + \\cfrac{b_1}{a_1 + \\cfrac{b_2}{a_2 + \\cfrac{b_3}{a_3 + \\dots}}}$$ Every rational number has a finite continued fraction, while every irrational number has a unique infinite continued fraction."
     },
     {
       "word": "continued product",
@@ -39979,7 +39979,7 @@
       "synonyms": [
         "spatial equation of continuity"
       ],
-      "definition": "In physics, it is a mathematical statement about the conservation of mass in a continuum material body defined as ρ + ρ div v = 0, where v is the velocity of the particles of a body with density ρ and the divergence is taken with respect to its current configuration."
+      "definition": "A differential equation expressing the local conservation of mass, charge, or probability in a continuum. For fluid flow with density $\\rho$ and velocity $\\mathbf{v}$: $$\\frac{\\partial \\rho}{\\partial t} + \\nabla \\cdot (\\rho \\mathbf{v}) = 0$$"
     },
     {
       "word": "continuity inversion",
@@ -39991,7 +39991,7 @@
       "word": "continuous",
       "raw_headword": "CONTINUOUS",
       "synonyms": [],
-      "definition": "1. In botany, it refers to not jointed or not separating at maturity along well-defined line of dehiscence. 2. A function is said to be continuous if it has a value that changes gradually as the independent variable or variables change, so that at every a of the independent variable, the difference between f ( x ) and f ( a ) approaches zero as x approaches a . A real function y = f ( x ) is continuous at a point a if and only if at x - a , f ( x ) - f ( a ) precisely, if for every ε > 0, there exists a δ > 0 such that f ( x ) - f ( a ) < ε for all x such that f ( x ) - f ( a ) < δ . A function is continuous on the left at the point if the above condition holds only for values x less than a and continuous on the right if it holds for values greater than a . It is continuous at a point if and only if it is continuous both on the left and on the right at that point. The function itself is said to be continuous if it is continuous at all points. The function is said to be uniformly continuous on a set if the value of δ depends only on ε and not on the point a in the set. 3. Of a curve, representing a continuous function. 4. Defining any mathematical entity in terms of simpler entities and operations, such as those of set theory."
+      "definition": "A function $f(x)$ where small changes in the input produce arbitrarily small changes in the output. Formally, $f$ is continuous at $a$ if $\\lim_{x \\to a} f(x) = f(a)$, meaning for every $\\varepsilon > 0$, there exists $\\delta > 0$ such that: $$|x - a| < \\delta \\implies |f(x) - f(a)| < \\varepsilon$$"
     },
     {
       "word": "continuous bed packing",
@@ -40030,7 +40030,7 @@
       "word": "continuous distribution function",
       "raw_headword": "CONTINUOUS DISTRIBUTION FUNCTION",
       "synonyms": [],
-      "definition": "The distribution function of a continuous random variable is defined to be the probability that the random variable takes a value less than or equal to a real number. The function is defined by F ( b ) = P ( X ≤ b ) = is called the distribution function of a continuous random variable."
+      "definition": "The cumulative distribution function (CDF) of a continuous random variable $X$, defined for all real $b$ by: $$F(b) = P(X \\le b) = \\int_{-\\infty}^b f(x) \\, dx$$ where $f(x)$ is the continuous probability density function (PDF)."
     },
     {
       "word": "continuous flow enthalpimetry",
@@ -40422,7 +40422,7 @@
       "word": "convergent in mean",
       "raw_headword": "CONVERGENT IN MEAN",
       "synonyms": [],
-      "definition": "Of a sequence of integrable functions on a set, having the property that integral of the absolute value of the differences of the functions from the limit function tends to zero. Thus, the sequence { f n } converges to f in mean on an interval [ a , b ] if f n ( x ) - f ( x ) a b ∫ dx → 0 , as tends to ∞ . Convergence in mean requires that f n ( x ) - f ( x ) a b ∫ dx → 0 ."
+      "definition": "A sequence of integrable functions $\\{f_n\\}$ converging to $f$ in the $L^1$ norm on $[a, b]$, satisfying: $$\\lim_{n \\to \\infty} \\int_a^b |f_n(x) - f(x)| \\, dx = 0$$"
     },
     {
       "word": "convergent in measure",
@@ -40475,7 +40475,7 @@
       "word": "conversion fact",
       "raw_headword": "CONVERSION FACT",
       "synonyms": [],
-      "definition": "A fixed relationship such as 1 inch = 2.54 centimetres that can be used to convert measurements within or between systems of measurement."
+      "definition": "A fixed conversion relationship between measurement units, such as $1\\text{ inch} = 2.54\\text{ cm}$ or $1\\text{ lb} \\approx 0.4536\\text{ kg}$."
     },
     {
       "word": "conversion factor",
@@ -40523,13 +40523,13 @@
       "word": "convex",
       "raw_headword": "CONVEX",
       "synonyms": [],
-      "definition": "1. Of a geometric surface, having all edges curving outwards or towards the eye, with no part of its curves or faces pointing inwards. For example, the outer surface of a ball appears convex. 2. A convex polygon is one that has no interior angle greater than 180 O and a line segment drawn between any two points on the shape lies entirely inside the shape. 3. A convex function is a continuous function whose value at the midpoint of every interval in its domain does not exceed the arithmetic mean of its values at the ends of the interval. Alternatively, it is a real-valued function f ( x ) defined on an interval if the chord joining any two points on its graph lies above it, in a Euclidean space or a vector space of at least two dimensions such that for arguments x and y in the a p p ro priateabst ra ctspaceandtintheinter va l [0,1], tf ( x ) + (1 - t ) f ( y ) ≥ f ( tx + (1 - t ) y ). Equivalently, a function is convex if the set of points in a real vector space are in the set then so are all the points on the line segment joining them so that if x and y are any two points in the set, then so is tx + (1 - t ) y , for all t between 0 and 1. Examples of convex functions are the quadratic function f ( x ) = x 2 and the exponential function f ( x ) = e x for any real number x ."
+      "definition": "1. A geometric set in which the line segment joining any two points in the set lies entirely within the set: $$\\forall x, y \\in S, \\, t \\in [0, 1] \\implies tx + (1 - t)y \\in S$$ 2. A real-valued function $f$ satisfying: $$f(tx + (1 - t)y) \\le t f(x) + (1 - t) f(y), \\quad \\forall t \\in [0, 1]$$ Examples include $f(x) = x^2$ and $f(x) = e^x$."
     },
     {
       "word": "convex combination",
       "raw_headword": "CONVEX COMBINATION",
       "synonyms": [],
-      "definition": "A linear combination, ∑ tiai , of a finite set of elements, a i , such that all coefficients, t i , of the elements are non-negative and ∑ t i sums to 1."
+      "definition": "A linear combination of points $\\mathbf{x}_1, \\dots, \\mathbf{x}_k$ with non-negative coefficients summing to $1$: $$\\mathbf{x} = \\sum_{i=1}^k \\alpha_i \\mathbf{x}_i, \\quad \\text{where } \\alpha_i \\ge 0 \\text{ and } \\sum_{i=1}^k \\alpha_i = 1$$"
     },
     {
       "word": "convex hull",
@@ -40557,7 +40557,7 @@
       "word": "convex polyhedron",
       "raw_headword": "CONVEX POLYHEDRON",
       "synonyms": [],
-      "definition": "A polyhedron that has no interior angle greater than 180 o and a line segment drawn between any two points on the shape lies entirely inside the shape. Algebraically, it is defined as the set of solutions to a system of linear inequalities mx < = b , where m is a real s × 3 matrix and b is a real s-vector."
+      "definition": "A three-dimensional solid bounded by flat polygonal faces whose interior angles are all less than $180^\\circ$. Algebraically, it can be defined as the intersection of a finite number of half-spaces: $M\\mathbf{x} \\le \\mathbf{b}$."
     },
     {
       "word": "convex polytope",
@@ -40581,7 +40581,7 @@
       "word": "convolution",
       "raw_headword": "CONVOLUTION",
       "synonyms": [],
-      "definition": "1. A function or series derived from two given functions or series by integration. The integral convolution of f ( x ) and g ( x ) is given by f ( t ) g ( x - t ) x ∫ dt , while the convolution of two sets produces the Cauchy product. 2. In statistics, a method of determination of the sum of two random variables by integration or summation. 3. Also known as gyrus , any of the irregular convex folds or ridges of the surface of the brain especially of the cerebrum."
+      "definition": "A mathematical operation on two functions $f$ and $g$ that produces a third function expressing how the shape of one is modified by the other: $$(f * g)(t) = \\int_{-\\infty}^\\infty f(\\tau) g(t - \\tau) \\, d\\tau$$"
     },
     {
       "word": "convulsion",
@@ -41338,7 +41338,7 @@
       "word": "correlation",
       "raw_headword": "CORRELATION",
       "synonyms": [],
-      "definition": "1. Also called association , it is the degree of relationship between two sets of information. If one set of data increases at the same time as the other, the relationship is said to be positive or direct and if one set of data increases as the other decreases the relationship is said to be negative or inverse. Mathematically, a correlation is expressed by a correlation coefficient that ranges from^-1 (never occur together), through 0 (absolutely independent), to 1 (always occur together). 2. A bijection of the set of points of projective geometry onto the set of highest-dimension subgeometries of another or itself."
+      "definition": "A statistical measure indicating the extent to which two or more variables fluctuate together. Quantified by the correlation coefficient $r \\in [-1, 1]$, where $+1$ denotes perfect direct relationship, $-1$ denotes perfect inverse relationship, and $0$ indicates no linear association."
     },
     {
       "word": "correlation analysis",
@@ -41350,7 +41350,7 @@
       "word": "correlation coefficient",
       "raw_headword": "CORRELATION COEFFICIENT",
       "synonyms": [],
-      "definition": "A standardised statistical measure of the linear relationship between two variables. Its range is from^-1.0 (perfect negative correlation), through 0 (no correlation), to +1.0 (perfect positive correlation). The correlation coefficient between two random variables X and Y , written as r or ρ , is defined as r = Cov ( X , Y ) σ X , σ Y = E ( XY ) - E ( X ) E ( Y ) [ E ( X2 ) - ( E ( X )) 2 ][ E ( Y2 ) - ( E ( Y ) 2 ] . Cov ( X , Y ) is the covariance between X and Y : σ X and σ Y are the standard deviations of X and Y , respectively and E stands for expectation. The correlation coefficient is always between^-1 and 1. It tells whether or not there is a linear relationship between X and Y . if Y = ax + b , where a and b are constants and a > 0, then r will be close to 1. If X and Y are completely independently, then r = 0."
+      "definition": "Pearson's correlation coefficient $\\rho_{X,Y}$ between random variables $X$ and $Y$: $$\\rho_{X,Y} = \\frac{\\operatorname{Cov}(X, Y)}{\\sigma_X \\sigma_Y} = \\frac{E[XY] - E[X]E[Y]}{\\sqrt{(E[X^2] - (E[X])^2)(E[Y^2] - (E[Y])^2)}}$$"
     },
     {
       "word": "correlation coefficient sample",
@@ -41359,7 +41359,7 @@
         "product-moment correlation coefficient",
         "pearson's correlation coefficient"
       ],
-      "definition": "Where n pairs of values of random variables X and Y in a random sample are denoted by ( x 1 , y 1 ) , ( x 2 , y 2 ), ..., ( x n , y n ), the correlation coefficient sample is given by r = S xy S xx S yy , where S xy = xjyj^-1 n j = 1 n ∑ xjyjj = 1 n ∑ j = 1 n ∑ ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ , S xx = x j 2 - 1 n j = 1 n ∑ x j j = 1 n ∑ ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ and S is analogously defined to S xx . Alternatively, S xy = xjyjj = 1 n ∑ - nx y and S xx = x 2 j j = 1 n ∑ - n ( x ) 2 ."
+      "definition": "The sample correlation coefficient $r$ computed from $n$ paired observations $(x_i, y_i)$: $$r = \\frac{S_{xy}}{\\sqrt{S_{xx} S_{yy}}} = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum (x_i - \\bar{x})^2 \\sum (y_i - \\bar{y})^2}}$$"
     },
     {
       "word": "correlation diagram",
@@ -41542,7 +41542,7 @@
       "word": "cosecant",
       "raw_headword": "COSECANT",
       "synonyms": [],
-      "definition": "The reciprocal of the sine of an angle, expressed as cosec A = SinA . In a right-angled triangle, it is the ratio of the hypotenuse to the side opposite the angle A . Its abbreviation and symbol is cosec ( csc ). The symbol for its hyperbolic function, hyperbolic cosecant, which is the reciprocal of the hyperbolic sine function, sinh is cosech^-1 . If θ is the angle measured in radians from the x -axis of a coordinate system towards an anticlockwise direction by a radius of length r centred on the orignal point, then cosec θ = r y , where y is the ordinate of the end of the radius."
+      "definition": "The reciprocal of the sine function in trigonometry: $$\\csc\\theta = \\frac{1}{\\sin\\theta} = \\frac{\\text{hypotenuse}}{\\text{opposite}}$$ The hyperbolic cosecant is defined as $\\operatorname{csch} x = \\frac{1}{\\sinh x} = \\frac{2}{e^x - e^{-x}}$."
     },
     {
       "word": "coset",
@@ -41554,7 +41554,7 @@
       "word": "cosh",
       "raw_headword": "COSH",
       "synonyms": [],
-      "definition": "The symbol for the hyperbolic cosine, which is related to the cosine function by the identity cosh z = cos iz , for z a complex number and i = √-1. It can be defined in terms of the exponential function as cosh z = 1 2 e z + e - z ( ) . It is an even function of which an antiderivative or indefinite integral is the sine function, sinh and the hyperbolic sine function. The functions, cos z and sin z both satisfy cosh 2 z - sinh 2 z = 1 cosh(2 z ) = cosh 2 z - sinh 2 z."
+      "definition": "The hyperbolic cosine function, defined in terms of the exponential function: $$\\cosh z = \\frac{e^z + e^{-z}}{2} = \\cos(iz)$$ It satisfies the fundamental hyperbolic identity: $$\\cosh^2 z - \\sinh^2 z = 1$$"
     },
     {
       "word": "cosh-1",
@@ -41566,13 +41566,13 @@
       "word": "cosine",
       "raw_headword": "COSINE",
       "synonyms": [],
-      "definition": "A trigonometric function of an angle in a right-angled triangle, found by dividing the length of the side adjacent to the angle by the length of the hypotenuse, the longest side. Its symbol and abbreviation is cos . Its symbol for the inverse function, arc- cosin is cos^-1 . Cosh is the symbol for the hyperbolic cosine, which is related to the cosine function by the identity cosh z = cos iz , for z a complex number and i = - 1. In other words, if θ is the angle measured in radians from the x -axis of a coordinate system towards an anticlockwise direction by a radius r centred on the origin, then cos θ = x r , where r is the abcissa of the end radius. It is an even function of which an antiderivative or indefinite integral is the sine function, sin and the derivative,is -sin. The functions, cos z and sin z both satisfy cos 2 z + sin 2 z = 1 and cos(2 z ) = cos 2 z . The cosine law or rule in any triangle, with sides of length a , b and c , is c 2 = a 2 + b 2 - 2 ab cos C , b 2 = a 2 + c 2 - 2 ac cos B or a 2 = b 2 + c 2 - 2 bc cos A . Cosine law/rule bBAca=|BC|,b=AC|,c=AB aCabc bc CosA b a c ac CosB c a b ab CosC = + = + = +."
+      "definition": "A primary trigonometric function defined in a right-angled triangle as: $$\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}$$ In a triangle with sides $a, b, c$, the Law of Cosines states: $$c^2 = a^2 + b^2 - 2ab\\cos C$$"
     },
     {
       "word": "cosine law",
       "raw_headword": "COSINE LAW",
       "synonyms": [],
-      "definition": "Cosine law/rule b B A c a=|BC|,b=AC|,c=AB a C 2 2 2 2 2 2 2"
+      "definition": "The Law of Cosines relates the lengths of the sides of any triangle to the cosine of one of its angles: $$a^2 = b^2 + c^2 - 2bc\\cos A$$ $$b^2 = a^2 + c^2 - 2ac\\cos B$$ $$c^2 = a^2 + b^2 - 2ab\\cos C$$"
     },
     {
       "word": "cosmic",
@@ -41751,7 +41751,7 @@
       "word": "cotangent",
       "raw_headword": "COTANGENT",
       "synonyms": [],
-      "definition": "A trigonometric function, which is the reciprocal of the tangent of an angle in a right-angled triangle and is equal to the ratio of cosine to sine or to the length of the side adjacent to the angle divided by that of the side opposite the angle: cot θ = adjacent/ opposite. It is one of the six fundamental ratios of trigonometry, together with tangent, sine, cosine, secant and cosecant. The abbreviation and symbol for cotangent is cot or cotan . The symbol for the inverse cotangent function, arc-cotangent is cot^-1 or cotan^-1 . The symbol for the hyperbolic cotangent is cotanh or coth . The hyperbolic cotangent is the reciprocal of hyperbolic tangent function tanh and equal to the ratio of cosh to sinh. Its derivative is -cosech2 x , with an antiderivative or indefinite integral of logsinh x . Cotanh^-1 or cot is the inverse hyperbolic contagent function or arc-cotanh ."
+      "definition": "The reciprocal of the tangent function: $$\\cot\\theta = \\frac{1}{\\tan\\theta} = \\frac{\\cos\\theta}{\\sin\\theta} = \\frac{\\text{adjacent}}{\\text{opposite}}$$ The hyperbolic cotangent is $\\coth x = \\frac{\\cosh x}{\\sinh x} = \\frac{e^x + e^{-x}}{e^x - e^{-x}}$."
     },
     {
       "word": "cotectic",
@@ -41899,7 +41899,7 @@
       "word": "coulomb force",
       "raw_headword": "COULOMB FORCE",
       "synonyms": [],
-      "definition": "The electrostatic force of attraction or repulsion between two charged particles or bodies. The magnitude of the force F is proportional to the product of the charges q 1 and q 2 and inversely proportional to the square of the distance between them r 2 : F = where k is a constant that depends on the measurement system being used; q 1 and q 2 are expressed in coulombs, r is expressed in metres and F is given in newtons. The Coulomb force can be one of repulsion, such as the force between two objects having like charges or it can be attractive, such as the force between two objects having opposite charges."
+      "definition": "The electrostatic force between two stationary electric charges $q_1$ and $q_2$ separated by distance $r$: $$F = k_e \\frac{|q_1 q_2|}{r^2} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{|q_1 q_2|}{r^2}$$ where $\\varepsilon_0 \\approx 8.854 \\times 10^{-12}\\text{ F/m}$ is the permittivity of free space."
     },
     {
       "word": "coulomb ionisation",
@@ -41913,7 +41913,7 @@
       "synonyms": [
         "coulomb's law of force"
       ],
-      "definition": "The law that the force exerted between two electric or magnetic charges is directly proportional to the product of the charges and inversely proportional to the square of the distance between them. Mathematically, it is given by F = , where k is a constant that depends on the measurement system being used, q 1 and q 2 are the charges expressed in coulombs, r is the distance between the charges expressed in metres and F is given in newtons. If the bodies are oppositely charged, one positive and one negative, they are attracted toward one another; if the bodies are similarly charged, both positive or both negative, the force between them is repulsive. Coulomb's law applies exactly only when the charged bodies are much smaller than the distance separating them and therefore can be treated approximately as point charges. When combined with principles of quantum physics, Coulomb's law helps describe the forces that bind electrons to an atomic nucleus, that bind atoms together into molecules and that hold together solids and liquids. The law was deduced in 1785 by C. A. de Coulomb from experimental measures of the forces between charged bodies. The experiments were made using his torsion balance."
+      "definition": "The physical law stating that the electrostatic force of attraction or repulsion between two point charges is directly proportional to the product of the charges and inversely proportional to the square of the distance between them: $$F = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q_1 q_2}{r^2}$$"
     },
     {
       "word": "coulomb, charles augustin de",
@@ -41933,7 +41933,7 @@
       "word": "coulombmeter",
       "raw_headword": "COULOMBMETER",
       "synonyms": [],
-      "definition": "An instrument which measures electric charge in coulombs. The charge Q to be measures is allowed to flow on to a capacitor of known capacitance C . The potential difference V across the capacitor is then measured and the value of the charge calculated using the capacitor equation, Q = CV ."
+      "definition": "An electrical measuring instrument used to determine electric charge $Q$ in coulombs. When charge accumulates on a calibrated capacitor of known capacitance $C$ producing voltage $V$: $$Q = CV$$"
     },
     {
       "word": "coulometric detection method",
@@ -41981,7 +41981,7 @@
       "word": "countably additive",
       "raw_headword": "COUNTABLY ADDITIVE",
       "synonyms": [],
-      "definition": "Of a set function, S, defined on a class of sets, having the property that, for any countable pairwise disjoint family of sets {A n } n N in the class, S ∪ n ∈ N A n ( ) = S(A n ) n ∈ N ∑ , whenever the union lies in the given class. For example, by definition, a measure is countably additive on its sigma-algebra."
+      "definition": "A property of a set function or measure $\\mu$ on a $\\sigma$-algebra such that for any countable collection of mutually disjoint sets $\\{A_n\\}_{n=1}^\\infty$: $$\\mu\\left( \\bigcup_{n=1}^\\infty A_n \\right) = \\sum_{n=1}^\\infty \\mu(A_n)$$"
     },
     {
       "word": "countably infinite",
@@ -42012,7 +42012,7 @@
       "word": "counter example",
       "raw_headword": "COUNTER EXAMPLE",
       "synonyms": [],
-      "definition": "An example that refutes or disproves a general statement, a proposed theorem or that shows an argument to be invalid by satisfying its antecedent or premises while rendering its consequent or conclusion obviously false. For example, the proposed theorem \"All integers have rational square roots\" can be disproved by finding a counterexample - in this case, by showing that √2 is not rational."
+      "definition": "An exception to a proposed general rule or statement that demonstrates its falsehood. For example, $\\sqrt{2}$ serves as a counterexample disproving the statement that all square roots of positive integers are rational."
     },
     {
       "word": "counter ion",
@@ -42106,7 +42106,7 @@
       "word": "counting-up subtracting",
       "raw_headword": "COUNTING-UP SUBTRACTING",
       "synonyms": [],
-      "definition": "Subtracting two numbers by counting or adding up from the smaller number to the larger number. For example, to calculate 87 - 49, start at 49, add 30 to reach 79, and then add 8 more to reach 87. The difference is 30 + 8 = 38."
+      "definition": "A mental subtraction technique by counting forward from the subtrahend to the minuend. For example, for $87 - 49$: start at $49$, add $30$ to get $79$, then add $8$ to reach $87$; difference is $30 + 8 = 38$."
     },
     {
       "word": "coupe",
@@ -42118,7 +42118,7 @@
       "word": "couple",
       "raw_headword": "COUPLE",
       "synonyms": [],
-      "definition": "In mechanics, it is a pair of equal and parallel forces that are acting on a body in opposite directions. The turning effect or moment, of a couple is measured by the product of the magnitude of either force and the perpendicular distance between the action lines of the forces. A body acted upon by a couple will rotate in a clockwise direction or anticlockwise direction. The turning effect or moment of a couple is the product of the magnitude of either force and the perpendicular distance between the action lines of the forces. If the two forces acting on the body have the same line of action, then the moment becomes zero and there is no turning effect. Some examples of the turning effect of two equal and opposite forces not acting in the same straight line are the steering wheel and the pedals of a bicycle. For example, in a steering wheel, when making a turn to the left, the left hand pulls with force F on the steering wheel towards anticlockwise direction, while the right hand pushes with the same force F, but in a clockwise direction. In riding a bicycle, one pedal is being pushed forward while the other is being pushed back. This rotates the sprocket wheel and the attached chain anticlockwise. Some other examples are the forces exerted by the tip of a screw-driver on the head of a screw; and drag forces acting on a spinning propeller. In the diagram , the turning effect or moment, is Moment = Force (N) x Perp. Distance (m) between the forces = 5 N x 2 m = 10 Nm. (Fig. I) (Fig. II) FFFF Two equal, but opposite and parallel forces acting along different lines of a couple (Fig. III) 5N5N2m Moment of a couple."
+      "definition": "A system of two parallel forces $\\mathbf{F}$ and $-\\mathbf{F}$ of equal magnitude acting in opposite directions along different lines of action. The torque or moment of the couple is independent of reference point and is given by: $$\\tau = F \\cdot d$$ where $d$ is the perpendicular distance between their lines of action. For example, $5\\text{ N} \\times 2\\text{ m} = 10\\text{ N}\\cdot\\text{m}$."
     },
     {
       "word": "coupled",
@@ -42194,7 +42194,7 @@
       "word": "covariance",
       "raw_headword": "COVARIANCE",
       "synonyms": [],
-      "definition": "In probability theory, covariance is a measure of how much two random variables change together. Covariance of two random variables is the difference between the expected value of their product and the product of their separate expected values. Mathematically, it is given by where X and Y are random variables. If X and Y are independent then Cov ( X , Y ) = 0 not necessarily independent."
+      "definition": "A measure of the joint variability of two random variables $X$ and $Y$: $$\\operatorname{Cov}(X, Y) = E[(X - E[X])(Y - E[Y])] = E[XY] - E[X]E[Y]$$"
     },
     {
       "word": "covariance matrix",
@@ -42202,7 +42202,7 @@
       "synonyms": [
         "variance-covariance matrix"
       ],
-      "definition": "A square matrix, usually denoted ∑ in which variance [Var(X i )] and covariance Cov(X i , X j ) are displayed with the variances appearing along the main diagonal and the off-diagonal elements (those in the i, j position) contain the covariances between all possible pairs of variables. The matrix is then symmetrical and non-negative definite. If X1 , X2 ,..., X n are random variables then the variance-covariance matrix is given by Σ ij = cov(xi, xj) = [( x i - µ i )( x i - µ i )]."
+      "definition": "A symmetric square matrix whose $(i, j)$-th entry is the covariance between random variables $X_i$ and $X_j$: $$\\boldsymbol{\\Sigma}_{ij} = \\operatorname{Cov}(X_i, X_j) = E[(X_i - \\mu_i)(X_j - \\mu_j)]$$ where the diagonal entries $\\boldsymbol{\\Sigma}_{ii} = \\operatorname{Var}(X_i)$."
     },
     {
       "word": "covariate",
@@ -42367,7 +42367,7 @@
       "word": "cramer's rule",
       "raw_headword": "CRAMER'S RULE",
       "synonyms": [],
-      "definition": "A method for solving a set of simultaneous linear equations using determinants. It was named after Gabriel Cramer (1704-1752), who published the rule for an arbitrary number of unknowns in 1750. For the 2 x 2 system: a 1 x + b 1 y = k 1 , a 2 x + b 2 y = k 2 . The rule states that: x = a nd y = . The vertical lines symbolise determinant of the whole matrix of coefficients. This determinant appears in the denominator of the solution for each variable. To calculate the numerator of the solution for x , set up the same matrix but make one substitution: cross out the column that contains the coefficients of x and replace the column with the column of constants from the other side of the equal sign. To use the rule to solve a system of n equations in n unknowns, you will have to calculate n +1 determinants of dimension n x n . For an example of the method, we can find the solution of this two equation system: 3 x^-2 y = 5 and 2 x + y = 7. The determinant in the denominator is = 3 × 1 - 2 × (-2) = 7. The following are the two determinants in the numerators: = 5 × 1 - 7 × (-2) = 19 and = 3 × 7 - 5 × 2 = 11; then x = ."
+      "definition": "An explicit formula for solving a system of linear equations using determinants. For a $2 \\times 2$ system $a_1 x + b_1 y = k_1$ and $a_2 x + b_2 y = k_2$: $$x = \\frac{\\begin{vmatrix} k_1 & b_1 \\\\ k_2 & b_2 \\end{vmatrix}}{\\begin{vmatrix} a_1 & b_1 \\\\ a_2 & b_2 \\end{vmatrix}}, \\quad y = \\frac{\\begin{vmatrix} a_1 & k_1 \\\\ a_2 & k_2 \\end{vmatrix}}{\\begin{vmatrix} a_1 & b_1 \\\\ a_2 & b_2 \\end{vmatrix}}$$"
     },
     {
       "word": "cramp",
@@ -42560,7 +42560,7 @@
       "synonyms": [
         "methylphenol"
       ],
-      "definition": "One of the three poisonous, colourless isomeric mythylphenols, comprising o-cresol, m-cresol and p-cresol with the chemical formula CH3 C6 H4 OH. It is used in the production of phenolic resins, disinfectants and also as solvents. crest crest Crest of a wave λ."
+      "definition": "Any of three isomeric methylphenols (ortho-, meta-, and para-cresol) with chemical formula $\\text{CH}_3\\text{C}_6\\text{H}_4\\text{OH}$, used in disinfectants, phenolic resins, and chemical synthesis."
     },
     {
       "word": "crest",
@@ -42654,7 +42654,7 @@
       "word": "critical angle",
       "raw_headword": "CRITICAL ANGLE",
       "synonyms": [],
-      "definition": "1. The angle of incidence in a dense medium at which the angle of refraction is 90 o . When a light ray emerges from a denser medium into a less dense medium, it is refracted and bends away from the normal. As the angle of incidence ( i ) increases so is the angle of refraction ( r ). When the angle of incidence ( i ) equals the critical angle, the refracted ray is just touching the glass surface making an angle of 90 o with the normal. Critical angle is a function of frequency; the higher the frequency the larger the critical angle. The relationship between the refractive index ( μ ) of a medium and the critical angle (c) is given as µ = sin i c ."
+      "definition": "The angle of incidence in an optically denser medium for which the angle of refraction into a rarer medium is $90^\\circ$. By Snell's law, the critical angle $\\theta_c$ is given by: $$\\sin\\theta_c = \\frac{n_2}{n_1} = \\frac{1}{\\mu}$$ where $\\mu$ is the relative refractive index."
     },
     {
       "word": "critical anode voltage",
@@ -42690,7 +42690,7 @@
       "word": "critical density",
       "raw_headword": "CRITICAL DENSITY",
       "synonyms": [],
-      "definition": "1. The density of a substance at its critical temperature and under its critical pressure. Below this density, saturated granular material will lose strength and above it will gain strength when subjected to rapid deformation. 2. The minimum density of matter that stops the universe from expansion. Its unit is ρc. Its value which depends on the Hubble Constant, H can be calculated as: ρ c = 3 H2 8 π G , where G is Newton's gravitational constant. Its value is approximately 10 -26 kg/m3 (or 10 hydrogen atoms per cubic metre."
+      "definition": "1. In cosmology, the average matter density required for the universe to be spatially flat: $$\\rho_c = \\frac{3H_0^2}{8\\pi G} \\approx 10^{-26}\\text{ kg/m}^3$$ where $H_0$ is Hubble's constant and $G$ is Newton's gravitational constant. 2. In thermodynamics, the density of a substance at its critical point."
     },
     {
       "word": "critical energy",
@@ -42875,7 +42875,7 @@
       "word": "cross multiplication",
       "raw_headword": "CROSS MULTIPLICATION",
       "synonyms": [],
-      "definition": "1. The process of rewriting a proportion by calculating its cross products. It can be used in solving open proportions. 2. The process of solving a fractional equation by multiplying the numerator of each fraction by the other's denominator and equating the two products obtained. For example, a b = c d ⇒ a × d = b × c = ad = bc ."
+      "definition": "A method of solving proportional fractions: $$\\frac{a}{b} = \\frac{c}{d} \\implies a \\cdot d = b \\cdot c$$"
     },
     {
       "word": "cross over value",
@@ -42891,7 +42891,7 @@
       "synonyms": [
         "vector product"
       ],
-      "definition": "The product of two vectors A and B , with components a 1 , a 2 , a 3 and b 1 , b 2 , b 3 , respectively. This can be expressed as A × B = a 2 a 3 b 2 b 3 i - a 1 a 3 b 1 b 3 j + a 1 a 2 b 1 b 3 k or A x B = ( a 2 b 3 - a 3 b 2 ) i + ( a 3 b 1 - a 1 b 3 ) j + ( a 1 b 2 - a 2 b 1 ) k . The vector product is itself a vector, perpendicular to both A and B and of length AB sin θ , where θ is the angle between A and B . The cross product of two vectors is a vector rather than a number, unlike the dot product. The determinant notation is a useful scheme for remembering the cross product. If A = a 1 a 2 a 3 ⎛ ⎝ ⎜⎜⎜⎜⎜⎜⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟ and B = b 1 b 2 b 3 ⎛ ⎝ ⎜⎜⎜⎜⎜⎜⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟⎟ , then the determinant notation is ikja 1 a 2 a 3 b 1 b 2 b 3 . The symbols i , j and k are vectors while the other elements are numbers."
+      "definition": "The vector cross product of two 3D vectors $\\mathbf{A}$ and $\\mathbf{B}$: $$\\mathbf{A} \\times \\mathbf{B} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ a_1 & a_2 & a_3 \\\\ b_1 & b_2 & b_3 \\end{vmatrix} = (a_2 b_3 - a_3 b_2)\\mathbf{i} + (a_3 b_1 - a_1 b_3)\\mathbf{j} + (a_1 b_2 - a_2 b_1)\\mathbf{k}$$ Its magnitude is $|\\mathbf{A} \\times \\mathbf{B}| = |\\mathbf{A}||\\mathbf{B}|\\sin\\theta$."
     },
     {
       "word": "cross protection",
@@ -42905,7 +42905,7 @@
       "synonyms": [
         "cross-ratio"
       ],
-      "definition": "If P , Q , R and S are four points lying on a straight line, the ratio of PQ to QR divided by the ratio of PS t o SR is called the anharmonic or cross-ratio of the four points and is denoted by (PQRS). Thus ( PQRS ) = PQ QR ÷ PS SR = PQ QR ⋅ SR PS = PQ ⋅ RS OR ⋅ SP ."
+      "definition": "A projective invariant assigned to four collinear points $P, Q, R, S$: $$(P, Q; R, S) = \\frac{\\overline{PR} \\cdot \\overline{QS}}{\\overline{QR} \\cdot \\overline{PS}}$$"
     },
     {
       "word": "cross-over concentration",
@@ -43047,7 +43047,7 @@
       "word": "cruciform",
       "raw_headword": "CRUCIFORM",
       "synonyms": [],
-      "definition": "1. Having the shape of a cross. In architecture, it is usually used to describe the plan of a church. 2. In botany, it refers to structures or organs such as flowers, which are shaped like a cross, as shown in the diagram. 3. In mathematics, it defines a geometric curve, shaped like a cross and has four similar branches asymptotic to two mutually perpendicular pairs of lines. For example, in the equation x ² y ² - a ² x ² - a ² y ² = 0, where x = y = ± a are the four lines."
+      "definition": "A cross-shaped geometric plane curve with Cartesian equation: $$x^2 y^2 - a^2 x^2 - a^2 y^2 = 0$$ asymptotic to the lines $x = \\pm a$ and $y = \\pm a$."
     },
     {
       "word": "crud",
@@ -43177,7 +43177,7 @@
       "word": "cryogenics",
       "raw_headword": "CRYOGENICS",
       "synonyms": [],
-      "definition": "The science of very low temperatures defined as below^-123.15 o C (150 K). Some of the phenomena that occur at cryogenic temperatures include liquefaction and solidification of ambient gases; loss of ductility and embrittlement of some structural materials such as carbon steel; increase in the thermal conductivity C of relatively pure metals, ionic compounds and crystalline dielectrics such as diamond, sapphire, solidified gases and so forth to a maximum value, followed by a decrease as the temperature is lowered further; decrease in the thermal conductivity of metal alloys and plastics; decrease in the electrical resistance of relatively pure metals; decrease in the heat capacity of solids; decrease in thermal noise and disorder of matter; and appearance of quantum effects such as superconductivity and superfluidity."
+      "definition": "The branch of physics and engineering studying the production and effects of extremely low temperatures, conventionally defined as temperatures below $-123.15^\\circ\\text{C}$ ($150\\text{ K}$)."
     },
     {
       "word": "cryohydrate",
@@ -43233,7 +43233,7 @@
       "word": "cryoscopic constant",
       "raw_headword": "CRYOSCOPIC CONSTANT",
       "synonyms": [],
-      "definition": "In thermodynamics, the cryoscopic constant, with the symbol K f , relates molality to freezing point depression and used to calculate the freezing-point-depression effects of a solute. In the expression, Δ t = KfCm , C m is the molar concentration of dissolved solute and K f is the cryoscopic constant for the solvent used. K f is expressed in degrees per mole of pure solvent. For example, the K f for water is 1.853 K·kg/mol."
+      "definition": "The constant $K_f$ relating molality $b$ to freezing point depression $\\Delta T_f$: $$\\Delta T_f = K_f \\cdot b$$ For water, $K_f = 1.853\\text{ K}\\cdot\\text{kg/mol}$."
     },
     {
       "word": "cryoscopy",
@@ -43671,7 +43671,7 @@
       "word": "cube root",
       "raw_headword": "CUBE ROOT",
       "synonyms": [],
-      "definition": "A number raised to the number one third. For example, x 1/3 = 3 √ x ."
+      "definition": "A number that when multiplied by itself three times gives the original quantity: $$y = \\sqrt[3]{x} = x^{1/3} \\iff y^3 = x$$"
     },
     {
       "word": "cube root function",
@@ -43709,7 +43709,7 @@
       "word": "cubic equation",
       "raw_headword": "CUBIC EQUATION",
       "synonyms": [],
-      "definition": "An equation in which the highest power of the variable is three. For example, ax 3 + bx 2 + cx + d = 0, where a is nonzero. In other words, it is a polynomial of degree three. The derivative of a cubic function is a quadratic function. The integral of a cubic function is a quartic function. Setting ƒ ( x ) = 0 and assuming a ≠ 0 it produces a cubic equation of the form: ax 3 + bx 2 + cx + d = 0 . Usually, the coefficients a , b , c , d are real numbers. However, most of the theory is also valid if they belong to a field of characteristic other than 2 or 3. Solving a cubic equation amounts to finding the roots of a cubic function."
+      "definition": "A polynomial equation of degree 3 in one variable: $$ax^3 + bx^2 + cx + d = 0, \\quad a \\ne 0$$"
     },
     {
       "word": "cubic expansion",
@@ -43719,13 +43719,13 @@
         "volumetric expansion",
         "volume expansion"
       ],
-      "definition": "The fractional change in volume of a substance per kelvin rise in temperature. It expressed mathematically as γ = V2 - V1 V1 ( θ 2 - θ 1 ) , where γ is the coefficient of volumetric expansion, V1 is the volume at θ 1 and V2 is the volume at θ 2 . Example of a Cubic function y=x 3 y x."
+      "definition": "The fractional change in volume of a material per degree temperature change, given by volumetric expansion coefficient $\\gamma$: $$\\gamma = \\frac{V_2 - V_1}{V_1(\\theta_2 - \\theta_1)} = \\frac{\\Delta V}{V_0 \\Delta\\theta}$$"
     },
     {
       "word": "cubic function",
       "raw_headword": "CUBIC FUNCTION",
       "synonyms": [],
-      "definition": "A polynomial of the third degree. Its general formula is f ( x ) = ax 3 + bx 2 + cx + d , where a is not equal to zero."
+      "definition": "A third-degree polynomial function of the form: $$f(x) = ax^3 + bx^2 + cx + d, \\quad a \\ne 0$$"
     },
     {
       "word": "cubic metre",
@@ -43737,7 +43737,7 @@
       "word": "cubic polynomial",
       "raw_headword": "CUBIC POLYNOMIAL",
       "synonyms": [],
-      "definition": "A polynomial of degree 3. Examples are x 3 - 1, 4 a 3 - 100 a 2 + a^-6 and m2 n + mn 2 ."
+      "definition": "A polynomial expression of degree 3, such as $f(x) = ax^3 + bx^2 + cx + d$ where $a \\ne 0$."
     },
     {
       "word": "cubic resolvent equation",
@@ -43775,7 +43775,7 @@
       "word": "cuboid",
       "raw_headword": "CUBOID",
       "synonyms": [],
-      "definition": "A six sided three-dimensional prism whose faces are all rectangles, forming a convex polyhedron. If the lengths of the sides are denoted by a , b and c , a cuboid with all sides equal ( a = b = c ) is called a cube and a cuboid with integer edge lengths a > b > c and face diagonals is called an Euler brick . If the space diagonal is also an integer, the cuboid is called a perfect cuboid .The volume of a cuboid is given by V = abc ; its total surface area is given by S = 2( ab + bc + ca )."
+      "definition": "A convex hexahedron whose six faces are all rectangles. For edge lengths $a, b, c$: $$\\text{Volume } V = abc, \\quad \\text{Surface Area } S = 2(ab + bc + ca)$$"
     },
     {
       "word": "cucullate",
@@ -43883,7 +43883,7 @@
       "word": "cumulant",
       "raw_headword": "CUMULANT",
       "synonyms": [],
-      "definition": "In statistics, any of the coefficients, K n , of tn / n ! in the Taylor series of the natural logarithm of the moment generating function, M x ( t ), random variable. K1 is the mean and K2 is the variance. If the moment-generating function of a distribution exists, then its natural logarithm exists and is called the cumulant generating function (cgf). The coefficient of t r e ! in the Taylor expansion of the cgf is called the r th cumulant and is denoted by K (where K is kappa). The cumulant can be expressed in terms of the central moments and vice versa in particular, denoting the mean by µ and the central moment by µ 1 , µ 2 ; K1 = µ , K2 = µ 2 , K3 = µ 3 , K4 = µ 4 3 - 3 µ 2 2 , K5 = µ 5 - 10 µ 3 µ 2 ."
+      "definition": "Coefficients $\\kappa_r$ in the Taylor series expansion of the cumulant-generating function $K(t) = \\ln E[e^{tX}]$: $$\\kappa_1 = \\mu, \\quad \\kappa_2 = \\sigma^2, \\quad \\kappa_3 = \\mu_3, \\quad \\kappa_4 = \\mu_4 - 3\\mu_2^2$$"
     },
     {
       "word": "cumulative distribution function",
@@ -43891,7 +43891,7 @@
       "synonyms": [
         "c.d.f."
       ],
-      "definition": "In statistics, a function that gives the probability that a random variable at each point will be less than or equal to a specific value. The function F, for a random variable X, is defined for all real values x by F( x ) = P(X ≤ x ). From the definition, F ( -∞ ) = 0 and F(∞) =1 are the limits of F( x ) as x tends to -∞ and ∞ respectively. The function is a non-decreasing function such that if x 2 > x 1 then F( x 2 ) ≥ F( x 1 ). If X is a continuous random variable then F is a continuous function and conversely, if X has probability density function f , the F( x ) = f ( t ) dt -∞ ∞ ∫ and f ( x ) = F'( x ), where F'( x ) is the derivative of F( x )."
+      "definition": "The function giving the probability that a random variable $X$ will take a value less than or equal to $x$: $$F(x) = P(X \\le x) = \\int_{-\\infty}^x f(t) \\, dt$$ where $f(t) = F'(t)$ is the probability density function."
     },
     {
       "word": "cumulative double bonds",
@@ -43915,13 +43915,13 @@
       "word": "cumulative odds ratio",
       "raw_headword": "CUMULATIVE ODDS RATIO",
       "synonyms": [],
-      "definition": "A function used in models for ordinal variables. Let j denote a possible value of the ordinal variable, Y and let E1 and E2 be two possible events, the ratio R j given by R j = P ( Y ≤ j | E1 ) P ( Y > j | E1 ) P ( Y ≤ j | E2 ) P ( Y > j | E2 ) is called cumulative odds ratio. If E1 and E2 represent different values for a vector of explanatory variables, the model R j = R, where R is a constant, is a proportional odds model."
+      "definition": "A measure in proportional odds models for ordinal variables: $$R_j = \\frac{P(Y \\le j \\mid E_1) / P(Y > j \\mid E_1)}{P(Y \\le j \\mid E_2) / P(Y > j \\mid E_2)}$$"
     },
     {
       "word": "cumulative probability",
       "raw_headword": "CUMULATIVE PROBABILITY",
       "synonyms": [],
-      "definition": "The probability that the value of a random variable falls within a specified range. For discrete random variable X that can take only the ordered values x 1 < x 2 < ... the cumulative probability of the value less than or equal to x k is P ( X = x ( j ) ) j = 1 k ∑ ."
+      "definition": "The probability that a discrete random variable $X$ is less than or equal to a specific value $x_k$: $$P(X \\le x_k) = \\sum_{j=1}^k P(X = x_j)$$"
     },
     {
       "word": "cumulative sample",
@@ -43933,7 +43933,7 @@
       "word": "cumulenes",
       "raw_headword": "CUMULENES",
       "synonyms": [],
-      "definition": "Hydrocarbons (and by extension, derivatives formed by substitution) having three or more cumulative double bonds, for example, R2 C=C=C=CR2 ."
+      "definition": "Hydrocarbons possessing three or more consecutive cumulative double bonds: $$R_2\\text{C}=\\text{C}=\\text{C}=\\text{C}R_2$$"
     },
     {
       "word": "cumulo layer",
@@ -44064,7 +44064,7 @@
       "synonyms": [
         "ci"
       ],
-      "definition": "A law relating the magnetic susceptibility chi of a paramagnetic substance to its absolute temperature T: chi = C / (T - theta), where C is the Curie constant and theta is the Weiss constant."
+      "definition": "In magnetism, the Curie-Weiss law relates magnetic susceptibility $\\chi$ to absolute temperature $T$: $$\\chi = \\frac{C}{T - \\theta_W}$$ where $C$ is the Curie constant and $\\theta_W$ is the Weiss temperature."
     },
     {
       "word": "curie point",
@@ -44078,7 +44078,7 @@
       "word": "curie's law",
       "raw_headword": "CURIE'S LAW",
       "synonyms": [],
-      "definition": "A law which states that the susceptibility (x) of a paramagnetic substance is inversely proportional to the thermodynamic temperature ( T ). This can be expressed as M = C . B / T , where M is the resulting magnetisation, B is the magnetic field, measured in teslas, T is absolute temperature, measured in kelvins and C is a material-specific Curie constant. The law is named after Pierre Curie (1859-1906), a French physicist, a pioneer in crystallography, magnetism, piezoelectricity and radioactivity."
+      "definition": "The law stating that the magnetic susceptibility $\\chi$ of a paramagnetic material is inversely proportional to temperature: $$M = \\frac{C B}{T} \\quad \\text{or} \\quad \\chi = \\frac{C}{T}$$ where $M$ is magnetization, $B$ is applied magnetic field, $T$ is temperature in kelvins, and $C$ is Curie's constant."
     },
     {
       "word": "curie, marie sklodowska",
@@ -44193,7 +44193,7 @@
       "word": "curvature vector",
       "raw_headword": "CURVATURE VECTOR",
       "synonyms": [],
-      "definition": "Of a space curve, the derivative of a unit tangent vector with respect to arc length; the second derivative of the position vector of the curve when parametrized by arc length; the product of the curvature and the unit vector in the normal direction. y^-1 -2 An example of a curve on the Cartesian plane x."
+      "definition": "For a space curve $\\mathbf{r}(s)$ parametrized by arc length $s$: $$\\mathbf{k} = \\frac{d\\mathbf{T}}{ds} = \\kappa \\mathbf{N}$$ where $\\mathbf{T}$ is the unit tangent vector, $\\kappa$ is curvature, and $\\mathbf{N}$ is the principal unit normal."
     },
     {
       "word": "curve",
@@ -44229,7 +44229,7 @@
       "word": "curvilinear",
       "raw_headword": "CURVILINEAR",
       "synonyms": [],
-      "definition": "1. Consisting of or characterised by bounded by curved lines or lines. 2. Of a set of coordinates, determined by or determining a system of three usually orthogonal surfaces, which are the coordinate planes in a Cartesian coordinates system. C n -dimensional Euclidean space, with respect to i th position variable; if C can be represented as x( t ), in terms of a parameter, t in the interval [a, b], then it is equal to φ (x a b ∫ ( t )x i )d t . Cusp Cusp of a leaf."
+      "definition": "Formed, bounded, or characterized by curved lines. In vector calculus, line integrals along a smooth parameterized curve $\\mathbf{r}(t)$ for $t \\in [a, b]$: $$\\int_C \\phi \\, ds = \\int_a^b \\phi(\\mathbf{r}(t)) \\|\\mathbf{r}'(t)\\| \\, dt$$"
     },
     {
       "word": "curvilinear relation",
@@ -44255,7 +44255,7 @@
       "word": "cut",
       "raw_headword": "CUT",
       "synonyms": [],
-      "definition": "1. To remove a portion of the complex plane, leaving a cut plane, so that some function has an analytic branch in the remaining region; thus the principal value of logarithm lies in the cut plane excluding ]-∞, 0]. 2. In topology, to remove a point, a cut point, from a set so that the remainder of the set is disconnected. For example, the interval (-1, 1) is disconnected by cutting zero. 3. In logic, a rule of elimlnation in sequent calculus, according to which A, C D can be derived from A B and B, C D. 4. In optimisation, to remove a portion of the feasible set by adding a linear inequality, called a cutting plane, as in integer programming so as to remove the current estimate of the solution while maintaining all possible solutions. 5. In computer science, it is a command located under the edit menu, allowing users to cut desired text, graph or picture and move text or files to a new location on the computer."
+      "definition": "1. In complex analysis, a branch cut removed from the complex plane (e.g. $(-\\infty, 0]$ for principal logarithm $\\operatorname{Ln} z$). 2. In graph theory and topology, a set of edges or points whose removal disconnects the space."
     },
     {
       "word": "cut flower",
@@ -44392,7 +44392,7 @@
         "isocyanic acid",
         "fulminic acid"
       ],
-      "definition": "An unstable explosive acid, with the chemical formula HOCN, relative density 1.14, melting point^-86°C (187K) and boiling point 23.5°C (296.65K). The compound has the structure H-O-C≡N. Its salts and esters are cyanates or fulminates. It is a volatile liquid, which readily polymerises. In water, it hydrolyses to ammonia and carbon dioxide. Its salts and esters are isocyanates."
+      "definition": "An unstable chemical compound with formula $\\text{HOCN}$ (structure $\\text{H}-\\text{O}-\\text{C}\\equiv\\text{N}$), melting point $-86^\\circ\\text{C}$ ($187\\text{ K}$) and boiling point $23.5^\\circ\\text{C}$ ($296.65\\text{ K}$)."
     },
     {
       "word": "cyanide",
@@ -44435,7 +44435,7 @@
       "word": "cyanogen",
       "raw_headword": "CYANOGEN",
       "synonyms": [],
-      "definition": "A colourless, highly poisonous gas, with the chemical formula C2 N2 , relative density 0.95, melting point^-28 °C (245 K) and boiling point^-21 °C (252 K). It is made by the action of acids on cyanides. It is very toxic, as it readily undergoes reduction to cyanide and can poison the cytochrome c oxidase complex, thus interrupting the mitochondrial electron transfer chain. It is used as a rocket propellant, an insecticide and a chemical weapon."
+      "definition": "A toxic, colourless gas with chemical formula $\\text{C}_2\\text{N}_2$ (or $(\\text{CN})_2$), melting point $-28^\\circ\\text{C}$ ($245\\text{ K}$) and boiling point $-21^\\circ\\text{C}$ ($252\\text{ K}$)."
     },
     {
       "word": "cyanogenesis",
@@ -44601,7 +44601,7 @@
       "word": "cycle",
       "raw_headword": "CYCLE",
       "synonyms": [],
-      "definition": "1. A single recurring series of changes in, for instance, a wave, a vibration or rotation. In other words, it is a process or series of events that ends at the point at which it begins or that repeats itself continuously at regular intervals. 2. A permutation in which one subset of elements are moved cyclically and the remainder are not moved, for exa m ple, (1,2,5,4,5) (1,4,5,2,5). If γ is a cycle that permutes exactly l elements, then l is the length of the cycle and γ has order l , that is y l = e , where e is the identity permutation. Every permutation has a unique factorisation as a product of disjoint cycles. 3. A simple closed graph."
+      "definition": "1. A complete series of states or events that repeats regularly. 2. In permutation group theory, a cyclic permutation $\\gamma$ of length $l$ satisfying $\\gamma^l = e$."
     },
     {
       "word": "cycle pattern",
@@ -44702,7 +44702,7 @@
       "synonyms": [
         "circular permutation"
       ],
-      "definition": "A set that results from mapping each element of an ordered set to its successor. This is given by ( n^-1)!. The number is ( n^-1)!. instead of the usual factorial n ! since all cyclic permutations of objects are equivalent because the circle can be rotated."
+      "definition": "The arrangement of $n$ distinct items in a circular ring, where rotational equivalences yield: $$(n^-1)!$$"
     },
     {
       "word": "cyclic polygon",
@@ -44760,7 +44760,7 @@
       "synonyms": [
         "cot"
       ],
-      "definition": "A flammable yellow liquid cyclic compound, with the chemical formula C8 H8 , melting point^-5 to^-3 °C (268-270 K) and boiling point 142-143 °C (415-416 K). It has eight carbon atoms and four double bonds in its ring. It is not aromatic and made by polymerising ethyne (acetylene) in the presence of nickel salts. Its reactivity is characteristic of an ordinary polyene."
+      "definition": "A non-aromatic conjugated polyene cyclic hydrocarbon with chemical formula $\\text{C}_8\\text{H}_8$, melting point $-5^\\circ\\text{C}$ to $-3^\\circ\\text{C}$ ($268 - 270\\text{ K}$) and boiling point $142 - 143^\\circ\\text{C}$ ($415 - 416\\text{ K}$)."
     },
     {
       "word": "cyclo-oxygenase",
@@ -44829,7 +44829,7 @@
       "synonyms": [
         "benzoquinone or quinone"
       ],
-      "definition": "cyclohexadiene^-1,4-dione (benzoquinone or quinone) O O CYCLOHEXADIENE^-1,4-DIONE (BENZOQUINONE; QUINONE): A yellow solid, with the chemical formula C6H4O2, relative density 1.3 and melting point 116 °C (389 K). It has a six- membered ring of carbon atoms with two opposite carbon atoms linked to oxygen atoms (C=O) and the other two pairs of carbon atoms linked by double bonds (HC=CH). The compound is used in making dyes. CYCLOHEXANE: A colourless liquid"
+      "definition": "A cyclic conjugated or non-conjugated diene with formula $\\text{C}_6\\text{H}_8$, including 1,3-cyclohexadiene and 1,4-cyclohexadiene."
     },
     {
       "word": "cyclohexadiene-1,4-dione",
@@ -44838,7 +44838,7 @@
         "benzoquinone",
         "quinone"
       ],
-      "definition": "A yellow solid, with the chemical formula C6 H4 O2 , relative density 1.3 and melting point 116 °C (389 K). It has a six- membered ring of carbon atoms with two opposite carbon atoms linked to oxygen atoms (C=O) and the other two pairs of carbon atoms linked by double bonds (HC=CH). The compound is used in making dyes."
+      "definition": "A yellow crystalline solid (commonly known as 1,4-benzoquinone) with chemical formula $\\text{C}_6\\text{H}_4\\text{O}_2$, melting point $116^\\circ\\text{C}$ ($389\\text{ K}$)."
     },
     {
       "word": "cyclohexane",
@@ -44850,7 +44850,7 @@
       "word": "cycloid",
       "raw_headword": "CYCLOID",
       "synonyms": [],
-      "definition": "A curve traced by a point on the circumference of a circle that rolls along straight lines. It can be defined by the parametric equations x = x 0 + a ( θ - sin θ ), y = y 0 + a (1-cos θ ). Its applications include the study of the motion of wheeled vehicles along roads and tracks. 4 π 8 π -12 A cycloid drawn on the Cartesian plane."
+      "definition": "The curve traced by a point on the rim of a rolling circle of radius $a$ along a straight line: $$x = a(\\theta - \\sin\\theta), \\quad y = a(1 - \\cos\\theta)$$"
     },
     {
       "word": "cyclometric functions",
@@ -44858,7 +44858,7 @@
       "synonyms": [
         "trigonometric functions"
       ],
-      "definition": "Functions defined in terms of angle and sides of a right-angled triangle and widely used in the solution of many mathematical problems; or any of the six functions: sine, cosine, tangent, cotangent, secant and cosecant that represent ratios of sides of right angle triangle. For example, for acute angle x in a right triangle ABC, the trigonometric functions are as follows: sin x = opposite hypotenuse , cos x = adjacent hypotenuse tan x = opposite adjacent , cot x = adjacent opposite sec x = hypotenuse adjacent , co sec x = hypotenuse opposite ."
+      "definition": "The fundamental trigonometric ratio functions defined in a right triangle: $$\\sin x = \\frac{\\text{opp}}{\\text{hyp}}, \\quad \\cos x = \\frac{\\text{adj}}{\\text{hyp}}, \\quad \\tan x = \\frac{\\text{opp}}{\\text{adj}}$$ $$\\cot x = \\frac{\\text{adj}}{\\text{opp}}, \\quad \\sec x = \\frac{\\text{hyp}}{\\text{adj}}, \\quad \\csc x = \\frac{\\text{hyp}}{\\text{opp}}$$"
     },
     {
       "word": "cyclomorphosis",
@@ -44937,7 +44937,7 @@
       "word": "cyclotomic",
       "raw_headword": "CYCLOTOMIC",
       "synonyms": [],
-      "definition": "Of or pertaining to nth roots of unity. The cyclotomic equation is z n^-1 = 0. The n th cyclotomic polynomial is the polynomial, whose roots are all the primitive roots of unity and thus, for prime n , is the cyclotomic equation of degree n . A cyclotomic field is an extension field of the rationals obtained by adjoining a root of unity. A B so The magnetic field is perpendicular to the plane of the paper Cyclotron."
+      "definition": "Relating to the $n$-th roots of unity. The cyclotomic equation is: $$z^n^-1 = 0$$ Its primitive roots are roots of the $n$-th cyclotomic polynomial $\\Phi_n(z)$."
     },
     {
       "word": "cyclotron",
@@ -44978,7 +44978,7 @@
       "word": "cylinder",
       "raw_headword": "CYLINDER",
       "synonyms": [],
-      "definition": "1. A tube-like solid figure with a circular base or a solid or hollow curved body with circular ends and straight sides. In its everyday us Height Radius Cylinder Radius e, the term applies to a right cylinder, the curved surface of which is at right angles to the base. 2. A three-dimensional geometric solid bounded by two equal parallel circles and a curved surface formed by moving a straight line so that its ends lie on the circles. For a closed curve, the total surface area (T.S.A.) = 2 πrh + 2 πr 2 . The curved surface area = 2 πrh . 3. A three-dimensional geometric surface formed by a straight line moving in a circle around and parallel to a fixed straight line, forming a hollow tube shape. 4. In a Cartesian product, it is a set that is the direct product of a set and non- trivial vector space. 5. A rotating part of a revolver containing chambers into which cartridges are loaded. 6. A revolving drum of a printing press that produces or receives the impression."
+      "definition": "A three-dimensional solid with circular parallel bases of radius $r$ and perpendicular height $h$: $$\\text{Volume: } V = \\pi r^2 h$$ $$\\text{Curved Surface Area: } \\text{CSA} = 2\\pi rh$$ $$\\text{Total Surface Area: } \\text{TSA} = 2\\pi rh + 2\\pi r^2 = 2\\pi r(h + r)$$"
     },
     {
       "word": "cylinder block",
@@ -45002,7 +45002,7 @@
       "word": "cylindrical polar coodinates",
       "raw_headword": "CYLINDRICAL POLAR COODINATES",
       "synonyms": [],
-      "definition": "A three-dimensional coordinate system that specifies point positions by the distance from a chosen reference axis, the direction from the axis relative to a chosen reference direction and the distance from a chosen reference plane perpendicular to the axis (r, θ, z). The radius and the azimuth are together called the polar coordinates, as they correspond to a two-dimensional polar coordinate system in the plane through the point, parallel to the reference plane and z is the same as cartesian coordinates."
+      "definition": "A 3D coordinate system specifying points by radial distance $r$, azimuth angle $\\theta$, and height $z$: $$x = r\\cos\\theta, \\quad y = r\\sin\\theta, \\quad z = z$$"
     },
     {
       "word": "cylindroid",
@@ -45058,7 +45058,7 @@
       "word": "cysteine",
       "raw_headword": "CYSTEINE",
       "synonyms": [],
-      "definition": "cysteine SH CH2 C H COO- H3N + C Y S T E I N E ( β- M E R C A P T O A L A N I N E ; \u001f- A M I N O - β- THIOLPROPIONIC ACID; 2-AMINO^-3-MERCAPTOPROPANOIC ACID): A natural sulfur-containing nonessential amino acid, with the chemical formula C3H7NO2S. It is converted to cystine during metabolism. Cysteine is involved in"
+      "definition": "A sulfur-containing proteinogenic amino acid with chemical formula $\\text{C}_3\\text{H}_7\\text{NO}_2\\text{S}$ and systematic name 2-amino^-3-mercaptopropanoic acid ($\\text{HS}-\\text{CH}_2-\\text{CH}(\\text{NH}_2)-\\text{COOH}$), capable of forming disulfide bridges ($-\\text{S}-\\text{S}-$) in proteins."
     },
     {
       "word": "cystine",
@@ -56207,7 +56207,7 @@
       "word": "einstein's equation",
       "raw_headword": "EINSTEIN'S EQUATION",
       "synonyms": [],
-      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
+      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
     },
     {
       "word": "einstein, albert",
@@ -56215,7 +56215,7 @@
       "synonyms": [
         "1879-1955"
       ],
-      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
+      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
     },
     {
       "word": "einstein-smoluchowski equation",
@@ -60577,7 +60577,7 @@
       "word": "equations of motion",
       "raw_headword": "EQUATIONS OF MOTION",
       "synonyms": [],
-      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
+      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
     },
     {
       "word": "equator",
@@ -72165,7 +72165,7 @@
       "synonyms": [
         "universal molar gas constant"
       ],
-      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
+      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
     },
     {
       "word": "gas cooled reactor",
@@ -85098,7 +85098,7 @@
       "word": "ideal gas",
       "raw_headword": "IDEAL GAS",
       "synonyms": [],
-      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
+      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
     },
     {
       "word": "ideal gas law",
@@ -93416,7 +93416,7 @@
       "synonyms": [
         "equations of motion"
       ],
-      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
+      "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
     },
     {
       "word": "kinematic viscosity",
@@ -95950,7 +95950,7 @@
       "word": "law",
       "raw_headword": "LAW",
       "synonyms": [],
-      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
+      "definition": "A statement of a scientific fact or phenomenon that is invariable under given conditions, which can predict the outcome of observations before they are made or a statement expressing what has been seen always to happen in certain conditions. For example, Ohm's law predicts that the voltage across any conductor, is proportional to the electric current flowing through it and inversely proportional to the resistance provided the temperature is constant: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$."
     },
     {
       "word": "law of averages",
@@ -103860,7 +103860,7 @@
       "word": "mass-energy equation",
       "raw_headword": "MASS-ENERGY EQUATION",
       "synonyms": [],
-      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
+      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
     },
     {
       "word": "mass-energy relationship",
@@ -114873,7 +114873,7 @@
       "word": "newton's laws of motion",
       "raw_headword": "NEWTON'S LAWS OF MOTION",
       "synonyms": [],
-      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
+      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
     },
     {
       "word": "newton's method",
@@ -119051,7 +119051,7 @@
       "word": "ohm's law",
       "raw_headword": "OHM'S LAW",
       "synonyms": [],
-      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
+      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
     },
     {
       "word": "ohm, george simon",
@@ -119065,7 +119065,7 @@
       "word": "ohmic device",
       "raw_headword": "OHMIC DEVICE",
       "synonyms": [],
-      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
+      "definition": "A device that follows Ohm's Law: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ with a resistance that remains constant over a wide range of potential differences. Examples include a wire, a heating element or a resistor."
     },
     {
       "word": "ohmic heating",
@@ -149763,7 +149763,7 @@
       "synonyms": [
         "physical law"
       ],
-      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
+      "definition": "Principles based on empirical observations that is universally applicable in science. Examples are Ohm's law, Kepler's three laws of planetary motion (describing how planets orbit the Sun) and Newton's laws of motion. A scientific law can often be expressed as a mathematical statement, such as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ (Ohm's law) and E = mc ², which is Albert Einstein's equivalent equation for the physical principle that a measured quantity of energy is equivalent to a measured quantity of mass."
     },
     {
       "word": "scientific method",
@@ -158206,7 +158206,7 @@
       "word": "speed of light",
       "raw_headword": "SPEED OF LIGHT",
       "synonyms": [],
-      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ."
+      "definition": "The speed at which electromagnetic radiation travels. The speed of light in a vacuum is 299,792,458 metres per second (299 792 458 ms^-1 ). This is the highest speed attainable in the universe. It is thought to be a universal constant and is independent of the speed of the observer. It has the symbol c . In the theory of relativity, c connects space and time and appears in the famous equation of mass-energy equivalence, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ."
     },
     {
       "word": "speed of sound",
