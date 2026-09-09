@@ -117,6 +117,22 @@ Total Screenshots to Process: **94**
 
 ---
 
+### Batch 7: Screenshots 61 – 70
+| # | File Name | Visual Content Observed (Native Vision) | Extracted Captions & Labels | Mapped Dictionary Term(s) | Status |
+|---|---|---|---|---|---|
+| 61 | `Screenshot_8-9-2026_175330_.jpeg` | Factor tree decomposition of number 18 | $18$ branching into $6$ and $3$; $6$ branching into factors. Caption: *Factor Tree of 18* | `factor tree`, `prime factorization` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 62 | `Screenshot_8-9-2026_175342_.jpeg` | Sickle-shaped curved leaf with penninerved venation | Curved asymmetric blade outline. Caption: *Falcate leaf* | `falcate leaf`, `falcate` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 63 | `Screenshot_8-9-2026_175418_.jpeg` | Flight feather (quill) anatomical diagram | Vane of barbs locked with hooked barbules, Solid shaft or rachis, Aftershaft, Superior umbilicus, Hollow calamus or quill, Inferior umbilicus. Caption: *Flight feather (quill)* | `flight feather`, `feather`, `quill`, `calamus`, `rachis`, `aftershaft`, `barbule`, `vane` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 64 | `Screenshot_8-9-2026_175522_.jpeg` | Fermi levels and electron distributions across solid materials | Conductor (Fermi level $E_F$ inside conduction band), Semiconductor ($E_F$ in bandgap), Insulator ($E_F$ at top of valence band). Caption: *EF- Fermi levels / Number of electrons in each band varies with energy* | `fermi level`, `fermi-dirac distribution`, `fermi energy`, `fermi level in conductor`, `fermi level in semiconductor`, `fermi level in insulator` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 65 | `Screenshot_8-9-2026_175544_.jpeg` | Ferrocene sandwich organometallic molecular structure | Central Fe atom symmetrically sandwiched between two parallel cyclopentadienyl ($\eta^5\text{-C}_5\text{H}_5$) rings. Caption: *Chemical Structure of Ferrocene* | `ferrocene`, `chemical structure of ferrocene`, `metallocene`, `sandwich compound` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 66 | `Screenshot_8-9-2026_17558_.jpeg` | Fern sporophyte plant morphology | Leaf or 'frond', Leaflet (pinna), Hairy stem (rhizome/stipe), Adventitious roots. Caption: *Fern* | `fern`, `frond`, `pteridophyte`, `adventitious roots` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 67 | `Screenshot_8-9-2026_175643_.jpeg` | Concentric cylinder layers of a fibre-optic cable | Outer buffer / jacket, middle cladding layer, inner high-index optical core. Caption: *Fibre-optic cable* | `fibre-optic cable`, `fiber-optic cable`, `optical fibre`, `optical fiber`, `cladding` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 68 | `Screenshot_8-9-2026_17569_.jpeg` | Quantum electrodynamic Feynman diagram | Vertical time axis, horizontal space axis; electron ($e^-$) and positron ($e^+$) lines interacting with photons ($\gamma$). Caption: *Feynman diagram showing time/space, photons and electrons* | `feynman diagram`, `feynman diagrams`, `quantum electrodynamics`, `electron-positron annihilation`, `virtual particle` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 69 | `Screenshot_8-9-2026_175718_.jpeg` | Laboratory water aspirator / filter pump glassware | Top water inlet nozzle, side air suction intake arm, lower discharge bulb with water outlet. Caption: *Filter pump* | `filter pump`, `aspirator`, `water aspirator`, `suction pump` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 70 | `Screenshot_8-9-2026_17571_.jpeg` | Field-Emission Microscope (FEM) apparatus schematic | Sharp emitting tip, liquid helium cooling cryostat, high negative voltage terminal, vacuum pump port, emitted electron projection lines, fluorescent imaging screen. Caption: *Field-Emission Microscope (FEM)* | `field-emission microscope`, `fem`, `field emission microscopy`, `field emission` | ✅ Integrated in `core_dictionary_diagrams.js` |
+
+---
+
 ## 📐 Part 2: Section E Formula Enrichment
 
 ### Pipeline Workflow:
