@@ -17,11 +17,15 @@
 (function () {
   'use strict';
 
-  // Configuration & KaTeX CDN sources
+  // Configuration & KaTeX sources (local bundle first, CDN as fallback)
   const KATEX_VERSION = '0.16.9';
-  const KATEX_CSS_URL = `https://cdn.jsdelivr.net/npm/katex@${KATEX_VERSION}/dist/katex.min.css`;
-  const KATEX_JS_URL = `https://cdn.jsdelivr.net/npm/katex@${KATEX_VERSION}/dist/katex.min.js`;
-  const KATEX_AUTO_RENDER_URL = `https://cdn.jsdelivr.net/npm/katex@${KATEX_VERSION}/dist/contrib/auto-render.min.js`;
+  const LOCAL_KATEX_CSS = 'assets/katex/katex.min.css';
+  const LOCAL_KATEX_JS = 'assets/katex/katex.min.js';
+  const LOCAL_KATEX_AUTO_RENDER = 'assets/katex/auto-render.min.js';
+
+  const CDN_KATEX_CSS = `https://cdn.jsdelivr.net/npm/katex@${KATEX_VERSION}/dist/katex.min.css`;
+  const CDN_KATEX_JS = `https://cdn.jsdelivr.net/npm/katex@${KATEX_VERSION}/dist/katex.min.js`;
+  const CDN_KATEX_AUTO_RENDER = `https://cdn.jsdelivr.net/npm/katex@${KATEX_VERSION}/dist/contrib/auto-render.min.js`;
 
   let katexLoaded = false;
   let katexLoadingPromise = null;
@@ -42,46 +46,49 @@
       if (!document.querySelector(`link[href*="katex"]`)) {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = KATEX_CSS_URL;
-        link.crossOrigin = 'anonymous';
+        link.href = LOCAL_KATEX_CSS;
+        link.onerror = () => { link.href = CDN_KATEX_CSS; };
         document.head.appendChild(link);
       }
 
-      // 2. Inject KaTeX JS
+      // Helper to inject a script
+      function injectScript(primarySrc, fallbackSrc, next) {
+        const s = document.createElement('script');
+        s.src = primarySrc;
+        s.onload = () => next(true);
+        s.onerror = () => {
+          if (fallbackSrc) {
+            const fb = document.createElement('script');
+            fb.src = fallbackSrc;
+            fb.onload = () => next(true);
+            fb.onerror = () => next(false);
+            document.head.appendChild(fb);
+          } else {
+            next(false);
+          }
+        };
+        document.head.appendChild(s);
+      }
+
+      // 2. Load KaTeX JS
       if (!window.katex) {
-        const script = document.createElement('script');
-        script.src = KATEX_JS_URL;
-        script.crossOrigin = 'anonymous';
-        script.onload = () => {
-          // 3. Inject KaTeX Auto-Render contrib
-          const autoScript = document.createElement('script');
-          autoScript.src = KATEX_AUTO_RENDER_URL;
-          autoScript.crossOrigin = 'anonymous';
-          autoScript.onload = () => {
+        injectScript(LOCAL_KATEX_JS, CDN_KATEX_JS, (ok) => {
+          if (!ok) {
+            console.warn('[FormulaRenderer] KaTeX core could not be loaded. Using semantic typography fallback.');
+            katexLoaded = false;
+            return resolve(null);
+          }
+          // 3. Load Auto-render contrib
+          injectScript(LOCAL_KATEX_AUTO_RENDER, CDN_KATEX_AUTO_RENDER, (autoOk) => {
             katexLoaded = true;
             resolve(window.katex);
-          };
-          autoScript.onerror = () => {
-            katexLoaded = true;
-            resolve(window.katex);
-          };
-          document.head.appendChild(autoScript);
-        };
-        script.onerror = () => {
-          console.warn('[FormulaRenderer] KaTeX CDN unreachable. Using semantic typography fallback.');
-          katexLoaded = false;
-          resolve(null);
-        };
-        document.head.appendChild(script);
+          });
+        });
       } else if (!window.renderMathInElement) {
-        const autoScript = document.createElement('script');
-        autoScript.src = KATEX_AUTO_RENDER_URL;
-        autoScript.crossOrigin = 'anonymous';
-        autoScript.onload = () => {
+        injectScript(LOCAL_KATEX_AUTO_RENDER, CDN_KATEX_AUTO_RENDER, (autoOk) => {
           katexLoaded = true;
           resolve(window.katex);
-        };
-        document.head.appendChild(autoScript);
+        });
       } else {
         katexLoaded = true;
         resolve(window.katex);
@@ -207,7 +214,7 @@
 
     // Step 3: Restore protected LaTeX math blocks exactly as original
     mathTokens.forEach(t => {
-      res = res.replace(t.id, t.content);
+      res = res.replace(t.id, () => t.content);
     });
 
     return res;
@@ -252,6 +259,55 @@
     // Step 1: Preprocess plain-text while protecting LaTeX blocks
     let processedHtml = preprocessScienceText(rawText);
     target.innerHTML = processedHtml;
+
+    function cleanLatexForPlainDisplay(tex) {
+      if (!tex) return '';
+      return tex
+        .replace(/\\text\{([^}]+)\}/g, '$1')
+        .replace(/\\mathbf\{([^}]+)\}/g, '$1')
+        .replace(/\\mathrm\{([^}]+)\}/g, '$1')
+        .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '($1 / $2)')
+        .replace(/\\sqrt\{([^}]+)\}/g, '√($1)')
+        .replace(/\\times/g, '×')
+        .replace(/\\cdot/g, '·')
+        .replace(/\\approx/g, '≈')
+        .replace(/\\le/g, '≤')
+        .replace(/\\ge/g, '≥')
+        .replace(/\\neq/g, '≠')
+        .replace(/\\pi/g, 'π')
+        .replace(/\\theta/g, 'θ')
+        .replace(/\\lambda/g, 'λ')
+        .replace(/\\eta/g, 'η')
+        .replace(/\\sigma/g, 'σ')
+        .replace(/\\varepsilon/g, 'ε')
+        .replace(/\\Delta/g, 'Δ')
+        .replace(/\\Phi/g, 'Φ')
+        .replace(/\\sum/g, 'Σ')
+        .replace(/\\int/g, '∫')
+        .replace(/\\iint/g, '∬')
+        .replace(/\\nabla/g, '∇')
+        .replace(/\\quad/g, ' ')
+        .replace(/\\,/g, ' ')
+        .replace(/\\;/g, ' ')
+        .replace(/\\!/g, '')
+        .replace(/\\\\/g, '<br>')
+        .replace(/\\([a-zA-Z]+)/g, '$1')
+        .replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>')
+        .replace(/\^([0-9a-zA-Z+-]+)/g, '<sup>$1</sup>')
+        .replace(/_\{([^}]+)\}/g, '<sub>$1</sub>')
+        .replace(/_([0-9a-zA-Z+-]+)/g, '<sub>$1</sub>');
+    }
+
+    function fallbackRender() {
+      if (!target.innerHTML.includes('$')) return;
+      target.innerHTML = target.innerHTML
+        .replace(/\$\$([\s\S]+?)\$\$/g, (m, math) => {
+          return `<div class="stem-formula-card"><div class="stem-formula-header"><span class="stem-formula-badge">Formula</span></div><div class="stem-math-fallback" style="text-align:center; font-style:italic; padding:0.6rem; font-family:'Roboto',serif; font-size:1.1rem;">${cleanLatexForPlainDisplay(math)}</div></div>`;
+        })
+        .replace(/\$([^\$\n]+?)\$/g, (m, math) => {
+          return `<span class="stem-inline-math" style="font-style:italic; font-family:'Roboto',serif;">${cleanLatexForPlainDisplay(math)}</span>`;
+        });
+    }
 
     // Step 2: Render LaTeX math in element using KaTeX
     function applyKaTeX() {
@@ -298,7 +354,10 @@
           });
         } catch (e) {
           console.warn('[FormulaRenderer] Math rendering error:', e);
+          fallbackRender();
         }
+      } else {
+        fallbackRender();
       }
     }
 
@@ -307,8 +366,10 @@
         applyKaTeX();
       } else {
         loadKaTeX().then(() => {
-          if (target.isConnected) {
+          if (window.renderMathInElement) {
             applyKaTeX();
+          } else {
+            fallbackRender();
           }
         });
       }
