@@ -101,6 +101,22 @@ Total Screenshots to Process: **94**
 
 ---
 
+### Batch 6: Screenshots 51 – 60
+| # | File Name | Visual Content Observed (Native Vision) | Extracted Captions & Labels | Mapped Dictionary Term(s) | Status |
+|---|---|---|---|---|---|
+| 51 | `Screenshot_8-9-2026_135311_.jpeg` | Mammalian (human) excretory system anatomy | Posterior vena cava, Aorta, Diaphragm, Renal artery, Left kidney, Right kidney, Renal vein, Ureter, Bladder, Sphincter muscle, Urethra. Caption: *Drawing of a mammalian(human) excretory system* | `excretory system`, `mammalian excretory system`, `human excretory system`, `kidney`, `ureter`, `renal artery`, `renal vein`, `urethra`, `urinary bladder`, `sphincter muscle` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 52 | `Screenshot_8-9-2026_135329_.jpeg` | Excurrent leaf with apex projecting as point | Midrib extending as sharp point beyond the blade margin. Caption: *Excurrent leaf* | `excurrent leaf`, `excurrent` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 53 | `Screenshot_8-9-2026_135439_.jpeg` | Exothermic reaction profile coordinate diagram | Potential energy / Enthalpy change vs Reaction Coordinate; Reactants A+B at P, Products C+D at Q, Activation energy Ea hump, $\Delta H = \text{-ve}$. Caption: *Reaction profile diagram for exothermic reaction* | `exothermic reaction`, `reaction profile`, `reaction profile diagram`, `exothermic`, `activation energy` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 54 | `Screenshot_8-9-2026_135517_.jpeg` | Explanate flower with flatly spreading petals | Corolla tube with five lobes spread flat horizontally. Caption: *An explanate flower* | `explanate flower`, `explanate` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 55 | `Screenshot_8-9-2026_135628_.jpeg` | Triple figure illustrating exterior angles in geometry | Fig I: Triangle exterior angles (1, 2, 3); Fig II: Transversal crossing parallel lines (angles A, B, G, H); Fig III: Polygon exterior angles (A, B, C, D, E). Caption: *Fig I: Exterior angles of a triangle; Fig II: Exterior angles formed by a transversal crossing two lines; Fig III: Exterior angles of a polygon* | `exterior angle`, `exterior angles`, `exterior angles of a triangle`, `exterior angles of a polygon` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 56 | `Screenshot_8-9-2026_13572_.jpeg` | Thermodynamic indicator diagram: work on gas expansion | Pressure vs Volume curve from $(P_1, v_1)$ to $(P_2, v_2)$ with shaded infinitesimal strip $P\,dv$. Caption: *External work done on expansion* | `external work done on expansion`, `work done on expansion`, `expansion work` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 57 | `Screenshot_8-9-2026_135752_.jpeg` | Dual energy band diagrams for extrinsic semiconductors | Top: p-type semiconductor (acceptor levels near valence band, holes in VB, electrons in CB); Bottom: n-type semiconductor (donor levels near conduction band, electrons in CB, holes in VB, $E_g$). Caption: *A p-type semiconductor / An n-type semiconductor* | `extrinsic semiconductor`, `p-type semiconductor`, `n-type semiconductor` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 58 | `Screenshot_8-9-2026_135813_.jpeg` | Longitudinal section of a mammalian eye | External eye muscle, Sclerotic layer, Choroid, Yellow spot, Retina, Blind spot, Optic nerve, Vitreous humour, Ciliary muscle in ciliary body, Suspensory ligament, Lens, Pupil, Aqueous Humor, Iris, Cornea, Conjunctiva. Caption: *Longitudinal section of a mammalian eye* | `mammalian eye`, `eye`, `cornea`, `iris`, `pupil`, `retina`, `vitreous humour`, `aqueous humor`, `blind spot`, `yellow spot`, `optic nerve`, `choroid`, `conjunctiva` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 59 | `Screenshot_8-9-2026_175251_.jpeg` | Face-centred cubic (FCC) unit cell crystal lattice | 8 corner lattice atoms + 6 face-center lattice atoms. Caption: *Face-centred cube* | `face-centred cube`, `face-centred cubic`, `face-centered cubic`, `fcc`, `face-centred cubic lattice` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 60 | `Screenshot_8-9-2026_17532_.jpeg` | Fact triangle arithmetic models | Left: Addition/Subtraction Fact Triangle ($16$ at vertex, $10$ & $6$ base, $+,-$); Right: Multiplication/Division Fact Triangle ($24$ at vertex, $6$ & $4$ base, $\times,\div$). Caption: *Addition/Subtraction Fact Triangle / Multiplication/Division Fact Triangle* | `fact triangle`, `fact family` | ✅ Integrated in `core_dictionary_diagrams.js` |
+
+---
+
 ## 📐 Part 2: Section E Formula Enrichment
 
 ### Pipeline Workflow:
