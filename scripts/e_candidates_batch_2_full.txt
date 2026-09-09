@@ -1,0 +1,180 @@
+=== 46. [490] elliptic curve ===
+RAW: 
+DEF: The set of solutions to a type of cubic equation whose solutions lie on a torus (a donut-shaped surface). The particular type of cubic equation whose solutions lead to elliptic curves takes the form: y 2 + axy + by = x 3 + cx 2 + dx + e .
+
+=== 47. [491] elliptic function ===
+RAW: 
+DEF: In complex analysis, it is a function in which one of the forms expresses the relation of the arc of an ellipse to the straight lines to which it is connected. While a singly periodic function like sine has a number, a = 2 π , so that sin( x + a ) = sin( x ), a doubly periodic function f has the property that there are two numbers a , b , not rational multiples of each other, so that f ( x + a ) = f ( x + b ) = f ( x ).
+
+=== 48. [493] elliptic integral ===
+RAW: 
+DEF: A definite integral not usually evaluable in closed form by antidifferentiation, having the form R ( x , y ) c u ∫ dx, where R is a rational function of x and y , y 2 is a quartic polynomial in x and c is a fixed constant. It is a generalisation of the inverse trigonometric functions and provides solutions to more problems. Elliptic functions are obtained by inverting elliptic integrals to obtain generalisations of the trigonometric functions. The integral is called a complete elliptic integral if the range of integration is maximal; if not, it is an incomplete elliptic integral . The integral is named elliptic because one of the integrals expresses the length of an arc of an ellipse.
+
+=== 49. [494] elliptic paraboloid ===
+RAW: 
+DEF: A paraboloid that can be put into a position such that its sections parallel to one coordinate plane are ellipses, while its sections parallel to the other two coordinate planes are parabolas. In other words, the vertical cross sections are all parabolas, while the horizontal cross sections are ellipses. In a suitable coordinate system with three axes x , y and z , it can be represented by the equation z c = x 2 a 2 + y 2 b 2 , where a and b are constants that dictate the level of curvature in the x - z and y - z planes respectively. With a = b an elliptic paraboloid is a paraboloid of revolution: a surface obtained by revolving a parabola around its axis. This is an elliptic paraboloid which opens upward for c > 0 and downward for c < 0. It is the shape of the parabolic reflectors used in mirrors, antenna dishes, etc.; and is also the shape of the surface of a rotating liquid, a principle used in liquid mirror telescopes and in making solid telescope mirrors.
+
+=== 50. [553] emissivity ===
+RAW: 
+DEF: The ability of a surface to emit radiation, measured as the ratio of the energy radiated by a surface to that radiated by a blackbody at the same temperature or the ratio of the radiation intensity of a nonblack body to the radiation intensity of a blackbody. Its symbol is ε. Its value is always less than or just equal to one. It varies with temperature and throughout the spectrum. Published values can readily be obtained for most substances.
+
+=== 51. [565] empirical formula ===
+RAW: 
+DEF: The chemical formula showing the relative or simplest proportion of atoms of elements in a compound instead of their structural arrangement or molecular weights. For example, the formula HO is the empirical formula for H2 O2 , which means there is one H for every O atom. The empirical formula for ethanoic acid is CH2 O and it represents the atoms in their simplest whole number ratio. It makes no reference to isomerism, structure or absolute number of atoms and it is used as a standard for most ionic compounds, including CaCl 2 and for macromolecules, such as SiO2 . empirical formula of a compound is the formula which expresses only the relative number of atoms of each element in the compound. Empirical formulas are are obtained from experimental data and are useful to determine the molecular mass (or weight) of compounds whose molecular masses have not been known; and also to determine the molecular masses of compounds whose molecular masses are variable, even though they have a definite percentage composition (i.e., for different compounds formed from the same elements). On the other hand, the molecular formula gives types and numbers of atoms present, for example, the molecular formula for ethanoic acid is C2 H4 O2 . The structural formula indicates the way the atoms are arranged and it is commonly written by dividing the formula into groups. For example, ethanoic acid can be written as CH3 COOH. The structure can also be drawn to show how the elements are bonded or linked to one another.
+
+=== 52. [588] encephalisation/encephalization quotient, eq ===
+RAW: 
+DEF: A measure of the ratio of the relative weight of the brain of a particular species compared with the expected value for members of the group to which it belongs or that of a typical animal size. EQ = w(brain)/Ew(brain). The formula for the expected weight of the brain varies, but is usually Ew (brain) = 0.12w (body) 2/3 , though for some classes of animals the power is 3/4 rather than 2/3. The value is used to estimate the comparative intelligence of animals, particularly in anthropology. It is believed that the larger an organism is, the more brain weight is required for basic survival tasks such as breathing, thermoregulation, senses, motor skill, etc. The larger the brain is relative to the body, the more brain weight might be E available for more complex cognitive tasks. This method, as opposed to the method of simply measuring brain weight alone, puts humans closer at the top of the list. Also, reflecting the evolution of the recent cerebral cortex, different animals have different degrees of brain folding, which increase the surface of the cortex, which is positively correlated to intelligence in humans.
+
+=== 53. [657] endothermic reaction ===
+RAW: 
+DEF: A chemical or biochemical reaction requiring an external source of free energy, which is usually heat or a reaction with a positive free energy change, in which case, energy is absorbed in the form of heat. Examples are photosynthesis, melting ice, cracking of alkanes, evaporation of water, thermal decomposition reactions, reaction of barium hydroxide octahydrate crystals with dry ammonium chloride, splitting a gas molecule apart and dissolving ammonium chloride in water. In endothermic reactions reaction, there is a loss in the total amount of energy; it takes more energy to start the reaction than what comes out of it, so that the total energy is a negative net result. Under constant temperature and pressure, the change in the standard Gibbs free energy would be positive for the reaction at standard pressure (1 bar) and standard concentrations (1 molar) of all the reagents. E Ea Reaction Coordinate Potential energy or Enthalpy change (KJmol^-1 ) P Q A + B C + D ∆H = +ve Reaction profile diagram for endothermic reaction A + B = Reactant; C + D = Products; Ea = Activation energy; ∆H = enthalpy change; P and Q denote potential energies of reactants and products respectively.
+
+=== 54. [661] endow ===
+RAW: 
+DEF: To define a relation or function (on a given structure) in order to consider them together as a single mathematical entity. For example, the metric space (S, δ ) consists of the set S endowed with the metric δ .
+
+=== 55. [667] energy balance equation ===
+RAW: 
+DEF: The result that the rate of change of the sum of the kinetic energy and internal energy of a sub-body is equal to the sum of the power and the heating of that sub-body.
+
+=== 56. [707] enormous theorem ===
+RAW: 
+DEF: The largest theorem in mathematics; it concerns the classification of finite simple groups and encapsulates the work of hundreds of mathematicians over many years.
+
+=== 57. [710] enrichment ===
+RAW: 
+DEF: 1. The process of increasing the abundance of a specified isotope in a mixture of isotopes. In a nuclear reactor or weapon, it is normally applied to increase the proportion of U^-235 or the addition of Pu^-239 to natural uranium for use by the reactor. 2. In analytical chemistry, the process of increasing the concentration of trace components of a solution by preconcentration. Metal ions in natural waters can be enriched using cation exchange chromatography.
+
+=== 58. [726] enthalpy ===
+RAW: 
+DEF: A thermodynamic property of a system denoted by H and defined by H=U+pV, where U is the internal energy of the system, p its pressure and V the volume. It is used to calculate the heat transferred during a quasi static process taking place in a closed thermodynamic system under constant pressure (isobaric process). In an endothermic reaction, the enthalpy change is positive, while it is negative in an exothermic reaction. It cannot be measured directly but when chemical substances react, the difference in the heat energy between the reactants and products can be measured. This difference E is the enthalpy change and is given by the symbol ∆H. Specific enthalpy is denoted as h Entire Leaf .
+
+=== 59. [728] entire surd ===
+RAW: 
+DEF: A surd in which all terms are irrational numbers. In other words, it is a surd having no rational factor except unity. Examples are √3, 3√9, √7, √10 and ∛ 50.
+
+=== 60. [736] entropy ===
+RAW: 
+DEF: 1. A measure of the unavailability of a system's energy to do work or a measure of the microscopic disorder within a system. An increase in entropy is accompanied by a decrease in energy available in a closed system. It is an important part of the second law of thermodynamics, which states that the thermodynamic entropy is a measure of the amount of energy which does no work during energy conversions. As a matter of convention, entropy is measured in units of energy per temperature, joules per Kelvin (SI unit). If thermodynamic systems are described using thermal energy instead of temperature, then entropy is just a number by which the thermal energy in the system is multiplied and the resulting energy is an energy for which no information is available, which would be required to convert the energy in technical systems from one form, for example, electrical into mechanical. In technical applications, machines are basically energy conversion devices thus they can only be driven by convertible energy. This also applies to biological organisms. 2. Also known as Shannon entropy , it is a random variable X with values in a finite set X , defined as H ( X ) ≡- P ( x ) x ∑ log2 [ P ( x )], where P ( X ) is the probability that X is in the state x and P log2 P is defined as 0 if P = 0. The joint entropy of variables ( X1 , ..., X n ) is defined by H ( X1 ,..., X n ) ≡- ... P x n ∑ ( x 1 ,..., x n ) x 1 ∑ log2 [ P ( x 1 ,..., x n )], 3. The macroscopic variable representing the degree of disorder within a system and corresponding to a statistical description of the system by the relation that the entropy is equal to the expected value of k log P , where k is a constant that relates the mean kinetic energy and absolute temperature of a system and P is the coefficient of probability of the system.
+
+=== 61. [844] epitrochoid ===
+RAW: 
+DEF: A curve traced out by a point that is a distance c from the centre of a circle of radius b , where c < b , that is rolling around the outside of another circle of radius a . It is described by the parametric equations: x = ( a + b ) cos( t ) - c cos[( a / b + 1) t ], y = ( a + b ) sin( t ) - c sin[( a / b + 1) t ]. Closely related to the epitrochoid are the epicycloid, hypocycloid and the hypotrochoid.
+
+=== 62. [850] epoxy compounds ===
+RAW: 
+DEF: Compounds in which an oxygen atom is directly attached to two adjacent or non-adjacent carbon atoms of a carbon chain or ring system; thus cyclic ethers. The term epoxides represents a subclass of epoxy compounds containing a saturated three-membered cyclic ether; thus oxirane derivatives. Examples are 1,2-epoxypropane or 2-methyloxirane (an epoxide); 9,10-epoxy^-9,10- dihydroanthracene (an epoxy compound).
+
+=== 63. [852] epoxyethane ===
+RAW: 
+DEF: A colourless, flammable gas with a faintly sweet odour and the molecular formula C2 H4 O, density 0.882 g/ml, melting point^-111.3 °C (161.85 K) and boiling point 10.7 °C (283.85 K). It is the simplest epoxide and isomeric with acetaldehyde. It is produced industrially by the direct oxidation of ethylene or ethene in the presence of silvercatalyst. It is used for producing many chemicals and intermediates, such as ethylene glycol, ethanolamines, simple and complex glycols, polyglycol ethers and other compounds. It is also a common gas-phase disinfectant which is widely used in hospitals to sterilise heat-sensitive tools and equipment. It is used as a main component of thermobaric weapons. However, it is a strong poison to humans, showing such effects as carcinogenic, mutagenic, irritating and narcotic.
+
+=== 64. [862] equal fraction ===
+RAW: 
+DEF: The pairs ( a 1 , b 1 ), ( a 2 , b 2 ), ( a 3 , b 3 ), ..., ( a n , b n ) are said to be proportional if = , then each of the fractions is equal to , where l 1 , l 2 , . . . , l n are constants such that l 1 b 1 + l 2 b 2 + l 3 b 3 + ,... + lnbn ≠ 0.
+
+=== 65. [866] equality ===
+RAW: 
+DEF: Two or more expressions which mean the same thing. Thus 3 + 4 = 7 is an equality. For constant non-zero a , b , c , the equality a = b implies b = a ; a + c = b + c ; a c = bc and if b = c then a = c .
+
+=== 66. [867] equality of matrices ===
+RAW: 
+DEF: Two matrices are equal if each matrix has the same number of rows and columns. The corresponding elements in each matrix are equal. For example, if x = then a = 3 and t = 6.
+
+=== 67. [870] equals sign ===
+RAW: 
+DEF: 1. The symbol '=' used between two expressions to indicate the identity of their references or values. 2. Symbol used for definitions, usually written either with 'df' subscript to the right, with a small triangle superscript or with the word 'definition' or 'defn' in the same line. The equals sign written with a colon to the left is used both for definitions and in computing for the assignment of values to variables, where x := x + y means that the new value of the variable labelled x is to be the sum of the previous values of x and y .
+
+=== 68. [871] equation ===
+RAW: 
+DEF: 1. An expression usually involving constants and/or variables that represents the equality of two expressions or that two expressions on either side of an equal sign (=) have the same value. There are two forms of equation: (i) identical equation , known as an identity that is true for any values of the variables, for example, x 2 - 1 = ( x + 1)( x^-1) or (ii) conditional equation that is only true for certain values of the variables, called the roots of the equation. For example, x 2 - 1 = 3 with roots x = ±2. 2. The representation of a chemical reaction by symbols and numbers. The equation can be a word equation or a formula or symbol. 3. To equate is to form an equation by joining two separate expressions with an equal sign (=).
+
+=== 69. [872] equation of state ===
+RAW: 
+DEF: An equation that relates the pressure, volume and thermodynamic temperature of an amount of substance or defines the physical state of a homogeneous substance such as gas, liquid or solid, by relating volume to pressure and absolute temperature for a given mass of the material. The simplest is the ideal gas law.
+
+=== 70. [873] equation of time ===
+RAW: 
+DEF: The length of time that must be added to the mean solar time as shown on a clock to give the apparent solar time, as shown by a sundial. The amount varies during the year, being at a minimum of^-14.2 minutes in February and a maximum of +10.4 minutes in October. Apparent solar time has annual variation as a result of the Sun's inclination in the ecliptic and the eccentricity of the Earth's elliptical orbit.
+
+=== 71. [874] equation ofa circle ===
+RAW: 
+DEF: A circle is the set of points equidistant from a point C ( h , k ) called the centre. The fixed distance r from the centre to any point on the circle is called the radius. The standard equation of a circle with centre C ( h , k ) and radius r is given by ( x - h ) 2 + ( y - k ) 2 = r 2 . For example, to find the equation of a circle whose centre is at (2, - 4) and radius 5, the solution is: ( h , k ) = (2 , - 4) and r = 5; substituting h , k and r in the standard equation ( x^-2) 2 + ( y - ( - 4)) 2 = 5 2 , therefore ( x^-2) 2 + ( y + 4) 2 = 25. The general equation of a circle is given by x 2 + y 2 + 2 gy + 2 fy + c = 0, where g , f and c are constants.
+
+=== 72. [875] equation ofa parabola ===
+RAW: 
+DEF: The equation of a parabola is given by ( y - k ) 2 = 4 p ( x - h ), the directrix is parallel to the y -axis, p is the length of the focus and ( h,k ) is the vertex. When the directrix is parallel to the x -axis the equation of the parabola is given by ( x - h) 2 = 4p(y - k ).
+
+=== 73. [876] equations of motion ===
+RAW: 
+DEF: Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken.
+
+=== 74. [893] equilibrant ===
+RAW: 
+DEF: A force which is able to balance out another force and produces equilibrium. It could be a single force which cancels the vector sum of a given system of forces acting on a rigid body and whose torque cancels the sum of the torques of the system. For example, for three forces, F1 , F2 and F3 to be in equilibrium, there must be another force that can balance the three forces. In this case, F1 + F2 + F3 + F = 0, therefore the equilibrant force, F = - ( F1 + F2 + F3 ).
+
+=== 75. [897] equilibrium constant ===
+RAW: 
+DEF: The value of a reaction quotient for a chemical system at chemical equilibrium, expressing the ratio of product concentrations to reactant concentrations each raised to their stoichiometric coefficients.
+
+=== 76. [901] equilibrium point ===
+RAW: 
+DEF: A constant solution to a differential equation. Formally, a point y ε such that, for a given ordinary differential equation y ' = f ( y ), f ( y ε ) = 0.
+
+=== 77. [912] equinumerous ===
+RAW: 
+DEF: Of two classes, having the same number of members. Formally, two sets A and B are equinumerous if there exists a one-to-one correspondence or a bijection between them, which means that if there exists a function from A to B such that for every element y of B there is exactly one element x of A with f ( x ) = y . It is written mathematically as A ≈ B or A ∼ B or ⎢ A ⎢= ⎢ B ⎢ .
+
+=== 78. [928] equivalent ===
+RAW: 
+DEF: 1. In chemistry, a unit of amount of substance, defined as the entity of a chemical species that in a specified reaction would either react with or supply one mole of hydrogen ions (H + ) in an acid- base reaction or one entity of electrons in a redox reaction. It is the arithmetic product of the molar mass of the chemical species and its equivalence factor. 2. Equal in amount, volume, importance, meaning, etc, for example, 420g is equivalent to 0.420kg. 3. In mathematics, the term is used for two sets capable of being put into a one-to-one relationship or having the same cardinality. Alternatively, relating to corresponding elements under an equivalence relation. Its symbol is given by ≡ . 4. In geometry, it defines two geometric figures, having some particular property in common, such as similar triangles or parallelograms of the same height on the same base. 5. In logic, the term is used for two statements or propositions in which each implies the other, being either both true or both false. 6. In terms of two equations or inequalities, having the same solution set. 7. Of two fractions, reducible to the same proper fraction and so representing the same rational number. For example, 5/10 and 10/20 are equivalent since both can be reduced to the rational number 1/2. 8. Of two matrices A and B, such that there exist non-singular matrices C and D with A = CBD. 9. Of two metrics on a given set, generating the same E topology, in that the same topology results from using the open balls for either metric as a base. 10. Of two ideals in an integral domain, related in such a way that there areelements a and b for which ( a ) I = ( b ) J , where I and J are the given ideals and ( a ) and ( b ) are the principal ideals generated by a and b , respectively. 11. Also known as equipollent , it defines two systems, having the same vector sum and the same torque about the same point.
+
+=== 79. [933] equivalent equations ===
+RAW: 
+DEF: Equations with the same solution. For example, 2 + x = 4 and 6 + x = 8 are equivalent equations with the common solution 2.
+
+=== 80. [937] equivalent norms ===
+RAW: 
+DEF: Two norms for which the associated distance functions are equivalent. In other words, two norms ⎢⎢⎢⎢ 1 and ⎢⎢⎢⎢ 2 are equivalent if there are positive constants M and N such that M ⎢⎢⎢⎢ 1 ≤⎢⎢⎢⎢ 2 ≤ N ⎢⎢⎢⎢ 1 . All norms on a given Euclidean space are equivalent and so give rise to the same topology.
+
+=== 81. [976] error ===
+RAW: 
+DEF: 1. A property of a measured value to differ from the true value, often expressed as an absolute or relative range, such as ± 5 mm or ± 5%. The common types of errors include random, systematic and erratic errors. An example in applied mathematics is the difference between a value and an estimate of that value. In statistics, a common example is the difference between the mean age of a given group of people and that of a sample drawn from the group. In numerical analysis, an example of round-offerror is the difference between the true value of pi and commonly substituted expressions like 22/7 and shorter versions like 3.14159. Truncation error results from using only the first few terms of an infinite series. Relative error is the ratio of the size of an error to the size of the quantity measured and percentage error is relative error expressed as a percent. 2. A fault or mistake or bug, either in a software or on the part of the user that causes a program to stop running or produce unexpected results.
+
+=== 82. [1014] essentially bounded ===
+RAW: 
+DEF: Of a measurable function, having the property that there exists a constant C such that the set { x : ⎢ f ( x ) ⎢> C } has zero measure. The infimum of such constants is called the essential supremum of ⎢ f ⎢ . For example, if f ( x ) = 1/ x for rational x and f ( x ) = sin x for all other real x , then f ( x ) is essentially bounded.
+
+=== 83. [1017] estimate of mean ===
+RAW: 
+DEF: Analysing grouped frequency distributions when the actual mean is not known and the midpoint of each class is used to estimate the mean. For example, the estimate of mean ( Σ ƒx ) /(Σ ƒ ) = (Sum of products of frequency × midpoint for each class) ÷ total frequency.
+
+=== 84. [1026] ethanal ===
+RAW: 
+DEF: A colourless, inflammable liquid with the molecular formula C2 H4 O, density 0.788 gcm^-3 , melting point^-123.5 °C (150 K) and a boiling point of 20.8 °C (293.95 K). It is a member of the group of organic compounds called aldehydes and it is formed by the oxidation of ethanol or ethane. It is produced by plants as part of their normal metabolism and it occurs naturally in ripe fruits, coffee and bread. It is also produced by oxidation of ethanol. It is an important precursor to pyridine derivatives, pentaerythritol and crotonaldehyde. It combines with urea to give a useful resin.
+
+=== 85. [1027] ethanal trimer ===
+RAW: 
+DEF: A colourless flammable liquid with a pungent odour and unpleasant taste having the chemical formula C6 H12 O3 , molar mass 132.16 g mol^-1 , melting point 12 °C (285 K) and boiling point 124 °C (397 K). It is produced by treating acetaldehyde with a small amount of sulfuric acid. It is slightly soluble in water and highly soluble in alcohol. It is used as a sedative and hypnotic drug (the safest hypnotic drug); in the manufacture of synthetic resins; as a preservative; and in preparing leather.
+
+=== 86. [1029] ethane ===
+RAW: 
+DEF: A colourless, odourless gas at standard temperature and pressure with the chemical formula C2 H6 , density 1.3562 mg cm^-3 (at 0 °C, 273.15 K) and 0.5446 g cm^-3 (at^-89.15 o C, 184 K), melting point^-183 °C (90.4 K) and boiling point^-89 °C (184.6 K). It is the second member of the alkane series of hydrocarbons (paraffins). It is isolated industrially from natural gas and as a by-product of petroleum refining. It is used as a plasticiser and as an industrial solvent, however, N,N-dimethylacetamide (DMA), which is a related compound is more widely used. It is also used as petrochemical feedstock for ethylene production. It is the only two-carbon alkane that is an aliphatic hydrocarbon.
+
+=== 87. [1030] ethane-1,2-diol ===
+RAW: 
+DEF: A colourless, odourless, syrupy, sweet-tasting and viscous hygroscopic liquid, with the molecular formula C2 H6 O2 , molar mass, 62.07 g mol^-1 , density 1.1132 g/cm³, melting point^-12.9 °C (260 K) and boiling point 97.3°C (470 K). It is made by hydrolysis of epoxyethane from ethene and used as antifreeze and raw material for making polyesters. It is toxic and ingestion can result in death.
+
+=== 88. [1031] ethanedioic acid ===
+RAW: 
+DEF: A colourless poisonous dicarboxylic acid, with the molecular formula H2 C2 O4 , density 1.90 gcm^-3 (anhydrous), 1.653 gcm^-3 (dihydrate) and melting point 189- 191°C (462-464 K). It typically occurs as a dihydrate with the chemical formula C2 O4 H2 ·2H2 O. It is obtained from plants or made synthetically. It is about 3,000 times stronger than acetic acid. Its conjugate base, known as oxalate (C2 O4 2- ), is a reducing agent as well as a chelating agent for metal cations. It is used for dyeing, bleaching and cleaning.
+
+=== 89. [1032] ethanenitrile ===
+RAW: 
+DEF: A colourless, poisonous liquid, with the chemical formula CH3 CN, density 0.787 g/ml liquid, melting point^-45 °C (228 K) and boiling point 82 °C (355 K). It is made by dehydrating ethanamide or from ammonia and ethyne. It is produced mainly as a by-product of acrylonitrile manufacture. It has a dipole moment of 3.84 D and it is a good polar solvent used for dissolving a wide range of ionic and nonpolar compounds when water cannot be used. In the laboratory, it is used as a medium-polarity solvent that is miscible with water and has a convenient liquid range. It is mainly used as a polar aprotic solvent in the purification of butadiene.
+
+=== 90. [1034] ethanoic acid ===
+RAW: 
+DEF: A liquid carboxylic acid with the chemical formula CH3 CO2 H, density 1.049 g cm^-3 , melting point 16-17 °C (289-290 K) and boiling point 118-119 °C (391-392 K), whose salts and esters are acetates. In its pure or glacial state, it is a clear, syrupy, corrosive liquid that mixes readily with water. It occurs naturally as a metabolic intermediate in body fluids and plant juices. Its dilute solution, from fermentation and oxidation of natural products is vinegar. Industrial production is either synthetic, from acetylene; or biological, from ethanol. Industrial chemicals made from it are used in printing and as plastics, photographic films, textiles and solvents.
+
