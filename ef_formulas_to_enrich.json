@@ -1,0 +1,1458 @@
+{
+  "E": [
+    {
+      "index": 28,
+      "word": "earnshaw's theorem",
+      "raw": "",
+      "definition": "It states that a collection of point charges cannot be maintained in a stable static equilibrium configuration solely by the electrostatic interaction of the charges. This theorem was first proved by Samuel Earnshaw in 1842 and it is a fundamental result concerning bodies that interact according to inverse square laws, such as Coulomb's law of electrostatics and Newton's law of gravitation. It applies to the classical law forces (electric and gravitational) and also to the magnetic forces of permanent magnets and paramagnetic materials but not diamagnetic materials."
+    },
+    {
+      "index": 49,
+      "word": "eberlein-smulian theorem",
+      "raw": "",
+      "definition": "The theorem, named after William Frederick Eberlein and Witold Lwowitsch Schmulian that asserts the equivalence of compactness (Heine-Borel compactness), sequential compactness and limit point compactness in the weak topology for a Banach space."
+    },
+    {
+      "index": 53,
+      "word": "ebullioscope constant",
+      "raw": "",
+      "definition": "The ratio of the elevation of the boiling point of a solvent caused by dissolving a solute to the molality of the solution, taken at extremely low concentrations and relates molality to boiling point elevation. Its symbol is Kb."
+    },
+    {
+      "index": 102,
+      "word": "economy",
+      "raw": "",
+      "definition": "A mathematical model of an economic system in which, commonly, there are m producers, each with a production set P j and n consumers, each with a consumption set C i and an associated ordering ≤ i . These sets lie on an Euclidean space, whose dimension corresponds to the number of goods in the economy. There is a total resource level w . The producers each produce a vector y i in P j and the consumers have a demand x i in C i . These m + n elements define a state of the economy. The excess demand is ∑ x i - ∑ y j - w and a market equilibrium occurs if excess demand is zero. Individual consumers will try to maximize their preference satisfaction; this leads to the study of equilibria that occur as a market equilibrium together with a pricing of resources that every producer maximizes profit and every consumer optimizes satisfaction."
+    },
+    {
+      "index": 126,
+      "word": "eddington limit",
+      "raw": "",
+      "definition": "A theoretical limit for the maximum value of the brightness of a star of a given E mass, named after British astronomer and physicist, Arthur Stanley Eddington and given as L = 4 π GMm p c σ T , where G is the gravitational pressure, M is the mass of the luminous object, m P is the mass of a proton, c is the speed of light and σ T is the effective area of an electron when it is illuminated by radiation. This limit exists because the radiation pressure caused by the nuclear fission reactions powering the star has to counter, but not exceed the gravitational force that would cause gravitational collapse of the star. A star emitting radiation at greater than the Eddington limit would break up. In a star it is defined as the point where the gravitational force inwards equals the continuum radiation force outwards, assuming hydrostatic equilibrium and spherical symmetry. When exceeding the Eddington luminosity, a star would initiate a very intense continuum driven stellar wind from its outer layers. Since most massive stars have luminosities far below the Eddington limit, however, their winds are mostly driven by the less intense line absorption."
+    },
+    {
+      "index": 161,
+      "word": "effective nuclear charge",
+      "raw": "",
+      "definition": "The apparent nuclear or net positive charge which an outermost electron actually experiences through attraction in a multi-electron atom as a result of the shielding effect by other electrons. Its symbol is Z eff . Since the shielding effect of negatively charged electrons prevents higher orbital electrons from experiencing the full nuclear charge by the repelling effect of inner- layered electrons, the term 'effective' is used to qualify the nuclear charge. The strength of the nuclear charge can be determined by looking at the oxidation number of the atom. Where there is only one electron in an atom, that electron experiences the full charge of the positive nucleus, in which case, the effective nuclear charge can be calculated from Coulomb's law. However, in a multi-electron atom the outer electrons are simultaneously attracted to the positive nucleus E and repelled by the negatively charged electrons. The effective nuclear charge on such an electron is given by the expression: Z eff = Z - S, where, Z is the number of protons in the nucleus (atomic number) and S is the average number of electrons between the nucleus and the electron in question (the number of nonvalence electrons)."
+    },
+    {
+      "index": 172,
+      "word": "efficiency",
+      "raw": "",
+      "definition": "1. A measure of the performance or how well a machine or other energy changing device changes energy into useful work. It is the measure of the percentage ratio of work output to work input. For a simple machine, it is given by: E = Energy Output Energy input × 100%. For example, a gear transmission is 97% efficient, when the useful energy output is 97% of the input, with the other 3% being lost as heat due to friction. Automobile engines have low efficiency (below 30%) because out of the total energy content of fuel converted to heat, only a small portion provides motive power, while a substantial amount is lost in the radiator and car exhaust. 2. In chemistry, it is the ratio between the useful energy delivered or bound and the energy supplied: energy output/energy input. It is also used in the sense of a quantitative measure of the relative rate of a given step involving a species with respect to the sum of the rates of all of the parallel steps which depopulate that species. Its symbol is η."
+    },
+    {
+      "index": 179,
+      "word": "effort",
+      "raw": "",
+      "definition": "The force given to a machine to move a load and expressed as: Effort = Load (Force)/Distance."
+    },
+    {
+      "index": 192,
+      "word": "egoroff's theorem",
+      "raw": "",
+      "definition": "Named after the Russian analyst, D. F. Egornoff (1869-1931), the result that if a sequence of almost everywhere finite and measurable functions converges almost everywhere to a finite limit, on a set of finite measure, E, then there is, for each positive ε, a measurable subset F with a measure at most ε such that uniform convergence occurs on E \\ F."
+    },
+    {
+      "index": 198,
+      "word": "ehrenfest theorem",
+      "raw": "",
+      "definition": "The theorem that a quantum-mechanical wave packet obeys the equations of motion of the corresponding classical particle when the position, momentum and force acting on the particle are replaced by the expectation values of these quantities."
+    },
+    {
+      "index": 202,
+      "word": "eigenvalue",
+      "raw": "",
+      "definition": "In a characteristic polynomial, for a square matrix A, in which x is a nonzero vector called the eigenvector that does not change its direction under the associated linear transformation and satisfies the equation A x = λ x , the scalar, λ is the eigenvalue. In other words, it is a root, λ, of the characteristic equation det( A - t I). For a linear operator A, it is a solution, λ, of the equation AX = λ X(X ≠ 0)."
+    },
+    {
+      "index": 203,
+      "word": "eigenvalue equation",
+      "raw": "",
+      "definition": "A parameter-dependent equation that possesses non-vanishing solutions only for particular values (eigenvalues) of the parameter. Eigenvalue equations appear in many contexts, including the solution of systems of linear algebraic equations (matrix equations), differential or partial differential equations and integral equations. Eight Curve."
+    },
+    {
+      "index": 204,
+      "word": "eigenvector",
+      "raw": "",
+      "definition": "In a square matrix, it is a nonzero vector, x that does not change its direction under the associated linear transformation and satisfies the equation A x = λ x , where A is a square matrix and λ is a scalar called an eigenvalue."
+    },
+    {
+      "index": 205,
+      "word": "eigh tcur ve",
+      "raw": "",
+      "definition": "A curve that has the Cartesian equation x 4 = a 2 ( x 2 - y 2 ) and the appearance of a figure eight such as the symbol for infinity, lying on its side."
+    },
+    {
+      "index": 211,
+      "word": "einstein's equation",
+      "raw": "",
+      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
+    },
+    {
+      "index": 212,
+      "word": "einstein, albert",
+      "raw": "",
+      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
+    },
+    {
+      "index": 213,
+      "word": "einstein-smoluchowski equation",
+      "raw": "",
+      "definition": "An unexpected connection revealed independently by Albert Einstein in 1905 and Marian Smoluchowski in 1906 in their papers on Brownian motion, which is a relationship between the diffusion coefficient D and the distance λ that a particle can jump in a time τ . The equation is given as D = λ 2 /2 τ and it gives a connection between the microscopic details of particle diffusion and the macroscopic quantities associated with the diffusion. This equation is an early example of a fluctuation-dissipation relation and it is frequently used in the electro diffusion phenomena."
+    },
+    {
+      "index": 215,
+      "word": "eisenstein's criterion",
+      "raw": "",
+      "definition": "A condition that is sufficient for a polynomial with integer coefficients to be irreducible. It states that it suffices to find a prime p that does not divide the leading coefficient of the polynomial and that does divide all other coefficients, but is such that p 2 does not divide the constant coefficient. For example, the polynomial x n^-3 is irreducible for all n , but x n^-9 need not be. The corresponding result holds in a principal ideal domain. The criterion E is named after German mathematician, Ferdinand Gotthold Max Eisenstein (1823-1852)."
+    },
+    {
+      "index": 226,
+      "word": "elastance",
+      "raw": "",
+      "definition": "The reciprocal of capacitance (ability to store electric charge). It is measured in farad^-1 ."
+    },
+    {
+      "index": 230,
+      "word": "elastic modules",
+      "raw": "",
+      "definition": "The ratio of the stress applied to a body to the strain produced or the slope of its stress-strain curve in the elastic deformation region. It is the mathematical description of an object's tendency to be deformed elastically, when a force is applied to it. It may be expressed as λ = stress strain , where λ (lambda) is the elastic modulus, stress the force causing the deformation divided by the area to which the force is applied and strain, the ratio of the change caused by the stress to the original state of the object. If stress is measured in pascals, since strain is a unitless ratio, then the units of λ are also pascals. Due to the fact that the denominator of the above equation becomes unity if length is doubled, the elastic modulus becomes the stress needed to cause a sample of the material to double in length. Since this endpoint is not realistic because most materials will fail before reaching it, it is practical, due to the fact that small fractions of the defining load will operate in the same ratio."
+    },
+    {
+      "index": 246,
+      "word": "electric charge",
+      "raw": "",
+      "definition": "The fundamental property of matter that allows one object to exert an electric force on another object when near each other without physically touching. The amount of electric charge is defined by the word equation, electric charge ( Q ) = current ( I ) × time ( t in seconds). The SI unit of electric charge is the coulomb ( C ). It occurs in nature in two forms and conventionally described as positive and negative in order to distinguish between them in terms of the kinds of interactions they can have. The proton has a positive charge and the electron has a negative charge is a property of the electron. Two positively or negatively charged substances experience a mutual repulsive force, while positively charged objects and negatively charged objects experience an attractive force."
+    },
+    {
+      "index": 248,
+      "word": "electric constant",
+      "raw": "",
+      "definition": "The absolute permittivity of empty space, with the symbol ε 0 . It is equal to 1 in centimetre-gram-second electrostatic units and to farads per metre, where c o is the speed of light in free space and μ 0 is the vacuum permeability). Numerically, it is equal to 8.854 × 10 -12 farad per metre."
+    },
+    {
+      "index": 250,
+      "word": "electric current density",
+      "raw": "",
+      "definition": "A measure of the density of an electric current, defined as a vector whose magnitude is the electric current per cross-sectional area. In SI units, the current density is measured in amperes per square metre. Its symbol is J . By magnitude it is the electric current divided by the cross sectional area: J = I / A , where I is the current flowing through the conductor given in Amperes and A is the cross sectional area in m2 ."
+    },
+    {
+      "index": 253,
+      "word": "electric displacement",
+      "raw": "",
+      "definition": "The charge per unit area that would be displaced across a layer of a conductor placed across an electric field. Its symbol is D and it stands for displacement. The electric displacement field D is, therefore, defined as D ≡ ε 0 E + P , where ε 0 is the permittivity in free space, E is the actual average value of the electric field and P is the (macroscopic) density of the permanent and induced electric dipole moments in the material, known as the polarisation density. It is a vector field whose divergence depends on the density of bound charge in the material. It is responsible for the effects of free charges within materials. In free space, the electric displacement field is equivalent to flux density, a concept that lends understanding to Gauss's law."
+    },
+    {
+      "index": 255,
+      "word": "electric field",
+      "raw": "",
+      "definition": "A region within which a particle possessing electric charge experiences a force owing to the distribution of other charges; or a region around an electric charge in which an electric force is exerted on another charge. Its strength, E at any point is defined as the electric force , F exerted per unit positive electric charge, Q at that point: E = F Q . It is a type of electromagnetic field, having both magnitude and direction and can be represented by lines of force or field lines, that start on positive charges and terminate on negative charges. The electric field is stronger, where the field lines are closer than where they are farther apart. The value of the electric field has dimensions of force per unit charge and is measured in units of newtons per coulomb."
+    },
+    {
+      "index": 256,
+      "word": "electric field strength",
+      "raw": "",
+      "definition": "A vector quantity, which is a measure of the strength of an electric field at a given point in space. It is equal to the force the field would induce on a unit electric charge at that point. Its symbol is E with a standard unit of volt per metre (v/m or v m^-1 ) or newton/coulomb: Force (newton)/Charge (coulomb): Its strength, E at any point is defined as the electric force F exerted per unit positive electric charge Q at that point: E = F Q . The fiel d strength E at a point is defined as the force per unit charge acting on a small positive charge placed at the point. The field strength at a particular distance from an object is directly proportional to the electric charge (in coulombs) on that object and inversely proportional to the distance from a charged object."
+    },
+    {
+      "index": 257,
+      "word": "electric flux",
+      "raw": "",
+      "definition": "The strength of electric field acting on a particular area, defined as the area size multiplied by the component of the field acting at right angles to the area, expressed as ∅ = EA , where ∅ (phi) is the electric flux, E is the strength of the electric field and A is the area size."
+    },
+    {
+      "index": 264,
+      "word": "electric polarisation",
+      "raw": "",
+      "definition": "The vector field that expresses the density of permanent or induced electric dipole moments in a dielectric material or slight relative shift of positive and negative electric charge in opposite directions within an insulator or dielectric, induced by an external electric field. It occurs when an electric field distorts the negative cloud of electrons around positive atomic nuclei in a direction opposite the field. The polarisation vector P is defined as the dipole moment per unit volume V of a polarised material, P = . The SI unit is coulombs per square metre."
+    },
+    {
+      "index": 266,
+      "word": "electric power",
+      "raw": "",
+      "definition": "The rate at which electrical energy is supplied; or the rate at which electrical energy is dissipated in a system. For a direct current circuit, it is measured by the product of the current passing through a system and the potential difference across it: P = IV . In alternating-current circuits, the power is given by VI cosφ, where V and I are the RMS values and φ is the phase angle. Cosφ is called the power factor of the circuit. The SI unit of power is the watt and the term wattage is used to mean electric power in watts. Electricity can be produced mechanically by generation or chemically or by direct conversion from light in photovoltaic cells, also it can be stored chemically in batteries. When electric current flows in a circuit, it can transfer energy to do mechanical or thermodynamic work, with devices converting electrical energy into many useful forms, such as heat (electric heaters), light (light bulbs), motion (electric motors), sound (loudspeaker) or chemical changes. With resistive loads, Joule's law can be combined with Ohm's law ( $$I = \\frac{V}{R}$$ ) to yield another equation for dissipated power: Given that R is the electrical resistance, then P= I2 R= V2 R ."
+    },
+    {
+      "index": 275,
+      "word": "electrical conductance",
+      "raw": "",
+      "definition": "A measure of the capacity of an electrical element to conduct current. It is the inverse quantity of electrical resistance with the symbol G and expressed as G = ,."
+    },
+    {
+      "index": 276,
+      "word": "electrical conductivity",
+      "raw": "",
+      "definition": "The reciprocal quantity of electrical resistivity, which measures a material's ability to conduct an electric current. It is commonly represented by the Greek letter σ (sigma), but κ (kappa) (especially in electrical engineering) or γ (gamma) are also occasionally used. Its SI unit is siemens per metre (S ⋅ m^-1 ). It is expressed as σ = , where ρ is the resistivity. For a body of length L , resistance R and cross sectional area A , the electrical conductivity is given by σ = ."
+    },
+    {
+      "index": 279,
+      "word": "electrical energy",
+      "raw": "",
+      "definition": "The flow of electric charges as current along a conductor or a circuit to create energy that is converted into other forms of energy. It is a form of power created by the movement of electrons. Electrical energy is a secondary source of energy, which is obtained through the conversion of other forms of energy known as the primary sources of energy. The primary sources from which electrical energy is obtained can be either non-renewable forms of energy or renewable forms of energy. Examples are hydro or water, coal, nuclear energy, natural gas, oil, wind, from chemical reactions as in cells or batteries, etc. Power, measured in watts and time measured in seconds are factors of electrical energy, expressed as: Energy = Power x Time. The unit of energy is the joule. In terms of the charge of electron, e and applied voltage, V , electrical energy, E can be expressed as E = eV . Therefore, electrical power that has been converted into work in a certain time or power that has been used over time is called electrical energy. Electrical energy is expressed in kilowatt-hour (kWhr): Power (kw) × time (hour)."
+    },
+    {
+      "index": 332,
+      "word": "electromagnetic potentials",
+      "raw": "",
+      "definition": "Name for a scalar field, φ and a vector field, A, in terms of which the electric field and magnetic field, E and B respectively, may be expressed completely. This results in a degree of simplification in the use of Maxwell's equations, particularly in their relativistic formulation."
+    },
+    {
+      "index": 349,
+      "word": "electron beam",
+      "raw": "",
+      "definition": "Electrons released from a hot cathode by thermionic emission, all moving through vacuum with the same acceleration from cathode to anode. The speed at which the electron arrive at the anode can be determined by equating the kinetic energy gained to electrical potential energy lost: 1 2 mv 2 = eV ; v = 2 eV m e , where m is the mass of electrons, e the electronic charge, v the speed of electrons and V is the potential difference across the terminals."
+    },
+    {
+      "index": 352,
+      "word": "electron capture",
+      "raw": "",
+      "definition": "1. A radioactive transformation process for isotopes that have too many protons in the nucleus and insufficient energy to emit a positron. In this case, one of the orbital electrons, usually from the K or L shell is captured by a proton in nucleus, thus forming a neutron and a neutrino (neutral elementary particle). Since the proton is changed to a neutron the atomic number decreases by 1, the nuclide is transformed into a new element. But the atomic mass number remains unchanged. Examples of nuclides that undergo electron capture are 41 Ca, 51 Cr, 56 Ni, etc. 2. The formation of a negative ion by an atom or molecule when it acquires an extra free electron or a radioactive transformation in which a nucleus acquires an electron from an inner orbit of the atom thereby transforming initially into a nucleus with the same mass number but an atomic number one less than that of the original nucleus. It is accompanied by emission of an x-ray photon or Auger electron as the vacancy in the inner orbit is filled by an outer electron. If the energy difference between the parent atom and the daughter atom is less than 1.022 MeV, positron emission is forbidden and electron capture is the sole decay mode. For example, Rubidium^-83 will decay to Krypton^-83 only by electron capture (the energy difference is about 0.9 MeV)."
+    },
+    {
+      "index": 386,
+      "word": "electron rest mass",
+      "raw": "",
+      "definition": "Atomic fundamental physical constant used as atomic unit of mass. It symbol is m e , which is = 9.1093897 (54) x 10 -31 kg."
+    },
+    {
+      "index": 418,
+      "word": "electrophilic addition",
+      "raw": "",
+      "definition": "A chemical reaction that involves the addition of a molecule to an unsaturated organic compound across a double or triple bond. In this reaction, a π bond is broken and two new σ bonds are formed in a chemical compound. The sustaining force for this reaction is the formation of an electrophile X + that forms a covalent bond with an electron-rich unsaturated C=C bond. The positive charge on X is transferred to the carbon-carbon bond, with the formation of a carbocation."
+    },
+    {
+      "index": 455,
+      "word": "element",
+      "raw": "",
+      "definition": "1. In geometry, a point, line, plane or other parts of a figure. 2. Also known as member , one of the objects or numbers that together form a set or class; if there is a structure imposed on the set, it may be a group, ring, field, etc. The p -elements of a group are those of order p α , where p is a prime and α is any positive integer. 3. Any of the terms in the array constituting a determinant or matrix. 4. Any one of the rectangles summed in an integral and represented by the expression following the integral sign; for example, in f x ( ) a b ∫ dx , where f ( x ) dx is an element of area. 5. A pure substance made up of atoms of the same kind and with the same atomic number that cannot be split chemically into simpler substances or a uniform substance which cannot be further decomposed by ordinary means. The total number of electrons in an element is equal to the total number of protons, but the number of neutrons may be different. Elements are classified in families or groups in the periodic table and they are often classified also as metals and non-metals. A metallic element is one whose atoms form positive ions in a solution and a non-metallic element is one whose atoms form negative ions in a solution. Some of the elements, including oxygen, nitrogen, the noble gases (helium, neon, argon, krypton, xenon and radon), sulfur, copper, silver and gold are found in nature in the free (uncombined) state. Most of the elements in nature are combined with other elements in the form of compounds. The most abundant element on the Earth is oxygen and the most abundant element in the universe is hydrogen. 6. In biology, a place or condition best suited or most favourable for an individual, for example, water is the element of fishes. 7. In astronomy, any of the numerical quantities, such as the major axis or eccentricity, used in describing the orbit of a planet, satellite, etc. 8. In electricity, the resistance wire in an electrical appliance such as an electric iron or oven."
+    },
+    {
+      "index": 456,
+      "word": "elementarily equivalent",
+      "raw": "",
+      "definition": "Of models, such that every sentence in one model is true in the other. Two structures M and N of the same signature, σ are elementarily equivalent if every first-order sentence (formula without free variables) over σ is true in M if and only if it is true in N. This is a weaker relation than isomorphism; that is isomorphic models are elementarily equivalent, but not necessarily vice versa. For example, the non-standard real numbers and the ordinary real numbers are elementarily equivalent."
+    },
+    {
+      "index": 461,
+      "word": "elementary function",
+      "raw": "",
+      "definition": "A member of the class of functions built up from a finite combination of constant functions, field operations such as addition, multiplication, division and root extractions; and algebraic, exponential and logarithmic functions and their inverses under repeated compositions. For example, log[tan^-1 [√(exp( x 2 ) + 1)] is constructed by successively applying each of the following operations to the result of the preceding: squaring, exponentiating, adding 1, extracting the square root, finding the inverse of the sine taking the logarithm. The simplest elementary functions include logarithm, exponential function (including the hyperbolic functions), power function and trigonometric functions."
+    },
+    {
+      "index": 468,
+      "word": "elementary reduction",
+      "raw": "",
+      "definition": "The operation that forms a word from another by replacing any term of the form xx^-1 or x^-1 x by the empty word; or the word so formed."
+    },
+    {
+      "index": 480,
+      "word": "eliminant",
+      "raw": "",
+      "definition": "The relationship between coefficients that results from eliminating the variable from a set of simultaneous equations. For example, in the equations a 1 x + b 1 y + c 1 = 0, a 2 x + b 2 y + c 2 = 0, a 3 x + b 3 y + c 3 = 0; the eliminant is given by the matrix of coefficients: ."
+    },
+    {
+      "index": 484,
+      "word": "elli ptic equa tion",
+      "raw": "",
+      "definition": "A second order partial differential equation, which includes Laplace's equation, having the form au xx + bu xy + cu yy + du x + eu y + fu = h , with the discriminant b 2 - 4 ac negative."
+    },
+    {
+      "index": 486,
+      "word": "ellipse",
+      "raw": "",
+      "definition": "1. A regular oval shaped curve joining all points around two fixed points such that the sum of the distances from those points is always constant. Assuming that the distance between two points R, R′ of a plane is denoted by 2 c , c > 0, let 2 a be a constant, with a > c . Then the ellipse with foci R and R ′ and major axis 2 a is the locus of points P of the plane such that PR + PR ′ = 2 a , where PF denotes the distance of P and R . One property of an ellipse is that the reflection offits boundary of a line from one focus will pass through the other. The standard equation of an ellipse is given by x 2 a 2 + y 2 b 2 = 1. 2. A conic formed by the intersection of a plane with a right circular cone so that the plane is inclined to the axis of the cone at an angle of the cone."
+    },
+    {
+      "index": 487,
+      "word": "ellipsoid",
+      "raw": "",
+      "definition": "A solid body formed when an ellipse is yobbaacczx An ellipsoid on a three dimensional plane rotated about an axis. It is a closed type of quadric surface that is a higher dimensional analogue of an ellipse. The equation of a standard axis-aligned ellipsoid body in an xyz -Cartesian coordinate system is x 2 a 2 + y 2 b 2 + z 2 c 2 = 1, where, a and b are the equatorial radii along the x and y axes and c is the polar radius along the z -axis, all of which are fixed positive real determining the shape of the ellipsoid. Elliptic refers to possessing the shape of an ellipse; broad at the middle but narrowing at the two equal ends."
+    },
+    {
+      "index": 490,
+      "word": "elliptic curve",
+      "raw": "",
+      "definition": "The set of solutions to a type of cubic equation whose solutions lie on a torus (a donut-shaped surface). The particular type of cubic equation whose solutions lead to elliptic curves takes the form: y 2 + axy + by = x 3 + cx 2 + dx + e ."
+    },
+    {
+      "index": 491,
+      "word": "elliptic function",
+      "raw": "",
+      "definition": "In complex analysis, it is a function in which one of the forms expresses the relation of the arc of an ellipse to the straight lines to which it is connected. While a singly periodic function like sine has a number, a = 2 π , so that sin( x + a ) = sin( x ), a doubly periodic function f has the property that there are two numbers a , b , not rational multiples of each other, so that f ( x + a ) = f ( x + b ) = f ( x )."
+    },
+    {
+      "index": 493,
+      "word": "elliptic integral",
+      "raw": "",
+      "definition": "A definite integral not usually evaluable in closed form by antidifferentiation, having the form R ( x , y ) c u ∫ dx, where R is a rational function of x and y , y 2 is a quartic polynomial in x and c is a fixed constant. It is a generalisation of the inverse trigonometric functions and provides solutions to more problems. Elliptic functions are obtained by inverting elliptic integrals to obtain generalisations of the trigonometric functions. The integral is called a complete elliptic integral if the range of integration is maximal; if not, it is an incomplete elliptic integral . The integral is named elliptic because one of the integrals expresses the length of an arc of an ellipse."
+    },
+    {
+      "index": 494,
+      "word": "elliptic paraboloid",
+      "raw": "",
+      "definition": "A paraboloid that can be put into a position such that its sections parallel to one coordinate plane are ellipses, while its sections parallel to the other two coordinate planes are parabolas. In other words, the vertical cross sections are all parabolas, while the horizontal cross sections are ellipses. In a suitable coordinate system with three axes x , y and z , it can be represented by the equation z c = x 2 a 2 + y 2 b 2 , where a and b are constants that dictate the level of curvature in the x - z and y - z planes respectively. With a = b an elliptic paraboloid is a paraboloid of revolution: a surface obtained by revolving a parabola around its axis. This is an elliptic paraboloid which opens upward for c > 0 and downward for c < 0. It is the shape of the parabolic reflectors used in mirrors, antenna dishes, etc.; and is also the shape of the surface of a rotating liquid, a principle used in liquid mirror telescopes and in making solid telescope mirrors."
+    },
+    {
+      "index": 553,
+      "word": "emissivity",
+      "raw": "",
+      "definition": "The ability of a surface to emit radiation, measured as the ratio of the energy radiated by a surface to that radiated by a blackbody at the same temperature or the ratio of the radiation intensity of a nonblack body to the radiation intensity of a blackbody. Its symbol is ε. Its value is always less than or just equal to one. It varies with temperature and throughout the spectrum. Published values can readily be obtained for most substances."
+    },
+    {
+      "index": 565,
+      "word": "empirical formula",
+      "raw": "",
+      "definition": "The chemical formula showing the relative or simplest proportion of atoms of elements in a compound instead of their structural arrangement or molecular weights. For example, the formula HO is the empirical formula for H2 O2 , which means there is one H for every O atom. The empirical formula for ethanoic acid is CH2 O and it represents the atoms in their simplest whole number ratio. It makes no reference to isomerism, structure or absolute number of atoms and it is used as a standard for most ionic compounds, including CaCl 2 and for macromolecules, such as SiO2 . empirical formula of a compound is the formula which expresses only the relative number of atoms of each element in the compound. Empirical formulas are are obtained from experimental data and are useful to determine the molecular mass (or weight) of compounds whose molecular masses have not been known; and also to determine the molecular masses of compounds whose molecular masses are variable, even though they have a definite percentage composition (i.e., for different compounds formed from the same elements). On the other hand, the molecular formula gives types and numbers of atoms present, for example, the molecular formula for ethanoic acid is C2 H4 O2 . The structural formula indicates the way the atoms are arranged and it is commonly written by dividing the formula into groups. For example, ethanoic acid can be written as CH3 COOH. The structure can also be drawn to show how the elements are bonded or linked to one another."
+    },
+    {
+      "index": 588,
+      "word": "encephalisation/encephalization quotient, eq",
+      "raw": "",
+      "definition": "A measure of the ratio of the relative weight of the brain of a particular species compared with the expected value for members of the group to which it belongs or that of a typical animal size. EQ = w(brain)/Ew(brain). The formula for the expected weight of the brain varies, but is usually Ew (brain) = 0.12w (body) 2/3 , though for some classes of animals the power is 3/4 rather than 2/3. The value is used to estimate the comparative intelligence of animals, particularly in anthropology. It is believed that the larger an organism is, the more brain weight is required for basic survival tasks such as breathing, thermoregulation, senses, motor skill, etc. The larger the brain is relative to the body, the more brain weight might be E available for more complex cognitive tasks. This method, as opposed to the method of simply measuring brain weight alone, puts humans closer at the top of the list. Also, reflecting the evolution of the recent cerebral cortex, different animals have different degrees of brain folding, which increase the surface of the cortex, which is positively correlated to intelligence in humans."
+    },
+    {
+      "index": 657,
+      "word": "endothermic reaction",
+      "raw": "",
+      "definition": "A chemical or biochemical reaction requiring an external source of free energy, which is usually heat or a reaction with a positive free energy change, in which case, energy is absorbed in the form of heat. Examples are photosynthesis, melting ice, cracking of alkanes, evaporation of water, thermal decomposition reactions, reaction of barium hydroxide octahydrate crystals with dry ammonium chloride, splitting a gas molecule apart and dissolving ammonium chloride in water. In endothermic reactions reaction, there is a loss in the total amount of energy; it takes more energy to start the reaction than what comes out of it, so that the total energy is a negative net result. Under constant temperature and pressure, the change in the standard Gibbs free energy would be positive for the reaction at standard pressure (1 bar) and standard concentrations (1 molar) of all the reagents. E Ea Reaction Coordinate Potential energy or Enthalpy change (KJmol^-1 ) P Q A + B C + D ∆H = +ve Reaction profile diagram for endothermic reaction A + B = Reactant; C + D = Products; Ea = Activation energy; ∆H = enthalpy change; P and Q denote potential energies of reactants and products respectively."
+    },
+    {
+      "index": 661,
+      "word": "endow",
+      "raw": "",
+      "definition": "To define a relation or function (on a given structure) in order to consider them together as a single mathematical entity. For example, the metric space (S, δ ) consists of the set S endowed with the metric δ ."
+    },
+    {
+      "index": 667,
+      "word": "energy balance equation",
+      "raw": "",
+      "definition": "The result that the rate of change of the sum of the kinetic energy and internal energy of a sub-body is equal to the sum of the power and the heating of that sub-body."
+    },
+    {
+      "index": 707,
+      "word": "enormous theorem",
+      "raw": "",
+      "definition": "The largest theorem in mathematics; it concerns the classification of finite simple groups and encapsulates the work of hundreds of mathematicians over many years."
+    },
+    {
+      "index": 710,
+      "word": "enrichment",
+      "raw": "",
+      "definition": "1. The process of increasing the abundance of a specified isotope in a mixture of isotopes. In a nuclear reactor or weapon, it is normally applied to increase the proportion of U^-235 or the addition of Pu^-239 to natural uranium for use by the reactor. 2. In analytical chemistry, the process of increasing the concentration of trace components of a solution by preconcentration. Metal ions in natural waters can be enriched using cation exchange chromatography."
+    },
+    {
+      "index": 726,
+      "word": "enthalpy",
+      "raw": "",
+      "definition": "A thermodynamic property of a system denoted by H and defined by H=U+pV, where U is the internal energy of the system, p its pressure and V the volume. It is used to calculate the heat transferred during a quasi static process taking place in a closed thermodynamic system under constant pressure (isobaric process). In an endothermic reaction, the enthalpy change is positive, while it is negative in an exothermic reaction. It cannot be measured directly but when chemical substances react, the difference in the heat energy between the reactants and products can be measured. This difference E is the enthalpy change and is given by the symbol ∆H. Specific enthalpy is denoted as h Entire Leaf ."
+    },
+    {
+      "index": 728,
+      "word": "entire surd",
+      "raw": "",
+      "definition": "A surd in which all terms are irrational numbers. In other words, it is a surd having no rational factor except unity. Examples are √3, 3√9, √7, √10 and ∛ 50."
+    },
+    {
+      "index": 736,
+      "word": "entropy",
+      "raw": "",
+      "definition": "1. A measure of the unavailability of a system's energy to do work or a measure of the microscopic disorder within a system. An increase in entropy is accompanied by a decrease in energy available in a closed system. It is an important part of the second law of thermodynamics, which states that the thermodynamic entropy is a measure of the amount of energy which does no work during energy conversions. As a matter of convention, entropy is measured in units of energy per temperature, joules per Kelvin (SI unit). If thermodynamic systems are described using thermal energy instead of temperature, then entropy is just a number by which the thermal energy in the system is multiplied and the resulting energy is an energy for which no information is available, which would be required to convert the energy in technical systems from one form, for example, electrical into mechanical. In technical applications, machines are basically energy conversion devices thus they can only be driven by convertible energy. This also applies to biological organisms. 2. Also known as Shannon entropy , it is a random variable X with values in a finite set X , defined as H ( X ) ≡- P ( x ) x ∑ log2 [ P ( x )], where P ( X ) is the probability that X is in the state x and P log2 P is defined as 0 if P = 0. The joint entropy of variables ( X1 , ..., X n ) is defined by H ( X1 ,..., X n ) ≡- ... P x n ∑ ( x 1 ,..., x n ) x 1 ∑ log2 [ P ( x 1 ,..., x n )], 3. The macroscopic variable representing the degree of disorder within a system and corresponding to a statistical description of the system by the relation that the entropy is equal to the expected value of k log P , where k is a constant that relates the mean kinetic energy and absolute temperature of a system and P is the coefficient of probability of the system."
+    },
+    {
+      "index": 844,
+      "word": "epitrochoid",
+      "raw": "",
+      "definition": "A curve traced out by a point that is a distance c from the centre of a circle of radius b , where c < b , that is rolling around the outside of another circle of radius a . It is described by the parametric equations: x = ( a + b ) cos( t ) - c cos[( a / b + 1) t ], y = ( a + b ) sin( t ) - c sin[( a / b + 1) t ]. Closely related to the epitrochoid are the epicycloid, hypocycloid and the hypotrochoid."
+    },
+    {
+      "index": 850,
+      "word": "epoxy compounds",
+      "raw": "",
+      "definition": "Compounds in which an oxygen atom is directly attached to two adjacent or non-adjacent carbon atoms of a carbon chain or ring system; thus cyclic ethers. The term epoxides represents a subclass of epoxy compounds containing a saturated three-membered cyclic ether; thus oxirane derivatives. Examples are 1,2-epoxypropane or 2-methyloxirane (an epoxide); 9,10-epoxy^-9,10- dihydroanthracene (an epoxy compound)."
+    },
+    {
+      "index": 852,
+      "word": "epoxyethane",
+      "raw": "",
+      "definition": "A colourless, flammable gas with a faintly sweet odour and the molecular formula C2 H4 O, density 0.882 g/ml, melting point^-111.3 °C (161.85 K) and boiling point 10.7 °C (283.85 K). It is the simplest epoxide and isomeric with acetaldehyde. It is produced industrially by the direct oxidation of ethylene or ethene in the presence of silvercatalyst. It is used for producing many chemicals and intermediates, such as ethylene glycol, ethanolamines, simple and complex glycols, polyglycol ethers and other compounds. It is also a common gas-phase disinfectant which is widely used in hospitals to sterilise heat-sensitive tools and equipment. It is used as a main component of thermobaric weapons. However, it is a strong poison to humans, showing such effects as carcinogenic, mutagenic, irritating and narcotic."
+    },
+    {
+      "index": 862,
+      "word": "equal fraction",
+      "raw": "",
+      "definition": "The pairs ( a 1 , b 1 ), ( a 2 , b 2 ), ( a 3 , b 3 ), ..., ( a n , b n ) are said to be proportional if = , then each of the fractions is equal to , where l 1 , l 2 , . . . , l n are constants such that l 1 b 1 + l 2 b 2 + l 3 b 3 + ,... + lnbn ≠ 0."
+    },
+    {
+      "index": 866,
+      "word": "equality",
+      "raw": "",
+      "definition": "Two or more expressions which mean the same thing. Thus 3 + 4 = 7 is an equality. For constant non-zero a , b , c , the equality a = b implies b = a ; a + c = b + c ; a c = bc and if b = c then a = c ."
+    },
+    {
+      "index": 867,
+      "word": "equality of matrices",
+      "raw": "",
+      "definition": "Two matrices are equal if each matrix has the same number of rows and columns. The corresponding elements in each matrix are equal. For example, if x = then a = 3 and t = 6."
+    },
+    {
+      "index": 870,
+      "word": "equals sign",
+      "raw": "",
+      "definition": "1. The symbol '=' used between two expressions to indicate the identity of their references or values. 2. Symbol used for definitions, usually written either with 'df' subscript to the right, with a small triangle superscript or with the word 'definition' or 'defn' in the same line. The equals sign written with a colon to the left is used both for definitions and in computing for the assignment of values to variables, where x := x + y means that the new value of the variable labelled x is to be the sum of the previous values of x and y ."
+    },
+    {
+      "index": 871,
+      "word": "equation",
+      "raw": "",
+      "definition": "1. An expression usually involving constants and/or variables that represents the equality of two expressions or that two expressions on either side of an equal sign (=) have the same value. There are two forms of equation: (i) identical equation , known as an identity that is true for any values of the variables, for example, x 2 - 1 = ( x + 1)( x^-1) or (ii) conditional equation that is only true for certain values of the variables, called the roots of the equation. For example, x 2 - 1 = 3 with roots x = ±2. 2. The representation of a chemical reaction by symbols and numbers. The equation can be a word equation or a formula or symbol. 3. To equate is to form an equation by joining two separate expressions with an equal sign (=)."
+    },
+    {
+      "index": 872,
+      "word": "equation of state",
+      "raw": "",
+      "definition": "An equation that relates the pressure, volume and thermodynamic temperature of an amount of substance or defines the physical state of a homogeneous substance such as gas, liquid or solid, by relating volume to pressure and absolute temperature for a given mass of the material. The simplest is the ideal gas law."
+    },
+    {
+      "index": 873,
+      "word": "equation of time",
+      "raw": "",
+      "definition": "The length of time that must be added to the mean solar time as shown on a clock to give the apparent solar time, as shown by a sundial. The amount varies during the year, being at a minimum of^-14.2 minutes in February and a maximum of +10.4 minutes in October. Apparent solar time has annual variation as a result of the Sun's inclination in the ecliptic and the eccentricity of the Earth's elliptical orbit."
+    },
+    {
+      "index": 874,
+      "word": "equation ofa circle",
+      "raw": "",
+      "definition": "A circle is the set of points equidistant from a point C ( h , k ) called the centre. The fixed distance r from the centre to any point on the circle is called the radius. The standard equation of a circle with centre C ( h , k ) and radius r is given by ( x - h ) 2 + ( y - k ) 2 = r 2 . For example, to find the equation of a circle whose centre is at (2, - 4) and radius 5, the solution is: ( h , k ) = (2 , - 4) and r = 5; substituting h , k and r in the standard equation ( x^-2) 2 + ( y - ( - 4)) 2 = 5 2 , therefore ( x^-2) 2 + ( y + 4) 2 = 25. The general equation of a circle is given by x 2 + y 2 + 2 gy + 2 fy + c = 0, where g , f and c are constants."
+    },
+    {
+      "index": 875,
+      "word": "equation ofa parabola",
+      "raw": "",
+      "definition": "The equation of a parabola is given by ( y - k ) 2 = 4 p ( x - h ), the directrix is parallel to the y -axis, p is the length of the focus and ( h,k ) is the vertex. When the directrix is parallel to the x -axis the equation of the parabola is given by ( x - h) 2 = 4p(y - k )."
+    },
+    {
+      "index": 876,
+      "word": "equations of motion",
+      "raw": "",
+      "definition": "Equations that define the velocity of a body, a collection of particles or a fluid in terms of its motion as a function of time. The three equations of motion are: (i) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , (ii) s = ut + 1/2( at 2 ), (iii) $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where v is the final velocity, u is the initial velocity, a is the acceleration, s is the distance travelled by a body and t is the time taken."
+    },
+    {
+      "index": 893,
+      "word": "equilibrant",
+      "raw": "",
+      "definition": "A force which is able to balance out another force and produces equilibrium. It could be a single force which cancels the vector sum of a given system of forces acting on a rigid body and whose torque cancels the sum of the torques of the system. For example, for three forces, F1 , F2 and F3 to be in equilibrium, there must be another force that can balance the three forces. In this case, F1 + F2 + F3 + F = 0, therefore the equilibrant force, F = - ( F1 + F2 + F3 )."
+    },
+    {
+      "index": 897,
+      "word": "equilibrium constant",
+      "raw": "",
+      "definition": "The value of a reaction quotient for a chemical system at chemical equilibrium, expressing the ratio of product concentrations to reactant concentrations each raised to their stoichiometric coefficients."
+    },
+    {
+      "index": 901,
+      "word": "equilibrium point",
+      "raw": "",
+      "definition": "A constant solution to a differential equation. Formally, a point y ε such that, for a given ordinary differential equation y ' = f ( y ), f ( y ε ) = 0."
+    },
+    {
+      "index": 912,
+      "word": "equinumerous",
+      "raw": "",
+      "definition": "Of two classes, having the same number of members. Formally, two sets A and B are equinumerous if there exists a one-to-one correspondence or a bijection between them, which means that if there exists a function from A to B such that for every element y of B there is exactly one element x of A with f ( x ) = y . It is written mathematically as A ≈ B or A ∼ B or ⎢ A ⎢= ⎢ B ⎢ ."
+    },
+    {
+      "index": 928,
+      "word": "equivalent",
+      "raw": "",
+      "definition": "1. In chemistry, a unit of amount of substance, defined as the entity of a chemical species that in a specified reaction would either react with or supply one mole of hydrogen ions (H + ) in an acid- base reaction or one entity of electrons in a redox reaction. It is the arithmetic product of the molar mass of the chemical species and its equivalence factor. 2. Equal in amount, volume, importance, meaning, etc, for example, 420g is equivalent to 0.420kg. 3. In mathematics, the term is used for two sets capable of being put into a one-to-one relationship or having the same cardinality. Alternatively, relating to corresponding elements under an equivalence relation. Its symbol is given by ≡ . 4. In geometry, it defines two geometric figures, having some particular property in common, such as similar triangles or parallelograms of the same height on the same base. 5. In logic, the term is used for two statements or propositions in which each implies the other, being either both true or both false. 6. In terms of two equations or inequalities, having the same solution set. 7. Of two fractions, reducible to the same proper fraction and so representing the same rational number. For example, 5/10 and 10/20 are equivalent since both can be reduced to the rational number 1/2. 8. Of two matrices A and B, such that there exist non-singular matrices C and D with A = CBD. 9. Of two metrics on a given set, generating the same E topology, in that the same topology results from using the open balls for either metric as a base. 10. Of two ideals in an integral domain, related in such a way that there areelements a and b for which ( a ) I = ( b ) J , where I and J are the given ideals and ( a ) and ( b ) are the principal ideals generated by a and b , respectively. 11. Also known as equipollent , it defines two systems, having the same vector sum and the same torque about the same point."
+    },
+    {
+      "index": 933,
+      "word": "equivalent equations",
+      "raw": "",
+      "definition": "Equations with the same solution. For example, 2 + x = 4 and 6 + x = 8 are equivalent equations with the common solution 2."
+    },
+    {
+      "index": 937,
+      "word": "equivalent norms",
+      "raw": "",
+      "definition": "Two norms for which the associated distance functions are equivalent. In other words, two norms ⎢⎢⎢⎢ 1 and ⎢⎢⎢⎢ 2 are equivalent if there are positive constants M and N such that M ⎢⎢⎢⎢ 1 ≤⎢⎢⎢⎢ 2 ≤ N ⎢⎢⎢⎢ 1 . All norms on a given Euclidean space are equivalent and so give rise to the same topology."
+    },
+    {
+      "index": 976,
+      "word": "error",
+      "raw": "",
+      "definition": "1. A property of a measured value to differ from the true value, often expressed as an absolute or relative range, such as ± 5 mm or ± 5%. The common types of errors include random, systematic and erratic errors. An example in applied mathematics is the difference between a value and an estimate of that value. In statistics, a common example is the difference between the mean age of a given group of people and that of a sample drawn from the group. In numerical analysis, an example of round-offerror is the difference between the true value of pi and commonly substituted expressions like 22/7 and shorter versions like 3.14159. Truncation error results from using only the first few terms of an infinite series. Relative error is the ratio of the size of an error to the size of the quantity measured and percentage error is relative error expressed as a percent. 2. A fault or mistake or bug, either in a software or on the part of the user that causes a program to stop running or produce unexpected results."
+    },
+    {
+      "index": 1014,
+      "word": "essentially bounded",
+      "raw": "",
+      "definition": "Of a measurable function, having the property that there exists a constant C such that the set { x : ⎢ f ( x ) ⎢> C } has zero measure. The infimum of such constants is called the essential supremum of ⎢ f ⎢ . For example, if f ( x ) = 1/ x for rational x and f ( x ) = sin x for all other real x , then f ( x ) is essentially bounded."
+    },
+    {
+      "index": 1017,
+      "word": "estimate of mean",
+      "raw": "",
+      "definition": "Analysing grouped frequency distributions when the actual mean is not known and the midpoint of each class is used to estimate the mean. For example, the estimate of mean ( Σ ƒx ) /(Σ ƒ ) = (Sum of products of frequency × midpoint for each class) ÷ total frequency."
+    },
+    {
+      "index": 1026,
+      "word": "ethanal",
+      "raw": "",
+      "definition": "A colourless, inflammable liquid with the molecular formula C2 H4 O, density 0.788 gcm^-3 , melting point^-123.5 °C (150 K) and a boiling point of 20.8 °C (293.95 K). It is a member of the group of organic compounds called aldehydes and it is formed by the oxidation of ethanol or ethane. It is produced by plants as part of their normal metabolism and it occurs naturally in ripe fruits, coffee and bread. It is also produced by oxidation of ethanol. It is an important precursor to pyridine derivatives, pentaerythritol and crotonaldehyde. It combines with urea to give a useful resin."
+    },
+    {
+      "index": 1027,
+      "word": "ethanal trimer",
+      "raw": "",
+      "definition": "A colourless flammable liquid with a pungent odour and unpleasant taste having the chemical formula C6 H12 O3 , molar mass 132.16 g mol^-1 , melting point 12 °C (285 K) and boiling point 124 °C (397 K). It is produced by treating acetaldehyde with a small amount of sulfuric acid. It is slightly soluble in water and highly soluble in alcohol. It is used as a sedative and hypnotic drug (the safest hypnotic drug); in the manufacture of synthetic resins; as a preservative; and in preparing leather."
+    },
+    {
+      "index": 1029,
+      "word": "ethane",
+      "raw": "",
+      "definition": "A colourless, odourless gas at standard temperature and pressure with the chemical formula C2 H6 , density 1.3562 mg cm^-3 (at 0 °C, 273.15 K) and 0.5446 g cm^-3 (at^-89.15 o C, 184 K), melting point^-183 °C (90.4 K) and boiling point^-89 °C (184.6 K). It is the second member of the alkane series of hydrocarbons (paraffins). It is isolated industrially from natural gas and as a by-product of petroleum refining. It is used as a plasticiser and as an industrial solvent, however, N,N-dimethylacetamide (DMA), which is a related compound is more widely used. It is also used as petrochemical feedstock for ethylene production. It is the only two-carbon alkane that is an aliphatic hydrocarbon."
+    },
+    {
+      "index": 1030,
+      "word": "ethane-1,2-diol",
+      "raw": "",
+      "definition": "A colourless, odourless, syrupy, sweet-tasting and viscous hygroscopic liquid, with the molecular formula C2 H6 O2 , molar mass, 62.07 g mol^-1 , density 1.1132 g/cm³, melting point^-12.9 °C (260 K) and boiling point 97.3°C (470 K). It is made by hydrolysis of epoxyethane from ethene and used as antifreeze and raw material for making polyesters. It is toxic and ingestion can result in death."
+    },
+    {
+      "index": 1031,
+      "word": "ethanedioic acid",
+      "raw": "",
+      "definition": "A colourless poisonous dicarboxylic acid, with the molecular formula H2 C2 O4 , density 1.90 gcm^-3 (anhydrous), 1.653 gcm^-3 (dihydrate) and melting point 189- 191°C (462-464 K). It typically occurs as a dihydrate with the chemical formula C2 O4 H2 ·2H2 O. It is obtained from plants or made synthetically. It is about 3,000 times stronger than acetic acid. Its conjugate base, known as oxalate (C2 O4 2- ), is a reducing agent as well as a chelating agent for metal cations. It is used for dyeing, bleaching and cleaning."
+    },
+    {
+      "index": 1032,
+      "word": "ethanenitrile",
+      "raw": "",
+      "definition": "A colourless, poisonous liquid, with the chemical formula CH3 CN, density 0.787 g/ml liquid, melting point^-45 °C (228 K) and boiling point 82 °C (355 K). It is made by dehydrating ethanamide or from ammonia and ethyne. It is produced mainly as a by-product of acrylonitrile manufacture. It has a dipole moment of 3.84 D and it is a good polar solvent used for dissolving a wide range of ionic and nonpolar compounds when water cannot be used. In the laboratory, it is used as a medium-polarity solvent that is miscible with water and has a convenient liquid range. It is mainly used as a polar aprotic solvent in the purification of butadiene."
+    },
+    {
+      "index": 1034,
+      "word": "ethanoic acid",
+      "raw": "",
+      "definition": "A liquid carboxylic acid with the chemical formula CH3 CO2 H, density 1.049 g cm^-3 , melting point 16-17 °C (289-290 K) and boiling point 118-119 °C (391-392 K), whose salts and esters are acetates. In its pure or glacial state, it is a clear, syrupy, corrosive liquid that mixes readily with water. It occurs naturally as a metabolic intermediate in body fluids and plant juices. Its dilute solution, from fermentation and oxidation of natural products is vinegar. Industrial production is either synthetic, from acetylene; or biological, from ethanol. Industrial chemicals made from it are used in printing and as plastics, photographic films, textiles and solvents."
+    },
+    {
+      "index": 1035,
+      "word": "ethanoic anhydride",
+      "raw": "",
+      "definition": "A colourless liquid with a sharp, pungent odour. Its molecular formula is C4 H6 O3 , boiling point 139.8 °C (412.9 K) and a melting point of^-73.1 °C (200.1 K). It is produced by carbonylation of methyl acetate. It is mainly used in converting cellulose to cellulose acetate, a coating material used in the production of plastics, photographic film and fabrics. It is also used in the production of aspirin (acetylsalicylic acid) and as a wood preservative. It can be safely used to substitute ethanoyl (acetyl) group (CH3 CO-) into organic compounds."
+    },
+    {
+      "index": 1036,
+      "word": "ethanol",
+      "raw": "",
+      "definition": "A colourless, limpid, volatile, flammable, toxic liquid with a pleasant odour and a pungent taste and the molecular formula C2 H5 OH, relative density 0.7851 at 20 °C, melting point at^-112.3 °C (160.85 K) and boiling point at 78.4°C (351.55 K). It is soluble in water and most organic liquids. It is produced by chemical synthesis and by fermentation or biosynthetic processes. It is the alcohol found in alcoholic drinks such as beer, wine and spirits. Apart from being a key input into alcoholic beverages, it is used as a solvent, extractant, antifreeze and intermediate in the synthesis of innumerable organic chemicals."
+    },
+    {
+      "index": 1038,
+      "word": "ethanoyl chloride",
+      "raw": "",
+      "definition": "A colourless pungent liquid acid chloride with the chemical formula CH3 COCl, density 1.104 g/ml (liquid), melting point^-112 °C (161 K) and boiling point 52 °C (325 K). It is derived from acetic acid. It is made by reacting ethanoic acid with a halogenating agent such as phosphorus(III) chloride, phosphorus(V) chloride or sulfur dichloride oxide. It is used to introduce ethanoyl groups into organic compounds containing -OH, -NH2 and -SH groups. It does not exist in nature, because contact with water would hydrolyse it into acetic acid and hydrogen chloride."
+    },
+    {
+      "index": 1040,
+      "word": "ethene",
+      "raw": "",
+      "definition": "A colourless, flammable, gaseous hydrocarbon with the molecular formula C2 H4, which is derived from natural gas and petroleum. It is the first member of the alkene series of hydrocarbons. It is made by cracking hydrocarbons from petroleum and is a major raw material for making other organic chemicals such as ethanal, ethanol and ethane^-1,2-diol. It can be polymerised to polyethene. It occurs naturally in plants, in which it acts as a growth substance. Its best-known effect is the stimulation of fruit ripening. Fruits such as bananas, apple and avocados naturally produce ethylene during the later stages of their ripening and ethylene gas is used to induce ripening in fruits, which are picked green. It also suppresses flowering, except in members of the pineapple family, where flowering may be synchronised by releasing ethylene into the growing plant. It is used as a source of many organic compounds, in welding and cutting metals, to colour citrus fruits and as an anaesthetic."
+    },
+    {
+      "index": 1048,
+      "word": "ethoxyethane",
+      "raw": "",
+      "definition": "A colourless flammable volatile liquid with a low boiling point and a characteristic odour. Its chemical formula is C2 H5 OC2 H5 , density 0.7134 g/cm3 (liquid), melting point^-116.3 °C (156.9 K) and boiling point 34.6 °C (307.8 K). It is sparingly soluble in water (6.9 g/100 mL). It is the most common member of a class of chemical compounds known generically as ethers. It is an anaesthetic and useful organic solvent."
+    },
+    {
+      "index": 1049,
+      "word": "ethy lami ne",
+      "raw": "",
+      "definition": "A colourless, flammable and volatile liquid, with the chemical formula C2 H5 NH2 , density 0.689 g/cm3 , melting point^-81 °C (192 K) and boiling point 16.6 °C (290 K). It is a primary amine made by reacting chloroethane with ammonia. It is used in petroleum refining, in detergents and in organic synthesis."
+    },
+    {
+      "index": 1051,
+      "word": "ethyl alcohol",
+      "raw": "",
+      "definition": "A colourless, limpid, volatile, flammable, toxic liquid with a pleasant odour and a pungent taste and the molecular formula C2 H5 OH, relative density 0.7851 at 20 °C, melting point at^-112.3 °C (160.85) and boiling point at 78.4 °C (351.55 K). It is soluble in water and most organic liquids. It is produced by chemical synthesis and by fermentation or biosynthetic processes. It is the alcohol found in alcoholic drinks such as beer, wine and spirits. Apart from being a key input into alcoholic beverages, it is used as a solvent, extractant, antifreeze and intermediate in the synthesis of innumerable organic chemicals."
+    },
+    {
+      "index": 1053,
+      "word": "ethyl ethanoate",
+      "raw": "",
+      "definition": "A colourless liquid with a characteristic sweet smell, with the molecular formula C4 H8 O2 , density 0.897 g/cm³, melting point^-83.6 °C (190 K) and boiling point 77.1 °C (350 K). It is produced by reacting ethanol and ethanoic acid and used as a solvent in glues and paints."
+    },
+    {
+      "index": 1055,
+      "word": "ethylbenzene",
+      "raw": "",
+      "definition": "A colourless flammable liquid, with the chemical formula C6 H5 CH2 CH3 , density 0.8665 g/ml, melting point^-95 °C (178 K) and boiling point 136 °C (409 K). It is produced commercially by combining benzene and ethylene in an acid-catalysed chemical reaction: C6 H6 + C2 H4 → C6 H5 CH2 CH3 . It is an aromatic hydrocarbon, whose greatest use (over 99 percent) is as an intermediate in the production of styrene monomer. It is also used as a solvent for coatings and in the production of synthetic rubber and cellulose acetate."
+    },
+    {
+      "index": 1056,
+      "word": "ethylene",
+      "raw": "",
+      "definition": "A colourless, flammable, gaseous hydrocarbon, with the molecular formula C2 H4 . It is derived from natural gas and petroleum. It is the first member of the alkene series of hydrocarbons. It is made by cracking hydrocarbons from petroleum and is a major raw material for making other organic chemicals such as ethanal, ethanol, ethane^-1,2-diol. It can be polymerised to polyethene. It occurs naturally in plants, in which it acts as a growth substance. Its best-known effect is the stimulation of fruit ripening. Fruits such as bananas, apple and avocados naturally produce ethylene during the later stages of their ripening and ethylene gas is used to induce ripening in fruits picked green. It also suppresses flowering, except in members of the pineapple family, where flowering may be synchronised by releasing ethylene into the growing plant. It is used as a source of many organic compounds, in welding and cutting metals, to colour citrus fruits and as an anaesthetic."
+    },
+    {
+      "index": 1059,
+      "word": "ethyne",
+      "raw": "",
+      "definition": "A colourless gas or chemical compound that is an unsaturated hydrocarbon as well as the simplest alkyne, with the molecular formula C2 H2 , density 1.097 kg m^-3 , melting point^-80.8 °C E (192.4 K - triple point and boiling point^-75.0 °C (98 K). It is made by adding water to solid calcium carbide. It burns in pure oxygen with a flame temperature of over 3000 °C (3273 K), hot enough to weld and cut steel. It is unstable in the pure form, thus it is usually handled as a solution. It is unsaturated because its two carbon atoms are bonded together in a triple bond. The carbon-carbon triple bond puts all of its atoms in the same straight line, with CCH bond angles of 180° and since it is a linear symmetrical molecule, it possesses the D ∞h point group. It is widely used as a fuel and a chemical building block."
+    },
+    {
+      "index": 1075,
+      "word": "euclidean distance",
+      "raw": "",
+      "definition": "The standard distance in Euclidean space, R n . Geometrically, it is the length of a line segment connecting two points. It is calculated as the square root of the sum of the squares of the arithmetical differences of the corresponding coordinates of the two points. The distance between points x and y in a Euclidean space R n is given by d(x, y ) = ( x i - y i ) 2 i = 1 n ∑ , where x = ( x 1 , x 2 , ... x n ) and y = ( y 1 , y 2 , ... y n ). In two-dimensional Euclidean space, the distance between points A = ( a 1 , a 2 ) and B = ( b 1 , b 2 ) is given by the Pythagorean theorem ( a 1 - b 1 ) 2 + ( a 2 - b 2 ) 2 . In n dimensions, the Euclidean distance between two points p and q is ( p i - q i ) 2 i = 1 n ∑ , where p i or q i is the coordinate of p or q in dimension i ."
+    },
+    {
+      "index": 1078,
+      "word": "euclidean norm",
+      "raw": "",
+      "definition": "The norm imposed on a vector by taking the square root of the sum of the squares of its entries. The standard Euclidean norm on R n is defined by || x || = x . x ."
+    },
+    {
+      "index": 1080,
+      "word": "euclidean topology",
+      "raw": "",
+      "definition": "The topology on Euclidean n -space R n , where n belongs to the set of natural numbers. Euclidean topology states that the subsets of R n are open sets and is supposed to follow the following axioms: (i) An open subset is a subset containing an open circle or ball surrounding all its points; (ii) union and intersection of open sets are open sets themselves; and (iii) A metric topology in which the distance within R n is given by the function: d = ( x 1 - y 1 ) 2 + ( x 2 - y 2 ) 2 + ... + ( x n - y n ) 2 = ( x 1 - y 1 ) 2 . i = 1 n ∑."
+    },
+    {
+      "index": 1092,
+      "word": "euler characteristic",
+      "raw": "",
+      "definition": "1. One of the important quantities, known as a topological invarient that describes the shape or structure of topological space. Leonhard Euler (1707-1783), a Swiss mathematician originally formulated the characteristic for polyhedra and used it to prove various theorems about them, including the classification of the Platonic solids. For the special case of polyhedra, the Euler characteristic equals 2. If F is the number of faces of a polygon, E the number of edges and V the number of vertices, Euler's formula can be written as F - E + V = 2. For example, if the surface of a cube has six (square) faces, twelve edges and eight vertices, therefore, 6 - 12 + 8 = 2."
+    },
+    {
+      "index": 1096,
+      "word": "euler phi function",
+      "raw": "",
+      "definition": "The number theoretic function, written φ( n ), that counts the number of distinct positive integers less than or equal to n that are relatively prime to n . φ is multiplicative and so determined by its value on prime powers, for which φ( p k +1 ) = p k ( p^-1)."
+    },
+    {
+      "index": 1098,
+      "word": "euler summation formula",
+      "raw": "",
+      "definition": "A formula used in the numerical evaluation of integrals, which states that the value of an integral is equal to the sum of the value given by the trapezoidal rule and a series of terms involving the odd-numbered derivatives of the function at the end points of the interval over which the integral is evaluated. In other words, it gives an estimation of the sum f ( i ) i = 0 n ∑ through the integral f ( t ) dt n ∫ with an error term given by an integral which involves Bernoulli numbers."
+    },
+    {
+      "index": 1100,
+      "word": "euler's constant",
+      "raw": "",
+      "definition": "The constant 0.5772157 ..., usually denoted by the Greek letter γ that is the limit as n tends to infinity of the difference between the sum of n terms of the harmonic series and the natural logarithm of n . It is not known whether this number is algebraic or transcendental, nor even whether it is rational or irrational."
+    },
+    {
+      "index": 1101,
+      "word": "euler's equation",
+      "raw": "",
+      "definition": "A linear equation of the form ( ax + b ) n y n + A1 ( ax + b ) n^-1 y n^-1 + ... + A n^-1 ( ax + b ) y + A n y = f ( x ), where a , b , A1 are constants. Putting ax + b = e t , then y ' = ae - t dy dt , y '' = a 2 e^-2 t d 2 y dt 2 - dy dt ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ , y ''' = a 3 e^-3 t d 3 y dt 3 - 3 d 2 y dt 2 + 2 dy dt ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ , etc. Euler's equation is therefore, transformed into a linear equation with constant coefficients. For the homogeneous Euler equation, xnyn + A1 x ( n^-1) y ( n^-1) + ... + A n^-1 xy ' + y = 0, in the form y = x k , the solution may be found, if k is a real root of the characteristic equation mulplicity m , then to its corresponding m linearly independent solution. The exponent k can be found if y , y ' ..., y ( n ) put into the equation to get a characteristic equation."
+    },
+    {
+      "index": 1102,
+      "word": "euler's equations of motion",
+      "raw": "",
+      "definition": "A set of three differential equations expressing relations between the force moments, angular velocities and angular accelerations of a rotating rigid body with a fixed point in terms of its principal axes. They are as follows: (i) I1 ! ω 1 + ( I3 - I2 ) ω 2 ω 3 = M1 , (ii) I2 ! ω 2 + ( I1 - I3 ) ω 3 ω 1 = M2 , (iii) I3 ! ω 3 + ( I2 - I1 ) ω 1 ω 2 = M3 , where M1 , M2 and M3 are the components of the applied torques, I1 , I2 and I3 are the principal moments of inertia and ω 1 , ω 2 and ω 3 are the components of the angular velocity about the principal axes."
+    },
+    {
+      "index": 1103,
+      "word": "euler's formula for polyhedral",
+      "raw": "",
+      "definition": "An equation in topology, which states that if F is the number of faces of a polygon, E the number of edges and V the number of vertices, Euler's formula can be written as F - E + V = 2. For example, a cube has six square faces, twelve edges and eight vertices, therefore, 6 - 12 + 8 = 2. The quantity F - E + V is known as the Euler characteristic ."
+    },
+    {
+      "index": 1104,
+      "word": "euler's laws of motion",
+      "raw": "",
+      "definition": "Two laws of motion, which extend Newton's laws of motion for point particle to rigid body motion, which state as follows: (i) the first law states that the force acting on a body is equal to the rate of change of its linear momentum; and (ii) the second law states that the torque on any body is equal to the rate of change of its angular momentum."
+    },
+    {
+      "index": 1105,
+      "word": "euler's method",
+      "raw": "",
+      "definition": "It provides a way to approximate the solution to a differential equation. The goal is to calculate the function y = f ( x ). The differential equation allows the calculation of = f ' ( x ) at each point. If an initial condition is known, ( x 0 y 0 = f ( x 0 )), then calculate at that point and calculate the new point ( x 0 + h , f ( x 0 + h )) ; f ( x 0 + h ) ≈ f ( x 0 ) + f '( x 0 ) h . A smaller value of h will lead to a more accurate approximation, but it will require more work to calculate the curve."
+    },
+    {
+      "index": 1106,
+      "word": "euler's number",
+      "raw": "",
+      "definition": "The irrational number named after the Swiss mathematician Leonhard Euler and defined as the unique real number such that the value of the derivative (slope of the tangent line) of the function f ( x ) = e x at the point x = 0 is equal to 1. It has the value 2.718 28. It is used as the base of natural logarithms and occurs in the exponential function, e x ."
+    },
+    {
+      "index": 1108,
+      "word": "euler-bernoulli law",
+      "raw": "",
+      "definition": "Named after Swiss mathematicians, Leonhard Euler (1707-1783) and Daniel Bernoulli (1700-1782), it states that the torque on a thin elastic beam under gravity is EIk , where E is Young's modulus and I is the moment of inertia of the cross- section about an axis through the centre of mass and perpendicular to the plane of the couple."
+    },
+    {
+      "index": 1109,
+      "word": "euler-lagrange equations",
+      "raw": "",
+      "definition": "Any of the fundamental necessary conditions in the calculus of variations. For the simplest problems this requires that the extremal y 0 that f ( y , y ', x ) b a ∫ dx minimises the functional should satisfy Euler's equation at any point where y 0 ' is smooth."
+    },
+    {
+      "index": 1110,
+      "word": "euler-riemann zeta function",
+      "raw": "",
+      "definition": "In mathematics, it is the special function, denoted ζ( s ) that is defined over the complex plane for one complex variable, s . The sum of the infinite series ζ ( s ) = n s n = 1 ∞ ∑ , is infinite when s = 1; when s is greater than 1, the it converges to a finite number as successive terms are added; if s is less than 1, the sum is again infinite. It is a very important function in numbertheory."
+    },
+    {
+      "index": 1116,
+      "word": "eulerian strain rate",
+      "raw": "",
+      "definition": "The symmetric part of velocity gradient; that is, the Eulerian strain rate = 1 ∑ (L + L T ), where L is the velocity gradient."
+    },
+    {
+      "index": 1141,
+      "word": "evaluate",
+      "raw": "",
+      "definition": "To calculate a numerical value for a mathematical expression. For example, to evaluate y = x 2 at x = 3 is to calculate the value of 3 2 ."
+    },
+    {
+      "index": 1175,
+      "word": "exact",
+      "raw": "",
+      "definition": "1. Also known as accurate , strictly correct, precise, without any approximation. 2. Of a differential equation, obtained by putting the exact differential of a function equal to zero, so that when written in the form y ' g ( x , y ) - h ( x , y ) = 0, the left-hand side is the derivative of some F ( x , y ). This holds if and only if the coefficients of the differentials in each variable are continuously differentiable and satisfy the Integrability condition g x = h . The possibility exists that one can usefully obtain exactness by multiplying both g and h by the lntegrating factor m ( x , y ). 3. Of a differential form, being the derivative of another form. This forces the form to be closed and if the region on which it is defined as simply connected then this form is also exact."
+    },
+    {
+      "index": 1191,
+      "word": "exchangeable cation percentage",
+      "raw": "",
+      "definition": "The extent to which the adsorption complex of a soil is occupied by a particular cation. It is expressed as: ECP= exchangeable cation(meq /100g soil) cation exchange capacity (meq /100g soil) × 100."
+    },
+    {
+      "index": 1194,
+      "word": "exchangeable sodium percentage",
+      "raw": "",
+      "definition": "The extent to which the adsorption complex of a soil is occupied by sodium. It is expressed as: ESP= exchangeable sodium (meq /100g soil) cation exchange capacity (meq /100g soil) × 100."
+    },
+    {
+      "index": 1209,
+      "word": "excluded middle law",
+      "raw": "",
+      "definition": "A law in (two-valued) logic which states that there is no third alternative to truth or falsehood. In other words, for any statement A, either A or not-A must be true and the other must be false. This law no longer holds in three-valued logic, in which \"undecided\" is a valid state, nor does it hold in fuzzy logic."
+    },
+    {
+      "index": 1257,
+      "word": "exothermic reaction",
+      "raw": "",
+      "definition": "A reaction in which heat energy is produced or released from the reactants to the surroundings. Rusting and combustion both involve combination with air to produce oxide and are both exothermic reactions. Also, if sulfuric acid is added to water, the reaction which occurs is exothermic. At the end of an exothermic reaction, the temperature of the reactants is higher than that before the reaction owing to the heat given out. It can be expressed in a chemical equation as follows: Reactants → Products + Energy. The reaction releases energy usually not only in the form of heat, but also in the form of light such as a spark, flame or explosion, electricity such as from a battery or sound such as coming from burning hydrogen. The concept is frequently applied in the physical sciences, to chemical reactions where chemical bond energy is converted to thermal energy (heat). Endothermic reaction is a reaction in which energy is absorbed in the form of heat. Ea A Reaction Coordinate Potential energy or Enthalpy change (KJmol^-1 ) B P + C D ∆H = -ve Q + Reaction profile diagram for exothermic reaction A + B = Reactants; C + D = Products; Ea = Activation energy; ∆H = enthalpy change; P and Q denote potential energies of reactants and products respectively."
+    },
+    {
+      "index": 1273,
+      "word": "expected outcome",
+      "raw": "",
+      "definition": "The average outcome over a large number of repetitions of a random experiment. In other words, it is an average over infinitely many repetitions. For example, the expected outcome of rolling one die is the average number of spots landing up over a large number of rolls. Because each face of a fair die has equal probability of landing up, the expected outcome is: (1 + 2 + 3 + 4 + 5 + 6) = 21 6 = 3.5. This means that the average of many rolls of a fair die is expected to be about 3.5."
+    },
+    {
+      "index": 1275,
+      "word": "expected value",
+      "raw": "",
+      "definition": "In statistics, the sum or integral of all possible values of a random variable or any given function of it, multiplied by the respective probabilities of the values of the variable. Its symbol is E ( X ). E ( X ) is the mean of the distribution; E ( X - c ) = E ( X ) - c , where c is a constant."
+    },
+    {
+      "index": 1289,
+      "word": "explicit function",
+      "raw": "",
+      "definition": "A function, in which the dependent variable can be expressed directly in terms of the independent variable, so that its values may be directly calculated from those of the independent variables. Examples are y = x 2 - 3 and y = log2 x ."
+    },
+    {
+      "index": 1297,
+      "word": "exponent",
+      "raw": "",
+      "definition": "A number or symbol that indicates the power to which another number or expression is raised or a number that indicates the number of times a term is multiplied by itself. For example, x 2 = x ∙ x and 5 4 = 5 x 5 x 5 x 5. For example, in the expression x n the letter n is the exponent of the base x . Fractions, zero and negative numbers are also used as exponents. For example, a negative exponent indicates the reciprocal of the quantity, for example, x^-2 means 1/ x 2 . Any nonzero quantity raised to the zero power equals one, for example, x 0 = 5 0 = ( a 2 + b 2 ) 0 = 1. A fractional exponent such as 1 / 3 or 1/ n indicates the third or n th root, respectively, of the base. When quantities of the same base are multiplied together, their exponents are added. For example, x 4 ∙ x 2 = x 6 but when they are divided, the exponents are subtracted, for example, x 3 / x 2 = x 3 - 2 = x 1 = x . When a quantity already containing an exponent is raised to a power, the exponents are multiplied; for example, ( x 2 ) 3 n = x 6n ."
+    },
+    {
+      "index": 1298,
+      "word": "exponential",
+      "raw": "",
+      "definition": "1. A term describing a mathematical entity that involves the transcendental number e , the base of natural logarithms, raised to an exponent or a function in which the variable quantity is an exponent or a function that varies as the power of another quantity. For example, if, y = a x then y varies exponentially with x . 2. A mathematical entity such as a curve, function, equation or series that contains, is expressed as or involves numbers or quantities raised to an exponent."
+    },
+    {
+      "index": 1299,
+      "word": "exponential decay",
+      "raw": "",
+      "definition": "A function shows exponential decay if its value becomes smaller over time according to a function of the form: x = x 0 e - pt (assume p > 0)."
+    },
+    {
+      "index": 1300,
+      "word": "exponential distribution",
+      "raw": "",
+      "definition": "A continuous probability distribution, whose density function is given by ƒ ( x ) = ae -ax , where a > 0 for x > 0 and ƒ(x) = 0 for x ≤ 0. The mean and standard deviation are both 1/ a ."
+    },
+    {
+      "index": 1301,
+      "word": "exponential function",
+      "raw": "",
+      "definition": "The real or complex function f ( x ) = e x or a mathematical expression with the formula e x , in which e is the base of natural logarithms. Its symbol is exp."
+    },
+    {
+      "index": 1304,
+      "word": "exponential series",
+      "raw": "",
+      "definition": "A series derived from the expansion of an exponential expression of the form z n n ! n = 0 ∞ ∑ = 1 + z + z 2 2 + z 3 6 + z 4 24 + ..., which converges for any complex number z to the exponential function exp z ."
+    },
+    {
+      "index": 1328,
+      "word": "extended real numbers",
+      "raw": "",
+      "definition": "The set [-∞, ∞] of real numbers, together with the positive and negative infinite cardinals. It is usually denoted by R . Often the field and order operations are partially extended to [-∞, ∞], so that, for example, r + ∞ = + ∞ for r ≠ -∞; the extended real line is then order equivalent and topologically equivalent to [0, 1]."
+    },
+    {
+      "index": 1346,
+      "word": "exterior product",
+      "raw": "",
+      "definition": "Of vectors, an algebraic construction used in Euclidean geometry to study areas, volumes and their higher-dimensional analogues. The exterior product of two vectors α and β is denoted by α ∧ β. If α and β are differential k -forms of degrees p and q , respectively, then α ∧ β = (-1) β ∧α . The magnitude of α and β can be interpreted as the area of the parallelogram with sides α and β , which in three dimensions can also be computed using the cross product of the two vectors. The exterior algebra or Grassmann algebra is the algebraic system whose product is the exterior product."
+    },
+    {
+      "index": 1348,
+      "word": "external direct product",
+      "raw": "",
+      "definition": "1. Also known as external direct sum of groups, it is the Cartesian product M = M1 × M2 × ... × M n , of a finite or infinite set of modules over a ring, but with only finitely many non-zero entries in each sequence, where multiplication by a member of the ring, r , is defined as r x 1 ,..., x n = rx 1 ,..., rx n . 2. Also known as Cartesian product , it is an external direct sum over infinitely many spaces in which the sum is not required to be finite."
+    },
+    {
+      "index": 1349,
+      "word": "external division",
+      "raw": "",
+      "definition": "In geometry, the external division of a segment is the construction of a point E, lying beyond the endpoints A and B of a given line segment AB, in such a way that the ratio of the directed lengths | AE | to | EB | is some given negative number λ i ."
+    },
+    {
+      "index": 1356,
+      "word": "external work",
+      "raw": "",
+      "definition": "Work done, w by a substance expanding against an external resistance. It is expressed as w = ∫ V1 V2 pdv, where V1 and V2 are the initial and final volumes respectively. In the diagram shown, P1 is the applied external pressure. The work done per cycle is given by the area enclosed by the cycle or the area under the curve which goes from P1 V1 to P2 V2 . Therefore, there are many possible curves, which would connect the points P1 V1 and P2 V2 and each curve would have a different area and give a different value for the work done, w ."
+    },
+    {
+      "index": 1359,
+      "word": "extinction coefficient",
+      "raw": "",
+      "definition": "Any measure of the extent to which the intensity of a beam of light is reduced by passing through a distance of a solution having a molar concentration of a dissolved substance. It is also called Molar Absorptivity in the Beer's Law (Beer's law, Beer-Lambert law, Lambert-Beer law or the External work done on expansion Pressure Volume P P P1 v v dv v 2 Beer-Lambert-Bouguer law), which relates the absorption of light to the properties of the material through which the light is travelling). It is the constant, a, in the Beer's law relation A=ebc , where A is absorbance (no units, since A = log 10 P0 / P), e is the molar absorbtivity with units of L mol^-1 cm^-1 , b is the path length of the sample - i.e. the path length of the cuvette in which the sample is contained. This measurement in centimetres c is the concentration of the compound in solution, expressed in mol L^-1 . Therefore, if all the light passes through a solution without any absorption, then absorbance is zero and percent transmittance is 100%. If all the light is absorbed, then percent transmittance is zero and absorption is infinite. The reason for stating the law with this equation is because absorbance is directly proportional to the other parameters, as long as the law is obeyed."
+    },
+    {
+      "index": 1385,
+      "word": "extreme point",
+      "raw": "",
+      "definition": "Any point of a convex set that cannot be expressed as the average of distinct points of the set; a corner of a polytope. Let C be a convex subset of a vector space X . A point x ∈ C is called an extreme point if it is not an interior point of any line segment in C . In other words, x is extreme if and only if whenever x = ty + (1 - t ) z , t ∈ (0,1), z ≠ y , implies either y ∉ C or z ∉ C . For example, the set [0,1] ∈ R is a convex set and 0 and 1 are the extreme points. Every compact convex subset of Euclidean space is the convex hull of its extreme points."
+    }
+  ],
+  "F": [
+    {
+      "index": 5,
+      "word": "f-sigma set",
+      "raw": "",
+      "definition": "A subset of a topological space expressible as the union of countably many closed sets, usually denoted F σ . In a metric space all open sets are of this form, as are the rationals as a subset of the reals."
+    },
+    {
+      "index": 26,
+      "word": "fact extensions",
+      "raw": "",
+      "definition": "Calculations involving larger numbers based on knowledge of basic arithmetic facts. For example, knowing the addition fact of 5 × 10 = 50 makes it easier to solve problems such as 50 × 10 = 500 and 500 ÷ 10 = 50. Fact extensions apply to all the four basic arithmetic operations."
+    },
+    {
+      "index": 27,
+      "word": "fact family",
+      "raw": "",
+      "definition": "In mathematics, a set of three numbers that can be added and subtracted, or divided and multiplied together to link two inverse operations. For example, in the arithmetic operations of 10 + 6 = 16, 6 + 10 = 16; or 16 - 6 = 10 and 16 - 10 = 6 is an addition/subtraction fact family. Also, 4 × 6 = 24 or 6 × 4 = 24, 24 ÷ 6 = 4, or 24 ÷ 4 = 6 are a multiplication/ division fact family. In the addition/subtraction fact family, the three set of numbers in operation are 10, 6 and 16. In the multiplication/ division fact family the three set of numbers in operation are 4, 6 and 24. A fact family helps to understand the inverse relationship, or opposite relationship, between addition and subtraction and between Addition/Subtraction Fact Triangle Multiplication/Division Fact Triangle ×, ÷ +, - multiplication and division in early stages of education."
+    },
+    {
+      "index": 29,
+      "word": "factor",
+      "raw": "",
+      "definition": "1. Also known as divisor or submultiple , any integer or polynomial that divides into another number or polynomial exactly. For example, the factors of 24 are: 1, 2, 3, 4, 6, 8, 12 and 24; factors of the polynomial f ( x )= 2 x 3 + 3 x 2 - 5 x^-6 are ( x + 1), ( x + 2) and (2 x^-3). 2. Any analogous quantity or entity whose product with another is a given quantity or entity, such as any of a set of cycles of which the composition is a given permutation. 3. In statistics, a postulated causal influence derived from and used to explain a cluster of responses. 4. Anything that affects an organism living in a habitat; for example, abiotic and biotic factors. 5. Any substance that functions in a specific biochemical process such as blood coagulation or physiological process such as growth factors."
+    },
+    {
+      "index": 31,
+      "word": "factor formulae",
+      "raw": "",
+      "definition": "Trigonometric identities given by the following: i.sin A + sin B = 2sin A + B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ cos A - B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , ii.sin A - sin B = 2sin A - B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ cos A + B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , iii.cos A + cos B = 2cos A + B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ cos A - B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , and iv.cos A - cos B =- 2sin A + B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ sin A - B ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ ."
+    },
+    {
+      "index": 39,
+      "word": "factor theorem",
+      "raw": "",
+      "definition": "A theorem in algebra, which is a special case of the polynomial remainder theorem and shows that a number or expression is the outcome of two or more factors multiplied together. It states that a polynomial f ( x ) has a factor Factor Tree of 18 ( x - k ) if and only if f ( k ) = 0. For example, if f ( x ) = x 3 + 2 x 2 + 3 x^-6. then ( x^-1) is a factor, since f (1) = (1) 3 + 2(1) 2 + 3(1) - 6 = 0, thus f (1) = 0."
+    },
+    {
+      "index": 43,
+      "word": "factorial",
+      "raw": "",
+      "definition": "The function, symbolised ! that computes the product of the first n natural numbers, written n ! = n ( n^-1)!. In other words, it is the product of a given number and all the whole numbers below it. For example, the factorial of 0 is written as 0! = 1; 1! = 1; 2! = 2 x 1 = 2; 3! = 3 x 2 x 1 = 6; 4! = 4 × 3 × 2 × 1 = 24."
+    },
+    {
+      "index": 45,
+      "word": "factorial series",
+      "raw": "",
+      "definition": "A series of the form, z ≠ 0, -1, -2,... It converges or diverges together with the ordinary Dirichlet series except at z = 0, -1, -2, ... ."
+    },
+    {
+      "index": 54,
+      "word": "fahrenheit, gabriel daneil",
+      "raw": "",
+      "definition": "German physicist, who became an instrument maker in Amsterdam. In 1714 he developed the first thermometer, employing mercury instead of alcohol and devised the Fahrenheit scale. He discovered that other liquids besides water have a fixed boiling point and that these boiling points vary with changes in atmospheric pressure. To convert Fahrenheit temperatures to Celsius, subtract 32 from the Fahrenheit reading, multiply by 5 and divide by 9, i.e., °C = (°F^-32) × 5 ⁄ 9 . To convert Celcius into Fahrenheit, multiply the Celsius reading by 9/5 and add 32, i.e., °F = (°C × 9 ⁄ 5 ) + 32."
+    },
+    {
+      "index": 55,
+      "word": "failure rate",
+      "raw": "",
+      "definition": "The probability of failure of a component or the death of an organism, within the next unit of time, ∆ t , given survival to time t . It is defined mathematically as Δ t ⋅ h ( t ) = P[X ≤ ( t + Δ t ): X > t ]."
+    },
+    {
+      "index": 73,
+      "word": "false position",
+      "raw": "",
+      "definition": "A method of solving equations by using trial and error values for the variables and then adjusting the values accordingly. For example, in solving x 2 + y 2 = 50, test values like x = 5, y = 6 might be attempted, which gives x 2 + y 2 = 25 + 36 = 61, which is more than 50; therefore smaller values for the variables would have to be guessed until the equation is solved. There are two types of false position methods: (i) simple false position for solving problems involving direct proportion that can be written algebraically in the form ax = b , for the value of x to be found if the values of a and b are known. (ii) Double false position is used for solving more difficult problems that can be written algebraically in the form: f ( x ) = b for the value of x to be determined, if it is known that f ( x 1 ) = b 1 and f ( x 2 ) = b 2 ."
+    },
+    {
+      "index": 79,
+      "word": "family of confocal central conics",
+      "raw": "",
+      "definition": "The family of curves given by + = 1. The differential equation of this family of plane curves is ( xy ' - y )( yy ' + x ) = ( a 2 - b 2 ) y '."
+    },
+    {
+      "index": 80,
+      "word": "family of curves",
+      "raw": "",
+      "definition": "A set of similar curves that display a particular geometric pattern and whose equations can be obtained by varying a finite number of parameters in a particular general equation. For example, y = 2 x 2 + c , where c is a constant representing family of curves."
+    },
+    {
+      "index": 89,
+      "word": "farad",
+      "raw": "",
+      "definition": "The SI unit of capacitance, named after the English physicist, Michael Faraday. A capacitance of 1 farad is defined as a capacitor that carries a charge of 1 coulomb when a potential difference of 1 volt is applied across it. Its symbol is F. 1F = 1CV -1 ."
+    },
+    {
+      "index": 96,
+      "word": "faraday constant",
+      "raw": "",
+      "definition": "The magnitude of electric charge carried by one mole of electrons or singly ionised ions that is the product of the Avogadro constant and the charge on an electron. Its symbol is F and it has the value 9.648670 x 10 4 coulombs per mole."
+    },
+    {
+      "index": 99,
+      "word": "faraday's law of electromagnetic induction",
+      "raw": "",
+      "definition": "A law which states that whenever the magnetic flux linking a coil is charged, electromotive force (emf) is induced in the coil whose magnitude is proportional to the rate of change of the magnetic flux."
+    },
+    {
+      "index": 100,
+      "word": "faraday's laws of electrolysis",
+      "raw": "",
+      "definition": "Faraday's 1 st Law of Electrolysis states that for a given quantity of electricity (electric F charge), the amount of chemical change during electrolysis is proportional to the charge passed or the mass of an element discharged at the electrodes during electrolysis is directly proportional to the quantity of electricity passing through the electrolyte. Faraday's 2 nd Law of Electrolysis states that for a given quantity of electricity (electric charge), the charge required to deposit or liberate a mass, m is given by Q = Fz/m, where F is the faraday constant, z the charge of the ion and M the relative ionic mass."
+    },
+    {
+      "index": 105,
+      "word": "farkas' lemma",
+      "raw": "",
+      "definition": "The result that a linear inequality ( f 0 , x ) ≤ 0 is a consequence of a system ( f 1 , x ) ≤ 0, ..., f n , x ≤ 0, if and only if there are non-negative real numbers λ 1 , ..., λ n with λ kfkk = 1 n ∑ = f 0 . The result holds with certain of the inequalities replaced by equalities if the corresponding multipliers are now arbitrary real numbers. This is the key result underpinning the Kuhn-Tucker theorem or linear programming duality."
+    },
+    {
+      "index": 135,
+      "word": "fatou's lemma",
+      "raw": "",
+      "definition": "The theorem that establishes an inequality relating the integral (in the sense of Lebesgue) of the limit inferior of a sequence of functions to the limit inferior of integrals of these functions. If { f n } is a sequence of non-negative measurable functions, then ∫ liminf n →∞ f $n_d$ µ ≤ liminf n →∞ ∫ f $n_d$ µ . The theorem can be used to prove the Fatou-Lebesgue theorem and Lebesgue's dominated convergence theorem."
+    },
+    {
+      "index": 166,
+      "word": "feit-thompson theorem",
+      "raw": "",
+      "definition": "The theorem of group theory that asserts that every finite simple non-abelian group has even order. In other words, there is no non-abelian finite simple groups of odd order; or every finite group of odd order is solvable. It was named after mathematicians Walter Feit and John G. Thompson."
+    },
+    {
+      "index": 167,
+      "word": "fejer's theorem",
+      "raw": "",
+      "definition": "It states that the arithmetic means of the partial sums of the Fourier series of any periodic function continuous of the interval [- π , π ] are uniformly convergent to the functions."
+    },
+    {
+      "index": 181,
+      "word": "fenchel's duality theorem",
+      "raw": "",
+      "definition": "One of the central duality results in convex optimisation theory that if f : X → ] -∞ , ∞ ] and g : X → ]-∞, ∞] are respectively a convex and a concave functions, then, if there is a point at which one function is continuous and the other is finite, inf x f ( x ) = max 1 ∗ { g ∗ ( x ∗ ) - f ∗ ( x ∗ )}, where f * is the Fenchel conjugate of f and g *( g *) = - (- g )*(- x *)."
+    },
+    {
+      "index": 188,
+      "word": "fermat's last theorem",
+      "raw": "",
+      "definition": "It states that there is no solution to the equation a n + b n = c n where a , b , c and n are all positive integers and n > 2. If n = 2, then there are many solutions. The theorem acquired its name because Fermat mentioned the theorem and claimed to have discovered a proof of it, but did not have space to write it down. Nobody has ever discovered a counterexample, but it has turned out to be very difficult to prove this theorem. Over the years several proofs have been proposed, but closer analysis has revealed they have flaws. Prior to being proved, this statement should more properly be called a conjecture rather than a theorem. In 1993, Andrew Wiles proposed a proof, based on elliptic curves, which needed revision but was then shown to be correct."
+    },
+    {
+      "index": 189,
+      "word": "fermat's little theorem",
+      "raw": "",
+      "definition": "The result in number theory that for any integer n and prime p that is not its factor, n P^-1 is congruent to 1 modulo p . F Fermat's principle can be used to describe the properties of light rays reflected offmirrors, refracted through different media or undergoing total internal reflection."
+    },
+    {
+      "index": 191,
+      "word": "fermat's spiral",
+      "raw": "",
+      "definition": "In mathematics, it is the curve traced by a point moving such that the square of its distance from the pole is proportional to its polar angle. Its equation in polar coordinates is r 2 = k θ."
+    },
+    {
+      "index": 197,
+      "word": "fermi constant",
+      "raw": "",
+      "definition": "The coupling constant associated with the weak interaction which gives rise to beta decay and which expresses the strength of the interaction between the transforming nucleon and the electron-neutrino field. It has a value of 1.435 × 10 -36 Joule metre 3 , with the symbol G w ."
+    },
+    {
+      "index": 214,
+      "word": "ferrel's law",
+      "raw": "",
+      "definition": "A law proposed by the US meteorologist, William Ferrel (1817 - 1891). It states that a body moving across the surface of the Earth will tend to be deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere as a result of the Earth's rotation."
+    },
+    {
+      "index": 253,
+      "word": "fibonacci distribution",
+      "raw": "",
+      "definition": "The probability distribution of the number of observations needed to obtain a run of two successes in a series of Bernoulli trials with probability of success equalling to half. It is given by P ( X = x ) = 2 - x F2. x^-2 , where the F2. x are Fibonacci numbers."
+    },
+    {
+      "index": 281,
+      "word": "fick's laws",
+      "raw": "",
+      "definition": "Laws derived by Adolf Fick in the year 1855 that describe the rate of diffusion in a medium from a higher concentration to a lower concentration, when solutions of different concentrations are brought together and can be used to solve for the diffusion coefficient, D . It can be summarised as Rate of diffusion, α = surface area × difference in concentration length of diffusion path . Ficks law equation can be applied to different locations and parts of a tissue. Gas diffusion across thicker portions of tissue will decrease the time of gas diffusion as opposed to thinner tissue. Also, bigger area affect the rate of diffusion, by showing an increase in the volume of gas diffused."
+    },
+    {
+      "index": 292,
+      "word": "field of fractions",
+      "raw": "",
+      "definition": "The full ring of quotients of an integral domain. In other words, it is the smallest field in which an integral domain can be embedded. For example, the field of fractions of the ring of integers is the field of rationals, Q = Quot( Z )."
+    },
+    {
+      "index": 294,
+      "word": "field of sets",
+      "raw": "",
+      "definition": "The properties and laws of sets, the set-theoretic operations of union ( ∪ ), intersection ( ∩ ) and complementation and the relations of set equality and set inclusion. It also provides systematic procedures for evaluating expressions and performing calculations involving these operations and relations. The binary operations of set union ( ∪ ) and intersection ( ∩ ) satisfy many identities. Several of these identities or laws have the following names: (i) Commutative laws : A ∪ B = B ∪ A and A ∩ B = B ∩ A (ii) Associative laws : A ∪ (B ∪ C) = (A ∪ B) ∪ C , (A ∩ B) ∩ C = A ∩ (B ∩ C), A ∪ (B ∪ C) = (A ∪ B) ∪ C = (A ∪ C) ∪ B and (A ∩ B) ∩ C = A ∩ (B ∩ C) = (A ∩ C) ∩ C (iii) Distributive laws : A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) and A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C). There are also some more important laws of set algebra. For example, Proposition 3 states that for any subsets A and B of a universal set ∪ , the following identities hold: idempotent laws given by (i) A ∪ A = A and (ii) A ∩ A = A. The de Morgan's laws are given by (i) (A ∪ B )' = A'∩B' and (ii) (A∩B)' = A'∪B' ."
+    },
+    {
+      "index": 342,
+      "word": "filter",
+      "raw": "",
+      "definition": "1. A porous material on which solid particles present in air or other fluid which flows through it are largely caught and retained. Filters are made with a variety of materials: cellulose and derivatives, glass fibre, ceramic, synthetic plastics and fibres. Filters may be naturally porous or be made so by mechanical or other means. Membrane/ceramic filters are prepared with highly controlled pore size in a sheet of suitable material such as polyfluoroethylene, polycarbonate or cellulose esters. Nylon mesh is sometimes used for reinforcement. The pores constitute 80-85% of the filter volume commonly and several pore sizes are available for air sampling (0.45 - 0.8 μm are commonly employed). 2. In mathematics, the filter on a set is a family of non-empty subsets of the given set that contains any superset of a member and such that the family is closed under finite intersection. A filter is said to converge to a point x if every neighbourhood of x lies in the filter. This leads to a convergence theory essentially equivalent to that of net convergence. 3. A device that allows only one band of wavelength to pass through it or absorbs some part of visible spectrum and transmits others. 4. A device placed in the path of a beam of radiation to alter its frequency distribution. 5. A circuit that transmits a signal of some frequencies than others. F6. A computer program or device that allows the passage of some frequencies or digital elements and blocks others. 7. A tinted glass or dyed gelation screen placed on a camera lens to control light or colour or distant image."
+    },
+    {
+      "index": 359,
+      "word": "fine structure constant",
+      "raw": "",
+      "definition": "The dimensionless constant, with the symbol α . It was introduced by Arnold Sommerfeld in 1916 with a value of about 1/137, that characterises the strength of the electromagnetic interaction. It is given by α = , where e is the charge on an electron, h is the Dirac constant and c is the speed of light in free space."
+    },
+    {
+      "index": 368,
+      "word": "finite",
+      "raw": "",
+      "definition": "Limited in extent or scope. In mathematics, a finite set is such that the number of elements it contains can be described by a natural number. For example, the set of integers between^-18 and 5 is finite, because it has a natural number (17) of elements. The set of all prime numbers, on the other hand, is not finite. Liquid with insoluble solid Filter funnel Conical flask Filtered solid-residue Filter paper Filtered liquid-filtrate Filtration."
+    },
+    {
+      "index": 373,
+      "word": "finite fourier transform",
+      "raw": "",
+      "definition": "In mathematics, the problem of determining the coefficients the unique polynomial p of degree n that interpolates given values a i ; at w i for i = 0, 1, ..., n where w is a primitive ( n + 1) th root of unity either in the complex field or in a finite field. This finds application in fields such as digital signal processing, where it is widely used in signal processing and analysis. It converts a finite list of equally spaced samples of a function into the list of coefficients of a finite combination of complex sinusoids ordered by their frequencies, that has those same sample values. It can be said to convert the sampled function from its original domain (often time or position along a line) to the frequency domain. They are extremely useful because they reveal periodicities in input data as well as the relative strengths of any periodic components."
+    },
+    {
+      "index": 415,
+      "word": "first isomorphism theorem",
+      "raw": "",
+      "definition": "Any theorem stating that some specific algebraic structure, G, has the property that if θ is a homomorphism, then G/ kerθ, where kerθ is the kernel of the homomorphism, is isomorphic to the image of G under the homomorphism."
+    },
+    {
+      "index": 416,
+      "word": "first law of thermodynamics",
+      "raw": "",
+      "definition": "It says that any increase in internal energy ∆ U of the system, is the sum of the heat ∆ Q flowing into the system and the work done ∆ W on the system. It can be expressed as: ∆ U = ∆ Q + ∆ W . For work done by the system it is expressed as ∆ U = ∆ Q - ∆ W . The first law makes use of the key concepts of internal energy, heat and system work. It is used extensively in the discussion of heat engines. The standard unit for all these quantities would be the joule."
+    },
+    {
+      "index": 418,
+      "word": "first principles",
+      "raw": "",
+      "definition": "A differentiation method that does not depend on any theorem. For example, if y = x 3 , then f' ( x ) = 3 x 3 . To find this using the first principles method requires the following process: f ' ( x ) = lim h → 0 f ( x + h ) - f ( x ) h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥= lim h → 0 f ( x + h ) 3 - x 3 h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ = lim h → 0 x 3 + 3 x 2 h + 3 xh 2 + h 3 - x 3 h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ = lim h → 0 x 3 + 3 x 3 h + 3 xh 2 + h 3 - x 3 h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥= lim h → 0 3 x 2 h + 3 xh 2 + h 3 h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ = lim h → 0 h (3 x 2 ) + 3 xh + h 2 h ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥= 3 x 2 + 3 x (0) + (0) 2 = 3 x 2 . Also, the following method can be used: y = x 3 ------ ( i ) y + Δ y = ( x + Δ x ) 3 ------ ( ii ) y + Δ y - y = ( x + Δ x ) 3 - x 3 Δ y = x 3 + 3 x 2 Δ x + 3 x ( Δ x ) 2 + ( Δ x ) 3 - x 3 Δ y = 3 x 2 Δ x + 3 x ( Δ x ) 2 + ( Δ x ) 2 Δ y = Δ x (3 x 2 + 3 x Δ x + ( Δ x ) 2 ) lim Δ y Δ x = dy dx = 3 x 2 + 3 x (0) + (0) 2 as Δ x → 0 dy dx = 3 x 2."
+    },
+    {
+      "index": 421,
+      "word": "first-order differential equations",
+      "raw": "",
+      "definition": "A differential equation in which the highest derivative of the dependent variable is a first derivative. For example, 3 x dy dx + 4 = 0."
+    },
+    {
+      "index": 434,
+      "word": "fission",
+      "raw": "",
+      "definition": "1. The splitting or breaking of a heavy atomic nucleus such as uranium into two or more major fragments or a form of radioactivity in which an unstable nucleus splits into two roughly equal parts. The process proceeds with the emission of neutrons and gamma rays. The neutrons are available to initiate further fissions and thus a nuclear chain reaction. Some nuclides such as Californium^-252 (Cf^-252) can undergo spontaneous fission, although fission is induced in other nuclides such as Uranium^-235 (U^-235) by incoming neutrons. The fission fragments can undergo further radioactive decay, producing a host of fission products. The following are examples of fission reaction: . 2. An asexual production in unicellular organisms in which the main or parent cell divides to form two or more daughter cells."
+    },
+    {
+      "index": 449,
+      "word": "fixed point",
+      "raw": "",
+      "definition": "1. A temperature that can be accurately reproduced to enable it to be used as the basis of a temperature scale. In the Celsius scale, for example, the fixed points are the melting ice temperature at 0 °C (273.15 K) and boiling water temperature at 100 °C (373.15 K). 2. Also known as invariant point , it is the point of a function that is mapped into itself by a given transformation; for example, 0 and 1 are fixed points of f ( x ) = x 2 , since f (0) = 0 and f (1) = 1. 3. A point that lies in its own image under a given correspondence. 4. Of, relating to or being a mathematical notation, as in a decimal system, writing numerical quantities in full with the point separating the integral from the fraction part being fixed as contrasted with floating point notation in which variable multiples of the base are extracted as factors."
+    },
+    {
+      "index": 450,
+      "word": "fixed point iteration",
+      "raw": "",
+      "definition": "An approximate method for finding the root of an equation p ( x ) = 0. The first step is to write the equation as x = f ( x ). The next procedure is to choose a value x 0 to be an approximation to the true root. Subsequently, approximate values of the root are found by using the equation x n + 1 = f ( x n ). If the values of x n tend to a limiting value of L as n increases then L = f ( L ). This means L is the root of the equation p ( x ) = 0."
+    },
+    {
+      "index": 451,
+      "word": "fixed point theorem",
+      "raw": "",
+      "definition": "A theorem that gives conditions for a mapping to have a fixed point. Examples are Banach fixed point theorem and Brouwer's fixed point theorem. For Banach fixed point theorem, for example, let f be a contraction mapping from a closed subset F of a Banach space E into F ; then there exists a unique z ∈ F such that f ( z ) = z."
+    },
+    {
+      "index": 538,
+      "word": "floating point number",
+      "raw": "",
+      "definition": "A binary number carried out to a specific number of digits and containing a radix (or decimal) point somewhere in the digit sequence. Such numbers are stored in three parts: the sign (either plus or minus), the mantissa (sequence of meaningful digits) and the exponent (power or order of magnitude), which determines the position in the mantissa. Examples are 5.5, 0.001 and^-2,345.6789. Numbers that do not have decimal places are called integers . The main operations of the FPU consist of conventional arithmetic such as addition and multiplication. Some FPUs can also perform more sophisticated functions such as exponentials, logarithms and trigonometry."
+    },
+    {
+      "index": 550,
+      "word": "floor function",
+      "raw": "",
+      "definition": "The floor function of x is the greatest integer less than or equal to x or floor( x ) = x is the largest integer not greater than x ."
+    },
+    {
+      "index": 553,
+      "word": "floquet theorem",
+      "raw": "",
+      "definition": "A second-order linear differential equation whose coefficients are periodic single-valued functions of an independent variable x has a solution of the form e μx P ( x ), where μ is a constant and P ( x ) a periodic function."
+    },
+    {
+      "index": 557,
+      "word": "floral formula",
+      "raw": "",
+      "definition": "A symbolic representation of the structure of a flower using specific letters, numbers and symbols. Each kind of floral part is represented by the letter K for calyx, C for corolla, P for perianth, A for androecium, G for gynoecium and a number to indicate the quantity of the part present, for example, C5 for a flower with five petals. It also indicates whether the ovary is inferior or superior."
+    },
+    {
+      "index": 583,
+      "word": "fluctuation-dissipation theorem",
+      "raw": "",
+      "definition": "It relates quantities in equilibrium and non-equilibrium statistical mechanics and microscopic and macroscopic quantities. The principle underlying this theorem is that a non-equilibrium state may have been reached either as a result of a random fluctuation or an external force such as an electric or magnetic field and that the evolution towards equilibrium is the same in both cases. The fluctuation-dissipation theorem enables transport coefficients to be calculated in terms of response to external fields."
+    },
+    {
+      "index": 617,
+      "word": "fluorine",
+      "raw": "",
+      "definition": "A chemically reactive, poisonous, gaseous element in Group 17 (VIIA) elements in the Periodic Table. Its chemical symbol is F, atomic number 9, atomic weight 18.9984, freezing point^-219.62 °C (53.53 K), melting point^-223 °C (50 K) and boiling point^-188.14 °C (85 K), specific gravity of liquid 1.108 (at boiling point) and valence 1. It is the most chemically active nonmetallic element and the most electronegative of all the elements. Its chief source is fluorite. It also occurs in cryolite, fluorapatite, seawater, bones and teeth. Hydrogen fluoride (HF) is a raw material for many other fluorides. It can be produced only by electrolysis under special conditions. It is an essential trace element needed for the healthy development of bones and teeth and to prevent tooth decay. Fluorine compound, fluorite is used as a flux in refining iron; another compound, cryolite serves as the electrolyte in the production of aluminium. Compounds of fluorine are also used in the ceramic and glass industries. Hydrofluoric acid is used to etch glass and in the manufacture of light bulbs. Sodium fluoride (NaF) is added to water and tin fluoride (SnF2 ) to dental-care products to reduce dental caries."
+    },
+    {
+      "index": 666,
+      "word": "fokker-planck equation",
+      "raw": "",
+      "definition": "An equation in non-equilibrium statistical mechanics that describes a superposition of a dynamic friction process and a diffusion process for the evolution of variables in a system. Mathematically, the general Fokker-Planck equation for one variable x is given by, ∂ w ∂ t = -∂ ∂ x D (1) ( x ) + ∂ 2 dx 2 D (2) ( x ) ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ , where D (1) (x) is the drift coefficient and D (2) (x)>0 is the diffusion coefficient."
+    },
+    {
+      "index": 682,
+      "word": "folium",
+      "raw": "",
+      "definition": "1. Folium of descartes is an algebraic plane curve consisting of a loop whose two ends, intersects at a node and are asymptotic to the same line. Its equation is of the form x 2 + y 2 = 3 axy , where x + y + a = 0 is the equation of the line. 2. A thin, leaf-like layer or stratum occurring especially in metamorphic rock."
+    },
+    {
+      "index": 735,
+      "word": "force",
+      "raw": "",
+      "definition": "Any influence (push or pull) that causes an object to accelerate, slowdown or change shape or any influence that tends to change the state of rest or the uniform motion in the straight line of a body. A force has both magnitude and direction, making it a vector quantity; and expressed as Force = mass x acceleration. Its symbol is F and the unit is the Newton (N), defined as the force required to cause a mass of one kilogram to accelerate at a rate of one meter per second squared in the absence of other force-producing effects which is equal to 1 kg m/s 2 ."
+    },
+    {
+      "index": 737,
+      "word": "force constant",
+      "raw": "",
+      "definition": "A value which is unique to a bond which characterises the strength of the bond in a diatomic molecule. The force constant is a measure of the resistance offered to stretching and vibration of a bond, the magnitude of which indicates how strongly the atoms are held together and hence stability."
+    },
+    {
+      "index": 745,
+      "word": "force of mortality",
+      "raw": "",
+      "definition": "The probability of failure of a component or the death of an organism, within the next unit of time, ∆ t , given survival to time t . It is defined mathematically as Δ t ⋅ h ( t ) = P[X ≤ ( t + Δ t ): X > t ]."
+    },
+    {
+      "index": 770,
+      "word": "formal equivalence",
+      "raw": "",
+      "definition": "In logic, it is the relationship etween two open sentences that holds when their universal closures are materially equivalent, as between the two sides of a mathematical idetity such as a + b = b + a ."
+    },
+    {
+      "index": 774,
+      "word": "formal system",
+      "raw": "",
+      "definition": "A mathematical formalism in which statements can be constructed and manipulated with logical rules as between the two sides of a mathematical identity such as a + b = b + a . Some formal systems, such as Euclidean geometry, are built around a few basic axioms and can be expanded with theorems that can be deduced through proofs."
+    },
+    {
+      "index": 775,
+      "word": "formaldehyde",
+      "raw": "",
+      "definition": "A toxic colourless gaseous compound belonging to the family of organic compounds called aldehydes. Its chemical formula is CH2 O, density 0.8153 g/cm³ (-20°C, 253 K), melting point^-92°C (181 K) and a boiling point of^-19°C (254 K). It is used for manufacturing melamine and phenolic resins, fertilisers, dyes and embalming fluids and in aqueous solution as a preservative and disinfectant."
+    },
+    {
+      "index": 780,
+      "word": "formation constant",
+      "raw": "",
+      "definition": "The equilibrium constant for the formation of a complex ion from its components in solution. It is a measure of the strength of the interaction between the reagents that come together to form the complex."
+    },
+    {
+      "index": 781,
+      "word": "formation rules",
+      "raw": "",
+      "definition": "In logic, the set of rules that specify the syntax of a formal calculus. It is the algorithm that generates all and only the well-formed formulae (wff) of the system. The rules are: (i) an expression consisting of a predicate variable of degree n followed by n individual variables is a wff; (ii) if α is a wff, so is ∼ α ; (iii) if α and β are wffs, so is ( α ∨ β; and (iv) if α is a wffand a is an individual variable, then ( ∀ a ) α is a wff, where α is said to be the scope of the quantifier."
+    },
+    {
+      "index": 783,
+      "word": "formazans",
+      "raw": "",
+      "definition": "The parent compound H2 NN=CHN=NH and its derivatives formed by substitution at carbon and/or nitrogen."
+    },
+    {
+      "index": 786,
+      "word": "formula",
+      "raw": "",
+      "definition": "1. A set of symbols and numbers that expresses a fact, a rule or a relationship. For example, A = πr 2 is the formula for calculating the area of a circle; and C = πD , expresses the relationship between the circumference and diameter of a circle. 2. A formal expression of some rule or other result, for example, Stirling's formula or Frenet formulae. 3. A representation of a molecule, ion or radical in which the compound's chemical elements are represented by the chemical symbol. 4. Functions within computer programs often contain formulas, which are used to process data that is passed through the function and output the result. For example, a basic formula might convert miles to kilometres."
+    },
+    {
+      "index": 787,
+      "word": "formula bar",
+      "raw": "",
+      "definition": "A section in Microsoft Excel and other spreadsheets that displays the data or formula stored in the active cell and allows users to enter formulas instead of static data. In Microsoft Excel, it is located above the work area of the spreadsheet."
+    },
+    {
+      "index": 788,
+      "word": "formula unit",
+      "raw": "",
+      "definition": "The lowest reduced ratio of ions in a compound. It is the empirical formula of an ionic or covalent network compound used as an independent entity for stoichiometric calculations. Examples include ionic sodium chloride (NaCl), Potassium oxide (K2 O) and covalent networks such as silicon dioxide (SiO2 ) and C (as diamond or graphite)."
+    },
+    {
+      "index": 789,
+      "word": "formula weight",
+      "raw": "",
+      "definition": "The sum of the atomic weights of all atoms in a molecule. The term is generally applied to a substance that consists of ions rather than individual molecules. An example of such a substance is sodium chloride (NaCl). Such a substance's chemical formula describes the simplest ratio of the number of atoms of the constituent elements."
+    },
+    {
+      "index": 790,
+      "word": "formulation",
+      "raw": "",
+      "definition": "1. Putting together of components in appropriate relationships or structures, according to a formula. 2. The particular mixture of base chemicals and additives required for a product. In pharmacy, it is a mixture or a structure such as a capsule, a pill, tablet or an emulsion, prepared according to a specific procedure. 3. Formulation science is concerned with the knowledge and practice of blending and mixing of various components (chemical molecules) in a way that they do not react, but interact to provide a final product with very specific desirable properties or functions. Formulation science covers the core of physical and colloid chemistries, as well as analytical chemistry, chemical engineering, pharmaceutical and biological sciences."
+    },
+    {
+      "index": 791,
+      "word": "formyl trichloride",
+      "raw": "",
+      "definition": "A colourless volatile sweet-smelling liquid haloform with the chemical formula CHCl 3 , relative density 1.48, melting point^-63.5 °C (209.5 K) and boiling point 61.7 °C (334.7 K). It can be made by chlorination of methane followed by separation of the mixture of products or by the haloform reaction. It is an effective anaesthetic but can cause liver damage and it has now been replaced by other halogenated hydrocarbons. It is used as a solvent and raw material for making other compounds."
+    },
+    {
+      "index": 801,
+      "word": "forward difference",
+      "raw": "",
+      "definition": "A series of quantities obtained from a function whose values are known at a series of equally spaced points by repeatedly applying the forward difference operator, ∆ to these values. The forward difference operator, ∆ is defined as ∆ f ( x ) = f ( x + h ) - f ( x ). The expression f ( x + h ) - f ( x ) gives the first forward difference of f ( x ) and the operator ∆ is called the first forward difference operator . The second forward difference operator , denoted by ∆ 2 , is defined as Δ 2 f ( x ) = Δ [ Δ f ( x )] = Δ f ( x + h ) - Δ f ( x ). It is used in interpolation or numerical calculation and integration of functions."
+    },
+    {
+      "index": 820,
+      "word": "four ierc oeff icie nts",
+      "raw": "",
+      "definition": "Thecoefficientsan = 1 π f ( x )cos(nx)dx( n ≥ 0), 2 π ∫ b n = 1 π f ( x )sin(nx)dx( n ≥ 1), 2 π ∫ andincomplextermsCn = a n - ib n = 1 2 π f ( x )exp( - inx)dx 2 π ∫ that can be used to express a function formally in terms of its Fourier series."
+    },
+    {
+      "index": 821,
+      "word": "four squares theorem",
+      "raw": "",
+      "definition": "The theorem that every positive integer can be expressed as the sum of not more than squares of four positive integers, exactly four non-negative integers. For example, 1 = 1 2 + 0 2 + 0 2 ,5 = 2 2 + 1 2 + 0 2 + 0 2 and 15 = 3 2 + 2 2 + 1 2 + 1 2 ."
+    },
+    {
+      "index": 825,
+      "word": "four-colour theorem",
+      "raw": "",
+      "definition": "The theorem that any planar map can be coloured using at most four colours in such a way that no two adjacent areas are of the same colour. Two American mathematicians, Kenneth Ira Appel (1932-2013) at the University of Illinois and his colleague Wolfgang Haken (1928 - ) provided a mathematical proof in 1978 that solved the long-standing four-colour map problem."
+    },
+    {
+      "index": 834,
+      "word": "fourier's law of conduction",
+      "raw": "",
+      "definition": "An empirical law based on observation. It states that the rate of heat flow, dQ/dt, through a homogeneous solid is directly proportional to the area, A, of the section at right angles to the direction of heat flow and to the temperature difference along the path of heat flow, dT/dx ."
+    },
+    {
+      "index": 852,
+      "word": "fractile",
+      "raw": "",
+      "definition": "The value of the item that is a given fraction of the way through a distribution. An item in the distribution that is hundredths of the way through the distribution is called a percentile; for example, 85 th percentile is 85 th 100 of the way through the distribution. Its location is 85 100 ∑ f . The item in the distribution that divides the distribution into four quarters is called the quartile . The first quartile, Q1 is the item that is one-quarter of the way through the distribution; the second quartile, Q2 is the item that is the median of the distribution; the third quartile, Q3 is the item that is three-quarters of the way through the distribution. The locations in the distribution are Q1 = f ∑ , Q2 = f ∑ , and Q3 = 3 f ∑ . The following formula can be used to calculate any required fractile: L + fractile location - sum of frequencies above fractile class frequency of fractile class , where L is the lower class boundary of the fractile class. An item that is tenths of the way through a distribution is called a decile , for example, the third decile is 3 10 th of the way through the distribution. The location of the third decile is 3 f ∑ and f + 1 ∑ for odd sum of frequencies. The fractiles can be determined from the cumulative frequency curve (the ogive)."
+    },
+    {
+      "index": 853,
+      "word": "fraction",
+      "raw": "",
+      "definition": "1. A number that indicates one or more equal parts of a unit. In other words, it is a ratio of two integers or any number that can be expressed as such a ratio, a b , where a is not a multiple of b and b is not zero or one. In this case, a is the number of equal parts the unit have taken, called the numerator ; and b represents the total number of parts into which the unit has been divided, called the denominator . The rules for addition/subtraction, division and multiplication of fractions are a b ± c d = ad ± cb bd , a b ÷ c d = a b × d c . 2. A group of similar compounds, the boiling point of which fall within a particular range and which are separated during fractional distillation."
+    },
+    {
+      "index": 858,
+      "word": "fractional linear transformation",
+      "raw": "",
+      "definition": "A rational invertible transformation of the complex plane of the form, w = az + b cz + d with ad ≠ bc . These are conformal mappings."
+    },
+    {
+      "index": 859,
+      "word": "fractional part",
+      "raw": "",
+      "definition": "The difference between the given real number and its integral part. For example, the fractional part of 3.42 written as {3.42}, is 0.42 and that of^-3.42 is 0.58."
+    },
+    {
+      "index": 883,
+      "word": "frattini subgroup",
+      "raw": "",
+      "definition": "The subgroup, Φ(G), of a given group G defined to be the intersection of all maximal subgroups of G. If G has no maximal subgroups, its Frattini subgroup is defined as Φ(G) = G."
+    },
+    {
+      "index": 887,
+      "word": "fredholm alternative",
+      "raw": "",
+      "definition": "In mathematics, the alternative theorem, holding for a continuous linear operator, A , with closed range or its representation as a matrix, that either A is surjective or else the adjoint A * has a non-trivial kernel. Hence, either the inhomogeneous equation Ax = b is always solvable or that the homogeneous equation A * y = 0 has a non-zero solution."
+    },
+    {
+      "index": 898,
+      "word": "free group",
+      "raw": "",
+      "definition": "1. In mathematics, it is a group with a generating set such that the only products of generators and their inverses that equal identities are of the form aa^-1 or a^-1 a . 2. The set, F x , of equivalence classes, [ u ], of words in a non-empty set, X , where a pair of elements are equivalent if and only if there is a finite sequence of words starting with one and finishing with the other, such that each is obtained from the preceding by elementary reduction. Multiplication is defined on F x by [ u ] [ v ] = [ uv ]."
+    },
+    {
+      "index": 900,
+      "word": "free module",
+      "raw": "",
+      "definition": "In mathematics, it is a module that has as a basis a subset { a 1 , a 2 , ..., a n } in terms of which every non-zero element can be written uniquely in the form ∑ iuiai , where the u i are elements of the ring over which the module is a left module. Every vector space is a free module and an Abelian group is free if and only if it has no element of finite period. Submodules of a free module are not in general free unless the underlying ring is a principal ideal domain."
+    },
+    {
+      "index": 907,
+      "word": "free space propagation model",
+      "raw": "",
+      "definition": "In teleommunications, it refers to the loss in signal as it travels through space. It is defined as , where P L = path loss, λ = signal wavelength and d = distance from transmitter."
+    },
+    {
+      "index": 930,
+      "word": "frenet formulae",
+      "raw": "",
+      "definition": "The fundamental formulae that describe the kinematic properties of a particle moving along a continuous, differentiable curve in three- dimensional Euclidean space or the geometric properties of the curve itself irrespective of any motion. In other words, the formulae are for a space curve that recaptures the unit vector tangent (to the curve, pointing in the direction of motion) denoted T , the normal unit vector (the derivative of T with respect to the arclength parameter of the curve, divided by its length), denoted N and the binormal unit vector B (the cross product of T and N) , from the curvature κ and torsion τ of the curve. The formulae are: (i) N ' = - κT + τB , (ii) B ' = - τN and (iii) T ' = κN."
+    },
+    {
+      "index": 934,
+      "word": "frequency",
+      "raw": "",
+      "definition": "1. A property of waves that describes how many wave patterns or cycles that pass a fixed reference point in one second. It describes the number of cycles of a periodic motion such as sound pressure, electrical intensity, radio or other quantities per unit time. It is named in honour of German physicist, Heinrich Rudolf Hertz (1857 - 1894). The unit of frequency (f) is the hertz (Hz), which is equal to 1 cycle per second (1/s). Its symbol is Hz. It is expressed as f = ω/2π, where f is the frequency of the vibrating article and ω is the angular speed."
+    },
+    {
+      "index": 952,
+      "word": "fresnel integrals",
+      "raw": "",
+      "definition": "The two definite integrals, denoted S ( x ) and C ( x ) used in optical theory and given as: S ( x ) = sin( t 2 x ∫ )d t , and C ( x ) = sin( t 2 x ∫ )d t ."
+    },
+    {
+      "index": 955,
+      "word": "friction factor",
+      "raw": "",
+      "definition": "1. Quotient of frictional force and normal force, for a sliding body. Its symbol is μ . This is given by , where F is the frictional force and R is the reaction. 2. A tensor correlating the frictional force, opposing the motion of a particle in a viscous fluid and the velocity of this particle relative to the fluid. In the case of an isolated spherical particle in a viscous isotropic fluid, it is a constant."
+    },
+    {
+      "index": 963,
+      "word": "fritz john conditions/theorem",
+      "raw": "",
+      "definition": "A theorem that asserts the existence of Lagrange multipliers for constrained optimisation problems. For a constrained minimisation, one adds an additional non-negative multiplier, λ 0 , for the objective function and asserts that not all the multipliers are simultaneously zero. A constraint qualification can be viewed as ensuring that λ 0 is nonzero and so can be scaled to unity."
+    },
+    {
+      "index": 964,
+      "word": "frobenius group",
+      "raw": "",
+      "definition": "Named after Ferdinand Frobenius, it is a group that has a proper subgroup, H, such that, for every x in the relative complement G \\ H, the intersection of H with x^-1 is the identity element."
+    },
+    {
+      "index": 965,
+      "word": "frobenius method",
+      "raw": "",
+      "definition": "The method of solving ordinary differential equations near a regular singular point, a , by positing a solution of the form ( x - a ) α P( x - a ) for some power series P and index α that are then found by iteration by substituting the potential solution into the equation."
+    },
+    {
+      "index": 966,
+      "word": "frobenius norm",
+      "raw": "",
+      "definition": "The norm on matrices that arises by treating a matrix as a vector and using the Euclidean norm of that vector: A2 = a ij j = 1 m ∑ i = 1 n ∑ . This quantity is also the trace of AA *."
+    },
+    {
+      "index": 977,
+      "word": "frontier",
+      "raw": "",
+      "definition": "1. The set of points (frontier- points) that are members both of the closure of a given set and of the closure of its complement. 2. The set of points in the closure but not in the interior of the given set, usually written FrA , for example, Fr (0, 1) = {0, 1}. The frontier of the rationals is the set of all real numbers."
+    },
+    {
+      "index": 1003,
+      "word": "fréchet differential",
+      "raw": "",
+      "definition": "Named after Maurice Fréchet, French mathematician, the function δ f ( x ;), derived from a given function f between normed spaces and defined on an open domain for which lim Δ x → 0 f ( x + Δ x ) - f ( x ) - δ f ( x ; Δ x ) Δ x = 0. If the limit SF( x :) is continuous and linear in Δ x , then the function is Fréchet differential at x and the associated linear operator SF( x :) is the Fréchet derivative f at x , often written f ( x )."
+    },
+    {
+      "index": 1006,
+      "word": "fubini's theorem",
+      "raw": "",
+      "definition": "Named after the Italian mathematician, Guido Fubini (1879-1943), it is the result that gives conditions under which it is possible for the evaluation of multiple integrals as iterated integrals and changing the order of integration of an iterated integral."
+    },
+    {
+      "index": 1033,
+      "word": "function",
+      "raw": "",
+      "definition": "1. The natural or usual duty or purpose of a person or something or the way something works or operates. 2. Function rule is a rule that maps each element in a given set (the domain) onto just one element (or image) in another set (the range) or any operation or procedure that relates one variable to one or more other variables. If y is a function of x , written y = f ( x ), a change in x produces a change in y and if x is known, y can be determined. 3. A small part of a program in a computer that supplies a specific value. An example is the square root of a specified value or the current date. 4. A characteristic role or action of a structure or process in the normal metabolism or behaviour of an organism."
+    },
+    {
+      "index": 1041,
+      "word": "functional equations",
+      "raw": "",
+      "definition": "1. The branch of mathematics that studies equations in which the variables are functions and that attempts to establish the properties of functions from the equations that they satisfy. 2. The study of equations of the form A = 0, where A is a term containing a finite number of independent variables, a finite number of known functions and a finite number of unknown functions. 3. Functional equation is an equation of this form f ( x + y ) = f ( x ) + f ( y ), the condition for a function to be additive."
+    },
+    {
+      "index": 1051,
+      "word": "fundamental constants",
+      "raw": "",
+      "definition": "The parameters that do not change throughout the universe or the physical constants which play a fundamental role in the basic theories of physics. Examples include the charge of an electron, the speed of light in free space and the gravitational constant, Planck's constant."
+    },
+    {
+      "index": 1054,
+      "word": "fundamental form",
+      "raw": "",
+      "definition": "First fundamental form is the quadratic equation of the form ds 2 = Adu 2 + 2 Bdudv + Cdv 2 , where A = ∂ x ∂ u ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , B = ∂ x ∂ u ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ ∂ x 2 ∂ v ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ , and C = ∂ x 2 ∂ v ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ that determines the metric and arc length on a given surface. The second fundamental form is quadratic equation of the form Ddu 2 + 2D'dudv + D''dv 2 , where D = x i ∑ i ∂ 2 x i ∂ u 2 , D' = x i ∑ i ∂ 2 x i ∂ u ∂ v and D'' = x i ∑ i ∂ 2 x i ∂ v 2 , with x i is the direction cosine of the normal to the surface. This enables points of the surface to be classified as flat elliptic, parabolic or hyperbolic."
+    },
+    {
+      "index": 1057,
+      "word": "fundamental matrix",
+      "raw": "",
+      "definition": "1. The matrix whose columns are the linearly independent fundamental sets of solutions of a linear homogeneous system of ordinary differential equations or matrix equation, y ' = A(t) y , where y has dimension n . 2. In computer vision, a 3×3 matrix that relates corresponding points in stereo images. It is a relationship between any two images of the same scene that constrains where the projection of points from the scene can occur in both images."
+    },
+    {
+      "index": 1063,
+      "word": "fundamental theorem of algebra",
+      "raw": "",
+      "definition": "The theorem states that every polynomial equation having complex coefficients and degree ≥ 1 has at least one complex root. This theorem was first proven by Gauss. It is equivalent to the statement that a polynomial P ( z ) of degree n has n values z i (some of them possibly degenerate) for which P ( z i ) = 0. Such values are called polynomial roots. An example of a polynomial with a single root of multiplicity > 1 is z 2 - 2 z + 1 = ( z^-1)( z^-1), which has z = 1 as a root of multiplicity 2."
+    },
+    {
+      "index": 1064,
+      "word": "fundamental theorem of arithmetic",
+      "raw": "",
+      "definition": "The theorem stating that any positive integer can be expressed as a unique product of prime numbers."
+    },
+    {
+      "index": 1065,
+      "word": "fundamental theorem of calculus",
+      "raw": "",
+      "definition": "A theorem that links the concept of the derivative of a function with the concept of the integral. The first part of the theorem, sometimes called the first fundamental theorem of calculus is that an indefinite integration can be reversed by a differentiation. This part of the theorem is also important because it guarantees the existence of antiderivatives for continuous functions. The second part, sometimes called the second fundamental theorem of calculus states that the definite integral of a function can be computed by using any one of its infinitely many antiderivatives. This part of the theorem has key practical applications because it markedly simplifies the computation of definite integrals."
+    },
+    {
+      "index": 1066,
+      "word": "fundamental theorem of projectivity",
+      "raw": "",
+      "definition": "The theorem that three distinct corresponding pairs of points uniquely determine a projectivity."
+    },
+    {
+      "index": 1082,
+      "word": "furan",
+      "raw": "",
+      "definition": "A heterocyclic organic compound, consisting of a five-membered aromatic ring with four carbon atoms and one oxygen. Its molecular formula is C4 H4 O, density 0.936 g/ml, melting point^-85.6 °C (187.55 K), boiling point 31.3 °C (304.45 K) and flash point^-69 °C (204 K). It is colourless, flammable and highly volatile liquid. It is toxic and may be carcinogenic."
+    },
+    {
+      "index": 1086,
+      "word": "furfural",
+      "raw": "",
+      "definition": "A colourless, viscous liquid with a pleasant aromatic odour, with the molecular formula C5 H4 O2 , density 1.16 g/ml (20 °C), melting point^-37 °C (236 K), boiling point 162 °C (435 K) and flash point 62 °C (335 K), which darkens on standing in air. It is soluble in ethanol and ether and somewhat soluble in water. It is prepared commercially by dehydration of pentose sugars obtained from cornstalks and corncobs, husks of oat and peanut and other waste products. It is the aldehyde derivative of furan and occurs in various essential oils and in fusel oil. It is used as a solvent for extracting mineral oils and natural resins and by itself forms resins with some aromatic compounds. It is also used in the manufacture of pesticides, phenolfurfural resins and tetrahydrofuran."
+    }
+  ]
+}

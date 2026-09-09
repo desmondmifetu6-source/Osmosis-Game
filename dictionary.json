@@ -55489,7 +55489,7 @@
       "word": "economy",
       "raw_headword": "ECONOMY",
       "synonyms": [],
-      "definition": "A mathematical model of an economic system in which, commonly, there are m producers, each with a production set P j and n consumers, each with a consumption set C i and an associated ordering ≤ i . These sets lie on an Euclidean space, whose dimension corresponds to the number of goods in the economy. There is a total resource level w . The producers each produce a vector y i in P j and the consumers have a demand x i in C i . These m + n elements define a state of the economy. The excess demand is ∑ x i - ∑ y j - w and a market equilibrium occurs if excess demand is zero. Individual consumers will try to maximize their preference satisfaction; this leads to the study of equilibria that occur as a market equilibrium together with a pricing of resources that every producer maximizes profit and every consumer optimizes satisfaction."
+      "definition": "A mathematical model of an economic system in which, commonly, there are $m$ producers, each with a production set $P_j$ and $n$ consumers, each with a consumption set $C_i$ and an associated ordering $\\le_i$. These sets lie on a Euclidean space, whose dimension corresponds to the number of goods in the economy. There is a total resource level $w$. The producers each produce a vector $y_j \\in P_j$ and the consumers have a demand $x_i \\in C_i$. These $m + n$ elements define a state of the economy. The excess demand is $\\sum x_i - \\sum y_j - w$ and a market equilibrium occurs if excess demand is zero. Individual consumers will try to maximize their preference satisfaction; this leads to the study of equilibria that occur as a market equilibrium together with a pricing of resources such that every producer maximizes profit and every consumer optimizes satisfaction."
     },
     {
       "word": "ecostate",
@@ -55642,7 +55642,7 @@
       "synonyms": [
         "eddington luminosity"
       ],
-      "definition": "A theoretical limit for the maximum value of the brightness of a star of a given E mass, named after British astronomer and physicist, Arthur Stanley Eddington and given as L = 4 π GMm p c σ T , where G is the gravitational pressure, M is the mass of the luminous object, m P is the mass of a proton, c is the speed of light and σ T is the effective area of an electron when it is illuminated by radiation. This limit exists because the radiation pressure caused by the nuclear fission reactions powering the star has to counter, but not exceed the gravitational force that would cause gravitational collapse of the star. A star emitting radiation at greater than the Eddington limit would break up. In a star it is defined as the point where the gravitational force inwards equals the continuum radiation force outwards, assuming hydrostatic equilibrium and spherical symmetry. When exceeding the Eddington luminosity, a star would initiate a very intense continuum driven stellar wind from its outer layers. Since most massive stars have luminosities far below the Eddington limit, however, their winds are mostly driven by the less intense line absorption."
+      "definition": "A theoretical limit for the maximum value of the brightness of a star of a given mass, named after British astronomer and physicist Arthur Stanley Eddington and given as:\n\n$$L_{\\text{Edd}} = \\frac{4\\pi G M m_p c}{\\sigma_T}$$\n\nwhere $G$ is the gravitational constant, $M$ is the mass of the luminous object, $m_p$ is the mass of a proton, $c$ is the speed of light, and $\\sigma_T$ is the Thomson scattering cross-section (effective area) of an electron. This limit exists because the outward radiation pressure has to balance, but not exceed, the inward gravitational force. A star emitting radiation at greater than the Eddington limit would blow away its outer layers via radiation pressure."
     },
     {
       "word": "eddy",
@@ -55876,7 +55876,7 @@
       "word": "effective nuclear charge",
       "raw_headword": "EFFECTIVE NUCLEAR CHARGE",
       "synonyms": [],
-      "definition": "The apparent nuclear or net positive charge which an outermost electron actually experiences through attraction in a multi-electron atom as a result of the shielding effect by other electrons. Its symbol is Z eff . Since the shielding effect of negatively charged electrons prevents higher orbital electrons from experiencing the full nuclear charge by the repelling effect of inner- layered electrons, the term 'effective' is used to qualify the nuclear charge. The strength of the nuclear charge can be determined by looking at the oxidation number of the atom. Where there is only one electron in an atom, that electron experiences the full charge of the positive nucleus, in which case, the effective nuclear charge can be calculated from Coulomb's law. However, in a multi-electron atom the outer electrons are simultaneously attracted to the positive nucleus E and repelled by the negatively charged electrons. The effective nuclear charge on such an electron is given by the expression: Z eff = Z - S, where, Z is the number of protons in the nucleus (atomic number) and S is the average number of electrons between the nucleus and the electron in question (the number of nonvalence electrons)."
+      "definition": "The apparent nuclear or net positive charge which an outermost electron actually experiences through attraction in a multi-electron atom as a result of the shielding effect by inner electrons. Its symbol is $Z_{\\text{eff}}$. The effective nuclear charge is given by the expression:\n\n$$Z_{\\text{eff}} = Z - S$$\n\nwhere $Z$ is the atomic number (number of protons in the nucleus) and $S$ is the screening or shielding constant (the average number of shielding electrons between the nucleus and the valence electron)."
     },
     {
       "word": "effective permeability",
@@ -55945,7 +55945,7 @@
       "word": "efficiency",
       "raw_headword": "EFFICIENCY",
       "synonyms": [],
-      "definition": "1. A measure of the performance or how well a machine or other energy changing device changes energy into useful work. It is the measure of the percentage ratio of work output to work input. For a simple machine, it is given by: E = Energy Output Energy input × 100%. For example, a gear transmission is 97% efficient, when the useful energy output is 97% of the input, with the other 3% being lost as heat due to friction. Automobile engines have low efficiency (below 30%) because out of the total energy content of fuel converted to heat, only a small portion provides motive power, while a substantial amount is lost in the radiator and car exhaust. 2. In chemistry, it is the ratio between the useful energy delivered or bound and the energy supplied: energy output/energy input. It is also used in the sense of a quantitative measure of the relative rate of a given step involving a species with respect to the sum of the rates of all of the parallel steps which depopulate that species. Its symbol is η."
+      "definition": "1. A measure of the performance or how well a machine or energy-converting device transforms input energy into useful work. It is the percentage ratio of useful work output to total work input:\n\n$$\\text{Efficiency} = \\frac{\\text{Energy Output}}{\\text{Energy Input}} \\times 100\\%$$\n\nFor example, a gear transmission is $97\\%$ efficient when the useful energy output is $97\\%$ of the input, with $3\\%$ lost as heat due to friction. 2. In chemistry, the ratio between useful energy delivered or bound and the energy supplied. Its symbol is $\\eta$."
     },
     {
       "word": "efficiency of atomisation/atomization",
@@ -55991,7 +55991,7 @@
       "word": "effort",
       "raw_headword": "EFFORT",
       "synonyms": [],
-      "definition": "The force given to a machine to move a load and expressed as: Effort = Load (Force)/Distance."
+      "definition": "The force applied to a machine to move a load, often expressed in mechanics in relation to work and mechanical advantage. In terms of work done by the effort:\n\n$$\\text{Work} = \\text{Effort} \\times \\text{Distance moved by effort}$$\n\nand mechanical advantage is defined as $\\text{M.A.} = \\frac{\\text{Load}}{\\text{Effort}}$."
     },
     {
       "word": "effort arm",
@@ -56077,7 +56077,7 @@
       "word": "egoroff's theorem",
       "raw_headword": "EGOROFF'S THEOREM",
       "synonyms": [],
-      "definition": "Named after the Russian analyst, D. F. Egornoff (1869-1931), the result that if a sequence of almost everywhere finite and measurable functions converges almost everywhere to a finite limit, on a set of finite measure, E, then there is, for each positive ε, a measurable subset F with a measure at most ε such that uniform convergence occurs on E \\ F."
+      "definition": "Named after the Russian mathematician D. F. Egorov (1869–1931), the foundational measure-theoretic result stating that if a sequence of measurable functions $f_n$ on a set of finite measure $E$ converges almost everywhere to a finite limit function $f$, then for every $\\varepsilon > 0$, there exists a measurable subset $F \\subset E$ with measure $\\mu(F) < \\varepsilon$ such that $f_n$ converges uniformly to $f$ on $E \\setminus F$."
     },
     {
       "word": "egress",
@@ -56146,13 +56146,13 @@
         "root",
         "latent root"
       ],
-      "definition": "In a characteristic polynomial, for a square matrix A, in which x is a nonzero vector called the eigenvector that does not change its direction under the associated linear transformation and satisfies the equation A x = λ x , the scalar, λ is the eigenvalue. In other words, it is a root, λ, of the characteristic equation det( A - t I). For a linear operator A, it is a solution, λ, of the equation AX = λ X(X ≠ 0)."
+      "definition": "In linear algebra, for a square matrix $A$, if there exists a nonzero vector $x$ (the eigenvector) such that:\n\n$$Ax = \\lambda x$$\n\nfor a scalar $\\lambda$, then $\\lambda$ is called an eigenvalue of $A$. The eigenvalues are the roots of the characteristic equation $\\det(A - \\lambda I) = 0$. For a linear operator $T$, it is a scalar $\\lambda$ satisfying $T(x) = \\lambda x$ for some $x \\neq 0$."
     },
     {
       "word": "eigenvalue equation",
       "raw_headword": "EIGENVALUE EQUATION",
       "synonyms": [],
-      "definition": "A parameter-dependent equation that possesses non-vanishing solutions only for particular values (eigenvalues) of the parameter. Eigenvalue equations appear in many contexts, including the solution of systems of linear algebraic equations (matrix equations), differential or partial differential equations and integral equations. Eight Curve."
+      "definition": "A parameter-dependent equation of the form $A x = \\lambda x$ (or $\\hat{H}\\psi = E\\psi$ in quantum mechanics) that possesses non-trivial (non-vanishing) solutions only for specific values of the parameter $\\lambda$, called eigenvalues. The corresponding non-trivial solutions are eigenvectors or eigenfunctions."
     },
     {
       "word": "eigenvector",
@@ -56161,7 +56161,7 @@
         "characteristic vector",
         "latent vector"
       ],
-      "definition": "In a square matrix, it is a nonzero vector, x that does not change its direction under the associated linear transformation and satisfies the equation A x = λ x , where A is a square matrix and λ is a scalar called an eigenvalue."
+      "definition": "In linear algebra, a nonzero vector $x$ that, when transformed by a square matrix or linear operator $A$, changes only by a scalar factor $\\lambda$ (the eigenvalue):\n\n$$Ax = \\lambda x$$\n\nmeaning its direction remains unchanged (or reversed if $\\lambda < 0$)."
     },
     {
       "word": "eigh tcur ve",
@@ -56169,7 +56169,7 @@
       "synonyms": [
         "lemn isca teof gerono"
       ],
-      "definition": "A curve that has the Cartesian equation x 4 = a 2 ( x 2 - y 2 ) and the appearance of a figure eight such as the symbol for infinity, lying on its side."
+      "definition": "A quartic curve (also called the lemniscate-like figure-eight curve) having the Cartesian equation:\n\n$$x^4 = a^2 (x^2 - y^2)$$\n\nwhich has the visual appearance of a figure eight or the infinity symbol $\\infty$ lying on its side."
     },
     {
       "word": "eighteen-electron rule",
@@ -56207,7 +56207,7 @@
       "word": "einstein's equation",
       "raw_headword": "EINSTEIN'S EQUATION",
       "synonyms": [],
-      "definition": "1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe."
+      "definition": "1. Einstein's mass-energy equivalence equation:\n\n$$E = mc^2$$\n\nwhere $E$ is the energy, $m$ is the relativistic or rest mass, and $c$ is the speed of light in vacuum ($c \\approx 3 \\times 10^8\\text{ m/s}$). 2. Einstein's photoelectric equation:\n\n$$E_{\\max} = hf - W_0 = hf - hf_0$$\n\nwhere $E_{\\max} = \\frac{1}{2}mv_{\\max}^2$ is the maximum kinetic energy of emitted photoelectrons, $h$ is Planck's constant, $f$ is incident photon frequency, and $W_0$ is the metal work function ($f_0$ being the threshold frequency). 3. Einstein's Field Equations (EFE) in general relativity: $G_{\\mu\\nu} + \\Lambda g_{\\mu\\nu} = \\frac{8\\pi G}{c^4} T_{\\mu\\nu}$."
     },
     {
       "word": "einstein, albert",
@@ -56215,13 +56215,13 @@
       "synonyms": [
         "1879-1955"
       ],
-      "definition": "German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics \"for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect\". He is probably the most well known scientist of the 20 th century."
+      "definition": "German-born theoretical physicist (1879–1955) and Nobel laureate, widely regarded as one of the greatest physicists of all time. Famous for formulating the Special Theory of Relativity (1905), General Theory of Relativity (1915), the mass-energy equivalence formula $E = mc^2$, and the explanation of the photoelectric effect ($E = hf - W$), for which he received the 1921 Nobel Prize in Physics."
     },
     {
       "word": "einstein-smoluchowski equation",
       "raw_headword": "EINSTEIN-SMOLUCHOWSKI EQUATION",
       "synonyms": [],
-      "definition": "An unexpected connection revealed independently by Albert Einstein in 1905 and Marian Smoluchowski in 1906 in their papers on Brownian motion, which is a relationship between the diffusion coefficient D and the distance λ that a particle can jump in a time τ . The equation is given as D = λ 2 /2 τ and it gives a connection between the microscopic details of particle diffusion and the macroscopic quantities associated with the diffusion. This equation is an early example of a fluctuation-dissipation relation and it is frequently used in the electro diffusion phenomena."
+      "definition": "The relation discovered independently by Albert Einstein (1905) and Marian Smoluchowski (1906) connecting the microscopic diffusion coefficient $D$ of Brownian particles to thermal energy and mobility:\n\n$$D = \\mu k_B T = \\frac{k_B T}{6\\pi \\eta r}$$\n\nand in jump-diffusion: $D = \\frac{\\lambda^2}{2\\tau}$, where $\\lambda$ is the mean jump distance and $\\tau$ is the characteristic jump time."
     },
     {
       "word": "einsteinium",
@@ -56233,7 +56233,7 @@
       "word": "eisenstein's criterion",
       "raw_headword": "EISENSTEIN'S CRITERION",
       "synonyms": [],
-      "definition": "A condition that is sufficient for a polynomial with integer coefficients to be irreducible. It states that it suffices to find a prime p that does not divide the leading coefficient of the polynomial and that does divide all other coefficients, but is such that p 2 does not divide the constant coefficient. For example, the polynomial x n^-3 is irreducible for all n , but x n^-9 need not be. The corresponding result holds in a principal ideal domain. The criterion E is named after German mathematician, Ferdinand Gotthold Max Eisenstein (1823-1852)."
+      "definition": "A criterion for the irreducibility of a polynomial with integer coefficients. For a polynomial $P(x) = a_n x^n + a_{n-1} x^{n-1} + \\dots + a_1 x + a_0$, if there exists a prime $p$ such that $p \\nmid a_n$, $p \\mid a_i$ for all $0 \\le i < n$, and $p^2 \\nmid a_0$, then $P(x)$ is irreducible over the rational numbers $\\mathbb{Q}$. For example, $x^n - p$ is irreducible for every prime $p$ and $n \\ge 1$."
     },
     {
       "word": "ejaculation",
@@ -56303,7 +56303,7 @@
       "word": "elastance",
       "raw_headword": "ELASTANCE",
       "synonyms": [],
-      "definition": "The reciprocal of capacitance (ability to store electric charge). It is measured in farad^-1 ."
+      "definition": "The reciprocal of capacitance (the electrostatic stiffness or opposition to storing electric charge). Defined as:\n\n$$S = \\frac{1}{C} = \\frac{V}{Q}$$\n\nIts SI unit is the reciprocal farad ($\\text{F}^{-1}$), sometimes historically referred to as the daraf."
     },
     {
       "word": "elastic",
@@ -56330,7 +56330,7 @@
         "elastic modulus",
         "modulus of elasticity"
       ],
-      "definition": "The ratio of the stress applied to a body to the strain produced or the slope of its stress-strain curve in the elastic deformation region. It is the mathematical description of an object's tendency to be deformed elastically, when a force is applied to it. It may be expressed as λ = stress strain , where λ (lambda) is the elastic modulus, stress the force causing the deformation divided by the area to which the force is applied and strain, the ratio of the change caused by the stress to the original state of the object. If stress is measured in pascals, since strain is a unitless ratio, then the units of λ are also pascals. Due to the fact that the denominator of the above equation becomes unity if length is doubled, the elastic modulus becomes the stress needed to cause a sample of the material to double in length. Since this endpoint is not realistic because most materials will fail before reaching it, it is practical, due to the fact that small fractions of the defining load will operate in the same ratio."
+      "definition": "The ratio of the stress applied to a body to the resulting strain in the elastic deformation region:\n\n$$\\text{Modulus of Elasticity} = \\frac{\\text{Stress}}{\\text{Strain}}$$\n\nwhere $\\text{Stress} = \\frac{F}{A}$ (measured in $\\text{N/m}^2$ or $\\text{Pa}$) and $\\text{Strain} = \\frac{\\Delta L}{L}$ is dimensionless. The unit of elastic modulus is the pascal ($\\text{Pa}$ or $\\text{N/m}^2$). Common forms include Young's modulus $E$, shear modulus $G$, and bulk modulus $K$."
     },
     {
       "word": "elastic ratio",
@@ -56431,7 +56431,7 @@
       "word": "electric charge",
       "raw_headword": "ELECTRIC CHARGE",
       "synonyms": [],
-      "definition": "The fundamental property of matter that allows one object to exert an electric force on another object when near each other without physically touching. The amount of electric charge is defined by the word equation, electric charge ( Q ) = current ( I ) × time ( t in seconds). The SI unit of electric charge is the coulomb ( C ). It occurs in nature in two forms and conventionally described as positive and negative in order to distinguish between them in terms of the kinds of interactions they can have. The proton has a positive charge and the electron has a negative charge is a property of the electron. Two positively or negatively charged substances experience a mutual repulsive force, while positively charged objects and negatively charged objects experience an attractive force."
+      "definition": "A fundamental property of matter that governs electromagnetic interactions. Electric charge $Q$ is related to electric current $I$ and time $t$ by:\n\n$$Q = I \\times t$$\n\nwith the SI unit being the coulomb ($\\text{C} = \\text{A}\\cdot\\text{s}$). The elementary charge carried by a proton is $+e$ and by an electron is $-e$, where $e \\approx 1.602 \\times 10^{-19}\\text{ C}$."
     },
     {
       "word": "electric circuit",
@@ -56443,7 +56443,7 @@
       "word": "electric constant",
       "raw_headword": "ELECTRIC CONSTANT",
       "synonyms": [],
-      "definition": "The absolute permittivity of empty space, with the symbol ε 0 . It is equal to 1 in centimetre-gram-second electrostatic units and to farads per metre, where c o is the speed of light in free space and μ 0 is the vacuum permeability). Numerically, it is equal to 8.854 × 10 -12 farad per metre."
+      "definition": "The absolute permittivity of free space (vacuum permittivity), symbolized by $\\varepsilon_0$. It connects electric charge to mechanical force in Coulomb's law:\n\n$$\\varepsilon_0 = \\frac{1}{\\mu_0 c^2} \\approx 8.854 \\times 10^{-12}\\text{ F}\\cdot\\text{m}^{-1}$$\n\n(or $\\text{C}^2\\cdot\\text{N}^{-1}\\cdot\\text{m}^{-2}$)."
     },
     {
       "word": "electric current",
@@ -56457,7 +56457,7 @@
       "word": "electric current density",
       "raw_headword": "ELECTRIC CURRENT DENSITY",
       "synonyms": [],
-      "definition": "A measure of the density of an electric current, defined as a vector whose magnitude is the electric current per cross-sectional area. In SI units, the current density is measured in amperes per square metre. Its symbol is J . By magnitude it is the electric current divided by the cross sectional area: J = I / A , where I is the current flowing through the conductor given in Amperes and A is the cross sectional area in m2 ."
+      "definition": "A vector quantity $\\mathbf{J}$ representing the electric current per unit cross-sectional area:\n\n$$J = \\frac{I}{A}$$\n\nwith SI unit amperes per square metre ($\\text{A}\\cdot\\text{m}^{-2}$). Microscopically, $\\mathbf{J} = n q \\mathbf{v}_d = \\sigma \\mathbf{E}$, where $n$ is charge carrier density, $q$ is charge, $\\mathbf{v}_d$ is drift velocity, $\\sigma$ is electrical conductivity, and $\\mathbf{E}$ is electric field."
     },
     {
       "word": "electric dipole",
@@ -56477,7 +56477,7 @@
       "synonyms": [
         "electric flux density"
       ],
-      "definition": "The charge per unit area that would be displaced across a layer of a conductor placed across an electric field. Its symbol is D and it stands for displacement. The electric displacement field D is, therefore, defined as D ≡ ε 0 E + P , where ε 0 is the permittivity in free space, E is the actual average value of the electric field and P is the (macroscopic) density of the permanent and induced electric dipole moments in the material, known as the polarisation density. It is a vector field whose divergence depends on the density of bound charge in the material. It is responsible for the effects of free charges within materials. In free space, the electric displacement field is equivalent to flux density, a concept that lends understanding to Gauss's law."
+      "definition": "The electric displacement field $\\mathbf{D}$, defined in a dielectric medium as:\n\n$$\\mathbf{D} = \\varepsilon_0 \\mathbf{E} + \\mathbf{P}$$\n\nwhere $\\varepsilon_0$ is the vacuum permittivity, $\\mathbf{E}$ is the electric field strength, and $\\mathbf{P}$ is the electric polarization density. By Gauss's law for displacement, $\\nabla \\cdot \\mathbf{D} = \\rho_{\\text{free}}$, measuring the charge density of free charges."
     },
     {
       "word": "electric dog",
@@ -56489,7 +56489,7 @@
       "word": "electric field",
       "raw_headword": "ELECTRIC FIELD",
       "synonyms": [],
-      "definition": "A region within which a particle possessing electric charge experiences a force owing to the distribution of other charges; or a region around an electric charge in which an electric force is exerted on another charge. Its strength, E at any point is defined as the electric force , F exerted per unit positive electric charge, Q at that point: E = F Q . It is a type of electromagnetic field, having both magnitude and direction and can be represented by lines of force or field lines, that start on positive charges and terminate on negative charges. The electric field is stronger, where the field lines are closer than where they are farther apart. The value of the electric field has dimensions of force per unit charge and is measured in units of newtons per coulomb."
+      "definition": "A vector field around charged particles that exerts an electrostatic force on other charges. The electric field strength $\\mathbf{E}$ at a point is defined as:\n\n$$\\mathbf{E} = \\frac{\\mathbf{F}}{q}$$\n\nwhere $\\mathbf{F}$ is the electric force experienced by a small positive test charge $q$. Measured in newtons per coulomb ($\\text{N/C}$) or volts per metre ($\\text{V/m}$)."
     },
     {
       "word": "electric field strength",
@@ -56498,13 +56498,13 @@
         "electric field intensity",
         "electric intensity"
       ],
-      "definition": "A vector quantity, which is a measure of the strength of an electric field at a given point in space. It is equal to the force the field would induce on a unit electric charge at that point. Its symbol is E with a standard unit of volt per metre (v/m or v m^-1 ) or newton/coulomb: Force (newton)/Charge (coulomb): Its strength, E at any point is defined as the electric force F exerted per unit positive electric charge Q at that point: E = F Q . The fiel d strength E at a point is defined as the force per unit charge acting on a small positive charge placed at the point. The field strength at a particular distance from an object is directly proportional to the electric charge (in coulombs) on that object and inversely proportional to the distance from a charged object."
+      "definition": "The magnitude of the electric force exerted per unit positive charge placed at that point:\n\n$$E = \\frac{F}{Q}$$\n\nFor a point charge $Q$ at distance $r$ in vacuum, Coulomb's law gives:\n\n$$E = \\frac{1}{4\\pi \\varepsilon_0} \\frac{Q}{r^2}$$\n\nIts SI units are volts per metre ($\\text{V}\\cdot\\text{m}^{-1}$) or newtons per coulomb ($\\text{N}\\cdot\\text{C}^{-1}$)."
     },
     {
       "word": "electric flux",
       "raw_headword": "ELECTRIC FLUX",
       "synonyms": [],
-      "definition": "The strength of electric field acting on a particular area, defined as the area size multiplied by the component of the field acting at right angles to the area, expressed as ∅ = EA , where ∅ (phi) is the electric flux, E is the strength of the electric field and A is the area size."
+      "definition": "The measure of the distribution of the electric field through a given surface. For a uniform field $\\mathbf{E}$ through area $\\mathbf{A}$:\n\n$$\\Phi_E = \\mathbf{E} \\cdot \\mathbf{A} = E A \\cos\\theta$$\n\nand in general by surface integral $\\Phi_E = \\iint_S \\mathbf{E} \\cdot d\\mathbf{A}$. By Gauss's law, the net electric flux through any closed surface is $\\Phi_E = \\frac{Q_{\\text{enc}}}{\\varepsilon_0}$."
     },
     {
       "word": "electric insulator",
@@ -56551,7 +56551,7 @@
         "polarisation density",
         "polarised density"
       ],
-      "definition": "The vector field that expresses the density of permanent or induced electric dipole moments in a dielectric material or slight relative shift of positive and negative electric charge in opposite directions within an insulator or dielectric, induced by an external electric field. It occurs when an electric field distorts the negative cloud of electrons around positive atomic nuclei in a direction opposite the field. The polarisation vector P is defined as the dipole moment per unit volume V of a polarised material, P = . The SI unit is coulombs per square metre."
+      "definition": "The vector field $\\mathbf{P}$ representing the density of permanent or induced electric dipole moments $\\mathbf{p}$ in a dielectric material:\n\n$$\\mathbf{P} = \\frac{\\sum \\mathbf{p}}{\\Delta V}$$\n\nIn linear isotropic dielectrics, $\\mathbf{P} = \\varepsilon_0 \\chi_e \\mathbf{E}$, where $\\chi_e$ is the electric susceptibility. Its SI unit is coulombs per square metre ($\\text{C}\\cdot\\text{m}^{-2}$)."
     },
     {
       "word": "electric potential",
@@ -56563,7 +56563,7 @@
       "word": "electric power",
       "raw_headword": "ELECTRIC POWER",
       "synonyms": [],
-      "definition": "The rate at which electrical energy is supplied; or the rate at which electrical energy is dissipated in a system. For a direct current circuit, it is measured by the product of the current passing through a system and the potential difference across it: P = IV . In alternating-current circuits, the power is given by VI cosφ, where V and I are the RMS values and φ is the phase angle. Cosφ is called the power factor of the circuit. The SI unit of power is the watt and the term wattage is used to mean electric power in watts. Electricity can be produced mechanically by generation or chemically or by direct conversion from light in photovoltaic cells, also it can be stored chemically in batteries. When electric current flows in a circuit, it can transfer energy to do mechanical or thermodynamic work, with devices converting electrical energy into many useful forms, such as heat (electric heaters), light (light bulbs), motion (electric motors), sound (loudspeaker) or chemical changes. With resistive loads, Joule's law can be combined with Ohm's law ( $$I = \\frac{V}{R}$$ ) to yield another equation for dissipated power: Given that R is the electrical resistance, then P= I2 R= V2 R ."
+      "definition": "The rate at which electrical energy is transferred by an electric circuit. For direct current (DC):\n\n$$P = IV = I^2 R = \\frac{V^2}{R}$$\n\nwhere $V$ is potential difference, $I$ is current, and $R$ is resistance. In alternating current (AC) circuits, real power is given by:\n\n$$P = V_{\\text{rms}} I_{\\text{rms}} \\cos\\phi$$\n\nwhere $\\cos\\phi$ is the power factor. The SI unit of power is the watt ($\\text{W} = \\text{J/s}$)."
     },
     {
       "word": "electric quadrupole",
@@ -56621,7 +56621,7 @@
       "word": "electrical conductance",
       "raw_headword": "ELECTRICAL CONDUCTANCE",
       "synonyms": [],
-      "definition": "A measure of the capacity of an electrical element to conduct current. It is the inverse quantity of electrical resistance with the symbol G and expressed as G = ,."
+      "definition": "A measure of how easily electric current flows through an electrical element. Conductance $G$ is the reciprocal of electrical resistance $R$:\n\n$$G = \\frac{1}{R} = \\frac{I}{V}$$\n\nIts SI unit is the siemens ($\\text{S} = \\Omega^{-1}$)."
     },
     {
       "word": "electrical conductivity",
@@ -56629,7 +56629,7 @@
       "synonyms": [
         "specific conductance"
       ],
-      "definition": "The reciprocal quantity of electrical resistivity, which measures a material's ability to conduct an electric current. It is commonly represented by the Greek letter σ (sigma), but κ (kappa) (especially in electrical engineering) or γ (gamma) are also occasionally used. Its SI unit is siemens per metre (S ⋅ m^-1 ). It is expressed as σ = , where ρ is the resistivity. For a body of length L , resistance R and cross sectional area A , the electrical conductivity is given by σ = ."
+      "definition": "The intrinsic material property measuring the ability to conduct electric current, defined as the reciprocal of electrical resistivity $\\rho$:\n\n$$\\sigma = \\frac{1}{\\rho} = \\frac{L}{R A}$$\n\nwhere $R$ is electrical resistance, $A$ is cross-sectional area, and $L$ is length of the conductor. Its SI unit is siemens per metre ($\\text{S}\\cdot\\text{m}^{-1}$)."
     },
     {
       "word": "electrical conductor",
@@ -56651,7 +56651,7 @@
       "word": "electrical energy",
       "raw_headword": "ELECTRICAL ENERGY",
       "synonyms": [],
-      "definition": "The flow of electric charges as current along a conductor or a circuit to create energy that is converted into other forms of energy. It is a form of power created by the movement of electrons. Electrical energy is a secondary source of energy, which is obtained through the conversion of other forms of energy known as the primary sources of energy. The primary sources from which electrical energy is obtained can be either non-renewable forms of energy or renewable forms of energy. Examples are hydro or water, coal, nuclear energy, natural gas, oil, wind, from chemical reactions as in cells or batteries, etc. Power, measured in watts and time measured in seconds are factors of electrical energy, expressed as: Energy = Power x Time. The unit of energy is the joule. In terms of the charge of electron, e and applied voltage, V , electrical energy, E can be expressed as E = eV . Therefore, electrical power that has been converted into work in a certain time or power that has been used over time is called electrical energy. Electrical energy is expressed in kilowatt-hour (kWhr): Power (kw) × time (hour)."
+      "definition": "The energy derived from electric potential energy or the flow of electric charge. Given by:\n\n$$E = P \\times t = IVt = I^2 Rt = \\frac{V^2}{R}t$$\n\nFor a single electron moving through potential difference $V$, $E = eV$, where $1\\text{ eV} \\approx 1.602 \\times 10^{-19}\\text{ J}$. In commercial utility metering, energy is billed in kilowatt-hours ($1\\text{ kWh} = 3.6 \\times 10^6\\text{ J}$)."
     },
     {
       "word": "electrical hygrometer",
@@ -57109,7 +57109,7 @@
       "word": "electron beam",
       "raw_headword": "ELECTRON BEAM",
       "synonyms": [],
-      "definition": "Electrons released from a hot cathode by thermionic emission, all moving through vacuum with the same acceleration from cathode to anode. The speed at which the electron arrive at the anode can be determined by equating the kinetic energy gained to electrical potential energy lost: 1 2 mv 2 = eV ; v = 2 eV m e , where m is the mass of electrons, e the electronic charge, v the speed of electrons and V is the potential difference across the terminals."
+      "definition": "A stream of electrons emitted from a cathode and accelerated through a potential difference $V$. By conservation of energy, kinetic energy gained equals electrical potential energy lost:\n\n$$\\frac{1}{2} m_e v^2 = eV \\implies v = \\sqrt{\\frac{2eV}{m_e}}$$\n\nwhere $m_e$ is the electron mass, $e$ is electronic charge, and $v$ is velocity."
     },
     {
       "word": "electron biprism",
@@ -57358,7 +57358,7 @@
       "word": "electron rest mass",
       "raw_headword": "ELECTRON REST MASS",
       "synonyms": [],
-      "definition": "Atomic fundamental physical constant used as atomic unit of mass. It symbol is m e , which is = 9.1093897 (54) x 10 -31 kg."
+      "definition": "The rest mass of a stationary electron, a fundamental physical constant denoted $m_e$:\n\n$$m_e \\approx 9.1093837 \\times 10^{-31}\\text{ kg} \\approx 0.5109989\\text{ MeV}/c^2$$"
     },
     {
       "word": "electron scattering",
@@ -57824,7 +57824,7 @@
       "word": "element",
       "raw_headword": "ELEMENT",
       "synonyms": [],
-      "definition": "1. In geometry, a point, line, plane or other parts of a figure. 2. Also known as member , one of the objects or numbers that together form a set or class; if there is a structure imposed on the set, it may be a group, ring, field, etc. The p -elements of a group are those of order p α , where p is a prime and α is any positive integer. 3. Any of the terms in the array constituting a determinant or matrix. 4. Any one of the rectangles summed in an integral and represented by the expression following the integral sign; for example, in f x ( ) a b ∫ dx , where f ( x ) dx is an element of area. 5. A pure substance made up of atoms of the same kind and with the same atomic number that cannot be split chemically into simpler substances or a uniform substance which cannot be further decomposed by ordinary means. The total number of electrons in an element is equal to the total number of protons, but the number of neutrons may be different. Elements are classified in families or groups in the periodic table and they are often classified also as metals and non-metals. A metallic element is one whose atoms form positive ions in a solution and a non-metallic element is one whose atoms form negative ions in a solution. Some of the elements, including oxygen, nitrogen, the noble gases (helium, neon, argon, krypton, xenon and radon), sulfur, copper, silver and gold are found in nature in the free (uncombined) state. Most of the elements in nature are combined with other elements in the form of compounds. The most abundant element on the Earth is oxygen and the most abundant element in the universe is hydrogen. 6. In biology, a place or condition best suited or most favourable for an individual, for example, water is the element of fishes. 7. In astronomy, any of the numerical quantities, such as the major axis or eccentricity, used in describing the orbit of a planet, satellite, etc. 8. In electricity, the resistance wire in an electrical appliance such as an electric iron or oven."
+      "definition": "1. In set theory, an object belonging to a set ($x \\in A$). The $p$-elements of a group are those of order $p^\\alpha$ for prime $p$. 2. In calculus, an infinitesimal quantity summed in an integral, such as $dA = f(x)\\,dx$ in $\\int_a^b f(x)\\,dx$. 3. In chemistry, a pure chemical substance consisting of atoms with the same atomic number $Z$."
     },
     {
       "word": "elementarily equivalent",
@@ -57860,7 +57860,7 @@
       "word": "elementary function",
       "raw_headword": "ELEMENTARY FUNCTION",
       "synonyms": [],
-      "definition": "A member of the class of functions built up from a finite combination of constant functions, field operations such as addition, multiplication, division and root extractions; and algebraic, exponential and logarithmic functions and their inverses under repeated compositions. For example, log[tan^-1 [√(exp( x 2 ) + 1)] is constructed by successively applying each of the following operations to the result of the preceding: squaring, exponentiating, adding 1, extracting the square root, finding the inverse of the sine taking the logarithm. The simplest elementary functions include logarithm, exponential function (including the hyperbolic functions), power function and trigonometric functions."
+      "definition": "A function of one variable built up from a finite number of arithmetic operations ($+,-,\\times,\\div$), roots, exponentials, logarithms, trigonometric functions, and their inverse functions through repeated composition. For example: $f(x) = \\ln\\left(\\arctan\\left(\\sqrt{e^{x^2} + 1}\\right)\\right)$."
     },
     {
       "word": "elementary matrix",
@@ -57911,7 +57911,7 @@
       "word": "elementary reduction",
       "raw_headword": "ELEMENTARY REDUCTION",
       "synonyms": [],
-      "definition": "The operation that forms a word from another by replacing any term of the form xx^-1 or x^-1 x by the empty word; or the word so formed."
+      "definition": "In combinatorial group theory, the replacement of a subword of the form $x x^{-1}$ or $x^{-1} x$ in a free group word by the empty word $\\varepsilon$, or the process of reducing a word to its canonical irreducible form."
     },
     {
       "word": "elementary steps",
@@ -57991,7 +57991,7 @@
       "word": "eliminant",
       "raw_headword": "ELIMINANT",
       "synonyms": [],
-      "definition": "The relationship between coefficients that results from eliminating the variable from a set of simultaneous equations. For example, in the equations a 1 x + b 1 y + c 1 = 0, a 2 x + b 2 y + c 2 = 0, a 3 x + b 3 y + c 3 = 0; the eliminant is given by the matrix of coefficients: ."
+      "definition": "The condition or determinant resulting from eliminating variables between simultaneous algebraic equations. For three homogeneous linear equations in two unknowns $a_i x + b_i y + c_i = 0$ ($i=1,2,3$), the eliminant is the determinant of coefficients:\n\n$$\\begin{vmatrix} a_1 & b_1 & c_1 \\\\ a_2 & b_2 & c_2 \\\\ a_3 & b_3 & c_3 \\end{vmatrix} = 0$$"
     },
     {
       "word": "elimination",
@@ -58017,7 +58017,7 @@
       "synonyms": [
         "elli ptic part ial differential equation"
       ],
-      "definition": "A second order partial differential equation, which includes Laplace's equation, having the form au xx + bu xy + cu yy + du x + eu y + fu = h , with the discriminant b 2 - 4 ac negative."
+      "definition": "A second-order partial differential equation of the general form:\n\n$$a u_{xx} + b u_{xy} + c u_{yy} + d u_x + e u_y + f u = g$$\n\nsatisfying the elliptic discriminant condition $b^2 - 4ac < 0$. The prototypical example is Laplace's equation $\\nabla^2 u = u_{xx} + u_{yy} = 0$."
     },
     {
       "word": "ellingham diagram",
@@ -58029,7 +58029,7 @@
       "word": "ellipse",
       "raw_headword": "ELLIPSE",
       "synonyms": [],
-      "definition": "1. A regular oval shaped curve joining all points around two fixed points such that the sum of the distances from those points is always constant. Assuming that the distance between two points R, R′ of a plane is denoted by 2 c , c > 0, let 2 a be a constant, with a > c . Then the ellipse with foci R and R ′ and major axis 2 a is the locus of points P of the plane such that PR + PR ′ = 2 a , where PF denotes the distance of P and R . One property of an ellipse is that the reflection offits boundary of a line from one focus will pass through the other. The standard equation of an ellipse is given by x 2 a 2 + y 2 b 2 = 1. 2. A conic formed by the intersection of a plane with a right circular cone so that the plane is inclined to the axis of the cone at an angle of the cone."
+      "definition": "A plane curve surrounding two focal points $F_1, F_2$ such that the sum of the distances to the two focal points is constant: $PF_1 + PF_2 = 2a$. The standard Cartesian equation of an ellipse centered at the origin is:\n\n$$\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$$\n\nwhere $a$ is the semi-major axis, $b$ is the semi-minor axis, and eccentricity $e = \\sqrt{1 - \\frac{b^2}{a^2}}$."
     },
     {
       "word": "ellipsoid",
@@ -58037,7 +58037,7 @@
       "synonyms": [
         "spheroid"
       ],
-      "definition": "A solid body formed when an ellipse is yobbaacczx An ellipsoid on a three dimensional plane rotated about an axis. It is a closed type of quadric surface that is a higher dimensional analogue of an ellipse. The equation of a standard axis-aligned ellipsoid body in an xyz -Cartesian coordinate system is x 2 a 2 + y 2 b 2 + z 2 c 2 = 1, where, a and b are the equatorial radii along the x and y axes and c is the polar radius along the z -axis, all of which are fixed positive real determining the shape of the ellipsoid. Elliptic refers to possessing the shape of an ellipse; broad at the middle but narrowing at the two equal ends."
+      "definition": "A closed quadric surface that is a three-dimensional analogue of an ellipse. The standard Cartesian equation of an ellipsoid centered at the origin is:\n\n$$\\frac{x^2}{a^2} + \\frac{y^2}{b^2} + \\frac{z^2}{c^2} = 1$$\n\nwhere $a, b, c$ denote the semi-principal axes along the $x, y, z$ directions respectively."
     },
     {
       "word": "ellipsoid method",

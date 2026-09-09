@@ -1,0 +1,180 @@
+=== 1. [28] earnshaw's theorem ===
+RAW: 
+DEF: It states that a collection of point charges cannot be maintained in a stable static equilibrium configuration solely by the electrostatic interaction of the charges. This theorem was first proved by Samuel Earnshaw in 1842 and it is a fundamental result concerning bodies that interact according to inverse square laws, such as Coulomb's law of electrostatics and Newton's law of gravitation. It applies to the classical law forces (electric and gravitational) and also to the magnetic forces of permanent magnets and paramagnetic materials but not diamagnetic materials.
+
+=== 2. [49] eberlein-smulian theorem ===
+RAW: 
+DEF: The theorem, named after William Frederick Eberlein and Witold Lwowitsch Schmulian that asserts the equivalence of compactness (Heine-Borel compactness), sequential compactness and limit point compactness in the weak topology for a Banach space.
+
+=== 3. [53] ebullioscope constant ===
+RAW: 
+DEF: The ratio of the elevation of the boiling point of a solvent caused by dissolving a solute to the molality of the solution, taken at extremely low concentrations and relates molality to boiling point elevation. Its symbol is Kb.
+
+=== 4. [102] economy ===
+RAW: 
+DEF: A mathematical model of an economic system in which, commonly, there are m producers, each with a production set P j and n consumers, each with a consumption set C i and an associated ordering ≤ i . These sets lie on an Euclidean space, whose dimension corresponds to the number of goods in the economy. There is a total resource level w . The producers each produce a vector y i in P j and the consumers have a demand x i in C i . These m + n elements define a state of the economy. The excess demand is ∑ x i - ∑ y j - w and a market equilibrium occurs if excess demand is zero. Individual consumers will try to maximize their preference satisfaction; this leads to the study of equilibria that occur as a market equilibrium together with a pricing of resources that every producer maximizes profit and every consumer optimizes satisfaction.
+
+=== 5. [126] eddington limit ===
+RAW: 
+DEF: A theoretical limit for the maximum value of the brightness of a star of a given E mass, named after British astronomer and physicist, Arthur Stanley Eddington and given as L = 4 π GMm p c σ T , where G is the gravitational pressure, M is the mass of the luminous object, m P is the mass of a proton, c is the speed of light and σ T is the effective area of an electron when it is illuminated by radiation. This limit exists because the radiation pressure caused by the nuclear fission reactions powering the star has to counter, but not exceed the gravitational force that would cause gravitational collapse of the star. A star emitting radiation at greater than the Eddington limit would break up. In a star it is defined as the point where the gravitational force inwards equals the continuum radiation force outwards, assuming hydrostatic equilibrium and spherical symmetry. When exceeding the Eddington luminosity, a star would initiate a very intense continuum driven stellar wind from its outer layers. Since most massive stars have luminosities far below the Eddington limit, however, their winds are mostly driven by the less intense line absorption.
+
+=== 6. [161] effective nuclear charge ===
+RAW: 
+DEF: The apparent nuclear or net positive charge which an outermost electron actually experiences through attraction in a multi-electron atom as a result of the shielding effect by other electrons. Its symbol is Z eff . Since the shielding effect of negatively charged electrons prevents higher orbital electrons from experiencing the full nuclear charge by the repelling effect of inner- layered electrons, the term 'effective' is used to qualify the nuclear charge. The strength of the nuclear charge can be determined by looking at the oxidation number of the atom. Where there is only one electron in an atom, that electron experiences the full charge of the positive nucleus, in which case, the effective nuclear charge can be calculated from Coulomb's law. However, in a multi-electron atom the outer electrons are simultaneously attracted to the positive nucleus E and repelled by the negatively charged electrons. The effective nuclear charge on such an electron is given by the expression: Z eff = Z - S, where, Z is the number of protons in the nucleus (atomic number) and S is the average number of electrons between the nucleus and the electron in question (the number of nonvalence electrons).
+
+=== 7. [172] efficiency ===
+RAW: 
+DEF: 1. A measure of the performance or how well a machine or other energy changing device changes energy into useful work. It is the measure of the percentage ratio of work output to work input. For a simple machine, it is given by: E = Energy Output Energy input × 100%. For example, a gear transmission is 97% efficient, when the useful energy output is 97% of the input, with the other 3% being lost as heat due to friction. Automobile engines have low efficiency (below 30%) because out of the total energy content of fuel converted to heat, only a small portion provides motive power, while a substantial amount is lost in the radiator and car exhaust. 2. In chemistry, it is the ratio between the useful energy delivered or bound and the energy supplied: energy output/energy input. It is also used in the sense of a quantitative measure of the relative rate of a given step involving a species with respect to the sum of the rates of all of the parallel steps which depopulate that species. Its symbol is η.
+
+=== 8. [179] effort ===
+RAW: 
+DEF: The force given to a machine to move a load and expressed as: Effort = Load (Force)/Distance.
+
+=== 9. [192] egoroff's theorem ===
+RAW: 
+DEF: Named after the Russian analyst, D. F. Egornoff (1869-1931), the result that if a sequence of almost everywhere finite and measurable functions converges almost everywhere to a finite limit, on a set of finite measure, E, then there is, for each positive ε, a measurable subset F with a measure at most ε such that uniform convergence occurs on E \ F.
+
+=== 10. [198] ehrenfest theorem ===
+RAW: 
+DEF: The theorem that a quantum-mechanical wave packet obeys the equations of motion of the corresponding classical particle when the position, momentum and force acting on the particle are replaced by the expectation values of these quantities.
+
+=== 11. [202] eigenvalue ===
+RAW: 
+DEF: In a characteristic polynomial, for a square matrix A, in which x is a nonzero vector called the eigenvector that does not change its direction under the associated linear transformation and satisfies the equation A x = λ x , the scalar, λ is the eigenvalue. In other words, it is a root, λ, of the characteristic equation det( A - t I). For a linear operator A, it is a solution, λ, of the equation AX = λ X(X ≠ 0).
+
+=== 12. [203] eigenvalue equation ===
+RAW: 
+DEF: A parameter-dependent equation that possesses non-vanishing solutions only for particular values (eigenvalues) of the parameter. Eigenvalue equations appear in many contexts, including the solution of systems of linear algebraic equations (matrix equations), differential or partial differential equations and integral equations. Eight Curve.
+
+=== 13. [204] eigenvector ===
+RAW: 
+DEF: In a square matrix, it is a nonzero vector, x that does not change its direction under the associated linear transformation and satisfies the equation A x = λ x , where A is a square matrix and λ is a scalar called an eigenvalue.
+
+=== 14. [205] eigh tcur ve ===
+RAW: 
+DEF: A curve that has the Cartesian equation x 4 = a 2 ( x 2 - y 2 ) and the appearance of a figure eight such as the symbol for infinity, lying on its side.
+
+=== 15. [211] einstein's equation ===
+RAW: 
+DEF: 1. It refers to Einstein's mass-energy relationship, which is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is a quantity of energy, m (the mass) and c (the speed of light). Alternatively, it is defined as the relationship E max = hf - W , where E max is the maximum kinetic energy of electrons emitted in the photo-emissive effect; h , the Planck's constant; f , the frequency of the incident radiation and W the work function of the emitter. 2. Einstein's Field Equations (EFE) or Einstein's equations are a set of ten equations in Albert Einstein's theory of general relativity which describe the fundamental interaction of gravitation as a result of space-time being curved by matter and energy. Apart from obeying local energy-momentum conservation, the EFE reduces to Newton's law of gravitation, where the gravitational field is weak and velocities much less than the speed of light. In much the same way that electromagnetic fields are determined (using charges and currents via Maxwell's equations) the EFE is used to determine the space-time geometry resulting from the presence of mass-energy and linear momentum relationship between the metric tensor and the Einstein tensor and it allows the EFE to be written as a set of non-linear partial differential equations when used in this way. The solutions of the EFE are the components of the metric tensor. These equations are also used to study phenomena such as gravitational waves. Also, special classes of exact solutions are most often studied because they model many gravitational phenomena, such as rotating black holes and the expanding universe.
+
+=== 16. [212] einstein, albert ===
+RAW: 
+DEF: German-born American physicist and Nobel laureate, who is best known as the creator of the special and general theories of relativity and for his hypothesis concerning the particle nature of light. In 1905, he published three papers, each of which had a profound effect on the development of physics. In one paper, he proposed the theory of special relativity, which provides a correct description for particles travelling at high speeds. The two postulates of the special theory of relativity were that the speed of light in a vacuum is constant and that the laws of physics are the same for all inertial reference frames. He is best known for his mass-energy equivalence formula $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . He received the1921 Nobel Prize in Physics "for his services to theoretical physics and especially for his discovery of the law of the photoelectric effect". He is probably the most well known scientist of the 20 th century.
+
+=== 17. [213] einstein-smoluchowski equation ===
+RAW: 
+DEF: An unexpected connection revealed independently by Albert Einstein in 1905 and Marian Smoluchowski in 1906 in their papers on Brownian motion, which is a relationship between the diffusion coefficient D and the distance λ that a particle can jump in a time τ . The equation is given as D = λ 2 /2 τ and it gives a connection between the microscopic details of particle diffusion and the macroscopic quantities associated with the diffusion. This equation is an early example of a fluctuation-dissipation relation and it is frequently used in the electro diffusion phenomena.
+
+=== 18. [215] eisenstein's criterion ===
+RAW: 
+DEF: A condition that is sufficient for a polynomial with integer coefficients to be irreducible. It states that it suffices to find a prime p that does not divide the leading coefficient of the polynomial and that does divide all other coefficients, but is such that p 2 does not divide the constant coefficient. For example, the polynomial x n^-3 is irreducible for all n , but x n^-9 need not be. The corresponding result holds in a principal ideal domain. The criterion E is named after German mathematician, Ferdinand Gotthold Max Eisenstein (1823-1852).
+
+=== 19. [226] elastance ===
+RAW: 
+DEF: The reciprocal of capacitance (ability to store electric charge). It is measured in farad^-1 .
+
+=== 20. [230] elastic modules ===
+RAW: 
+DEF: The ratio of the stress applied to a body to the strain produced or the slope of its stress-strain curve in the elastic deformation region. It is the mathematical description of an object's tendency to be deformed elastically, when a force is applied to it. It may be expressed as λ = stress strain , where λ (lambda) is the elastic modulus, stress the force causing the deformation divided by the area to which the force is applied and strain, the ratio of the change caused by the stress to the original state of the object. If stress is measured in pascals, since strain is a unitless ratio, then the units of λ are also pascals. Due to the fact that the denominator of the above equation becomes unity if length is doubled, the elastic modulus becomes the stress needed to cause a sample of the material to double in length. Since this endpoint is not realistic because most materials will fail before reaching it, it is practical, due to the fact that small fractions of the defining load will operate in the same ratio.
+
+=== 21. [246] electric charge ===
+RAW: 
+DEF: The fundamental property of matter that allows one object to exert an electric force on another object when near each other without physically touching. The amount of electric charge is defined by the word equation, electric charge ( Q ) = current ( I ) × time ( t in seconds). The SI unit of electric charge is the coulomb ( C ). It occurs in nature in two forms and conventionally described as positive and negative in order to distinguish between them in terms of the kinds of interactions they can have. The proton has a positive charge and the electron has a negative charge is a property of the electron. Two positively or negatively charged substances experience a mutual repulsive force, while positively charged objects and negatively charged objects experience an attractive force.
+
+=== 22. [248] electric constant ===
+RAW: 
+DEF: The absolute permittivity of empty space, with the symbol ε 0 . It is equal to 1 in centimetre-gram-second electrostatic units and to farads per metre, where c o is the speed of light in free space and μ 0 is the vacuum permeability). Numerically, it is equal to 8.854 × 10 -12 farad per metre.
+
+=== 23. [250] electric current density ===
+RAW: 
+DEF: A measure of the density of an electric current, defined as a vector whose magnitude is the electric current per cross-sectional area. In SI units, the current density is measured in amperes per square metre. Its symbol is J . By magnitude it is the electric current divided by the cross sectional area: J = I / A , where I is the current flowing through the conductor given in Amperes and A is the cross sectional area in m2 .
+
+=== 24. [253] electric displacement ===
+RAW: 
+DEF: The charge per unit area that would be displaced across a layer of a conductor placed across an electric field. Its symbol is D and it stands for displacement. The electric displacement field D is, therefore, defined as D ≡ ε 0 E + P , where ε 0 is the permittivity in free space, E is the actual average value of the electric field and P is the (macroscopic) density of the permanent and induced electric dipole moments in the material, known as the polarisation density. It is a vector field whose divergence depends on the density of bound charge in the material. It is responsible for the effects of free charges within materials. In free space, the electric displacement field is equivalent to flux density, a concept that lends understanding to Gauss's law.
+
+=== 25. [255] electric field ===
+RAW: 
+DEF: A region within which a particle possessing electric charge experiences a force owing to the distribution of other charges; or a region around an electric charge in which an electric force is exerted on another charge. Its strength, E at any point is defined as the electric force , F exerted per unit positive electric charge, Q at that point: E = F Q . It is a type of electromagnetic field, having both magnitude and direction and can be represented by lines of force or field lines, that start on positive charges and terminate on negative charges. The electric field is stronger, where the field lines are closer than where they are farther apart. The value of the electric field has dimensions of force per unit charge and is measured in units of newtons per coulomb.
+
+=== 26. [256] electric field strength ===
+RAW: 
+DEF: A vector quantity, which is a measure of the strength of an electric field at a given point in space. It is equal to the force the field would induce on a unit electric charge at that point. Its symbol is E with a standard unit of volt per metre (v/m or v m^-1 ) or newton/coulomb: Force (newton)/Charge (coulomb): Its strength, E at any point is defined as the electric force F exerted per unit positive electric charge Q at that point: E = F Q . The fiel d strength E at a point is defined as the force per unit charge acting on a small positive charge placed at the point. The field strength at a particular distance from an object is directly proportional to the electric charge (in coulombs) on that object and inversely proportional to the distance from a charged object.
+
+=== 27. [257] electric flux ===
+RAW: 
+DEF: The strength of electric field acting on a particular area, defined as the area size multiplied by the component of the field acting at right angles to the area, expressed as ∅ = EA , where ∅ (phi) is the electric flux, E is the strength of the electric field and A is the area size.
+
+=== 28. [264] electric polarisation ===
+RAW: 
+DEF: The vector field that expresses the density of permanent or induced electric dipole moments in a dielectric material or slight relative shift of positive and negative electric charge in opposite directions within an insulator or dielectric, induced by an external electric field. It occurs when an electric field distorts the negative cloud of electrons around positive atomic nuclei in a direction opposite the field. The polarisation vector P is defined as the dipole moment per unit volume V of a polarised material, P = . The SI unit is coulombs per square metre.
+
+=== 29. [266] electric power ===
+RAW: 
+DEF: The rate at which electrical energy is supplied; or the rate at which electrical energy is dissipated in a system. For a direct current circuit, it is measured by the product of the current passing through a system and the potential difference across it: P = IV . In alternating-current circuits, the power is given by VI cosφ, where V and I are the RMS values and φ is the phase angle. Cosφ is called the power factor of the circuit. The SI unit of power is the watt and the term wattage is used to mean electric power in watts. Electricity can be produced mechanically by generation or chemically or by direct conversion from light in photovoltaic cells, also it can be stored chemically in batteries. When electric current flows in a circuit, it can transfer energy to do mechanical or thermodynamic work, with devices converting electrical energy into many useful forms, such as heat (electric heaters), light (light bulbs), motion (electric motors), sound (loudspeaker) or chemical changes. With resistive loads, Joule's law can be combined with Ohm's law ( $$I = \frac{V}{R}$$ ) to yield another equation for dissipated power: Given that R is the electrical resistance, then P= I2 R= V2 R .
+
+=== 30. [275] electrical conductance ===
+RAW: 
+DEF: A measure of the capacity of an electrical element to conduct current. It is the inverse quantity of electrical resistance with the symbol G and expressed as G = ,.
+
+=== 31. [276] electrical conductivity ===
+RAW: 
+DEF: The reciprocal quantity of electrical resistivity, which measures a material's ability to conduct an electric current. It is commonly represented by the Greek letter σ (sigma), but κ (kappa) (especially in electrical engineering) or γ (gamma) are also occasionally used. Its SI unit is siemens per metre (S ⋅ m^-1 ). It is expressed as σ = , where ρ is the resistivity. For a body of length L , resistance R and cross sectional area A , the electrical conductivity is given by σ = .
+
+=== 32. [279] electrical energy ===
+RAW: 
+DEF: The flow of electric charges as current along a conductor or a circuit to create energy that is converted into other forms of energy. It is a form of power created by the movement of electrons. Electrical energy is a secondary source of energy, which is obtained through the conversion of other forms of energy known as the primary sources of energy. The primary sources from which electrical energy is obtained can be either non-renewable forms of energy or renewable forms of energy. Examples are hydro or water, coal, nuclear energy, natural gas, oil, wind, from chemical reactions as in cells or batteries, etc. Power, measured in watts and time measured in seconds are factors of electrical energy, expressed as: Energy = Power x Time. The unit of energy is the joule. In terms of the charge of electron, e and applied voltage, V , electrical energy, E can be expressed as E = eV . Therefore, electrical power that has been converted into work in a certain time or power that has been used over time is called electrical energy. Electrical energy is expressed in kilowatt-hour (kWhr): Power (kw) × time (hour).
+
+=== 33. [332] electromagnetic potentials ===
+RAW: 
+DEF: Name for a scalar field, φ and a vector field, A, in terms of which the electric field and magnetic field, E and B respectively, may be expressed completely. This results in a degree of simplification in the use of Maxwell's equations, particularly in their relativistic formulation.
+
+=== 34. [349] electron beam ===
+RAW: 
+DEF: Electrons released from a hot cathode by thermionic emission, all moving through vacuum with the same acceleration from cathode to anode. The speed at which the electron arrive at the anode can be determined by equating the kinetic energy gained to electrical potential energy lost: 1 2 mv 2 = eV ; v = 2 eV m e , where m is the mass of electrons, e the electronic charge, v the speed of electrons and V is the potential difference across the terminals.
+
+=== 35. [352] electron capture ===
+RAW: 
+DEF: 1. A radioactive transformation process for isotopes that have too many protons in the nucleus and insufficient energy to emit a positron. In this case, one of the orbital electrons, usually from the K or L shell is captured by a proton in nucleus, thus forming a neutron and a neutrino (neutral elementary particle). Since the proton is changed to a neutron the atomic number decreases by 1, the nuclide is transformed into a new element. But the atomic mass number remains unchanged. Examples of nuclides that undergo electron capture are 41 Ca, 51 Cr, 56 Ni, etc. 2. The formation of a negative ion by an atom or molecule when it acquires an extra free electron or a radioactive transformation in which a nucleus acquires an electron from an inner orbit of the atom thereby transforming initially into a nucleus with the same mass number but an atomic number one less than that of the original nucleus. It is accompanied by emission of an x-ray photon or Auger electron as the vacancy in the inner orbit is filled by an outer electron. If the energy difference between the parent atom and the daughter atom is less than 1.022 MeV, positron emission is forbidden and electron capture is the sole decay mode. For example, Rubidium^-83 will decay to Krypton^-83 only by electron capture (the energy difference is about 0.9 MeV).
+
+=== 36. [386] electron rest mass ===
+RAW: 
+DEF: Atomic fundamental physical constant used as atomic unit of mass. It symbol is m e , which is = 9.1093897 (54) x 10 -31 kg.
+
+=== 37. [418] electrophilic addition ===
+RAW: 
+DEF: A chemical reaction that involves the addition of a molecule to an unsaturated organic compound across a double or triple bond. In this reaction, a π bond is broken and two new σ bonds are formed in a chemical compound. The sustaining force for this reaction is the formation of an electrophile X + that forms a covalent bond with an electron-rich unsaturated C=C bond. The positive charge on X is transferred to the carbon-carbon bond, with the formation of a carbocation.
+
+=== 38. [455] element ===
+RAW: 
+DEF: 1. In geometry, a point, line, plane or other parts of a figure. 2. Also known as member , one of the objects or numbers that together form a set or class; if there is a structure imposed on the set, it may be a group, ring, field, etc. The p -elements of a group are those of order p α , where p is a prime and α is any positive integer. 3. Any of the terms in the array constituting a determinant or matrix. 4. Any one of the rectangles summed in an integral and represented by the expression following the integral sign; for example, in f x ( ) a b ∫ dx , where f ( x ) dx is an element of area. 5. A pure substance made up of atoms of the same kind and with the same atomic number that cannot be split chemically into simpler substances or a uniform substance which cannot be further decomposed by ordinary means. The total number of electrons in an element is equal to the total number of protons, but the number of neutrons may be different. Elements are classified in families or groups in the periodic table and they are often classified also as metals and non-metals. A metallic element is one whose atoms form positive ions in a solution and a non-metallic element is one whose atoms form negative ions in a solution. Some of the elements, including oxygen, nitrogen, the noble gases (helium, neon, argon, krypton, xenon and radon), sulfur, copper, silver and gold are found in nature in the free (uncombined) state. Most of the elements in nature are combined with other elements in the form of compounds. The most abundant element on the Earth is oxygen and the most abundant element in the universe is hydrogen. 6. In biology, a place or condition best suited or most favourable for an individual, for example, water is the element of fishes. 7. In astronomy, any of the numerical quantities, such as the major axis or eccentricity, used in describing the orbit of a planet, satellite, etc. 8. In electricity, the resistance wire in an electrical appliance such as an electric iron or oven.
+
+=== 39. [456] elementarily equivalent ===
+RAW: 
+DEF: Of models, such that every sentence in one model is true in the other. Two structures M and N of the same signature, σ are elementarily equivalent if every first-order sentence (formula without free variables) over σ is true in M if and only if it is true in N. This is a weaker relation than isomorphism; that is isomorphic models are elementarily equivalent, but not necessarily vice versa. For example, the non-standard real numbers and the ordinary real numbers are elementarily equivalent.
+
+=== 40. [461] elementary function ===
+RAW: 
+DEF: A member of the class of functions built up from a finite combination of constant functions, field operations such as addition, multiplication, division and root extractions; and algebraic, exponential and logarithmic functions and their inverses under repeated compositions. For example, log[tan^-1 [√(exp( x 2 ) + 1)] is constructed by successively applying each of the following operations to the result of the preceding: squaring, exponentiating, adding 1, extracting the square root, finding the inverse of the sine taking the logarithm. The simplest elementary functions include logarithm, exponential function (including the hyperbolic functions), power function and trigonometric functions.
+
+=== 41. [468] elementary reduction ===
+RAW: 
+DEF: The operation that forms a word from another by replacing any term of the form xx^-1 or x^-1 x by the empty word; or the word so formed.
+
+=== 42. [480] eliminant ===
+RAW: 
+DEF: The relationship between coefficients that results from eliminating the variable from a set of simultaneous equations. For example, in the equations a 1 x + b 1 y + c 1 = 0, a 2 x + b 2 y + c 2 = 0, a 3 x + b 3 y + c 3 = 0; the eliminant is given by the matrix of coefficients: .
+
+=== 43. [484] elli ptic equa tion ===
+RAW: 
+DEF: A second order partial differential equation, which includes Laplace's equation, having the form au xx + bu xy + cu yy + du x + eu y + fu = h , with the discriminant b 2 - 4 ac negative.
+
+=== 44. [486] ellipse ===
+RAW: 
+DEF: 1. A regular oval shaped curve joining all points around two fixed points such that the sum of the distances from those points is always constant. Assuming that the distance between two points R, R′ of a plane is denoted by 2 c , c > 0, let 2 a be a constant, with a > c . Then the ellipse with foci R and R ′ and major axis 2 a is the locus of points P of the plane such that PR + PR ′ = 2 a , where PF denotes the distance of P and R . One property of an ellipse is that the reflection offits boundary of a line from one focus will pass through the other. The standard equation of an ellipse is given by x 2 a 2 + y 2 b 2 = 1. 2. A conic formed by the intersection of a plane with a right circular cone so that the plane is inclined to the axis of the cone at an angle of the cone.
+
+=== 45. [487] ellipsoid ===
+RAW: 
+DEF: A solid body formed when an ellipse is yobbaacczx An ellipsoid on a three dimensional plane rotated about an axis. It is a closed type of quadric surface that is a higher dimensional analogue of an ellipse. The equation of a standard axis-aligned ellipsoid body in an xyz -Cartesian coordinate system is x 2 a 2 + y 2 b 2 + z 2 c 2 = 1, where, a and b are the equatorial radii along the x and y axes and c is the polar radius along the z -axis, all of which are fixed positive real determining the shape of the ellipsoid. Elliptic refers to possessing the shape of an ellipse; broad at the middle but narrowing at the two equal ends.
+

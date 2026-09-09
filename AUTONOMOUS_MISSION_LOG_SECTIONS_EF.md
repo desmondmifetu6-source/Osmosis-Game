@@ -184,7 +184,46 @@ Total Screenshots Processed: **94 / 94 (100% COMPLETE)** across Batches 1 to 10.
 4. Compile index into `core_dictionary.js`.
 5. Run integrity check.
 
-*(Will be populated batch-by-batch upon scanning)*
+### Batch 1: Candidates 1 – 45 (37 Enriched Definitions)
+| Index | Word | Key Formulas / Relations Typeset into KaTeX | Status |
+|---|---|---|---|
+| 102 | `economy` | $P_j$, $C_i$, $\le_i$, $y_j \in P_j$, $x_i \in C_i$, excess demand $\sum x_i - \sum y_j - w = 0$ | ✅ Enriched |
+| 126 | `eddington limit` | $$L_{\text{Edd}} = \frac{4\pi G M m_p c}{\sigma_T}$$ | ✅ Enriched |
+| 161 | `effective nuclear charge` | $$Z_{\text{eff}} = Z - S$$ | ✅ Enriched |
+| 172 | `efficiency` | $$\text{Efficiency} = \frac{\text{Energy Output}}{\text{Energy Input}} \times 100\%,\quad \eta$$ | ✅ Enriched |
+| 179 | `effort` | $$\text{Work} = \text{Effort} \times \text{Distance},\quad \text{M.A.} = \frac{\text{Load}}{\text{Effort}}$$ | ✅ Enriched |
+| 192 | `egoroff's theorem` | $f_n \to f$ a.e., $\forall \varepsilon > 0, \exists F \subset E: \mu(F) < \varepsilon, f_n \rightrightarrows f \text{ on } E \setminus F$ | ✅ Enriched |
+| 202 | `eigenvalue` | $$Ax = \lambda x,\quad \det(A - \lambda I) = 0$$ | ✅ Enriched |
+| 203 | `eigenvalue equation` | $Ax = \lambda x,\quad \hat{H}\psi = E\psi$ | ✅ Enriched |
+| 204 | `eigenvector` | $$Ax = \lambda x$$ | ✅ Enriched |
+| 205 | `eigh tcur ve` | $$x^4 = a^2(x^2 - y^2)$$ | ✅ Enriched |
+| 211 | `einstein's equation` | $$E = mc^2,\quad E_{\max} = hf - W_0 = hf - hf_0,\quad G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}$$ | ✅ Enriched |
+| 212 | `einstein, albert` | $E = mc^2,\quad E = hf - W$ | ✅ Enriched |
+| 213 | `einstein-smoluchowski equation` | $$D = \mu k_B T = \frac{k_B T}{6\pi \eta r},\quad D = \frac{\lambda^2}{2\tau}$$ | ✅ Enriched |
+| 215 | `eisenstein's criterion` | $P(x) = \sum a_i x^i$, $p \nmid a_n$, $p \mid a_i$ ($i<n$), $p^2 \nmid a_0 \implies P(x)$ irreducible | ✅ Enriched |
+| 226 | `elastance` | $$S = \frac{1}{C} = \frac{V}{Q},\quad \text{F}^{-1}$$ | ✅ Enriched |
+| 230 | `elastic modules` | $$\text{Modulus} = \frac{\text{Stress}}{\text{Strain}} = \frac{F/A}{\Delta L/L},\quad \text{Pa}$$ | ✅ Enriched |
+| 246 | `electric charge` | $$Q = I \times t,\quad e \approx 1.602 \times 10^{-19}\text{ C}$$ | ✅ Enriched |
+| 248 | `electric constant` | $$\varepsilon_0 = \frac{1}{\mu_0 c^2} \approx 8.854 \times 10^{-12}\text{ F}\cdot\text{m}^{-1}$$ | ✅ Enriched |
+| 250 | `electric current density` | $$J = \frac{I}{A} = n q v_d = \sigma E,\quad \text{A}\cdot\text{m}^{-2}$$ | ✅ Enriched |
+| 253 | `electric displacement` | $$\mathbf{D} = \varepsilon_0 \mathbf{E} + \mathbf{P},\quad \nabla \cdot \mathbf{D} = \rho_{\text{free}}$$ | ✅ Enriched |
+| 255 | `electric field` | $$\mathbf{E} = \frac{\mathbf{F}}{q},\quad \text{N/C},\ \text{V/m}$$ | ✅ Enriched |
+| 256 | `electric field strength` | $$E = \frac{F}{Q} = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}$$ | ✅ Enriched |
+| 257 | `electric flux` | $$\Phi_E = \mathbf{E}\cdot\mathbf{A} = \iint_S \mathbf{E}\cdot d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}$$ | ✅ Enriched |
+| 264 | `electric polarisation` | $$\mathbf{P} = \frac{\sum\mathbf{p}}{\Delta V} = \varepsilon_0 \chi_e \mathbf{E},\quad \text{C}\cdot\text{m}^{-2}$$ | ✅ Enriched |
+| 266 | `electric power` | $$P = IV = I^2 R = \frac{V^2}{R},\quad P = V_{\text{rms}}I_{\text{rms}}\cos\phi$$ | ✅ Enriched |
+| 275 | `electrical conductance` | $$G = \frac{1}{R} = \frac{I}{V},\quad \text{siemens (S)}$$ | ✅ Enriched |
+| 276 | `electrical conductivity` | $$\sigma = \frac{1}{\rho} = \frac{L}{RA},\quad \text{S}\cdot\text{m}^{-1}$$ | ✅ Enriched |
+| 279 | `electrical energy` | $$E = Pt = IVt = I^2 Rt = \frac{V^2}{R}t,\quad E = eV,\ 1\text{ kWh} = 3.6\times 10^6\text{ J}$$ | ✅ Enriched |
+| 349 | `electron beam` | $$\frac{1}{2}m_e v^2 = eV \implies v = \sqrt{\frac{2eV}{m_e}}$$ | ✅ Enriched |
+| 386 | `electron rest mass` | $$m_e \approx 9.1093837 \times 10^{-31}\text{ kg} \approx 0.5109989\text{ MeV}/c^2$$ | ✅ Enriched |
+| 455 | `element` | $x \in A,\quad p^\alpha,\quad \int_a^b f(x)\,dx$ | ✅ Enriched |
+| 461 | `elementary function` | $f(x) = \ln(\arctan(\sqrt{e^{x^2}+1}))$ | ✅ Enriched |
+| 468 | `elementary reduction` | $x x^{-1} \to \varepsilon,\quad x^{-1} x \to \varepsilon$ | ✅ Enriched |
+| 480 | `eliminant` | $$\begin{vmatrix} a_1 & b_1 & c_1 \\ a_2 & b_2 & c_2 \\ a_3 & b_3 & c_3 \end{vmatrix} = 0$$ | ✅ Enriched |
+| 484 | `elli ptic equa tion` | $$a u_{xx} + b u_{xy} + c u_{yy} + d u_x + e u_y + f u = g,\quad b^2 - 4ac < 0$$ | ✅ Enriched |
+| 486 | `ellipse` | $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1,\quad e = \sqrt{1 - \frac{b^2}{a^2}}$$ | ✅ Enriched |
+| 487 | `ellipsoid` | $$\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$$ | ✅ Enriched |
 
 ---
 
