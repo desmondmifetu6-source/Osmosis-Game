@@ -69,6 +69,38 @@ Total Screenshots to Process: **94**
 
 ---
 
+### Batch 4: Screenshots 31 – 40
+| # | File Name | Visual Content Observed (Native Vision) | Extracted Captions & Labels | Mapped Dictionary Term(s) | Status |
+|---|---|---|---|---|---|
+| 31 | `Screenshot_8-9-2026_12390_.jpeg` | Energy band diagram comparing free atom vs solid | Left: discrete energy levels in free atom. Right: energy bands in solid — Empty band (conduction band), Valence band, Forbidden bands, Inner levels. Caption: *Energy band* | `conduction band`, `valence band`, `forbidden band` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 32 | `Screenshot_8-9-2026_123956_.jpeg` | Enolate tautomer equilibrium mechanism | Enol form ⇌ enolate anion (resonance arrows) ⇌ carbonyl form with R & R¹ groups. Caption: *Enolate tautomers* | `enolate`, `enol`, `tautomer`, `enolate tautomers` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 33 | `Screenshot_8-9-2026_124052_.jpeg` | Long narrow sword-shaped leaf (ensiform) | Elongated tapering leaf with parallel venation. Caption: *Ensiform leaf* | `ensiform leaf` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 34 | `Screenshot_8-9-2026_124229_.jpeg` | Oval leaf with smooth unbroken margin | Ovate leaf with midrib, smooth entire margin. Caption: *Entire Leaf* | `entire leaf` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 35 | `Screenshot_8-9-2026_124344_.jpeg` | 3-stage enzyme action mechanism | Stage 1: Enzyme + Substrate (active site). Stage 2: Enzyme-substrate complex. Stage 3: Enzyme + Products released. Caption: *(Enzyme / Enzyme-substrate complex / Enzyme)* | `enzyme`, `enzyme action`, `active site`, `substrate`, `enzyme substrate complex` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 36 | `Screenshot_8-9-2026_124425_.jpeg` | Epicycle astronomical diagram | Large circle with small inner circle rolling along inside edge, center x, elliptical path shown. Caption: *Epicycle* | `epicycle` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 37 | `Screenshot_8-9-2026_124452_.jpeg` | Epicycloid figure-eight curve on Cartesian plane | Figure-eight shaped curve on x–y axes, parameter $k=2$. Caption: *An epicycloid on the Cartesian plane* | `epicycloid` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 38 | `Screenshot_8-9-2026_124631_.jpeg` | Epiphyte (fern) growing on tree trunk | Tree trunk with Epiphytic fern labeled growing on bark. Caption: *Epiphyte* | `epiphyte`, `epiphytic fern` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 39 | `Screenshot_8-9-2026_133720_.jpeg` | Chemical structure of Epoxide | Three-membered ring with O at apex, R groups on both carbons. Caption: *Chemical structure of Epoxide* | `epoxide`, `chemical structure of epoxide` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 40 | `Screenshot_8-9-2026_13375_.jpeg` | Structural formula of Epoxyethane | Three-membered ring: O at top, two C atoms each with 2 H atoms. Caption: *Structure of Epoxyethane* | `epoxyethane`, `structure of epoxyethane` | ✅ Integrated in `core_dictionary_diagrams.js` |
+
+---
+
+### Batch 5: Screenshots 41 – 50
+| # | File Name | Visual Content Observed (Native Vision) | Extracted Captions & Labels | Mapped Dictionary Term(s) | Status |
+|---|---|---|---|---|---|
+| 41 | `Screenshot_8-9-2026_133811_.jpeg` | Rectangle with right-angle marks at all 4 corners | All interior angles = 90°. Caption: *Equiangular polygon* | `equiangular polygon`, `equiangular` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 42 | `Screenshot_8-9-2026_133838_.jpeg` | Triangle with equal tick marks on all 3 sides | Vertices A, B, C; all sides equal length. Caption: *Equilateral Triangle* | `equilateral triangle`, `equilateral` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 43 | `Screenshot_8-9-2026_133937_.jpeg` | Dual equipotential surface diagrams | Fig 1: Point charge (+q) with radial E field lines & concentric dashed equipotential surfaces. Fig 2: Uniform field — parallel horizontal field lines & vertical dashed equipotential surfaces. Caption: *Equipotential surface due to a point charge, and a uniform field* | `equipotential surface`, `equipotential`, `field line`, `uniform field`, `point charge` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 44 | `Screenshot_8-9-2026_134030_.jpeg` | Ergotamine full skeletal molecular structure | Complex polycyclic structure — indole core, pyrrolidine ring, peptide rings, HO group. Caption: *Chemical structure of Ergotamine* | `ergotamine`, `chemical structure of ergotamine` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 45 | `Screenshot_8-9-2026_134057_.jpeg` | Jagged/torn-margin leaf outline | Leaf with irregular wavy/erose margin. Caption: *An erose leaf* | `erose leaf`, `erose` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 46 | `Screenshot_8-9-2026_134122_.jpeg` | Ergosterol steroid skeletal structure | Fused 4-ring steroid skeleton, HO group at C3, double bonds, alkyl side chain with CH₃ groups. Caption: *Chemical structure of Ergosterol* | `ergosterol`, `chemical structure of ergosterol` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 47 | `Screenshot_8-9-2026_134247_.jpeg` | Paraldehyde 6-membered ring structure | 1,3,5-trioxane ring with CH₃ groups on alternating carbons, 3 oxygen atoms. Caption: *Chemical Structure of Paraldehyde* | `paraldehyde`, `chemical structure of paraldehyde` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 48 | `Screenshot_8-9-2026_134640_.jpeg` | Euglena cell full anatomy diagram | Chloroplast, Starch-like granules, Nucleus, Cytoplasm, Eyespot, Photoreceptor, Gullet, Contractile vacuole, Flagellum. Caption: *Euglena* | `euglena`, `flagellum`, `eyespot`, `contractile vacuole`, `gullet` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 49 | `Screenshot_8-9-2026_134747_.jpeg` | Detailed cross-section of human ear highlighting Eustachian tube | Pinna (Auricle), Auditory canal, Tympanic membrane (Eardrum), Hammer/Malleus, Anvil/Incus, Stirrup/Stapes, Semicircular canals, Bone, Auditory nerve, Cochlea, Vestibule, Eustachian tube (bold), Pharynx, Round window, Oval window. Caption: *Eustachian tube of the human ear* | `eustachian tube`, `vestibule`, `tympanic membrane`, `eardrum`, `auditory canal`, `auricle` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 50 | `Screenshot_8-9-2026_135022_.jpeg` | XOR gate circuit diagram + truth table | Input_A & Input_B → 2 NOT gates + 2 AND gates + 1 OR gate → Output. Truth table: 0,0→0; 0,1→1; 1,0→1; 1,1→0. Caption: *Exclusive Or (XOR) Equivalent Circuit And Logic Gate Truth Table* | `xor gate`, `exclusive or`, `xor`, `logic gate` | ✅ Integrated in `core_dictionary_diagrams.js` |
+
+---
+
 ## 📐 Part 2: Section E Formula Enrichment
 
 ### Pipeline Workflow:
