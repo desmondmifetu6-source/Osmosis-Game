@@ -19,7 +19,7 @@
 
 ## 🖼️ Part 1: Section E-F Diagram Visual Integration (`e-d diagrams/`)
 
-Total Screenshots to Process: **94**
+Total Screenshots Processed: **94 / 94 (100% COMPLETE)** across Batches 1 to 10.
 
 ### Batch 1: Screenshots 1 – 10
 | # | File Name | Visual Content Observed (Native Vision) | Extracted Captions & Labels | Mapped Dictionary Term(s) | Status |
@@ -162,6 +162,16 @@ Total Screenshots to Process: **94**
 | 88 | `Screenshot_8-9-2026_18654_.jpeg` | Statistical frequency polygon on Cartesian plane | Binned histogram with line connecting class mark midpoints plotted against frequency axis $f$ and variable axis $x$. Caption: *A frequency polygon on the Cartesian plane* | `frequency polygon`, `histogram`, `frequency distribution` | ✅ Integrated in `core_dictionary_diagrams.js` |
 | 89 | `Screenshot_8-9-2026_18726_.jpeg` | Frost oxidation state free energy diagram for manganese | $\Delta G^\circ / F$ (or $-nE^\circ$ in V mol $\text{e}^-$) vs Oxidation state ($0$ to $+7$): points for $\text{Mn}$, $\text{Mn}^{2+}$, $\text{Mn}^{3+}$, $\text{MnO}_2$, $\text{MnO}_4^{2-}$, $\text{MnO}_4^-$. Caption: *The Frost diagram (for manganese)* | `frost diagram`, `frost diagrams`, `oxidation state`, `manganese`, `redox` | ✅ Integrated in `core_dictionary_diagrams.js` |
 | 90 | `Screenshot_8-9-2026_1878_.jpeg` | Friedel-Crafts electrophilic aromatic substitution reactions | Fig I: Alkylation (Benzene $+ \text{CH}_3\text{Br} \xrightarrow{\text{AlCl}_3} \text{Toluene} + \text{HBr}$); Fig II: Acylation / Alkanoylation (Benzene $+ \text{H}_3\text{C-CO-Cl} \xrightarrow{\text{AlCl}_3} \text{Acetophenone} + \text{HCl}$). Caption: *Fig. I: Friedel-Craft Alkylation of Benzene / Fig. II: Friedel-Craft Acylation (Friedel-Crafts Alkanoylation) of Benzene* | `friedel-crafts reaction`, `friedel-crafts alkylation`, `friedel-crafts acylation`, `friedel-craft alkylation`, `friedel-craft acylation`, `electrophilic aromatic substitution` | ✅ Integrated in `core_dictionary_diagrams.js` |
+
+---
+
+### Batch 10 (FINAL BATCH): Screenshots 91 – 94
+| # | File Name | Visual Content Observed (Native Vision) | Extracted Captions & Labels | Mapped Dictionary Term(s) | Status |
+|---|---|---|---|---|---|
+| 91 | `Screenshot_8-9-2026_18830_.jpeg` | Geometric trans-alkene dicarboxylic acid structure | Central double bond $\text{C}=\text{C}$ with trans-oriented $\text{COOH}$ groups and hydrogen atoms. Caption: *Chemical structure of Fumaric Acid* | `fumaric acid`, `chemical structure of fumaric acid`, `trans-butenedioic acid` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 92 | `Screenshot_8-9-2026_1884_.jpeg` | Truncated cone / conical frustum geometry | Top base with radius $r$, bottom base with radius $R$, perpendicular height, slant height. Caption: *Side view of a frustum* | `frustum`, `frustum of a cone`, `slant height`, `truncated cone` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 93 | `Screenshot_8-9-2026_18850_.jpeg` | Inverted (anatropous) plant ovule stalk attachment | Embryo sac with nuclei/cells, protective integument layers, micropyle opening, and supporting basal stalk. Caption: *Funiculus* | `funiculus`, `funicule`, `anatropous ovule`, `ovule stalk` | ✅ Integrated in `core_dictionary_diagrams.js` |
+| 94 | `Screenshot_8-9-2026_1898_.jpeg` | Funnelform (infundibuliform) sympetalous corolla | Calyx at base with narrow tube widening gradually into a broad conical/funnel-shaped limb with protruding stamens. Caption: *Funnelform flower* | `funnelform flower`, `funnelform`, `infundibuliform` | ✅ Integrated in `core_dictionary_diagrams.js` |
 
 ---
 
