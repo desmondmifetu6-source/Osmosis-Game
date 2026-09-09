@@ -5,6 +5,7 @@ const wordBank = {"1":[{"word":"1,1,1-trichloroethane","raw_headword":"1,1,1-TRI
   const definitionMap = new Map();
   const allWordsArray = [];
 
+  // Pass 1: Index all primary headwords first so exact words ALWAYS take precedence
   for (const letter in wordBank) {
     const list = wordBank[letter];
     if (Array.isArray(list)) {
@@ -12,20 +13,8 @@ const wordBank = {"1":[{"word":"1,1,1-trichloroethane","raw_headword":"1,1,1-TRI
         const entry = list[i];
         if (!entry || !entry.word) continue;
         const wLower = entry.word.toLowerCase();
-        if (!definitionMap.has(wLower)) {
-          definitionMap.set(wLower, entry);
-        }
+        definitionMap.set(wLower, entry);
         allWordsArray.push(entry);
-
-        // Index all parenthetical synonyms for instant lookup
-        if (entry.synonyms && Array.isArray(entry.synonyms)) {
-          for (let s = 0; s < entry.synonyms.length; s++) {
-            const synLower = entry.synonyms[s].toLowerCase();
-            if (!definitionMap.has(synLower)) {
-              definitionMap.set(synLower, entry);
-            }
-          }
-        }
       }
     } else if (typeof list === 'string') {
       const wLower = letter.toLowerCase();
@@ -35,10 +24,21 @@ const wordBank = {"1":[{"word":"1,1,1-trichloroethane","raw_headword":"1,1,1-TRI
         definition: list,
         synonyms: []
       };
-      if (!definitionMap.has(wLower)) {
-        definitionMap.set(wLower, entry);
-      }
+      definitionMap.set(wLower, entry);
       allWordsArray.push(entry);
+    }
+  }
+
+  // Pass 2: Index parenthetical synonyms ONLY if not already claimed by a primary headword
+  for (let i = 0; i < allWordsArray.length; i++) {
+    const entry = allWordsArray[i];
+    if (entry.synonyms && Array.isArray(entry.synonyms)) {
+      for (let s = 0; s < entry.synonyms.length; s++) {
+        const synLower = entry.synonyms[s].toLowerCase();
+        if (!definitionMap.has(synLower)) {
+          definitionMap.set(synLower, entry);
+        }
+      }
     }
   }
 
