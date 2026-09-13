@@ -293,6 +293,24 @@ Source Folder: `f-j diagrams/`
 
 ---
 
+### F-J Series: Batch 3 (Completed) — Screenshots 61 to 70
+Source Folder: `f-j diagrams/`
+
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 61 | `Screenshot_11-9-2026_15483_.jpeg` | Chemical structure of Hexamine | `dict_hexamine.png` | `hexamine`, `methenamine` |
+| 62 | `Screenshot_11-9-2026_154855_.jpeg` | Hilum of seed coat & Hilum of kidney | `dict_hilum.png`, `dict_hilum_seed_coat.png`, `dict_hilum_kidney.png` | `hilum`, `hilum of seed coat`, `hilum of kidney` |
+| 63 | `Screenshot_11-9-2026_154923_.jpeg` | A Histogram on the cartesian plane | `dict_histogram.png` | `histogram`, `histogram on cartesian plane` |
+| 64 | `Screenshot_11-9-2026_154938_.jpeg` | Hoffmann's Reaction mechanism | `dict_hoffmanns_reaction.png`, `dict_hoffmann_rearrangement.png` | `hoffmann's reaction`, `hoffmann rearrangement`, `hoffmann degradation` |
+| 65 | `Screenshot_11-9-2026_154947_.jpeg` | Hoffman voltammeter | `dict_hoffman_voltammeter.png` | `hoffman voltammeter`, `hoffmann voltammeter`, `voltammeter` |
+| 66 | `Screenshot_11-9-2026_15499_.jpeg` | Structural formula of Histamine | `dict_histamine.png` | `histamine` |
+| 67 | `Screenshot_11-9-2026_155021_.jpeg` | Horizontal line test — y = x³ (one-to-one function) | `dict_horizontal_line_test.png` | `horizontal line test`, `one-to-one function` |
+| 68 | `Screenshot_11-9-2026_155029_.jpeg` | Horizontal line test — y = x² (not one-to-one) | `dict_horizontal_line_test_not_one_to_one.png` | `horizontal line test not one-to-one`, `many-to-one function` |
+| 69 | `Screenshot_11-9-2026_155057_.jpeg` | Hot-wire ammeter | `dict_hot_wire_ammeter.png` | `hot-wire ammeter`, `hot wire ammeter` |
+| 70 | `Screenshot_11-9-2026_155111_.jpeg` | Huygens' eyepiece | `dict_huygens_eyepiece.png` | `huygens' eyepiece`, `huygens eyepiece`, `eyepiece` |
+
+---
+
 ## 4. Quality Standards
 1. **Pristine Author Framing**: High-resolution user captures preserved with complete clarity.
 2. **Dual Map Consistency**: `dictionary_diagrams_map.json` and `core_dictionary_diagrams.js` remain synchronized and sorted.

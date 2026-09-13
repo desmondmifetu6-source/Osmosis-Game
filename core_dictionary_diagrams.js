@@ -1,4 +1,4 @@
-const DictionaryDiagrams = {
+var DictionaryDiagrams = {
   "1,2-diaminoethane": "diagrams/dict_ethylenediamine.png",
   "1,2-dibromoethane": "diagrams/dict_dibromoethane.png",
   "1,2-dihydroxybenzene": "diagrams/dict_catechol.png",
@@ -916,6 +916,7 @@ const DictionaryDiagrams = {
   "external work done on expansion": "diagrams/dict_external_work_expansion.png",
   "extrinsic semiconductor": "diagrams/dict_extrinsic_semiconductor.png",
   "eye": "diagrams/dict_eye.png",
+  "eyepiece": "dict_huygens_eyepiece.png",
   "eyespot": "diagrams/dict_euglena.png",
   "face-centered cubic": "diagrams/dict_face_centred_cube.png",
   "face-centred cube": "diagrams/dict_face_centred_cube.png",
@@ -1137,21 +1138,33 @@ const DictionaryDiagrams = {
   "hexagonal prism": "diagrams/dict_hexagonal_prism.png",
   "hexagram": "diagrams/dict_hexagram.png",
   "hexamethylenediamine": "diagrams/dict_hexamethylenediamine.png",
-  "hexamine": "diagrams/dict_hexamine_hexamethylenetetramine.png",
+  "hexamine": "dict_hexamine.png",
   "hexamine (hexamethylenetetramine)": "diagrams/dict_hexamine_hexamethylenetetramine.png",
   "hexane": "diagrams/dict_hexane.png",
   "hexanedioic acid": "diagrams/dict_hexanedioic_acid.png",
-  "hilum": "diagrams/dict_hilum.png",
-  "histogram": "diagrams/dict_frequency_polygon.png",
-  "hoffmann voltammeter": "diagrams/dict_hoffmann_voltammeter.png",
+  "hilum": "dict_hilum.png",
+  "hilum of kidney": "dict_hilum.png",
+  "hilum of seed coat": "dict_hilum.png",
+  "histamine": "dict_histamine.png",
+  "histogram": "dict_histogram.png",
+  "histogram on cartesian plane": "dict_histogram.png",
+  "hoffman voltammeter": "dict_hoffman_voltammeter.png",
+  "hoffmann degradation": "dict_hoffmanns_reaction.png",
+  "hoffmann rearrangement": "dict_hoffmanns_reaction.png",
+  "hoffmann voltammeter": "dict_hoffman_voltammeter.png",
+  "hoffmann's reaction": "dict_hoffmanns_reaction.png",
   "horizontal bar chart": "diagrams/dict_horizontal_bar_chart.png",
-  "horizontal line test": "diagrams/dict_horizontal_line_test.png",
+  "horizontal line test": "dict_horizontal_line_test.png",
+  "horizontal line test not one-to-one": "dict_horizontal_line_test_not_one_to_one.png",
   "horizontal polarisation": "diagrams/dict_horizontal_polarisation.png",
-  "hot-wire ammeter": "diagrams/dict_hot_wire_ammeter.png",
+  "hot wire ammeter": "dict_hot_wire_ammeter.png",
+  "hot-wire ammeter": "dict_hot_wire_ammeter.png",
   "hot-wire instrument": "diagrams/dict_hot_wire_instrument.png",
   "huckel rule": "diagrams/dict_huckel_rule.png",
   "human excretory system": "diagrams/dict_excretory_system.png",
   "human heart": "diagrams/dict_human_heart_external.png",
+  "huygens eyepiece": "dict_huygens_eyepiece.png",
+  "huygens' eyepiece": "dict_huygens_eyepiece.png",
   "hydraulic machine": "diagrams/dict_hydraulic_machine.png",
   "hydrogen": "diagrams/dict_hydrogen.png",
   "hydrogen azide": "diagrams/dict_hydrogen_azide_hydrazoic_acid_azoimide.png",
@@ -1283,6 +1296,7 @@ const DictionaryDiagrams = {
   "mango": "diagrams/dict_mango.png",
   "mannitol": "diagrams/dict_mannitol_mannite_manna_sugar.png",
   "mannitol (mannite; manna sugar)": "diagrams/dict_mannitol_mannite_manna_sugar.png",
+  "many-to-one function": "dict_horizontal_line_test_not_one_to_one.png",
   "marcotting": "diagrams/dict_marcotting.png",
   "marcotting (air layering)": "diagrams/dict_marcotting_air_layering.png",
   "mare": "diagrams/dict_mare.png",
@@ -1306,6 +1320,7 @@ const DictionaryDiagrams = {
   "methanal": "diagrams/dict_methanal_formaldehyde.png",
   "methanal (formaldehyde)": "diagrams/dict_methanal_formaldehyde.png",
   "methanamide": "diagrams/dict_methanamide.png",
+  "methenamine": "dict_hexamine.png",
   "methionine": "diagrams/dict_methionine_2_amino_4_methylthiobutanoic_acid.png",
   "methionine (2-amino-4-methylthiobutanoic acid)": "diagrams/dict_methionine_2_amino_4_methylthiobutanoic_acid.png",
   "methyl orange": "diagrams/dict_methyl_orange.png",
@@ -1389,6 +1404,7 @@ const DictionaryDiagrams = {
   "omasum": "diagrams/dict_omasum_manyplies_psalterium.png",
   "omasum (manyplies; psalterium)": "diagrams/dict_omasum_manyplies_psalterium.png",
   "one": "diagrams/dict_one.png",
+  "one-to-one function": "dict_horizontal_line_test.png",
   "onion": "diagrams/dict_onion.png",
   "operculum": "diagrams/dict_bony_fish.png",
   "opiate endogenous": "diagrams/dict_opiate_endogenous.png",
@@ -1692,6 +1708,7 @@ const DictionaryDiagrams = {
   "vitamin c": "diagrams/dict_vitamin_c.png",
   "vitreous humour": "diagrams/dict_mammalian_eye.png",
   "volcano": "diagrams/dict_volcano.png",
+  "voltammeter": "dict_hoffman_voltammeter.png",
   "water aspirator": "diagrams/dict_filter_pump.png",
   "water cycle": "diagrams/dict_water_cycle.png",
   "wattle": "diagrams/dict_domestic_fowl.png",
@@ -1702,10 +1719,3 @@ const DictionaryDiagrams = {
   "yellow spot": "diagrams/dict_mammalian_eye.png",
   "yolk": "diagrams/dict_egg.png"
 };
-
-if (typeof window !== 'undefined') {
-  window.DictionaryDiagrams = DictionaryDiagrams;
-}
-if (typeof module !== 'undefined') {
-  module.exports = DictionaryDiagrams;
-}
