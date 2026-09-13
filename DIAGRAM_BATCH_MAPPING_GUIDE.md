@@ -316,6 +316,50 @@ Source Folder: `f-j diagrams/`
 
 ---
 
+### F-J Series: Batch 4 (Completed) — Screenshots 76 to 111
+Source Folder: `f-j diagrams/`
+
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 76 | `Screenshot_11-9-2026_155335_.jpeg` | Hyperbola with its various parts on the cartesian plane | `dict_hyperbola.png` | `hyperbola`, `hyperbola on cartesian plane`, `transverse axis`, `conjugate axis` |
+| 77 | `Screenshot_11-9-2026_155354_.jpeg` | Hyperopia (Long sightedness) — ray diagram with corrective lens | `dict_hyperopia.png` | `hyperopia`, `long sightedness`, `hyperopia (long sightedness)`, `long-sightedness`, `longsightedness` |
+| 78 | `Screenshot_11-9-2026_155414_.jpeg` | Hypocycloid curve on Cartesian plane | `dict_hypocycloid.png` | `hypocycloid` |
+| 79 | `Screenshot_11-9-2026_155431_.jpeg` | Hypsometer (thermometer + manometer + boiling water setup) | `dict_hypsometer.png` | `hypsometer` |
+| 80 | `Screenshot_11-9-2026_155437_.jpeg` | Hysteresis loop (Magnetic induction B vs Magnetising field H) | `dict_hysteresis_loop.png` | `hysteresis loop`, `hysteresis`, `magnetic hysteresis` |
+| 81 | `Screenshot_11-9-2026_155457_.jpeg` | Lower fixed point / Ice point (0°C thermometer calibration) | `dict_ice_point.png` | `ice point`, `lower fixed point`, `ice point thermometer` |
+| 82 | `Screenshot_11-9-2026_155515_.jpeg` | Chemical structure of Imine | `dict_imine.png` | `imine`, `chemical structure of imine` |
+| 83 | `Screenshot_11-9-2026_155524_.jpeg` | Structure of a linear imide functional group | `dict_imide.png` | `imide`, `linear imide`, `imide functional group` |
+| 84 | `Screenshot_11-9-2026_155547_.jpeg` | Incircle of a triangle (inscribed circle with angle bisectors) | `dict_incircle.png` | `incircle`, `incircle of a triangle`, `inscribed circle` |
+| 85 | `Screenshot_11-9-2026_155557_.jpeg` | Inclined plane — forces acting on body (normal force, weight, mgSinθ, mgCosθ) | `dict_inclined_plane.png` | `inclined plane`, `forces on an inclined plane` |
+| 86 | `Screenshot_11-9-2026_155610_.jpeg` | Truth table of inclusive disjunction (P∨Q) | `dict_inclusive_disjunction.png` | `inclusive disjunction`, `disjunction`, `truth table of inclusive disjunction` |
+| 87 | `Screenshot_11-9-2026_155621_.jpeg` | The anvil (incus) of the human ear — full labelled cross-section | `dict_incus.png` | `incus`, `anvil`, `anvil (incus)`, `incus of the ear`, `ossicles` |
+| 88 | `Screenshot_11-9-2026_155632_.jpeg` | Indeterminate flowers (racemose inflorescence) | `dict_indeterminate_flowers.png` | `indeterminate`, `indeterminate flowers`, `indeterminate inflorescence` |
+| 89 | `Screenshot_11-9-2026_155644_.jpeg` | Structure of Indole (bicyclic heterocycle) | `dict_indole.png` | `indole`, `structure of indole` |
+| 90 | `Screenshot_11-9-2026_155716_.jpeg` | Inflated (swollen/bladder-like botanical fruit) | `dict_inflated.png` | `inflated`, `inflated fruit` |
+| 91 | `Screenshot_11-9-2026_155736_.jpeg` | Initial Side of an Angle (ray BA as initial side) | `dict_initial_side_of_an_angle.png` | `initial side`, `initial side of an angle` |
+| 92 | `Screenshot_11-9-2026_15580_.jpeg` | Innominate bone — Ilium, Ischium, Pubis, Acetabulum, Obturator foramen | `dict_innominate_bone.png` | `innominate bone`, `hip bone`, `ilium`, `ischium`, `pubis`, `acetabulum` |
+| 93 | `Screenshot_11-9-2026_155818_.jpeg` | Inscribed circle in a triangle (incircle with angle bisectors) | `dict_inscribed_circle.png` | `inscribed circle`, `inscribed circle in a triangle` |
+| 94 | `Screenshot_11-9-2026_155827_.jpeg` | Chemical structure of Inositol (cyclohexane hexol) | `dict_inositol.png` | `inositol`, `chemical structure of inositol` |
+| 95 | `Screenshot_11-9-2026_155849_.jpeg` | Insertion Reaction — cyclohexanone → cyclohexanoxime → caprolactam | `dict_insertion_reaction.png` | `insertion reaction`, `beckmann rearrangement`, `caprolactam` |
+| 96 | `Screenshot_11-9-2026_15599_.jpeg` | Insulated Gate Field-effect Transistor (IGFET / MOSFET) — cross-section | `dict_igfet.png` | `igfet`, `mosfet`, `insulated gate field-effect transistor`, `insulated gate fet` |
+| 97 | `Screenshot_11-9-2026_16034_.jpeg` | Formation of interference fringes (Young's double slit) | `dict_interference_fringes.png` | `interference fringes`, `interference`, `formation of interference fringes` |
+| 98 | `Screenshot_11-9-2026_1603_.jpeg` | Integral — area under curve y=f(x) with Riemann sum definition | `dict_integral.png` | `integral`, `integration`, `definite integral`, `area under curve` |
+| 99 | `Screenshot_11-9-2026_16052_.jpeg` | Fig I: Interior angle of a polygon (interior + exterior = 180°) | `dict_interior_angle.png` | `interior angle`, `interior angles`, `co-interior angles` |
+| 100 | `Screenshot_11-9-2026_16059_.jpeg` | Fig II: Interior angles on a transversal (angles 3,4,5,6) | `dict_interior_angle_transversal.png` | `interior angles transversal`, `alternate interior angles` |
+| 101 | `Screenshot_11-9-2026_16119_.jpeg` | Internal division by D and External division by E on a line | `dict_internal_division.png` | `internal division`, `external division`, `section formula` |
+| 102 | `Screenshot_11-9-2026_16215_.jpeg` | Introrse anther (facing inward toward pistil) | `dict_introrse.png` | `introrse`, `introrse anther` |
+| 103 | `Screenshot_11-9-2026_16227_.jpeg` | Intrinsic semiconductor — energy band diagram (conduction + valence bands) | `dict_intrinsic_semiconductor.png` | `intrinsic semiconductor`, `intrinsic semi conductor`, `semiconductor energy band` |
+| 104 | `Screenshot_11-9-2026_16326_.jpeg` | Involute leaf (rolled inward margins) | `dict_involute_leaf.png` | `involute`, `involute leaf` |
+| 105 | `Screenshot_11-9-2026_1637_.jpeg` | Involucre (ring of bracts around flower head) | `dict_involucre.png` | `involucre`, `involucral bract` |
+| 106 | `Screenshot_11-9-2026_16417_.jpeg` | Isosceles Triangle (two equal sides a, two equal base angles x) | `dict_isosceles_triangle.png` | `isosceles triangle` |
+| 107 | `Screenshot_11-9-2026_16442_.jpeg` | Jahn-Teller Effect — Cu(II) d-orbital splitting before and after J-T distortion | `dict_jahn_teller_effect.png` | `jahn-teller effect`, `jahn teller effect`, `jahn-teller distortion` |
+| 108 | `Screenshot_11-9-2026_16455_.jpeg` | Jet engine — labelled cross-section (compressor, combustion chamber, turbine, exhaust) | `dict_jet_engine.png` | `jet engine`, `jet propulsion` |
+| 109 | `Screenshot_11-9-2026_1648_.jpeg` | Chemical structure of Isoprene (2-methylbuta-1,3-diene) | `dict_isoprene.png` | `isoprene`, `2-methylbuta-1,3-diene`, `chemical structure of isoprene` |
+| 110 | `Screenshot_11-9-2026_16524_.jpeg` | Junction Gate Field-Effect Transistor (JGFET) — p⁺ channel in n-substrate | `dict_jgfet.png` | `jgfet`, `junction gate field-effect transistor`, `junction fet`, `jfet` |
+| 111 | `Screenshot_11-9-2026_1652_.jpeg` | Fig I: Vertical section through a synovial (movable) joint / Fig II: Section through the shoulder joint | `dict_synovial_joint.png` | `synovial joint`, `synovial membrane`, `synovial fluid`, `movable joint`, `shoulder joint`, `ball and socket joint` |
+
+---
+
 ## 4. Quality Standards
 1. **Pristine Author Framing**: High-resolution user captures preserved with complete clarity.
 2. **Dual Map Consistency**: `dictionary_diagrams_map.json` and `core_dictionary_diagrams.js` remain synchronized and sorted.
