@@ -308,12 +308,18 @@ Source Folder: `f-j diagrams/`
 | 68 | `Screenshot_11-9-2026_155029_.jpeg` | Horizontal line test — y = x² (not one-to-one) | `dict_horizontal_line_test_not_one_to_one.png` | `horizontal line test not one-to-one`, `many-to-one function` |
 | 69 | `Screenshot_11-9-2026_155057_.jpeg` | Hot-wire ammeter | `dict_hot_wire_ammeter.png` | `hot-wire ammeter`, `hot wire ammeter` |
 | 70 | `Screenshot_11-9-2026_155111_.jpeg` | Huygens' eyepiece | `dict_huygens_eyepiece.png` | `huygens' eyepiece`, `huygens eyepiece`, `eyepiece` |
+| 71 | `Screenshot_11-9-2026_155124_.jpeg` | Hydraulic machine & press | `dict_hydraulic_machine.png`, `dict_hydraulic_press.png` | `hydraulic machine`, `hydraulic press`, `hydraulics` |
+| 72 | `Screenshot_11-9-2026_155138_.jpeg` | Preparation of hydrogen from zinc with dilute acids | `dict_preparation_of_hydrogen.png`, `dict_hydrogen.png` | `hydrogen`, `preparation of hydrogen`, `preparation of hydrogen from zinc with dilute acids` |
+| 73 | `Screenshot_11-9-2026_155228_.jpeg` | Intermolecular & Intramolecular hydrogen bonding | `dict_hydrogen_bond.png`, `dict_hydrogen_bonding.png` | `hydrogen bond`, `hydrogen bonding`, `intermolecular hydrogen bonding`, `intramolecular hydrogen bonding` |
+| 74 | `Screenshot_11-9-2026_155239_.jpeg` | Standard Hydrogen Electrode (SHE) | `dict_hydrogen_electrode.png`, `dict_standard_hydrogen_electrode.png` | `hydrogen electrode`, `standard hydrogen electrode`, `she`, `normal hydrogen electrode` |
+| 75 | `Screenshot_11-9-2026_155249_.jpeg` | Hydrometer | `dict_hydrometer.png` | `hydrometer` |
 
 ---
 
 ## 4. Quality Standards
 1. **Pristine Author Framing**: High-resolution user captures preserved with complete clarity.
 2. **Dual Map Consistency**: `dictionary_diagrams_map.json` and `core_dictionary_diagrams.js` remain synchronized and sorted.
+
 
 
 
