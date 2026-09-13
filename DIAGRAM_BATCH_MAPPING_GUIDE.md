@@ -217,8 +217,85 @@ Source Folder: `section a-b images/`
 
 ---
 
+### F-J Series: Batch 1 (Completed) — Screenshots 1 to 30
+Source Folder: `f-j diagrams/`
+
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 1 | `Screenshot_11-9-2026_153052_.jpeg` | Galeate helmet-shaped corolla | `dict_galeate.png` | `galeate`, `galeate corolla` |
+| 2 | `Screenshot_11-9-2026_15309_.jpeg` | Galactose structure | `dict_galactose.png` | `galactose` |
+| 3 | `Screenshot_11-9-2026_153112_.jpeg` | Galilean telescope ray diagram | `dict_galilean_telescope.png` | `galilean telescope` |
+| 4 | `Screenshot_11-9-2026_153129_.jpeg` | Moving coil galvanometer | `dict_moving_coil_galvanometer.png` | `moving coil galvanometer`, `galvanometer` |
+| 5 | `Screenshot_11-9-2026_15312_.jpeg` | Gallic acid structure | `dict_gallic_acid.png` | `gallic acid`, `3,4,5-trihydroxybenzoic acid` |
+| 6 | `Screenshot_11-9-2026_153145_.jpeg` | Gamma-Aminobutyric Acid (GABA) | `dict_gamma_aminobutyric_acid.png` | `gamma-aminobutyric acid`, `gaba` |
+| 7 | `Screenshot_11-9-2026_153158_.jpeg` | Gas engine internal cross-section | `dict_gas_engine.png` | `gas engine` |
+| 8 | `Screenshot_11-9-2026_153228_.jpeg` | Gas engine (duplicate) | *(merged with #7)* | `gas engine` |
+| 9 | `Screenshot_11-9-2026_153243_.jpeg` | Argand diagram / Gaussian plane | `dict_argand_diagram_gaussian.png` | `argand diagram`, `gaussian plane`, `complex plane` |
+| 10 | `Screenshot_11-9-2026_153255_.jpeg` | Geiger-Müller radiation counter | `dict_geiger_counter.png` | `geiger counter`, `geiger-muller counter`, `gm counter` |
+| 11 | `Screenshot_11-9-2026_15326_.jpeg` | Gas thermometer | `dict_gas_thermometer.png` | `gas thermometer`, `constant volume gas thermometer` |
+| 12 | `Screenshot_11-9-2026_153334_.jpeg` | AC Generator / Alternator | `dict_ac_generator.png` | `ac generator`, `alternator`, `dynamo` |
+| 13 | `Screenshot_11-9-2026_153348_.jpeg` | Geoboard peg array | `dict_geoboard.png` | `geoboard` |
+| 14 | `Screenshot_11-9-2026_15335_.jpeg` | Gem-dimethyl group | `dict_gem_dimethyl_group.png` | `gem-dimethyl group`, `geminal` |
+| 15 | `Screenshot_11-9-2026_15340_.jpeg` | Geraniol structure | `dict_geraniol.png` | `geraniol` |
+| 16 | `Screenshot_11-9-2026_153411_.jpeg` | Gibbous calyx | `dict_gibbous_calyx.png` | `gibbous calyx`, `gibbous` |
+| 17 | `Screenshot_11-9-2026_153420_.jpeg` | Gibberellins plant hormone | `dict_gibberellins.png` | `gibberellins`, `gibberellin`, `gibberellic acid` |
+| 18 | `Screenshot_11-9-2026_153436_.jpeg` | Gladiate leaf | `dict_gladiate_leaf.png` | `gladiate leaf`, `gladiate` |
+| 19 | `Screenshot_11-9-2026_153452_.jpeg` | Glucuronic acid | `dict_glucuronic_acid.png` | `glucuronic acid` |
+| 20 | `Screenshot_11-9-2026_153458_.jpeg` | Glutathione tripeptide | `dict_glutathione.png` | `glutathione` |
+| 21 | `Screenshot_11-9-2026_153518_.jpeg` | Glycosidic bonds | `dict_glycosidic_bonds.png` | `glycosidic bonds`, `glycosidic bond`, `glycoside linkage` |
+| 22 | `Screenshot_11-9-2026_153527_.jpeg` | Gnomon magic square | `dict_gnomon_magic_square.png` | `gnomon magic square`, `gnomon` |
+| 23 | `Screenshot_11-9-2026_153546_.jpeg` | Linear gradient / slope | `dict_gradient.png` | `gradient`, `slope` |
+| 24 | `Screenshot_11-9-2026_153554_.jpeg` | Gradate involucre floral bracts | `dict_graduate_involucre.png` | `graduate involucre`, `gradate involucre`, `involucre` |
+| 25 | `Screenshot_11-9-2026_15357_.jpeg` | Propane-1,2,3-triol (Glycerol) | `dict_propane_1_2_3_triol.png` | `propane-1,2,3-triol`, `glycerol`, `glycerin` |
+| 26 | `Screenshot_11-9-2026_153612_.jpeg` | Graphene 2D honeycomb lattice | `dict_graphene.png` | `graphene` |
+| 27 | `Screenshot_11-9-2026_15361_.jpeg` | Grafting (scion & stock) | `dict_grafting.png` | `grafting`, `scion` |
+| 28 | `Screenshot_11-9-2026_153624_.jpeg` | Layered structure of graphite | `dict_structure_of_graphite.png` | `graphite`, `structure of graphite` |
+| 29 | `Screenshot_11-9-2026_153631_.jpeg` | Lateral view of grasshopper | `dict_grasshopper.png` | `grasshopper`, `lateral view of a grasshopper` |
+| 30 | `Screenshot_11-9-2026_153641_.jpeg` | Law of universal gravitation | `dict_gravitation.png` | `gravitation`, `newton's law of gravitation`, `universal gravitation` |
+
+---
+
+### F-J Series: Batch 2 (Completed) — Screenshots 31 to 60
+Source Folder: `f-j diagrams/`
+
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 31 | `Screenshot_11-9-2026_154155_.jpeg` | Universal gravitation (duplicate) | `dict_gravitation.png` | `gravitation`, `newton's law of gravitation`, `universal gravitation` |
+| 32 | `Screenshot_11-9-2026_154217_.jpeg` | Greatest integer function graph | `dict_greatest_integer_function.png` | `greatest integer function`, `floor function`, `step function` |
+| 33 | `Screenshot_11-9-2026_154234_.jpeg` | Grouped data frequency distribution table | `dict_grouped_data_frequency_distribution.png` | `grouped data`, `frequency distribution`, `grouped data frequency distribution` |
+| 34 | `Screenshot_11-9-2026_154246_.jpeg` | Chemical structure of Guanosine | `dict_guanosine.png` | `guanosine`, `cyclic guanosine monophosphate`, `guanosine triphosphate` |
+| 35 | `Screenshot_11-9-2026_154255_.jpeg` | Chemical structure formula of Guanidine | `dict_guanidine.png` | `guanidine` |
+| 36 | `Screenshot_11-9-2026_15429_.jpeg` | Great Circle on a sphere | `dict_great_circle.png` | `great circle`, `spherical triangle` |
+| 37 | `Screenshot_11-9-2026_15431_.jpeg` | Chemical structure of Guanine | `dict_guanine.png` | `guanine`, `guan ine`, `guanine riboside` |
+| 38 | `Screenshot_11-9-2026_154325_.jpeg` | Chemical formula of Haematoxylin | `dict_haematoxylin.png` | `haematoxylin`, `hematoxylin` |
+| 39 | `Screenshot_11-9-2026_154335_.jpeg` | Structure of the hair follicle (Longitudinal & Cross) | `dict_hair_follicle.png` | `hair follicle`, `hair`, `structure of the hair follicle` |
+| 40 | `Screenshot_11-9-2026_154343_.jpeg` | Half-wave rectification circuit & wave | `dict_half_wave_rectification.png` | `half-wave rectification`, `half-wave rectifier`, `half wave rectification`, `rectification` |
+| 41 | `Screenshot_11-9-2026_154412_.jpeg` | Hastate leaf | `dict_hastate_leaf.png` | `hastate`, `hastate leaf` |
+| 42 | `Screenshot_11-9-2026_154420_.jpeg` | Host stem transverse section showing haustorium | `dict_haustorium.png` | `haustorium`, `haustorium of dodder`, `dodder` |
+| 43 | `Screenshot_11-9-2026_154430_.jpeg` | Head (capitulum) inflorescence | `dict_capitulum_head.png` | `head`, `capitulum`, `head (capitulum)`, `head inflorescence` |
+| 44 | `Screenshot_11-9-2026_154455_.jpeg` | Mammalian heart vertical section & Human heart external | `dict_heart.png`, `dict_mammalian_heart_vertical_section.png`, `dict_human_heart_external.png` | `heart`, `mammalian heart`, `human heart`, `vertical section of a heart`, `external appearance of a human heart` |
+| 45 | `Screenshot_11-9-2026_154513_.jpeg` | Simplified heat engine | `dict_heat_engine.png` | `heat engine`, `simplified heat engine` |
+| 46 | `Screenshot_11-9-2026_154528_.jpeg` | Parallelogram height | `dict_height_parallelogram.png` | `height`, `height of a parallelogram` |
+| 47 | `Screenshot_11-9-2026_154549_.jpeg` | Prism height | `dict_height_prism.png` | `prism height`, `height of a prism` |
+| 48 | `Screenshot_11-9-2026_154557_.jpeg` | Height of a pyramid/cone | `dict_height_pyramid_cone.png` | `height of a pyramid`, `height of a cone`, `pyramid height` |
+| 49 | `Screenshot_11-9-2026_154629_.jpeg` | Height of a triangle (Altitude) | `dict_height_triangle.png` | `height of a triangle`, `altitude of a triangle` |
+| 50 | `Screenshot_11-9-2026_154638_.jpeg` | 3D Helix | `dict_helix_3d.png` | `helix`, `helix in a three dimensional plane`, `three dimensional helix` |
+| 51 | `Screenshot_11-9-2026_154648_.jpeg` | General formula of a Hemiacetal | `dict_hemiacetal.png` | `hemiacetal`, `general formula of a hemiacetal` |
+| 52 | `Screenshot_11-9-2026_154717_.jpeg` | Hesperidium citrus fruit | `dict_hesperidium.png` | `hesperidium`, `hesperidium fruit` |
+| 53 | `Screenshot_11-9-2026_154727_.jpeg` | Heterocyclic compounds (Thiophen, Oxazole, Imidazole, Pyridine) | `dict_heterocyclic_compound.png` | `heterocyclic compound`, `heterocyclic`, `thiophene`, `oxazole`, `imidazole`, `pyridine` |
+| 54 | `Screenshot_11-9-2026_15472_.jpeg` | Chemical structure of Heroin | `dict_heroin.png` | `heroin`, `diacetylmorphine` |
+| 55 | `Screenshot_11-9-2026_154740_.jpeg` | Heterosporous (Microspores & Megaspore) | `dict_heterosporous.png` | `heterosporous`, `heterospory`, `microspore`, `microspores`, `megaspore` |
+| 56 | `Screenshot_11-9-2026_154749_.jpeg` | Heterostylic floral forms | `dict_heterostylic.png` | `heterostylic`, `heterostyly`, `style` |
+| 57 | `Screenshot_11-9-2026_15478_.jpeg` | Chemical structure of Heroin (duplicate) | *(merged with #54)* | `heroin`, `diacetylmorphine` |
+| 58 | `Screenshot_11-9-2026_154811_.jpeg` | Chemical structure of Hexane | `dict_hexane.png` | `hexane`, `structure of hexane` |
+| 59 | `Screenshot_11-9-2026_154825_.jpeg` | Hexagonal Prism 3D geometry | `dict_hexagonal_prism.png` | `hexagonal prism`, `prism` |
+| 60 | `Screenshot_11-9-2026_154833_.jpeg` | Hexagram (6-pointed star) | `dict_hexagram.png` | `hexagram` |
+
+---
+
 ## 4. Quality Standards
 1. **Pristine Author Framing**: High-resolution user captures preserved with complete clarity.
 2. **Dual Map Consistency**: `dictionary_diagrams_map.json` and `core_dictionary_diagrams.js` remain synchronized and sorted.
+
 
 
