@@ -1,0 +1,63 @@
+{
+  "name": "Osmosis - STEM Rapid Learning Game & Dictionary",
+  "short_name": "Osmosis",
+  "description": "Interactive STEM rapid learning engine & 6-in-1 science dictionary with visual diagrams, audio voice recall, and multiplayer battles.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#4F46E5",
+  "lang": "en",
+  "categories": ["education", "games", "reference"],
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start Campaign",
+      "short_name": "Campaign",
+      "description": "Jump into the 8-stage STEM mastery campaign",
+      "url": "./02_campaign_setup.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Diagram Hub",
+      "short_name": "Diagrams",
+      "description": "Explore interactive visual science diagrams",
+      "url": "./module_diagram_hub.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Word Hunt",
+      "short_name": "Word Hunt",
+      "description": "Search and explore 1,800+ STEM terms & formulas",
+      "url": "./module_word_hunt.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Personal Study",
+      "short_name": "Study",
+      "description": "Customized personal study sessions",
+      "url": "./02b_personal_study_setup.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

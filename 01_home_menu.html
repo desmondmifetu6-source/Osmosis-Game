@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <title>Osmosis - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4F46E5">
+  <meta name="description" content="Osmosis STEM Rapid Learning Game & 6-In-1 Dictionary">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="assets/osmosis-favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
     rel="stylesheet">
@@ -338,6 +343,7 @@
         <button id="library-btn" class="classic-btn green-gradient">Dictionary Library</button>
         <button id="about-btn" class="classic-btn green-gradient">About Osmosis Rapid Learning Game</button>
         <button id="diagram-btn" class="classic-btn primary">Diagram Laboratory</button>
+        <button id="pwa-install-btn" class="classic-btn" style="display: none; background: linear-gradient(135deg, #10B981, #059669); color: #fff; font-weight: 800; border: 2px solid rgba(255, 255, 255, 0.5); box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);">📲 Install Osmosis App</button>
         <button id="reset-btn" class="classic-btn danger">Purge Saved Data</button>
       </div>
     </div>
@@ -381,6 +387,7 @@
   <script src="core_shared_state.js"></script>
   <script src="dict_cover_lightbox.js"></script>
   <script src="01_home_menu.js"></script>
+  <script src="pwa_installer.js"></script>
 
   <script>
     /* ── Falling Confetti on Book Preview Card ── */
