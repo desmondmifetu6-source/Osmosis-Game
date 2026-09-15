@@ -1,0 +1,160 @@
+=== CANDIDATE 1 / 40 | Index: 10 | Word: g2 ===
+Definition:
+The symbol for the goodness-of-fit test statistics based on the likelihood ratio. It is often used when using the log-linear models. This is given by G2 = 2 , where O and E represent the observed and expected frequencies respectively.
+
+=== CANDIDATE 2 / 40 | Index: 16 | Word: gadolinium ===
+Definition:
+A rare silvery-white metallic element belonging to the lanthanide series of the Periodic Table, which becomes strongly magnetic at low temperatures. Its symbol is Gd, atomic number 64, G atomic weight 157.25, melting point 1313 °C (1586 K), boiling point 3273 °C (3546 K) and specific gravity from 7.8 to 7.896. It occurs with other rare earth elements in many minerals, such as monazite, samarskite, gadolinite and some varieties of Norwegian ytterspar. It is the 41st element in order of abundance in Earth's crust.
+
+=== CANDIDATE 3 / 40 | Index: 18 | Word: gain ===
+Definition:
+The ratio of the output signal strength of a circuit or system to the input or the output voltage of an amplifier compared to its input voltage or the mean ratio of the signal output of a system to the signal input of the same system. It may also be defined on a logarithmic scale, in terms of the decimal logarithm of the same ratio ("dB gain"). Voltage Gain = Output Voltage/Input Voltage. It is a measure of amplification.
+
+=== CANDIDATE 4 / 40 | Index: 35 | Word: galactose ===
+Definition:
+A monosaccharide, with the molecular formula C6 H12 O6 , density 1.723 g/cm3 and melting point, 167 °C (440 K). It is a six- carbon sugar that is a constituent of lactose. It occurs naturally as one of the products of other sugars, for example , inlactose , i n polysaccharides and in glycolipids, carbohydrate-containing lipids that occur in the brain and other nervous tissues of most animals.
+
+=== CANDIDATE 5 / 40 | Index: 45 | Word: galilean telescope ===
+Definition:
+A refracting telescope having one convex lens and one concave lens. The concave lens serves as the occular lens or the eyepiece with a short focal length; while the convex lens serves as the objective lens with a large focal length. The lenses are situated on either side of a tube such that the focal point of the occular lens is the same as the focal point for the objective lens. Galilean telescopes are shorter than equivalent Keplerian telescopes and give bright, upright images, but they have a limited field of view, spherical and chromatic aberration and, except at low magnification (about 30× or less), poor eye relief. eyepiece objective lens virtual image at infinity f I1 efoFoFe Galilean telescope eye.
+
+=== CANDIDATE 6 / 40 | Index: 46 | Word: galilean transformation ===
+Definition:
+A set of equations for transforming the position and motion parameters from a frame of reference with origin at 0 and coordinates ( x , y , z , t ) to a frame with origin at 0' and coordinates at ( x' , y' , z ', t '). They are: x ' = x - vt , y ' = y , z ' = z , t' = t . It is used to transform between the coordinates of two reference frames which differ only by constant relative motion within the constructs of Newtonian physics.
+
+=== CANDIDATE 7 / 40 | Index: 52 | Word: gallic acid ===
+Definition:
+A colourless crystalline aromatic compound, with the chemical formula C6 H2 (OH) 3 COOH, density 1.7 g/cm3 (anhydrous) and melting point 250 °C (523 K). It occurs in gallnuts, sumac, witch hazel, tea leaves, oak bark and other plants and also as part of tannins. It is used to make ink and dyes and on heating yields pyrogallol. It acts as an antioxidant and helps to protect cells against oxidative damage. It is also used to treat albuminuria and diabetes.
+
+=== CANDIDATE 8 / 40 | Index: 55 | Word: gallium arsenide ===
+Definition:
+A semiconductor alloy of gallium and arsenic, with the chemical formula GaAs and a melting point of 1,238 °C (1,511 K). It has semi-conducting properties similar to or superior to those of silicon, for example, its chips require less electric power and process data faster than those made from silicon. It is used in G lasers, photocells and microwave generators and in high frequency applications such as cellphones, DVD players and fibre optics.
+
+=== CANDIDATE 9 / 40 | Index: 81 | Word: gamma distribution ===
+Definition:
+A probability distribution given by , where and are parameters. The mean and variance of the distribution are: mean = , variance = 2 .
+
+=== CANDIDATE 10 / 40 | Index: 83 | Word: gamma function ===
+Definition:
+The function defined by Γ ( x ) = t x^-1 ∞ ∫ e t dt , where x > 0 ( x need not be an integer). The function is recursive satisfying the relationship Γ ( x + 1) = x Γ ( x ). The integral is known as the incomplete gamma function, satisfying the property Γ( x + 1) = x Γ( x ). For the integral n , Γ( n + 1) = n !. Gamma function has three definitions: (i) the Euler and Gauss, defined by Γ (1 + z ) = x z ∞ ∫ e - x dx . The real part of z here is to be greater than^-1. (ii) The second definition is due to Gauss, defined by Γ (1 + z ) = lim n →∞ n ! n z ( z + 1)( z + 2)...( z + n ) , where z is not a negative integer. (iii) The definition due to Weierstrass is Γ (1 + z ) = e γ z 1 + z n ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ e - z n ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ ⎡ ⎣ ⎢⎢⎢ ⎤ ⎦ ⎥⎥⎥ n = 1 ∞ ∏ . The gamma function also satisfies the relation π sin π z = Γ ( z ) Γ (1 - z ) for all z whose absolute value satisfies the inequality 0 < z < 1. Thus Γ(1/2) = √ π .
+
+=== CANDIDATE 11 / 40 | Index: 85 | Word: gamma radiation ===
+Definition:
+An electromagnetic radiation emitted by excited atomic nucleus when it moves to a lower excitation state. Gamma radiation lies above X-Rays in the electromagnetic spectrum. It is emitted by the hottest part of the universe and also emitted by the radioactive decay of certain materials like cobalt^-60, zinc^-65, caesium^-137, and radium^-226. Cadmium^-109 is also a common source of gamma radiation. Gamma rays can be produced in laboratories by exciting nuclei of a radioactive element by the use of cyclotron and synchrotron. Gamma radiation is one of the three types of radiation resulting from natural radioactivity. It is the most energetic form of electromagnetic radiation, with the shortest wavelength (high frequency). Gamma radiation ranges in energy from about 10 -15 to 10 -10 joule (10 keV to 10 MeV) corresponding to a wavelength range of about 10 -10 to 10 -14 metre. It is so highly penetrating that 25mm of lead only halves its strength. The speed of gamma rays is equal to the speed of light since it is a type of electromagnetic wave and all electromagnetic waves travel with the speed of light. Gamma rays produced in space are absorbed by the earth's atmosphere. Gamma radiation is used for cancer treatment and for diagnostic purposes. They are also used for killing the harmful bacteria in food (a process called food irradiation) so that it can be preserved for longer duration. It is also used for inspection of castings and welds, etc.
+
+=== CANDIDATE 12 / 40 | Index: 86 | Word: gamma-aminobutyric acid ===
+Definition:
+An acid found in the central nervous system, predominantly in the brain, where it acts as an inhibitory neurotransmitter. Its molecular formula is C4 H9 NO2 , density 1.11 g/ml, molar mass 103.120 g/mol, melting point 203.7 °C (477 K) and boiling point 247.9 °C (521 K). There are two general classes of GABA receptor known as GABA A in which the receptor is part of a ligand-gated ion channel complex; and GABA B metabotropic receptors, which are G protein- coupled receptors that open or close ion channels via intermediaries (G proteins). A third one, GABA C is an ionotropic receptor functions for neuronal inhibition.
+
+=== CANDIDATE 13 / 40 | Index: 103 | Word: gap series ===
+Definition:
+A power series with many zero coefficients.
+
+=== CANDIDATE 14 / 40 | Index: 109 | Word: gas ===
+Definition:
+One of three classical states of matter, which has no fixed shape or volume and always fills the whole of the space in which it is contained. It has a density of about 0.1 that of liquids. A gas is distinguished from liquids and solids by the vast separation of the individual gas particles. A substance exists as a solid near absolute zero temperature, but boils into a gas when heated to its boiling point. The average kinetic energy ( KE = nkT ) of a gas is too high for the intermolecular force of attraction to hold the molecules together. That is why molecules of gas are further apart from one another. The shape and size of gas is determined by the containing vessel in which it is introduced.
+
+=== CANDIDATE 15 / 40 | Index: 112 | Word: gas chromatography ===
+Definition:
+A technique used for the separation and analysis of complex mixtures of volatile organic and inorganic G compounds. There are two types: gas-solid chromatography in which the stationary phase is a solid; and gas-liquid chromatography in which the stationary phase is a non-volatile liquid. Most compounds with boiling points less than about 250 °C (523 K) can be readily analysed by this technique.
+
+=== CANDIDATE 16 / 40 | Index: 114 | Word: gas constant ===
+Definition:
+The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 .
+
+=== CANDIDATE 17 / 40 | Index: 122 | Word: gas laws ===
+Definition:
+The laws that relate the pressure, volume and temperature of a gas. These relationships have been formulated into what is known as Charles' law, named after J.A.C. Charles (1746-1823). Boyle's law named after Robert Boyle; and Pressure law. They combine to form the General Gas Laws. Charles's law states that, at constant pressure, the volume V of a gas is directly proportional to its absolute (Kelvin) temperature T , or = k ; and Boyle's law states that, at constant temperature, the pressure P of a gas varies inversely with its volume V or PV = k , where k is a constant. The relationship is used to calculate unknown variables rather than by measurement, i.e. = = .
+
+=== CANDIDATE 18 / 40 | Index: 138 | Word: gast herm omet er ===
+Definition:
+A device for measuring temperature in which the working fluid is a gas such as hydrogen or helium. The gas is enclosed in a glass or fused-quartz bulb connected to a mercury manometer. The pressure exerted by a constant volume of a gas is used for the measurement of temperature of the bath in which the bulb containing the gas is immersed. Temperature t° on this scale is defined as , where P o , P100 and P t are the pressure exerted by the gas when at ice point, steam point and at temperature t respectively.
+
+=== CANDIDATE 19 / 40 | Index: 152 | Word: gateaux differential ===
+Definition:
+The directional derivative at x with increment h , of a given function f defined on an open domain. If G this limit exists for all h , then the function is said to be Gateaux differentiable at x and, if it is linear in h , the mapping T = δ f ( x ;.) is said to be the (linear) Gateaux derivative of f at x , which is often referred to as the gradient of f , written Δ f ( x ). It is given by δ f ( x : h ) = lim t → 0 f ( x + t h) - f ( x ) t ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ .
+
+=== CANDIDATE 20 / 40 | Index: 158 | Word: gattermann reaction ===
+Definition:
+A synthesis of an aldehyde from an aromatic or heterocyclic compound, hydrogen cyanide, hydrogen chloride and a catalyst of aluminium chloride or zinc chloride. It is a variation of the Sandmeyer reaction for preparing chloro- or bromoarenes by reaction of the diazonium compound. In the Gattermann reaction ,the aromatic amine is added to sodium nitrite and the halogen acid (10 °C), then fresh copper powder (e.g. from Zn+CuSO4 ) is added and the solution warmed. The diazonium salt then forms the haloarene, for example, C6 H5 N2 +Cl- C6 H5 Cl+N2 . The copper acts as a catalyst.
+
+=== CANDIDATE 21 / 40 | Index: 159 | Word: gauge ===
+Definition:
+1. A standard or scale of measurement. 2. The width of a railway or tramway track. 3. A standard dimension, quantity or capacity. 4. An instrument for measuring or testing. Also known as valuation , it is a mapping g from an integral domain E \ {0} into the non-negative integers, such that g ( ab ) ≥ g ( a ) for all a and b in E \ {0} and such that for b in E and a in E \ {0} there exist q and r in E for which b = qa + r and either r = 0 or g ( r ) < g ( a ). For example, the degree of polynomials over a field is a gauge.
+
+=== CANDIDATE 22 / 40 | Index: 161 | Word: gauge function ===
+Definition:
+A non-negative, positively homogeneous, convex function with value zero at zero. Given a convex set C an associated gauge is constructed by setting ' g c ( x ) = inf{ t > 0 : x tC }. An everywhere finite (symmetric) gauge is a norm and there is a duality between gauge and support functions.
+
+=== CANDIDATE 23 / 40 | Index: 169 | Word: gauss' hypergeometric equation ===
+Definition:
+The differential equation, arising in many physical contexts, defined by x (1 - x ) y ″ + [ c - ( a + b + 1) x ] y ′ - aby = 0.
+
+=== CANDIDATE 24 / 40 | Index: 170 | Word: gauss' law ===
+Definition:
+A law formulated by Carl Friedrich Gauss in 1835 relating the distribution of electric charge to the resulting electric field. It states that the total electric flux normal to a closed surface in an electric field is proportional to the algebraic sum of the electric charges within the surface. A similar law applies to the surfaces, drawn in a magnetic field and the law can be generalised for any vector field through a closed surface. It is one of four of Maxwell's equations which form the basis of classical electrodynamics; the other three being Gauss's law for magnetism, Faraday's law of induction and Ampère's law with Maxwell's correction. Gauss's law can be used to derive Coulomb's law and vice versa.
+
+=== CANDIDATE 25 / 40 | Index: 172 | Word: gauss' test ===
+Definition:
+The test for the convergence of a power series that if unun + 1 = 1 - L n + O L n 1 + ε ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ , then u n converges absolutely if L > 1 and diverges or converges conditionally, if L ≤ 1.
+
+=== CANDIDATE 26 / 40 | Index: 174 | Word: gauss-markov least squares theorem ===
+Definition:
+A mathematical theorem which states that the minimum variance approach to estimation is due to Markov and the least squares method is due to the Carl Gauss. The theorem also holds for multivariate distributions. It is stated as the least squares estimate of β for the model Y i = β X i + ε i ; E [ε i ] = 0; var(ε i ) = σ 2 ; cov (ε i , ε i ) = 0, has uniform minimum variance among all unbiased linear estimates of β.
+
+=== CANDIDATE 27 / 40 | Index: 175 | Word: gauss-seidel iteration ===
+Definition:
+An iterative method similar to the Jacobi iteration, which is used to solve a linear matrix system of equations, A x = b by repeatedly solving for x NEW from x NEW( i ) = a ii ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ b i - a ij x OLD( j ) - a ij x NEW( j ) j < i ∑ i < j ∑ ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ . This assumes that a ii ≠ 0 and will not always converge even then.
+
+=== CANDIDATE 28 / 40 | Index: 177 | Word: gaussian distribution ===
+Definition:
+A probability distribution, f ( x ), of a random variable, x that is assumed by many statistical methods. This is given by f ( x )= σ 2 π exp -­‐ 1 ( x -­‐ µ ) 2 σ 2 ⎡ ⎣ ⎢⎢⎢ ⎤ ⎦ ⎥⎥⎥ , where μ is the mean and σ 2 is the variance. All normal distributions are symmetric and have bell-shaped density curves with a single peak.
+
+=== CANDIDATE 29 / 40 | Index: 178 | Word: gaussian domain ===
+Definition:
+An integral domain in which every non-zero non-unit is uniquely representable as a finite product of irreducible elements, up to permutation. Since the Gaussian integers are a Gaussian domain and 5 = (1 + 2 i )(1 - 2 i ), 5 is reducible in the Gaussian integers; 3 is irreducible therein and hence prime, because it is in a Euclidean domain.
+
+=== CANDIDATE 30 / 40 | Index: 181 | Word: gaussian function ===
+Definition:
+The function y = exp (- x 2 ), whose integral from -∞ to ∞ converges to √ π . In one dimension, the Gaussian function is the probability density function of the Gaussian distribution (normal distribution).
+
+=== CANDIDATE 31 / 40 | Index: 183 | Word: gaussian plane ===
+Definition:
+A two-dimensional method for representing complex numbers by Cartesian coordinates x , y . Along the x -axis or horizontal axis are plotted the real numbers and along the y -axis or the vertical axis the non-real or imaginary numbers. The number x + iy is represented by the point ( x , y ) or by the corresponding vector. If the polar coordinates of ( x , y ) are ( r , θ ), r is the modulus and θ the argument of x + iy .
+
+=== CANDIDATE 32 / 40 | Index: 184 | Word: gaussian unit ===
+Definition:
+A system of units for the Gaussian system (electric and magnetic quantities based upon electrostatic and electromagnetic units). In this unit, the electric and magnetic constants are both equal to unity. For example, one Gaussian unit of capacitance (statfarad) =1.112 650~pF; electric potential (statvolt) = 299.792 5~V; and electric charge (statcoulomb) =333.564 1~pC.
+
+=== CANDIDATE 33 / 40 | Index: 185 | Word: gay-lussac's law ===
+Definition:
+The principle or law named after the French chemist, Joseph Louis Gay-Lussac that, when gases combine in a chemical reaction, both reactants and products do so in simple ratios of their volumes and that any gaseous product is also produced in a simple ratio or that when gases react, they do so in volumes which bear simple whole number ratios to one another and to the volume of the product, if temperature and pressure remain constant.
+
+=== CANDIDATE 34 / 40 | Index: 187 | Word: gaylussite ===
+Definition:
+A translucent, yellowish-white hydrous carbonate mineral, with the chemical formula Na 2 Ca(CO3 ) 2 ·5H2 O. It crystallises in the monoclinic system. It is an unstable mineral which dehydrates in dry air and decomposes in water. It is formed as an evaporite from alkali lake waters.
+
+=== CANDIDATE 35 / 40 | Index: 194 | Word: geiger-nuttall law ===
+Definition:
+It states that for an alpha-emitting radioactive substance, the logarithm of the decay constant and the logarithm of the range in air of the emitted alpha rays are in linear relation to each other. It is expressed as In λ = -a 1 ZE^-1/2 + a 2 , where λ is the decay constant, Z is the atomic number, E is the binding energy and a 1 and a 2 are constants.
+
+=== CANDIDATE 36 / 40 | Index: 198 | Word: gel filtration chromatography ===
+Definition:
+A type of size exclusion chromatography in which molecules in solution are separated based on their size or hydrodynamic volume, using an aqueous solution to transport the sample through the column. Gel filtration is used mainly to separate polar or water soluble polymers and macromolecules such as proteins, nucleic acids and polysaccharides.
+
+=== CANDIDATE 37 / 40 | Index: 202 | Word: gelfand transform ===
+Definition:
+Named after Russian mathematician, Israil Moiseyevich Gelfand, it is the mapping that associates a continuous function on the compact space, Δ, of all maximal ideals in the induced weak topology, to an element of a commutative Banach algebra, A . Its formula is x ! ( h ) = h ( x ).
+
+=== CANDIDATE 38 / 40 | Index: 203 | Word: gelfond-schneider theorem ===
+Definition:
+Named after Russian mathematician, Alexander Gelfond (1906-68) and Theodor Schneider (1911-1988), German mathematician. it is the theorem that for complex algebraic numbers α and β with α not 0 or 1 and β irrational, α β is transcendental. Thus √2 √2 and e π = (-1) -i are transcendental.
+
+=== CANDIDATE 39 / 40 | Index: 244 | Word: generalisation ===
+Definition:
+1. Making a theory or hypothesis that what one observes in a special single case applies more widely to form an essential basis of all valid deductive inferences. For example, after studying how one acid reacts with a metal, one draws the conclusion that all acids react with the metal that way. Generalisations postulate the existence of a domain or set of elements, as well as one or more common characteristics shared by those elements. 2. The extension of a number of results to form a rule. For example, the computations 3 + 5 = 5 + 3 and 1.5 + 2.7 = 2.7 + 1.5 could be generalised to a + b = b + a . 3. In logic, universal generalisation is any statement ascribing a property to every member of a class. Existential generalisation is any statement ascribing a property to one or more members of a class. 4. The act or process of perceiving similarity or relation between different stimuli, as between words, colours, sounds, lights, concepts or feelings. 5. Stimulus generalisation is the act or process of responding to a new stimulus by an organism similar to but distinct from the conditioned stimulus. 6. Response generalisation is the act or process of an organism making a different but similar response to the same stimulus. 7. Mediated generalisation is the act or process of responding to a stimulus not physically similar to the conditioned stimulus and not previously encountered in conditioning.
+
+=== CANDIDATE 40 / 40 | Index: 247 | Word: generalised eigenvalue problem ===
+Definition:
+The problem of finding scalars λ and vectors x solving Ax = λ Bx where A and B are given matrices or linear operators and B is positive definite. In the classical eigenvalue problem, B is the identity matrix or operator.
+

@@ -71484,7 +71484,7 @@
       "word": "g2",
       "raw_headword": "G2",
       "synonyms": [],
-      "definition": "The symbol for the goodness-of-fit test statistics based on the likelihood ratio. It is often used when using the log-linear models. This is given by G2 = 2 , where O and E represent the observed and expected frequencies respectively."
+      "definition": "In categorical data analysis and statistics, the likelihood-ratio goodness-of-fit test statistic (deviance), denoted $G^2$. It evaluates whether observed contingency frequencies $O_i$ differ significantly from model-expected frequencies $E_i$:\n\n$$G^2 = 2 \\sum_{i=1}^k O_i \\ln\\left(\\frac{O_i}{E_i}\\right)$$\n\nUnder the null hypothesis that the fitted log-linear model is correct, $G^2$ asymptotically follows a chi-squared distribution $\\chi^2(\\text{df})$ as the sample size $N \\to \\infty$. It serves as a direct likelihood-ratio counterpart to Pearson's chi-squared test statistic $X^2 = \\sum \\frac{(O_i - E_i)^2}{E_i}$."
     },
     {
       "word": "g2 phase",
@@ -71524,7 +71524,7 @@
       "word": "gadolinium",
       "raw_headword": "GADOLINIUM",
       "synonyms": [],
-      "definition": "A rare silvery-white metallic element belonging to the lanthanide series of the Periodic Table, which becomes strongly magnetic at low temperatures. Its symbol is Gd, atomic number 64, G atomic weight 157.25, melting point 1313 °C (1586 K), boiling point 3273 °C (3546 K) and specific gravity from 7.8 to 7.896. It occurs with other rare earth elements in many minerals, such as monazite, samarskite, gadolinite and some varieties of Norwegian ytterspar. It is the 41st element in order of abundance in Earth's crust."
+      "definition": "A rare silvery-white metallic chemical element belonging to the lanthanide series of the Periodic Table (symbol $\\text{Gd}$, atomic number $64$, relative atomic mass $157.25$). Ground-state electron configuration: $[\\text{Xe}]\\,4f^7 5d^1 6s^2$. Melting point $1313\\,^\\circ\\text{C}$ ($1586\\,\\text{K}$), boiling point $3273\\,^\\circ\\text{C}$ ($3546\\,\\text{K}$), and density $7.90\\,\\text{g/cm}^3$. With seven unpaired $4f$ electrons, $\\text{Gd}^{3+}$ possesses the highest electronic magnetic moment among stable ions ($7.94\\,\\mu_B$), making gadolinium strongly ferromagnetic below its Curie temperature $T_C = 292\\,\\text{K}$ ($19\\,^\\circ\\text{C}$) and exceptionally paramagnetic above it. Widely used as a paramagnetic contrast agent in magnetic resonance imaging (MRI)."
     },
     {
       "word": "gaia hypothesis",
@@ -71539,7 +71539,7 @@
       "word": "gain",
       "raw_headword": "GAIN",
       "synonyms": [],
-      "definition": "The ratio of the output signal strength of a circuit or system to the input or the output voltage of an amplifier compared to its input voltage or the mean ratio of the signal output of a system to the signal input of the same system. It may also be defined on a logarithmic scale, in terms of the decimal logarithm of the same ratio (\"dB gain\"). Voltage Gain = Output Voltage/Input Voltage. It is a measure of amplification."
+      "definition": "A measure of the ability of a two-port electronic circuit (such as an amplifier) to increase the amplitude or power of a signal from input to output. Voltage gain $A_v$ and current gain $A_i$ are dimensionless linear ratios:\n\n$$A_v = \\frac{V_{\\text{out}}}{V_{\\text{in}}}, \\quad A_i = \\frac{I_{\\text{out}}}{I_{\\text{in}}}$$\n\nPower gain $A_p$ is expressed as $A_p = \\frac{P_{\\text{out}}}{P_{\\text{in}}}$. On a logarithmic decibel ($\\text{dB}$) scale:\n\n$$G_{\\text{dB}} = 10 \\log_{10}\\left(\\frac{P_{\\text{out}}}{P_{\\text{in}}}\\right) = 20 \\log_{10}\\left(\\frac{V_{\\text{out}}}{V_{\\text{in}}}\\right)$$\n\nwhere input and output impedances are matched."
     },
     {
       "word": "gait",
@@ -71644,7 +71644,7 @@
       "word": "galactose",
       "raw_headword": "GALACTOSE",
       "synonyms": [],
-      "definition": "A monosaccharide, with the molecular formula C6 H12 O6 , density 1.723 g/cm3 and melting point, 167 °C (440 K). It is a six- carbon sugar that is a constituent of lactose. It occurs naturally as one of the products of other sugars, for example , inlactose , i n polysaccharides and in glycolipids, carbohydrate-containing lipids that occur in the brain and other nervous tissues of most animals."
+      "definition": "A hexose monosaccharide and aldohexose stereoisomer of glucose (C-4 epimer), with molecular formula $\\text{C}_6\\text{H}_{12}\\text{O}_6$, molar mass $180.16\\,\\text{g/mol}$, density $1.723\\,\\text{g/cm}^3$, and melting point $167\\,^\\circ\\text{C}$ ($440\\,\\text{K}$). It condenses with D-glucose via a $\\beta(1\\to 4)$-glycosidic bond to form the disaccharide lactose:\n\n$$\\text{C}_6\\text{H}_{12}\\text{O}_6 \\text{ (galactose)} + \\text{C}_6\\text{H}_{12}\\text{O}_6 \\text{ (glucose)} \\xrightarrow{\\text{synthase}} \\text{C}_{12}\\text{H}_{22}\\text{O}_{11} \\text{ (lactose)} + \\text{H}_2\\text{O}$$\n\nCrucial in human metabolism, where it is converted to glucose-6-phosphate via the Leloir pathway."
     },
     {
       "word": "galactosidase",
@@ -71704,13 +71704,13 @@
       "word": "galilean telescope",
       "raw_headword": "GALILEAN TELESCOPE",
       "synonyms": [],
-      "definition": "A refracting telescope having one convex lens and one concave lens. The concave lens serves as the occular lens or the eyepiece with a short focal length; while the convex lens serves as the objective lens with a large focal length. The lenses are situated on either side of a tube such that the focal point of the occular lens is the same as the focal point for the objective lens. Galilean telescopes are shorter than equivalent Keplerian telescopes and give bright, upright images, but they have a limited field of view, spherical and chromatic aberration and, except at low magnification (about 30× or less), poor eye relief. eyepiece objective lens virtual image at infinity f I1 efoFoFe Galilean telescope eye."
+      "definition": "A refracting optical telescope designed by Galileo Galilei in 1609, consisting of a convergent (convex) objective lens of long positive focal length $f_o > 0$ and a divergent (concave) eyepiece lens of short negative focal length $f_e < 0$. The separation distance between the lenses equals the algebraic sum of their focal lengths:\n\n$$L = f_o + f_e = f_o - |f_e|$$\n\nThe angular magnification $M$ is positive, producing an upright (erect) virtual image without requiring an erecting prism:\n\n$$M = -\\frac{f_o}{f_e} = +\\frac{f_o}{|f_e|}$$\n\nThough compact, it suffers from a narrow field of view and lack of an accessible real exit pupil."
     },
     {
       "word": "galilean transformation",
       "raw_headword": "GALILEAN TRANSFORMATION",
       "synonyms": [],
-      "definition": "A set of equations for transforming the position and motion parameters from a frame of reference with origin at 0 and coordinates ( x , y , z , t ) to a frame with origin at 0' and coordinates at ( x' , y' , z ', t '). They are: x ' = x - vt , y ' = y , z ' = z , t' = t . It is used to transform between the coordinates of two reference frames which differ only by constant relative motion within the constructs of Newtonian physics."
+      "definition": "The coordinate transformation in Newtonian mechanics relating the space-time coordinates of an event observed in an inertial reference frame $S$ with coordinates $(x, y, z, t)$ to an inertial frame $S'$ moving with uniform velocity $v$ along their common $x$-axis:\n\n$$x' = x - vt, \\quad y' = y, \\quad z' = z, \\quad t' = t$$\n\nAssuming absolute time ($t' = t$), Newton's laws of motion remain invariant under Galilean transformations (Galilean relativity). For velocities approaching the speed of light $c$, it is superseded by the Lorentz transformation of special relativity."
     },
     {
       "word": "galileo",
@@ -71752,7 +71752,7 @@
         "gallate",
         "5-trihydroxybenzoate"
       ],
-      "definition": "A colourless crystalline aromatic compound, with the chemical formula C6 H2 (OH) 3 COOH, density 1.7 g/cm3 (anhydrous) and melting point 250 °C (523 K). It occurs in gallnuts, sumac, witch hazel, tea leaves, oak bark and other plants and also as part of tannins. It is used to make ink and dyes and on heating yields pyrogallol. It acts as an antioxidant and helps to protect cells against oxidative damage. It is also used to treat albuminuria and diabetes."
+      "definition": "A trihydroxybenzoic acid (3,4,5-trihydroxybenzoic acid), an organic aromatic compound with molecular formula $\\text{C}_6\\text{H}_2(\\text{OH})_3\\text{COOH}$ (or $\\text{C}_7\\text{H}_6\\text{O}_5$), molar mass $170.12\\,\\text{g/mol}$, density $1.70\\,\\text{g/cm}^3$, and melting point $250\\,^\\circ\\text{C}$ ($523\\,\\text{K}$, decomposes). Found in gallnuts, sumac, witch hazel, and oak bark. Thermal decarboxylation yields pyrogallol (1,2,3-trihydroxybenzene) and carbon dioxide:\n\n$$\\text{C}_6\\text{H}_2(\\text{OH})_3\\text{COOH} \\xrightarrow{\\Delta} \\text{C}_6\\text{H}_3(\\text{OH})_3 + \\text{CO}_2$$\n\nActs as a powerful antioxidant, astringent, and precursor in the historical synthesis of iron gall ink."
     },
     {
       "word": "galliforme",
@@ -71770,7 +71770,7 @@
       "word": "gallium arsenide",
       "raw_headword": "GALLIUM ARSENIDE",
       "synonyms": [],
-      "definition": "A semiconductor alloy of gallium and arsenic, with the chemical formula GaAs and a melting point of 1,238 °C (1,511 K). It has semi-conducting properties similar to or superior to those of silicon, for example, its chips require less electric power and process data faster than those made from silicon. It is used in G lasers, photocells and microwave generators and in high frequency applications such as cellphones, DVD players and fibre optics."
+      "definition": "A III-V binary direct-bandgap semiconductor compound composed of equal parts gallium and arsenic (chemical formula $\\text{GaAs}$, molar mass $144.645\\,\\text{g/mol}$, melting point $1238\\,^\\circ\\text{C}$ / $1511\\,\\text{K}$). Crystallises in the zincblende lattice structure. It features a direct bandgap of $E_g \\approx 1.424\\,\\text{eV}$ at $300\\,\\text{K}$ and an electron mobility ($\\mu_e \\approx 8500\\,\\text{cm}^2\\cdot\\text{V}^{-1}\\cdot\\text{s}^{-1}$) nearly six times higher than silicon, enabling ultra-fast switching in monolithic microwave integrated circuits (MMICs), high-efficiency multi-junction solar cells, laser diodes, and photodetectors."
     },
     {
       "word": "gallon",
@@ -71939,7 +71939,7 @@
       "word": "gamma distribution",
       "raw_headword": "GAMMA DISTRIBUTION",
       "synonyms": [],
-      "definition": "A probability distribution given by , where and are parameters. The mean and variance of the distribution are: mean = , variance = 2 ."
+      "definition": "A continuous two-parameter probability distribution family on $(0, \\infty)$. Parametrized by shape parameter $\\alpha > 0$ (or $k$) and rate parameter $\\beta > 0$ (where $\\theta = 1/\\beta$ is the scale parameter), its probability density function (PDF) is:\n\n$$f(x; \\alpha, \\beta) = \\frac{\\beta^\\alpha}{\\Gamma(\\alpha)} x^{\\alpha - 1} e^{-\\beta x} \\quad \\text{for } x > 0$$\n\nwhere $\\Gamma(\\alpha)$ is the Euler gamma function. Its population mean and variance are given by:\n\n$$\\mu = \\mathbb{E}[X] = \\frac{\\alpha}{\\beta} = k\\theta, \\quad \\sigma^2 = \\operatorname{Var}(X) = \\frac{\\alpha}{\\beta^2} = k\\theta^2$$\n\nSpecial cases include the exponential distribution (when $\\alpha = 1$) and the chi-squared distribution $\\chi^2(k)$ (when $\\alpha = k/2, \\beta = 1/2$)."
     },
     {
       "word": "gamma diversity",
@@ -71953,7 +71953,7 @@
       "word": "gamma function",
       "raw_headword": "GAMMA FUNCTION",
       "synonyms": [],
-      "definition": "The function defined by Γ ( x ) = t x^-1 ∞ ∫ e t dt , where x > 0 ( x need not be an integer). The function is recursive satisfying the relationship Γ ( x + 1) = x Γ ( x ). The integral is known as the incomplete gamma function, satisfying the property Γ( x + 1) = x Γ( x ). For the integral n , Γ( n + 1) = n !. Gamma function has three definitions: (i) the Euler and Gauss, defined by Γ (1 + z ) = x z ∞ ∫ e - x dx . The real part of z here is to be greater than^-1. (ii) The second definition is due to Gauss, defined by Γ (1 + z ) = lim n →∞ n ! n z ( z + 1)( z + 2)...( z + n ) , where z is not a negative integer. (iii) The definition due to Weierstrass is Γ (1 + z ) = e γ z 1 + z n ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ e - z n ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ ⎡ ⎣ ⎢⎢⎢ ⎤ ⎦ ⎥⎥⎥ n = 1 ∞ ∏ . The gamma function also satisfies the relation π sin π z = Γ ( z ) Γ (1 - z ) for all z whose absolute value satisfies the inequality 0 < z < 1. Thus Γ(1/2) = √ π ."
+      "definition": "A fundamental transcendental special function extending the factorial to complex numbers. For $\\operatorname{Re}(z) > 0$, it is defined via the Euler integral of the second kind:\n\n$$\\Gamma(z) = \\int_0^\\infty t^{z-1} e^{-t} \\, dt$$\n\nSatisfies the foundational functional recurrence $\\Gamma(z + 1) = z\\Gamma(z)$, giving for any positive integer $n$:\n\n$$\\Gamma(n + 1) = n!$$\n\nGauss's infinite limit product representation is:\n\n$$\\Gamma(z) = \\lim_{n \\to \\infty} \\frac{n! \\, n^z}{z(z+1)(z+2)\\cdots(z+n)}$$\n\nWeierstrass's Hadamard canonical product is:\n\n$$\\frac{1}{\\Gamma(z)} = z e^{\\gamma z} \\prod_{n=1}^\\infty \\left(1 + \\frac{z}{n}\\right) e^{-z/n}$$\n\nwhere $\\gamma \\approx 0.577215$ is the Euler-Mascheroni constant. Also satisfies Euler's reflection formula:\n\n$$\\Gamma(z)\\Gamma(1 - z) = \\frac{\\pi}{\\sin(\\pi z)} \\implies \\Gamma\\left(\\frac{1}{2}\\right) = \\sqrt{\\pi}$$"
     },
     {
       "word": "gamma iron",
@@ -71967,7 +71967,7 @@
       "synonyms": [
         "gamma rays"
       ],
-      "definition": "An electromagnetic radiation emitted by excited atomic nucleus when it moves to a lower excitation state. Gamma radiation lies above X-Rays in the electromagnetic spectrum. It is emitted by the hottest part of the universe and also emitted by the radioactive decay of certain materials like cobalt^-60, zinc^-65, caesium^-137, and radium^-226. Cadmium^-109 is also a common source of gamma radiation. Gamma rays can be produced in laboratories by exciting nuclei of a radioactive element by the use of cyclotron and synchrotron. Gamma radiation is one of the three types of radiation resulting from natural radioactivity. It is the most energetic form of electromagnetic radiation, with the shortest wavelength (high frequency). Gamma radiation ranges in energy from about 10 -15 to 10 -10 joule (10 keV to 10 MeV) corresponding to a wavelength range of about 10 -10 to 10 -14 metre. It is so highly penetrating that 25mm of lead only halves its strength. The speed of gamma rays is equal to the speed of light since it is a type of electromagnetic wave and all electromagnetic waves travel with the speed of light. Gamma rays produced in space are absorbed by the earth's atmosphere. Gamma radiation is used for cancer treatment and for diagnostic purposes. They are also used for killing the harmful bacteria in food (a process called food irradiation) so that it can be preserved for longer duration. It is also used for inspection of castings and welds, etc."
+      "definition": "High-energy, highly penetrating electromagnetic radiation originating from transitions within excited atomic nuclei during radioactive decay or nuclear reactions. Occupies the highest frequency band of the electromagnetic spectrum, with wavelengths $\\lambda < 10^{-11}\\,\\text{m}$ ($< 10\\,\\text{pm}$) and photon energies $E$ exceeding $100\\,\\text{keV}$:\n\n$$E = h\\nu = \\frac{hc}{\\lambda} \\ge 100\\,\\text{keV}$$\n\nwhere $h = 6.626 \\times 10^{-34}\\,\\text{J}\\cdot\\text{s}$ and $c = 3.0 \\times 10^8\\,\\text{m/s}$. Emitted by radioisotopes such as Cobalt-60 ($^{60}_{27}\\text{Co}$) and Caesium-137 ($^{137}_{55}\\text{Cs}$). Attenuation through matter obeys the Beer-Lambert exponential law:\n\n$$I = I_0 e^{-\\mu x}$$\n\nwhere $\\mu$ is the linear attenuation coefficient and $x$ is absorber thickness. Widely used in radiotherapy, industrial radiography, and food irradiation."
     },
     {
       "word": "gamma-aminobutyric acid",
@@ -71975,7 +71975,7 @@
       "synonyms": [
         "gaba 4-aminobutanoic acid"
       ],
-      "definition": "An acid found in the central nervous system, predominantly in the brain, where it acts as an inhibitory neurotransmitter. Its molecular formula is C4 H9 NO2 , density 1.11 g/ml, molar mass 103.120 g/mol, melting point 203.7 °C (477 K) and boiling point 247.9 °C (521 K). There are two general classes of GABA receptor known as GABA A in which the receptor is part of a ligand-gated ion channel complex; and GABA B metabotropic receptors, which are G protein- coupled receptors that open or close ion channels via intermediaries (G proteins). A third one, GABA C is an ionotropic receptor functions for neuronal inhibition."
+      "definition": "4-Aminobutanoic acid (GABA), the chief inhibitory neurotransmitter in the developmentally mature mammalian central nervous system. Molecular formula $\\text{C}_4\\text{H}_9\\text{NO}_2$, molar mass $103.12\\,\\text{g/mol}$, density $1.11\\,\\text{g/cm}^3$, melting point $203.7\\,^\\circ\\text{C}$ ($477\\,\\text{K}$). Biosynthesized from L-glutamate via decarboxylation catalyzed by glutamate decarboxylase (GAD) with pyridoxal phosphate (PLP):\n\n$$\\text{HOOC-CH}_2\\text{-CH}_2\\text{-CH(NH}_2\\text{)-COOH} \\xrightarrow{\\text{GAD}} \\text{H}_2\\text{N-CH}_2\\text{-CH}_2\\text{-CH}_2\\text{-COOH} + \\text{CO}_2$$\n\nActs on ionotropic $\\text{GABA}_A$ and $\\text{GABA}_C$ ligand-gated chloride channels (inducing hyperpolarizing $\\text{Cl}^-$ influx) and metabotropic $\\text{GABA}_B$ G-protein coupled receptors."
     },
     {
       "word": "gamma-ray astronomy",
@@ -72085,7 +72085,7 @@
       "word": "gap series",
       "raw_headword": "GAP SERIES",
       "synonyms": [],
-      "definition": "A power series with many zero coefficients."
+      "definition": "A power series with lacunary structure (a lacunary power series) in which the indices of non-zero terms exhibit growing gaps:\n\n$$f(z) = \\sum_{k=0}^\\infty c_k z^{n_k}$$\n\nwhere the strictly increasing sequence of exponents $n_k$ satisfies Hadamard's gap condition:\n\n$$\\frac{n_{k+1}}{n_k} \\ge \\lambda > 1$$\n\nBy Hadamard's lacunary value theorem, if such a series has radius of convergence $R = 1$, the boundary of its disk of convergence $|z| = 1$ constitutes a natural boundary across which the analytic function $f(z)$ cannot be analytically continued."
     },
     {
       "word": "gapes",
@@ -72127,7 +72127,7 @@
       "word": "gas",
       "raw_headword": "GAS",
       "synonyms": [],
-      "definition": "One of three classical states of matter, which has no fixed shape or volume and always fills the whole of the space in which it is contained. It has a density of about 0.1 that of liquids. A gas is distinguished from liquids and solids by the vast separation of the individual gas particles. A substance exists as a solid near absolute zero temperature, but boils into a gas when heated to its boiling point. The average kinetic energy ( KE = nkT ) of a gas is too high for the intermolecular force of attraction to hold the molecules together. That is why molecules of gas are further apart from one another. The shape and size of gas is determined by the containing vessel in which it is introduced."
+      "definition": "One of the fundamental classical states of matter, characterized by particles that are widely separated, in constant random thermal motion, and lacking fixed shape or definite volume. Under the kinetic molecular theory, the average translational kinetic energy per molecule depends solely on absolute temperature $T$:\n\n$$\\langle E_k \\rangle = \\frac{1}{2} m \\langle v^2 \\rangle = \\frac{3}{2} k_B T$$\n\nwhere $k_B = 1.3806 \\times 10^{-23}\\,\\text{J/K}$ is Boltzmann's constant. The root-mean-square speed of gas molecules of molar mass $M$ is:\n\n$$v_{\\text{rms}} = \\sqrt{\\frac{3RT}{M}}$$\n\nAt low pressures and high temperatures, real gases closely follow the ideal gas equation $PV = nRT$."
     },
     {
       "word": "gas analysis installation",
@@ -72149,7 +72149,7 @@
       "word": "gas chromatography",
       "raw_headword": "GAS CHROMATOGRAPHY",
       "synonyms": [],
-      "definition": "A technique used for the separation and analysis of complex mixtures of volatile organic and inorganic G compounds. There are two types: gas-solid chromatography in which the stationary phase is a solid; and gas-liquid chromatography in which the stationary phase is a non-volatile liquid. Most compounds with boiling points less than about 250 °C (523 K) can be readily analysed by this technique."
+      "definition": "An analytical separation technique for volatilized compounds partitioning between a mobile inert gas phase (e.g. $\\text{He}$, $\\text{N}_2$, $\\text{H}_2$) and a stationary liquid or solid phase. The retention factor (capacity factor) $k'$ of an analyte with retention time $t_R$ and dead time $t_M$ is:\n\n$$k' = \\frac{t_R - t_M}{t_M}$$\n\nChromatographic peak efficiency is quantified by the number of theoretical plates $N$:\n\n$$N = 16\\left(\\frac{t_R}{W}\\right)^2 = 5.545\\left(\\frac{t_R}{W_{1/2}}\\right)^2$$\n\nwhere $W$ is peak width at baseline and $W_{1/2}$ is width at half-height. Separation resolution between adjacent peaks is $R_s = \\frac{2(t_{R2} - t_{R1})}{W_1 + W_2}$."
     },
     {
       "word": "gas chromatography infrared",
@@ -72165,7 +72165,7 @@
       "synonyms": [
         "universal molar gas constant"
       ],
-      "definition": "The constant R, which appears in the general gas equation, $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$, which describes the constant of proportionality (R), relating the pressure and volume of a quantity of gas to the absolute temperature, where n is the number of moles and T, the temperature. Some values of R are 8.314 JK^-1 mol^-1 , 1.985 Cal K^-1 mol^-1 , 0.082 Latm K^-1 mol^-1 and 8.314 x 10 7 erg K^-1 mol^-1 ."
+      "definition": "The universal physical constant of proportionality $R$ appearing in the ideal gas law and across chemical thermodynamics:\n\n$$PV = nRT$$\n\nIt equals the product of Avogadro's constant $N_A$ and the Boltzmann constant $k_B$ ($R = N_A k_B$). Standard CODATA values:\n\n$$R = 8.314462618\\,\\text{J}\\cdot\\text{K}^{-1}\\cdot\\text{mol}^{-1}$$\n\n$$R = 0.0820574\\,\\text{L}\\cdot\\text{atm}\\cdot\\text{K}^{-1}\\cdot\\text{mol}^{-1} = 1.9872\\,\\text{cal}\\cdot\\text{K}^{-1}\\cdot\\text{mol}^{-1} = 8.3145 \\times 10^7\\,\\text{erg}\\cdot\\text{K}^{-1}\\cdot\\text{mol}^{-1}$$\n\nDictates gas expansion work, molar heat capacities ($C_{p,m} - C_{v,m} = R$), and chemical equilibrium constants via $\\Delta G^\\circ = -RT \\ln K$."
     },
     {
       "word": "gas cooled reactor",
@@ -72217,7 +72217,7 @@
       "synonyms": [
         "gas equation"
       ],
-      "definition": "The laws that relate the pressure, volume and temperature of a gas. These relationships have been formulated into what is known as Charles' law, named after J.A.C. Charles (1746-1823). Boyle's law named after Robert Boyle; and Pressure law. They combine to form the General Gas Laws. Charles's law states that, at constant pressure, the volume V of a gas is directly proportional to its absolute (Kelvin) temperature T , or = k ; and Boyle's law states that, at constant temperature, the pressure P of a gas varies inversely with its volume V or PV = k , where k is a constant. The relationship is used to calculate unknown variables rather than by measurement, i.e. = = ."
+      "definition": "Empirical physical laws describing the thermodynamic relationships among pressure $P$, volume $V$, absolute temperature $T$, and amount of substance $n$:\n\n1. **Boyle's Law** ($T, n = \\text{const}$): $P V = k_1 \\iff P_1 V_1 = P_2 V_2$\n\n2. **Charles's Law** ($P, n = \\text{const}$): $\\frac{V}{T} = k_2 \\iff \\frac{V_1}{T_1} = \\frac{V_2}{T_2}$\n\n3. **Gay-Lussac's (Pressure) Law** ($V, n = \\text{const}$): $\\frac{P}{T} = k_3 \\iff \\frac{P_1}{T_1} = \\frac{P_2}{T_2}$\n\n4. **Combined Gas Law** ($n = \\text{const}$):\n\n$$\\frac{P_1 V_1}{T_1} = \\frac{P_2 V_2}{T_2} = \\text{constant}$$\n\nCombined with Avogadro's law ($V \\propto n$), they unify into the ideal gas equation of state $PV = nRT$."
     },
     {
       "word": "gas mask",
@@ -72321,7 +72321,7 @@
       "synonyms": [
         "cons tant - volu mega sthe rmom eter"
       ],
-      "definition": "A device for measuring temperature in which the working fluid is a gas such as hydrogen or helium. The gas is enclosed in a glass or fused-quartz bulb connected to a mercury manometer. The pressure exerted by a constant volume of a gas is used for the measurement of temperature of the bath in which the bulb containing the gas is immersed. Temperature t° on this scale is defined as , where P o , P100 and P t are the pressure exerted by the gas when at ice point, steam point and at temperature t respectively."
+      "definition": "A precision primary thermometer in which temperature is measured via the pressure or volume variations of an ideal gas (such as helium or hydrogen). In a constant-volume gas thermometer, the Celsius temperature $t$ on the gas scale is defined from measured pressures at temperature $t$ ($P_t$), the ice point ($P_0$), and the steam point ($P_{100}$):\n\n$$t = \\frac{P_t - P_0}{P_{100} - P_0} \\times 100\\,^\\circ\\text{C}$$\n\nOn the thermodynamic Kelvin scale, the absolute temperature $T$ is defined in the limit of zero filling pressure $P_3 \\to 0$ relative to the water triple point ($T_{\\text{tp}} = 273.16\\,\\text{K}$):\n\n$$T = 273.16 \\lim_{P_3 \\to 0} \\left(\\frac{P}{P_3}\\right) \\,\\text{K}$$"
     },
     {
       "word": "gastric juice",
@@ -72417,7 +72417,7 @@
       "word": "gateaux differential",
       "raw_headword": "GATEAUX DIFFERENTIAL",
       "synonyms": [],
-      "definition": "The directional derivative at x with increment h , of a given function f defined on an open domain. If G this limit exists for all h , then the function is said to be Gateaux differentiable at x and, if it is linear in h , the mapping T = δ f ( x ;.) is said to be the (linear) Gateaux derivative of f at x , which is often referred to as the gradient of f , written Δ f ( x ). It is given by δ f ( x : h ) = lim t → 0 f ( x + t h) - f ( x ) t ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ ."
+      "definition": "In functional analysis, a generalization of directional derivatives to infinite-dimensional topological vector spaces. Let $X, Y$ be locally convex topological vector spaces, $U \\subseteq X$ open, and $f: U \\to Y$. The Gateaux differential (directional derivative) of $f$ at $x \\in U$ in direction $h \\in X$ is:\n\n$$d f(x; h) = \\lim_{t \\to 0} \\frac{f(x + th) - f(x)}{t} = \\left. \\frac{d}{dt} f(x + th) \\right|_{t=0}$$\n\nIf this limit exists for all $h \\in X$ and the mapping $h \\mapsto df(x; h)$ is continuous and linear, $f$ is Gateaux differentiable at $x$, and the operator $T = f'(x) \\in \\mathcal{L}(X, Y)$ is the Gateaux derivative, representing the gradient $\\nabla f(x)$ in Hilbert spaces."
     },
     {
       "word": "gated ion channel",
@@ -72455,13 +72455,13 @@
       "word": "gattermann reaction",
       "raw_headword": "GATTERMANN REACTION",
       "synonyms": [],
-      "definition": "A synthesis of an aldehyde from an aromatic or heterocyclic compound, hydrogen cyanide, hydrogen chloride and a catalyst of aluminium chloride or zinc chloride. It is a variation of the Sandmeyer reaction for preparing chloro- or bromoarenes by reaction of the diazonium compound. In the Gattermann reaction ,the aromatic amine is added to sodium nitrite and the halogen acid (10 °C), then fresh copper powder (e.g. from Zn+CuSO4 ) is added and the solution warmed. The diazonium salt then forms the haloarene, for example, C6 H5 N2 +Cl- C6 H5 Cl+N2 . The copper acts as a catalyst."
+      "definition": "An organic substitution and formylation reaction named after Ludwig Gattermann. 1. **Gattermann Formylation**: Synthesis of aromatic aldehydes by reacting an activated aromatic ring (such as phenol or pyrrole) with hydrogen cyanide ($\\text{HCN}$) and hydrogen chloride ($\\text{HCl}$) in the presence of a Lewis acid catalyst ($\\text{AlCl}_3$ or $\\text{ZnCl}_2$), followed by hydrolysis of the intermediate aldimine:\n\n$$\\text{Ar-H} + \\text{HCN} + \\text{HCl} \\xrightarrow{\\text{AlCl}_3} \\text{Ar-CH=NH}_2^+\\text{Cl}^- \\xrightarrow{\\text{H}_2\\text{O}} \\text{Ar-CHO} + \\text{NH}_4\\text{Cl}$$\n\n2. **Gattermann Diazonium Reaction**: Preparation of aryl halides from diazonium salts using copper powder as catalyst instead of copper(I) salts (Sandmeyer):\n\n$$\\text{Ar-N}_2^+\\text{Cl}^- \\xrightarrow{\\text{Cu, HCl}} \\text{Ar-Cl} + \\text{N}_2 \\uparrow$$"
     },
     {
       "word": "gauge",
       "raw_headword": "GAUGE",
       "synonyms": [],
-      "definition": "1. A standard or scale of measurement. 2. The width of a railway or tramway track. 3. A standard dimension, quantity or capacity. 4. An instrument for measuring or testing. Also known as valuation , it is a mapping g from an integral domain E \\ {0} into the non-negative integers, such that g ( ab ) ≥ g ( a ) for all a and b in E \\ {0} and such that for b in E and a in E \\ {0} there exist q and r in E for which b = qa + r and either r = 0 or g ( r ) < g ( a ). For example, the degree of polynomials over a field is a gauge."
+      "definition": "1. A standardized instrument or scale for measuring physical dimensions, pressure, wire thickness, or railway track width. 2. In abstract algebra, a **gauge** (or valuation norm) on an integral domain $R$ is a function $g: R \\setminus \\{0\\} \\to \\mathbb{N}_0$ satisfying:\n\n$$g(ab) \\ge g(a) \\quad \\forall a, b \\in R \\setminus \\{0\\}$$\n\nand enabling Euclidean division: for any $b \\in R$ and $a \\in R \\setminus \\{0\\}$, there exist $q, r \\in R$ such that $b = qa + r$ with either $r = 0$ or $g(r) < g(a)$. For polynomial rings $K[x]$, the polynomial degree $\\deg(p)$ serves as the canonical gauge function."
     },
     {
       "word": "gauge boson",
@@ -72478,7 +72478,7 @@
       "synonyms": [
         "minkowski function"
       ],
-      "definition": "A non-negative, positively homogeneous, convex function with value zero at zero. Given a convex set C an associated gauge is constructed by setting ' g c ( x ) = inf{ t > 0 : x tC }. An everywhere finite (symmetric) gauge is a norm and there is a duality between gauge and support functions."
+      "definition": "In convex analysis and functional analysis, the **Minkowski functional** (or gauge) associated with an absorbing convex subset $C$ of a real vector space $X$. It is defined for each $x \\in X$ by:\n\n$$p_C(x) = \\inf \\{ t > 0 : x \\in tC \\}$$\n\nThe gauge $p_C$ is sublinear (subadditive and positively homogeneous):\n\n$$p_C(x + y) \\le p_C(x) + p_C(y), \\quad p_C(\\lambda x) = \\lambda p_C(x) \\; (\\lambda \\ge 0)$$\n\nIf $C$ is symmetric ($C = -C$) and bounded, $p_C(x)$ defines a genuine seminorm or norm on $X$, establishing a duality between convex bodies and support functions."
     },
     {
       "word": "gauge pressure",
@@ -72533,7 +72533,7 @@
       "synonyms": [
         "hypergeometric differential equation"
       ],
-      "definition": "The differential equation, arising in many physical contexts, defined by x (1 - x ) y ″ + [ c - ( a + b + 1) x ] y ′ - aby = 0."
+      "definition": "A canonical second-order linear ordinary differential equation with three regular singular points (at $x = 0, 1, \\infty$):\n\n$$x(1 - x) \\frac{d^2 y}{dx^2} + \\left[ c - (a + b + 1)x \\right] \\frac{dy}{dx} - ab y = 0$$\n\nwhere $a, b, c$ are complex parameters ($c \\notin \\{0, -1, -2, \\dots\\}$). A fundamental solution valid for $|x| < 1$ is the Gaussian hypergeometric series:\n\n$$_2F_1(a, b; c; x) = \\sum_{n=0}^\\infty \\frac{(a)_n (b)_n}{(c)_n} \\frac{x^n}{n!}$$\n\nwhere $(q)_n = q(q+1)\\cdots(q+n-1)$ is the rising factorial (Pochhammer symbol). Many elementary and special functions (Legendre, Bessel, Chebyshev) are reducible to $_2F_1$."
     },
     {
       "word": "gauss' law",
@@ -72541,7 +72541,7 @@
       "synonyms": [
         "gauss's flux theorem"
       ],
-      "definition": "A law formulated by Carl Friedrich Gauss in 1835 relating the distribution of electric charge to the resulting electric field. It states that the total electric flux normal to a closed surface in an electric field is proportional to the algebraic sum of the electric charges within the surface. A similar law applies to the surfaces, drawn in a magnetic field and the law can be generalised for any vector field through a closed surface. It is one of four of Maxwell's equations which form the basis of classical electrodynamics; the other three being Gauss's law for magnetism, Faraday's law of induction and Ampère's law with Maxwell's correction. Gauss's law can be used to derive Coulomb's law and vice versa."
+      "definition": "One of the four foundational Maxwell equations governing classical electromagnetism, formulating how electric charges generate electric fields. In integral form, it states that the net electric flux $\\Phi_E$ through any closed Gaussian surface $\\partial V$ equals the net enclosed charge $Q_{\\text{enc}}$ divided by the electric permittivity $\\varepsilon_0$:\n\n$$\\Phi_E = \\oint_{\\partial V} \\mathbf{E} \\cdot d\\mathbf{A} = \\frac{Q_{\\text{enc}}}{\\varepsilon_0} = \\frac{1}{\\varepsilon_0} \\iiint_V \\rho \\, dV$$\n\nApplying the divergence theorem yields the local differential form:\n\n$$\\nabla \\cdot \\mathbf{E} = \\frac{\\rho}{\\varepsilon_0}$$\n\nwhere $\\rho$ is the volume charge density and $\\varepsilon_0 = 8.854 \\times 10^{-12}\\,\\text{F/m}$ is vacuum permittivity. By spherical symmetry, it directly implies Coulomb's inverse-square law."
     },
     {
       "word": "gauss' lemma",
@@ -72553,7 +72553,7 @@
       "word": "gauss' test",
       "raw_headword": "GAUSS' TEST",
       "synonyms": [],
-      "definition": "The test for the convergence of a power series that if unun + 1 = 1 - L n + O L n 1 + ε ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ , then u n converges absolutely if L > 1 and diverges or converges conditionally, if L ≤ 1."
+      "definition": "A sensitive convergence test for positive series $\\sum u_n$ when d'Alembert's ratio test and Raabe's test are inconclusive (limit equals $1$). If the ratio of consecutive terms can be expanded asymptotically as:\n\n$$\\frac{u_n}{u_{n+1}} = 1 + \\frac{L}{n} + \\frac{\\theta_n}{n^{1 + \\varepsilon}} = 1 + \\frac{L}{n} + \\mathcal{O}\\left(\\frac{1}{n^{1+\\varepsilon}}\\right)$$\n\nwhere $\\varepsilon > 0$ and $|\\theta_n|$ is bounded, then:\n\n1. $\\sum u_n$ **converges** if $L > 1$.\n2. $\\sum u_n$ **diverges** if $L \\le 1$.\n\nGauss's test resolves the delicate edge case $L = 1$, where Raabe's test fails."
     },
     {
       "word": "gauss, karl friedrich",
@@ -72567,7 +72567,7 @@
       "word": "gauss-markov least squares theorem",
       "raw_headword": "GAUSS-MARKOV LEAST SQUARES THEOREM",
       "synonyms": [],
-      "definition": "A mathematical theorem which states that the minimum variance approach to estimation is due to Markov and the least squares method is due to the Carl Gauss. The theorem also holds for multivariate distributions. It is stated as the least squares estimate of β for the model Y i = β X i + ε i ; E [ε i ] = 0; var(ε i ) = σ 2 ; cov (ε i , ε i ) = 0, has uniform minimum variance among all unbiased linear estimates of β."
+      "definition": "A central theorem in linear regression and econometrics. For the linear regression model $\\mathbf{y} = \\mathbf{X}\\boldsymbol{\\beta} + \\boldsymbol{\\varepsilon}$, satisfying the classical Gauss-Markov conditions:\n\n$$\\mathbb{E}[\\boldsymbol{\\varepsilon} \\mid \\mathbf{X}] = \\mathbf{0}, \\quad \\operatorname{Var}(\\boldsymbol{\\varepsilon} \\mid \\mathbf{X}) = \\sigma^2 \\mathbf{I}_n$$\n\n(homoscedasticity and zero autocorrelation), the ordinary least squares (OLS) estimator:\n\n$$\\hat{\\boldsymbol{\\beta}}_{\\text{OLS}} = (\\mathbf{X}^T \\mathbf{X})^{-1} \\mathbf{X}^T \\mathbf{y}$$\n\nis the **BLUE** (**Best Linear Unbiased Estimator**), possessing the minimum sampling variance among all possible linear unbiased estimators of $\\boldsymbol{\\beta}$."
     },
     {
       "word": "gauss-seidel iteration",
@@ -72576,7 +72576,7 @@
         "liebmann method",
         "method of successive displacements"
       ],
-      "definition": "An iterative method similar to the Jacobi iteration, which is used to solve a linear matrix system of equations, A x = b by repeatedly solving for x NEW from x NEW( i ) = a ii ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ b i - a ij x OLD( j ) - a ij x NEW( j ) j < i ∑ i < j ∑ ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ . This assumes that a ii ≠ 0 and will not always converge even then."
+      "definition": "An iterative numerical algorithm for solving a square system of $n$ linear algebraic equations $\\mathbf{A}\\mathbf{x} = \\mathbf{b}$. Unlike the Jacobi method, Gauss-Seidel updates unknown components immediately in-place during the current iteration step $k+1$:\n\n$$x_i^{(k+1)} = \\frac{1}{a_{ii}} \\left( b_i - \\sum_{j=1}^{i-1} a_{ij} x_j^{(k+1)} - \\sum_{j=i+1}^n a_{ij} x_j^{(k)} \\right), \\quad i = 1, 2, \\dots, n$$\n\nIn matrix decomposition form with $\\mathbf{A} = \\mathbf{D} - \\mathbf{L} - \\mathbf{U}$ (diagonal, strictly lower, and strictly upper triangular matrices):\n\n$$\\mathbf{x}^{(k+1)} = (\\mathbf{D} - \\mathbf{L})^{-1} \\mathbf{U} \\mathbf{x}^{(k)} + (\\mathbf{D} - \\mathbf{L})^{-1} \\mathbf{b}$$\n\nConvergence is guaranteed if $\\mathbf{A}$ is strictly diagonally dominant or symmetric positive-definite."
     },
     {
       "word": "gaussian curvature",
@@ -72591,7 +72591,7 @@
         "normal distribution",
         "bell curve"
       ],
-      "definition": "A probability distribution, f ( x ), of a random variable, x that is assumed by many statistical methods. This is given by f ( x )= σ 2 π exp -­‐ 1 ( x -­‐ µ ) 2 σ 2 ⎡ ⎣ ⎢⎢⎢ ⎤ ⎦ ⎥⎥⎥ , where μ is the mean and σ 2 is the variance. All normal distributions are symmetric and have bell-shaped density curves with a single peak."
+      "definition": "The normal (Gaussian) distribution, the most ubiquitous continuous probability distribution in probability and statistics. Parametrized by mean $\\mu \\in \\mathbb{R}$ and variance $\\sigma^2 > 0$, its probability density function (PDF) is given by:\n\n$$f(x; \\mu, \\sigma^2) = \\frac{1}{\\sigma \\sqrt{2\\pi}} \\exp\\left( -\\frac{(x - \\mu)^2}{2\\sigma^2} \\right), \\quad x \\in \\mathbb{R}$$\n\nIt is symmetric about $\\mu$, bell-shaped, with inflection points at $x = \\mu \\pm \\sigma$. The standardized variable $Z = \\frac{X - \\mu}{\\sigma}$ follows the standard normal distribution $\\mathcal{N}(0, 1)$. By the Central Limit Theorem, the sum of independent random variables with finite variance converges asymptotically to a Gaussian distribution."
     },
     {
       "word": "gaussian domain",
@@ -72599,7 +72599,7 @@
       "synonyms": [
         "unique factorisation domain"
       ],
-      "definition": "An integral domain in which every non-zero non-unit is uniquely representable as a finite product of irreducible elements, up to permutation. Since the Gaussian integers are a Gaussian domain and 5 = (1 + 2 i )(1 - 2 i ), 5 is reducible in the Gaussian integers; 3 is irreducible therein and hence prime, because it is in a Euclidean domain."
+      "definition": "1. A unique factorization domain (UFD), historically termed a Gaussian domain in honour of Carl Friedrich Gauss's arithmetic of Gaussian integers. 2. The ring of **Gaussian integers**, denoted $\\mathbb{Z}[i] = \\{a + bi : a, b \\in \\mathbb{Z}\\}$ where $i^2 = -1$. Equipped with the multiplicative norm:\n\n$$N(a + bi) = a^2 + b^2$$\n\n$\\mathbb{Z}[i]$ is a Euclidean domain, hence a Principal Ideal Domain (PID) and a UFD. For example, the rational prime $5$ factors into irreducibles as $5 = (1 + 2i)(1 - 2i)$ and is therefore reducible in $\\mathbb{Z}[i]$, whereas $3$ is prime in $\\mathbb{Z}[i]$ because $a^2 + b^2 = 3$ has no integer solutions."
     },
     {
       "word": "gaussian elimination",
@@ -72619,7 +72619,7 @@
       "word": "gaussian function",
       "raw_headword": "GAUSSIAN FUNCTION",
       "synonyms": [],
-      "definition": "The function y = exp (- x 2 ), whose integral from -∞ to ∞ converges to √ π . In one dimension, the Gaussian function is the probability density function of the Gaussian distribution (normal distribution)."
+      "definition": "A symmetric bell-shaped mathematical function defined in its general one-dimensional form by:\n\n$$f(x) = a \\exp\\left( -\\frac{(x - b)^2}{2c^2} \\right)$$\n\nwhere $a$ is peak height, $b$ is the center position, and $c$ controls Gaussian width (standard deviation). The canonical Gaussian function is $y = e^{-x^2}$. Its definite integral over the entire real line is evaluated via the famous Poisson polar-coordinate trick:\n\n$$\\int_{-\\infty}^\\infty e^{-x^2} \\, dx = \\sqrt{\\pi}$$\n\nCrucial in heat conduction kernels, quantum harmonic oscillator ground states, and signal filtering."
     },
     {
       "word": "gaussian integer",
@@ -72633,19 +72633,19 @@
       "synonyms": [
         "argand diagram"
       ],
-      "definition": "A two-dimensional method for representing complex numbers by Cartesian coordinates x , y . Along the x -axis or horizontal axis are plotted the real numbers and along the y -axis or the vertical axis the non-real or imaginary numbers. The number x + iy is represented by the point ( x , y ) or by the corresponding vector. If the polar coordinates of ( x , y ) are ( r , θ ), r is the modulus and θ the argument of x + iy ."
+      "definition": "The complex plane (also known as the Argand diagram), a geometric representation of complex numbers $z \\in \\mathbb{C}$ as points or position vectors $(x, y)$ in a two-dimensional Cartesian coordinate system. The horizontal axis represents the real part $\\operatorname{Re}(z) = x$, while the vertical axis represents the imaginary part $\\operatorname{Im}(z) = y$:\n\n$$z = x + iy = r(\\cos\\theta + i\\sin\\theta) = r e^{i\\theta}$$\n\nwhere the modulus (distance from origin) is $r = |z| = \\sqrt{x^2 + y^2}$, and the argument (phase angle) is $\\theta = \\operatorname{arg}(z) = \\operatorname{atan2}(y, x)$."
     },
     {
       "word": "gaussian unit",
       "raw_headword": "GAUSSIAN UNIT",
       "synonyms": [],
-      "definition": "A system of units for the Gaussian system (electric and magnetic quantities based upon electrostatic and electromagnetic units). In this unit, the electric and magnetic constants are both equal to unity. For example, one Gaussian unit of capacitance (statfarad) =1.112 650~pF; electric potential (statvolt) = 299.792 5~V; and electric charge (statcoulomb) =333.564 1~pC."
+      "definition": "A mixed metric system of physical units (CGS-Gaussian system) combining electrostatic units (esu) for electric charge/potential and electromagnetic units (emu) for magnetic fields. In Gaussian units, vacuum permittivity $\\varepsilon_0$ and permeability $\\mu_0$ are dimensionless and set to $\\varepsilon_0 = 1, \\mu_0 = 1$, causing the speed of light $c$ to appear explicitly in Maxwell's equations. Conversion factors to SI:\n\n$$1\\,\\text{statC (statcoulomb)} = \\frac{1}{10 c}\\,\\text{C} \\approx 3.33564 \\times 10^{-10}\\,\\text{C}$$\n\n$$1\\,\\text{statV (statvolt)} = 10^{-8} c\\,\\text{V} \\approx 299.7925\\,\\text{V}$$\n\n$$1\\,\\text{statF (statfarad)} = \\frac{1}{10^9 c^2}\\,\\text{F} \\approx 1.11265\\,\\text{pF}$$\n\n$$1\\,\\text{G (gauss)} = 10^{-4}\\,\\text{T (tesla)}$$"
     },
     {
       "word": "gay-lussac's law",
       "raw_headword": "GAY-LUSSAC'S LAW",
       "synonyms": [],
-      "definition": "The principle or law named after the French chemist, Joseph Louis Gay-Lussac that, when gases combine in a chemical reaction, both reactants and products do so in simple ratios of their volumes and that any gaseous product is also produced in a simple ratio or that when gases react, they do so in volumes which bear simple whole number ratios to one another and to the volume of the product, if temperature and pressure remain constant."
+      "definition": "1. **Law of Combining Volumes** (Joseph Louis Gay-Lussac, 1808): When gases react chemically at constant temperature and pressure, the volumes of reacting gases and gaseous products stand in simple whole-number integer ratios. For example, in the formation of steam:\n\n$$2\\text{H}_{2(g)} + \\text{O}_{2(g)} \\to 2\\text{H}_2\\text{O}_{(g)} \\quad (\\text{ratio } 2 : 1 : 2)$$\n\n2. **Pressure-Temperature Law** (Amontons' Law): For a fixed mass of gas at constant volume, pressure $P$ is directly proportional to absolute Kelvin temperature $T$:\n\n$$\\frac{P}{T} = \\text{constant} \\iff \\frac{P_1}{T_1} = \\frac{P_2}{T_2}$$"
     },
     {
       "word": "gay-lussac, joseph louis",
@@ -72659,7 +72659,7 @@
       "word": "gaylussite",
       "raw_headword": "GAYLUSSITE",
       "synonyms": [],
-      "definition": "A translucent, yellowish-white hydrous carbonate mineral, with the chemical formula Na 2 Ca(CO3 ) 2 ·5H2 O. It crystallises in the monoclinic system. It is an unstable mineral which dehydrates in dry air and decomposes in water. It is formed as an evaporite from alkali lake waters."
+      "definition": "A translucent yellowish-white hydrous sodium calcium double carbonate evaporite mineral named after Joseph Louis Gay-Lussac. Chemical formula $\\text{Na}_2\\text{Ca}(\\text{CO}_3)_2 \\cdot 5\\text{H}_2\\text{O}$, molar mass $296.16\\,\\text{g/mol}$, density $1.99\\,\\text{g/cm}^3$, and Mohs hardness $2.5$. Crystallizes in the monoclinic crystal system (space group $I2/a$). Unstable in dry air, dehydrating to chalconatronite or decomposing in freshwater through calcium carbonate precipitation:\n\n$$\\text{Na}_2\\text{Ca}(\\text{CO}_3)_2 \\cdot 5\\text{H}_2\\text{O}_{(s)} \\xrightarrow{\\text{excess } \\text{H}_2\\text{O}} \\text{CaCO}_{3(s)} + 2\\text{Na}^+_{(aq)} + \\text{CO}_3^{2-}_{(aq)} + 5\\text{H}_2\\text{O}_{(l)}$$"
     },
     {
       "word": "gear",
@@ -72707,7 +72707,7 @@
       "word": "geiger-nuttall law",
       "raw_headword": "GEIGER-NUTTALL LAW",
       "synonyms": [],
-      "definition": "It states that for an alpha-emitting radioactive substance, the logarithm of the decay constant and the logarithm of the range in air of the emitted alpha rays are in linear relation to each other. It is expressed as In λ = -a 1 ZE^-1/2 + a 2 , where λ is the decay constant, Z is the atomic number, E is the binding energy and a 1 and a 2 are constants."
+      "definition": "An empirical relationship established by Hans Geiger and John Mitchell Nuttall in 1911 (later explained quantum mechanically by George Gamow via quantum tunneling) relating the radioactive alpha-decay constant $\\lambda$ to the kinetic energy $E_\\alpha$ of emitted alpha particles:\n\n$$\\ln \\lambda = -a_1 \\frac{Z}{\\sqrt{E_\\alpha}} + a_2 \\quad \\text{or} \\quad \\log_{10} T_{1/2} = A + \\frac{B}{\\sqrt{E_\\alpha}}$$\n\nwhere $Z$ is the atomic number of the daughter nucleus, $E_\\alpha$ is the alpha particle kinetic energy, $\\lambda = \\frac{\\ln 2}{T_{1/2}}$ is the decay constant, and $a_1, a_2$ are empirical constants. It demonstrates that a small increase in alpha energy results in an exponentially shorter radioactive half-life $T_{1/2}$."
     },
     {
       "word": "geissler tube",
@@ -72731,7 +72731,7 @@
       "word": "gel filtration chromatography",
       "raw_headword": "GEL FILTRATION CHROMATOGRAPHY",
       "synonyms": [],
-      "definition": "A type of size exclusion chromatography in which molecules in solution are separated based on their size or hydrodynamic volume, using an aqueous solution to transport the sample through the column. Gel filtration is used mainly to separate polar or water soluble polymers and macromolecules such as proteins, nucleic acids and polysaccharides."
+      "definition": "A size-exclusion chromatography (SEC) method using porous polymeric beads (e.g. Sephadex, agarose, polyacrylamide) to separate biological macromolecules such as proteins, enzymes, and nucleic acids based on hydrodynamic volume (Stokes radius $R_h$). The total column volume $V_t$ is the sum of void volume $V_0$ and internal pore volume $V_i$ ($V_t = V_0 + V_i$). The distribution coefficient $K_{\\text{av}}$ is given by:\n\n$$K_{\\text{av}} = \\frac{V_e - V_0}{V_t - V_0}$$\n\nwhere $V_e$ is analyte elution volume. Large molecules unable to enter pores elute first at $V_e = V_0$ ($K_{\\text{av}} = 0$), while small molecules permeate all pores and elute last ($K_{\\text{av}} \\approx 1$)."
     },
     {
       "word": "gelatine",
@@ -72755,13 +72755,13 @@
       "word": "gelfand transform",
       "raw_headword": "GELFAND TRANSFORM",
       "synonyms": [],
-      "definition": "Named after Russian mathematician, Israil Moiseyevich Gelfand, it is the mapping that associates a continuous function on the compact space, Δ, of all maximal ideals in the induced weak topology, to an element of a commutative Banach algebra, A . Its formula is x ! ( h ) = h ( x )."
+      "definition": "In functional analysis, a canonical representation of a commutative Banach algebra $\\mathcal{A}$ over $\\mathbb{C}$ as an algebra of continuous functions. Let $\\Delta(\\mathcal{A})$ denote the Gelfand spectrum (the compact Hausdorff space of all non-zero multiplicative linear functionals / maximal ideals of $\\mathcal{A}$ endowed with the weak-* topology). The Gelfand transform is the algebra homomorphism $\\mathcal{A} \\to C(\\Delta(\\mathcal{A}))$ mapping each $x \\in \\mathcal{A}$ to $\\hat{x}$ defined by:\n\n$$\\hat{x}(\\varphi) = \\varphi(x), \\quad \\varphi \\in \\Delta(\\mathcal{A})$$\n\nBy the Gelfand-Naimark theorem, if $\\mathcal{A}$ is a commutative $C^*$-algebra, the Gelfand transform is an isometric $*$-isomorphism:\n\n$$\\|\\hat{x}\\|_{\\infty} = \\|x\\| = r(x)$$\n\nwhere $r(x) = \\lim_{n\\to\\infty} \\|x^n\\|^{1/n}$ is the spectral radius."
     },
     {
       "word": "gelfond-schneider theorem",
       "raw_headword": "GELFOND-SCHNEIDER THEOREM",
       "synonyms": [],
-      "definition": "Named after Russian mathematician, Alexander Gelfond (1906-68) and Theodor Schneider (1911-1988), German mathematician. it is the theorem that for complex algebraic numbers α and β with α not 0 or 1 and β irrational, α β is transcendental. Thus √2 √2 and e π = (-1) -i are transcendental."
+      "definition": "A major theorem in transcendental number theory proved independently by Aleksandr Gelfond (1934) and Theodor Schneider (1935), solving Hilbert's seventh problem. It asserts that if $\\alpha$ and $\\beta$ are algebraic numbers in $\\mathbb{C}$ such that $\\alpha \\notin \\{0, 1\\}$ and $\\beta$ is irrational, then any value of $\\alpha^\\beta$ is transcendental:\n\n$$\\alpha, \\beta \\in \\overline{\\mathbb{Q}}, \\; \\alpha \\neq 0, 1, \\; \\beta \\notin \\mathbb{Q} \\implies \\alpha^\\beta \\text{ is transcendental}$$\n\nPrime examples include the Gelfond-Schneider constant $2^{\\sqrt{2}}$ and Gelfond's constant $e^\\pi = (e^{i\\pi})^{-i} = (-1)^{-i}$."
     },
     {
       "word": "gelignite",
@@ -73048,7 +73048,7 @@
       "synonyms": [
         "generalization"
       ],
-      "definition": "1. Making a theory or hypothesis that what one observes in a special single case applies more widely to form an essential basis of all valid deductive inferences. For example, after studying how one acid reacts with a metal, one draws the conclusion that all acids react with the metal that way. Generalisations postulate the existence of a domain or set of elements, as well as one or more common characteristics shared by those elements. 2. The extension of a number of results to form a rule. For example, the computations 3 + 5 = 5 + 3 and 1.5 + 2.7 = 2.7 + 1.5 could be generalised to a + b = b + a . 3. In logic, universal generalisation is any statement ascribing a property to every member of a class. Existential generalisation is any statement ascribing a property to one or more members of a class. 4. The act or process of perceiving similarity or relation between different stimuli, as between words, colours, sounds, lights, concepts or feelings. 5. Stimulus generalisation is the act or process of responding to a new stimulus by an organism similar to but distinct from the conditioned stimulus. 6. Response generalisation is the act or process of an organism making a different but similar response to the same stimulus. 7. Mediated generalisation is the act or process of responding to a stimulus not physically similar to the conditioned stimulus and not previously encountered in conditioning."
+      "definition": "1. In mathematics and logic, the inductive or deductive abstraction from specific instances to broader principles valid for an entire set or universe of discourse $S$. In predicate calculus, universal generalisation is formalized with the universal quantifier $\\forall$:\n\n$$P(x) \\text{ for arbitrary } x \\in S \\implies \\forall x \\in S, \\, P(x)$$\n\nIn arithmetic and algebra, generalizing arithmetic relations $3 + 5 = 5 + 3$ yields the commutative ring axiom $a + b = b + a$, and generalizing numerical summations leads to formula expressions such as $\\sum_{i=1}^n i = \\frac{n(n+1)}{2}$. 2. In psychology and behavioural neuroscience, stimulus generalization is the phenomenon where a conditioned response (CR) is elicited by stimuli resembling the original conditioned stimulus (CS)."
     },
     {
       "word": "generalised continuum hypothesis",
@@ -73068,7 +73068,7 @@
       "word": "generalised eigenvalue problem",
       "raw_headword": "GENERALISED EIGENVALUE PROBLEM",
       "synonyms": [],
-      "definition": "The problem of finding scalars λ and vectors x solving Ax = λ Bx where A and B are given matrices or linear operators and B is positive definite. In the classical eigenvalue problem, B is the identity matrix or operator."
+      "definition": "In numerical linear algebra, the problem of finding non-zero vectors $\\mathbf{x} \\in \\mathbb{C}^n$ (eigenvectors) and scalars $\\lambda \\in \\mathbb{C}$ (eigenvalues) satisfying:\n\n$$\\mathbf{A}\\mathbf{x} = \\lambda \\mathbf{B}\\mathbf{x}$$\n\nwhere $\\mathbf{A}$ and $\\mathbf{B}$ are given $n \\times n$ matrices. Non-trivial solutions exist if and only if the matrix determinant of the matrix pencil vanishes:\n\n$$\\det(\\mathbf{A} - \\lambda \\mathbf{B}) = 0$$\n\nWhen $\\mathbf{B} = \\mathbf{I}$ (the identity matrix), it reduces to the standard eigenvalue problem $\\mathbf{A}\\mathbf{x} = \\lambda \\mathbf{x}$. Arises naturally in structural vibration analysis, where $\\mathbf{A} = \\mathbf{K}$ is the stiffness matrix and $\\mathbf{B} = \\mathbf{M}$ is the positive-definite mass matrix: $\\mathbf{K}\\mathbf{x} = \\omega^2 \\mathbf{M}\\mathbf{x}$."
     },
     {
       "word": "generalised force",

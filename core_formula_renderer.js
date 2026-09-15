@@ -320,6 +320,10 @@
               { left: '\\(', right: '\\)', display: false },
               { left: '\\[', right: '\\]', display: true }
             ],
+            preProcess: function (math) {
+              // Automatically sanitize thin-spaces immediately preceding subscripts or superscripts (which KaTeX rejects)
+              return math.replace(/\\,\s*([_\^])/g, '$1');
+            },
             ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"],
             throwOnError: false
           });

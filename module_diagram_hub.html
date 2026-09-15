@@ -2,63 +2,490 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Osmosis - Diagram Laboratory</title>
+  <title>Osmosis - STEM Diagram Library</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
-    .hub-card { padding: 3rem; max-width: 900px; margin: auto; text-align: center; }
-    .hub-header { font-size: 3rem; color: var(--text-main); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 1rem; border-bottom: 2px dashed var(--text-secondary); padding-bottom: 1rem; }
-    
-    .diagram-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
-    
-    .diagram-card {
-      background: var(--bg-light);
-      border: 2px solid var(--accent-primary);
+    /* ============================================
+       OSMOSIS STANDARD THEME — Diagram Hub
+       ============================================ */
+    body {
+      font-family: 'Quicksand', 'Inter', sans-serif;
+      color: #212529;
+      margin: 0;
+      padding: 0 0 80px 0;
+      min-height: 100vh;
+      /* Standard Osmosis gradient — same as every other page */
+      background: linear-gradient(135deg, #e0c3fc 0%, #c2e9fb 50%, #a1c4fd 100%) fixed;
+    }
+
+    .hub-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+    }
+
+    /* Header card — white glassmorphism like the rest of Osmosis */
+    .hub-header-card {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 24px;
+      padding: 1.8rem 1.4rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(100, 80, 200, 0.12);
+    }
+
+    .hub-title {
+      font-family: 'Quicksand', sans-serif;
+      font-size: clamp(1.6rem, 5vw, 2.6rem);
+      font-weight: 800;
+      color: #4F46E5;
+      margin: 0 0 0.4rem 0;
+      letter-spacing: 1px;
+    }
+
+    .hub-subtitle {
+      font-size: 0.98rem;
+      color: #555;
+      max-width: 620px;
+      margin: 0 auto 1.4rem auto;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    .search-filter-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .diagram-search-input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.85rem 1.3rem;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 2px solid rgba(79, 70, 229, 0.25);
+      color: #212529;
+      font-size: 1rem;
+      font-family: inherit;
+      font-weight: 600;
+      outline: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 12px rgba(79, 70, 229, 0.08);
+      /* Prevent auto-zoom on iOS and suppress keyboard auto-pop */
+      font-size: max(16px, 1rem);
+    }
+
+    .diagram-search-input:focus {
+      border-color: #4f46e5;
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18);
+    }
+
+    /* Alphabet letter pills — Osmosis accent purple */
+    .letter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.3rem;
+      margin-top: 0.3rem;
+    }
+
+    .letter-pill {
+      background: rgba(255, 255, 255, 0.7);
+      color: #4F46E5;
+      border: 1.5px solid rgba(79, 70, 229, 0.25);
       border-radius: 8px;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      font-family: inherit;
+    }
+
+    .letter-pill:hover, .letter-pill.active {
+      background: #4f46e5;
+      color: #ffffff;
+      border-color: #4f46e5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+    }
+
+    .count-indicator {
+      font-size: 0.88rem;
+      color: #6C757D;
+      font-weight: 700;
+      margin-top: 0.6rem;
+    }
+
+    /* ============================================
+       DIAGRAM GRID — Responsive, portrait-friendly
+       ============================================ */
+    .diagram-grid {
+      display: grid;
+      /* Minimum 160px so they stack vertically on mobile, NOT sideways */
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    @media (min-width: 480px) {
+      .diagram-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.2rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .diagram-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.4rem;
+      }
+    }
+
+    .diagram-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
       overflow: hidden;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: all 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 15px rgba(100, 80, 200, 0.1);
     }
-    .diagram-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); border-color: var(--text-main); }
-    
-    .diagram-thumb { width: 100%; height: 200px; object-fit: cover; object-position: center; border-bottom: 1px solid rgba(0,0,0,0.1); }
-    .diagram-info { padding: 1.5rem; }
-    .diagram-title { font-size: 1.5rem; color: var(--text-main); font-family: var(--font-serif); font-weight: bold; margin-bottom: 0.5rem; }
+
+    .diagram-card:hover {
+      transform: translateY(-5px);
+      border-color: #818cf8;
+      box-shadow: 0 12px 28px rgba(79, 70, 229, 0.2);
+      background: #ffffff;
+    }
+
+    .diagram-thumb-wrap {
+      width: 100%;
+      /* Consistent portrait aspect ratio */
+      aspect-ratio: 4 / 3;
+      background: #f8f9ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid rgba(79, 70, 229, 0.08);
+      overflow: hidden;
+    }
+
+    .diagram-thumb {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      /* Always upright — never rotate */
+      image-orientation: from-image;
+      transition: transform 0.28s ease;
+    }
+
+    .diagram-card:hover .diagram-thumb {
+      transform: scale(1.05);
+    }
+
+    .diagram-info {
+      padding: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .diagram-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #212529;
+      text-transform: capitalize;
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 480px) {
+      .diagram-title { font-size: 1.05rem; }
+    }
+
+    .diagram-meta {
+      font-size: 0.75rem;
+      color: #4F46E5;
+      font-weight: 700;
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .diagram-meta span.badge {
+      background: rgba(79, 70, 229, 0.1);
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(79, 70, 229, 0.2);
+    }
+
+    .load-more-btn {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white;
+      border: none;
+      font-weight: 800;
+      font-family: inherit;
+      letter-spacing: 1px;
+      border-radius: 999px;
+      padding: 0.9rem 2.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 2rem auto 1rem auto;
+      display: block;
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    .load-more-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(79, 70, 229, 0.4);
+    }
+
+    /* ============================================
+       INSPECTION MODAL
+       ============================================ */
+    .diag-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 50000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .diag-modal-overlay.active {
+      display: flex;
+    }
+
+    .diag-modal-card {
+      background: #ffffff;
+      color: #212529;
+      border-radius: 24px;
+      max-width: 700px;
+      width: 100%;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .diag-modal-header {
+      padding: 1rem 1.4rem;
+      border-bottom: 1px solid #e9ecef;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #f0eeff, #eaf4ff);
+    }
+
+    .diag-modal-title {
+      font-family: 'Quicksand', sans-serif;
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 800;
+      color: #4F46E5;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 80%;
+    }
+
+    .diag-modal-close {
+      background: #f1f5f9;
+      border: none;
+      font-size: 1.3rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .diag-modal-close:hover {
+      background: #e2e8f0;
+      color: #212529;
+    }
+
+    .diag-modal-body {
+      padding: 1.2rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .diag-modal-img-wrap {
+      background: #f8f9ff;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      padding: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Enough height to properly show diagrams */
+      min-height: 200px;
+      max-height: 55vh;
+      overflow: hidden;
+    }
+
+    .diag-modal-img {
+      max-width: 100%;
+      max-height: 50vh;
+      object-fit: contain;
+      border-radius: 8px;
+      /* Always upright */
+      image-orientation: from-image;
+    }
+
+    .diag-audio-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    .diag-btn-pill {
+      border: none;
+      border-radius: 999px;
+      padding: 0.55rem 1.2rem;
+      font-size: 0.88rem;
+      font-weight: 800;
+      font-family: inherit;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s;
+    }
+
+    .diag-btn-pronounce {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      box-shadow: 0 3px 10px rgba(16, 185, 129, 0.25);
+    }
+
+    .diag-btn-read {
+      background: rgba(79, 70, 229, 0.1);
+      color: #4338ca;
+      border: 1.5px solid rgba(79, 70, 229, 0.25);
+    }
+
+    .diag-modal-def {
+      background: #f8f9ff;
+      border-radius: 14px;
+      border: 1px solid rgba(79, 70, 229, 0.12);
+      padding: 1rem 1.1rem;
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: #212529;
+      max-height: 160px;
+      overflow-y: auto;
+      font-weight: 600;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.92) translateY(12px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
   </style>
 </head>
 <body>
-  <div class="app-container">
-    <div class="card hub-card parchment-large">
-      <h1 class="hub-header">Diagram Laboratory</h1>
-      <p style="font-size: 1.2rem; color: var(--accent-primary); font-style: italic;">Select a biological schematic to isolate and study.</p>
-      
-      <div class="diagram-grid">
-        <div class="diagram-card" onclick="goToStudy('animal')">
-          <img src="diagrams/animal_cell.jpeg" alt="Animal Cell" class="diagram-thumb">
-          <div class="diagram-info">
-            <div class="diagram-title">Animal Cell Form</div>
-            <p style="color:var(--text-secondary); font-size:1rem;">Master the internal organelles of zoological biology.</p>
-          </div>
+  <div class="hub-container">
+    <div class="hub-header-card">
+      <h1 class="hub-title">STEM Diagram Laboratory</h1>
+      <p class="hub-subtitle">
+        Explore over 1,180 curriculum-endorsed scientific schematics, anatomical structures, physical models, and chemical formulas.
+      </p>
+
+      <div class="search-filter-box">
+        <div class="search-input-wrapper">
+          <input type="text" id="diagram-search-input" class="diagram-search-input" placeholder="Search diagrams... (e.g. heart, wave, cell, prism)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="search">
         </div>
-        
-        <div class="diagram-card" onclick="goToStudy('plant')">
-          <img src="diagrams/plant_cell.jpeg" alt="Plant Cell" class="diagram-thumb">
-          <div class="diagram-info">
-            <div class="diagram-title">Plant Cell Form</div>
-            <p style="color:var(--text-secondary); font-size:1rem;">Uncover the rigid structures of botanical biology.</p>
-          </div>
+
+        <div class="letter-bar" id="letter-bar">
+          <!-- Dynamically populated letters -->
+        </div>
+
+        <div class="count-indicator" id="count-indicator">
+          Loading diagrams...
         </div>
       </div>
-      
-      <div style="margin-top: 3rem;">
-        <button id="go-home-btn" class="classic-btn blue-gradient">Return to Home</button>
+    </div>
+
+    <!-- Diagram Cards Grid -->
+    <div class="diagram-grid" id="diagram-grid">
+      <!-- Dynamically filled with all screenshotted diagrams -->
+    </div>
+
+    <button id="load-more-btn" class="load-more-btn" style="display: none;">Load More Diagrams</button>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <button id="go-home-btn" class="classic-btn blue-gradient" style="padding: 0.9rem 2.2rem; font-size: 1.05rem;">Return to Menu</button>
+    </div>
+  </div>
+
+  <!-- Detailed Inspection Modal -->
+  <div id="diag-modal-overlay" class="diag-modal-overlay">
+    <div class="diag-modal-card">
+      <div class="diag-modal-header">
+        <h2 id="diag-modal-title" class="diag-modal-title">Diagram Title</h2>
+        <button id="diag-modal-close" class="diag-modal-close" title="Close">&times;</button>
+      </div>
+      <div class="diag-modal-body">
+        <div class="diag-modal-img-wrap">
+          <img id="diag-modal-img" class="diag-modal-img" src="" alt="Schematic illustration">
+        </div>
+
+        <div class="diag-audio-bar">
+          <button id="diag-pronounce-btn" type="button" class="diag-btn-pill diag-btn-pronounce">🔊 Pronounce</button>
+          <button id="diag-read-def-btn" type="button" class="diag-btn-pill diag-btn-read">📖 Read Aloud</button>
+        </div>
+
+        <div id="diag-modal-def" class="diag-modal-def">
+          Loading definition...
+        </div>
       </div>
     </div>
   </div>
-  
+
   <script src="core_dictionary.js"></script>
+  <script src="core_dictionary_diagrams.js"></script>
+  <script src="core_formula_renderer.js"></script>
   <script src="core_shared_state.js"></script>
   <script src="module_diagram_hub.js"></script>
 </body>
