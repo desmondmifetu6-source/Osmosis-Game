@@ -360,6 +360,26 @@ Source Folder: `f-j diagrams/`
 
 ---
 
+### Section K Series: Batch 1 — Screenshots 1 to 12
+Source Folder: `k_diagrams/`
+
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 1 | `Screenshot_24-9-2026_171045_.jpeg` | Chemical structure of Kainic Acid | `dict_kainic_acid.png` | `kainic acid`, `chemical structure of kainic acid`, `kainate`, `2-carboxy-3-carboxymethyl-4-isopropenylpyrrolidine` |
+| 2 | `Screenshot_24-9-2026_171110_.jpeg` | Keepers for bar magnets & Keeper for horse-shoe magnet | `dict_keeper.png` | `keeper`, `magnetic keeper`, `keepers for bar magnets`, `keeper for horse-shoe magnet`, `horseshoe magnet keeper` |
+| 3 | `Screenshot_24-9-2026_171123_.jpeg` | Kekulé structure of benzene | `dict_kekule_structure_of_benzene.png` | `kekule structure`, `kekule structure of benzene`, `kekule formula`, `kekulé structure`, `kekulé structure of benzene` |
+| 4 | `Screenshot_24-9-2026_171151_.jpeg` | Formation of a ketal (Ketone + R'OH → Hemiketal → Ketal) | `dict_ketal.png` | `ketal`, `formation of a ketal`, `hemiketal` |
+| 5 | `Screenshot_24-9-2026_171217_.jpeg` | Types of Ketose (dihydroxy-acetone, D-ribulose, D-xylulose, D-fructose) | `dict_ketose.png` | `ketose`, `types of ketose`, `ketose sugar`, `ketoses` |
+| 6 | `Screenshot_24-9-2026_17126_.jpeg` | Chemical structure of Ketamine | `dict_ketamine.png` | `ketamine`, `chemical structure of ketamine` |
+| 7 | `Screenshot_24-9-2026_17133_.jpeg` | Anatomy of the kidney (Cortex, Medulla, Pyramid, Pelvis, Calyces, Nephron) | `dict_kidney_anatomy.png` | `anatomy of the kidney`, `kidney anatomy`, `renal cortex`, `renal medulla`, `renal pyramid`, `renal pelvis`, `nephron`, `major calyx`, `minor calyx` |
+| 8 | `Screenshot_24-9-2026_171434_.jpeg` | Fig. i) Kirchoff's First Law (Kirchoff's Current Law: I = I1 + I2) | `dict_kirchoffs_first_law.png` | `kirchoff's first law`, `kirchoffs first law`, `kirchoff's current law`, `kirchoffs current law`, `kcl`, `junction rule` |
+| 9 | `Screenshot_24-9-2026_171446_.jpeg` | Fig ii.) Kirchoff's Second Law (Kirchoff's voltage law) | `dict_kirchoffs_second_law.png` | `kirchoff's second law`, `kirchoffs second law`, `kirchoff's voltage law`, `kirchoffs voltage law`, `kvl`, `loop rule` |
+| 10 | `Screenshot_24-9-2026_171458_.jpeg` | Apparatus for estimating nitrogen by Kjeldahl's method | `dict_kjeldahls_method.png` | `kjeldahl's method`, `kjeldahls method`, `kjeldahl method`, `kjeldahl's flask`, `kjeldahls flask`, `estimating nitrogen by kjeldahl's method` |
+| 11 | `Screenshot_24-9-2026_171514_.jpeg` | Kite (a geometric figure) | `dict_kite.png` | `kite`, `kite (a geometric figure)`, `geometric kite` |
+| 12 | `Screenshot_24-9-2026_171540_.jpeg` | Knoevenagel Reaction | `dict_knoevenagel_reaction.png` | `knoevenagel reaction`, `knoevenagel condensation` |
+
+---
+
 ## 4. Quality Standards
 1. **Pristine Author Framing**: High-resolution user captures preserved with complete clarity.
 2. **Dual Map Consistency**: `dictionary_diagrams_map.json` and `core_dictionary_diagrams.js` remain synchronized and sorted.
