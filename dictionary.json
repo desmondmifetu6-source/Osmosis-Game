@@ -94136,7 +94136,9 @@
       "synonyms": [
         "l'hospital's rule"
       ],
-      "definition": "A rule named after the French mathematician, Guillaume de L'Hôpital (1661-1704). It is used in finding the limit of the ratio of two functions of the same variable x , as x approaches a value a . This is equal to the limit of the ratios of their derivatives with respect to x . For example, it can be used to find the limits of at a point in which both f ( x ) and h ( x ) are zero and the ratio is therefore indeterminate. This can be stated as = L . For example, to evaluate , let f ( x ) = sin3 x and h ( x ) = sin 2 x ; f (0) = 0 and h (0) = 0, this implies that the ratio is indeterminate, therefore L'hopital's rule is applied by finding the derivatives of f ( x ) and h( x ), which gives f '(0) = 3cos3(0), expressed as f '(0) = 3 and h '(0) = 2cos2(0), which gives h '(0) = 2. Therefore, the ."
+      "definition": "A rule named after the French mathematician, Guillaume de L'Hôpital (1661-1704). It is used in finding the limit of the ratio of two functions of the same variable x , as x approaches a value a . This is equal to the limit of the ratios of their derivatives with respect to x . For example, it can be used to find the limits of at a point in which both f ( x ) and h ( x ) are zero and the ratio is therefore indeterminate. This can be stated as = L . For example, to evaluate , let f ( x ) = sin3 x and h ( x ) = sin 2 x ; f (0) = 0 and h (0) = 0, this implies that the ratio is indeterminate, therefore L'hopital's rule is applied by finding the derivatives of f ( x ) and h( x ), which gives f '(0) = 3cos3(0), expressed as f '(0) = 3 and h '(0) = 2cos2(0), which gives h '(0) = 2. Therefore, the .",
+      "formula": "$$\\lim_{x \\to c} \\frac{f(x)}{g(x)} = \\lim_{x \\to c} \\frac{f'(x)}{g'(x)}$$",
+      "formula_description": "Where $f(c) = g(c) = 0$ (or both $\\pm\\infty$). Differentiate numerator and denominator separately — not the quotient rule. Named after Guillaume de L'Hôpital (1661–1704)."
     },
     {
       "word": "l-dopa",
@@ -94358,7 +94360,9 @@
       "synonyms": [
         "2-hydroxypropanoic acid"
       ],
-      "definition": "An alpha hydroxy carboxylic acid, with a sour taste and the chemical formula C3 H6 O3 . It is produced from pyruvic acid in active muscle tissue during anaerobic respiration, when there is shortage of oxygen and subsequently removed for conversion to glucose by the liver. It can build up in muscle to give cramp-like pains. It is also produced by fermentation in certain bacteria and present in sour milk, koumiss, leban, yogurt and cottage cheese."
+      "definition": "An alpha hydroxy carboxylic acid, with a sour taste and the chemical formula C3 H6 O3 . It is produced from pyruvic acid in active muscle tissue during anaerobic respiration, when there is shortage of oxygen and subsequently removed for conversion to glucose by the liver. It can build up in muscle to give cramp-like pains. It is also produced by fermentation in certain bacteria and present in sour milk, koumiss, leban, yogurt and cottage cheese.",
+      "formula": "$$\\text{CH}_3\\text{CH(OH)COOH}$$",
+      "formula_description": "Molecular formula $\\mathrm{C_3H_6O_3}$, molar mass $= 90.08\\ \\mathrm{g\\,mol^{-1}}$. An alpha hydroxy carboxylic acid; produced in muscles during anaerobic respiration via: $\\text{C}_6\\text{H}_{12}\\text{O}_6 \\rightarrow 2\\,\\text{CH}_3\\text{CH(OH)COOH}$."
     },
     {
       "word": "lactic acid bacillus",
@@ -94382,7 +94386,9 @@
       "word": "lactic acid fermentation",
       "raw_headword": "LACTIC ACID FERMENTATION",
       "synonyms": [],
-      "definition": "A type of fermentation carried out by lactic acid bacteria in which sugar, for example, lactose, glucose and pentose are converted either entirely or almost entirely to lactic acid, called homolactic fermentation or to a mixture of lactic acid and other products, called heterolactic fermentation ."
+      "definition": "A type of fermentation carried out by lactic acid bacteria in which sugar, for example, lactose, glucose and pentose are converted either entirely or almost entirely to lactic acid, called homolactic fermentation or to a mixture of lactic acid and other products, called heterolactic fermentation .",
+      "formula": "$$\\text{C}_6\\text{H}_{12}\\text{O}_6 \\xrightarrow{\\text{LDH}} 2\\,\\text{CH}_3\\text{CH(OH)COOH}$$",
+      "formula_description": "Glucose is converted to lactic acid with a net gain of $2$ ATP. No oxygen required; pyruvate acts as the terminal electron acceptor. Overall: $\\Delta G = -196\\ \\mathrm{kJ\\,mol^{-1}}$."
     },
     {
       "word": "lactic acid oxidative decarboxylase",
@@ -94793,25 +94799,33 @@
       "word": "lagrange form of the remainder",
       "raw_headword": "LAGRANGE FORM OF THE REMAINDER",
       "synonyms": [],
-      "definition": "The expression of the remainder or the error, of a Taylor series that is the difference between a function and its n th Taylor polynomial. For example, R n ( f , a ) is the difference f ( a + h ) = f ( a ) + f '( a ) 1! h + ... + f ( n ) ( a ) n ! h n ⎧ ⎨ ⎪⎪ ⎩ ⎪ ⎪ ⎫ ⎬ ⎪⎪ ⎭ ⎪ ⎪ expressed as R n ( f , a ) = f ( n + 1) ( c ) ( n + 1)! h n + 1 for some c between a and a + h ."
+      "definition": "The expression of the remainder or the error, of a Taylor series that is the difference between a function and its n th Taylor polynomial. For example, R n ( f , a ) is the difference f ( a + h ) = f ( a ) + f '( a ) 1! h + ... + f ( n ) ( a ) n ! h n ⎧ ⎨ ⎪⎪ ⎩ ⎪ ⎪ ⎫ ⎬ ⎪⎪ ⎭ ⎪ ⎪ expressed as R n ( f , a ) = f ( n + 1) ( c ) ( n + 1)! h n + 1 for some c between a and a + h .",
+      "formula": "$$R_n(x) = \\frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}$$",
+      "formula_description": "For some $c$ between $a$ and $x$. Gives the error when a Taylor polynomial of degree $n$ approximates $f(x)$ at $a$. If $|f^{(n+1)}(x)| \\le M$ on $[a,x]$, then $|R_n(x)| \\le \\dfrac{M\\,|x-a|^{n+1}}{(n+1)!}$."
     },
     {
       "word": "lagrange interpolation formula",
       "raw_headword": "LAGRANGE INTERPOLATION FORMULA",
       "synonyms": [],
-      "definition": "The formula for obtaining a polynomial of at most degree n that interpolates a given real function f ( x ) at n + 1 distinct points: P n ( x ) = L n ( x ) f n k = 0 n ∑ ( x k ), where L n ( x ) = x - x k ( x j - x k ) k ≠ i ∏ k = 0 n ∏ . The Hermite interpolation produces the unique polynomial of degree at most 2 n^-1 that takes prescribed function and first derivative values at n distinct points."
+      "definition": "The formula for obtaining a polynomial of at most degree n that interpolates a given real function f ( x ) at n + 1 distinct points: P n ( x ) = L n ( x ) f n k = 0 n ∑ ( x k ), where L n ( x ) = x - x k ( x j - x k ) k ≠ i ∏ k = 0 n ∏ . The Hermite interpolation produces the unique polynomial of degree at most 2 n^-1 that takes prescribed function and first derivative values at n distinct points.",
+      "formula": "$$P(x) = \\sum_{j=0}^{n} y_j \\prod_{\\substack{i=0\\\\i\\neq j}}^{n} \\frac{x - x_i}{x_j - x_i}$$",
+      "formula_description": "Constructs a unique polynomial of degree $\\le n$ passing through $(x_0,y_0),(x_1,y_1),\\ldots,(x_n,y_n)$. Each basis polynomial $\\ell_j(x) = \\prod_{i\\neq j}\\frac{x-x_i}{x_j-x_i}$ satisfies $\\ell_j(x_k)=\\delta_{jk}$."
     },
     {
       "word": "lagrange method of multipliers",
       "raw_headword": "LAGRANGE METHOD OF MULTIPLIERS",
       "synonyms": [],
-      "definition": "The method of reducing a constrained optimisation problem to an unconstrained problem by the addition of Lagrange multipliers. The method is valid if the gradients of the constraints are linearly independent at x 0 . lf, in addition, the objective function is convex and the constraints are affine, then any such stationary point is optimal."
+      "definition": "The method of reducing a constrained optimisation problem to an unconstrained problem by the addition of Lagrange multipliers. The method is valid if the gradients of the constraints are linearly independent at x 0 . lf, in addition, the objective function is convex and the constraints are affine, then any such stationary point is optimal.",
+      "formula": "$$\\nabla f = \\lambda\\,\\nabla g \\quad \\Longleftrightarrow \\quad \\nabla\\bigl(f - \\lambda g\\bigr) = \\mathbf{0}$$",
+      "formula_description": "Finds extrema of $f(x,y,\\ldots)$ subject to constraint $g(x,y,\\ldots)=0$. $\\lambda$ is the Lagrange multiplier. For multiple constraints $g_i$: $\nabla f = \\sum_i \\lambda_i \nabla g_i$."
     },
     {
       "word": "lagrange multipliers",
       "raw_headword": "LAGRANGE MULTIPLIERS",
       "synonyms": [],
-      "definition": "Parameters, unusually denoted by λ introduced to assist in finding the maximum or minimum value of several variables x 1 .. x 2 ... x 3 ... subject to some constraint that connects the variables. An important application of the method of Lagrangian multipliers is its use in the derivation of the Boltzmann distribution in statistical mechanics, in which one of the Lagrangian multipliers is , where k is the Boltzmann constant and t is the thermodynamic temperature."
+      "definition": "Parameters, unusually denoted by λ introduced to assist in finding the maximum or minimum value of several variables x 1 .. x 2 ... x 3 ... subject to some constraint that connects the variables. An important application of the method of Lagrangian multipliers is its use in the derivation of the Boltzmann distribution in statistical mechanics, in which one of the Lagrangian multipliers is , where k is the Boltzmann constant and t is the thermodynamic temperature.",
+      "formula": "$$\\nabla f(\\mathbf{x}^*) = \\sum_{i=1}^{m} \\lambda_i \\,\\nabla g_i(\\mathbf{x}^*)$$",
+      "formula_description": "At a constrained extremum $\\mathbf{x}^*$, the gradient of the objective $f$ is a linear combination of the constraint gradients $\nabla g_i$. The scalars $\\lambda_i$ are Lagrange multipliers."
     },
     {
       "word": "lagrange problem",
@@ -94823,7 +94837,9 @@
       "word": "lagrange's equations",
       "raw_headword": "LAGRANGE'S EQUATIONS",
       "synonyms": [],
-      "definition": "Equations devised for solving dynamic problems with constraints. They are partial differential equations of the form d dt ∂ L d ! q i ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟- ∂ L ∂ q i = 0. This equation results in the differential equations that describe the equations of motion of the system."
+      "definition": "Equations devised for solving dynamic problems with constraints. They are partial differential equations of the form d dt ∂ L d ! q i ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟- ∂ L ∂ q i = 0. This equation results in the differential equations that describe the equations of motion of the system.",
+      "formula": "$$\\frac{d}{dt}\\!\\left(\\frac{\\partial \\mathcal{L}}{\\partial \\dot{q}_i}\\right) - \\frac{\\partial \\mathcal{L}}{\\partial q_i} = Q_i$$",
+      "formula_description": "Where $\\mathcal{L} = T - V$ is the Lagrangian (kinetic minus potential energy), $q_i$ are generalised coordinates, $\\dot{q}_i$ are generalised velocities, and $Q_i$ are non-conservative generalised forces. For conservative systems $Q_i = 0$."
     },
     {
       "word": "lagrange's four-square theorem",
@@ -94832,7 +94848,9 @@
         "four squares theorem",
         "bachet's conjecture"
       ],
-      "definition": "The theorem that every positive integer can be written as the sum of the squares of four integers."
+      "definition": "The theorem that every positive integer can be written as the sum of the squares of four integers.",
+      "formula": "$$\\forall\\, n \\in \\mathbb{Z}^+,\\quad n = a^2 + b^2 + c^2 + d^2 \\quad (a,b,c,d \\in \\mathbb{Z}_{\\ge 0})$$",
+      "formula_description": "Every positive integer can be expressed as the sum of four perfect squares. Proved by Lagrange in 1770. Example: $7 = 4+1+1+1 = 2^2+1^2+1^2+1^2$."
     },
     {
       "word": "lagrange's identity",
@@ -94844,13 +94862,17 @@
       "word": "lagrange's linear equation",
       "raw_headword": "LAGRANGE'S LINEAR EQUATION",
       "synonyms": [],
-      "definition": "The partial differential equation of the form P i i = 1 n ∑ ( x 1 , x 2 ,... x n ) ∂ z ∂ x i = R ( x 1 , x 2 ,... x n ), where P i and R are differentiable functions. If the equation is integrable, its general solution is φ( u 1 , u 2 ,..., u n ) = 0, where φ is an arbitrary function and the u i are independent solutions of the simultaneous differential equations dx 1 P1 = dx 2 P = ... = dx n P n . A Lagrange's linear equation may also have a special integral."
+      "definition": "The partial differential equation of the form P i i = 1 n ∑ ( x 1 , x 2 ,... x n ) ∂ z ∂ x i = R ( x 1 , x 2 ,... x n ), where P i and R are differentiable functions. If the equation is integrable, its general solution is φ( u 1 , u 2 ,..., u n ) = 0, where φ is an arbitrary function and the u i are independent solutions of the simultaneous differential equations dx 1 P1 = dx 2 P = ... = dx n P n . A Lagrange's linear equation may also have a special integral.",
+      "formula": "$$\\sum_{i=1}^{n} P_i(x_1,\\ldots,x_n)\\,\\frac{\\partial z}{\\partial x_i} = R(x_1,\\ldots,x_n,\\,z)$$",
+      "formula_description": "A first-order quasi-linear PDE of the form $Pp + Qq = R$ in two variables. Solved via the method of characteristics: $\\dfrac{dx}{P} = \\dfrac{dy}{Q} = \\dfrac{dz}{R}$."
     },
     {
       "word": "lagrange's theorem",
       "raw_headword": "LAGRANGE'S THEOREM",
       "synonyms": [],
-      "definition": "The theorem that the order of each subgroup of a finite group is a factor of the order of the group."
+      "definition": "The theorem that the order of each subgroup of a finite group is a factor of the order of the group.",
+      "formula": "$$|H| \\;\\Big|\\; |G| \\quad \\Longrightarrow \\quad [G:H] = \\frac{|G|}{|H|}$$",
+      "formula_description": "If $H$ is a subgroup of a finite group $G$, then the order of $H$ divides the order of $G$. $[G:H]$ is the index (number of distinct cosets of $H$ in $G$). Corollary: the order of any element divides $|G|$."
     },
     {
       "word": "lagrange, joseph louis",
@@ -94993,7 +95015,9 @@
       "word": "lambert's laws",
       "raw_headword": "LAMBERT'S LAWS",
       "synonyms": [],
-      "definition": "Laws of light proposed by Johann H. Lambert (1728-77). The first law states that the illuminance of a surface illuminated by light perpendicularly from a point source is inversely proportional to the square of the distance between the surface and the source. The second law states that if the rays make an angle θ with the normal to the surface, the illuminance is proportional to cos θ. The third law (Bouguer's law) states that the luminous intensity ( I ) of light or other electromagnetic radiation decreases exponentially with the distance d as it enters an absorbing medium. It is expressed as: I = I o exp (- αd ), where Io is the intensity of the radiation that enters the medium and α is its linear absorption coefficient."
+      "definition": "Laws of light proposed by Johann H. Lambert (1728-77). The first law states that the illuminance of a surface illuminated by light perpendicularly from a point source is inversely proportional to the square of the distance between the surface and the source. The second law states that if the rays make an angle θ with the normal to the surface, the illuminance is proportional to cos θ. The third law (Bouguer's law) states that the luminous intensity ( I ) of light or other electromagnetic radiation decreases exponentially with the distance d as it enters an absorbing medium. It is expressed as: I = I o exp (- αd ), where Io is the intensity of the radiation that enters the medium and α is its linear absorption coefficient.",
+      "formula": "$$I = I_0\\cos\\theta \\qquad \\text{and} \\qquad I = I_0\\,e^{-\\mu x}$$",
+      "formula_description": "Lambert's cosine law: intensity of emitted/reflected radiation $I$ falls as $\\cos\theta$ where $\theta$ is the angle from the normal. Lambert-Beer law: $A = \u000barepsilon c l$ where $A$ is absorbance, $\u000barepsilon$ is molar absorptivity, $c$ is concentration and $l$ is path length."
     },
     {
       "word": "lambing",
@@ -95214,7 +95238,9 @@
       "word": "landau levels",
       "raw_headword": "LANDAU LEVELS",
       "synonyms": [],
-      "definition": "The energy levels found in quantum mechanics of free electrons in a uniform magnetic field at very low temperatures and which are quantised because of the quantisation of the electron motion perpendicular to the field. It was named after the Soviet physicist Lev Davdovich Landau (1908-68). These energy levels, have discrete values, which are integer multiples of heB / m , where h is the Planck constant, e is the charge of the electron, m is the mass of the electron and B is the magnetic flux density. Each Landau level is a highly degenerate level, with each level being filled by 2eB/h , where the factor 2 is due to the spin of the electron."
+      "definition": "The energy levels found in quantum mechanics of free electrons in a uniform magnetic field at very low temperatures and which are quantised because of the quantisation of the electron motion perpendicular to the field. It was named after the Soviet physicist Lev Davdovich Landau (1908-68). These energy levels, have discrete values, which are integer multiples of heB / m , where h is the Planck constant, e is the charge of the electron, m is the mass of the electron and B is the magnetic flux density. Each Landau level is a highly degenerate level, with each level being filled by 2eB/h , where the factor 2 is due to the spin of the electron.",
+      "formula": "$$E_n = \\hbar\\omega_c\\!\\left(n + \\frac{1}{2}\\right), \\quad \\omega_c = \\frac{eB}{m_e}$$",
+      "formula_description": "Quantised energy levels of a free electron in a uniform magnetic field $B$. $n = 0, 1, 2, \\ldots$ is the Landau level index, $\\omega_c$ is the cyclotron frequency. Degeneracy of each level per unit area: $eB/h$."
     },
     {
       "word": "landauer's principle",
@@ -95259,7 +95285,9 @@
       "word": "landé interval rule",
       "raw_headword": "LANDÉ INTERVAL RULE",
       "synonyms": [],
-      "definition": "A rule in atomic spectroscopy that if the spin-orbit coupling is weak in a given multiplet, an energy level having definite spin angular momentum and orbital angular momentum is split into levels of differing total angular momentum, so that energy differences between two successive j levels are proportional to the larger of the two values of j, where j is the total resultant angular momentum of the coupled electrons. The rule can be deduced from the quantum theory of angular momentum. The rule also assumes that the interactions between spin magnetic moments can be ignored, but this assumption does not hold for very light atoms, such as helium."
+      "definition": "A rule in atomic spectroscopy that if the spin-orbit coupling is weak in a given multiplet, an energy level having definite spin angular momentum and orbital angular momentum is split into levels of differing total angular momentum, so that energy differences between two successive j levels are proportional to the larger of the two values of j, where j is the total resultant angular momentum of the coupled electrons. The rule can be deduced from the quantum theory of angular momentum. The rule also assumes that the interactions between spin magnetic moments can be ignored, but this assumption does not hold for very light atoms, such as helium.",
+      "formula": "$$\\Delta E_{J,\\,J-1} \\propto J_{\\max}(J_{\\max}+1) - J_{\\min}(J_{\\min}+1)$$",
+      "formula_description": "Energy splitting between adjacent $J$ levels in a multiplet is proportional to the larger $J$ value. Specifically: $E_J - E_{J-1} = A\\,J$ where $A = \\lambda\\langle\\mathbf{L}\\cdot\\mathbf{S}\\rangle/(2JL)$ and $J$ runs from $|L-S|$ to $L+S$."
     },
     {
       "word": "langerhans' cells",
@@ -95287,7 +95315,9 @@
         "langmuir isotherm",
         "hill-langmuir equation"
       ],
-      "definition": "An equation used to describe the coverage or adsorption of molecules on a solid surface to gas pressure or concentration of a medium above the solid surface at a fixed temperature. It was derived by and named after Irving Langmuir (1881-1957), an American chemist and Nobel laureate, using the kinetic theory of gases. The Langumuir with the isotherm can be written as: θ = αp (1+ αp ), where θ is the fraction of the surface covered by the adsorbate, p is the pressure of the gas and α is a constant called the adsorption coefficient, which is the equilibrium constant for the process of adsorption. The equation has the following assumptions: (i) the adsorption consists entirely of a monolayer at the surface; (ii) there is no interaction between molecules on different sites and each site can hold only one adsorbed molecule; and (iii) the heat of adsorption does not depend on the number of sites and is equal for all sites. The Langmuir adsorption isotherm is of limited application since for real surfaces the energy is not the same for all sites and interactions between adsorbed molecules cannot be ignored."
+      "definition": "An equation used to describe the coverage or adsorption of molecules on a solid surface to gas pressure or concentration of a medium above the solid surface at a fixed temperature. It was derived by and named after Irving Langmuir (1881-1957), an American chemist and Nobel laureate, using the kinetic theory of gases. The Langumuir with the isotherm can be written as: θ = αp (1+ αp ), where θ is the fraction of the surface covered by the adsorbate, p is the pressure of the gas and α is a constant called the adsorption coefficient, which is the equilibrium constant for the process of adsorption. The equation has the following assumptions: (i) the adsorption consists entirely of a monolayer at the surface; (ii) there is no interaction between molecules on different sites and each site can hold only one adsorbed molecule; and (iii) the heat of adsorption does not depend on the number of sites and is equal for all sites. The Langmuir adsorption isotherm is of limited application since for real surfaces the energy is not the same for all sites and interactions between adsorbed molecules cannot be ignored.",
+      "formula": "$$\\theta = \\frac{K_{\\mathrm{ads}}\\,p}{1 + K_{\\mathrm{ads}}\\,p}$$",
+      "formula_description": "$\\theta$ = fractional surface coverage, $p$ = gas pressure, $K_{\\mathrm{ads}}$ = adsorption equilibrium constant. Assumes monolayer adsorption, equivalent sites, no lateral interactions. Linearised form: $\\dfrac{p}{\\theta} = \\dfrac{1}{K_{\\mathrm{ads}}} + p$."
     },
     {
       "word": "langmuir frequency",
@@ -95295,7 +95325,9 @@
       "synonyms": [
         "plasma frequency"
       ],
-      "definition": "The frequency of plasma oscillations in an equilibrium charge distribution, derived by combining Poisson's equation with Newton's law of motion, named after Irving Langmuir (1881-1957), an American chemist and Nobel laureate. The Langmuir frequency can also be derived using quantum mechanics for the electron gas."
+      "definition": "The frequency of plasma oscillations in an equilibrium charge distribution, derived by combining Poisson's equation with Newton's law of motion, named after Irving Langmuir (1881-1957), an American chemist and Nobel laureate. The Langmuir frequency can also be derived using quantum mechanics for the electron gas.",
+      "formula": "$$\\omega_p = \\sqrt{\\frac{n_e\\,e^2}{\\varepsilon_0\\,m_e}}$$",
+      "formula_description": "Plasma (Langmuir) frequency: $n_e$ = electron number density, $e$ = elementary charge, $\\varepsilon_0$ = permittivity of free space, $m_e$ = electron mass. EM waves with $\\omega < \\omega_p$ cannot propagate through the plasma."
     },
     {
       "word": "langmuir-blodgett film",
@@ -95381,13 +95413,17 @@
       "word": "laplace distribution",
       "raw_headword": "LAPLACE DISTRIBUTION",
       "synonyms": [],
-      "definition": "The probability distribution, f ( x ) given by f ( x ) = ∅ > 0, -∞< x <∞ . It can be derived as the distribution of the difference of two independent random variables each having an identical exponential distribution."
+      "definition": "The probability distribution, f ( x ) given by f ( x ) = ∅ > 0, -∞< x <∞ . It can be derived as the distribution of the difference of two independent random variables each having an identical exponential distribution.",
+      "formula": "$$f(x;\\,\\mu,b) = \\frac{1}{2b}\\exp\\!\\left(-\\frac{|x-\\mu|}{b}\\right), \\quad b > 0$$",
+      "formula_description": "Mean $= \\mu$, variance $= 2b^2$. CDF: $F(x) = \\tfrac{1}{2} + \\tfrac{1}{2}\\operatorname{sgn}(x-\\mu)\\!\\left[1 - e^{-|x-\\mu|/b}\\right]$. Also called the double-exponential distribution; heavier tails than the Gaussian."
     },
     {
       "word": "laplace equation",
       "raw_headword": "LAPLACE EQUATION",
       "synonyms": [],
-      "definition": "A partial differential equation: useful for investigating physical problems in three dimensions involving gravitational, electrical and magnetic fields. It states that the sum of the second partial derivatives (the Laplace operator or Laplacian) of an unknown function is zero. It may also be written in the form 2 u=0, where 2 is called the Laplace operator . It is named after Pierre Simon de Laplace (1749-1827), French astronomer and mathematician."
+      "definition": "A partial differential equation: useful for investigating physical problems in three dimensions involving gravitational, electrical and magnetic fields. It states that the sum of the second partial derivatives (the Laplace operator or Laplacian) of an unknown function is zero. It may also be written in the form 2 u=0, where 2 is called the Laplace operator . It is named after Pierre Simon de Laplace (1749-1827), French astronomer and mathematician.",
+      "formula": "$$\\nabla^2 \\phi = \\frac{\\partial^2\\phi}{\\partial x^2} + \\frac{\\partial^2\\phi}{\\partial y^2} + \\frac{\\partial^2\\phi}{\\partial z^2} = 0$$",
+      "formula_description": "Solutions are called harmonic functions. Governs electrostatic potential in free space, steady-state heat conduction, irrotational fluid flow, and gravitational potential. In spherical coords: $\\nabla^2\\phi = \\frac{1}{r^2}\\frac{\\partial}{\\partial r}\\!\\left(r^2\\frac{\\partial\\phi}{\\partial r}\\right) + \\frac{1}{r^2\\sin\\theta}\\frac{\\partial}{\\partial\\theta}\\!\\left(\\sin\\theta\\frac{\\partial\\phi}{\\partial\\theta}\\right) + \\frac{1}{r^2\\sin^2\\theta}\\frac{\\partial^2\\phi}{\\partial\\varphi^2} = 0$."
     },
     {
       "word": "laplace operator",
@@ -95395,19 +95431,25 @@
       "synonyms": [
         "laplacian"
       ],
-      "definition": "The differential operator given by the divergence of the gradient of a function on Euclidean space. It is of the form ∂ 2 ∂ x 2 + ∂ 2 dy 2 + ∂ 2 ∂ z 2 . Its symbol is ∇ , for example, the Laplacian of f is written ∇ 2 or Δ f and called nabla squared, del squared or grad squared."
+      "definition": "The differential operator given by the divergence of the gradient of a function on Euclidean space. It is of the form ∂ 2 ∂ x 2 + ∂ 2 dy 2 + ∂ 2 ∂ z 2 . Its symbol is ∇ , for example, the Laplacian of f is written ∇ 2 or Δ f and called nabla squared, del squared or grad squared.",
+      "formula": "$$\\nabla^2 f = \\Delta f = \\operatorname{div}(\\nabla f) = \\sum_{i=1}^{n}\\frac{\\partial^2 f}{\\partial x_i^2}$$",
+      "formula_description": "Also written $\\Delta$ or del-squared. In 3D Cartesian: $\\nabla^2 f = \\dfrac{\\partial^2 f}{\\partial x^2}+\\dfrac{\\partial^2 f}{\\partial y^2}+\\dfrac{\\partial^2 f}{\\partial z^2}$. In 2D polar: $\\nabla^2 f = \\dfrac{\\partial^2 f}{\\partial r^2}+\\dfrac{1}{r}\\dfrac{\\partial f}{\\partial r}+\\dfrac{1}{r^2}\\dfrac{\\partial^2 f}{\\partial\\theta^2}$."
     },
     {
       "word": "laplace transform",
       "raw_headword": "LAPLACE TRANSFORM",
       "synonyms": [],
-      "definition": "An integral transform related to the Fourier transform that transforms a function of time into a function of complex frequency. It is of the form g ( y ) = e - xy ∞ ∫ f ( x )dx. It is used in the solution of differential equations."
+      "definition": "An integral transform related to the Fourier transform that transforms a function of time into a function of complex frequency. It is of the form g ( y ) = e - xy ∞ ∫ f ( x )dx. It is used in the solution of differential equations.",
+      "formula": "$$\\mathcal{L}\\{f(t)\\}(s) = \\int_0^{\\infty} f(t)\\,e^{-st}\\,dt = F(s)$$",
+      "formula_description": "Converts ODEs into algebraic equations. Key pairs: $\\mathcal{L}\\{1\\}=\\frac{1}{s}$, $\\mathcal{L}\\{e^{at}\\}=\\frac{1}{s-a}$, $\\mathcal{L}\\{t^n\\}=\\frac{n!}{s^{n+1}}$, $\\mathcal{L}\\{\\sin\\omega t\\}=\\frac{\\omega}{s^2+\\omega^2}$. Inverse via Bromwich integral: $f(t)=\\frac{1}{2\\pi i}\\int_{\\gamma-i\\infty}^{\\gamma+i\\infty}F(s)\\,e^{st}\\,ds$."
     },
     {
       "word": "laplace's correction",
       "raw_headword": "LAPLACE'S CORRECTION",
       "synonyms": [],
-      "definition": "A correction to the calculation of the speed of sound in a gas. Newton assumed that the pressure-volume changes that occur when a sound wave travels through the gas are isothermal. Laplace was subsequently able to obtain agreement between theory and experiment by assuming that pressure-volume changes are adiabatic."
+      "definition": "A correction to the calculation of the speed of sound in a gas. Newton assumed that the pressure-volume changes that occur when a sound wave travels through the gas are isothermal. Laplace was subsequently able to obtain agreement between theory and experiment by assuming that pressure-volume changes are adiabatic.",
+      "formula": "$$v = \\sqrt{\\frac{\\gamma P}{\\rho}} = \\sqrt{\\frac{\\gamma RT}{M}}$$",
+      "formula_description": "Speed of sound in a gas; $\\gamma = C_p/C_v$ is the adiabatic index, $P$ = pressure, $\\rho$ = density. Newton's original (isothermal) result $v = \\sqrt{P/\\rho}$ is too low by factor $\\sqrt{\\gamma}$. For air at 0°C: $\\gamma \\approx 1.402$, giving $v \\approx 331\\ \\mathrm{m\\,s^{-1}}$."
     },
     {
       "word": "laplace, pierre simon, marquis de",
@@ -95491,7 +95533,9 @@
       "word": "larmor precession",
       "raw_headword": "LARMOR PRECESSION",
       "synonyms": [],
-      "definition": "The precession of the motion of charged particles in a magnetic field. For an electron in an orbital motion around the nucleus of an atom in a magnetic field of flux density the frequency of precession is given by ! ω = eB4 π mv µ , where e and m are the electronic charge and mass respectively, μ is the permeability and v is the velocity of the electron. This frequency, ῳ is known as the Larmor frequency, which is numerically equal to 2 π x 1.40 MHz per oersted or 2 π x 111 MHz per SI unit of magnetic field strength (ampere-turn per metre)."
+      "definition": "The precession of the motion of charged particles in a magnetic field. For an electron in an orbital motion around the nucleus of an atom in a magnetic field of flux density the frequency of precession is given by ! ω = eB4 π mv µ , where e and m are the electronic charge and mass respectively, μ is the permeability and v is the velocity of the electron. This frequency, ῳ is known as the Larmor frequency, which is numerically equal to 2 π x 1.40 MHz per oersted or 2 π x 111 MHz per SI unit of magnetic field strength (ampere-turn per metre).",
+      "formula": "$$\\omega_L = \\frac{eB}{2m_e}, \\qquad f_L = \\frac{eB}{4\\pi m_e}$$",
+      "formula_description": "Larmor frequency of precession of electron orbital magnetic moment in field $B$. Numerically: $\\omega_L \\approx 8.794\\times10^{10}\\,B\\ \\mathrm{rad\\,s^{-1}}$ (with $B$ in Tesla). General form for charge $q$, mass $m$: $\\boldsymbol{\\omega}_L = -\\dfrac{q}{2m}\\mathbf{B}$."
     },
     {
       "word": "larva",
@@ -95635,7 +95679,9 @@
       "word": "latent heat",
       "raw_headword": "LATENT HEAT",
       "synonyms": [],
-      "definition": "The heat absorbed or radiated by a substance as it changes state such as the melting of ice or the boiling of water at constant temperature and pressure. In other words, it is the heat energy given out or taken in as the state of a substance changes at a constant temperature or the heat that is absorbed or emitted when a substance undergoes a physical phase change at constant temperature. Two of the more common forms of latent heat (or enthalpies or energies) encountered are latent heat of fusion (melting) and latent heat of vapourisation (boiling). For example, the latent heat of vaporisation is the energy a substance absorbs from its surrounding in order to overcome the attractive forces between its molecules as it changes from a liquid to gas and in order to do work against the external atmosphere as it expands. In thermodynamic terms the latent heat is the enthalpy of evaporation (∆ H ), i.e. L = ∆ H = ∆ U + p ∆ V , where ∆ U is the change in the internal energy, p is the pressure and ∆ V is the change in volume. Latent heat of fusion or enthalpy of fusion , is the change in its enthalpy (total heat content of a system which is equal to the internal energy of the system plus the product of the volume and pressure) resulting from providing energy (heat) to a given quantity of the substance to change its state from a solid to a liquid at constant pressure. More specifically, it is the amount of heat required to change 1 g of a substance at the temperature of its melting point from the solid state to the liquid state without changing temperature. Thus, the total heat gained or released, Q = m x Lf + mxCx Dt; where Q is Heat, Lf is specific latent heat of fusion, m is Mass, C is Specific heat and Dt (t2-t1) is change in temperature. Note: Specific heat is the amount of heat required by a given mass of a material to produce a unit change in its temperature; its unit is joule per kelvin. Latent heat of fusion is associated with melting a solid or freezing liquid and it is the phase change between states of solid and liquid."
+      "definition": "The heat absorbed or radiated by a substance as it changes state such as the melting of ice or the boiling of water at constant temperature and pressure. In other words, it is the heat energy given out or taken in as the state of a substance changes at a constant temperature or the heat that is absorbed or emitted when a substance undergoes a physical phase change at constant temperature. Two of the more common forms of latent heat (or enthalpies or energies) encountered are latent heat of fusion (melting) and latent heat of vapourisation (boiling). For example, the latent heat of vaporisation is the energy a substance absorbs from its surrounding in order to overcome the attractive forces between its molecules as it changes from a liquid to gas and in order to do work against the external atmosphere as it expands. In thermodynamic terms the latent heat is the enthalpy of evaporation (∆ H ), i.e. L = ∆ H = ∆ U + p ∆ V , where ∆ U is the change in the internal energy, p is the pressure and ∆ V is the change in volume. Latent heat of fusion or enthalpy of fusion , is the change in its enthalpy (total heat content of a system which is equal to the internal energy of the system plus the product of the volume and pressure) resulting from providing energy (heat) to a given quantity of the substance to change its state from a solid to a liquid at constant pressure. More specifically, it is the amount of heat required to change 1 g of a substance at the temperature of its melting point from the solid state to the liquid state without changing temperature. Thus, the total heat gained or released, Q = m x Lf + mxCx Dt; where Q is Heat, Lf is specific latent heat of fusion, m is Mass, C is Specific heat and Dt (t2-t1) is change in temperature. Note: Specific heat is the amount of heat required by a given mass of a material to produce a unit change in its temperature; its unit is joule per kelvin. Latent heat of fusion is associated with melting a solid or freezing liquid and it is the phase change between states of solid and liquid.",
+      "formula": "$$Q = mL, \\qquad L_f \\approx 334\\ \\mathrm{kJ\\,kg^{-1}}\\ (\\text{water}),\\quad L_v \\approx 2260\\ \\mathrm{kJ\\,kg^{-1}}\\ (\\text{water})$$",
+      "formula_description": "$Q$ = heat energy transferred, $m$ = mass, $L$ = specific latent heat. Latent heat of fusion $L_f$: solid $\\leftrightarrow$ liquid. Latent heat of vaporisation $L_v$: liquid $\\leftrightarrow$ gas. Thermodynamically: $L = T\\,\\Delta S = \\Delta H$ at constant $T$ and $P$."
     },
     {
       "word": "latent image",
@@ -95821,7 +95867,9 @@
       "word": "lattice energy",
       "raw_headword": "LATTICE ENERGY",
       "synonyms": [],
-      "definition": "A measure of the strength of bonds or stability of a crystal lattice; defined as the enthalpy of formation of one mole of ionic compound from gaseous ions and as such is invariably exothermic. It is given by the energy that would be released per mole, if atoms, ions or molecules of the crystal were brought together from infinite distances apart to form the lattice."
+      "definition": "A measure of the strength of bonds or stability of a crystal lattice; defined as the enthalpy of formation of one mole of ionic compound from gaseous ions and as such is invariably exothermic. It is given by the energy that would be released per mole, if atoms, ions or molecules of the crystal were brought together from infinite distances apart to form the lattice.",
+      "formula": "$$U = -\\frac{N_A M z^+ z^- e^2}{4\\pi\\varepsilon_0\\,r_0}\\!\\left(1 - \\frac{1}{n}\\right)$$",
+      "formula_description": "Born–Landé equation; $M$ = Madelung constant, $z^+,z^-$ = ion charges, $r_0$ = nearest-neighbour distance, $n$ = Born exponent (~9 for NaCl). For NaCl: $M \\approx 1.748$, $U \\approx -787\\ \\mathrm{kJ\\,mol^{-1}}$. Calculated via the Born–Haber cycle experimentally."
     },
     {
       "word": "lattice enthalpy",
@@ -95903,7 +95951,9 @@
       "synonyms": [
         "laurent series"
       ],
-      "definition": "Of a complex function f ( z ), representing a power series f ( z ) = a n n =-∞ ∞ ∑ ( z - a ) n which includes terms of negative degree. It may be used to express complex functions in cases where a Taylor series expansion cannot be applied."
+      "definition": "Of a complex function f ( z ), representing a power series f ( z ) = a n n =-∞ ∞ ∑ ( z - a ) n which includes terms of negative degree. It may be used to express complex functions in cases where a Taylor series expansion cannot be applied.",
+      "formula": "$$f(z) = \\sum_{n=-\\infty}^{\\infty} a_n (z-z_0)^n, \\quad a_n = \\frac{1}{2\\pi i}\\oint_C \\frac{f(z)}{(z-z_0)^{n+1}}\\,dz$$",
+      "formula_description": "Valid in an annulus $r < |z - z_0| < R$. Terms with $n < 0$ form the principal part; if finitely many, $z_0$ is a pole. Coefficient $a_{-1}$ is the residue at $z_0$, critical for contour integration."
     },
     {
       "word": "lauric acid",
