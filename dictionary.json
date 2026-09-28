@@ -88355,7 +88355,7 @@
       "word": "integrated rate law",
       "raw_headword": "INTEGRATED RATE LAW",
       "synonyms": [],
-      "definition": "The concentration of a reactant or product in a chemical reaction as a function of time (the curve itself). For a zero order reaction: A → products, rate = k, the integrated rate law is [A] = -kt + ln [Ao]. For a first order reaction: A → products, rate = k [A], the integrated rate law is In[A] = -kt + ln[Ao]. For a second order reaction: 2A → products or A + B → products (when [A] = [B]), rate = k[A] 2 , the integrated rate law is 1/[A] = kt + 1/[Ao]. The rate law is the instantaneous rate (the slope of the curve) as a function of concentration. Zero-order reactions are reactions that appear to occur at a rate independent of substrate concentration. First-order reactions are reactions in which the rate varies with concentration of a single species and the change in concentration is exponential, so that a plot of ln(concentration) against time is linear. The stoichiometric coefficient is 1. An example of first-order reaction is radioactive decay, but many electron transfer processes and most enzyme mechanisms contain intermediate reactions that are first order. Second-order reactions are of two types: Second-order reactions of Classes I and II. Second-order reactions of Classes I reactions are reactions in which the rate varies with concentration of a single species, but the stoichiometric coefficient is 2. The rate varies with the reciprocal of the concentration, so that a plot of 1/ (concentration) against time is linear. Second-order reactions of Class II are reactions in which the rate varies with the concentration of two substrates, each of which has a stoichiometric coefficient of 1. A plot of ln(conc.A/conc.B) against time is linear. Examples of second- order reaction are found in many important biological reactions, such as the formation of double-stranded DNA from two complementary strands. Higher-order or Mixed-order reactions are reactions in which more than two species are involved or one species reacts with stoichiometric coefficient >2. Many different classes, of which the simplest involves a single species with stoichiometric coefficient greater than 2. Although many biochemical reactions might appear to be higher-order, in general, the enzyme mechanism functions through binding of multiple substrates to a single protein and the empirical order is simpler and often appears to be zero-order."
+      "definition": "In chemical kinetics, mathematical expressions relating reactant or product concentrations directly to elapsed time $t$ by integrating differential rate laws:\n\n* **Zero-order** ($-\\frac{d[A]}{dt} = k$):\n$$[A]_t = [A]_0 - kt, \\qquad t_{1/2} = \\frac{[A]_0}{2k}$$\n\n* **First-order** ($-\\frac{d[A]}{dt} = k[A]$):\n$$\\ln[A]_t = \\ln[A]_0 - kt \\implies [A]_t = [A]_0 e^{-kt}, \\qquad t_{1/2} = \\frac{\\ln 2}{k} \\approx \\frac{0.693}{k}$$\n\n* **Second-order** ($-\\frac{d[A]}{dt} = k[A]^2$):\n$$\\frac{1}{[A]_t} = \\frac{1}{[A]_0} + kt, \\qquad t_{1/2} = \\frac{1}{k[A]_0}$$\n\nLinear plots of $[A]$ vs $t$, $\\ln[A]$ vs $t$, and $1/[A]$ vs $t$ uniquely diagnose reaction order."
     },
     {
       "word": "integrated services digital network definition",
@@ -88371,7 +88371,7 @@
       "synonyms": [
         "euler multiplier"
       ],
-      "definition": "A function, m ( x , y ) by which an ordinary differential equation can be multiplied in order to make it integrable. Its form is y ' f ( x , y ) - g ( x , y ) = 0."
+      "definition": "In ordinary differential equations, a non-zero function $\\mu(x)$ by which a first-order linear differential equation $y' + P(x)y = Q(x)$ is multiplied to transform its left-hand side into the exact derivative of a product $\\frac{d}{dx}[\\mu(x)y]$:\n\n$$\\mu(x) = e^{\\int P(x)\\,dx}$$\n\nMultiplying through gives $\\frac{d}{dx}[\\mu(x)y] = \\mu(x)Q(x)$, yielding the explicit general solution:\n\n$$y(x) = \\frac{1}{\\mu(x)} \\left( \\int \\mu(x) Q(x)\\,dx + C \\right)$$"
     },
     {
       "word": "integrating sphere",
@@ -88391,19 +88391,19 @@
       "word": "integration by parts",
       "raw_headword": "INTEGRATION BY PARTS",
       "synonyms": [],
-      "definition": "A method of integrating a function of a variable by expressing it in terms of two parts, both of which are differentiable functions of the same variable. Integrating by parts can be evaluated by using the relation ∫u dv=uv- ∫ v du ,where udv is given by udv = f ( x ) and f ( x ) is a function. The key is to define u and dv in a fashion such that the integral ∫ v du will be easier to solve than the original integral ( ∫u dv ). For example, ∫Inx dx can be integrated by defining u = Inx, dv = dx , then v = x , Inx dx = xInx - ∫ x . d x ∫ du = xInx - x + c ."
+      "definition": "A foundational integration technique derived from the product rule of differential calculus $\\frac{d}{dx}(uv) = u\\frac{dv}{dx} + v\\frac{du}{dx}$:\n\n$$\\int u\\,dv = uv - \\int v\\,du$$\n\nFor definite integrals: $\\int_a^b u\\,dv = [uv]_a^b - \\int_a^b v\\,du$. For example, integrating $\\ln x$ with $u = \\ln x$ and $dv = dx$ ($du = \\frac{1}{x}dx, v = x$):\n\n$$\\int \\ln x\\,dx = x\\ln x - \\int x\\left(\\frac{1}{x}\\right)dx = x\\ln x - x + C$$\n\nThe LIATE mnemonic (Logarithmic, Inverse trigonometric, Algebraic, Trigonometric, Exponential) assists in selecting $u$."
     },
     {
       "word": "integration by substitution",
       "raw_headword": "INTEGRATION BY SUBSTITUTION",
       "synonyms": [],
-      "definition": "An integration process in which a function of one variable is expressed as a simpler or more integrated function of another variable. For example, to integrate cos( ax + b ) with respect to x ; let u = ax + b then = a , this implies that du = du a , therefore, Substituting u = ax + b into the function theanswer becomes cos u ( ax + b ) dx = ∫ a sin( ax + b ) + c ."
+      "definition": "Also known as $u$-substitution, an integration technique that reverses the chain rule of differentiation. If $u = g(x)$ is a differentiable function whose range is an interval where $f$ is continuous:\n\n$$\\int f(g(x)) g'(x)\\,dx = \\int f(u)\\,du$$\n\nFor example, evaluating $\\int \\cos(ax + b)\\,dx$: setting $u = ax + b \\implies du = a\\,dx$ yields $\\frac{1}{a}\\int \\cos u\\,du = \\frac{1}{a}\\sin(ax + b) + C$."
     },
     {
       "word": "integration by trigonometric substitution",
       "raw_headword": "INTEGRATION BY TRIGONOMETRIC SUBSTITUTION",
       "synonyms": [],
-      "definition": "Some integrals involving expressions of the form (1+ x 2 ) or (1- x 2 ) can be solved by making trigonometric substitutions and taking advantage of trigonometric identities, such as sin 2 θ + cos 2 θ =1 or tan 2 θ + 1=sec 2 θ . For example, to evaluate , make the substitution x = sin θ . Then dx = cos θ d θ and θ = arc sin x or θ = sin^-1 x . The integral becomes (1 - sin 2 θ ) ∫ cos θ d θ = cos 2 θ cos θ d θ ∫ = cos θ ∫ cos θ d θ = d θ = θ + c . ∫ Therefore, = arcsin x + c , where θ = arc sin x or θ = sin^-1 x ."
+      "definition": "An integration method used to eliminate algebraic radicals by substituting trigonometric functions using Pythagorean identities:\n\n* For $\\sqrt{a^2 - x^2}$: substitute $x = a\\sin\\theta \\implies dx = a\\cos\\theta\\,d\\theta$, using $1 - \\sin^2\\theta = \\cos^2\\theta$\n* For $\\sqrt{a^2 + x^2}$: substitute $x = a\\tan\\theta \\implies dx = a\\sec^2\\theta\\,d\\theta$, using $1 + \\tan^2\\theta = \\sec^2\\theta$\n* For $\\sqrt{x^2 - a^2}$: substitute $x = a\\sec\\theta \\implies dx = a\\sec\\theta\\tan\\theta\\,d\\theta$, using $\\sec^2\\theta - 1 = \\tan^2\\theta$\n\nFor example, $\\int \\frac{dx}{\\sqrt{a^2 - x^2}} = \\int \\frac{a\\cos\\theta\\,d\\theta}{a\\cos\\theta} = \\theta + C = \\arcsin\\left(\\frac{x}{a}\\right) + C$."
     },
     {
       "word": "integro-differential equation",
@@ -88755,7 +88755,7 @@
       "word": "interior angle",
       "raw_headword": "INTERIOR ANGLE",
       "synonyms": [],
-      "definition": "1. The angle formed between two adjacent sides of a polygon and lying in its interior. The sum of the interior angles of any polygon is given by 180 o ( n^-2), where n is the number of sides of the polygon. 2. Any of the four angles formed in the area between two lines by a third line that intersects them transversally."
+      "definition": "An angle formed inside a closed polygon between two adjacent sides. For any simple polygon with $n$ sides ($n \\ge 3$), the sum of all $n$ interior angles is:\n\n$$S = (n - 2) \\times 180^\\circ = (n - 2)\\pi\\,\\text{rad}$$\n\nIn a regular polygon with $n$ equal sides, each interior angle measures:\n\n$$\\theta = \\frac{(n - 2) \\times 180^\\circ}{n} = \\frac{(n - 2)\\pi}{n}\\,\\text{rad}$$\n\nEach interior angle is supplementary to the corresponding exterior angle: $\\theta_{\\text{int}} + \\theta_{\\text{ext}} = 180^\\circ$."
     },
     {
       "word": "interior ofa figure",
@@ -88843,7 +88843,7 @@
       "synonyms": [
         "bolzano's theorem"
       ],
-      "definition": "A theorem, used in mathematical analysis which states that if a continuous function f having interval [ x , y ] as its domain takes every value between f ( x ) and f ( y ) at each end of the interval, then it also takes values between f ( x ) and f ( y ) at some point within the interval. This intermediate value property, which derivatives also possess by virtue of the mean-value theorem, is also called the Darboux property. It was named after the Czech analyst Bernhard Bolzano (1781-1848)."
+      "definition": "A fundamental theorem of real analysis proved by Bernhard Bolzano in 1817. It states that if a real-valued function $f: [a, b] \\to \\mathbb{R}$ is continuous on the closed interval $[a, b]$, and $u$ is any real number strictly between $f(a)$ and $f(b)$:\n\n$$\\exists c \\in (a, b) \\quad \\text{such that} \\quad f(c) = u$$\n\nA critical corollary is Bolzano's theorem on roots: if $f(a)$ and $f(b)$ have opposite signs ($f(a)f(b) < 0$), there exists at least one root $c \\in (a, b)$ where $f(c) = 0$, forming the mathematical foundation for numerical bisection root-finding algorithms."
     },
     {
       "word": "intermediate vector boson",
@@ -88984,7 +88984,7 @@
       "word": "internal resistance",
       "raw_headword": "INTERNAL RESISTANCE",
       "synonyms": [],
-      "definition": "The opposition to the flow of current within a source of electric current such as a cell generator or the resistance inside a power supply such as a battery or cells that limits the current that it can supply in a circuit. As a result of the resistance from the source, the output voltage is smaller than the true electromotive force. When a battery fails, it is typically because it has built up enough internal resistance that it can no longer supply a useful amount of power to an external load. The internal resistance of a battery is dependent on the specific battery's size, chemical properties, age, temperature and the discharge current. It has an electronic component due to the resistivity of the battery's component materials and an ionic component due to electrochemical factors such as electrolyte conductivity, ion mobility and electrode surface area. The internal resistance, R i nt of a battery can be calculated from its open circuit voltage, E , load voltage, V L load resistance, R L , and the current, I. Thus, E = I ( R L + R int ) or R L = R int E V L^-1 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ R L ."
+      "definition": "In electrical engineering and circuit theory, the inherent resistance $r_{\\text{int}}$ present within a practical source of electrical energy (such as a battery, chemical cell, or generator). When supplying a current $I$ to an external load resistance $R_L$, internal voltage drop $Ir_{\\text{int}}$ reduces the terminal potential difference $V_L$ below the open-circuit electromotive force (emf) $\\mathcal{E}$:\n\n$$V_L = \\mathcal{E} - I r_{\\text{int}}, \\qquad I = \\frac{\\mathcal{E}}{R_L + r_{\\text{int}}}$$\n\nThe internal resistance is determined from terminal voltage and load current by $r_{\\text{int}} = \\frac{\\mathcal{E} - V_L}{I} = R_L\\left(\\frac{\\mathcal{E}}{V_L} - 1\\)$. By the maximum power transfer theorem, maximum power is delivered to the load when $R_L = r_{\\text{int}}$."
     },
     {
       "word": "internal standard",
@@ -89474,7 +89474,7 @@
       "word": "interval of convergence",
       "raw_headword": "INTERVAL OF CONVERGENCE",
       "synonyms": [],
-      "definition": "A power series of the form c n n = 0 +∞ ∑ ( x - a ) n = c o + c 1 ( x - a ) + c 2 ( x - a ) 2 + ..., c n ; where a , c o , c 1 , c 2 , ..., c n are given real numbers, the interval with endpoints a - r and a + r on which the power series converges."
+      "definition": "In real analysis, the set of all real values of $x$ for which a given formal power series $\\sum_{n=0}^\\infty c_n (x - a)^n$ converges to a finite sum. By Cauchy-Hadamard theorem, there exists a radius of convergence $R \\in [0, \\infty]$ given by:\n\n$$\\frac{1}{R} = \\limsup_{n \\to \\infty} \\sqrt[n]{|c_n|} = \\lim_{n \\to \\infty} \\left| \\frac{c_{n+1}}{c_n} \\right|$$\n\nThe series converges absolutely for $|x - a| < R$ and diverges for $|x - a| > R$. The interval of convergence is an interval centered at $a$ with endpoints $a - R$ and $a + R$, which may be open $(a-R, a+R)$, closed $[a-R, a+R]$, or half-open, depending on endpoint convergence."
     },
     {
       "word": "intestine",
@@ -89861,7 +89861,7 @@
       "word": "inverse function theorem",
       "raw_headword": "INVERSE FUNCTION THEOREM",
       "synonyms": [],
-      "definition": "The special case of the implicit function theorem stating that a continuously differentiable function on Euclidean space possesses an inverse function in a neighbourhood of a point at which it has a non-singular Jacobian."
+      "definition": "In multivariable differential calculus, a foundational theorem stating that if $\\mathbf{f}: U \\subseteq \\mathbb{R}^n \\to \\mathbb{R}^n$ is a continuously differentiable ($C^1$) mapping and its Jacobian matrix $\\mathbf{J}_{\\mathbf{f}}(\\mathbf{a})$ is invertible (non-zero Jacobian determinant) at $\\mathbf{a} \\in U$:\n\n$$\\det(\\mathbf{J}_{\\mathbf{f}}(\\mathbf{a})) \\neq 0$$\n\nthen $\\mathbf{f}$ is a local diffeomorphism: there exists an open neighborhood $V$ of $\\mathbf{a}$ such that $\\mathbf{f}|_V$ is invertible, its inverse $\\mathbf{f}^{-1}$ is $C^1$, and the derivative of the inverse satisfies:\n\n$$\\mathbf{J}_{\\mathbf{f}^{-1}}(\\mathbf{f}(\\mathbf{a})) = [\\mathbf{J}_{\\mathbf{f}}(\\mathbf{a})]^{-1}$$"
     },
     {
       "word": "inverse image",
@@ -89881,7 +89881,7 @@
       "word": "inverse matrix",
       "raw_headword": "INVERSE MATRIX",
       "synonyms": [],
-      "definition": "The inverse of a matrix A is denoted by A^-1 . The inverse of a 2 x 2 square matrix A = is given by A^-1 = . Note, a matrix multiplied by its inverse gives the identity matrix. That is A A^-1 = A^-1 A = I, where I is the identity matrix."
+      "definition": "For an $n \\times n$ square matrix $\\mathbf{A}$, the unique matrix $\\mathbf{A}^{-1}$ that yields the identity matrix $\\mathbf{I}_n$ under matrix multiplication:\n\n$$\\mathbf{A}\\mathbf{A}^{-1} = \\mathbf{A}^{-1}\\mathbf{A} = \\mathbf{I}_n$$\n\n$\\mathbf{A}^{-1}$ exists if and only if $\\mathbf{A}$ is non-singular ($\\det(\\mathbf{A}) \\neq 0$). For a $2 \\times 2$ matrix:\n\n$$\\mathbf{A} = \\begin{bmatrix} a & b \\\\[4pt] c & d \\end{bmatrix} \\implies \\mathbf{A}^{-1} = \\frac{1}{ad - bc} \\begin{bmatrix} d & -b \\\\[4pt] -c & a \\end{bmatrix}$$\n\nIn general, $\\mathbf{A}^{-1} = \\frac{1}{\\det(\\mathbf{A})} \\text{adj}(\\mathbf{A})$, where $\\text{adj}(\\mathbf{A})$ is the adjugate matrix (transpose of the cofactor matrix)."
     },
     {
       "word": "inverse multiplexing",
@@ -89920,7 +89920,7 @@
       "word": "inverse square law",
       "raw_headword": "INVERSE SQUARE LAW",
       "synonyms": [],
-      "definition": "A law in which one of the quantities is inversely proportional to the square of another. Examples are the law of electrostatic atrraction F E1/ r 2 and gravitational force of attraction F G1/ r 2 . An example is sound intensity and its inverse square law 1/ r 2 ."
+      "definition": "A physical law stating that a specified physical intensity or field quantity $I$ is inversely proportional to the square of the distance $r$ from the point source:\n\n$$I \\propto \\frac{1}{r^2} \\implies I = \\frac{P}{4\\pi r^2}$$\n\nFundamental manifestations include:\n* **Newton's law of universal gravitation**: $F_g = G\\frac{m_1 m_2}{r^2}$\n* **Coulomb's law of electrostatics**: $F_e = \\frac{1}{4\\pi \\varepsilon_0}\\frac{|q_1 q_2|}{r^2}$\n* **Radiant flux / Sound intensity**: $I = \\frac{P_{\\text{source}}}{4\\pi r^2}$\n\nArises geometrically because the surface area of a sphere scales as $A = 4\\pi r^2$ in 3-dimensional Euclidean space."
     },
     {
       "word": "inversion",
@@ -90341,7 +90341,7 @@
       "word": "ionic equation",
       "raw_headword": "IONIC EQUATION",
       "synonyms": [],
-      "definition": "A chemical equation that includes only the ions involved as reactants in a chemical reaction. For example, in an equation NaOH (aq) + HCl (aq) ) NaCl (aq) + H2 O (l), the ionic equation is OH - + H + H2 O."
+      "definition": "A chemical equation in which electrolytes in aqueous solution are represented as dissociated ions. For example, the neutralization of sodium hydroxide by hydrochloric acid:\n\n$$\\text{Molecular: } \\text{NaOH}_{(aq)} + \\text{HCl}_{(aq)} \\longrightarrow \\text{NaCl}_{(aq)} + \\text{H}_2\\text{O}_{(l)}$$\n\n$$\\text{Complete ionic: } \\text{Na}^+_{(aq)} + \\text{OH}^-_{(aq)} + \\text{H}^+_{(aq)} + \\text{Cl}^-_{(aq)} \\longrightarrow \\text{Na}^+_{(aq)} + \\text{Cl}^-_{(aq)} + \\text{H}_2\\text{O}_{(l)}$$\n\nCanceling spectator ions ($\\text{Na}^+, \\text{Cl}^-$) yields the net ionic equation:\n\n$$\\text{H}^+_{(aq)} + \\text{OH}^-_{(aq)} \\longrightarrow \\text{H}_2\\text{O}_{(l)}$$"
     },
     {
       "word": "ionic half equation",
@@ -90373,7 +90373,7 @@
       "word": "ionic product of water",
       "raw_headword": "IONIC PRODUCT OF WATER",
       "synonyms": [],
-      "definition": "The equilibrium constant K w for the reaction in which water undergoes an acid-base reaction with itself. K w is the product of hydrogen ion concentration and hydroxide ion concentration at a particular temperature. K w = [H + ][OH - ] at constant temperature."
+      "definition": "The thermodynamic autoionization equilibrium constant of pure liquid water, denoted $K_w$, representing the self-ionization reaction $2\\text{H}_2\\text{O}_{(l)} \\rightleftharpoons \\text{H}_3\\text{O}^+_{(aq)} + \\text{OH}^-_{(aq)}$:\n\n$$K_w = [\\text{H}^+][\\text{OH}^-] = [\\text{H}_3\\text{O}^+][\\text{OH}^-]$$\n\nAt $25\\,^\\circ\\text{C}$ ($298.15\\,\\text{K}$), $K_w = 1.008 \\times 10^{-14}\\,\\text{mol}^2\\cdot\\text{dm}^{-6}$, giving:\n\n$$\\text{p}K_w = -\\log_{10} K_w = \\text{pH} + \\text{pOH} = 14.00$$\n\nBecause autoionization is endothermic ($\\Delta H^\\circ > 0$), $K_w$ increases with temperature, reaching $5.47 \\times 10^{-14}$ at $50\\,^\\circ\\text{C}$ (neutral $\\text{pH} \\approx 6.63$)."
     },
     {
       "word": "ionic radius",
@@ -90385,7 +90385,7 @@
       "word": "ionic strength",
       "raw_headword": "IONIC STRENGTH",
       "synonyms": [],
-      "definition": "A measure of the concentration of ions in a solution, which is a function, denoted by I, which expresses the effect of the charge of ions in a solution as the product of sum of the molality (concentration of solution) of each type of ion present (m) and the square of its charge (z). Mathematically, I =∑mz 2 ."
+      "definition": "A measure of the total electrical concentration of ions in an electrolyte solution, introduced by Gilbert N. Lewis and Merle Randall in 1921. Denoted $I$, it is defined as:\n\n$$I = \\frac{1}{2} \\sum_{i=1}^n c_i z_i^2 = \\frac{1}{2} \\sum_{i=1}^n m_i z_i^2$$\n\nwhere $c_i$ (or $m_i$) is the molar (or molal) concentration of ion species $i$, and $z_i$ is its integer ionic valence charge number. Governs mean activity coefficients via the Debye-Hückel limiting law: $\\log_{10} \\gamma_\\pm = -A |z_+ z_-| \\sqrt{I}$."
     },
     {
       "word": "ionisation",
@@ -90937,7 +90937,7 @@
       "word": "isobaric process",
       "raw_headword": "ISOBARIC PROCESS",
       "synonyms": [],
-      "definition": "A thermodynamic process that occurs at constant pressure (ΔP = 0). This is usually obtained by allowing the volume to expand or contract in such a way to neutralise any pressure changes that would be caused by heat transfer."
+      "definition": "In thermodynamics, a reversible or irreversible thermodynamic process in which the pressure of a system remains strictly constant ($\\Delta P = 0$ or $P = \\text{const}$):\n\n$$W = \\int_{V_1}^{V_2} P\\,dV = P(V_2 - V_1) = P\\Delta V$$\n\nBy the First Law of Thermodynamics, heat transferred $Q_p$ equals the change in enthalpy $H$:\n\n$$Q_p = \\Delta U + W = \\Delta H = n C_{p,m} \\Delta T$$\n\nFor an ideal gas undergoing isobaric expansion, Charles's law applies: $\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$."
     },
     {
       "word": "isoc",
@@ -90959,7 +90959,7 @@
       "synonyms": [
         "isovolumetric process"
       ],
-      "definition": "A thermodynamic process that occurs at constant volume (ΔV = 0). Since the volume is constant, the system does no work and W = 0."
+      "definition": "In thermodynamics, a process carried out at constant volume ($\\Delta V = 0$ or $V = \\text{const}$), also termed an isovolumetric process. Because boundary displacement is zero, the mechanical boundary work done by the system is identically zero:\n\n$$W = \\int P\\,dV = 0$$\n\nBy the First Law of Thermodynamics, all heat added to the system converts directly into internal energy $U$:\n\n$$Q_V = \\Delta U = n C_{V,m} \\Delta T$$\n\nFor an ideal gas, pressure varies directly with temperature according to Gay-Lussac's law: $\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$."
     },
     {
       "word": "isochromosome",
@@ -91472,7 +91472,7 @@
       "word": "isothermal process",
       "raw_headword": "ISOTHERMAL PROCESS",
       "synonyms": [],
-      "definition": "Any change that takes place at a constant temperature (ΔT = 0); the change occurs slowly enough to allow the system to continually adjust to the temperature through heat exchange to maintain a constant temperature."
+      "definition": "In thermodynamics, a process occurring at constant thermodynamic temperature ($\\Delta T = 0$ or $T = \\text{const}$). For an ideal gas whose internal energy depends exclusively on temperature, $\\Delta U = 0$, meaning all heat absorbed is converted into work ($Q = W$). The reversible work done during isothermal expansion from volume $V_1$ to $V_2$ is:\n\n$$W = \\int_{V_1}^{V_2} P\\,dV = nRT \\int_{V_1}^{V_2} \\frac{dV}{V} = nRT \\ln\\left(\\frac{V_2}{V_1}\\right) = nRT \\ln\\left(\\frac{P_1}{P_2}\\right)$$\n\nSatisfies Boyle's law: $P_1 V_1 = P_2 V_2$."
     },
     {
       "word": "isotomic conjugate",
