@@ -80090,7 +80090,7 @@
       "word": "helmholtz free energy",
       "raw_headword": "HELMHOLTZ FREE ENERGY",
       "synonyms": [],
-      "definition": "A thermodynamic quantity, which measures the useful work obtainable from a closed thermodynamic system at a constant temperature and volume. It is denoted by A = U-TS , where U is the internal energy, T the thermodynamic temperature and S the entropy. Developed by Hermann von Helmholtz, it represents the maximum work done aside expansion in a reversible isothermal process."
+      "definition": "In thermodynamics, a thermodynamic potential $A$ (or $F$) that measures the maximum reversible work obtainable from a closed thermodynamic system at constant temperature and volume. Named after Hermann von Helmholtz, it is defined by the Legendre transform:\n\n$$A = U - TS$$\n\nwhere $U$ is internal energy, $T$ is absolute temperature, and $S$ is entropy. Its differential fundamental relation is:\n\n$$dA = -S\\,dT - P\\,dV + \\sum_i \\mu_i\\,dN_i$$\n\nFor an isothermal process ($dT = 0$), the maximum non-expansion work satisfies $W_{\\text{max}} = -\\Delta A$. A spontaneous process at constant $T$ and $V$ proceeds in the direction that minimizes Helmholtz free energy ($\\Delta A \\le 0$)."
     },
     {
       "word": "helmholtz, hermann ludwig ferdinard von",
@@ -80293,13 +80293,13 @@
       "word": "henry",
       "raw_headword": "HENRY",
       "synonyms": [],
-      "definition": "The SI unit of inductance, with the symbol H, which is equal to the inductance of a closed circuit with a magnetic flux of 1 weber per ampere of current. It is the reaction of an electric current against the magnetic field that surrounds it. An induced electromotive force of one volt is produced when the current is varied at the rate of one ampere per second. It is expressed as H = VA^-1 s = m2 kg s A^-2 ."
+      "definition": "The SI derived unit of electrical inductance (both self-inductance and mutual inductance), with the symbol $\\text{H}$, named after American scientist Joseph Henry. A circuit has an inductance of $1\\,\\text{H}$ when an electric current changing at the rate of one ampere per second induces an electromotive force (emf) of one volt:\n\n$$\\mathcal{E} = -L \\frac{dI}{dt} \\implies 1\\,\\text{H} = 1\\,\\text{V}\\cdot\\text{s}\\cdot\\text{A}^{-1} = 1\\,\\text{Wb}\\cdot\\text{A}^{-1}$$\n\nIn fundamental SI base units: $1\\,\\text{H} = 1\\,\\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-2}\\cdot\\text{A}^{-2}$."
     },
     {
       "word": "henry's law",
       "raw_headword": "HENRY'S LAW",
       "synonyms": [],
-      "definition": "A law named after William Henry (1774-1836), the English chemist who first reported the relationship, which states that at a constant temperature the mass of gas dissolved in a liquid is proportional to the partial pressure of the gas provided no chemical reaction takes place between the liquid and the gas."
+      "definition": "A gas law formulated by William Henry in 1803 stating that at a constant temperature, the equilibrium mass or concentration $C$ of a dissolved gas in a liquid is directly proportional to the partial pressure $P$ of that gas above the liquid, provided no chemical reaction occurs:\n\n$$C = k_H P \\quad \\text{or} \\quad P = K_H x$$\n\nwhere $k_H$ is Henry's law solubility constant (in $\\text{mol}\\cdot\\text{L}^{-1}\\cdot\\text{atm}^{-1}$), $P$ is gas partial pressure, and $x$ is the mole fraction of dissolved gas. Explains decompression sickness in divers ('the bends') and carbonation in soft drinks."
     },
     {
       "word": "henry, joseph",
@@ -80409,7 +80409,7 @@
       "synonyms": [
         "septagon"
       ],
-      "definition": "A two-dimensional geometric figure formed of seven sides and seven angles. In a regular heptagon, in which all sides and all angles are equal, the sides meet at an angle of 5 π /7 radians (128.5714286 degrees)."
+      "definition": "A two-dimensional polygon having seven straight sides and seven vertices. In a regular heptagon (7-gon), all seven sides have equal length, and each interior angle measures:\n\n$$\\theta = \\frac{(7 - 2)\\pi}{7} = \\frac{5\\pi}{7}\\,\\text{rad} \\approx 128.5714^\\circ$$\n\nThe sum of all interior angles is $(7 - 2) \\times 180^\\circ = 900^\\circ$ ($5\\pi\\,\\text{rad}$). The area of a regular heptagon with side length $a$ is $A = \\frac{7}{4} a^2 \\cot\\left(\\frac{\\pi}{7}\\right) \\approx 3.63391\\,a^2$. By the Gauss-Wantzel theorem, a regular heptagon cannot be constructed using only a compass and straightedge (non-constructible polygon)."
     },
     {
       "word": "heptahydrate",
@@ -80545,7 +80545,7 @@
       "word": "hermite's polynomials",
       "raw_headword": "HERMITE'S POLYNOMIALS",
       "synonyms": [],
-      "definition": "The polynomials H n ( x ), which may be defined by e 2 tx - t 2 = H n ( x ) t n n ! . n = 0 ∞ ∑ The polynomial H n ( x ) is a solution of the differential equation y \" - 2 xy ' + 2 ny = 0 for the integer n . The first six Hermite polynomials are H0 ( x ) ≡ 1, H1 ( x ) ≡ 2 x , H2 ( x ) ≡ 4 x 2 - 2, H3 ( x ) ≡ 8 x 3 - 12 x , H4 ( x ) ≡ 16 x 4 - 48 x 2 + 12 and H5 ( x ) ≡ 32 x 5 - 160 x 3 + 120 x ."
+      "definition": "A classical sequence of orthogonal polynomials $\\{H_n(x)\\}_{n=0}^\\infty$ named after Charles Hermite. In physics, they arise in the wavefunctions of the quantum harmonic oscillator and are generated by the exponential generating function:\n\n$$e^{2tx - t^2} = \\sum_{n=0}^\\infty H_n(x) \\frac{t^n}{n!}$$\n\nEach $H_n(x)$ satisfies Hermite's second-order differential equation:\n\n$$y'' - 2xy' + 2ny = 0$$\n\nand the Rodrigues formula $H_n(x) = (-1)^n e^{x^2} \\frac{d^n}{dx^n}(e^{-x^2})$. The first several polynomials are: $H_0(x) = 1$, $H_1(x) = 2x$, $H_2(x) = 4x^2 - 2$, $H_3(x) = 8x^3 - 12x$, and $H_4(x) = 16x^4 - 48x^2 + 12$. They are mutually orthogonal with respect to the Gaussian weight $w(x) = e^{-x^2}$: $\\int_{-\\infty}^\\infty H_m(x)H_n(x)e^{-x^2}\\,dx = \\sqrt{\\pi}\\,2^n n!\\,\\delta_{mn}$."
     },
     {
       "word": "hermite, charles",
@@ -80606,7 +80606,7 @@
       "synonyms": [
         "hero's formula"
       ],
-      "definition": "An important formula in plane geometry that allows the area of any triangle to be calculated without knowing the altitude (perpendicular height) of any of its sides. Let a , b and c be the side lengths of a triangle and A its area, it is expressed as where s = ."
+      "definition": "An ancient geometric formula attributed to Heron of Alexandria (c. 60 CE) that calculates the area $A$ of any triangle directly from the lengths of its three sides $a, b, c$, without requiring an altitude or trigonometric angles:\n\n$$A = \\sqrt{s(s - a)(s - b)(s - c)}$$\n\nwhere $s$ is the semi-perimeter of the triangle:\n\n$$s = \\frac{a + b + c}{2}$$\n\nEquivalently written without the semi-perimeter as $A = \\frac{1}{4}\\sqrt{(a+b+c)(-a+b+c)(a-b+c)(a+b-c)}$."
     },
     {
       "word": "heron's method",
@@ -80658,7 +80658,7 @@
       "word": "hertz",
       "raw_headword": "HERTZ",
       "synonyms": [],
-      "definition": "SI unit of frequency, which is equal to one cycle per second, Hz = s^-1 . Its symbol is Hz. It is often combined with metric prefixes to denote multiple units such as the kilohertz (1,000 Hz), megahertz (1,000,000 Hz) and gigahertz (1,000,000,000 Hz)."
+      "definition": "The SI derived unit of frequency, with the symbol $\\text{Hz}$, named in honour of German physicist Heinrich Hertz. Defined as one complete periodic cycle of an oscillation or wave event per second:\n\n$$1\\,\\text{Hz} = 1\\,\\text{s}^{-1}$$\n\nThe frequency $f$ in hertz is inversely related to wave period $T$ and related to wavelength $\\lambda$ and phase speed $v$ by:\n\n$$f = \\frac{1}{T} = \\frac{v}{\\lambda}$$\n\nStandard metric prefixes include kilohertz ($1\\,\\text{kHz} = 10^3\\,\\text{Hz}$), megahertz ($1\\,\\text{MHz} = 10^6\\,\\text{Hz}$), and gigahertz ($1\\,\\text{GHz} = 10^9\\,\\text{Hz}$)."
     },
     {
       "word": "hertz, heinrich rudolph",
@@ -80686,7 +80686,7 @@
       "synonyms": [
         "the law of constant heat summation"
       ],
-      "definition": "It states that the total energy change resulting from a chemical reaction is dependent only on the initial and final states and is independent of the reaction route."
+      "definition": "A fundamental law of thermochemistry established by Germain Hess in 1840, direct consequence of the first law of thermodynamics and the state function nature of enthalpy $H$. It states that the standard enthalpy change $\\Delta H^\\circ$ for a chemical reaction is independent of the reaction pathway or intermediate stages taken from reactants to products:\n\n$$\\Delta H^\\circ_{\\text{reaction}} = \\sum \\Delta H^\\circ_{\\text{steps}}$$\n\nUsing standard molar enthalpies of formation $\\Delta H^\\circ_f$:\n\n$$\\Delta H^\\circ_{\\text{rxn}} = \\sum \\nu_p \\Delta H^\\circ_f(\\text{products}) - \\sum \\nu_r \\Delta H^\\circ_f(\\text{reactants})$$\n\nwhere $\\nu$ are stoichiometric coefficients. Allows calculation of reaction enthalpies that cannot be measured directly in calorimetry."
     },
     {
       "word": "hessenberg matrix",
@@ -80702,7 +80702,7 @@
       "synonyms": [
         "hessian matrix"
       ],
-      "definition": "The Hessian matrix of a multivariate function is the second partial derivatives of a given function. For example, the Hessian of f ( x , y ) = x 2 - y 2 is given by: - 2 ⎡ ⎣ ⎢⎢⎢ ⎤ ⎦ ⎥⎥⎥ ."
+      "definition": "In multivariable calculus and optimization, the square matrix $\\mathbf{H}(f)$ of second-order partial derivatives of a twice-differentiable scalar-valued function $f(x_1, x_2, \\dots, x_n)$:\n\n$$\\mathbf{H}(f) = \\begin{bmatrix} \\frac{\\partial^2 f}{\\partial x_1^2} & \\frac{\\partial^2 f}{\\partial x_1 \\partial x_2} & \\dots & \\frac{\\partial^2 f}{\\partial x_1 \\partial x_n} \\\\[6pt] \\frac{\\partial^2 f}{\\partial x_2 \\partial x_1} & \\frac{\\partial^2 f}{\\partial x_2^2} & \\dots & \\frac{\\partial^2 f}{\\partial x_2 \\partial x_n} \\\\[6pt] \\vdots & \\vdots & \\ddots & \\vdots \\\\[6pt] \\frac{\\partial^2 f}{\\partial x_n \\partial x_1} & \\frac{\\partial^2 f}{\\partial x_n \\partial x_2} & \\dots & \\frac{\\partial^2 f}{\\partial x_n^2} \\end{bmatrix}$$\n\nBy Schwarz's theorem (Clairaut's theorem), $\\mathbf{H}$ is symmetric for $C^2$ functions. For example, for $f(x, y) = x^2 - y^2$, the Hessian is $\\mathbf{H} = \\begin{bmatrix} 2 & 0 \\\\ 0 & -2 \\end{bmatrix}$. At a critical point ($\\nabla f = \\mathbf{0}$), a positive definite Hessian indicates a local minimum, negative definite indicates a local maximum, and indefinite indicates a saddle point."
     },
     {
       "word": "hetero atom",
@@ -80885,7 +80885,7 @@
       "synonyms": [
         "heterolytic cleavage"
       ],
-      "definition": "The breaking of covalent bond made of two electrons to give two fragments, with one fragment retaining both electrons. An example H is HCl → H + + Cl - . The fragments produced include an electrophile and a nucleophile."
+      "definition": "In chemical reaction mechanisms, the unsymmetrical cleavage of a two-electron covalent bond in which both bonding electrons are retained by one of the departing fragments, producing an ion pair (a cation and an anion):\n\n$$\\text{A}\\text{---}\\text{B} \\longrightarrow \\text{A}^+ + \\text{:B}^-$$\n\nFor example, the ionization of hydrogen chloride in water: $\\text{HCl} \\to \\text{H}^+ + \\text{Cl}^-$. The species receiving the electron pair acts as a nucleophile or Lewis base, while the electron-deficient species acts as an electrophile or carbocation intermediate. Typically favored in polar solvents."
     },
     {
       "word": "heteromerous",
@@ -81121,7 +81121,7 @@
       "word": "hexagon",
       "raw_headword": "HEXAGON",
       "synonyms": [],
-      "definition": "A two-dimensional geometric figure formed by six sides. In a regular hexagon, all sides have equal length and all the six interior angles are equal, 120 o each with an exterior angle of 60 o each. A hexagonal number is a number of the form n (2 n^-1). Hexagonal Prism."
+      "definition": "A two-dimensional polygon with six vertices and six straight edges. In a regular hexagon, each interior angle measures:\n\n$$\\theta = \\frac{(6 - 2)\\pi}{6} = \\frac{2\\pi}{3}\\,\\text{rad} = 120^\\circ$$\n\nwith each exterior angle measuring $60^\\circ$ ($\\frac{\\pi}{3}\\,\\text{rad}$). The total interior angle sum is $(6 - 2) \\times 180^\\circ = 720^\\circ$. The area of a regular hexagon with side length $a$ is composed of six equilateral triangles:\n\n$$A = \\frac{3\\sqrt{3}}{2} a^2 \\approx 2.598076\\,a^2$$\n\nA hexagonal number is a figurate number given by $H_n = n(2n - 1) = 2n^2 - n$."
     },
     {
       "word": "hexagonal prism",
@@ -81606,7 +81606,7 @@
       "word": "hilbert matrix",
       "raw_headword": "HILBERT MATRIX",
       "synonyms": [],
-      "definition": "An n × n matrix whose entries are unit fractions. Its (i,j) th entry is given as H ij = $$\\frac{1}{i + j^-1}$$ . For example, the unit fractions of a 3 × 3 Hilbert matrix is H = ⎡ ⎣ ⎢⎢⎢⎢⎢⎢⎢⎢⎢⎢⎢ ⎤ ⎦ ⎥⎥⎥⎥⎥⎥⎥⎥⎥⎥⎥ ."
+      "definition": "An $n \\times n$ symmetric square matrix $\\mathbf{H}$ whose entries are unit fractions with unit numerators, introduced by David Hilbert in 1894. The $(i, j)$-th entry is given by:\n\n$$H_{ij} = \\frac{1}{i + j - 1} \\quad (1 \\le i, j \\le n)$$\n\nFor example, the $3 \\times 3$ Hilbert matrix is:\n\n$$\\mathbf{H}_3 = \\begin{bmatrix} 1 & \\frac{1}{2} & \\frac{1}{3} \\\\[4pt] \\frac{1}{2} & \\frac{1}{3} & \\frac{1}{4} \\\\[4pt] \\frac{1}{3} & \\frac{1}{4} & \\frac{1}{5} \\end{bmatrix}$$\n\nThe Hilbert matrix is notoriously ill-conditioned; its condition number $\\kappa(\\mathbf{H}_n)$ grows exponentially as $\\mathcal{O}((1+\\sqrt{2})^{4n}/\\sqrt{n})$, making it a standard benchmark for evaluating numerical linear algebra inversion and rounding-error stability."
     },
     {
       "word": "hilbert space",
@@ -82464,7 +82464,7 @@
       "word": "hooke's law",
       "raw_headword": "HOOKE'S LAW",
       "synonyms": [],
-      "definition": "A scientific law, named after the 17th century British physicist Robert Hooke, which states that when an elastic substance like rubber or spring is stretched or squashed the deformation produced is proportional to the applied force, provided the elastic limit is not exceeded. In other words, the stress applied to any solid is proportional to the strain it produces within the elastic limit for that solid or more simply, the load applied to an elastic material is proportional to the extension, provided the elastic limit is not exceeded. Mathematically, it is expressed as: F = ke , where F is the force, e is the extension in the elastic material, and k is the proportionality constant known as spring constant with unit Nm^-1 ."
+      "definition": "A law of elasticity discovered by English polymath Robert Hooke in 1660 (*ceiiinosssttuv* / *ut tensio, sic vis*). It states that the restoring force $F$ exerted by an elastic body (such as a spring) is linearly proportional to its displacement or extension $x$ from equilibrium within the elastic limit:\n\n$$F = -k x$$\n\nwhere $k$ is the spring constant (stiffness) in $\\text{N}\\cdot\\text{m}^{-1}$ and the negative sign indicates that force opposes displacement. The elastic potential energy stored in the stretched spring is $U = \\frac{1}{2}kx^2$. In continuous mechanics, the generalized Hooke's law states that stress tensor $\\boldsymbol{\\sigma}$ is proportional to strain tensor $\\boldsymbol{\\varepsilon}$:\n\n$$\\sigma_{ij} = C_{ijkl} \\varepsilon_{kl} \\quad \\text{or in 1D: } \\sigma = E\\varepsilon$$\n\nwhere $E$ is Young's modulus."
     },
     {
       "word": "hooke, robert",
@@ -82959,7 +82959,7 @@
       "word": "hubble's law",
       "raw_headword": "HUBBLE'S LAW",
       "synonyms": [],
-      "definition": "The name for the astronomical observation in physical cosmology first made by American astronomer, Edwin Hubble. It is an empirical law in astronomy stating that the distances between galaxies or clusters of galaxies are continuously increasing and therefore, the universe is expanding. It is a statement of a direct correlation between the distance to a galaxy and its recessional velocity as determined by the red shift. It is usually expressed in the form v = Hd , where v is the recessional velocity recessional velocity as determined by the red shift, d the distance and H is the Hubble's constant."
+      "definition": "An empirical law of observational cosmology discovered by Edwin Hubble in 1929. It demonstrates that galaxies outside the Local Group recede from Earth with recessional velocities $v$ directly proportional to their proper distance $d$:\n\n$$v = H_0 d$$\n\nwhere $H_0$ is the Hubble constant, measuring the present-day expansion rate of the universe:\n\n$$H_0 \\approx 67\\text{--}73\\,\\text{km}\\cdot\\text{s}^{-1}\\cdot\\text{Mpc}^{-1}$$\n\nRecessional velocity is determined from spectral cosmological redshift $z = \\frac{\\lambda_{\\text{obs}} - \\lambda_{\\text{rest}}}{\\lambda_{\\text{rest}}} \\approx \\frac{v}{c}$ for $v \\ll c$. The inverse of the Hubble constant defines the approximate Hubble age of the universe: $t_H = \\frac{1}{H_0} \\approx 13.8\\,\\text{billion years}$."
     },
     {
       "word": "hubble, edwin powell",
@@ -82979,7 +82979,7 @@
       "word": "huckel rule",
       "raw_headword": "HUCKEL RULE",
       "synonyms": [],
-      "definition": "The set of rules that estimates whether a planar ring molecule will have aromatic properties. Its formulation was first worked out by physical chemist, Erich Hückel in 1931. It says that an aromatic compound should contain 4n + 2 pi-electrons in cyclic planar arrangement, where n is any positive integer including zero. To determine whether a compound is aromatic, the number of cyclic planar pi-electrons are counted and equated to 4n + 2 to find n. If n is an integer, then the compound is aromatic."
+      "definition": "In physical organic chemistry, an aromaticity criterion formulated by Erich Hückel in 1931 based on molecular orbital theory. It states that a monocyclic, planar, fully conjugated ring system possesses special thermodynamic stability and aromatic character if and only if its cyclic $\\pi$-electron network contains $(4n + 2)$ electrons, where $n$ is a non-negative integer ($n = 0, 1, 2, 3, \\dots$):\n\n$$\\text{Number of } \\pi\\text{-electrons} = 4n + 2$$\n\n* $n = 0$: $2\\pi$ electrons (e.g., cyclopropenyl cation $\\text{C}_3\\text{H}_3^+$)\n* $n = 1$: $6\\pi$ electrons (e.g., benzene $\\text{C}_6\\text{H}_6$, cyclopentadienyl anion $\\text{C}_5\\text{H}_5^-$, pyridine $\\text{C}_5\\text{H}_5\\text{N}$)\n* $n = 2$: $10\\pi$ electrons (e.g., naphthalene $\\text{C}_{10}\\text{H}_8$)\n\nMonocyclic planar systems with $4n$ $\\pi$-electrons (such as cyclobutadiene, $4\\pi$) are antiaromatic and energetically destabilized."
     },
     {
       "word": "hue",
@@ -83183,7 +83183,7 @@
       "word": "humphreys series",
       "raw_headword": "HUMPHREYS SERIES",
       "synonyms": [],
-      "definition": "A series of lines in the infrared spectrum of atomic hydrogen with wave numbers given by R H (1/36) -(1/ n 2 ), where RHis the Rydberg constant for hydrogen and n is any number greater than 6 ."
+      "definition": "A spectral line emission series in the far-infrared spectrum of atomic hydrogen, discovered by Curtis J. Humphreys in 1953. It arises from electronic transitions from outer energy levels ($n > 6$) down to the sixth principal quantum level ($n_1 = 6$):\n\n$$\\tilde{\\nu} = \\frac{1}{\\lambda} = R_H \\left( \\frac{1}{6^2} - \\frac{1}{n^2} \\right) = R_H \\left( \\frac{1}{36} - \\frac{1}{n^2} \\right) \\quad \\text{for } n = 7, 8, 9, \\dots$$\n\nwhere $R_H \\approx 1.097373 \\times 10^7\\,\\text{m}^{-1}$ is the Rydberg constant for hydrogen. The longest-wavelength line ($n = 7 \\to 6$) occurs at $\\lambda \\approx 12.37\\,\\mu\\text{m}$."
     },
     {
       "word": "humus",
@@ -83432,7 +83432,7 @@
       "word": "hydraulic press",
       "raw_headword": "HYDRAULIC PRESS",
       "synonyms": [],
-      "definition": "A device in which a force applied to a small piston creates a pressure which is transmitted through an incompressible fluid to a larger piston where it gives rise to a larger force. It was invented by the British engineer, Joseph Bramah, for which he was granted a patent in 1795. A hydraulic press is used for almost all industrial purposes. It is used for transforming metallic objects into sheets of metal; to shape, extrude or stamp metals and to test materials under high pressures. It is also used for the thinning of glass, making powders in the cosmetic industry and for forming the tablets for medical use. As illustrated in the previous diagram, the system comprises of two cylinders, the compressible fluid (usually oil) in the cylinder having a small diameter., known as the slave cylinder . The piston in this cylinder is pushed so that it compresses the fluid in it that flows through a pipe into the larger cylinder, known as the master cylinder . The pressure is exerted on the larger cylinder and the piston in the master cylinder pushes the fluid back to the original cylinder. The force F1 applied on the fluids by the smaller cylinder results in a larger force F2 when pushed in the master cylinder, expressed as F2 = F1(A2 ∕ A1), where A1 and A2 are the cylinder areas of the slave and master cylinders respectively."
+      "definition": "An industrial machine that utilizes Pascal's principle of fluid statics to multiply applied mechanical force using an incompressible fluid. Invented by Joseph Bramah in 1795. When an input force $F_1$ is applied to a small input piston of cross-sectional area $A_1$, hydrostatic pressure $P = \\frac{F_1}{A_1}$ is transmitted undiminished throughout the fluid, producing an enlarged output force $F_2$ on a larger piston of area $A_2$:\n\n$$P = \\frac{F_1}{A_1} = \\frac{F_2}{A_2} \\implies F_2 = F_1 \\left( \\frac{A_2}{A_1} \\right)$$\n\nThe ideal mechanical advantage is $\\text{IMA} = \\frac{A_2}{A_1} = \\left(\\frac{d_2}{d_1}\\right)^2$. By conservation of energy, piston displacements satisfy $F_1 d_1 = F_2 d_2$, so mechanical work is conserved."
     },
     {
       "word": "hydraulic radius",
