@@ -85098,13 +85098,13 @@
       "word": "ideal gas",
       "raw_headword": "IDEAL GAS",
       "synonyms": [],
-      "definition": "A hypothetical gas that obeys the gas laws ( $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$PV = nRT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ) perfectly at all temperatures and pressures."
+      "definition": "A theoretical gas composed of randomly moving point particles that interact solely through perfectly elastic collisions, obeying the ideal gas equation of state at all temperatures and pressures:\n\n$$PV = nRT = N k_B T$$\n\nwhere $P$ is pressure, $V$ is volume, $n$ is amount of substance in moles, $R = 8.314462618\\,\\text{J}\\cdot\\text{mol}^{-1}\\cdot\\text{K}^{-1}$ is the universal gas constant, $T$ is absolute thermodynamic temperature, $N$ is the number of particles, and $k_B = 1.380649 \\times 10^{-23}\\,\\text{J/K}$ is the Boltzmann constant. Real gases approach ideal behavior at low pressures and high temperatures."
     },
     {
       "word": "ideal gas law",
       "raw_headword": "IDEAL GAS LAW",
       "synonyms": [],
-      "definition": "A law relating the pressure ( P ), absolute temperature ( T ) and volume ( V ) of an ideal gas. Mathematically, the ideal gas law can be written as: pV = nRT , where n is the number of moles of the gas and R is the gas constant. The ideal gas law implies that at constant temperature ( T ), the product of pressure and volume ( pV ) is constant (Boyle's law) and at a constant pressure, the volume is proportional to the temperature (Charles' law)."
+      "definition": "The fundamental equation of state of a hypothetical ideal gas, combining Boyle's law ($PV = \\text{const}$), Charles's law ($V/T = \\text{const}$), and Avogadro's law ($V/n = \\text{const}$):\n\n$$PV = nRT$$\n\nExpressed in terms of mass density $\\rho = \\frac{m}{V}$ and molar mass $M$ as $P = \\frac{\\rho RT}{M}$. The law implies that internal energy $U$ depends strictly on temperature ($U = c_V n T$) and provides the baseline for non-ideal real gas models such as the van der Waals equation."
     },
     {
       "word": "ideal point",
@@ -85130,7 +85130,7 @@
       "word": "idempotent",
       "raw_headword": "IDEMPOTENT",
       "synonyms": [],
-      "definition": "1. Of a matrix, function or ring element, having the property that it is equal to its own square; the square of a symmetric matrix gives the same matrix. For example, if A = A2 in matrix A , it is idempotent. An example is the unit matrix, given as follows: and also^-2 - 2 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟= - 2 - 2 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ - 2 - 2 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟ . 2. Of an operation, having the property that every element of its domain is idempotent with respect to it; for example, set-theoretic intersection and union are idempotent, since S ∪ S = S = S ∩ S. A ring of which every member is idempotent is called a Boolean ring."
+      "definition": "1. In linear algebra and ring theory, an element or matrix $\\mathbf{A}$ that equals its own square under multiplication:\n\n$$\\mathbf{A}^2 = \\mathbf{A}$$\n\nEvery idempotent matrix represents an oblique or orthogonal projection onto its column space $\\text{col}(\\mathbf{A})$, and its eigenvalues are restricted strictly to $0$ and $1$ ($\\lambda \\in \\{0, 1\\}$). 2. In abstract algebra, an operation $*$ is idempotent if $x * x = x$ for all elements $x$. For example, set union and intersection are idempotent: $S \\cup S = S$ and $S \\cap S = S$. A ring in which every element is idempotent ($x^2 = x$) is a Boolean ring."
     },
     {
       "word": "identical",
@@ -85144,7 +85144,7 @@
       "synonyms": [
         "identity"
       ],
-      "definition": "An equation indicating the equality of two expressions for all values of any variables that occur. In other words, a universally true equation that is not to be solved for the value of its variables that makes it true, but that is true for all values of its variables. Examples are ( x 2 - a 2 ) = ( x + a )( x - a ), ( x 2 + 6 x^-2 = ax 2 + bc - c ) and the trigonometric identity sin 2 θ + cos 2 θ = 1."
+      "definition": "An algebraic equality (identity) that holds true for every permissible numerical value assigned to its variables, distinguished from a conditional equation which holds only for specific solution roots. Frequently denoted with the identity sign $\\equiv$:\n\n$$(x^2 - a^2) \\equiv (x - a)(x + a), \\qquad (x + y)^2 \\equiv x^2 + 2xy + y^2$$\n\nProminent trigonometric examples include the Pythagorean identity $\\sin^2 \\theta + \\cos^2 \\theta \\equiv 1$ and Euler's formula $e^{i\\theta} \\equiv \\cos \\theta + i\\sin \\theta$."
     },
     {
       "word": "identical proposition",
@@ -85176,7 +85176,7 @@
       "word": "identity",
       "raw_headword": "IDENTITY",
       "synonyms": [],
-      "definition": "1. Also known as identical equation , an equation indicating the equality of two expressions for all values of any variables that occur. In other words, a universally true equation that is not to be solved for the value of its variables that makes it true, but that is true for all values of its variables. Examples are ( x 2 - a 2 ) ≡ ( x + a )( x - a ) and ( x 2 + 6 x^-2 ≡ ax 2 + bx - c ). Another example is the trigonometric identity sin 2 θ + cos 2 θ = 1. 2. Also known as numerical identity , the property or fact of being the same individual. An example is the identity of a 1/2 and √ a . 3. Also known as qualitative identity , the property of being exactly alike or the relation that holds between such entities. For example, the identity of congruent triangles can be shown by superimposition. 4. In logic, also known as numerical identity , it is the relation that trivially holds between every entity and itself. It is formally defined as the set of ordered pairs ( x , x ) for all x in the underlying domain. 5. In logic, an assertion that the relation of identity holds, such as ' e x is exp x '; any statement of which the operator of widest scope is '='."
+      "definition": "1. In mathematics, an equality relation $A \\equiv B$ valid for all possible values of the variables involved, such as the trigonometric identity:\n\n$$\\sin^2 \\theta + \\cos^2 \\theta = 1$$\n\n2. In algebra, an identity element $e$ of an algebraic structure $(G, *)$ satisfying $a * e = e * a = a$ for all $a \\in G$. 3. In logic and philosophy, the binary reflexive relation of numerical identity $\\forall x, \\, x = x$, formalizing that an object is identical strictly to itself."
     },
     {
       "word": "identity element",
@@ -85185,19 +85185,19 @@
         "identity",
         "neutral element"
       ],
-      "definition": "For a set endowed with a binary operation, a member of the set such that the result of applying the operation to that element and any member of the set is equal to the latter member. A multiplicative identity is a unity; an additive identity is often called a zero. For example, the identity for multiplication in ordinary arithmetic is 1, since x × 1 = 1 × x = x , and identity for addition in ordinary arithmetic is 0 since 0 + x = x + 0 = x ."
+      "definition": "For a set $S$ equipped with a binary operation $*: S \\times S \\to S$, a distinguished neutral element $e \\in S$ such that for every $x \\in S$:\n\n$$x * e = e * x = x$$\n\nIn an additive group or ring $(R, +)$, the identity element is the additive zero ($0$), where $x + 0 = 0 + x = x$. In a multiplicative monoid, group, or field $(F, \\cdot)$, the identity element is unity ($1$), where $x \\times 1 = 1 \\times x = x$. In any group, the identity element is unique."
     },
     {
       "word": "identity function",
       "raw_headword": "IDENTITY FUNCTION",
       "synonyms": [],
-      "definition": "A function is said to be identity, when it maps every element to itself, for example, f ( a ) = a for every a ."
+      "definition": "A mathematical function $\\text{id}_X: X \\to X$ that maps every element of its domain set $X$ to itself:\n\n$$\\text{id}_X(x) = x \\quad \\forall x \\in X$$\n\nIn function composition, $\\text{id}_X$ acts as the neutral two-sided identity: for any function $f: X \\to Y$, $f \\circ \\text{id}_X = f$ and $\\text{id}_Y \\circ f = f$. On real numbers $\\mathbb{R}$, its Cartesian graph is the $45^\\circ$ bisector line $y = x$ passing through the origin."
     },
     {
       "word": "identity matrix",
       "raw_headword": "IDENTITY MATRIX",
       "synonyms": [],
-      "definition": "The m x m identity matrix I or I m is the m x m matrix, which is given by: I m = . Each entry on the leading diagonal is 1 and all other entries are 0. Consider the m x m matrix A , A . I = I . A = A , if A^-1 is the inverse matrix of A , then A^-1 A = A^-1 A = I ."
+      "definition": "The $n \\times n$ square diagonal matrix $\\mathbf{I}_n$ whose main diagonal entries are all $1$ and all off-diagonal entries are $0$, defined via the Kronecker delta as $(\\mathbf{I}_n)_{ij} = \\delta_{ij}$:\n\n$$\\mathbf{I}_n = \\begin{bmatrix} 1 & 0 & 0 & \\dots & 0 \\\\[4pt] 0 & 1 & 0 & \\dots & 0 \\\\[4pt] 0 & 0 & 1 & \\dots & 0 \\\\[4pt] \\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\[4pt] 0 & 0 & 0 & \\dots & 1 \\end{bmatrix}$$\n\nIt serves as the multiplicative identity in matrix algebra: for any compatible matrix $\\mathbf{A}$, $\\mathbf{A}\\mathbf{I} = \\mathbf{I}\\mathbf{A} = \\mathbf{A}$. For an invertible matrix $\\mathbf{A}$, $\\mathbf{A}\\mathbf{A}^{-1} = \\mathbf{A}^{-1}\\mathbf{A} = \\mathbf{I}$."
     },
     {
       "word": "identity preserved",
@@ -85211,13 +85211,13 @@
       "word": "identity property of addition",
       "raw_headword": "IDENTITY PROPERTY OF ADDITION",
       "synonyms": [],
-      "definition": "It states that the sum of any number, n and zero equals the original number: n + 0 = n ."
+      "definition": "A foundational axiom of arithmetic and ring theory stating that the sum of any real or complex number $n$ and zero is equal to $n$:\n\n$$n + 0 = 0 + n = n$$\n\nZero is the unique additive identity element in $\\mathbb{Z}, \\mathbb{Q}, \\mathbb{R}$, and $\\mathbb{C}$."
     },
     {
       "word": "identity property of multiplication",
       "raw_headword": "IDENTITY PROPERTY OF MULTIPLICATION",
       "synonyms": [],
-      "definition": "It states that the product of any number, n and one equals the original number: n × 1 = n ."
+      "definition": "A foundational axiom of arithmetic and field theory asserting that the product of any real or complex number $n$ and the number one is equal to $n$:\n\n$$n \\times 1 = 1 \\times n = n$$\n\nOne ($1$) is the unique multiplicative identity element in $\\mathbb{Z}, \\mathbb{Q}, \\mathbb{R}$, and $\\mathbb{C}$."
     },
     {
       "word": "identity reaction",
@@ -85233,7 +85233,7 @@
       "synonyms": [
         "uniqueness theorem"
       ],
-      "definition": "The theorem asserting that if f and g are complex functions analytic on a region G and f ( x ) = g ( x ) for all z in any set containing a cluster point in G, then f ( x ) = g ( x ) for all z in G."
+      "definition": "In complex analysis, a rigidity theorem stating that if two holomorphic (analytic) functions $f$ and $g$ defined on a connected open region $\\Omega \\subseteq \\mathbb{C}$ agree on a subset $S \\subset \\Omega$ that has an accumulation point (limit point) in $\\Omega$:\n\n$$f(z) = g(z) \\; \\forall z \\in S, \\; z_0 \\in S' \\cap \\Omega \\implies f(z) = g(z) \\; \\forall z \\in \\Omega$$\n\nA direct consequence is that the zeros of a non-constant holomorphic function are strictly isolated, and analytic continuation from any arc or cluster is unique."
     },
     {
       "word": "idioblast",
@@ -85331,7 +85331,7 @@
       "word": "imaginary number",
       "raw_headword": "IMAGINARY NUMBER",
       "synonyms": [],
-      "definition": "A number that is a multiple of √-1, which is denoted by i . An example is √-3 = 3 i . The square of an imaginary number is less than or equal to zero."
+      "definition": "A complex number whose square is a non-positive real number, expressed in standard form as $z = bi$ where $b \\in \\mathbb{R}$ ($b \\neq 0$) and $i$ is the imaginary unit satisfying:\n\n$$i = \\sqrt{-1}, \\quad i^2 = -1$$\n\nFor example, $\\sqrt{-9} = 3i$ and $\\sqrt{-3} = i\\sqrt{3}$. On the complex plane (Argand diagram), pure imaginary numbers lie exclusively along the vertical imaginary axis."
     },
     {
       "word": "imaginary part",
@@ -85765,19 +85765,19 @@
       "word": "implicit",
       "raw_headword": "IMPLICIT",
       "synonyms": [],
-      "definition": "Of a function, not expressing the value of the dependent variable directly (explicitly) as a function of the independent variable, but rather stating a relationship that the variables must jointly satisfy. It is of the form F ( x , y ) = 0, F ( x , y , z ) = 0, etc. For example, y 2 + xy + x 2 = 0 cannot be universally expressed in the form y = f ( x )."
+      "definition": "In calculus, a relation between independent variable(s) $x$ and dependent variable $y$ defined by an equation of the form:\n\n$$F(x, y) = 0$$\n\nin which $y$ is not explicitly isolated as $y = f(x)$. For example, the equation of the unit circle $x^2 + y^2 - 1 = 0$ or the folium of Descartes $x^3 + y^3 - 3axy = 0$ define $y$ implicitly as functions of $x$."
     },
     {
       "word": "implicit differentiation",
       "raw_headword": "IMPLICIT DIFFERENTIATION",
       "synonyms": [],
-      "definition": "A method for finding derivatives if the relationship between two variables is not expressed as an explicit function. For example, given F ( x , y ) = 0 with two real variables, the chain rule applied to F ( x , g ( x )) = 0 gives F x + F y g '( x ) = 0 and hence g '( x ) must be F x / F y . An example is given as follows: in differentiating3 x 2 + 2 y 2 = xy , applying the chain rule, d dx 3 x 2 + 2 y 2 ( ) = d dx ( xy ) I3 d dx x 2 ( ) + 2 d dx y 2 ( ) = xd ( y ) dx + y d dx ( x ) 6 x + 4 y dy dx = x dy dx + y dy dx (4 y - x ) = y^-6 x ∴ dy dx = y^-6 x 4 y - x ."
+      "definition": "A differentiation technique applied to calculate the derivative $\\frac{dy}{dx}$ of an implicitly defined curve $F(x, y) = 0$ using the chain rule without first explicitly solving for $y$ in terms of $x$:\n\n$$\\frac{d}{dx}[F(x, y)] = \\frac{\\partial F}{\\partial x} + \\frac{\\partial F}{\\partial y}\\frac{dy}{dx} = 0 \\implies \\frac{dy}{dx} = -\\frac{F_x}{F_y} \\quad (F_y \\neq 0)$$\n\nFor example, differentiating $x^2 + y^2 = r^2$ with respect to $x$ gives $2x + 2y\\frac{dy}{dx} = 0 \\implies \\frac{dy}{dx} = -\\frac{x}{y}$."
     },
     {
       "word": "implicit function theorem",
       "raw_headword": "IMPLICIT FUNCTION THEOREM",
       "synonyms": [],
-      "definition": "A theorem that gives conditions under which an explicit equation equivalent to a given explicit function exists locally. For example, suppose F( x , y ) = 0 represents equations in m + n unknowns and has a solution a ( n variables) and b ( m variables), a unique function y = g ( x ) may be found near a and b with b = g ( a ), whenever F is continuously differentiable and the matrix of partial derivatives with respect to variables is full rank, then F( x , g ( x )) = 0 and implicit differentiation allows the computation of the partial derivatives g at a ."
+      "definition": "A central theorem in multivariable differential calculus stating that for a continuously differentiable function $\\mathbf{F}: \\mathbb{R}^{n+m} \\to \\mathbb{R}^m$ satisfying $\\mathbf{F}(\\mathbf{a}, \\mathbf{b}) = \\mathbf{0}$, if the Jacobian determinant with respect to $\\mathbf{y}$ is non-zero at $(\\mathbf{a}, \\mathbf{b})$:\n\n$$\\det\\left( \\frac{\\partial \\mathbf{F}}{\\partial \\mathbf{y}}(\\mathbf{a}, \\mathbf{b}) \\right) \\neq 0$$\n\nthen there exists an open neighborhood $U$ of $\\mathbf{a}$ and a unique $C^1$ function $\\mathbf{g}: U \\to \\mathbb{R}^m$ such that $\\mathbf{b} = \\mathbf{g}(\\mathbf{a})$ and $\\mathbf{F}(\\mathbf{x}, \\mathbf{g}(\\mathbf{x})) = \\mathbf{0}$ for all $\\mathbf{x} \\in U$. The Jacobian matrix of $\\mathbf{g}$ is given by $\\mathbf{J}_{\\mathbf{g}}(\\mathbf{x}) = -\\left[\\frac{\\partial \\mathbf{F}}{\\partial \\mathbf{y}}(\\mathbf{x}, \\mathbf{g}(\\mathbf{x}))\\right]^{-1} \\left[\\frac{\\partial \\mathbf{F}}{\\partial \\mathbf{x}}(\\mathbf{x}, \\mathbf{g}(\\mathbf{x}))\\right]$."
     },
     {
       "word": "implosion",
