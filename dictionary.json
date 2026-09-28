@@ -103596,7 +103596,9 @@
       "word": "markov chain",
       "raw_headword": "MARKOV CHAIN",
       "synonyms": [],
-      "definition": "A stochastic process { X t }, t = 0, 1, 2, ..., where X t takes values in the finite set S = {1, 2, 3, ..., N } and is such that P ( X n = i n | X0 = i 0 , ..., X n^-1 ) = P ( X n = i n | X n^-1 = i n^-1 ). The equation given implies that to make predictions about the future behaviour of the system it suffices to consider only its present state and not its past. The probability P ( X n = i n | X n^-1 = i n^-1 ) is known as a one step transition probability. The more general transition probability, P ( X n = i | X m = j ) satisfies the famous Chapman Kolmogorov equation b y P ( X n = i | X m = j ) = kP ( X r ) = kX m = jPX n = iX r = k m < r < n . Time homogeneous Markov chain is one for which the transition M probabilities depend only on the difference n - m rather than on n or m . In particular, the one-step transition probability, P ( X i = i | X n^-1 = j) can be written simply as P ij . The N x N matrix, P , with ij th element P ij is a stochastic matrix, i.e., 0 ≤ P ij ≤ 1, 1 ≤ i , j ≤ N . 𝑗 =1 𝑁𝑃𝑖𝑗 = 1, 1 ≤ i ≤ N . P is known as transition matrix. The ij element of P n gives the n -step transition probability if the limit n → ∞ is constitutes the stationary distribution of the chain."
+      "definition": "A stochastic process { X t }, t = 0, 1, 2, ..., where X t takes values in the finite set S = {1, 2, 3, ..., N } and is such that P ( X n = i n | X0 = i 0 , ..., X n^-1 ) = P ( X n = i n | X n^-1 = i n^-1 ). The equation given implies that to make predictions about the future behaviour of the system it suffices to consider only its present state and not its past. The probability P ( X n = i n | X n^-1 = i n^-1 ) is known as a one step transition probability. The more general transition probability, P ( X n = i | X m = j ) satisfies the famous Chapman Kolmogorov equation b y P ( X n = i | X m = j ) = kP ( X r ) = kX m = jPX n = iX r = k m < r < n . Time homogeneous Markov chain is one for which the transition M probabilities depend only on the difference n - m rather than on n or m . In particular, the one-step transition probability, P ( X i = i | X n^-1 = j) can be written simply as P ij . The N x N matrix, P , with ij th element P ij is a stochastic matrix, i.e., 0 ≤ P ij ≤ 1, 1 ≤ i , j ≤ N . 𝑗 =1 𝑁𝑃𝑖𝑗 = 1, 1 ≤ i ≤ N . P is known as transition matrix. The ij element of P n gives the n -step transition probability if the limit n → ∞ is constitutes the stationary distribution of the chain.",
+      "formula": "$$P(X_{n+1}=j \\mid X_n=i,\\,X_{n-1},\\ldots) = P(X_{n+1}=j \\mid X_n=i) = p_{ij}$$",
+      "formula_description": "Memoryless (Markov) property: next state depends only on current state. Transition matrix $\\mathbf{P}$: rows sum to 1, $p_{ij} \\ge 0$. Stationary distribution $\\boldsymbol{\\pi}$: $\\boldsymbol{\\pi}\\mathbf{P} = \\boldsymbol{\\pi}$, $\\sum_i \\pi_i = 1$. Chapman-Kolmogorov: $p_{ij}^{(m+n)} = \\sum_k p_{ik}^{(m)}p_{kj}^{(n)}$."
     },
     {
       "word": "markov process",
@@ -104636,7 +104638,9 @@
       "word": "maxwell's demon",
       "raw_headword": "MAXWELL'S DEMON",
       "synonyms": [],
-      "definition": "An imaginary creature that is able to open and shut a partition dividing two volumes of a gas in a container, when the two volumes are initially at the same temperature. The partition operated by the demon is only opened to allow fast molecules through. Such a process would make the volume of gas containing the fast molecules hotter than it was at the start. The volume of gas remaining would accordingly become cooler. This process would be a violation of the second law of thermodynamics and therefore cannot occur. Maxwell's demon was invented by James Clerk Maxwell in a letter written in 1867 to show that the second law of thermodynamics has its origins in statistical mechanics, although the name was suggested by the Scottish scientist, Lord Kelvin (1824-1907)."
+      "definition": "An imaginary creature that is able to open and shut a partition dividing two volumes of a gas in a container, when the two volumes are initially at the same temperature. The partition operated by the demon is only opened to allow fast molecules through. Such a process would make the volume of gas containing the fast molecules hotter than it was at the start. The volume of gas remaining would accordingly become cooler. This process would be a violation of the second law of thermodynamics and therefore cannot occur. Maxwell's demon was invented by James Clerk Maxwell in a letter written in 1867 to show that the second law of thermodynamics has its origins in statistical mechanics, although the name was suggested by the Scottish scientist, Lord Kelvin (1824-1907).",
+      "formula": "$$\\Delta S_{\\text{universe}} \\ge 0, \\qquad k_B \\ln 2 \\text{ per bit erased (Landauer)}$$",
+      "formula_description": "Thought experiment: a demon sorting fast/slow molecules seems to violate 2nd law. Resolution (Landauer 1961): memory erasure costs $k_B T \\ln 2$ of free energy per bit, restoring $\\Delta S \\ge 0$. Links information theory to thermodynamics: $S = -k_B \\sum p_i \\ln p_i$."
     },
     {
       "word": "maxwell's displacement current",
@@ -104900,7 +104904,9 @@
       "word": "mean value theorem",
       "raw_headword": "MEAN VALUE THEOREM",
       "synonyms": [],
-      "definition": "If the derivative of a function f is defined everywhere between two points, ( x , f ( x )) and ( y , f ( y )), then the mean value theorem states that there will be at least one value of x between x and y such that the value of the derivative is equal to the slope of the line between ( x , f ( x )) and ( y , f ( y )). This means that there is at least one point in the interval where the tangent line to the curve is parallel to the secant line that passes through the curve at the two endpoints of the interval."
+      "definition": "If the derivative of a function f is defined everywhere between two points, ( x , f ( x )) and ( y , f ( y )), then the mean value theorem states that there will be at least one value of x between x and y such that the value of the derivative is equal to the slope of the line between ( x , f ( x )) and ( y , f ( y )). This means that there is at least one point in the interval where the tangent line to the curve is parallel to the secant line that passes through the curve at the two endpoints of the interval.",
+      "formula": "$$f'(c) = \\frac{f(b)-f(a)}{b-a}, \\quad c \\in (a,b)$$",
+      "formula_description": "There exists at least one $c$ in $(a,b)$ where the instantaneous rate equals the average rate. Requires $f$ continuous on $[a,b]$, differentiable on $(a,b)$. Cauchy MVT: $\\dfrac{f'(c)}{g'(c)} = \\dfrac{f(b)-f(a)}{g(b)-g(a)}$. Foundation of L'Hôpital's rule and Taylor's theorem."
     },
     {
       "word": "mean volume rate",
@@ -105744,7 +105750,9 @@
       "word": "melting point",
       "raw_headword": "MELTING POINT",
       "synonyms": [],
-      "definition": "The specific temperature at which a substance changes its state from pure solid into a liquid. A pure substance under standard conditions of pressure has a single reproducible melting point. If heat is gradually and uniformly supplied to a solid the consequent rise in temperature stops at the melting point until the fusion process is complete. At the melting temperature, latent heat of fusion does not permit a temperature rise or fall to be visibly registered."
+      "definition": "The specific temperature at which a substance changes its state from pure solid into a liquid. A pure substance under standard conditions of pressure has a single reproducible melting point. If heat is gradually and uniformly supplied to a solid the consequent rise in temperature stops at the melting point until the fusion process is complete. At the melting temperature, latent heat of fusion does not permit a temperature rise or fall to be visibly registered.",
+      "formula": "$$\\Delta T_f = K_f \\cdot b \\cdot i, \\qquad K_f = \\frac{R T_f^{*2} M_{\\text{solvent}}}{1000\\,\\Delta H_f}$$",
+      "formula_description": "Freezing point depression: $\\Delta T_f$ = depression, $K_f$ = cryoscopic constant, $b$ = molality (mol$\\cdot$kg$^{-1}$), $i$ = van't Hoff factor. For water: $K_f = 1.86\\ \\mathrm{K\\cdot kg\\cdot mol^{-1}}$. At melting point: $\\Delta G_{\\text{fus}} = 0$, so $T_m = \\Delta H_f / \\Delta S_f$."
     },
     {
       "word": "meltwater",
@@ -107654,7 +107662,9 @@
       "word": "michelson-morley experiment",
       "raw_headword": "MICHELSON-MORLEY EXPERIMENT",
       "synonyms": [],
-      "definition": "An experiment, conducted in 1887 by Albert Michelson (1852-1931) and Edward Morley (1838-1923) that attempted to measure the velocity of the Earth through the luminiferous aether. Using a modified Michelson interferometer they expected to observe a shift in the interference fringes formed, when the instrument was rotated through 90°, showing that the speed of light measured in the direction of the Earth's rotation or orbital motion, is not identical to its speed at right angles to this direction. No shift was observed. An explanation was subsequently provided by the Lorentz-Fitzgerald contraction, which provided an important step in the formulation of Einstein's special theory of relativity and the abandonment of the aether concept."
+      "definition": "An experiment, conducted in 1887 by Albert Michelson (1852-1931) and Edward Morley (1838-1923) that attempted to measure the velocity of the Earth through the luminiferous aether. Using a modified Michelson interferometer they expected to observe a shift in the interference fringes formed, when the instrument was rotated through 90°, showing that the speed of light measured in the direction of the Earth's rotation or orbital motion, is not identical to its speed at right angles to this direction. No shift was observed. An explanation was subsequently provided by the Lorentz-Fitzgerald contraction, which provided an important step in the formulation of Einstein's special theory of relativity and the abandonment of the aether concept.",
+      "formula": "$$\\Delta t = \\frac{2L}{c}\\!\\left(\\frac{v^2}{c^2}\\right), \\qquad \\Delta\\phi = \\frac{4\\pi L v^2}{\\lambda c^2}$$",
+      "formula_description": "Expected fringe shift due to Earth's motion through the ether (never observed). Path length difference between arms: $\\delta = v^2 L/c^2$. Null result (1887) disproved the luminiferous ether and led directly to special relativity."
     },
     {
       "word": "micro cavity",
@@ -109779,7 +109789,9 @@
       "word": "molality",
       "raw_headword": "MOLALITY",
       "synonyms": [],
-      "definition": "A unit of concentration of a solution defined as the number of moles of solute dissolved in 1000 grams of solvent or the amount of entities of a solute divided by the mass of the solvent. Its symbol is m or b . Molar."
+      "definition": "A unit of concentration of a solution defined as the number of moles of solute dissolved in 1000 grams of solvent or the amount of entities of a solute divided by the mass of the solvent. Its symbol is m or b . Molar.",
+      "formula": "$$b = \\frac{n_{\\text{solute}}}{m_{\\text{solvent}}\\ (\\mathrm{kg})}, \\qquad \\Delta T_b = K_b b i$$",
+      "formula_description": "SI unit: mol$\\cdot$kg$^{-1}$ (m). Independent of temperature (unlike molarity). Boiling point elevation: $K_b(\\text{water}) = 0.512\\ \\mathrm{K\\cdot kg\\cdot mol^{-1}}$. Freezing point depression: $K_f(\\text{water}) = 1.86\\ \\mathrm{K\\cdot kg\\cdot mol^{-1}}$. Van't Hoff factor $i$: number of particles per formula unit in solution."
     },
     {
       "word": "molar",
@@ -109857,7 +109869,9 @@
       "synonyms": [
         "molecular volume"
       ],
-      "definition": "The volume occupied by a substance per unit amount of the substance at standard temperature and pressure (STP). According to Avogadro's law, at a given temperature and pressure a given volume of any gas contains the same number of molecules. At standard temperature and pressure (STP), 1 mole of gas occupies 22.414 litres."
+      "definition": "The volume occupied by a substance per unit amount of the substance at standard temperature and pressure (STP). According to Avogadro's law, at a given temperature and pressure a given volume of any gas contains the same number of molecules. At standard temperature and pressure (STP), 1 mole of gas occupies 22.414 litres.",
+      "formula": "$$V_m = \\frac{V}{n} = \\frac{RT}{P} \\quad (\\text{ideal gas}), \\qquad V_m^{\\text{STP}} = 22.414\\ \\mathrm{L\\,mol^{-1}}$$",
+      "formula_description": "Volume occupied by one mole of substance. At STP ($0°\\text{C}$, $101.325\\ \\mathrm{kPa}$): $22.414\\ \\mathrm{L\\,mol^{-1}}$ for ideal gas. Van der Waals: $\\left(P + \\dfrac{a}{V_m^2}\\right)(V_m - b) = RT$. Critical molar volume: $V_{m,c} = 3b$."
     },
     {
       "word": "molar-mass exclusion limit",
@@ -109883,7 +109897,9 @@
       "synonyms": [
         "mixing ratio"
       ],
-      "definition": "The ratio of the number of moles of a substance in a mixture or solution to the total number of moles of all the components in the mixture or solution, with the symbol X. The mole fraction of component A is given by XA = nA/N, where nA is the amount of substance of A (for a given entity) and N is the total amount of substance of the mixture for the same entity."
+      "definition": "The ratio of the number of moles of a substance in a mixture or solution to the total number of moles of all the components in the mixture or solution, with the symbol X. The mole fraction of component A is given by XA = nA/N, where nA is the amount of substance of A (for a given entity) and N is the total amount of substance of the mixture for the same entity.",
+      "formula": "$$x_i = \\frac{n_i}{\\sum_j n_j}, \\qquad \\sum_i x_i = 1$$",
+      "formula_description": "Dimensionless; $n_i$ = moles of component $i$. Partial pressure: $P_i = x_i P_{\\text{total}}$ (Dalton's law). Raoult's law: $P_i = x_i P_i^*$ where $P_i^*$ = vapour pressure of pure $i$. Related to molarity $c_i$ and molality $b_i$ via solution density."
     },
     {
       "word": "mole method",
@@ -110095,7 +110111,9 @@
       "word": "molecular orbital theory",
       "raw_headword": "MOLECULAR ORBITAL THEORY",
       "synonyms": [],
-      "definition": "A method of computational chemistry in which the electrons are not assigned to individual bonds between atoms, but treated as moving under the influence of the nuclei in the whole molecule. The molecule has a set of molecular orbitals. The usual technique is to obtain molecular orbitals by a linear combination of atomic orbitals."
+      "definition": "A method of computational chemistry in which the electrons are not assigned to individual bonds between atoms, but treated as moving under the influence of the nuclei in the whole molecule. The molecule has a set of molecular orbitals. The usual technique is to obtain molecular orbitals by a linear combination of atomic orbitals.",
+      "formula": "$$\\psi_{\\pm} = \\frac{1}{\\sqrt{2(1\\pm S)}}\\bigl(\\phi_A \\pm \\phi_B\\bigr), \\qquad S = \\int \\phi_A^*\\phi_B\\,dV$$",
+      "formula_description": "Bonding MO ($\\psi_+$): constructive interference, lower energy than AOs. Antibonding MO ($\\psi_-$): node between nuclei, higher energy. Bond order $= \\dfrac{N_{\\text{bonding}} - N_{\\text{antibonding}}}{2}$. $S$ = overlap integral."
     },
     {
       "word": "molecular oxygen",
@@ -111296,7 +111314,9 @@
       "word": "moseley's law",
       "raw_headword": "MOSELEY'S LAW",
       "synonyms": [],
-      "definition": "An empirical law concerning the characteristic x-rays that are emitted by atoms, which states that the frequencies of the lines in the x-ray spectra of the elements are related to the atomic numbers of the elements."
+      "definition": "An empirical law concerning the characteristic x-rays that are emitted by atoms, which states that the frequencies of the lines in the x-ray spectra of the elements are related to the atomic numbers of the elements.",
+      "formula": "$$\\sqrt{f} = a(Z - b), \\qquad f = \\frac{3cR_\\infty}{4}(Z-1)^2 \\quad (K_\\alpha)$$",
+      "formula_description": "Frequency $f$ of characteristic X-ray emission vs atomic number $Z$. $a, b$ = constants depending on spectral series; $R_\\infty$ = Rydberg constant. $K_\\alpha$ line: transition $n=2\\to1$; $K_\\beta$: $n=3\\to1$. Established atomic number as the true organising principle of the periodic table (Moseley, 1913)."
     },
     {
       "word": "mosquito",
@@ -112836,7 +112856,9 @@
       "word": "möbius function",
       "raw_headword": "MÖBIUS FUNCTION",
       "synonyms": [],
-      "definition": "The multiplicative arithmetic function µ( r ) defined by µ( r ) = 1 for r = 1; µ( r ) = -1 for prime r , µ ( r ) = ( - 1) λ , where r is the number of prime factors of n , provided none of them is repeated; and µ( r ) = 0 for numbers whose prime decomposition includes repeated primes. For example, µ(30) = µ(3)∙µ(2)∙µ(5) = -1 and µ(32) = µ(2 5 ) = 0."
+      "definition": "The multiplicative arithmetic function µ( r ) defined by µ( r ) = 1 for r = 1; µ( r ) = -1 for prime r , µ ( r ) = ( - 1) λ , where r is the number of prime factors of n , provided none of them is repeated; and µ( r ) = 0 for numbers whose prime decomposition includes repeated primes. For example, µ(30) = µ(3)∙µ(2)∙µ(5) = -1 and µ(32) = µ(2 5 ) = 0.",
+      "formula": "$$\\mu(n) = \\begin{cases} 1 & n=1 \\\\ (-1)^k & n = p_1p_2\\cdots p_k \\text{ (distinct primes)}\\\\ 0 & p^2 \\mid n \\end{cases}$$",
+      "formula_description": "Number-theoretic function. Möbius inversion: if $g(n) = \\sum_{d|n}f(d)$ then $f(n)=\\sum_{d|n}\\mu(d)g(n/d)$. Fundamental identity: $\\sum_{d|n}\\mu(d) = [n=1]$. Appears in Riemann hypothesis: $\\sum_{n=1}^x \\mu(n) = O(\\sqrt{x}\\log x)$ iff RH true."
     },
     {
       "word": "möbius inversion formula",
