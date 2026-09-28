@@ -94657,7 +94657,9 @@
       "word": "lacunary series",
       "raw_headword": "LACUNARY SERIES",
       "synonyms": [],
-      "definition": "A series in which the terms with non-zero coefficients are widely separated; especially, a power series in which there is a subsequence of the powers { λ n } corresponding to non-zero coefficients that satisfies λ ( n k + 1) > (1 + ε ) λ n k for some ε > 0, so that infinitely often there is a geometric jump in the size of the power."
+      "definition": "A series in which the terms with non-zero coefficients are widely separated; especially, a power series in which there is a subsequence of the powers { λ n } corresponding to non-zero coefficients that satisfies λ ( n k + 1) > (1 + ε ) λ n k for some ε > 0, so that infinitely often there is a geometric jump in the size of the power.",
+      "formula": "$$f(z) = \\sum_{k=0}^{\\infty} a_k z^{n_k}, \\qquad \\liminf_{k\\to\\infty}\\frac{n_{k+1}}{n_k} > 1$$",
+      "formula_description": "A power series with large gaps between non-zero terms (lacunae). Hadamard's gap theorem: if $n_{k+1}/n_k \\ge q > 1$ for all $k$, then the circle of convergence is a natural boundary — the series cannot be analytically continued beyond it."
     },
     {
       "word": "lacunary value",
@@ -95003,7 +95005,9 @@
       "word": "lambda series",
       "raw_headword": "LAMBDA SERIES",
       "synonyms": [],
-      "definition": "A series of the form F ( x ) = f ( n ) x n 1 - x n n = 1 ∞ ∑ , where F ( x ) is said to be the generating function of f ( n )."
+      "definition": "A series of the form F ( x ) = f ( n ) x n 1 - x n n = 1 ∞ ∑ , where F ( x ) is said to be the generating function of f ( n ).",
+      "formula": "$$\\Lambda = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^s} = \\left(1 - 2^{1-s}\\right)\\zeta(s)$$",
+      "formula_description": "Dirichlet eta function (alternating zeta series). Related to Riemann zeta function $\\zeta(s) = \\sum n^{-s}$ via $\\eta(s) = (1-2^{1-s})\\zeta(s)$. Converges for $\\text{Re}(s) > 0$, broader than $\\zeta(s)$ which needs $\\text{Re}(s)>1$."
     },
     {
       "word": "lambert",
@@ -95061,7 +95065,9 @@
       "word": "lami's theorem",
       "raw_headword": "LAMI'S THEOREM",
       "synonyms": [],
-      "definition": "A relationship between the magnitudes and orientations of three concurrent forces in equilibrium. It is a consequence of the sine rule for triangles. For example, as indicated in the diagram, if three forces F1 , F2 and F3 acting at a point O are in equilibrium, then F1 Sin β = F2 Sin α = F3 Sin γ ."
+      "definition": "A relationship between the magnitudes and orientations of three concurrent forces in equilibrium. It is a consequence of the sine rule for triangles. For example, as indicated in the diagram, if three forces F1 , F2 and F3 acting at a point O are in equilibrium, then F1 Sin β = F2 Sin α = F3 Sin γ .",
+      "formula": "$$\\frac{F_1}{\\sin\\alpha_1} = \\frac{F_2}{\\sin\\alpha_2} = \\frac{F_3}{\\sin\\alpha_3}$$",
+      "formula_description": "For three concurrent coplanar forces $F_1, F_2, F_3$ in equilibrium, each force divided by the sine of the angle between the other two is constant. $\\alpha_1$ is the angle between $F_2$ and $F_3$, etc. Analogue of the sine rule for statics."
     },
     {
       "word": "lamin",
@@ -95301,7 +95307,9 @@
       "word": "langevin equation",
       "raw_headword": "LANGEVIN EQUATION",
       "synonyms": [],
-      "definition": "A type of random equation of motion used to study Brownian movement. It was named after the French physicist Paul Langevin (1872-1946). The Langevin equation can be best solved by the use of statistical methods and the theory of probability. The Langevin equation is given by, m du dt + γµ = F ( t ), where m is the mass of the particle, F ( t ) is the random component and μ is the velocity of the particle."
+      "definition": "A type of random equation of motion used to study Brownian movement. It was named after the French physicist Paul Langevin (1872-1946). The Langevin equation can be best solved by the use of statistical methods and the theory of probability. The Langevin equation is given by, m du dt + γµ = F ( t ), where m is the mass of the particle, F ( t ) is the random component and μ is the velocity of the particle.",
+      "formula": "$$m\\ddot{x} = -\\gamma \\dot{x} + \\sqrt{2\\gamma k_B T}\\,\\xi(t)$$",
+      "formula_description": "Stochastic ODE for Brownian motion; $\\gamma$ = damping coefficient, $\\xi(t)$ = Gaussian white noise with $\\langle\\xi(t)\\xi(t')\\rangle = \\delta(t-t')$. Diffusion coefficient: $D = k_B T / \\gamma$ (Einstein relation). Overdamped limit: $\\gamma\\dot{x} = F + \\sqrt{2\\gamma k_B T}\\,\\xi(t)$."
     },
     {
       "word": "langlands program",
@@ -95471,7 +95479,9 @@
       "word": "lapse rate",
       "raw_headword": "LAPSE RATE",
       "synonyms": [],
-      "definition": "The variation of an atmospheric variable with height; unless otherwise stated the variable is temperature."
+      "definition": "The variation of an atmospheric variable with height; unless otherwise stated the variable is temperature.",
+      "formula": "$$\\Gamma = -\\frac{dT}{dz}, \\qquad \\Gamma_d = \\frac{g}{C_p} \\approx 9.8\\ \\mathrm{K\\,km^{-1}}$$",
+      "formula_description": "Rate of temperature decrease with altitude in the atmosphere. Dry adiabatic lapse rate $\\Gamma_d = g/C_p$; environmental (standard) lapse rate $\\approx 6.5\\ \\mathrm{K\\,km^{-1}}$. If $\\Gamma > \\Gamma_d$: absolutely unstable (convection); $\\Gamma < \\Gamma_m$: absolutely stable."
     },
     {
       "word": "laptop",
@@ -96016,7 +96026,9 @@
       "synonyms": [
         "gay-lussac's law"
       ],
-      "definition": "It states that at constant temperature and pressure, the volumes of reacting gases or any gaseous products, can be expressed as ratios of small whole numbers."
+      "definition": "It states that at constant temperature and pressure, the volumes of reacting gases or any gaseous products, can be expressed as ratios of small whole numbers.",
+      "formula": "$$V_A : V_B : V_C = a : b : c \\quad \\text{(Gay-Lussac's law)}$$",
+      "formula_description": "At constant temperature and pressure, volumes of gaseous reactants and products are in simple integer ratios. Example: $2\\,\\text{H}_2(\\text{g}) + \\text{O}_2(\\text{g}) \\to 2\\,\\text{H}_2\\text{O}(\\text{g})$: volumes $2:1:2$."
     },
     {
       "word": "law of conservation of charge",
@@ -96024,7 +96036,9 @@
       "synonyms": [
         "charge conservation"
       ],
-      "definition": "The law which states that the net charge of an isolated system remains constant during any physical process, such as two charge objects making contact and separating. In other words, any system that is not exchanging mass or energy with its surroundings will never have a different total charge at any two times."
+      "definition": "The law which states that the net charge of an isolated system remains constant during any physical process, such as two charge objects making contact and separating. In other words, any system that is not exchanging mass or energy with its surroundings will never have a different total charge at any two times.",
+      "formula": "$$Q_{\\text{total}} = \\sum_i q_i = \\text{constant}, \\qquad \\frac{\\partial\\rho}{\\partial t} + \\nabla\\cdot\\mathbf{J} = 0$$",
+      "formula_description": "Net electric charge in an isolated system is conserved. Continuity equation: $\\partial\\rho/\\partial t + \\nabla\\cdot\\mathbf{J} = 0$ where $\\rho$ = charge density, $\\mathbf{J}$ = current density. One of the exact conservation laws of nature — no exception ever observed."
     },
     {
       "word": "law of conservation of energy",
@@ -96040,7 +96054,9 @@
       "synonyms": [
         "conservation of linear momentum"
       ],
-      "definition": "It states that if no external force such as friction acts on a system of colliding objects, the total momentum of the object in a given direction before collision equals total momentum after collision in the same direction."
+      "definition": "It states that if no external force such as friction acts on a system of colliding objects, the total momentum of the object in a given direction before collision equals total momentum after collision in the same direction.",
+      "formula": "$$\\mathbf{p}_{\\text{total}} = \\sum_i m_i\\mathbf{v}_i = \\text{const} \\quad (\\mathbf{F}_{\\text{ext}} = \\mathbf{0})$$",
+      "formula_description": "Total linear momentum is conserved when net external force is zero. Impulse-momentum: $\\mathbf{F}_{\\text{ext}}\\,\\Delta t = \\Delta\\mathbf{p}$. Follows from Newton's third law; equivalent to translational symmetry via Noether's theorem."
     },
     {
       "word": "law of conservation of matter",
@@ -96063,7 +96079,9 @@
       "word": "law of cosine",
       "raw_headword": "LAW OF COSINE",
       "synonyms": [],
-      "definition": "An equation relating the lengths of the sides of a triangle and one of its angles. It can be used to calculate the third side of a triangle if the other two sides and the angle between them are known: c 2 = a 2 +b 2 -2ab cosC . In this formula a,b and c are the three sides of the triangle and c is the angle opposite the side. The other sides can also be found by a 2 =b 2 +c 2 -2bc cosA and b 2 =a 2 +c 2 -2ac cos B ."
+      "definition": "An equation relating the lengths of the sides of a triangle and one of its angles. It can be used to calculate the third side of a triangle if the other two sides and the angle between them are known: c 2 = a 2 +b 2 -2ab cosC . In this formula a,b and c are the three sides of the triangle and c is the angle opposite the side. The other sides can also be found by a 2 =b 2 +c 2 -2bc cosA and b 2 =a 2 +c 2 -2ac cos B .",
+      "formula": "$$c^2 = a^2 + b^2 - 2ab\\cos C$$",
+      "formula_description": "Generalises Pythagoras: for a triangle with sides $a, b, c$ and angle $C$ opposite side $c$. Similarly: $a^2 = b^2 + c^2 - 2bc\\cos A$; $b^2 = a^2 + c^2 - 2ac\\cos B$. When $C = 90°$: reduces to $c^2 = a^2 + b^2$."
     },
     {
       "word": "law of definite proportions",
@@ -96090,7 +96108,9 @@
       "word": "law of flotation",
       "raw_headword": "LAW OF FLOTATION",
       "synonyms": [],
-      "definition": "It states that a floating body sinks into a fluid until it has displaced its own weight of the fluid, in which it floats; at which point weight is equal to upthrust and the body is in equilibrium: weight of floating object= weight of fluid displaced; and mass of floating object = mass of fluid displaced."
+      "definition": "It states that a floating body sinks into a fluid until it has displaced its own weight of the fluid, in which it floats; at which point weight is equal to upthrust and the body is in equilibrium: weight of floating object= weight of fluid displaced; and mass of floating object = mass of fluid displaced.",
+      "formula": "$$\\rho_{\\text{object}}\\,V_{\\text{total}}\\,g = \\rho_{\\text{fluid}}\\,V_{\\text{submerged}}\\,g$$",
+      "formula_description": "A floating object displaces fluid equal in weight to its own weight. Fraction submerged: $\\dfrac{V_{\\text{sub}}}{V_{\\text{total}}} = \\dfrac{\\rho_{\\text{obj}}}{\\rho_{\\text{fluid}}}$. Archimedes' principle: buoyant force $F_b = \\rho_f V_{\\text{sub}} g$."
     },
     {
       "word": "law of independent assortment",
@@ -96102,7 +96122,9 @@
       "word": "law of large numbers",
       "raw_headword": "LAW OF LARGE NUMBERS",
       "synonyms": [],
-      "definition": "In statistics, it is the law which states that by performing the same experiment a large number of times, the average of the results obtained should be closer to the expected value."
+      "definition": "In statistics, it is the law which states that by performing the same experiment a large number of times, the average of the results obtained should be closer to the expected value.",
+      "formula": "$$\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^{n} X_i \\xrightarrow{n\\to\\infty} \\mu = E[X]$$",
+      "formula_description": "Sample mean converges to population mean. Weak LLN: $P(|\\bar{X}_n - \\mu| > \\varepsilon) \\to 0$ for all $\\varepsilon > 0$. Strong LLN: $\\bar{X}_n \\to \\mu$ almost surely. Requires finite variance $\\sigma^2 < \\infty$."
     },
     {
       "word": "law of mass action",
@@ -96150,7 +96172,9 @@
       "word": "law of sines",
       "raw_headword": "LAW OF SINES",
       "synonyms": [],
-      "definition": "It expresses a relationship involving the sides and angles of a triangle as follows: a sin A = b sin B = c sin A , , where a , b and c are the lengths of the sides of a triangle and A , B and C are the angles opposite these three sides, respectively."
+      "definition": "It expresses a relationship involving the sides and angles of a triangle as follows: a sin A = b sin B = c sin A , , where a , b and c are the lengths of the sides of a triangle and A , B and C are the angles opposite these three sides, respectively.",
+      "formula": "$$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R$$",
+      "formula_description": "For a triangle with sides $a, b, c$ opposite angles $A, B, C$ and circumradius $R$. Area form: $\\text{Area} = \\dfrac{abc}{4R} = \\dfrac{1}{2}ab\\sin C$. Used to solve oblique triangles given AAS, ASA, or SSA."
     },
     {
       "word": "law of superposition",
@@ -96162,13 +96186,17 @@
       "word": "law of tangents",
       "raw_headword": "LAW OF TANGENTS",
       "synonyms": [],
-      "definition": "If a , b and c are the lengths of the sides of a triangle and A , B and C are the angles opposite these three sides, respectively, then the law of tangents states that the following relations will be true: and ."
+      "definition": "If a , b and c are the lengths of the sides of a triangle and A , B and C are the angles opposite these three sides, respectively, then the law of tangents states that the following relations will be true: and .",
+      "formula": "$$\\frac{a - b}{a + b} = \\frac{\\tan\\!\\left(\\tfrac{A-B}{2}\\right)}{\\tan\\!\\left(\\tfrac{A+B}{2}\\right)}$$",
+      "formula_description": "Relates two sides $a, b$ and their opposite angles $A, B$ in any triangle. Alternative to the law of sines for solving oblique triangles. Particularly useful when two sides and the included angle are known."
     },
     {
       "word": "law of universal gravitation",
       "raw_headword": "LAW OF UNIVERSAL GRAVITATION",
       "synonyms": [],
-      "definition": "It states that all objects in the universe attract each other through gravitational force. The size of the force is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centres."
+      "definition": "It states that all objects in the universe attract each other through gravitational force. The size of the force is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centres.",
+      "formula": "$$F = G\\frac{m_1 m_2}{r^2}, \\qquad G = 6.674\\times10^{-11}\\ \\mathrm{N\\,m^2\\,kg^{-2}}$$",
+      "formula_description": "Newton's law: every mass attracts every other mass with force proportional to their product and inversely proportional to the square of their separation $r$. Gravitational field: $\\mathbf{g} = -\\dfrac{Gm}{r^2}\\hat{r}$; escape velocity: $v_e = \\sqrt{2GM/R}$."
     },
     {
       "word": "lawrencium",
@@ -96180,13 +96208,17 @@
       "word": "laws of electromagnetic induction",
       "raw_headword": "LAWS OF ELECTROMAGNETIC INDUCTION",
       "synonyms": [],
-      "definition": "Formulated by Michael Faraday, English physicist in 1831, they are laws based on experiments, showing the relationship between electric circuit and magnetic field as follows: (i) Whenever there is a change in the magnetic flux surrounding a conductor, an electromotive force (emf) is induced in the conductor. (ii) The strength of the induced electromotive force is proportional to the rate of change of magnetic flux linking the conductor. (iii) If the circuit is complete, the induced current due to the induced electromotive force produces a magnetic effect which always opposes the change in the magnetic flux inducing it. The laws are applied in electrical machines, industries and medical field, etc; and used in electrical generators, induction cookers, electromagnetic flow meters, musical instruments, etc."
+      "definition": "Formulated by Michael Faraday, English physicist in 1831, they are laws based on experiments, showing the relationship between electric circuit and magnetic field as follows: (i) Whenever there is a change in the magnetic flux surrounding a conductor, an electromotive force (emf) is induced in the conductor. (ii) The strength of the induced electromotive force is proportional to the rate of change of magnetic flux linking the conductor. (iii) If the circuit is complete, the induced current due to the induced electromotive force produces a magnetic effect which always opposes the change in the magnetic flux inducing it. The laws are applied in electrical machines, industries and medical field, etc; and used in electrical generators, induction cookers, electromagnetic flow meters, musical instruments, etc.",
+      "formula": "$$\\mathcal{E} = -N\\frac{d\\Phi_B}{dt}, \\qquad \\Phi_B = \\int_S \\mathbf{B}\\cdot d\\mathbf{A}$$",
+      "formula_description": "Faraday's first law: changing flux induces EMF. Faraday's second law: EMF $\\propto$ rate of flux change. Lenz's law (sign): induced current opposes flux change. Motional EMF: $\\mathcal{E} = Bvl$ for conductor of length $l$ moving at $v$ in field $B$."
     },
     {
       "word": "laws of reflection",
       "raw_headword": "LAWS OF REFLECTION",
       "synonyms": [],
-      "definition": "In physics, Laws of light, which govern the reflection of light-rays offsmooth conducting surfaces, such as polished metal or metal-coated glass mirrors. There are two laws of reflection. Law 1 states that the angle at which a ray of light strikes a smooth surface, called the angle of incidence , equals the angle at which it is reflected from a smooth surface, called the angle of reflection . Law 2 states that the reflected ray, the incident ray and the normal line at the point of incidence all lie in the same plane. The ray of light that strikes a smooth surface is known as the incident ray . The ray of light that leaves the smooth surface is known as the reflected ray ."
+      "definition": "In physics, Laws of light, which govern the reflection of light-rays offsmooth conducting surfaces, such as polished metal or metal-coated glass mirrors. There are two laws of reflection. Law 1 states that the angle at which a ray of light strikes a smooth surface, called the angle of incidence , equals the angle at which it is reflected from a smooth surface, called the angle of reflection . Law 2 states that the reflected ray, the incident ray and the normal line at the point of incidence all lie in the same plane. The ray of light that strikes a smooth surface is known as the incident ray . The ray of light that leaves the smooth surface is known as the reflected ray .",
+      "formula": "$$\\theta_i = \\theta_r \\qquad (\\text{angle of incidence} = \\text{angle of reflection})$$",
+      "formula_description": "Both angles measured from the normal to the surface. Incident ray, reflected ray, and normal are coplanar. For a spherical mirror: $\\dfrac{1}{f} = \\dfrac{1}{v} + \\dfrac{1}{u}$, $f = R/2$."
     },
     {
       "word": "laws of refraction",
@@ -96195,13 +96227,17 @@
         "snell's law",
         "snell-descartes law"
       ],
-      "definition": "Laws, which govern the behaviour of light-rays as they propagate across a sharp interface between two transparent dielectric media. They state that: (i) The incidence ray, the refracted ray and the normal at the point of incidence all lie in the same plane. (ii) The ratio of the sine of the angle of incidence in one medium to the sine of the angle of refraction in another medium is constant for the two media. Mathematically, it is given by ɳ = Sin i /sin r , where Sin i is the sine of the angle of incidence, Sin r is the sine of the angle of refraction and ɳ is a constant."
+      "definition": "Laws, which govern the behaviour of light-rays as they propagate across a sharp interface between two transparent dielectric media. They state that: (i) The incidence ray, the refracted ray and the normal at the point of incidence all lie in the same plane. (ii) The ratio of the sine of the angle of incidence in one medium to the sine of the angle of refraction in another medium is constant for the two media. Mathematically, it is given by ɳ = Sin i /sin r , where Sin i is the sine of the angle of incidence, Sin r is the sine of the angle of refraction and ɳ is a constant.",
+      "formula": "$$n_1\\sin\\theta_1 = n_2\\sin\\theta_2 \\qquad \\text{(Snell's law)}$$",
+      "formula_description": "$n_1, n_2$ = refractive indices of media 1 and 2; $\\theta_1, \\theta_2$ = angles from normal. Critical angle for TIR: $\\theta_c = \\arcsin\\!\\left(\\dfrac{n_2}{n_1}\\right)$ (when $n_1 > n_2$). Refractive index: $n = c/v = \\sqrt{\\varepsilon_r \\mu_r}$."
     },
     {
       "word": "lawson criterion",
       "raw_headword": "LAWSON CRITERION",
       "synonyms": [],
-      "definition": "Derived by John D. Lawson in 1955, it is the measure of the density of the reacting particles required and the time for which they need to react in order to produce more energy than was used in raising the temperature of deuterium and tritium at the ignition temperature."
+      "definition": "Derived by John D. Lawson in 1955, it is the measure of the density of the reacting particles required and the time for which they need to react in order to produce more energy than was used in raising the temperature of deuterium and tritium at the ignition temperature.",
+      "formula": "$$n\\,\\tau_E \\ge \\frac{12\\,k_B T}{\\langle\\sigma v\\rangle\\,E_\\alpha} \\approx 10^{20}\\ \\mathrm{m^{-3}\\,s} \\quad (D\\text{-}T \\text{ at } 10\\,\\text{keV})$$",
+      "formula_description": "Condition for nuclear fusion ignition: $n$ = plasma density, $\\tau_E$ = energy confinement time. Triple product form: $n T \\tau_E \\gtrsim 3\\times10^{21}\\ \\mathrm{m^{-3}\\,keV\\,s}$. Named after John Lawson (1957); the fundamental target for fusion reactor design."
     },
     {
       "word": "lax",
