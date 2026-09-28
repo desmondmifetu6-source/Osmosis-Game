@@ -78596,7 +78596,7 @@
       "word": "hamiltonian function",
       "raw_headword": "HAMILTONIAN FUNCTION",
       "synonyms": [],
-      "definition": "A mathematical definition to express the rate of change in time of the condition of a dynamic physical system. It specifies its total energy in terms of the sum of its kinetic energy and its potential energy in terms of the Lagrangian function. It is given by - L + ! q ∂ L ∂ ! q , where L is the Lagrangian and q ranges over the generalised coordinates. It was introduced in 1835 by Sir William Rowan Hamilton."
+      "definition": "In analytical mechanics and mathematical physics, a function $H(q, p, t)$ that expresses the total energy of a dynamical system in terms of generalized coordinates $q_i$ and their conjugate generalized momenta $p_i$. It is defined via Legendre transformation of the Lagrangian $L(q, \\dot{q}, t)$:\n\n$$H(q, p, t) = \\sum_{i=1}^n p_i \\dot{q}_i - L(q, \\dot{q}, t), \\quad \\text{where } p_i = \\frac{\\partial L}{\\partial \\dot{q}_i}$$\n\nFor natural scleronomic systems with conservative forces where potentials are velocity-independent, the Hamiltonian represents the sum of kinetic energy $T$ and potential energy $V$: $H = T + V$. In quantum mechanics, promoting $q$ and $p$ to Hermitian operators yields the Hamiltonian operator $\\hat{H}$, governing time evolution via the Schrödinger equation $i\\hbar \\frac{\\partial}{\\partial t}|\\psi\\rangle = \\hat{H}|\\psi\\rangle$."
     },
     {
       "word": "hamiltonian system",
@@ -78626,7 +78626,7 @@
       "word": "hammett constant",
       "raw_headword": "HAMMETT CONSTANT",
       "synonyms": [],
-      "definition": "A constant which measures the influence of a substituent on the stability of a benzoic acid by comparing the logarithmic ratios of the dissociation constants of the substituted benzoic acid to that of benzoic acid. Species which withdraw electrons from aromatic rings and hence stabilise the benzoate anion formed, increase the acidity of benzoic acid giving a positive ration and vice versa."
+      "definition": "In physical organic chemistry, an empirical parameter $\\sigma$ introduced by Louis Plack Hammett in 1937 that quantifies the electronic electron-donating or electron-withdrawing effect of a meta- or para-substituent on a benzene ring relative to hydrogen. It is defined from the ionization equilibrium constants of substituted benzoic acids ($K$) versus unsubstituted benzoic acid ($K_0$) in water at $25\\,^\\circ\\text{C}$:\n\n$$\\sigma = \\log_{10}\\left(\\frac{K}{K_0}\\right) = \\text{p}K_{a0} - \\text{p}K_a$$\n\nElectron-withdrawing groups (e.g., $-\\text{NO}_2$, $-\\text{CN}$) stabilize the conjugate benzoate anion, yielding $\\sigma > 0$. Electron-donating groups (e.g., $-\\text{OCH}_3$, $-\\text{NH}_2$) destabilize the anion, giving $\\sigma < 0$. Under the Hammett equation $\\log_{10}(k/k_0) = \\rho \\sigma$, reaction constant $\\rho$ measures susceptibility to polar substituent effects."
     },
     {
       "word": "hamming codes",
@@ -78981,7 +78981,7 @@
       "word": "hardy-weinberg theorem",
       "raw_headword": "HARDY-WEINBERG THEOREM",
       "synonyms": [],
-      "definition": "An axiom maintaining that the sexual shuffling of genes alone cannot alter the overall genetic makeup of a population."
+      "definition": "A foundational principle of population genetics formulated independently by G. H. Hardy and Wilhelm Weinberg in 1908. It states that both allele and genotype frequencies in a sexually reproducing population remain constant from generation to generation in the absence of evolutionary influences (natural selection, mutation, migration, genetic drift, and non-random mating). For a biallelic locus with alleles $A$ and $a$ having frequencies $p$ and $q$ ($p + q = 1$), the expected diploid genotype frequencies at equilibrium satisfy:\n\n$$p^2 + 2pq + q^2 = 1$$\n\nwhere $p^2 = f(AA)$ is the homozygous dominant frequency, $2pq = f(Aa)$ is the heterozygous frequency, and $q^2 = f(aa)$ is the homozygous recessive frequency."
     },
     {
       "word": "hare",
@@ -79019,7 +79019,7 @@
       "word": "harmonic",
       "raw_headword": "HARMONIC",
       "synonyms": [],
-      "definition": "1. In mathematics, able to be expressed in terms of sine and cosine functions. 2. Of or relating to numbers of which the reciprocals form an arithmetic progression. 3. Of a function, having two dimensional Laplacian equal to zero, occurring as the real or imaginary part of an analytic function. 4. Of a projective geometry, having a cross ratio equal to^-1. 5. A component of a periodic quantity, such as a musical tone, with a frequency that is an integral multiple of the frequency of the given oscillation. In other words, it is one of the extra frequencies produced by a musical instrument such as a stringed instrument or an oscillation having frequencies that are integral multiples of the primary or fundamental frequency. The fundamental frequency of a sinusoidal oscillation is usually called the first harmonic ; the second harmonic has twice the fundamental frequency and in music is called the first overtone; the third harmonic has three times the fundamental frequency and called the second overtone. For open pipes and strings, the fundamental frequencies and the first four overtones are respectively v 2 l , v l ,3 v 2 l , 2 v l ,5 v l ,..., f n . This means that fundamental frequencies and its overtones are fo , 2 fo , 3 f o , 4 f o , 5 f o , ..., ( n + 1) f o . So that the overtones that are the whole number multiple of the fundamental frequency, fo are all harmonics. Overtones may or may not be harmonics."
+      "definition": "1. In acoustics and wave physics, a sinusoidal component of a periodic complex wave having a frequency that is an exact integer multiple of the fundamental frequency $f_0$. The fundamental frequency is the 1st harmonic ($f_1 = f_0$). The 2nd harmonic ($f_2 = 2f_0$) corresponds to the 1st overtone; the $n$-th harmonic has frequency $f_n = n f_0$. For a standing wave on a string or open pipe of length $L$ with wave speed $v$:\n\n$$f_n = n \\frac{v}{2L} \\quad (n = 1, 2, 3, \\dots)$$\n\nFor a pipe closed at one end, only odd harmonics are generated: $f_n = (2n - 1)\\frac{v}{4L}$. 2. In mathematics, of or relating to numbers whose reciprocals form an arithmetic progression, or functions satisfying Laplace's equation."
     },
     {
       "word": "harmonic analysis",
@@ -79045,7 +79045,7 @@
       "word": "harmonic function",
       "raw_headword": "HARMONIC FUNCTION",
       "synonyms": [],
-      "definition": "A function that is a solution to Laplace's equation. Harmonic functions are important in the areas of applied mathematics, engineering and mathematical physics. They are used, for example, to solve problems involving steady state temperatures, two-dimensional electrostatics and ideal fluid flow."
+      "definition": "In mathematical analysis, a twice continuously differentiable real-valued function $u: U \\to \\mathbb{R}$ defined on an open subset $U \\subseteq \\mathbb{R}^n$ that satisfies Laplace's equation everywhere on $U$:\n\n$$\\nabla^2 u = \\Delta u = \\sum_{i=1}^n \\frac{\\partial^2 u}{\\partial x_i^2} = 0$$\n\nIn two dimensions ($n=2$): $\\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$. By the Cauchy-Riemann equations, the real and imaginary parts of any complex analytic function $f(z) = u(x, y) + iv(x, y)$ are harmonic conjugate functions. Harmonic functions satisfy the mean-value property and the maximum principle, and model steady-state heat conduction, electrostatics, and potential fluid flow."
     },
     {
       "word": "harmonic mean",
@@ -79078,13 +79078,13 @@
       "word": "harmonic points",
       "raw_headword": "HARMONIC POINTS",
       "synonyms": [],
-      "definition": "A cross-ratio of four points P , Q, R and S lying on a straight line segment which divide it such that H PR QR ⎛ ⎝ ⎜ ⎞ ⎠ ⎟ PS QS ⎛ ⎝ ⎜ ⎞ ⎠ ⎟ = - 1. The negative is possible only if there are positive and negative directions along the line, for example, QR = - RQ ."
+      "definition": "A set of four collinear points $P, Q, R, S$ on a line whose cross-ratio $(P, Q; R, S)$ equals $-1$:\n\n$$(P, Q; R, S) = \\frac{PR}{QR} \\bigg/ \\frac{PS}{QS} = -1$$\n\nThis condition occurs when points $R$ and $S$ divide the directed line segment $PQ$ internally and externally in the same numerical ratio: $\\frac{PR}{RQ} = -\\frac{PS}{SQ}$. In projective geometry, harmonic points form a harmonic tetrad (or harmonic quadruple), preserved under all projective transformations."
     },
     {
       "word": "harmonic ratio",
       "raw_headword": "HARMONIC RATIO",
       "synonyms": [],
-      "definition": "A cross-ratio of four points whose value is equal to^-1. Consider four points P , Q, R and S , PQ QR =- PS SR = PS RS ; therefore, PQ ( PS - PR ) = ( PR - PQ ) ⇒ PQ ⋅ PS - PQ ⋅ PR = PS ⋅ PR - PS ⋅ PQ ⇒ 1 PQ + 1 PS = 2 PR , then PQ , PR and PS are in harmonic progression. If Q is in the middle of PR , then S is at infinity."
+      "definition": "A cross-ratio of four collinear points whose value equals $-1$. If points $P, Q, R, S$ lie on a line such that $(P, S; Q, R) = -1$, their directed distances satisfy the relation:\n\n$$\\frac{1}{PQ} + \\frac{1}{PS} = \\frac{2}{PR}$$\n\nestablishing that the lengths $PQ$, $PR$, and $PS$ form a harmonic progression. If $R$ is the midpoint of segment $QS$, the conjugate harmonic point $P$ lies at infinity."
     },
     {
       "word": "harmonic sequence",
@@ -79092,13 +79092,13 @@
       "synonyms": [
         "harmonic progression"
       ],
-      "definition": "A sequence of the form: 1 a , ( a + d ) , ( a + 2 d ) ,...,1( a + ( n^-1) d ), the terms being the reciprocals of those in an arithmetic sequence. There is no simple expression for the sum of a harmonic progression. The harmonic mean of two terms, a s and a x +2 is given by 2 asas +2 /( a s + a s +2 ) = a s +1 ."
+      "definition": "A mathematical progression of numbers formed by taking the reciprocals of an arithmetic progression. It has the general form:\n\n$$\\frac{1}{a}, \\; \\frac{1}{a + d}, \\; \\frac{1}{a + 2d}, \\; \\dots, \\; \\frac{1}{a + (n-1)d}$$\n\nwhere $a \\neq 0$ and $d$ is the common difference. The harmonic mean $H$ of two positive numbers $a$ and $b$ is given by:\n\n$$H = \\frac{2}{\\frac{1}{a} + \\frac{1}{b}} = \\frac{2ab}{a + b}$$\n\nsatisfying the inequality $H \\le G \\le A$ (harmonic mean $\\le$ geometric mean $\\le$ arithmetic mean)."
     },
     {
       "word": "harmonic series",
       "raw_headword": "HARMONIC SERIES",
       "synonyms": [],
-      "definition": "A series or progression in which the reciprocals of the terms have a constant difference between them. An example is 1 + 1 2 + 1 3 + 1 4 + 1 5 + ... + n^-1 + 1 n ..."
+      "definition": "The infinite series formed by the sum of the reciprocals of the positive integers:\n\n$$\\sum_{n=1}^\\infty \\frac{1}{n} = 1 + \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} + \\dots + \\frac{1}{n} + \\dots$$\n\nAlthough its $n$-th term approaches zero ($\\lim_{n\\to\\infty} \\frac{1}{n} = 0$), the series diverges slowly to infinity. Its $n$-th partial sum $H_n = \\sum_{k=1}^n \\frac{1}{k}$ grows asymptotically as $H_n = \\ln n + \\gamma + \\mathcal{O}\\left(\\frac{1}{n}\\right)$, where $\\gamma \\approx 0.5772156649$ is the Euler-Mascheroni constant."
     },
     {
       "word": "harpoon mechanism",
@@ -79118,7 +79118,7 @@
       "synonyms": [
         "hartree energy"
       ],
-      "definition": "Atomic unit of energy, with the symbol E h . It is approximately equal to (≈) 4.359 7482 (26 x 10 18 J). It is approximately the electric potential energy of the hydrogen atom in its ground state and, by the virial theorem, approximately twice its ionisation energy. The relationships are not exact because of the finite mass of the nucleus of the hydrogen atom and relativistic corrections."
+      "definition": "The atomic unit of energy (symbol $E_{\\text{h}}$), named after Douglas Hartree. Defined as $\\frac{\\hbar^2}{m_e a_0^2}$ where $\\hbar$ is the reduced Planck constant, $m_e$ is electron rest mass, and $a_0$ is the Bohr radius:\n\n$$E_{\\text{h}} = \\frac{e^2}{4\\pi \\varepsilon_0 a_0} = \\alpha^2 m_e c^2 \\approx 4.359744722 \\times 10^{-18}\\,\\text{J} \\approx 27.211386\\,\\text{eV}$$\n\nBy the virial theorem, $1\\,E_{\\text{h}}$ equals twice the ground-state ionization energy of the hydrogen atom (neglecting nuclear mass and relativistic corrections): $1\\,E_{\\text{h}} = 2\\,\\text{Ry}$ ($2$ rydbergs)."
     },
     {
       "word": "hartree-fock method",
@@ -79200,7 +79200,7 @@
       "word": "hausdorff dimension",
       "raw_headword": "HAUSDORFF DIMENSION",
       "synonyms": [],
-      "definition": "Named after the German mathematician Felix Hausdorff (1868- 1942), it serves as a measure of the local size of a set of numbers, taking into account the distance between each of its members. In other words, it is a further dimensional number associated with a given set of numbers, where the distances between all members of that set are defined and where the dimension is drawn from the real numbers, R, to which two elements have been added, +∞ and -∞. Applying its mathematical formalisms provides that the Hausdorffdimension of a single point is zero, of a line is 1 and of a square is 2, of a cube is 3."
+      "definition": "In fractal geometry and geometric measure theory, a non-negative real number $d_H$ assigned to a metric space $X$ that extends the notion of integer topological dimension. For a subset $S$ covered by balls of diameter $r_i \\le \\delta$, the $d$-dimensional Hausdorff measure is $\\mathcal{H}^d(S) = \\lim_{\\delta \\to 0} \\inf \\sum r_i^d$. The Hausdorff dimension is the critical threshold where measure transitions:\n\n$$d_H(S) = \\inf\\{d \\ge 0 : \\mathcal{H}^d(S) = 0\\} = \\sup\\{d \\ge 0 : \\mathcal{H}^d(S) = \\infty\\}$$\n\nFor standard Euclidean objects, $d_H$ is an integer (point: $0$, line: $1$, disk: $2$, sphere: $3$), while for fractals it is typically non-integer (e.g., Cantor set: $d_H = \\frac{\\ln 2}{\\ln 3} \\approx 0.6309$; Koch snowflake curve: $d_H = \\frac{\\ln 4}{\\ln 3} \\approx 1.2619$)."
     },
     {
       "word": "hausdorff distance",
@@ -79238,7 +79238,7 @@
       "synonyms": [
         "haversed sine"
       ],
-      "definition": "Half the value of the versed sine or versine (denoted by versin) of an angle that is equal to 1 - cos(θ). It is defined by hav( z ) ≡ 1 2 vers( z ) = 1 2 (1 - cos z ) = sin 2 1 2 z ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , where versin( z ) is the versine, cos z is the cosine and sin z is the sine. The haversine formula is used to calculate the shortest distance between two points on the surface of a sphere such as the Earth using the longitude and latitude of each point."
+      "definition": "A historical trigonometric function equal to half the versine, denoted $\\text{hav}(\\theta)$:\n\n$$\\text{hav}(\\theta) = \\frac{\\text{vers}(\\theta)}{2} = \\frac{1 - \\cos \\theta}{2} = \\sin^2\\left(\\frac{\\theta}{2}\\right)$$\n\nThe haversine formula calculates the great-circle distance $d$ between two points on a sphere of radius $R$ given geographic latitudes $(\\phi_1, \\phi_2)$ and longitudes $(\\lambda_1, \\lambda_2)$:\n\n$$\\text{hav}\\left(\\frac{d}{R}\\right) = \\text{hav}(\\Delta \\phi) + \\cos \\phi_1 \\cos \\phi_2 \\, \\text{hav}(\\Delta \\lambda)$$\n\nWidely employed in celestial navigation and geodesy because it avoids catastrophic numerical cancellation when calculating distances between closely spaced points."
     },
     {
       "word": "hawking process",
@@ -79307,7 +79307,7 @@
         "force of mortality",
         "failure rate"
       ],
-      "definition": "The probability of failure of a component or the death of an organism, within the next unit of time, ∆ t , given survival to time t . It is defined mathematically as Δ t ⋅ h ( t ) = P[X ≤ ( t + Δ t ): X > t ]."
+      "definition": "In survival analysis and reliability engineering, the instantaneous failure rate $h(t)$ of an entity at time $t$, conditional on survival up to time $t$. Expressed mathematically in terms of the probability density function $f(t)$, cumulative distribution function $F(t)$, and survival function $S(t) = 1 - F(t)$:\n\n$$h(t) = \\lim_{\\Delta t \\to 0} \\frac{P(t \\le T < t + \\Delta t \\mid T \\ge t)}{\\Delta t} = \\frac{f(t)}{S(t)} = -\\frac{d}{dt}\\ln S(t)$$\n\nThe cumulative hazard function is $H(t) = \\int_0^t h(u)\\,du = -\\ln S(t)$, from which survival probability is $S(t) = e^{-H(t)}$."
     },
     {
       "word": "hazardous substances",
@@ -79503,7 +79503,7 @@
       "synonyms": [
         "thermal capacity"
       ],
-      "definition": "The amount of heat required to raise the temperature of a substance by 1°C or 1 K or the ratio of heat supplied to an object or specimen to its consequent rise in temperature. In other words, it is heat brought to a system to increase its temperature divided by that temperature increase. Its SI unit is joule per kelvin (JK^-1 or J/K) and expressed as C = , H at a uniform temperature. In this condition no energy is available for doing work and the universe is finally unwound. Heat source Heat engine Heat sink Work output Simplified heat engine."
+      "definition": "In thermodynamics, the extensive physical quantity $C$ representing the ratio of heat energy $\\delta Q$ transferred to a closed system to the resulting change in temperature $dT$:\n\n$$C = \\frac{\\delta Q}{dT}, \\quad \\text{SI unit: } \\text{J}\\cdot\\text{K}^{-1}$$\n\nAt constant volume, the heat capacity is $C_V = \\left(\\frac{\\partial U}{\\partial T}\\right)_V$; at constant pressure, $C_p = \\left(\\frac{\\partial H}{\\partial T}\\right)_p$. For an ideal gas, Mayer's relation states $C_p - C_V = nR$. The specific heat capacity $c = \\frac{C}{m}$ relates total heat transfer to mass and temperature change: $Q = mc\\Delta T$."
     },
     {
       "word": "heat engine",
@@ -79517,7 +79517,7 @@
       "synonyms": [
         "diffusion equation"
       ],
-      "definition": "The partial differential equation defined by ∇ 2 u = c 2 ∂ u ∂ t , where ∇ 2 is the Laplacian in one, two or three dimensions, generally solved by using Fourier series. The solution of the heat equation gives the distribution of temperature in a region as a function of space and time when the temperature at the boundaries, the initial distribution of temperature and the physical properties of the medium are specified."
+      "definition": "A parabolic second-order partial differential equation describing the diffusion of thermal energy in a medium over time. For a medium with thermal conductivity $k$, density $\\rho$, and specific heat capacity $c_p$, temperature distribution $u(\\mathbf{x}, t)$ satisfies:\n\n$$\\frac{\\partial u}{\\partial t} = \\alpha \\nabla^2 u$$\n\nwhere $\\alpha = \\frac{k}{\\rho c_p}$ is the thermal diffusivity (in $\\text{m}^2/\\text{s}$) and $\\nabla^2 = \\sum_{i=1}^n \\frac{\\partial^2}{\\partial x_i^2}$ is the spatial Laplacian operator. In one dimension: $\\frac{\\partial u}{\\partial t} = \\alpha \\frac{\\partial^2 u}{\\partial x^2}$. Fundamental solutions (heat kernel) take Gaussian form: $\\Phi(x, t) = \\frac{1}{\\sqrt{4\\pi \\alpha t}} e^{-\\frac{x^2}{4\\alpha t}}$ for $t > 0$."
     },
     {
       "word": "heat exchange",
