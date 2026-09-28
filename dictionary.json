@@ -95082,7 +95082,9 @@
       "word": "laminar flow",
       "raw_headword": "LAMINAR FLOW",
       "synonyms": [],
-      "definition": "The streamline flow of a fluid in which the fluid moves smoothly in regular paths without fluctuations or turbulence so that velocity, pressure and other flow properties at each point in the fluid remain constant. Over a horizontal surface the flow consists of thin layers, all parallel to each other, that slide over each other. It is commonly observed, where the flow channel is relatively small, the fluid is moving slowly and its viscosity is relatively high. Examples include the flow of oil through a thin tube and blood flow through capillaries."
+      "definition": "The streamline flow of a fluid in which the fluid moves smoothly in regular paths without fluctuations or turbulence so that velocity, pressure and other flow properties at each point in the fluid remain constant. Over a horizontal surface the flow consists of thin layers, all parallel to each other, that slide over each other. It is commonly observed, where the flow channel is relatively small, the fluid is moving slowly and its viscosity is relatively high. Examples include the flow of oil through a thin tube and blood flow through capillaries.",
+      "formula": "$$\\text{Re} = \\frac{\\rho v D}{\\mu} < 2300 \\quad (\\text{laminar}), \\qquad Q = \\frac{\\pi r^4 \\Delta P}{8 \\mu L}$$",
+      "formula_description": "Reynolds number $\\text{Re}$ determines flow regime. Hagen-Poiseuille equation: volumetric flow rate $Q$ through a pipe of radius $r$, length $L$, pressure drop $\\Delta P$, dynamic viscosity $\\mu$. Velocity profile: parabolic, $v(r) = \\dfrac{\\Delta P}{4\\mu L}(R^2 - r^2)$."
     },
     {
       "word": "laminarin",
@@ -96028,7 +96030,9 @@
       "word": "law of conservation of energy",
       "raw_headword": "LAW OF CONSERVATION OF ENERGY",
       "synonyms": [],
-      "definition": "It states that energy cannot be created nor destroyed but may be changed from one form to another."
+      "definition": "It states that energy cannot be created nor destroyed but may be changed from one form to another.",
+      "formula": "$$E_{\\text{total}} = K + U = \\text{constant}, \\qquad \\Delta E_{\\text{system}} + \\Delta E_{\\text{surroundings}} = 0$$",
+      "formula_description": "Kinetic energy $K = \\tfrac{1}{2}mv^2$, potential energy $U$. First law of thermodynamics form: $\\Delta U = Q - W$ where $Q$ is heat added and $W$ is work done by system. Energy cannot be created or destroyed, only transformed between forms."
     },
     {
       "word": "law of conservation of linear momentum",
@@ -96051,7 +96055,9 @@
       "word": "law of conservation of momentum",
       "raw_headword": "LAW OF CONSERVATION OF MOMENTUM",
       "synonyms": [],
-      "definition": "It states that the momentum of an object remains constant. For example, the total momentum of two objects before collision is equal to the total momentum of the two objects after the collision."
+      "definition": "It states that the momentum of an object remains constant. For example, the total momentum of two objects before collision is equal to the total momentum of the two objects after the collision.",
+      "formula": "$$\\mathbf{p}_{\\text{total}} = \\sum_i m_i \\mathbf{v}_i = \\text{constant} \\quad \\text{(no external force)}$$",
+      "formula_description": "For a collision: $m_1\\mathbf{u}_1 + m_2\\mathbf{u}_2 = m_1\\mathbf{v}_1 + m_2\\mathbf{v}_2$. Elastic collision additionally conserves KE: $\\tfrac{1}{2}m_1u_1^2+\\tfrac{1}{2}m_2u_2^2 = \\tfrac{1}{2}m_1v_1^2+\\tfrac{1}{2}m_2v_2^2$. Follows from Newton's third law and translational symmetry (Noether's theorem)."
     },
     {
       "word": "law of cosine",
@@ -96067,7 +96073,9 @@
         "law of constant proportion",
         "proust's law"
       ],
-      "definition": "Established by Joseph Proust (1754-1826), French chemist, it states that the proportions of the amounts of the elements in a pure compound are always the same and are independent of the method by which the compound was produced or that all pure samples of the same chemical compound always contain the same elements combined in the same proportion by mass, no matter how they are made."
+      "definition": "Established by Joseph Proust (1754-1826), French chemist, it states that the proportions of the amounts of the elements in a pure compound are always the same and are independent of the method by which the compound was produced or that all pure samples of the same chemical compound always contain the same elements combined in the same proportion by mass, no matter how they are made.",
+      "formula": "$$\\frac{m_A}{m_B} = \\text{constant for compound } AB$$",
+      "formula_description": "Proust's law: a pure chemical compound always contains its elements in a fixed mass ratio. Example: water is always $\\text{H}_2\\text{O}$: $m_\\text{H} : m_\\text{O} = 2\\times1.008 : 15.999 \\approx 1:8$. Foundation of stoichiometry and atomic theory."
     },
     {
       "word": "law of excluded middle",
@@ -96102,13 +96110,17 @@
       "synonyms": [
         "law of chemical equilibrium"
       ],
-      "definition": "Fundamental law of chemical kinetics formulated in 1864-79 by the Norwegian scientists Cato M. Guldberg (1836-1902) and Peter Waage (1833-1900). It states that the reaction rate of any simple chemical reaction is proportional to the product of the molar concentrations of the reacting substances, each raised to the power corresponding to the number of molecules of that substance in the reaction."
+      "definition": "Fundamental law of chemical kinetics formulated in 1864-79 by the Norwegian scientists Cato M. Guldberg (1836-1902) and Peter Waage (1833-1900). It states that the reaction rate of any simple chemical reaction is proportional to the product of the molar concentrations of the reacting substances, each raised to the power corresponding to the number of molecules of that substance in the reaction.",
+      "formula": "$$K_c = \\frac{\\prod[\\text{products}]^{\\nu_i}}{\\prod[\\text{reactants}]^{\\nu_j}}, \\qquad K_p = K_c(RT)^{\\Delta n}$$",
+      "formula_description": "For reaction $aA + bB \\rightleftharpoons cC + dD$: $K_c = \\dfrac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$. $\\Delta n = (c+d)-(a+b)$ = change in moles of gas. Related to Gibbs energy: $\\Delta G^\\circ = -RT\\ln K$."
     },
     {
       "word": "law of multiple proportions",
       "raw_headword": "LAW OF MULTIPLE PROPORTIONS",
       "synonyms": [],
-      "definition": "One of the fundamental laws of stoichiometry, first discovered by the English chemist John Dalton in 1803. It states that if two elements form more than one compound, then there is a simple relationship between the masses of L one of the elements and a fixed mass of the other element. In other words, when two elements A and B combine to form more than one compound, the different masses of one element that combine with a constant mass of the other are in a simple whole number ratio."
+      "definition": "One of the fundamental laws of stoichiometry, first discovered by the English chemist John Dalton in 1803. It states that if two elements form more than one compound, then there is a simple relationship between the masses of L one of the elements and a fixed mass of the other element. In other words, when two elements A and B combine to form more than one compound, the different masses of one element that combine with a constant mass of the other are in a simple whole number ratio.",
+      "formula": "$$\\frac{m_{B_1}}{m_{B_2}} = \\frac{p}{q} \\quad (p,q \\in \\mathbb{Z}^+, \\text{ small})$$",
+      "formula_description": "Dalton's law: when two elements form more than one compound, the masses of one element combining with a fixed mass of the other are in a simple integer ratio. Example: CO vs CO$_2$ — oxygen ratio is $1:2$."
     },
     {
       "word": "law of octaves",
@@ -96124,7 +96136,9 @@
       "synonyms": [
         "dalton's law"
       ],
-      "definition": "Formulated by John Dalton (1766-1844), British chemist and physicist, it states that the total pressure exerted by a mixture of gases is the sum of the partial pressures of the individual gases. The law of partial pressures may be expressed as P = P A + P B + ... P n . This expression is valid only for mixtures of ideal gases."
+      "definition": "Formulated by John Dalton (1766-1844), British chemist and physicist, it states that the total pressure exerted by a mixture of gases is the sum of the partial pressures of the individual gases. The law of partial pressures may be expressed as P = P A + P B + ... P n . This expression is valid only for mixtures of ideal gases.",
+      "formula": "$$P_{\\text{total}} = \\sum_{i} P_i, \\qquad P_i = x_i P_{\\text{total}}$$",
+      "formula_description": "Dalton's law: total pressure of a gas mixture equals the sum of partial pressures $P_i$. Mole fraction $x_i = n_i / n_{\\text{total}}$. For ideal gases: $P_i V = n_i RT$."
     },
     {
       "word": "law of segregation",
@@ -96275,7 +96289,9 @@
       "word": "le chatelier's principle",
       "raw_headword": "LE CHATELIER'S PRINCIPLE",
       "synonyms": [],
-      "definition": "Formulated by Henri Louis Le Châtelier (1850-1936), French chemist and metallurgist, it describes the response of a system in equilibrium to a change in one of the variables determining the equilibrium. If a system is in equilibrium, any change imposed on the system tends to shift the equilibrium to nullify the effect of the applied change. The principle, which is a consequence of the law of conservation of energy is applied to chemical equilibria. For example, in the generation 2SO2(g) + O2(g) ⇋ 2SO3(g) an increase in pressure on the reaction mixture displaces the equilibrium to the right, since this reduces the total number of molecules present and thus decreases the pressure. The standard enthalpy change for the forward reaction is exothermic. Thus, an increase in temperature displaces the equilibrium to the constant, falling with increasing temperature."
+      "definition": "Formulated by Henri Louis Le Châtelier (1850-1936), French chemist and metallurgist, it describes the response of a system in equilibrium to a change in one of the variables determining the equilibrium. If a system is in equilibrium, any change imposed on the system tends to shift the equilibrium to nullify the effect of the applied change. The principle, which is a consequence of the law of conservation of energy is applied to chemical equilibria. For example, in the generation 2SO2(g) + O2(g) ⇋ 2SO3(g) an increase in pressure on the reaction mixture displaces the equilibrium to the right, since this reduces the total number of molecules present and thus decreases the pressure. The standard enthalpy change for the forward reaction is exothermic. Thus, an increase in temperature displaces the equilibrium to the constant, falling with increasing temperature.",
+      "formula": "$$K_c = \\frac{[\\text{products}]^{\\text{stoich}}}{[\\text{reactants}]^{\\text{stoich}}}, \\qquad \\Delta G^\\circ = -RT\\ln K$$",
+      "formula_description": "If a system at equilibrium is disturbed, it shifts to oppose the change. Reaction quotient $Q_c$ vs $K_c$: if $Q_c < K_c$ reaction shifts right; if $Q_c > K_c$ shifts left. Van't Hoff: $\\frac{d\\ln K}{dT} = \\frac{\\Delta H^\\circ}{RT^2}$."
     },
     {
       "word": "leachate",
@@ -96884,7 +96900,9 @@
       "word": "legendre polynomials",
       "raw_headword": "LEGENDRE POLYNOMIALS",
       "synonyms": [],
-      "definition": "The solutions to the Legendre differential equation, defined as the collection of orthogonal polynomials, P i ( x ), on [-1,1] and by P0 = 1 and may be expressed using Rodrigues' formula P n ( x ) = 2 n n ! d n dx n ( x 2 - 1) n . Each Legendre polynomial P n ( x ) is an n th -degree polynomial that solves Legendre differential equation with p = n ."
+      "definition": "The solutions to the Legendre differential equation, defined as the collection of orthogonal polynomials, P i ( x ), on [-1,1] and by P0 = 1 and may be expressed using Rodrigues' formula P n ( x ) = 2 n n ! d n dx n ( x 2 - 1) n . Each Legendre polynomial P n ( x ) is an n th -degree polynomial that solves Legendre differential equation with p = n .",
+      "formula": "$$P_n(x) = \\frac{1}{2^n n!}\\frac{d^n}{dx^n}\\bigl[(x^2-1)^n\\bigr]$$",
+      "formula_description": "Rodrigues' formula. Solutions to Legendre's ODE: $(1-x^2)y''-2xy'+n(n+1)y=0$. Orthogonality: $\\int_{-1}^{1}P_m(x)P_n(x)\\,dx = \\dfrac{2}{2n+1}\\delta_{mn}$. First few: $P_0=1$, $P_1=x$, $P_2=\\tfrac{1}{2}(3x^2-1)$, $P_3=\\tfrac{1}{2}(5x^3-3x)$."
     },
     {
       "word": "legendre symbol",
@@ -97113,7 +97131,9 @@
       "word": "lenz's law",
       "raw_headword": "LENZ'S LAW",
       "synonyms": [],
-      "definition": "The law, discovered by the German scientist H. F. E. Lenz in 1834, which states that the direction of an induced electromotive force (emf) tends to oppose its cause or that an induced electric current always flows in such a direction that it opposes the charge producing it. For example, in an electric motor, the armature is turning in a magnetic field, thus inducing an electromotive force in it. Lenz's law requires that this electromotive force, called back electromotive force or counter electromotive force , opposes the motion of the armature and also the original electromotive force, causing the motor to rotate. It is a most important statement that describes electromagnetic induction."
+      "definition": "The law, discovered by the German scientist H. F. E. Lenz in 1834, which states that the direction of an induced electromotive force (emf) tends to oppose its cause or that an induced electric current always flows in such a direction that it opposes the charge producing it. For example, in an electric motor, the armature is turning in a magnetic field, thus inducing an electromotive force in it. Lenz's law requires that this electromotive force, called back electromotive force or counter electromotive force , opposes the motion of the armature and also the original electromotive force, causing the motor to rotate. It is a most important statement that describes electromagnetic induction.",
+      "formula": "$$\\mathcal{E} = -\\frac{d\\Phi_B}{dt}, \\qquad \\Phi_B = \\int \\mathbf{B}\\cdot d\\mathbf{A}$$",
+      "formula_description": "The induced EMF opposes the change in flux. Negative sign = Lenz's law. For a coil of $N$ turns: $\\mathcal{E} = -N\\dfrac{d\\Phi_B}{dt}$. Energy is conserved — the opposing current dissipates exactly the energy supplied by the agent causing flux change."
     },
     {
       "word": "lepanthium",
@@ -97426,7 +97446,9 @@
       "word": "lewis acid",
       "raw_headword": "LEWIS ACID",
       "synonyms": [],
-      "definition": "A molecular entity (and other corresponding chemical species) that is an electron-pair acceptor and therefore able to react with a Lewis base to form a Lewis adduct, by sharing the electron pair furnished by the Lewis base. An example of of Lewis acid base reaction is BF3 + NH3 → [H3 N: → BF3 ]. In this reaction, BF3 is the Lewis acid, NH3 the Lewis base and [H3 N: → BF3 ] the adduct."
+      "definition": "A molecular entity (and other corresponding chemical species) that is an electron-pair acceptor and therefore able to react with a Lewis base to form a Lewis adduct, by sharing the electron pair furnished by the Lewis base. An example of of Lewis acid base reaction is BF3 + NH3 → [H3 N: → BF3 ]. In this reaction, BF3 is the Lewis acid, NH3 the Lewis base and [H3 N: → BF3 ] the adduct.",
+      "formula": "$$\\text{A} + :\\text{B} \\longrightarrow \\text{A:B}$$",
+      "formula_description": "Lewis acid $\\text{A}$ = electron-pair acceptor; Lewis base $\\text{B}$ = electron-pair donor. Broader than Brønsted-Lowry definition (no $\\text{H}^+$ required). Examples: $\\text{BF}_3 + \\text{NH}_3 \\rightarrow \\text{F}_3\\text{B:NH}_3$; $\\text{AlCl}_3$, $\\text{Fe}^{3+}$, $\\text{Cu}^{2+}$ are Lewis acids."
     },
     {
       "word": "lewis acid-base",
@@ -98686,7 +98708,9 @@
       "synonyms": [
         "momentum"
       ],
-      "definition": "The product of the mass and velocity of an object ( p = mv ). Its SI unit is kg·m/s. Newton's second law of motion states that the rate of change of momentum is proportional to the force acting on the particle. Like velocity, momentum is a vector quantity, possessing a direction as its velocity component, as well as a magnitude. Momentum is a conserved quantity (law of conservation of linear momentum), meaning that if a closed system is not affected by external forces, its total momentum cannot change."
+      "definition": "The product of the mass and velocity of an object ( p = mv ). Its SI unit is kg·m/s. Newton's second law of motion states that the rate of change of momentum is proportional to the force acting on the particle. Like velocity, momentum is a vector quantity, possessing a direction as its velocity component, as well as a magnitude. Momentum is a conserved quantity (law of conservation of linear momentum), meaning that if a closed system is not affected by external forces, its total momentum cannot change.",
+      "formula": "$$\\mathbf{p} = m\\mathbf{v}, \\qquad \\mathbf{F} = \\frac{d\\mathbf{p}}{dt}$$",
+      "formula_description": "SI unit: $\\mathrm{kg\\,m\\,s^{-1}}$ (= $\\mathrm{N\\,s}$). Impulse-momentum theorem: $\\mathbf{J} = \\Delta\\mathbf{p} = \\int \\mathbf{F}\\,dt$. Relativistic momentum: $\\mathbf{p} = \\gamma m_0 \\mathbf{v}$ where $\\gamma = 1/\\sqrt{1-v^2/c^2}$."
     },
     {
       "word": "linear motor",
@@ -100510,7 +100534,9 @@
       "word": "lorentz force",
       "raw_headword": "LORENTZ FORCE",
       "synonyms": [],
-      "definition": "The force F exerted on a charge Q that is moving with a velocity v in a magnetic field with a magnetic flux density B given by the vector product: F = q ( E + vxB ), where F is the force in newtons, E is the electric field in volts per metre, B is the magnetic field in tesla, q is the electric charge of the particle in coulombs and x is the vector cross product in metres per second."
+      "definition": "The force F exerted on a charge Q that is moving with a velocity v in a magnetic field with a magnetic flux density B given by the vector product: F = q ( E + vxB ), where F is the force in newtons, E is the electric field in volts per metre, B is the magnetic field in tesla, q is the electric charge of the particle in coulombs and x is the vector cross product in metres per second.",
+      "formula": "$$\\mathbf{F} = q(\\mathbf{E} + \\mathbf{v}\\times\\mathbf{B})$$",
+      "formula_description": "Force on a charge $q$ moving with velocity $\\mathbf{v}$ in electric field $\\mathbf{E}$ and magnetic field $\\mathbf{B}$. Magnetic component $q\\mathbf{v}\\times\\mathbf{B}$ does no work (perpendicular to $\\mathbf{v}$). Cyclotron radius: $r = \\dfrac{mv}{|q|B}$; cyclotron frequency: $\\omega_c = \\dfrac{|q|B}{m}$."
     },
     {
       "word": "lorentz group",
@@ -100522,7 +100548,9 @@
       "word": "lorentz transformation",
       "raw_headword": "LORENTZ TRANSFORMATION",
       "synonyms": [],
-      "definition": "A set of equations for correlating space and time coordinates in two frames of reference. It may also be defined as one of the equations relating space and time that holds between two observers of an event who are moving with uniform velocity relative to each other."
+      "definition": "A set of equations for correlating space and time coordinates in two frames of reference. It may also be defined as one of the equations relating space and time that holds between two observers of an event who are moving with uniform velocity relative to each other.",
+      "formula": "$$t' = \\gamma\\!\\left(t - \\frac{vx}{c^2}\\right),\\quad x' = \\gamma(x - vt),\\quad \\gamma = \\frac{1}{\\sqrt{1 - v^2/c^2}}$$",
+      "formula_description": "Special relativity coordinate transform between inertial frames $S$ and $S'$ with relative velocity $v$. Time dilation: $\\Delta t' = \\gamma\\,\\Delta t_0$. Length contraction: $L = L_0/\\gamma$. Velocity addition: $u' = \\dfrac{u - v}{1 - uv/c^2}$."
     },
     {
       "word": "lorentz, hendrick antoon",
