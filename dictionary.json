@@ -85860,7 +85860,7 @@
       "word": "improper integral",
       "raw_headword": "IMPROPER INTEGRAL",
       "synonyms": [],
-      "definition": "A definite integral with one or both limits of integration infinite or having an integrand that becomes infinite between the limits of integration. The improper integral f ( x ) dx a ∞ ∫ is said to converge if f ( x ) dx a ∞ ∫ exists and to diverge otherwise. Similarly, if the integrand has a singularity at an endpoint of the interval of integration, then the integral is defined as the limit of the proper integrals as the limit of integration tends to that endpoint from within the interval; if the singularity is in the interior of the interval, then the integral is the sum of the two improper integrals on the subintervals above and below the singularity."
+      "definition": "In calculus, a definite integral where one or both limits of integration are infinite, or where the integrand has an infinite discontinuity (singularity) within the integration interval $[a, b]$. An integral over an infinite interval is defined as a limit:\n\n$$\\int_a^\\infty f(x)\\,dx = \\lim_{t \\to \\infty} \\int_a^t f(x)\\,dx$$\n\nFor a singularity at an interior point $c \\in (a, b)$, it is evaluated as $\\int_a^c f(x)\\,dx + \\int_c^b f(x)\\,dx$. The integral converges if the finite limit exists and diverges otherwise. Cauchy principal value (P.V.) provides symmetric regularization for non-convergent integrals."
     },
     {
       "word": "improper point",
@@ -85880,7 +85880,7 @@
       "word": "impulse",
       "raw_headword": "IMPULSE",
       "synonyms": [],
-      "definition": "1. The product of force, F and the time t for which it acts. From Newton's second law of motion, Force ( F ) = change in momentum divided by time ( t ) = therefore, Ft = mV - mU , where Ft is the impulse and mV = mU is the change in momentum. Hence, impulse equals the change in momentum produced by the force ( F ) in this time interval. If a graph is drawn of force ( F ) against time ( t ), then the impulse equals the area under the curve, i.e., it is the integral of a force F between times t 1 and t 2 , F t 1 t 2 ∫ dt . 2. An electrochemical signal that travels along the length of a nerve fibre, serving as the means by which information is transmitted through the nervous system. 3. A force that acts for a very short time. 4. A surge of electrical power in one direction."
+      "definition": "1. In classical mechanics, the integral of a resultant force $\\mathbf{F}(t)$ over the time interval $\\Delta t = t_2 - t_1$ during which it acts, equal to the net change in linear momentum $\\Delta \\mathbf{p}$ (impulse-momentum theorem):\n\n$$\\mathbf{J} = \\int_{t_1}^{t_2} \\mathbf{F}(t)\\,dt = \\Delta \\mathbf{p} = m\\mathbf{v} - m\\mathbf{u}$$\n\nOn a force-time graph ($F$ vs $t$), impulse equals the area under the curve. SI unit: newton-second ($\\text{N}\\cdot\\text{s}$) or $\\text{kg}\\cdot\\text{m}\\cdot\\text{s}^{-1}$. 2. In neurobiology, an action potential traveling along an axon. 3. In electrical engineering, a transient high-amplitude pulse or Dirac delta function $\\delta(t)$."
     },
     {
       "word": "impure",
@@ -86045,7 +86045,7 @@
       "word": "inclined plane",
       "raw_headword": "INCLINED PLANE",
       "synonyms": [],
-      "definition": "A sloping surface with a uniform gradient. One of the four simple machines along with the lever, the wheel and axle and the pulley, it consists of a ramp or a similar An example of an inclined plane indicating the forces acting on the body of the object normal force weight (mg) horizontal surface F A θ θ m g Cosθ A mgSinθ hCFRB wedge-shaped device, which requires less effort than lifting a load vertically straight upwards, yet the total amount of work done is the same in both cases. An example of an inclined plane is a staircase, which allows people to move within a building from one floor to another with less effort than climbing straight up a ladder would require. Referring to the diagram, velocity ratio ( V r ), which is the ratio of distance moved by the effort to the distance moved by the load of an inclined plane is expressed as V r = , where θ is the angle between the sloping surface and the horizontal surface. It can also be expressed as follows: V r = l h , where l is the distance moved by the effort (AB) and h is the distance moved by the load (CB)."
+      "definition": "A classical simple machine consisting of a rigid flat planar surface tilted at an angle $\\theta$ to the horizontal. It reduces the effort force required to raise a load to vertical height $h$ by increasing the distance $l$ traveled along the ramp. For frictionless motion:\n\n$$\\text{Velocity Ratio (VR)} = \\frac{\\text{distance effort}}{\\text{distance load}} = \\frac{l}{h} = \\frac{1}{\\sin \\theta}$$\n\nThe ideal mechanical advantage is $\\text{IMA} = \\frac{1}{\\sin \\theta}$. The parallel component of gravity opposing motion is $F_{\\parallel} = mg\\sin \\theta$, and normal reaction force is $N = mg\\cos \\theta$. Taking friction coefficient $\\mu$ into account, minimum effort to pull a load upward is $F = mg(\\sin \\theta + \\mu \\cos \\theta)$."
     },
     {
       "word": "included",
@@ -86071,7 +86071,7 @@
       "word": "inclusion-exclusion principle",
       "raw_headword": "INCLUSION-EXCLUSION PRINCIPLE",
       "synonyms": [],
-      "definition": "The principle that the number of elements in a finite set that possess at least one out of k possible properties is equal to the number possessing exactly one of the properties, less the number possessing exactly two properties, plus the number possessing exactly three properties and so on, up to the number possessing all k . For example, in two sets, it is the number of elements in its union, given by A ∪ B = A + B - A ∩ B , where A and B are two finite sets."
+      "definition": "A counting technique in combinatorics and probability theory to calculate the cardinality of the union of finite sets. For two sets $A$ and $B$:\n\n$$|A \\cup B| = |A| + |B| - |A \\cap B|$$\n\nFor $n$ finite sets $A_1, A_2, \\dots, A_n$, the general formula alternates additions and subtractions of multi-way intersections:\n\n$$\\left| \\bigcup_{i=1}^n A_i \\right| = \\sum_{i=1}^n |A_i| - \\sum_{1 \\le i < j \\le n} |A_i \\cap A_j| + \\sum_{1 \\le i < j < k \\le n} |A_i \\cap A_j \\cap A_k| - \\dots + (-1)^{n-1} \\left| \\bigcap_{i=1}^n A_i \\right|$$\n\nIn probability, it gives the probability of the union of events $\\mathbb{P}\\left(\\bigcup A_i\\right)$."
     },
     {
       "word": "inclusive",
@@ -86101,7 +86101,7 @@
       "word": "incommensurable",
       "raw_headword": "INCOMMENSURABLE",
       "synonyms": [],
-      "definition": "1. Of two numbers, having an irrational ratio or not in rational proportion to each other; for example, 2 and √2. 2. Not having units of the same dimension. 3. Unrelated to another measurement by integral multiples."
+      "definition": "In mathematics, two non-zero real numbers $a$ and $b$ (or geometric lengths) whose numerical ratio $\\frac{a}{b}$ is an irrational number, meaning they possess no common unit of measure (no common submultiple $c$ such that $a = mc$ and $b = nc$ for integers $m, n \\in \\mathbb{Z}$):\n\n$$\\frac{a}{b} \\notin \\mathbb{Q}$$\n\nDiscovered by the Pythagoreans in the 5th century BCE when proving that the diagonal $d$ of a unit square and its side length $s$ are incommensurable: $\\frac{d}{s} = \\sqrt{2} \\notin \\mathbb{Q}$."
     },
     {
       "word": "incommensurate lattice",
@@ -86174,13 +86174,13 @@
       "word": "incomputable number",
       "raw_headword": "INCOMPUTABLE NUMBER",
       "synonyms": [],
-      "definition": "A real number with an infinite decimal (or binary) expansion that cannot be enumerated by any universal computer."
+      "definition": "A real number whose decimal or binary expansion cannot be generated by any finite Turing machine or mechanical computational algorithm. Because the set of all Turing algorithms is countably infinite ($|\\mathcal{M}| = \\aleph_0$) while the set of real numbers $\\mathbb{R}$ is uncountably infinite ($|\\mathbb{R}| = 2^{\\aleph_0} = \\mathfrak{c}$), almost all real numbers are incomputable. A famous example is Chaitin's constant $\\Omega$, representing the halting probability of a universal prefix-free Turing machine."
     },
     {
       "word": "inconsistent",
       "raw_headword": "INCONSISTENT",
       "synonyms": [],
-      "definition": "1. Inconsistent equations are two or more equations that cannot be solved simultaneously by using one set of values for the variables. For example, the equations x + 2 y = 5 and x + 2 y = 6 as well as 2 x^-3 y = 1 and 4 x^-6 y = 1 are inconsistent as there are no solutions to the systems. If the graphs of equations do not intersect and are parallel, there are no solutions that are true for both equations and are therefore, inconsistent. 2. Of a set of propositions or statements, incapable of all being true at the same time, incompatible. 3. Of a set of well-formed formulae of a formal theory, such that an explicit contradiction may be derived from them by the derivation rules of the theory. 4. Of a formal theory, having an explicit contradiction as a theorem or more generally having an atomic statement as a theorem, whence excluding nothing from its theorems."
+      "definition": "1. In linear algebra, a system of simultaneous equations $\\mathbf{A}\\mathbf{x} = \\mathbf{b}$ that has no solution vector $\\mathbf{x}$. By the Rouché-Capelli theorem, a system is inconsistent if and only if the matrix rank of the coefficient matrix is strictly less than the rank of the augmented matrix:\n\n$$\\text{rank}(\\mathbf{A}) < \\text{rank}([\\mathbf{A} \\mid \\mathbf{b}])$$\n\nGeometrically in two dimensions, inconsistent linear systems represent distinct parallel lines that never intersect (e.g., $x + 2y = 5$ and $x + 2y = 6$). 2. In formal logic, a set of propositions or axioms from which an explicit contradiction ($P \\land \\neg P$) can be formally derived."
     },
     {
       "word": "incrassate",
@@ -86192,13 +86192,13 @@
       "word": "increasing",
       "raw_headword": "INCREASING",
       "synonyms": [],
-      "definition": "Of a function of a single variable, having the property that f ( x ) ≥ f ( y ) for all pairs of arguments such that x > y . If f ( x ) > f ( y ) for all x > y the function is strictly increasing. The symbol is sometimes used to denote either the strict or weak property."
+      "definition": "In mathematical analysis, a real-valued function $f: I \\to \\mathbb{R}$ on an interval $I$ that preserves numerical order. A function is strictly increasing if:\n\n$$x_1 < x_2 \\implies f(x_1) < f(x_2) \\quad \\forall x_1, x_2 \\in I$$\n\nand monotonically increasing (non-decreasing) if $x_1 \\le x_2 \\implies f(x_1) \\le f(x_2)$. For a differentiable function on an open interval, $f$ is monotonically increasing if and only if its first derivative is non-negative: $f'(x) \\ge 0$ for all $x \\in I$."
     },
     {
       "word": "increment",
       "raw_headword": "INCREMENT",
       "synonyms": [],
-      "definition": "1. For bulk materials and large units, it is an individual portion of material collected by a single operation of a sampling device. Increments may be reduced individually or tested either individually or combined with other increments with the resulting composite reduced in size and tested as a single unit. Increments are created by the sampling operation and are usually taken from parts of a lot separated in time or space. Increments of a bulk population correspond to units of a packaged population. 2. In mathematics, it is a small but finite change in the value of a variable or function, written ∆ x or δ x . A negative increment can be called decrement ."
+      "definition": "In differential calculus, a small finite change in the value of an independent variable $x$, denoted $\\Delta x$ or $\\delta x$, which produces a corresponding change in dependent variable $y = f(x)$:\n\n$$\\Delta y = f(x + \\Delta x) - f(x)$$\n\nThe derivative $\\frac{dy}{dx}$ is the limiting ratio of increments as the increment of the independent variable approaches zero:\n\n$$\\frac{dy}{dx} = \\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x} = \\lim_{\\Delta x \\to 0} \\frac{f(x + \\Delta x) - f(x)}{\\Delta x}$$\n\nA negative increment is termed a decrement."
     },
     {
       "word": "incubation",
@@ -86271,7 +86271,7 @@
         "antiderivative",
         "primitive integral"
       ],
-      "definition": "An indefinite integral is the integral ∫ f ( x ) dx = F ( x ) + c , where c is an arbitrary constant."
+      "definition": "In integral calculus, the family of all antiderivatives of a given continuous function $f(x)$, denoted without integration limits by the symbol $\\int$:\n\n$$\\int f(x)\\,dx = F(x) + C$$\n\nwhere $F(x)$ is any specific antiderivative satisfying $F'(x) = \\frac{d}{dx}[F(x)] = f(x)$, and $C \\in \\mathbb{R}$ represents the arbitrary constant of integration. By the Fundamental Theorem of Calculus, the indefinite integral undoes differentiation up to an additive constant."
     },
     {
       "word": "indehiscent",
@@ -86331,7 +86331,7 @@
       "word": "indeterminate equations",
       "raw_headword": "INDETERMINATE EQUATIONS",
       "synonyms": [],
-      "definition": "Simultaneous equations which, for some reason, have an infinite number of solutions. Examples are x + y = 4 and 2 x + 2 y = 8, where the two equations are equivalent and x + y = z + 6 y + 3 = 8 z , where there is insufficient data."
+      "definition": "A system of algebraic or Diophantine equations having fewer independent constraints than unknowns, leading to an infinite number of possible solutions. For example, the linear Diophantine equation in two variables:\n\n$$ax + by = c \\quad (a, b, c \\in \\mathbb{Z})$$\n\npossesses integer solutions if and only if $\\gcd(a, b)$ divides $c$. If $(x_0, y_0)$ is a particular solution, the complete family of solutions is:\n\n$$x = x_0 + k \\frac{b}{\\gcd(a, b)}, \\qquad y = y_0 - k \\frac{a}{\\gcd(a, b)} \\quad (k \\in \\mathbb{Z})$$"
     },
     {
       "word": "index",
@@ -86359,7 +86359,7 @@
       "synonyms": [
         "indices law"
       ],
-      "definition": "A rule for manipulating index numbers when powers are multiplied or divided. Certain index laws must be followed. For example, when multiplying powers of the same term, add indices, for example, a 3 × a 2 = a (3 + 2) = a 5 ; when dividing powers of the same term, subtract indices, for example, a 5 ÷ a 2 = a (5 - 2) = a 3 ; when raising a power of a term to another power, the indices must be multiplied, for example, (a 5 ) 2 = a 10 ."
+      "definition": "A collection of fundamental algebraic algebraic rules governing mathematical operations on powers (exponents) with the same base $a \\neq 0$:\n\n$$a^m \\cdot a^n = a^{m+n}$$\n\n$$\\frac{a^m}{a^n} = a^{m-n}$$\n\n$$(a^m)^n = a^{mn}$$\n\n$$(ab)^n = a^n b^n, \\quad \\left(\\frac{a}{b}\\right)^n = \\frac{a^n}{b^n}$$\n\n$$a^0 = 1, \\quad a^{-n} = \\frac{1}{a^n}, \\quad a^{m/n} = \\sqrt[n]{a^m} = (\\sqrt[n]{a})^m$$"
     },
     {
       "word": "index notation",
@@ -86449,7 +86449,7 @@
       "synonyms": [
         "characteristic function"
       ],
-      "definition": "The extended real-valued function defined on a given set that takes value 1 for every element of the set and value 0 for every element not contained in the set. It is denoted i c or δ c ."
+      "definition": "In set theory, measure theory, and probability, a characteristic function $\\mathbf{1}_A$ (or $I_A, \\chi_A$) associated with a subset $A \\subseteq X$ that indicates membership of an element $x \\in X$:\n\n$$\\mathbf{1}_A(x) = \\begin{cases} 1 & \\text{if } x \\in A \\\\[4pt] 0 & \\text{if } x \\notin A \\end{cases}$$\n\nIn probability, the expected value of the indicator function of an event $E$ equals the probability of that event: $\\mathbb{E}[\\mathbf{1}_E] = \\mathbb{P}(E)$. Useful properties include $\\mathbf{1}_{A \\cap B} = \\mathbf{1}_A \\mathbf{1}_B$ and $\\mathbf{1}_{A \\cup B} = \\mathbf{1}_A + \\mathbf{1}_B - \\mathbf{1}_A \\mathbf{1}_B$."
     },
     {
       "word": "indicator organism",
@@ -86796,7 +86796,7 @@
       "synonyms": [
         "xl"
       ],
-      "definition": "The ratio of the potential difference (V L ) across the inductor to the amplitude of current (I o ) through it. It is expressed as X L = VLIO . It can also be expressed as X L = ωL = 2 πfL, where L = inductance and ω is angular frequency. Its unit is ohm and the symbol is Ω."
+      "definition": "In alternating current (AC) circuit analysis, the opposition presented to the flow of alternating current by an ideal inductor, resulting from self-induced back emf. Denoted $X_L$, it is directly proportional to angular frequency $\\omega = 2\\pi f$ and inductance $L$:\n\n$$X_L = \\omega L = 2\\pi f L, \\quad \\text{SI unit: ohm (}\\Omega\\text{)}$$\n\nIn complex impedance notation, the impedance of an inductor is $Z_L = j\\omega L = j X_L$, causing voltage across an ideal inductor to lead the current by a phase angle of $90^\\circ$ ($\\frac{\\pi}{2}\\,\\text{rad}$)."
     },
     {
       "word": "inductive step",
@@ -86980,7 +86980,7 @@
         "polar moment of inertia of mass",
         "angular mass"
       ],
-      "definition": "A measure of an object's resistance to changes to its angular speed or rotation speed. It is the inertia of a rotating body with respect to its rotation. To change the rate of rotation of an object by a certain amount, a relatively large force is required for an object with a large rotational inertia and a relatively small force is required for an object with a small rotational inertia. In automobile engines, flywheels attached to the crankshaft have a large rotational inertia. The engine delivers power in surges; the large rotational inertia of the flywheel absorbs these surges and keeps the engine delivering power smoothly. The moment of inertia plays much the same role in rotational dynamics as mass does in linear dynamics, describing the relationship between angular momentum and angular velocity, torque and angular acceleration and several other quantities. Its symbol is l and its SI unit is kg m^-2 . It is calculated as the sum of the products of the component masses of an object multiplied by the square of their distance from the axis."
+      "definition": "In classical Newtonian mechanics, the fundamental intrinsic property of a body $m_i$ that quantifies its resistance to linear acceleration when subjected to a net external force $\\mathbf{F}$:\n\n$$\\mathbf{F} = m_i \\mathbf{a} \\implies m_i = \\frac{|\\mathbf{F}|}{|\\mathbf{a}|}, \\quad \\text{SI unit: kg}$$\n\nBy Einstein's weak equivalence principle, inertial mass is strictly equivalent to gravitational mass $m_g$ ($m_i = m_g$), confirmed experimentally to within parts in $10^{15}$. For rotational motion, rotational inertia (moment of inertia) $I$ plays the analogous role: $I = \\sum m_i r_i^2 = \\int r^2\\,dm$, where torque $\\tau = I\\alpha$."
     },
     {
       "word": "inertial platform",
