@@ -92541,13 +92541,13 @@
       "word": "k",
       "raw_headword": "k",
       "synonyms": [],
-      "definition": "1. The symbol for the metric prefix, kilo- with the value 1000 (10 3 ). For example, 1 kg (10 3 ) is equal to 1000 grams. 2. In mathematics, a vector on the z-axis, having a length of 1 unit. It is conventionally printed in bold type, k . 3. The symbol for Boltzmann constant, the ratio of the universal gas constant to Avogadro's number, with the value 1.3807 × 10 -23 J/K."
+      "definition": "1. In the SI metric system, the symbol $\\text{k}$ for the prefix kilo-, denoting a scaling factor of one thousand ($10^3 = 1000$). For example, $1\\,\\text{kg} = 10^3\\,\\text{g} = 1000\\,\\text{grams}$. 2. In vector calculus, the standard unit Cartesian basis vector pointing along the positive $z$-axis, denoted $\\mathbf{k}$ or $\\hat{\\mathbf{k}}$, with Cartesian coordinates $(0, 0, 1)$ such that $\\|\\hat{\\mathbf{k}}\\| = 1$. 3. In statistical mechanics and thermodynamics, the Boltzmann constant $k_B$ (or $k$), defined as the ratio of molar gas constant $R$ to Avogadro's number $N_A$:\n\n$$k_B = \\frac{R}{N_A} = 1.380649 \\times 10^{-23}\\,\\text{J}\\cdot\\text{K}^{-1}$$"
     },
     {
       "word": "k",
       "raw_headword": "K",
       "synonyms": [],
-      "definition": "1. The symbol for the kelvin, the SI base unit of absolute or thermodynamic temperature. One kelvin represents the same temperature difference as one degree Celsius on the centigrade scale. 2. In mathematics, symbol for the special function, which represents the complete elliptic integral of the first kind with the formula K( k ) = (1 - k 2 sin 2 π /2 ∫ θ ) - 1 d θ , which gives the period of a pendulum. 3. In computer science, the prefix kilo- with the symbol K- often represents 2 10 , which is equal to 1024. This has been replaced by the prefix kibi- with the symbol Ki- in 1998 by a resolution of the International Electrotechnical Commission."
+      "definition": "1. The symbol $\\text{K}$ for the kelvin, the SI base unit of absolute thermodynamic temperature. 2. In mathematics, the symbol $K(k)$ for the complete elliptic integral of the first kind with elliptic modulus $k \\in [0, 1)$:\n\n$$K(k) = \\int_0^{\\pi/2} \\frac{d\\theta}{\\sqrt{1 - k^2 \\sin^2 \\theta}} = \\frac{\\pi}{2} \\sum_{n=0}^\\infty \\left( \\frac{(2n)!}{2^{2n}(n!)^2} \\right)^2 k^{2n}$$\n\nwhich governs the exact period of a large-amplitude simple pendulum of length $L$: $T = 4\\sqrt{\\frac{L}{g}}K\\left(\\sin\\frac{\\theta_0}{2}\\right)$. 3. In computing, the historical binary prefix kilo- (symbol $\\text{K}$) representing $2^{10} = 1024\\,\\text{bytes}$, formally standardized by the IEC as the kibibyte ($\\text{KiB}$)."
     },
     {
       "word": "k-ar dating",
@@ -92555,7 +92555,7 @@
       "synonyms": [
         "potassium-argon dating"
       ],
-      "definition": "A method of isotopically dating the ages of rocks based on the radioactive decay of potassium^-40 ( 40 K) to the stable isotope argon^-40 ( 40 Ar). Ages are based on the known half-life of 40 K and the ratio of 40 K to 40 Ar. The method is used to measure a wide variety of ages of about 100,000 to 30 million years old."
+      "definition": "In geochronology, an absolute radiometric dating method based on the branched radioactive decay of potassium-40 ($^{40}\\text{K}$) into the radiogenic stable noble gas argon-40 ($^{40}\\text{Ar}$) via electron capture and positron emission with total half-life $t_{1/2} \\approx 1.248 \\times 10^9\\,\\text{years}$. The age $t$ of a geological rock or mineral sample is calculated from the accumulation equation:\n\n$$t = \\frac{1}{\\lambda} \\ln\\left( 1 + \\frac{^{40}\\text{Ar}^*}{^{40}\\text{K}} \\left(\\frac{\\lambda}{\\lambda_e}\\right) \\right)$$\n\nwhere $\\lambda = 5.543 \\times 10^{-10}\\,\\text{yr}^{-1}$ is total decay constant, and $\\lambda_e = 0.581 \\times 10^{-10}\\,\\text{yr}^{-1}$ is the decay constant for decay to argon. Routinely dates volcanic rocks and hominid fossil strata spanning from $10^5$ to $4.5 \\times 10^9$ years old."
     },
     {
       "word": "k-selected species",
@@ -92585,13 +92585,13 @@
         "4s",
         "carb oxym ethy l"
       ],
-      "definition": "An analogue of glutamic acid obtained from the red algae, Digenea simplex. Its molecular formula is C10 H15 NO4 , density 1.22 g/cm3 , boiling point 439.88 °C at 760 mmHg, melting point 250-252.2 °C. It is an amino- acid agonist for the kainite receptor, a neurotoxin and has anthelmintic properties."
+      "definition": "A naturally occurring heterocyclic pyrrolidine dicarboxylic acid and potent neuroexcitatory amino acid analogue of L-glutamic acid, isolated from the red marine alga *Digenea simplex*. Molecular formula $\\text{C}_{10}\\text{H}_{15}\\text{NO}_4$, molar mass $213.23\\,\\text{g/mol}$, density $1.22\\,\\text{g/cm}^3$, and melting point $250\\text{--}252\\,^\\circ\\text{C}$ ($523\\text{--}525\\,\\text{K}$). Acts as a selective agonist at ionotropic kainate receptors in the central nervous system, widely used in neuropharmacology to induce experimental temporal lobe epilepsy and excitotoxic neuronal injury models."
     },
     {
       "word": "kainite",
       "raw_headword": "KAINITE",
       "synonyms": [],
-      "definition": "A naturally occurring mineral salt of magnesium sulfate and potassium chloride, with the chemical formula MgSO4 .KCl.3H2 O. It is a source of potassium and, therefore, fertiliser."
+      "definition": "A naturally occurring hydrated evaporite sulfate-chloride mineral of magnesium and potassium with chemical formula:\n\n$$\\text{MgSO}_4 \\cdot \\text{KCl} \\cdot 3\\text{H}_2\\text{O} \\quad \\text{or} \\quad \\text{KMg(SO}_4\\text{)Cl} \\cdot 3\\text{H}_2\\text{O}$$\n\nMohs hardness $2.5\\text{--}3.0$, density $2.13\\,\\text{g/cm}^3$. Crystallizes in the monoclinic crystal system. Forms naturally in marine salt and potash evaporite beds; serves as an important industrial source of potassium and magnesium fertilizers."
     },
     {
       "word": "kainte",
@@ -92609,7 +92609,7 @@
       "word": "kakutani fixed point theorem",
       "raw_headword": "KAKUTANI FIXED POINT THEOREM",
       "synonyms": [],
-      "definition": "The theorem that every correspondence Γ that maps a compact convex subset C of a locally convex space into itself, with a closed graph and convex non-empty images (that is, Γ ( x ) is a non-empty convex subset of C for all x ∈ C ), has a fixed point, x ∈Γ ( x ). This extends Brouwer's theorem."
+      "definition": "A cornerstone theorem of mathematical economics and topology proved by Shizuo Kakutani in 1941, generalizing Brouwer's fixed-point theorem to set-valued correspondences. It states that if $S$ is a non-empty, compact, convex subset of Euclidean space $\\mathbb{R}^n$, and $\\Phi: S \\rightrightarrows S$ is a set-valued correspondence with a closed graph such that $\\Phi(x)$ is non-empty and convex for all $x \\in S$:\n\n$$\\exists x^* \\in S \\quad \\text{such that} \\quad x^* \\in \\Phi(x^*)$$\n\nServes as the foundational mathematical tool in John Nash's 1950 proof of the existence of mixed-strategy Nash equilibria in non-cooperative finite games, and Arrow and Debreu's proof of competitive general economic equilibrium."
     },
     {
       "word": "kale",
@@ -92651,7 +92651,7 @@
       "word": "kantorovitch inequality",
       "raw_headword": "KANTOROVITCH INEQUALITY",
       "synonyms": [],
-      "definition": "The inequality, valid for any positive definite matrix, P and any non-zero vector, x , that x , x x , x x ,P x x ,P^-1 x = 4 mM m + M2 , where m and M are respectively, the smallest and the largest eigenvalues of P. This is useful in estimating convergence rates for descent methods."
+      "definition": "In numerical analysis and optimization theory, an inequality established by Leonid Kantorovich (1948) providing an upper bound on Cauchy-Schwarz error for positive-definite operators. For any symmetric positive-definite real matrix $\\mathbf{P}$ with smallest eigenvalue $m > 0$ and largest eigenvalue $M \\ge m$, and any non-zero vector $\\mathbf{x} \\in \\mathbb{R}^n$:\n\n$$\\frac{(\\mathbf{x}^T \\mathbf{P} \\mathbf{x})(\\mathbf{x}^T \\mathbf{P}^{-1} \\mathbf{x})}{(\\mathbf{x}^T \\mathbf{x})^2} \\le \\frac{(m + M)^2}{4mM} = \\frac{(\\kappa + 1)^2}{4\\kappa}$$\n\nwhere $\\kappa = \\frac{M}{m}$ is the matrix spectral condition number. Governs the linear convergence rate of the method of steepest descent for quadratic optimization: $\\|\\mathbf{x}_{k+1} - \\mathbf{x}^*\\|_P \\le \\left(\\frac{\\kappa - 1}{\\kappa + 1}\\right)\\|\\mathbf{x}_k - \\mathbf{x}^*\\|_P$."
     },
     {
       "word": "kaolin",
@@ -92665,7 +92665,7 @@
       "word": "kaolinite",
       "raw_headword": "KAOLINITE",
       "synonyms": [],
-      "definition": "A white or grey clay mineral which is the chief constituent of kaolin, with the chemical formula Al 2 Si 2 O5 (OH) 4 . It is the mineral form of aluminium potassium silicate (KAlSi 3 O8 ); found in sediments, soils, hydrothermal deposits and sedimentary rocks and formed by the alteration of other minerals, especially feldspar, which is the most common constituent of kaolin. It is a member of a group of clay minerals called the kaolin group minerals. It is an important industrial commodity used in ceramics, paper coating and filler, paint, plastics, fibreglass and catalysts."
+      "definition": "A layered dioctahedral 1:1 aluminosilicate clay mineral with the idealized stoichiometric chemical formula:\n\n$$\\text{Al}_2\\text{Si}_2\\text{O}_5(\\text{OH})_4$$\n\nDensity $2.6\\,\\text{g/cm}^3$, Mohs hardness $2.0\\text{--}2.5$. Its crystal structure consists of alternating sheets of tetrahedral silicon dioxide ($\\text{SiO}_4$) and octahedral aluminum hydroxide ($\\text{Al(OH)}_6$) linked by strong interlayer hydrogen bonds. Forms through the hydrothermal weathering of feldspar rocks ($2\\text{KAlSi}_3\\text{O}_8 + 2\\text{H}_2\\text{CO}_3 + 9\\text{H}_2\\text{O} \\to \\text{Al}_2\\text{Si}_2\\text{O}_5(\\text{OH})_4 + 4\\text{H}_4\\text{SiO}_4 + 2\\text{K}^+ + 2\\text{HCO}_3^-$). Primary constituent of kaolin (china clay), widely used in porcelain, ceramics, and coated paper."
     },
     {
       "word": "kapok",
@@ -92711,7 +92711,7 @@
       "synonyms": [
         "kuhn-tucker conditions"
       ],
-      "definition": "A result extending the Lagrange method of multipliers to constraints by equalities and inequalities. It ensures that, given an appropriate constraint qualification, any point x 0 , that minimises f ( x ) subject to g 1 ( x ) ≤ 0,..., g n ( x ) ≤ 0, g 1 + n ( x ) = 0,..., g m + n = 0 will occur at a stationary point of the Lagrangian L ( x , λ ) = f ( x ) + ∑ λ i g i , where the summation is over the binding constraints with g k ( x 0 ) = 0 and where the multipliers corresponding to inequality constraints are nonnegative."
+      "definition": "In non-linear mathematical optimization, the Karush-Kuhn-Tucker (KKT) conditions provide first-order necessary conditions for a local optimum in a continuously differentiable constrained non-linear problem: $\\min_{\\mathbf{x}} f(\\mathbf{x})$ subject to inequality constraints $g_i(\\mathbf{x}) \\le 0$ ($i=1,\\dots,m$) and equality constraints $h_j(\\mathbf{x}) = 0$ ($j=1,\\dots,p$). Under a constraint qualification (such as Slater's condition or LICQ), there exist Lagrange multiplier vectors $\\boldsymbol{\\mu} \\ge \\mathbf{0}$ and $\\boldsymbol{\\lambda}$ such that:\n\n$$\\nabla f(\\mathbf{x}^*) + \\sum_{i=1}^m \\mu_i \\nabla g_i(\\mathbf{x}^*) + \\sum_{j=1}^p \\lambda_j \\nabla h_j(\\mathbf{x}^*) = \\mathbf{0}$$\n\n$$g_i(\\mathbf{x}^*) \\le 0, \\qquad h_j(\\mathbf{x}^*) = 0$$\n\n$$\\mu_i \\ge 0, \\qquad \\mu_i g_i(\\mathbf{x}^*) = 0 \\quad (\\text{complementary slackness})$$"
     },
     {
       "word": "karyogamy",
@@ -92775,7 +92775,7 @@
       "word": "kater's pendulum",
       "raw_headword": "KATER'S PENDULUM",
       "synonyms": [],
-      "definition": "A reversible free swinging pendulum invented by British physicist, Henry Kater (1777-1835) in 1817 for measuring the acceleration of free fall or gravity. It is made of a metal bar with knife edges attached near the ends and two weights that can slide between the knife edges. The bar is pivoted from each knife edge in turn and the positions of the weights are adjusted so that the period of the pendulum is the same with both pivots. The period is then given by the formula for a simple pendulum, which enables gravity to be calculated."
+      "definition": "A reversible compound pendulum invented by British physicist Henry Kater in 1817 for precision absolute determinations of the local acceleration due to gravity $g$. Constructed with two opposing parallel knife-edge pivot axes $K_1$ and $K_2$ and adjustable sliding counterweights. When the positions of the weights are adjusted such that the oscillation periods about both knife edges are identical ($T_1 = T_2 = T$), the separation distance $L$ between the knife edges precisely equals the length of an equivalent simple pendulum:\n\n$$T = 2\\pi \\sqrt{\\frac{L}{g}} \\implies g = \\frac{4\\pi^2 L}{T^2}$$\n\nThis reversible design completely eliminates errors stemming from measuring the unknown moment of inertia or center of gravity of the pendulum rod."
     },
     {
       "word": "katetov's interpolation theorem",
@@ -92825,7 +92825,7 @@
       "synonyms": [
         "kerkulé formula"
       ],
-      "definition": "A representation of a benzene molecule as a hexagonal ring with alternating single and double bonds linking a six-member ring of carbon atoms, each linked to one hydrogen atom at the vertices. It was proposed by German physicist, Friedrich Kekulé structure of benzene HHHHHHHHHHHH August Kekulé (1829-1890). It accounted for the molecular formula C6 H6 and the reason for benzene yielding only one mono-substituted derivative and three de-substituted derivatives. However, it could not account for the unusual stability of benzene, why all the bond lengths are equal and why benzene resists addition reaction and common oxidising agents."
+      "definition": "A historical structural representation of the benzene ring proposed by Friedrich August Kekulé in 1865, depicting benzene as a planar hexagonal ring of six carbon atoms with alternating alternating single ($\\text{C}\\text{---}\\text{C}$) and double ($\\text{C}\\text{=}\\text{C}$) covalent bonds, with each carbon bearing one hydrogen atom:\n\n$$\\text{C}_6\\text{H}_6$$\n\nIn modern resonance and valence-bond theory, Kekulé's two structures are canonical contributing resonance hybrids with equal weights, whose continuous quantum superposition delocalizes six cyclic $\\pi$-electrons across the ring, giving all $\\text{C}\\text{---}\\text{C}$ bonds an identical intermediate bond length of $1.397\\,\\text{\\AA}$ ($139.7\\,\\text{pm}$) and conferring aromatic resonance stabilization energy ($\\approx 150\\,\\text{kJ/mol}$)."
     },
     {
       "word": "kelp",
@@ -92837,7 +92837,7 @@
       "word": "kelvin",
       "raw_headword": "KELVIN",
       "synonyms": [],
-      "definition": "Another name for the absolute temperature scale, with the symbol K. It was named after the British physicist and engineer Lord William Thompson Kelvin (1824-1907). The temperature of a substance at absolute zero is zero Kelvin (0 K). The Kelvin and the degree Celsius are often used together, as they have the same interval and 0 K = -273.15 °C; 273.15 K = 100 °C."
+      "definition": "The SI base unit of thermodynamic temperature (symbol $\\text{K}$), named after Lord Kelvin. Since the 2019 SI redefinition, the kelvin is defined by taking the fixed numerical value of the Boltzmann constant $k_B$ to be exactly $1.380649 \\times 10^{-23}\\,\\text{J}\\cdot\\text{K}^{-1}$. Absolute zero is $0\\,\\text{K}$, at which thermodynamic entropy and molecular kinetic motion reach quantum ground states. Related to the Celsius scale by an additive offset of $273.15$:\n\n$$T(\\text{K}) = T(^\\circ\\text{C}) + 273.15, \\qquad \\Delta T(1\\,\\text{K}) = \\Delta T(1\\,^\\circ\\text{C})$$"
     },
     {
       "word": "kelvin balance",
@@ -92852,13 +92852,13 @@
       "word": "kelvin scale",
       "raw_headword": "KELVIN SCALE",
       "synonyms": [],
-      "definition": "The basic scale used universally by scientists for temperature definition. The triple point of water comprising ice, liquid and vapour is defined as 273.15 K. The Kelvin scale begins at absolute zero (-273.15 °C) and increases at the same degree intervals as the Celsius. The Kelvin and the degree Celsius are often used together; 0 K = -273.15 °C and 373.15 K = 100 °C."
+      "definition": "An absolute thermodynamic temperature scale that begins at absolute zero ($0\\,\\text{K} = -273.15\\,^\\circ\\text{C}$), eliminating negative temperature values for classical thermodynamic systems. Key reference transition benchmarks:\n\n* **Absolute Zero**: $0\\,\\text{K} = -273.15\\,^\\circ\\text{C}$\n* **Freezing point of water ($1\\,\\text{atm}$)**: $273.15\\,\\text{K} = 0.00\\,^\\circ\\text{C}$\n* **Triple point of pure water**: $273.16\\,\\text{K} = 0.01\\,^\\circ\\text{C}$\n* **Boiling point of water ($1\\,\\text{atm}$)**: $373.13\\,\\text{K} = 99.98\\,^\\circ\\text{C}$\n\nThe ideal gas law $PV = nRT$ requires thermodynamic temperature strictly on the Kelvin scale."
     },
     {
       "word": "kelvin's circulation theorem",
       "raw_headword": "KELVIN'S CIRCULATION THEOREM",
       "synonyms": [],
-      "definition": "The theorem that the circulation of a frictionless fluid is invariant in time in the presence of conservative forces. The theorem also holds for a fluid of uniform density that is not compressible. It was published in 1869 by William Thomson, 1st Baron Kelvin and named after him. It is defined mathematically as D Γ D t = 0, where Γ is the circulation around a material contour C( t )."
+      "definition": "A fundamental theorem in theoretical fluid dynamics published by William Thomson (Lord Kelvin) in 1869. It states that for an inviscid, barotropic ideal fluid subjected to conservative body forces (such as gravity), the fluid circulation $\\Gamma$ around any closed material loop $C(t)$ moving with the fluid remains constant in time:\n\n$$\\frac{D\\Gamma}{Dt} = 0, \\quad \\text{where } \\Gamma = \\oint_{C(t)} \\mathbf{u} \\cdot d\\mathbf{r} = \\iint_{S(t)} (\\nabla \\times \\mathbf{u}) \\cdot d\\mathbf{A}$$\n\nA direct consequence is that if a fluid begins irrotational ($\\boldsymbol{\\omega} = \\nabla \\times \\mathbf{u} = \\mathbf{0}$), it remains irrotational along fluid streamlines, precluding the creation or destruction of vortex lines within the fluid interior."
     },
     {
       "word": "kelvin, lord william thompson",
@@ -92880,7 +92880,7 @@
       "word": "kendell method",
       "raw_headword": "KENDELL METHOD",
       "synonyms": [],
-      "definition": "A method in statistics that is used in measuring the degree of association between two different ways of ranking n objects, using two variables ( x and y ) which give data ( x 1 , y 1 ), . . .,( x n , y n ). The objects are ranked using the first x and the y . For each of the pairs of objects a score is assigned. Kendell's coefficient of rank correlation is given by τ = sum of sources n 2 n^-1 ( ) . The closer τ is to one, the greater the degree of association between the ranks."
+      "definition": "In non-parametric statistics, Kendall's rank correlation coefficient $\\tau$ (devised by Maurice Kendall in 1938), measuring the ordinal association between two ranked variables $X$ and $Y$ across $n$ paired observations $(x_1, y_1), \\dots, (x_n, y_n)$. Defined as the difference between the number of concordant pairs $C$ and discordant pairs $D$, normalized by total pairs $\\binom{n}{2}$:\n\n$$\\tau = \\frac{C - D}{\\frac{1}{2}n(n - 1)} = \\frac{2(C - D)}{n(n - 1)}$$\n\nThe coefficient takes values in $[-1, +1]$: $\\tau = +1$ indicates identical rank order, $\\tau = -1$ indicates perfect inverse rank agreement, and $\\tau = 0$ indicates independence."
     },
     {
       "word": "kennedy space centre",
@@ -92894,7 +92894,7 @@
       "word": "kepler's laws of planetary motion",
       "raw_headword": "KEPLER'S LAWS OF PLANETARY MOTION",
       "synonyms": [],
-      "definition": "The three laws devised by Johannes Kepler to define the mechanics of planetary motion stating that: (i) each planet travels in an ellipse with the Sun being one focus of the ellipse; (ii) the radius vector from the sun to the planet sweeps out equal areas in equal times. This makes the planet moves quickest when the vector radius is closest to the Sun and moves more slowly when the radius vector is furthest from the Sun; (iii) the squares of the periodic times of the planets are proportional to the cubes of the semi-axes of the elliptic orbit. It was named after German mathematician, astronomer and astrologer Johannes Kepler (1571-1630)."
+      "definition": "Three astronomical laws formulated by Johannes Kepler (1609, 1619) describing heliocentric orbital mechanics:\n\n1. **Law of Ellipses**: The orbit of each planet is an ellipse with the Sun located at one of the two foci:\n$$\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1, \\quad r(\\theta) = \\frac{a(1 - e^2)}{1 + e\\cos\\theta}$$\n\n2. **Law of Equal Areas**: The line segment (radius vector $\\mathbf{r}$) joining a planet to the Sun sweeps out equal orbital areas $\\Delta A$ in equal intervals of time $\\Delta t$, representing conservation of orbital angular momentum $\\mathbf{L}$:\n$$\\frac{dA}{dt} = \\frac{1}{2} r^2 \\frac{d\\theta}{dt} = \\frac{L}{2m} = \\text{constant}$$\n\n3. **Law of Harmonies**: The square of the orbital period $T$ of a planet is directly proportional to the cube of the semi-major axis $a$ of its orbit:\n$$T^2 = \\left( \\frac{4\\pi^2}{G(M_\\odot + m)} \\right) a^3 \\implies \\frac{T^2}{a^3} = \\text{constant}$$"
     },
     {
       "word": "kepler, johannes",
@@ -92979,7 +92979,7 @@
       "word": "ketenes",
       "raw_headword": "KETENES",
       "synonyms": [],
-      "definition": "A class of compounds of the type R1 R2 C=C=O, where R1 and R2 are organic groups. It is formed by dissolving a ketone in methanol and hydrochloric acid. An equilibrium is established which results in the formation of dimethylketal. Ketenes are reactive compounds and are often generated in a reaction medium for organic synthesis. The compound with a molecular structure CH2 =C=O called ethenone . It is the simplest member of the ketene class. It is a tautomer of ethynol."
+      "definition": "A class of highly reactive unsaturated organic compounds containing the cumulated carbonyl-alkene functional group $\\text{R}_1\\text{R}_2\\text{C}=\\text{C}=\\text{O}$. The simplest member is ethenone (ketene itself), with molecular formula $\\text{CH}_2=\\text{C}=\\text{O}$, boiling point $-56\\,^\\circ\\text{C}$ ($217\\,\\text{K}$), prepared industrially by the gas-phase thermal pyrolysis of acetone at $700\\,^\\circ\\text{C}$:\n\n$$\\text{CH}_3\\text{COCH}_3 \\xrightarrow{\\Delta} \\text{CH}_2\\text{=C=O} + \\text{CH}_4$$\n\nThe central carbon is sp-hybridized and electrophilic, readily undergoing $[2+2]$ cycloaddition with alkenes and nucleophilic addition with water to produce ethanoic acid: $\\text{CH}_2\\text{=C=O} + \\text{H}_2\\text{O} \\to \\text{CH}_3\\text{COOH}$."
     },
     {
       "word": "keto acid",
@@ -92991,7 +92991,7 @@
       "word": "keto-enol tautomerism",
       "raw_headword": "KETO-ENOL TAUTOMERISM",
       "synonyms": [],
-      "definition": "The existence of a chemical compound in two double-bonded structural forms, keto and enol, which are in equilibrium. The keto form (-CH2 C=O) changes to enol (-CH=C(OH-) by the migration of a hydrogen atom to form a hydroxyl group with the oxygen of the carbonyl group. The position of the double bond also changes."
+      "definition": "A chemical equilibrium between a carbonyl compound containing an $\\alpha$-hydrogen (the keto form, $-\\text{CH}_2-\\text{C}(=\\text{O})-$) and its constitutional isomer possessing an enolic alkene-alcohol structure (the enol form, $-\\text{CH}=\\text{C}(\\text{OH})-$):\n\n$$\\text{R}-\\text{CH}_2-\\text{C}(=\\text{O})-\\text{R}' \\rightleftharpoons \\text{R}-\\text{CH}=\\text{C}(\\text{OH})-\\text{R}'$$\n\nThe tautomerization is catalyzed by both acids (via resonance-stabilized oxocarbenium intermediates) and bases (via delocalized enolate anions). For simple aldehydes and ketones (e.g. acetone), the keto tautomer is thermodynamically favored ($> 99.99\\%$), whereas in $\\beta$-dicarbonyls (such as ethyl acetoacetate or acetylacetone), the enol form is strongly stabilized ($> 80\\%$) by internal intramolecular hydrogen bonding and conjugated resonance."
     },
     {
       "word": "ketoaldonic acids",
@@ -93023,7 +93023,7 @@
       "synonyms": [
         "alkanone"
       ],
-      "definition": "An organic compound containing a carbon atom connected to an oxygen atom by a double bond and to two other carbon atoms. Ketones are important in synthesising other compounds; and also important intermediates in cell metabolism. They are members of a family of organic compounds of general formula RCOR', where R and R' are organic radicals. Ketones may be made in various ways such as oxidation of secondary alcohols. The simplest ketone is acetone, an important industrial solvent."
+      "definition": "An organic compound containing a carbonyl group ($\\text{C=O}$) bonded covalently to two distinct carbon alkyl or aryl substituent radicals: $\\text{R}^1\\text{COR}^2$. General molecular formula: $\\text{C}_n\\text{H}_{2n}\\text{O}$ (for aliphatic ketones). Produced by the oxidation of secondary alcohols using acidified potassium dichromate:\n\n$$\\text{R}^1\\text{CH}(\\text{OH})\\text{R}^2 + [\\text{O}] \\xrightarrow{\\text{Cr}_2\\text{O}_7^{2-}/\\text{H}^+} \\text{R}^1\\text{C}(=\\text{O})\\text{R}^2 + \\text{H}_2\\text{O}$$\n\nThe carbonyl carbon is $sp^2$-hybridized with trigonal planar geometry ($120^\\circ$ bond angles). The simplest aliphatic ketone is propanone (acetone, $\\text{CH}_3\\text{COCH}_3$, boiling point $56\\,^\\circ\\text{C}$)."
     },
     {
       "word": "ketone bodies",
@@ -93363,7 +93363,7 @@
       "word": "kilowatt-hour",
       "raw_headword": "KILOWATT-HOUR",
       "synonyms": [],
-      "definition": "The practical unit or Board of Trade Unit (BTU) of electrical energy, which is the commercial billing unit for electrical energy delivered to consumers. It is not a unit of power, but of energy. It is equivalent to a power consumption of 1000 watts for 1 hour or power in watts multiplied by time in hours. Its unit is kWh. 1kWh = 1kW × 1hr = 1000 W × 60 × 60 = 3.6 Mj. Therefore, 1 unit of electric energy consumed = 1 kWh = 3.6 MJ."
+      "definition": "A non-SI composite metric unit of energy commonly used as a commercial billing unit by electrical utility providers (Board of Trade Unit). Symbol $\\text{kWh}$, representing the energy delivered by a constant power output of one kilowatt ($1000\\,\\text{W}$) over a duration of one hour ($3600\\,\\text{s}$):\n\n$$1\\,\\text{kWh} = 1000\\,\\text{W} \\times 3600\\,\\text{s} = 3.6 \\times 10^6\\,\\text{J} = 3.6\\,\\text{MJ}$$\n\nTotal electrical energy consumed $E$ in $\\text{kWh}$ from power rating $P$ (in watts) and operating time $t$ (in hours) is $E = \\frac{P \\times t}{1000}$."
     },
     {
       "word": "kilowatts",
