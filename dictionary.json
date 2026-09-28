@@ -101547,13 +101547,17 @@
       "word": "mach angle",
       "raw_headword": "MACH ANGLE",
       "synonyms": [],
-      "definition": "The angle made by a shock wave with the direction of motion as determined by the velocity of the object and the velocity of the shock propagation. It is the sine ratio of the speed of sound to the speed of a moving body: Sin µ = a v = 1 V , where a is the speed of the sound wave, v is the speed of the moving body and M is the mach angle. Mach angle (M) Speed of sound Sound wave (Mach cone) Sound wave (Mach cone) Sound wave (Mach cone) A Mach Angle."
+      "definition": "The angle made by a shock wave with the direction of motion as determined by the velocity of the object and the velocity of the shock propagation. It is the sine ratio of the speed of sound to the speed of a moving body: Sin µ = a v = 1 V , where a is the speed of the sound wave, v is the speed of the moving body and M is the mach angle. Mach angle (M) Speed of sound Sound wave (Mach cone) Sound wave (Mach cone) Sound wave (Mach cone) A Mach Angle.",
+      "formula": "$$\\sin\\mu = \\frac{1}{\\text{Ma}} = \\frac{c_s}{v}$$",
+      "formula_description": "Half-angle of the Mach cone formed by a supersonic object. $\\mu$ = Mach angle, Ma = Mach number $> 1$. The cone's pressure wave (shock wave) propagates at exactly this angle to the direction of motion."
     },
     {
       "word": "mach number",
       "raw_headword": "MACH NUMBER",
       "synonyms": [],
-      "definition": "A dimensionless number, which is the ratio of the relative speeds of an object through a fluid such as gas (for example, air) or liquid and a rigid body to the speed of sound in that fluid under the same conditions of temperature and pressure. It was named after Austrian physicist and philosopher Ernst Mach. It can also be defined as the speed of a projectile or aircraft with reference to the ambient atmosphere, divided by the speed of sound in the same medium and under the same conditions; expressed as: M = V s /u , where M is the Mach number, V s is the speed of the object relative to the medium and u the speed of sound in the medium. If the mach number is less than 1 the speed is subsonic ; if it exceeds 1 the speed is supersonic ; and if it exceeds 5 it is said to be moving at hypersonic speed. Mach number is a dimensionless quantity rather than a unit of measure. Expressing speeds of an aeroplane moving in air by Mach number rather than by kilometres per hour, is a more accurate representation of the actual conditions encountered in flight can be obtained."
+      "definition": "A dimensionless number, which is the ratio of the relative speeds of an object through a fluid such as gas (for example, air) or liquid and a rigid body to the speed of sound in that fluid under the same conditions of temperature and pressure. It was named after Austrian physicist and philosopher Ernst Mach. It can also be defined as the speed of a projectile or aircraft with reference to the ambient atmosphere, divided by the speed of sound in the same medium and under the same conditions; expressed as: M = V s /u , where M is the Mach number, V s is the speed of the object relative to the medium and u the speed of sound in the medium. If the mach number is less than 1 the speed is subsonic ; if it exceeds 1 the speed is supersonic ; and if it exceeds 5 it is said to be moving at hypersonic speed. Mach number is a dimensionless quantity rather than a unit of measure. Expressing speeds of an aeroplane moving in air by Mach number rather than by kilometres per hour, is a more accurate representation of the actual conditions encountered in flight can be obtained.",
+      "formula": "$$\\text{Ma} = \\frac{v}{c_s}, \\qquad c_s = \\sqrt{\\frac{\\gamma R T}{M_m}}$$",
+      "formula_description": "$v$ = object speed, $c_s$ = local speed of sound, $\\gamma$ = adiabatic index, $R$ = gas constant, $T$ = temperature, $M_m$ = molar mass. Ma $< 1$: subsonic; Ma $= 1$: sonic; Ma $> 1$: supersonic; Ma $> 5$: hypersonic. Mach angle: $\\sin\\mu = 1/\\text{Ma}$."
     },
     {
       "word": "mach's principle",
@@ -101618,13 +101622,17 @@
       "synonyms": [
         "maclaurin's theorem"
       ],
-      "definition": "The theorem of mathematical analysis stating that if a real-valued function is infinitely differentiable in an open neighbourhood of the origin, then f ( x ) can be approximated locally as the sum of f (0) and an initial segment of the series of terms of the form f n ( x ) = 1 n ! f ( n ) (0) x n , where f n ( x ) is the n th derivative of f ( x )."
+      "definition": "The theorem of mathematical analysis stating that if a real-valued function is infinitely differentiable in an open neighbourhood of the origin, then f ( x ) can be approximated locally as the sum of f (0) and an initial segment of the series of terms of the form f n ( x ) = 1 n ! f ( n ) (0) x n , where f n ( x ) is the n th derivative of f ( x ).",
+      "formula": "$$f(x) = f(0) + xf'(0) + \\frac{x^2}{2!}f''(0) + \\cdots + \\frac{x^n}{n!}f^{(n)}(0) + R_n$$",
+      "formula_description": "Finite form with remainder $R_n = \\dfrac{x^{n+1}}{(n+1)!}f^{(n+1)}(\\theta x)$, $0 < \\theta < 1$ (Lagrange form). Special case of Taylor's formula about $a = 0$."
     },
     {
       "word": "maclaurin's series",
       "raw_headword": "MACLAURIN'S SERIES",
       "synonyms": [],
-      "definition": "A series of expansion in which all terms are non-negative integer powers of the variable, named after the Scottish mathematician Colin Maclaurin. The Taylor series is a representation of a function as an infinite sum of terms that are calculated from the values of the function's derivatives at a single point, introduced by the English mathematician Brook Taylor in 1715. The Maclaurin series is given by: f ( x ) = f (0) + f '(0) x + f \"(0) 2! + f (3) 0 3! x 3 ... + f ( n ) (0) n ! x n ."
+      "definition": "A series of expansion in which all terms are non-negative integer powers of the variable, named after the Scottish mathematician Colin Maclaurin. The Taylor series is a representation of a function as an infinite sum of terms that are calculated from the values of the function's derivatives at a single point, introduced by the English mathematician Brook Taylor in 1715. The Maclaurin series is given by: f ( x ) = f (0) + f '(0) x + f \"(0) 2! + f (3) 0 3! x 3 ... + f ( n ) (0) n ! x n .",
+      "formula": "$$f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(0)}{n!}\\,x^n = f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\cdots$$",
+      "formula_description": "Taylor series centred at $x = 0$. Key expansions: $e^x = \\sum x^n/n!$, $\\sin x = \\sum (-1)^n x^{2n+1}/(2n+1)!$, $\\cos x = \\sum (-1)^n x^{2n}/(2n)!$, $(1+x)^k = \\sum \\binom{k}{n}x^n$. Named after Colin Maclaurin (1698–1746)."
     },
     {
       "word": "maclaurin, colin",
@@ -101850,7 +101858,9 @@
       "word": "madelung constant",
       "raw_headword": "MADELUNG CONSTANT",
       "synonyms": [],
-      "definition": "A constant, first calculated by Erwin Madelung, a German physicist in 1918, used in determining the cohesion of ionic crystals by approximating the ions by point charges. The electrostratic interaction per ion pair, U is given by U r ( ) = α e 2 r , where α is the Madelung constant and e 2 r is the Coulomb interaction between the ions, with r being the lattice constant. The value of α depends on the type of lattice. For the sodium (NaCl) chloride lattice, Madelung constant, α M has a value of about 1.75. A more realistic calculation of cohesion is obtained if short-range repulsion with an inverse power law are included, i.e. U r ( ) = α e 2 r - C rn , where C and n are constants. The value of α can be used in calculations to determine C and n ."
+      "definition": "A constant, first calculated by Erwin Madelung, a German physicist in 1918, used in determining the cohesion of ionic crystals by approximating the ions by point charges. The electrostratic interaction per ion pair, U is given by U r ( ) = α e 2 r , where α is the Madelung constant and e 2 r is the Coulomb interaction between the ions, with r being the lattice constant. The value of α depends on the type of lattice. For the sodium (NaCl) chloride lattice, Madelung constant, α M has a value of about 1.75. A more realistic calculation of cohesion is obtained if short-range repulsion with an inverse power law are included, i.e. U r ( ) = α e 2 r - C rn , where C and n are constants. The value of α can be used in calculations to determine C and n .",
+      "formula": "$$M = \\sum_{j} \\frac{(\\pm 1)}{r_j/r_0}$$",
+      "formula_description": "Geometric factor in lattice energy; depends only on crystal structure. NaCl: $M \\approx 1.7476$; CsCl: $M \\approx 1.7627$; ZnS (wurtzite): $M \\approx 1.6413$. Appears in Born–Landé: $U = -\\dfrac{N_A M z^+z^-e^2}{4\\pi\\varepsilon_0 r_0}\\!\\left(1-\\dfrac{1}{n}\\right)$."
     },
     {
       "word": "madelung's rule",
@@ -102163,7 +102173,9 @@
       "word": "magnetic field",
       "raw_headword": "MAGNETIC FIELD",
       "synonyms": [],
-      "definition": "A vector field of force produced by a permanent magnet or around a current carrying conductor detected by the force it exerts on other magnetic materials and moving electric charges. This is a vector field because the magnetic field at any given point is specified by direction and a magnitude or strength. The Earth has its own magnetic field, which is important in navigation using the magnetic compass, with one or more magnetic needles pointing in the general direction of the magnetic North Pole under the influence of the magnetic field of the Earth. Rotating magnetic fields also form the basis of electrical motors and generators. Magnetic field lines near a bar magnet N."
+      "definition": "A vector field of force produced by a permanent magnet or around a current carrying conductor detected by the force it exerts on other magnetic materials and moving electric charges. This is a vector field because the magnetic field at any given point is specified by direction and a magnitude or strength. The Earth has its own magnetic field, which is important in navigation using the magnetic compass, with one or more magnetic needles pointing in the general direction of the magnetic North Pole under the influence of the magnetic field of the Earth. Rotating magnetic fields also form the basis of electrical motors and generators. Magnetic field lines near a bar magnet N.",
+      "formula": "$$\\mathbf{F} = q\\mathbf{v}\\times\\mathbf{B}, \\qquad \\oint \\mathbf{B}\\cdot d\\mathbf{l} = \\mu_0 I_{\\text{enc}}$$",
+      "formula_description": "SI unit: Tesla (T = kg$\\cdot$s$^{-2}\\cdot$A$^{-1}$). Biot-Savart law: $d\\mathbf{B} = \\dfrac{\\mu_0 I}{4\\pi}\\dfrac{d\\mathbf{l}\\times\\hat{r}}{r^2}$. Long straight wire: $B = \\mu_0 I / 2\\pi r$. Solenoid: $B = \\mu_0 n I$."
     },
     {
       "word": "magnetic field lines",
@@ -102189,7 +102201,9 @@
       "word": "magnetic flux",
       "raw_headword": "MAGNETIC FLUX",
       "synonyms": [],
-      "definition": "Measurement of the total amount of magnetic field in a given region. This is dependent on the strength and the extent of a magnetic field. The unit of magnetic flux density is the weber, with the symbol φ. It is expressed as: Magnetic flux (φ) = magnetic field strength ( B ) multiplied by the component A sinθ of the area A that is at right angle to the magnetic field: φ = BA sinθ, where θ is the angle between the area and the magnetic field direction, B is the magnetic field, A is the cross-sectional area and φ is the flux density. Magnetic flux density with the symbol B and also known as the magnetic induction is the magnetic flux per unit area of a magnetic field at right angles to the magnetic force and a vector quantity. It is one of two quantities that specifies both the strength and direction of the magnetic field; the other one is magnetic field strength ( H ). B and H are related as follows: B = μH , where μ is the permeability."
+      "definition": "Measurement of the total amount of magnetic field in a given region. This is dependent on the strength and the extent of a magnetic field. The unit of magnetic flux density is the weber, with the symbol φ. It is expressed as: Magnetic flux (φ) = magnetic field strength ( B ) multiplied by the component A sinθ of the area A that is at right angle to the magnetic field: φ = BA sinθ, where θ is the angle between the area and the magnetic field direction, B is the magnetic field, A is the cross-sectional area and φ is the flux density. Magnetic flux density with the symbol B and also known as the magnetic induction is the magnetic flux per unit area of a magnetic field at right angles to the magnetic force and a vector quantity. It is one of two quantities that specifies both the strength and direction of the magnetic field; the other one is magnetic field strength ( H ). B and H are related as follows: B = μH , where μ is the permeability.",
+      "formula": "$$\\Phi_B = \\int_S \\mathbf{B}\\cdot d\\mathbf{A} = BA\\cos\\theta \\quad (\\text{uniform } \\mathbf{B})$$",
+      "formula_description": "SI unit: Weber (Wb = V$\\cdot$s = kg$\\cdot$m$^2\\cdot$s$^{-2}\\cdot$A$^{-1}$). Faraday's law: $\\mathcal{E} = -d\\Phi_B/dt$. Gauss's law for magnetism: $\\oint \\mathbf{B}\\cdot d\\mathbf{A} = 0$ (no magnetic monopoles)."
     },
     {
       "word": "magnetic force",
@@ -104644,7 +104658,9 @@
       "word": "maxwell's equations",
       "raw_headword": "MAXWELL'S EQUATIONS",
       "synonyms": [],
-      "definition": "A set of four partial differential equations, named after the Scottish physicist and mathematician James Clerk Maxwell. The equations relate the electric field and magnetic field vectors E and B to their sources, electric charge, current and changing fields. These four equations are known as Gauss's law, Gauss's law for magnetism, Faraday's law of induction and Ampère's law with Maxwell's correction. The Maxwell's equations are given by . where ∇ is the divergence, ∇ × is the curl, π is a constant, E is the electric field, B is the magnetic field, ρ is the charge density, c is the speed of light and j is the vector current density."
+      "definition": "A set of four partial differential equations, named after the Scottish physicist and mathematician James Clerk Maxwell. The equations relate the electric field and magnetic field vectors E and B to their sources, electric charge, current and changing fields. These four equations are known as Gauss's law, Gauss's law for magnetism, Faraday's law of induction and Ampère's law with Maxwell's correction. The Maxwell's equations are given by . where ∇ is the divergence, ∇ × is the curl, π is a constant, E is the electric field, B is the magnetic field, ρ is the charge density, c is the speed of light and j is the vector current density.",
+      "formula": "$$\\nabla\\cdot\\mathbf{E} = \\frac{\\rho}{\\varepsilon_0}, \\quad \\nabla\\cdot\\mathbf{B} = 0, \\quad \\nabla\\times\\mathbf{E} = -\\frac{\\partial\\mathbf{B}}{\\partial t}, \\quad \\nabla\\times\\mathbf{B} = \\mu_0\\mathbf{J} + \\mu_0\\varepsilon_0\\frac{\\partial\\mathbf{E}}{\\partial t}$$",
+      "formula_description": "The four fundamental laws of electromagnetism in differential form. 1: Gauss's law (electric). 2: Gauss's law (magnetic — no monopoles). 3: Faraday's law. 4: Ampère-Maxwell law (displacement current $\\varepsilon_0\\partial\\mathbf{E}/\\partial t$ added by Maxwell). Predict EM waves propagating at $c = 1/\\sqrt{\\mu_0\\varepsilon_0} \\approx 3\\times10^8\\ \\mathrm{m\\,s^{-1}}$."
     },
     {
       "word": "maxwell's relations",
@@ -104676,7 +104692,9 @@
       "word": "maxwell-boltzmann distribution",
       "raw_headword": "MAXWELL-BOLTZMANN DISTRIBUTION",
       "synonyms": [],
-      "definition": "A law explaining the distribution of speeds among the molecules of a gas, where the particles do not constantly interact with each other but move freely between short collisions. It was named after James Clerk Maxwell and Ludwig Boltzmann. In a system made up of N molecules that are independent of each other except that they exchange energy on collision, it is clearly impossible to say what velocity any particular molecule will have. However, statistical statements regarding certain functions of the molecules were worked out by James Clerk Maxwell and Ludwig Boltzmann. One form of their law states that n = exp - E RT ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , where n is the number of molecules with energy in excess of E , T is the thermodynamic temperature and R is the gas constant and N the total number of molecules present."
+      "definition": "A law explaining the distribution of speeds among the molecules of a gas, where the particles do not constantly interact with each other but move freely between short collisions. It was named after James Clerk Maxwell and Ludwig Boltzmann. In a system made up of N molecules that are independent of each other except that they exchange energy on collision, it is clearly impossible to say what velocity any particular molecule will have. However, statistical statements regarding certain functions of the molecules were worked out by James Clerk Maxwell and Ludwig Boltzmann. One form of their law states that n = exp - E RT ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , where n is the number of molecules with energy in excess of E , T is the thermodynamic temperature and R is the gas constant and N the total number of molecules present.",
+      "formula": "$$f(v) = 4\\pi n\\!\\left(\\frac{m}{2\\pi k_B T}\\right)^{3/2} v^2\\, e^{-mv^2/2k_BT}$$",
+      "formula_description": "Speed distribution of molecules in an ideal gas. Most probable speed: $v_p = \\sqrt{2k_BT/m}$. Mean speed: $\\bar{v} = \\sqrt{8k_BT/\\pi m}$. RMS speed: $v_{\\text{rms}} = \\sqrt{3k_BT/m}$. Order: $v_p < \\bar{v} < v_{\\text{rms}}$."
     },
     {
       "word": "mayer's test",
@@ -104784,7 +104802,9 @@
       "word": "mean free path",
       "raw_headword": "MEAN FREE PATH",
       "synonyms": [],
-      "definition": "The average distance travelled between collisions by the molecules in a gas, the electrons in a metallic crystal, the neutrons in a moderator or the average distance that a gas molecule travels before it collides with another molecule or with the containing vessel, etc. According to the kinetic theory the mean free path between elastic collision of gas molecule of diameter d (assuming they are rigid spheres) is , where n is the number of molecules per unit volume in the gas. The mean free path is inversely proportional to the pressure. Its symbol is λ."
+      "definition": "The average distance travelled between collisions by the molecules in a gas, the electrons in a metallic crystal, the neutrons in a moderator or the average distance that a gas molecule travels before it collides with another molecule or with the containing vessel, etc. According to the kinetic theory the mean free path between elastic collision of gas molecule of diameter d (assuming they are rigid spheres) is , where n is the number of molecules per unit volume in the gas. The mean free path is inversely proportional to the pressure. Its symbol is λ.",
+      "formula": "$$\\lambda = \\frac{1}{\\sqrt{2}\\,\\pi d^2 n} = \\frac{k_B T}{\\sqrt{2}\\,\\pi d^2 p}$$",
+      "formula_description": "Average distance a molecule travels between collisions. $d$ = molecular diameter, $n$ = number density, $p$ = pressure. At STP for air: $\\lambda \\approx 68\\ \\mathrm{nm}$. Viscosity relation: $\\eta = \\tfrac{1}{3}\\rho\\bar{v}\\lambda$."
     },
     {
       "word": "mean free time",
@@ -107626,7 +107646,9 @@
       "word": "michaelis-menten equation",
       "raw_headword": "MICHAELIS-MENTEN EQUATION",
       "synonyms": [],
-      "definition": "An equation which shows the hyperbolic relationship between the initial velocity, V o and the substrate concentration, [ S ] in a number of enzyme-catalysed reactions such that V o = V max [ S ]/ K m + [ S ], where V max is the maximum velocity and K m is the Michaelis constant. mirror mirror light source telescope beamsplitter Michelson-Morley Interferometer."
+      "definition": "An equation which shows the hyperbolic relationship between the initial velocity, V o and the substrate concentration, [ S ] in a number of enzyme-catalysed reactions such that V o = V max [ S ]/ K m + [ S ], where V max is the maximum velocity and K m is the Michaelis constant. mirror mirror light source telescope beamsplitter Michelson-Morley Interferometer.",
+      "formula": "$$v = \\frac{V_{\\max}[\\text{S}]}{K_m + [\\text{S}]}, \\qquad K_m = \\frac{k_{-1}+k_2}{k_1}$$",
+      "formula_description": "Enzyme kinetics: $v$ = reaction rate, $V_{\\max} = k_2[\\text{E}]_{\\text{total}}$, $K_m$ = Michaelis constant (substrate concentration at half-maximal rate). Lineweaver-Burk linearisation: $\\dfrac{1}{v} = \\dfrac{K_m}{V_{\\max}[\\text{S}]} + \\dfrac{1}{V_{\\max}}$."
     },
     {
       "word": "michelson-morley experiment",
@@ -109644,7 +109666,9 @@
         "coefficient of elasticity",
         "elasticity modulus"
       ],
-      "definition": "The mathematical description of an object or a substance's tendency to be deformed elastically when a force is applied to it or the ratio of the increment of some specified form of stress to the increment of some specified form of strain, such as Young's modulus, the bulk modulus or the shear modulus."
+      "definition": "The mathematical description of an object or a substance's tendency to be deformed elastically when a force is applied to it or the ratio of the increment of some specified form of stress to the increment of some specified form of strain, such as Young's modulus, the bulk modulus or the shear modulus.",
+      "formula": "$$E = \\frac{\\sigma}{\\varepsilon} = \\frac{F/A}{\\Delta L/L_0}$$",
+      "formula_description": "Young's modulus $E$: ratio of tensile stress $\\sigma$ to tensile strain $\\varepsilon$. Shear modulus: $G = \\tau/\\gamma$. Bulk modulus: $K = -V\\,dP/dV$. Poisson's ratio: $\\nu = -\\varepsilon_{\\text{lateral}}/\\varepsilon_{\\text{axial}}$. Relation: $E = 2G(1+\\nu) = 3K(1-2\\nu)$."
     },
     {
       "word": "modus ponens",
@@ -109817,7 +109841,9 @@
       "synonyms": [
         "gram-molecular weight"
       ],
-      "definition": "The mass of one mole of any chemical substance/entity such as atoms, molecules or particles in units of grams per mole or g/mol (g·mol^-1 ). Its symbol is M."
+      "definition": "The mass of one mole of any chemical substance/entity such as atoms, molecules or particles in units of grams per mole or g/mol (g·mol^-1 ). Its symbol is M.",
+      "formula": "$$M = \\frac{m}{n}, \\qquad n = \\frac{m}{M} = \\frac{N}{N_A}$$",
+      "formula_description": "$M$ = molar mass (g$\\cdot$mol$^{-1}$), $m$ = mass (g), $n$ = amount of substance (mol). $N_A = 6.022\\times10^{23}\\ \\mathrm{mol^{-1}}$ (Avogadro constant). Ideal gas: $pV = nRT$, so $M = \\rho RT/p$ (vapour density method)."
     },
     {
       "word": "molar solution",
@@ -110242,7 +110268,9 @@
         "rotational inertia",
         "angular mass"
       ],
-      "definition": "A measure of an object's resistance to changes to its rotation, which is the sum of all the products formed by multiplying the magnitude of each element of mass by the square of its distance from the axes. Its symbol is I. The moment of inertia of an object about a given axis describes how difficult it is to change its angular motion about that axis. If a body consists of particles of mass m , a perpendicular distance r from an axis of rotation, the moment of inertia I of the body about that axis of rotation is given by I = Σ mr 2 . The basic equation is T = I α , where T is the torque causing angular acceleration α about the specified axis. The moment of inertia of a body is an important quantity because it is the analogue for rotational motion of mass for linear motion."
+      "definition": "A measure of an object's resistance to changes to its rotation, which is the sum of all the products formed by multiplying the magnitude of each element of mass by the square of its distance from the axes. Its symbol is I. The moment of inertia of an object about a given axis describes how difficult it is to change its angular motion about that axis. If a body consists of particles of mass m , a perpendicular distance r from an axis of rotation, the moment of inertia I of the body about that axis of rotation is given by I = Σ mr 2 . The basic equation is T = I α , where T is the torque causing angular acceleration α about the specified axis. The moment of inertia of a body is an important quantity because it is the analogue for rotational motion of mass for linear motion.",
+      "formula": "$$I = \\sum_i m_i r_i^2 = \\int r^2\\,dm, \\qquad \\tau = I\\alpha$$",
+      "formula_description": "Rotational analogue of mass. Parallel axis theorem: $I = I_{\\text{cm}} + Md^2$. Perpendicular axis theorem (2D): $I_z = I_x + I_y$. Common values: solid cylinder $I = \\tfrac{1}{2}MR^2$; sphere $I = \\tfrac{2}{5}MR^2$; rod about centre $I = \\tfrac{1}{12}ML^2$."
     },
     {
       "word": "moment of relative momentum",
@@ -110276,7 +110304,9 @@
       "word": "momentum",
       "raw_headword": "MOMENTUM",
       "synonyms": [],
-      "definition": "The product of the mass of a body and its linear velocity. For a moving object, its linear momentum ( p ) is calculated by the product of the object's velocity ( v ) and its mass ( m ): p = mv . Its SI unit is kilogram-metre per second (kgm/s) or Newton × second (Ns). Momentum is a vector quantity, it has both a magnitude and a direction, the direction being the same as that of the velocity vector. When an external force acts upon a body or a system of bodies in motion, it causes a change in the momentum of the body."
+      "definition": "The product of the mass of a body and its linear velocity. For a moving object, its linear momentum ( p ) is calculated by the product of the object's velocity ( v ) and its mass ( m ): p = mv . Its SI unit is kilogram-metre per second (kgm/s) or Newton × second (Ns). Momentum is a vector quantity, it has both a magnitude and a direction, the direction being the same as that of the velocity vector. When an external force acts upon a body or a system of bodies in motion, it causes a change in the momentum of the body.",
+      "formula": "$$\\mathbf{p} = m\\mathbf{v}, \\qquad \\mathbf{F}_{\\text{net}} = \\frac{d\\mathbf{p}}{dt}$$",
+      "formula_description": "SI unit: $\\mathrm{kg\\,m\\,s^{-1}} = \\mathrm{N\\,s}$. Relativistic: $\\mathbf{p} = \\gamma m_0\\mathbf{v}$. Angular momentum: $\\mathbf{L} = \\mathbf{r}\\times\\mathbf{p} = I\\boldsymbol{\\omega}$. Energy-momentum relation: $E^2 = (pc)^2 + (m_0c^2)^2$."
     },
     {
       "word": "momentum space",
@@ -112359,7 +112389,9 @@
       "synonyms": [
         "mu meson"
       ],
-      "definition": "The second lightest lepton. The muon has an electric charge of^-1. It is identical to the electron but is 207 times more massive. It decays with a mean lifetime of 2.2 × 10 -6 second. Muons occur commonly in cosmic rays. Despite its name, a muon (short for \"mu meson\") is no longer classified as a meson."
+      "definition": "The second lightest lepton. The muon has an electric charge of^-1. It is identical to the electron but is 207 times more massive. It decays with a mean lifetime of 2.2 × 10 -6 second. Muons occur commonly in cosmic rays. Despite its name, a muon (short for \"mu meson\") is no longer classified as a meson.",
+      "formula": "$$m_\\mu = 105.66\\ \\mathrm{MeV}/c^2 \\approx 207\\,m_e, \\qquad \\tau_\\mu = 2.197\\ \\mu\\mathrm{s}$$",
+      "formula_description": "Second-generation lepton; charge $-e$, spin $\\tfrac{1}{2}$. Decays: $\\mu^- \\to e^- + \\bar{\\nu}_e + \\nu_\\mu$. Relativistic time dilation allows cosmic muons to reach Earth's surface: $t' = \\gamma\\tau_\\mu$ with $\\gamma \\sim 20$ at $3\\ \\mathrm{km}$ altitude."
     },
     {
       "word": "muon decay experiment",
