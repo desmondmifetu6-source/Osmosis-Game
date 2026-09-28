@@ -91815,7 +91815,7 @@
       "word": "jaccard coefficient",
       "raw_headword": "JACCARD COEFFICIENT",
       "synonyms": [],
-      "definition": "1. In biology, it is an association coefficient of numerical taxonomy, which is the proportion of characters that match, excluding those that both organisms lack. 2. In mathematics, it measures similarity between finite sample sets, and is defined as the size of the intersection divided by the size of the union of the sample sets."
+      "definition": "In statistics, numerical taxonomy, and data science, a similarity metric $J(A, B)$ measuring the overlap between two finite sample sets $A$ and $B$. Defined as the ratio of the cardinality of their intersection to the cardinality of their union:\n\n$$J(A, B) = \\frac{|A \\cap B|}{|A \\cup B|} = \\frac{|A \\cap B|}{|A| + |B| - |A \\cap B|}$$\n\nThe Jaccard distance $d_J(A, B) = 1 - J(A, B) = \\frac{|A \\cup B| - |A \\cap B|}{|A \\cup B|}$ is a proper mathematical metric on the space of finite sets, satisfying the triangle inequality."
     },
     {
       "word": "jaccard index",
@@ -91843,7 +91843,7 @@
       "word": "jackson-bernstein theorems",
       "raw_headword": "JACKSON-BERNSTEIN THEOREMS",
       "synonyms": [],
-      "definition": "A set of theorems concerning Chebyshev approximation that describe the best possible convergence rates for classes of functions that have given smoothness properties and, conversely, deduce smoothness properties from the rates. For example, if f is a Lipschitz function satisfying the Lipschitz condition of order α the error in best approximation by a trigonometric polynomial of degree n is at worst O ( n - α ) and if this rate holds for 0 < α < 1, the function has Lipschitz order α . Correspondingly, a function is entire if and only if the error tends to zero better than geometrically."
+      "definition": "Fundamental direct and converse approximation theorems in mathematical analysis established by Dunham Jackson (1911) and Sergei Bernstein (1912). They establish exact equivalences between the smoothness (differentiability or Hölder/Lipschitz regularity $\\alpha$) of a function $f$ and its rate of best uniform polynomial or trigonometric approximation $E_n(f)$ of degree $n$:\n\n$$E_n(f) = \\mathcal{O}\\left(n^{-\\alpha}\\right) \\iff f \\in \\text{Lip}(\\alpha) \\quad (0 < \\alpha < 1)$$\n\nFor $k$-times continuously differentiable functions, Jackson's theorem provides upper bound $E_n(f) \\le \\frac{C_k}{n^k} \\omega(f^{(k)}, 1/n)$."
     },
     {
       "word": "jacob-monod model",
@@ -91857,13 +91857,13 @@
       "word": "jacobi iteration",
       "raw_headword": "JACOBI ITERATION",
       "synonyms": [],
-      "definition": "The iterative method of solving a linear matrix system, A x = b , by repeatedly solving x NEW( i ) = 1 a ij b i - a ij x OLD( j ) i ≠ j ∑ ⎡ ⎣ ⎢⎢ ⎤ ⎦ ⎥⎥ . This assumes a ij = 0 and will not always converge."
+      "definition": "In numerical linear algebra, an iterative algorithm for finding the solution vector $\\mathbf{x}$ to a square strictly diagonally dominant system of linear equations $\\mathbf{A}\\mathbf{x} = \\mathbf{b}$. Decomposing $\\mathbf{A} = \\mathbf{D} + \\mathbf{L} + \\mathbf{U}$ (diagonal, strictly lower, strictly upper):\n\n$$\\mathbf{x}^{(k+1)} = \\mathbf{D}^{-1} \\left( \\mathbf{b} - (\\mathbf{L} + \\mathbf{U})\\mathbf{x}^{(k)} \\right)$$\n\nIn component form for each element $i = 1, \\dots, n$:\n\n$$x_i^{(k+1)} = \\frac{1}{a_{ii}} \\left( b_i - \\sum_{j \\neq i} a_{ij} x_j^{(k)} \\right)$$\n\nGuaranteed to converge if $\\mathbf{A}$ is strictly diagonally dominant ($|a_{ii}| > \\sum_{j \\neq i} |a_{ij}|$) or symmetric positive-definite."
     },
     {
       "word": "jacobi's method",
       "raw_headword": "JACOBI'S METHOD",
       "synonyms": [],
-      "definition": "A method for solving a first-order partial differential equation of the form F x 1 , x 2 ,..., x n , ∂ z ∂ x 1 , ∂ z ∂ x 2 ,..., ∂ z ∂ x n ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟⎟= 0, in which the dependent variable z does not occur explicitly. This is an elaboration of Charpit's method for equations with more than two independent variables."
+      "definition": "1. In numerical linear algebra, the Jacobi eigenvalue algorithm: an iterative procedure that calculates all eigenvalues and eigenvectors of a real symmetric matrix $\\mathbf{A}$ via a sequence of orthogonal similarity transformations using Jacobi rotation matrices $\\mathbf{J}(p, q, \\theta)$:\n\n$$\\mathbf{A}_{k+1} = \\mathbf{J}_k^T \\mathbf{A}_k \\mathbf{J}_k, \\quad \\tan(2\\theta) = \\frac{2a_{pq}}{a_{qq} - a_{pp}}$$\n\n2. In partial differential equations, Jacobi's method for solving non-linear first-order PDEs $F(x_1, \\dots, x_n, p_1, \\dots, p_n) = 0$ lacking explicit dependent variable $z$, generalizing Charpit's method to $n$ independent variables using complete integrals."
     },
     {
       "word": "jacobi, karl gustav jacob",
@@ -91877,13 +91877,13 @@
       "word": "jacobian elliptic functions",
       "raw_headword": "JACOBIAN ELLIPTIC FUNCTIONS",
       "synonyms": [],
-      "definition": "A class of elliptic functions which arise by inversion of elliptic integrals of the first kind. The three basic functions are denoted sn , cn and dn . For modulus k , the function y = sn( z ) = sn( z , k ) is obtained by inversion of z = (1 - t 2 ) - 1 y ∫ (1 - k 2 t 2 ) - 1 2 dt, and the other two functions are defined by sn 2 z + cn 2 z = 1, k 2 sn 2 z + dn 2 z = 1 and cn (0) = dn (0) =1, then sn is doubly periodic with periods 4 K ( k ) and 2 i K ( k '), where K is the complete elliptic integral of the first kind and k ' is the complementary modulus."
+      "definition": "A family of doubly periodic meromorphic functions on the complex plane $\\mathbb{C}$, introduced by Carl Gustav Jacobi in 1829. Arising as inverse functions of the incomplete elliptic integral of the first kind $u = F(\\phi, k) = \\int_0^\\phi \\frac{d\\theta}{\\sqrt{1 - k^2 \\sin^2 \\theta}}$:\n\n$$\\text{sn}(u, k) = \\sin \\phi, \\qquad \\text{cn}(u, k) = \\cos \\phi, \\qquad \\text{dn}(u, k) = \\sqrt{1 - k^2 \\sin^2 \\phi}$$\n\nThey satisfy fundamental algebraic identities:\n\n$$\\text{sn}^2(u) + \\text{cn}^2(u) = 1, \\qquad k^2 \\text{sn}^2(u) + \\text{dn}^2(u) = 1$$\n\nDouble periodicity periods are governed by the complete elliptic integrals $4K(k)$ and $2iK'(k)$. Widely used in the exact nonlinear pendulum solution and Korteweg-de Vries (KdV) solitons."
     },
     {
       "word": "jacobian matrix",
       "raw_headword": "JACOBIAN MATRIX",
       "synonyms": [],
-      "definition": "A matrix whose i th row is the vector of the partial derivatives of the i th function, evaluated at the point in question. Consider two functions, f 1 and f 2 , their Jacobian is given by: J ( f 1 , f 2 ) ∂ f 1 ∂ x ∂ f 1 ∂ y ∂ f 2 ∂ x ∂ f 2 ∂ y , which can be generalised as J ( f 1 , ..., f n ) = ∂ f i ∂ x i ... ∂ f n ∂ x i ∂ f n ∂ x n ... ∂ f n ∂ x i ."
+      "definition": "In multivariable differential calculus, the $m \\times n$ matrix $\\mathbf{J}$ of all first-order partial derivatives of a vector-valued function $\\mathbf{f}: \\mathbb{R}^n \\to \\mathbb{R}^m$, representing the best linear local approximation (total derivative) of $\\mathbf{f}$ at $\\mathbf{x}$:\n\n$$\\mathbf{J} = \\frac{\\partial(f_1, \\dots, f_m)}{\\partial(x_1, \\dots, x_n)} = \\begin{bmatrix} \\frac{\\partial f_1}{\\partial x_1} & \\frac{\\partial f_1}{\\partial x_2} & \\dots & \\frac{\\partial f_1}{\\partial x_n} \\\\[6pt] \\frac{\\partial f_2}{\\partial x_1} & \\frac{\\partial f_2}{\\partial x_2} & \\dots & \\frac{\\partial f_2}{\\partial x_n} \\\\[6pt] \\vdots & \\vdots & \\ddots & \\vdots \\\\[6pt] \\frac{\\partial f_m}{\\partial x_1} & \\frac{\\partial f_m}{\\partial x_2} & \\dots & \\frac{\\partial f_m}{\\partial x_n} \\end{bmatrix}$$\n\nFor square systems ($m = n$), the Jacobian determinant $\\det(\\mathbf{J})$ governs multivariable change of variables in integration: $dx_1 \\dots dx_n = |\\det(\\mathbf{J})|\\,du_1 \\dots du_n$."
     },
     {
       "word": "jade",
@@ -91901,7 +91901,7 @@
       "word": "jahn-teller effect",
       "raw_headword": "JAHN-TELLER EFFECT",
       "synonyms": [],
-      "definition": "A dis Jahn-Teller Effect energy t 2g egdx 2 -y 2 d z 2 d xy d xy d yz Cu(II) in regular octa- herdral environment Cu(II) after J-T distortion tortion of a highly symmetrical molecule, which reduces its symmetry and lowers its energy. The effect is observed in inorganic complexes and occurs for all nonlinear molecules in degenerate electronic states. When a structure of a nonlinear molecule or ion has degenerate orbitals, the actual structure of the molecule or ion is distorted so as to split the energy levels or increase the degeneracy. Degenerate orbitals are two molecular orbitals with the same energy levels."
+      "definition": "A theorem of quantum chemistry and molecular physics formulated by Hermann Jahn and Edward Teller in 1937. It states that any non-linear molecular system in an electronically degenerate ground state will undergo spontaneous geometric distortion that lowers its molecular symmetry, removes the orbital degeneracy, and lowers the overall electronic energy:\n\n$$\\hat{H} = \\hat{H}_0 + \\sum_k \\left( \\frac{\\partial \\hat{H}}{\\partial Q_k} \\right)_0 Q_k$$\n\nProminently observed in octahedral coordination complexes of transition metals with unevenly occupied $e_g$ orbitals, most notably $d^9$ copper(II) complexes ($[\\text{Cu}(\\text{H}_2\\text{O})_6]^{2+}$), where axial elongation splits the $e_g$ level into $d_{x^2 - y^2}$ and lower-energy $d_{z^2}$."
     },
     {
       "word": "james six",
@@ -92076,7 +92076,7 @@
       "word": "jensen inequality",
       "raw_headword": "JENSEN INEQUALITY",
       "synonyms": [],
-      "definition": "1. Named after the Danish mathematician Johan Jensen (1859 - 1925), it is an inequality involving convexity of a function. It is of the form f ( ∑ λ ia i ) ≤ f ( a ), whenever ∑λ i = 1 and λ i = 0 that is satisfied by all convex combinations of points in the domain convex function and is equivalent to the convexity of the function f . 2. Various corresponding integral inequalities, often phrased in terms of probability."
+      "definition": "A foundational mathematical inequality in convex analysis and probability theory established by Danish mathematician Johan Jensen in 1906. For any convex function $g: \\mathbb{R} \\to \\mathbb{R}$ and real weights $\\lambda_i \\ge 0$ with $\\sum_{i=1}^n \\lambda_i = 1$:\n\n$$g\\left( \\sum_{i=1}^n \\lambda_i x_i \\right) \\le \\sum_{i=1}^n \\lambda_i g(x_i)$$\n\nIn probabilistic expectation notation for a random variable $X$:\n\n$$g(\\mathbb{E}[X]) \\le \\mathbb{E}[g(X)]$$\n\n(with the inequality reversed if $g$ is strictly concave). Directly implies the arithmetic mean-geometric mean (AM-GM) inequality and Gibbs's entropy inequality in information theory."
     },
     {
       "word": "jet",
@@ -92166,7 +92166,7 @@
       "word": "joint distribution function",
       "raw_headword": "JOINT DISTRIBUTION FUNCTION",
       "synonyms": [],
-      "definition": "The joint distribution function of a pair of random variables is defined as the probability that the first random variable takes a value inferior or equal to the first real number and that simultaneously, the second variable takes a value inferior or equal to the second real number. Suppose X1 , X2 are continuous random variables defined on the sample space and that: F ( X1 , X2 ) = P ( X1 ≤ x 1 , X2 ≤ x 2 ) = f ( t 1 , t 2 ) -∞ x 1 ∫ -∞ x k ∫ dt 1 dt 2 for all x 1 , x k . Then f ( x 1 , x 2 ) is the joint density function of ( X1 , X2 ) provided f ( x 1 , x 2 ) ≥ 0 and that f ( x 1 , x 2 ) -∞ ∞ ∫ -∞ ∞ ∫ dx 1 dx 2 = 1."
+      "definition": "In probability and multivariable statistics, the joint cumulative distribution function (joint CDF) $F_{X, Y}(x, y)$ of continuous random variables $X$ and $Y$, defined as the probability that $X \\le x$ and $Y \\le y$ simultaneously:\n\n$$F_{X, Y}(x, y) = \\mathbb{P}(X \\le x, \\, Y \\le y) = \\int_{-\\infty}^x \\int_{-\\infty}^y f_{X, Y}(u, v)\\,du\\,dv$$\n\nwhere $f_{X, Y}(u, v) \\ge 0$ is the joint probability density function (joint PDF), satisfying total normalization:\n\n$$\\int_{-\\infty}^\\infty \\int_{-\\infty}^\\infty f_{X, Y}(x, y)\\,dx\\,dy = 1$$\n\nThe marginal PDF is recovered by integrating out the nuisance variable: $f_X(x) = \\int_{-\\infty}^\\infty f_{X, Y}(x, y)\\,dy$."
     },
     {
       "word": "joint european torus",
@@ -92216,13 +92216,13 @@
       "synonyms": [
         "polylogarithm"
       ],
-      "definition": "In mathematics, the special function related to logarithm that is defined for integral n ≥ 2 and z in the unit disk and written as Li n z = zkknk = 1 ∞ ∑ , here Li 2 is called the dilogorithm and Li 3 is called the trilogarithm ."
+      "definition": "In analytic number theory and special functions, the polylogarithm function $\\text{Li}_s(z)$ (named after Alfred Jonquière), defined for complex $s$ and $|z| < 1$ by the Dirichlet series:\n\n$$\\text{Li}_s(z) = \\sum_{k=1}^\\infty \\frac{z^k}{k^s}$$\n\nSpecial integer values correspond to fundamental functions: $\\text{Li}_1(z) = -\\ln(1 - z)$, $\\text{Li}_2(z)$ is Euler's dilogarithm (Spence's function), and $\\text{Li}_3(z)$ is the trilogarithm. At $z = 1$, it evaluates to the Riemann zeta function: $\\text{Li}_s(1) = \\zeta(s)$ for $\\text{Re}(s) > 1$."
     },
     {
       "word": "jordan algebra",
       "raw_headword": "JORDAN ALGEBRA",
       "synonyms": [],
-      "definition": "Named after French mathematician, Marie Ennemond Camille Jordan (1838 - 1922), it is non-associative algebra, whose multiplication satisfies the commutative as ab = ba and the Jordan identity as ( a 2 b ) a = a 2 ( ba )."
+      "definition": "A non-associative, commutative algebra $(\\mathcal{A}, \\circ)$ over a field of characteristic $\\neq 2$, introduced by Pascual Jordan in 1933 to formalize the quantum mechanical algebra of observables. The Jordan product $a \\circ b$ satisfies the commutativity axiom and the Jordan identity:\n\n$$a \\circ b = b \\circ a$$\n\n$$(a^2 \\circ b) \\circ a = a^2 \\circ (b \\circ a)$$\n\nIn quantum mechanics, if $\\mathcal{A}$ is an associative operator algebra, symmetrized product $A \\circ B = \\frac{1}{2}(AB + BA)$ forms a special Jordan algebra guaranteeing that the product of two Hermitian operators remains Hermitian."
     },
     {
       "word": "jordan block",
@@ -92230,7 +92230,7 @@
       "synonyms": [
         "jordan factor"
       ],
-      "definition": "A Jordan block with value λ is a square matrix, whose entries are all λ on the diagonal, all 1 on the entries immediately above the diagonal and 0 elsewhere. It is of the form J ( λ ) = S + λ I, where λ is a scalar and S is super diagonal with entries equal to one."
+      "definition": "In linear algebra, an upper triangular square matrix $\\mathbf{J}_k(\\lambda)$ of size $k \\times k$ consisting of a single scalar eigenvalue $\\lambda$ along the main diagonal, ones along the superdiagonal, and zeros elsewhere:\n\n$$\\mathbf{J}_k(\\lambda) = \\begin{bmatrix} \\lambda & 1 & 0 & \\dots & 0 \\\\[4pt] 0 & \\lambda & 1 & \\dots & 0 \\\\[4pt] \\vdots & \\vdots & \\ddots & \\ddots & \\vdots \\\\[4pt] 0 & 0 & \\dots & \\lambda & 1 \\\\[4pt] 0 & 0 & \\dots & 0 & \\lambda \\end{bmatrix} = \\lambda \\mathbf{I}_k + \\mathbf{N}$$\n\nwhere $\\mathbf{N}$ is a standard nilpotent shift matrix ($\\mathbf{N}^k = \\mathbf{0}$). A Jordan block has geometric multiplicity $1$ and algebraic multiplicity $k$."
     },
     {
       "word": "jordan content",
@@ -92286,7 +92286,7 @@
       "word": "jordan product",
       "raw_headword": "JORDAN PRODUCT",
       "synonyms": [],
-      "definition": "The symmetric product of two quantities or operators A and B defined by A·B = 1/2(AB + BA)."
+      "definition": "In operator theory and quantum mechanics, the symmetrized anti-commutator product of two operators or square matrices $\\mathbf{A}$ and $\\mathbf{B}$:\n\n$$\\mathbf{A} \\circ \\mathbf{B} = \\frac{1}{2}(\\mathbf{A}\\mathbf{B} + \\mathbf{B}\\mathbf{A})$$\n\nBecause associative matrix multiplication does not preserve self-adjointness for non-commuting observables ($(\\mathbf{A}\\mathbf{B})^\\dagger = \\mathbf{B}^\\dagger \\mathbf{A}^\\dagger = \\mathbf{B}\\mathbf{A} \\neq \\mathbf{A}\\mathbf{B}$), the Jordan product preserves Hermiticity: $(\\mathbf{A} \\circ \\mathbf{B})^\\dagger = \\mathbf{A} \\circ \\mathbf{B}$."
     },
     {
       "word": "jordan, marie ennemond camille",
@@ -92312,13 +92312,13 @@
       "word": "josephson's effects",
       "raw_headword": "JOSEPHSON'S EFFECTS",
       "synonyms": [],
-      "definition": "Electrical effect associated with the tunnelling of electron pairs across an insulating barrier separating two superconductors."
+      "definition": "Quantum macroscopic tunneling phenomena predicted by Brian Josephson in 1962, occurring when Cooper pairs tunnel through a thin insulating barrier between two superconductors (Josephson junction):\n\n* **DC Josephson effect**: A constant supercurrent flows with zero applied voltage across the junction:\n$$I = I_c \\sin(\\Delta\\phi)$$\nwhere $I_c$ is the critical current and $\\Delta\\phi$ is phase difference between superconducting macroscopic wavefunctions.\n\n* **AC Josephson effect**: Applying a constant DC voltage $V$ drives high-frequency oscillation of supercurrent:\n$$\\frac{d(\\Delta\\phi)}{dt} = \\frac{2eV}{\\hbar} \\implies f = \\frac{2e}{h} V$$\n\nwhere $\\frac{2e}{h} = K_J \\approx 483597.9\\,\\text{GHz/V}$ is the Josephson constant, providing the primary voltage standard in metrology."
     },
     {
       "word": "joule",
       "raw_headword": "JOULE",
       "synonyms": [],
-      "definition": "1. The SI unit of work and energy, named after James Prescott Joule (1818-89), British physicist. It is defined as the amount of work done or the energy transferred by a force of one newton acting over a distance of one metre. Its symbol is j. 2. In the definition of volt, it is work required to move an electric charge of one coulomb through an electrical potential difference of one volt; or one coulomb volt (c·v). 3. In the definition of watt, it is the work required to continuously produce one watt of power for one second; or one watt second (w-s). 4. The S.I. unit of food energy or energy derived from food through the process of cellular respiration, which can be converted into calories as follows: 1 J = 0.239 cal and 1 cal = 4.184 J. The calorie, which is also a metric system unit has been superseded by the S.I. unit joule, although it is still widely used."
+      "definition": "The SI derived unit of energy, work, and amount of heat, with the symbol $\\text{J}$, named in honour of English physicist James Prescott Joule. Defined as the work done by a constant force of one newton acting through a displacement of one metre in the direction of the force:\n\n$$1\\,\\text{J} = 1\\,\\text{N}\\cdot\\text{m} = 1\\,\\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-2}$$\n\nIn electrical terms: $1\\,\\text{J} = 1\\,\\text{W}\\cdot\\text{s} = 1\\,\\text{V}\\cdot\\text{A}\\cdot\\text{s} = 1\\,\\text{C}\\cdot\\text{V}$. Thermochemical conversions: $1\\,\\text{cal} = 4.184\\,\\text{J}$ and $1\\,\\text{eV} = 1.602176634 \\times 10^{-19}\\,\\text{J}$."
     },
     {
       "word": "joule heating",
@@ -92327,7 +92327,7 @@
         "ohmic heating",
         "resistive heating"
       ],
-      "definition": "The process of heat production in a conductor as a result of the passage of an electric current through it. The heat produced is proportional to the square of the current multiplied by the electrical resistance of the wire: J = I2 R. Its applications include incandescent light bulb, which glows when the filament is heated by Joule heating, so hot that it glows white with thermal radiation. All electric heaters such as electric stoves and others usually work by Joule heating."
+      "definition": "Also known as ohmic heating or resistive heating, the physical process by which electrical energy is irreversibly converted into thermal energy due to resistive collisions between charge carriers (electrons) and the conductor lattice. The thermal power $P$ generated is:\n\n$$P = I^2 R = \\frac{V^2}{R} = IV, \\quad \\text{SI unit: watt (W)}$$\n\nOver time $t$, total heat energy produced is $Q = I^2 R t$. Exploited in electric stoves, toasters, and arc furnaces, but represents parasitic transmission loss ($I^2 R$ loss) in electric power grids."
     },
     {
       "word": "joule meter",
@@ -92342,7 +92342,7 @@
         "joule effect",
         "joule's first law"
       ],
-      "definition": "A physical law expressing the relationship between the heat generated by the current flowing through a conductor, named after James Prescott Joule (1818-89), British physicist. It states that the internal energy of a given mass of gas is independent of its volume and pressure. The heat ( Q ) produced when an electric current ( I ) flows through a resistance ( R ) for a time ( t ), is given by Q = I2 Rt . It is a function of temperature alone. This law applies only to ideal gases as in a real gas intermolecular forces would cause changes in the internal energy should a change of volume occur."
+      "definition": "1. **Joule's first law of electric heating**: The thermal energy $Q$ generated in an electrical conductor of resistance $R$ carrying a current $I$ for duration $t$ is:\n\n$$Q = I^2 R t$$\n\n2. **Joule's second law of thermodynamics**: For an ideal gas, the internal energy $U$ depends exclusively on thermodynamic temperature $T$, being independent of volume $V$ and pressure $P$:\n\n$$\\left(\\frac{\\partial U}{\\partial V}\\right)_T = 0, \\qquad \\left(\\frac{\\partial U}{\\partial P}\\right)_T = 0$$\n\nVerified by Joule's free-expansion experiment into an evacuated chamber."
     },
     {
       "word": "joule, james prescott",
@@ -92358,7 +92358,7 @@
       "synonyms": [
         "joule-kelvin effect"
       ],
-      "definition": "The fall in temperature that occurs when a gas expands through a porous plug J into a region of lower pressure so that no heat is exchanged with the environment. For most real gases the temperature falls under these circumstances as the gas has to do internal work in overcoming the intermolecular forces to enable the expansion to take place. lt can be felt when, for example, compressed air escapes through the valve of an inflated bicycle tyre. It is the basic principle of some refrigerators. At room temperature, all gases except hydrogen, helium and neon cool upon expansion by the Joule-Thomson process."
+      "definition": "In thermodynamics, the temperature change experienced by a real gas when forced through a porous plug or throttling valve in a steady-state adiabatic expansion without external shaft work ($Q = 0, W = 0$). The process is strictly isenthalpic (constant enthalpy: $\\Delta H = 0$). The Joule-Thomson coefficient $\\mu_{\\text{JT}}$ is:\n\n$$\\mu_{\\text{JT}} = \\left( \\frac{\\partial T}{\\partial P} \\right)_H = \\frac{1}{C_p} \\left[ T \\left(\\frac{\\partial V}{\\partial T}\\right)_P - V \\right]$$\n\nFor an ideal gas, $\\mu_{\\text{JT}} \\equiv 0$. For real gases below their Joule-Thomson inversion temperature ($T < T_{\\text{inv}}$), $\\mu_{\\text{JT}} > 0$, causing cooling upon expansion ($\\Delta T < 0$), which forms the foundational basis of the Linde-Hampson liquefaction of air and industrial cryogenic refrigeration."
     },
     {
       "word": "journal",
@@ -92449,7 +92449,7 @@
         "junction gate field-effect transistor",
         "jugfet"
       ],
-      "definition": "A type of field effect transistor (FET) in which the conducting channel lies between pn junctions in the silicon material. A pn junction acts as a diode, that becomes conductive if the gate voltage is reversed. It is the simplest type of field effect transistor (FET). FET is one of the two major categories of transistors; the other is called bipolar junction transistors (BJTs), used as a switch or as a voltage-controlled resistance. The other type of field effect transistor (FET) is called the insulated-gate field- effect transistor ( IGFET ), also known as the metal oxide field effect transistor ( MOSFET ). Insulated gate field-effect transistors are unipolar devices just like JFETs and differs from the JFET by the addition of a silicon dioxide layer over the JFET and then a layer of silicon nitride. The result is a device which has even higher input impedance. The JFET consists of a semi-conductor material flanked by two highly doped layers of opposite type. If a positive voltage is applied to the drain, electrons in the source are attracted into the drain and flow through the channel between the source and drain. As the drain voltage increases, depletion layers associated with the p-n junction increases in size and reduce the cross-sectional area of the channel thus increasing the resistance of the device. When the depletion layers first meet, the drain voltage is called the pinch-offvoltage. At drain voltages above pinch off, the depletion layers extend further into the drain region, but remain essentially constant in the channel. The current therefore remains substantially constant, until the voltage reaches such a value that breakdown occurs. Electrons arriving at the pinch-offpoint, are swept across the depletion layer into the drain region. The resulting drain current characteristics are similar to that of a pentode valve. Applying a negative voltage to the gates will also increase the size depletion layers and hence the pinch J offcondition will be reached at a lower drain voltage and a family of characteristics will be generated for different values of gate bias. The gate voltage is therefore used to modulate the channel conductivity."
+      "definition": "A three-terminal unipolar semiconductor device (Source, Drain, Gate) where channel current conduction between source and drain is modulated by the reverse-bias electrostatic depletion region of one or more $pn$ junctions. In the active saturation regime ($V_{\\text{DS}} \\ge V_{\\text{GS}} - V_P$), the drain current $I_D$ is governed by Shockley's quadratic relation:\n\n$$I_D = I_{\\text{DSS}} \\left( 1 - \\frac{V_{\\text{GS}}}{V_P} \\right)^2$$\n\nwhere $I_{\\text{DSS}}$ is the drain saturation current at zero gate-source bias ($V_{\\text{GS}} = 0$) and $V_P$ is the pinch-off voltage. Because the gate junction is operated in reverse bias ($I_G \\approx 0$), JFETs exhibit extremely high input impedance ($10^9\\text{--}10^{12}\\,\\Omega$)."
     },
     {
       "word": "junction transistor",
