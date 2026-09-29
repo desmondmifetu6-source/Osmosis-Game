@@ -146,7 +146,7 @@ When a player searches for a term:
 ---
 
 ## 🤝 6. Words from your Copilot
-
+h
 Desmond, you nailed the quote:
 > *"All the great developers you know started by developing something they couldn't, but did."*
 

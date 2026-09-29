@@ -1,0 +1,357 @@
+[
+  {
+    "index": 0,
+    "word": "k",
+    "definition": "1. The symbol for the metric prefix, kilo- with the value 1000 (10 3 ). For example, 1 kg (10 3 ) is equal to 1000 grams. 2. In mathematics, a vector on the z-axis, having a length of 1 unit. It is conventionally printed in bold type, k . 3. The symbol for Boltzmann constant, the ratio of the universal gas constant to Avogadro's number, with the value 1.3807 × 10 -23 J/K."
+  },
+  {
+    "index": 1,
+    "word": "k",
+    "definition": "1. The symbol for the kelvin, the SI base unit of absolute or thermodynamic temperature. One kelvin represents the same temperature difference as one degree Celsius on the centigrade scale. 2. In mathematics, symbol for the special function, which represents the complete elliptic integral of the first kind with the formula K( k ) = (1 - k 2 sin 2 π /2 ∫ θ ) - 1 d θ , which gives the period of a pendulum. 3. In computer science, the prefix kilo- with the symbol K- often represents 2 10 , which is equal to 1024. This has been replaced by the prefix kibi- with the symbol Ki- in 1998 by a resolution of the International Electrotechnical Commission."
+  },
+  {
+    "index": 2,
+    "word": "k-ar dating",
+    "definition": "A method of isotopically dating the ages of rocks based on the radioactive decay of potassium^-40 ( 40 K) to the stable isotope argon^-40 ( 40 Ar). Ages are based on the known half-life of 40 K and the ratio of 40 K to 40 Ar. The method is used to measure a wide variety of ages of about 100,000 to 30 million years old."
+  },
+  {
+    "index": 5,
+    "word": "kainic acid",
+    "definition": "An analogue of glutamic acid obtained from the red algae, Digenea simplex. Its molecular formula is C10 H15 NO4 , density 1.22 g/cm3 , boiling point 439.88 °C at 760 mmHg, melting point 250-252.2 °C. It is an amino- acid agonist for the kainite receptor, a neurotoxin and has anthelmintic properties."
+  },
+  {
+    "index": 6,
+    "word": "kainite",
+    "definition": "A naturally occurring mineral salt of magnesium sulfate and potassium chloride, with the chemical formula MgSO4 .KCl.3H2 O. It is a source of potassium and, therefore, fertiliser."
+  },
+  {
+    "index": 9,
+    "word": "kakutani fixed point theorem",
+    "definition": "The theorem that every correspondence Γ that maps a compact convex subset C of a locally convex space into itself, with a closed graph and convex non-empty images (that is, Γ ( x ) is a non-empty convex subset of C for all x ∈ C ), has a fixed point, x ∈Γ ( x ). This extends Brouwer's theorem."
+  },
+  {
+    "index": 12,
+    "word": "kam theorem",
+    "definition": "A theorem in dynamic systems about the persistence of quasi-periodic motions under small perturbations, important in celestial and statistical mechanics. It states that a non-negligible fraction of orbits in the phase space of a dynamical system remain indefinitely in a specific region of phase space even in the presence of small perturbations in the system."
+  },
+  {
+    "index": 15,
+    "word": "kantorovitch inequality",
+    "definition": "The inequality, valid for any positive definite matrix, P and any non-zero vector, x , that x , x x , x x ,P x x ,P^-1 x = 4 mM m + M2 , where m and M are respectively, the smallest and the largest eigenvalues of P. This is useful in estimating convergence rates for descent methods."
+  },
+  {
+    "index": 17,
+    "word": "kaolinite",
+    "definition": "A white or grey clay mineral which is the chief constituent of kaolin, with the chemical formula Al 2 Si 2 O5 (OH) 4 . It is the mineral form of aluminium potassium silicate (KAlSi 3 O8 ); found in sediments, soils, hydrothermal deposits and sedimentary rocks and formed by the alteration of other minerals, especially feldspar, which is the most common constituent of kaolin. It is a member of a group of clay minerals called the kaolin group minerals. It is an important industrial commodity used in ceramics, paper coating and filler, paint, plastics, fibreglass and catalysts."
+  },
+  {
+    "index": 23,
+    "word": "karush-kuhn-tucker theorem",
+    "definition": "A result extending the Lagrange method of multipliers to constraints by equalities and inequalities. It ensures that, given an appropriate constraint qualification, any point x 0 , that minimises f ( x ) subject to g 1 ( x ) ≤ 0,..., g n ( x ) ≤ 0, g 1 + n ( x ) = 0,..., g m + n = 0 will occur at a stationary point of the Lagrangian L ( x , λ ) = f ( x ) + ∑ λ i g i , where the summation is over the binding constraints with g k ( x 0 ) = 0 and where the multipliers corresponding to inequality constraints are nonnegative."
+  },
+  {
+    "index": 33,
+    "word": "kater's pendulum",
+    "definition": "A reversible free swinging pendulum invented by British physicist, Henry Kater (1777-1835) in 1817 for measuring the acceleration of free fall or gravity. It is made of a metal bar with knife edges attached near the ends and two weights that can slide between the knife edges. The bar is pivoted from each knife edge in turn and the positions of the weights are adjusted so that the period of the pendulum is the same with both pivots. The period is then given by the formula for a simple pendulum, which enables gravity to be calculated."
+  },
+  {
+    "index": 34,
+    "word": "katetov's interpolation theorem",
+    "definition": "The result that if a lower semi-continuous real-valued function, f , majorises an upper semi-continuous real valued function, g , both with domain a normal topological space, then there is a continuous function, h , such that f ( x ) ≥ h ( x ) ≥ g ( x )."
+  },
+  {
+    "index": 40,
+    "word": "kekulé structure",
+    "definition": "A representation of a benzene molecule as a hexagonal ring with alternating single and double bonds linking a six-member ring of carbon atoms, each linked to one hydrogen atom at the vertices. It was proposed by German physicist, Friedrich Kekulé structure of benzene HHHHHHHHHHHH August Kekulé (1829-1890). It accounted for the molecular formula C6 H6 and the reason for benzene yielding only one mono-substituted derivative and three de-substituted derivatives. However, it could not account for the unusual stability of benzene, why all the bond lengths are equal and why benzene resists addition reaction and common oxidising agents."
+  },
+  {
+    "index": 42,
+    "word": "kelvin",
+    "definition": "Another name for the absolute temperature scale, with the symbol K. It was named after the British physicist and engineer Lord William Thompson Kelvin (1824-1907). The temperature of a substance at absolute zero is zero Kelvin (0 K). The Kelvin and the degree Celsius are often used together, as they have the same interval and 0 K = -273.15 °C; 273.15 K = 100 °C."
+  },
+  {
+    "index": 44,
+    "word": "kelvin scale",
+    "definition": "The basic scale used universally by scientists for temperature definition. The triple point of water comprising ice, liquid and vapour is defined as 273.15 K. The Kelvin scale begins at absolute zero (-273.15 °C) and increases at the same degree intervals as the Celsius. The Kelvin and the degree Celsius are often used together; 0 K = -273.15 °C and 373.15 K = 100 °C."
+  },
+  {
+    "index": 45,
+    "word": "kelvin's circulation theorem",
+    "definition": "The theorem that the circulation of a frictionless fluid is invariant in time in the presence of conservative forces. The theorem also holds for a fluid of uniform density that is not compressible. It was published in 1869 by William Thomson, 1st Baron Kelvin and named after him. It is defined mathematically as D Γ D t = 0, where Γ is the circulation around a material contour C( t )."
+  },
+  {
+    "index": 48,
+    "word": "kendell method",
+    "definition": "A method in statistics that is used in measuring the degree of association between two different ways of ranking n objects, using two variables ( x and y ) which give data ( x 1 , y 1 ), . . .,( x n , y n ). The objects are ranked using the first x and the y . For each of the pairs of objects a score is assigned. Kendell's coefficient of rank correlation is given by τ = sum of sources n 2 n^-1 ( ) . The closer τ is to one, the greater the degree of association between the ranks."
+  },
+  {
+    "index": 50,
+    "word": "kepler's laws of planetary motion",
+    "definition": "The three laws devised by Johannes Kepler to define the mechanics of planetary motion stating that: (i) each planet travels in an ellipse with the Sun being one focus of the ellipse; (ii) the radius vector from the sun to the planet sweeps out equal areas in equal times. This makes the planet moves quickest when the vector radius is closest to the Sun and moves more slowly when the radius vector is furthest from the Sun; (iii) the squares of the periodic times of the planets are proportional to the cubes of the semi-axes of the elliptic orbit. It was named after German mathematician, astronomer and astrologer Johannes Kepler (1571-1630)."
+  },
+  {
+    "index": 51,
+    "word": "kepler, johannes",
+    "definition": "German astronomer, who was educated at the University of Tübingen. In 1594, he became a mathematics teacher in Graz, where he learned of the work of Copernicus. He developed a theory that the cosmos was constructed of the five regular polyhedrons, enclosed in a sphere, with a planet between each pair. In 1600, he went to work for Tycho Brahe in Prague after sending his paper on the subject to him. It was there that he worked out Kepler's laws of planetary motion, for which he is best remembered. He was the first person to explain accurately, how light behaves within the eye, how eyeglasses improve vision and what happens to light in a telescope. In 1609, he published his finding that the orbit of Mars was an ellipse and not the perfect circle as used to be believed to be the orbit of every celestial body. This fact became the basis of the first of Kepler's three laws of planetary motion. The K second law states that planets move faster as they near the Sun. In 1619, he showed that a simple mathematical formula related the planets' orbital periods to their distance from the Sun, his third law."
+  },
+  {
+    "index": 52,
+    "word": "keratin",
+    "definition": "A strong fibrous protein forming the outer protective layer of skin of vertebrates and also in hair, nails, claws, hoofs, feathers and the outer coatings of horns in animals such as cows and sheep. Keratin does not dissolve in cold or hot water and does not easily undergo proteolysis. Keratinisation is the process by which the outermost cell of the mammalian epidermis is replaced by keratin or the conversion of skin cells into other horny materials such as scales or nails."
+  },
+  {
+    "index": 55,
+    "word": "kernel",
+    "definition": "1. The inner softer edible part of a nut or a seed within a hard shell. It forms the reproductive structure in plants. It consists of a plant embryo, surrounded by endosperm produced during fertilisation and enclosed in a protective coat. The endosperm provides nourishment for the plant embryo. 2. A positively charged atomic nucleus that has lost its valence electrons. 3. The set of elements of the domain of a mapping that have the identity element of the range as their image. The kernel of a homomorphism from a group to another is a normal subgroup; the kernel of a ring homomorphism is the counterimage of zero and is an ideal. 4. A function whose product with a given function is integrated to produce an integral transform of the given function. In the equation g ( t ) = K ( s , t ) f ( s )dt a b ∫ the kernel is K . 5. Iterated kernels are the sequence of kernels defined by K0 = K and K n + 1 ( s , t ) = K ( s , r ) K n ( r , t )d r . a b ∫ These arise in the solution of the integral equations, with the sum - λ n n = 0 ∞ ∑ k n + 1 ( s , t ) being called resolvent kernel . 6. The core of a computer's operating system that includes the most heavily used portion of software. The kernel is maintained permanently in main memory and performs essential system functions such as controlling memory and files and allocating system resources."
+  },
+  {
+    "index": 58,
+    "word": "kerosene",
+    "definition": "Colourless flammable oil distilled from petroleum and also derived from coal tar or oil-bearing shale. It can be separated physically from the other crude oil fractions by distillation or it can be produced by chemically decomposing or cracking, heavier portions of the oil at elevated temperatures. It is slightly heavier than gasoline and reaches its boiling point between about 180° and 290 °C. It contains hydrocarbons with 10 to 16 carbon atoms per molecule. Kerosene is less volatile than petrol, making it a relatively safe fuel to store and handle. Its flash point is 38 °C or higher, whilst that of petrol is as low as^-40 °C. It is used as a fuel for jet engines, for heating, cooking and lighting. Standard commercial jet fuel is essentially a high-quality straight-run kerosene and many military jet fuels are blends based on kerosene."
+  },
+  {
+    "index": 60,
+    "word": "kerr effect",
+    "definition": "1. The ability of certain transparent substances to refract differently light waves whose vibrations are in two directions when the substance is placed in an electric field. 2. The elliptical polarisation of plane-polarised or unpolarised light when reflected from the polished pole of a magnetised material."
+  },
+  {
+    "index": 62,
+    "word": "ketamine",
+    "definition": "A white crystalline powder with the chemical formula C13 H16 ClNO and melting point 262 °C (535 K). It is used as anaesthetic in humans and veterinary medicine. It produces hallucinogenic effects and is used illegally in clubs."
+  },
+  {
+    "index": 63,
+    "word": "ketenes",
+    "definition": "A class of compounds of the type R1 R2 C=C=O, where R1 and R2 are organic groups. It is formed by dissolving a ketone in methanol and hydrochloric acid. An equilibrium is established which results in the formation of dimethylketal. Ketenes are reactive compounds and are often generated in a reaction medium for organic synthesis. The compound with a molecular structure CH2 =C=O called ethenone . It is the simplest member of the ketene class. It is a tautomer of ethynol."
+  },
+  {
+    "index": 65,
+    "word": "keto-enol tautomerism",
+    "definition": "The existence of a chemical compound in two double-bonded structural forms, keto and enol, which are in equilibrium. The keto form (-CH2 C=O) changes to enol (-CH=C(OH-) by the migration of a hydrogen atom to form a hydroxyl group with the oxygen of the carbonyl group. The position of the double bond also changes."
+  },
+  {
+    "index": 70,
+    "word": "ketone",
+    "definition": "An organic compound containing a carbon atom connected to an oxygen atom by a double bond and to two other carbon atoms. Ketones are important in synthesising other compounds; and also important intermediates in cell metabolism. They are members of a family of organic compounds of general formula RCOR', where R and R' are organic radicals. Ketones may be made in various ways such as oxidation of secondary alcohols. The simplest ketone is acetone, an important industrial solvent."
+  },
+  {
+    "index": 99,
+    "word": "kieserite",
+    "definition": "A highly unstable magnesium sulfate powder with the chemical formula MgSO4 ·H2 O, used as fertiliser where magnesium deficiency is evident, especially in light sandy soil."
+  },
+  {
+    "index": 108,
+    "word": "kilo-",
+    "definition": "A prefix used in the metric system to denote 1000 times (10 3 ), with the symbol k. For example, 1000 volts = 1 kilovolts (kV), 2000 metres = 2 kilometres (km)."
+  },
+  {
+    "index": 111,
+    "word": "kilocalorie",
+    "definition": "A non SI unit of heat measurement, which is equal to 1000 calories. It is defined as the amount of heat needed to raise the temperature of 1g of water by 1 °C at normal atmospheric pressure. It is often used to measure the energy content of food and the amount of energy burnt through exercising and other physical activities by an individual. The SI unit, joule is used as the unit of energy, although kcal is widely used. 1 kcal = 4.18 kJ and 1 kJ = 0.24 kcal."
+  },
+  {
+    "index": 112,
+    "word": "kilocycle",
+    "definition": "A former measure of frequency of a thousand cycles of any periodic phenomenon. It is equivalent to 1 kilohertz."
+  },
+  {
+    "index": 113,
+    "word": "kilodalton",
+    "definition": "A non-SI unit of mass, used to express atomic mass unit (amu) or molecular mass especially of large molecules, such as proteins and polysaccharides. Its symbol is u. A Dalton is exactly equal to one twelfth of the mass of an atom of carbon^-12, the isotope of carbon with six protons and six neutrons in its nucleus, which is about 1.660 × 10 -27 kg."
+  },
+  {
+    "index": 115,
+    "word": "kilohertz",
+    "definition": "A unit of frequency denoted by kHz. 1 kHz = 1000 hertz (cycles per second)."
+  },
+  {
+    "index": 118,
+    "word": "kiloparsec",
+    "definition": "A unit used for measuring large astronomical distances denoted by kpc. 1 kpc = 1,000 parsecs = 3,259 light-years."
+  },
+  {
+    "index": 122,
+    "word": "kilowatt-hour",
+    "definition": "The practical unit or Board of Trade Unit (BTU) of electrical energy, which is the commercial billing unit for electrical energy delivered to consumers. It is not a unit of power, but of energy. It is equivalent to a power consumption of 1000 watts for 1 hour or power in watts multiplied by time in hours. Its unit is kWh. 1kWh = 1kW × 1hr = 1000 W × 60 × 60 = 3.6 Mj. Therefore, 1 unit of electric energy consumed = 1 kWh = 3.6 MJ."
+  },
+  {
+    "index": 130,
+    "word": "kinematic equation",
+    "definition": "Any of four equations that apply to bodies moving linearly with uniform acceleration, a . These equations relate distance covered ( s ) to time taken ( t ) by the body: $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v = u + at$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ; s = 1 2 ( u + v ) t ; s = ut + 1 2 at 2 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$v^2 = u^2 + 2as$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where u and v are the initial and final velocities of the body respectively, a the acceleration of the body, s the distance travelled by the body and t time used to cover the distance."
+  },
+  {
+    "index": 131,
+    "word": "kinematic viscosity",
+    "definition": "The ratio of the viscosity of a liquid to its density. Its unit is m2 s^-1 ."
+  },
+  {
+    "index": 135,
+    "word": "kinetic activity factor",
+    "definition": "A factor involving activity coefficients that appears as a multiplier in the rate equation."
+  },
+  {
+    "index": 136,
+    "word": "kinetic control",
+    "definition": "The term characterises conditions including reaction times that lead to reaction products in a reaction governed by the relative rates of the parallel (forward) reactions in which the products are formed, rather than by the respective overall equilibrium constants."
+  },
+  {
+    "index": 138,
+    "word": "kinetic effect",
+    "definition": "A chemical effect that depends on reaction rate rather than on thermodynamics. For example, diamond is thermodynamically less stable than graphite. Its apparent stability depends on the vanishingly slow rate at which it is converted. A reaction may be thermodynamically feasible (i.e has negative ∆H) but kinetically not feasible (i.e reaction is too slow). For example, the reaction H2 g ( ) + 1 2 O2 g ( ) → H2 O has standard enthalpy change of formation of , which suggests that thermodynamically, it is very feasible. However, this reaction takes about a billion years to occur making it kinetically not feasible."
+  },
+  {
+    "index": 139,
+    "word": "kinetic energy",
+    "definition": "The energy possessed by an object due to its motion, which is a scalar quantity. The magnitude of the kinetic energy depends on both the mass and the velocity of the object, expressed as E k = ½ mv 2 , where m = mass of the moving body and v = velocity of the moving body."
+  },
+  {
+    "index": 140,
+    "word": "kinetic equations",
+    "definition": "Equations used in kinetic theory. A key application of kinetic equations is to calculate transport coefficients such as conductivity and viscosity in non-equilibrium statistical mechanics. In general, kinetic equations do not have exact solutions for interacting systems. An example of a kinetic equation is the Boltzmann Equation."
+  },
+  {
+    "index": 144,
+    "word": "kinetic temperature",
+    "definition": "The temperature of a gas defined in terms of the average kinetic energy of its atoms or molecules. It is given by: T = 2 k avg 1 2 mv 2 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ , where T is the kinetic temperature, k is Boltzmann's constant, m is the particle mass and v is the particle velocity. In thermal equilibrium, values of kinetic temperature correspond well with those of other measures of temperature, such as effective temperature; otherwise, they may bear little resemblance."
+  },
+  {
+    "index": 146,
+    "word": "kinetic theory of matter",
+    "definition": "A theory describing the physical properties of matter in terms of the behaviour, especially the movement of its component atoms or molecules. The theory states that all matter are made of small particles (atoms and molecules) that have spaces between them and are in constant motion and that the extent to which movement can occur depends on the temperature. It explains the behaviour of solids, liquids and gases by assuming that they are made up of particles that are always moving."
+  },
+  {
+    "index": 159,
+    "word": "kirchoff's law of thermal radiation",
+    "definition": "The law proposed by Gustav Kirchoffin 1859, which states that the ratio of the emissivity of an object to the absorptivity of the same object is the same for all bodies, depending on frequency and temperature alone and is equal to the emissivity of a blackbody."
+  },
+  {
+    "index": 160,
+    "word": "kirchoff's laws",
+    "definition": "A pair of laws governing the flow of current and voltage in an electrical circuit, named after German physicist, Gustav Robert Kirchoff (1824-87). The first law, also referred to as Kirchoff's current law , the point rule or the junction rule states that in a closed electrical circuit, the algebraic sum of currents at a junction is zero (∑ I = 0) or in a closed electrical circuit, the sum of currents entering a junction equals the sum of currents leaving the junction ( I = I1 + I2 ), therefore I - ( I1 + 1 2 ) = 0. The first law deals with conservation of charges and implies that charges are conserved. The second law, also referred to as Kirchoff's Fig. i) Kirchoff's First Law (Kirchoff's Current Law) I I = I1 I1 I2 + I2 KAFEDBC I1 I2 I3 Kirchoff's Second Law (Kirchoff's voltage law) R4 R3 R2 R5 R1 E1 E3 E2 voltage law or the loop rule states that the algebraic sum of the electromotive forces within any closed circuit is equal to the sum of the potential difference in the various portions of the circuit or at any junction of paths or node: ∑ E = ∑ IR . In other words, the algebraic sum of all the electromotive forces and the voltage drops is equal to zero. Referring to the diagram, loop ABEFA =- E3 - E1 =- I2 R5 - I1 R1 - I1 R2 - I1 R3 ⇒ E1 + E2 = I2 R5 + I1 R1 + I1 R2 + I1 R3 . The second law is a statement of energy conservation, because any charge that starts and ends up at the same point with the same velocity must have gained as much energy as it lost."
+  },
+  {
+    "index": 161,
+    "word": "kirchoff, gustav robert",
+    "definition": "German physicist, born in Königsberg, Prussia, now Kaliningrad in Russia. He was professor of physics at the universities of Breslau, Heidelberg and Berlin. With the German chemist Robert Wilhelm Bunsen, they developed the modern spectroscope for chemical analysis, which led them to discover the elements caesium in 1860 and rubidium in 1861. In 1845, he formulated Kirchoff's laws concerning electric circuits, which allows the calculation of currents, voltages and resistances of electrical networks and generalised the equations describing current flow to three dimensions."
+  },
+  {
+    "index": 166,
+    "word": "kleiber's law",
+    "definition": "The relationship in which metabolic rate (R) of an organism varies with its body mass (M) raised to the power ¾, expressed as R x M ¾ . For example, an animal, having a mass 100 times that of a smaller animal, will have a metabolism roughly 31 times greater than that of the smaller animal. In plants, the exponent is close to 1. This law has been shown to apply to organisms ranging in size from bacteria to whales as well as plants."
+  },
+  {
+    "index": 168,
+    "word": "klein four-group",
+    "definition": "The smallest non-cyclic group consisting of four permutations e = (1), a = (12)(34), b = (13(24), c = (14)(23)."
+  },
+  {
+    "index": 170,
+    "word": "klein-gordon equation",
+    "definition": "An equation in relativity quantum mechanics for spin-zero particles. It describes a spinless particle which is consistent with the special theory of relativity."
+  },
+  {
+    "index": 177,
+    "word": "knapsack problem",
+    "definition": "The problem of determining which numbers from a given collection of numbers have been added together to yield a specific sum. Mathematically, it is the integer problem of maximising ckxkk = 1 n ∑ subject to wkxk ≤ k . k = 0 n ∑ where the variables x i ; are non- negative integers. The problem is analogous to trying to maximise the value of goods packed into a knapsack. It is used in cryptography to encipher and sometimes decipher messages."
+  },
+  {
+    "index": 196,
+    "word": "kohlrausch equation",
+    "definition": "An equation that describes the molar conductivities of strong electrolytes at low concentration. It was named after Friedrich Wilhelm Georg Kohlrausch (1840-1910), a German physicist. The equation is given by: , where = the molar conductivity, = the limiting conductivity, K is a coefficient related to the stoichiometry of the electrolyte and C is the concentration of the electrolyte."
+  },
+  {
+    "index": 197,
+    "word": "kohlrausch's law",
+    "definition": "The law states that the conductivity of the solution of a salt dissolved in water is the sum of two values. One depends on the positive ions and the other on the negative ions. It was devised by Friedrich Wilhelm Georg Kohlrausch (1840 - 1910), a German physicist, who investigated the conductive properties of electrolytes."
+  },
+  {
+    "index": 200,
+    "word": "kolmogorov's three series theorem",
+    "definition": "The result that a series of independent random variables, { f n }, converges pointwise (almost everywhere) if and only if three numerical series converge. When the variables are uniformly bounded, this reduces to verifying the convergence of the sums of the expectations, E( f n ) and of the variances, σ( f n ). It was named after Russian mathematician Andrey Kolmogorov (1903-87)."
+  },
+  {
+    "index": 201,
+    "word": "kolmogorov-smirnoff test",
+    "definition": "In statistics, the goodness of fit test of which the test statistics is max i = 1... n i n - F( X i ) , where F is the hypothesised distribution and the X i are in order. This test statistic is independent of F when the hypothesis is true."
+  },
+  {
+    "index": 203,
+    "word": "konig's theorem",
+    "definition": "The result that the number of edges in a maximum matching of a bipartite graph equals the number of vertices in a minimal covering of the graph, that is, in a subset K of vertices such that each edge has a vertex in K ."
+  },
+  {
+    "index": 205,
+    "word": "korovkin theorems",
+    "definition": "A class of theorems regarding uniform approximation of which the most basic is that if a sequence { L n } of non-negative linear operators on C [ a , b ] is such that L n ( x k ) converges uniformly to x k for k = 0, 1, 2, then L n ( f ) converges uniformly to f for all continuous functions."
+  },
+  {
+    "index": 206,
+    "word": "korsakoff's syndrome",
+    "definition": "A chronic memory disorder in which the brain fails to cope with new information, due to brain damage caused by severe deficiency of thiamine (vitamin B^-1); distant memory is however preserved. It is most commonly caused by chronic alcoholism."
+  },
+  {
+    "index": 207,
+    "word": "kovalevskaya, sofya",
+    "definition": "Russian mathematician who worked in Germany and Sweden and made important contributions in differential equations."
+  },
+  {
+    "index": 210,
+    "word": "kramers' degeneracy theorem",
+    "definition": "It states that the energy levels of systems with an odd number of electrons remain at least doubly degenerate in the presence of purely electric field. Kramers degeneracy can be removed by placing the system in an external magnetic field. The theorem holds even in the presence of crystal fields and spin-orbit coupling."
+  },
+  {
+    "index": 211,
+    "word": "kramers' law",
+    "definition": "A formula derived in 1923 by the Dutch physicist Henrik Kramers (1894-1952), for the opacity of material inside a star. It states that, at high temperature, stellar opacity is proportional to the density divided by the temperature to the power of 3.5."
+  },
+  {
+    "index": 213,
+    "word": "kreb's cycle",
+    "definition": "The final part of the chain of biochemical reactions essential for the oxidative metabolism of glucose and other simple sugars to form carbon dioxide, water and energy. The reaction in the Kreb's cycle is cyclical since the end product, oxaloacetic acid is also an initial compound for the cycle of reactions."
+  },
+  {
+    "index": 214,
+    "word": "krein-milman theorem",
+    "definition": "The theorem stating that a compact convex subset of a locally convex space is the closed convex hull of its extreme points."
+  },
+  {
+    "index": 216,
+    "word": "kronecker delta",
+    "definition": "A function of two variables i and j that equals 1 when i = j and equals 0 when the variables have different values: Kronecker delta, δ jk = 1 if j = k and 0 if j ≠ k ."
+  },
+  {
+    "index": 217,
+    "word": "kronecker's lemma",
+    "definition": "If x 1 , x 2 , ... and 0 < a 1 < a 2 < ... is a sequence of real numbers such that a n increases to infinity as n → ∞, and suppose that the sum, xnann^-1 ∞ ∑ converges to a finite limit, then anxkk = 1 by a bacterium. His series of experiments in the study of the cause of anthrax was the first application experimentally of the principles, which had been laid down 36 years before by Koch's professor of anatomy, J. Henle, at the University of Göttingen. These principles are now generally known as Koch's postulates. Eminently, Koch discovered in 1881 that tuberculosis is caused by a bacterium and studies on the disease constituted a large part of his contribution to bacterial pathogens. He visited several countries including India, Zambia and India to solve raging epidemics. He was awarded the Noble Peace Prize for Medicine in 1895."
+  },
+  {
+    "index": 219,
+    "word": "kruskal-wallis test",
+    "definition": "A distribution free method that is analogue of the analysis of variance of a one-way design. It tests whether the groups to be compared have the same population median. The test statistic is derived by ranking all the N observations from L to N regardless of which group they are in and then calculating, H = , where n j is the number of observations in group i, is the mean of their ranks, is the average of all the ranks, given explicitly by . When the null hypothesis is true, the test statistic has a chi-squared distribution with k^-1 degrees of freedom."
+  },
+  {
+    "index": 221,
+    "word": "krypton",
+    "definition": "A colourless, odourless, gaseous, non-metallic element with the chemical symbol Kr, atomic number 36, atomic weight 83.80, melting point^-156.6 °C (116.55 K), boiling point^-152.30 °C (120.85 K) and density 3.73 grams per litre (0 °C). It belongs to the group of inert gases (Group 18, VIIIA of the Periodic Table). It occurs in trace amounts in the atmosphere and in rocks and extracted by fractional distillation of liquid air. It is used in luminescent tubes, flash lamps, incandescent light bulbs, lasers and some types are used in medicine to check lung function."
+  },
+  {
+    "index": 223,
+    "word": "kuhn-tucker conditions",
+    "definition": "A result extending the Lagrange method of multipliers to constraints by equalities and inequalities. It ensures that, given an appropriate constraint qualification, any point x 0 , that minimises f ( x ) subject to g 1 ( x ) ≤ 0,..., g n ( x ) ≤ 0, g 1 + n ( x ) = 0,..., g m + n = 0 will occur at a stationary point of the Lagrangian L ( x , λ ) = f ( x ) + ∑ λ i g i , where the summation is over the binding constraints with g k ( x 0 ) = 0 and where the multipliers corresponding to inequality constraints are nonnegative."
+  },
+  {
+    "index": 228,
+    "word": "kuratowski-zorn lemma",
+    "definition": "In mathematics, it is a theorem of set theory that in an ordered set in which every chain has an upper bound, there is an element in the set such that the set contains no element greater than the specified given element. It is named after the German-born American mathematician, Max August Zorn (1906-1993) and Kazimierz Kuratowski (1896-1980), Polish mathematician."
+  },
+  {
+    "index": 229,
+    "word": "kurtosis",
+    "definition": "In statistics, it is a measure of the concentration of a distribution about its mean, especially B2 = m 4 ( m2 ) 2 , where m2 and m 4 are, respectively, the second and fourth moments of the distribubon about the mean. A normal distributlon or any other with B2 = 3 is called mesokurtic ; B2 < 3 is platykurtic and if B2 > 3 it is letokurtic ."
+  },
+  {
+    "index": 233,
+    "word": "kyanite",
+    "definition": "A bluish aluminosilicate mineral, with the chemical formula Al 2 SiO5 , found as thin-bladed crystals or in masses. It is derived from metamorphic rocks and used for the manufacture of highly refractory porcelains such as those used for spark plugs and as gems."
+  }
+]

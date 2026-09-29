@@ -1,4 +1,4 @@
-// =====================================================================
+/// =====================================================================
 // FILE: 05_stage3_flash_recall.js (The Flash Memorization)
 // =====================================================================
 
@@ -242,7 +242,7 @@ const Stage3Controller = {
   rewardFlashPoints(amount) {
     this.state.flashStageScore += amount;
     this.state.gameData.score = (this.state.gameData.score || 0) + amount;
-    
+
     if (this.state.domCache.scoreEl) {
       this.state.domCache.scoreEl.textContent = this.state.gameData.score;
     }
