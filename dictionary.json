@@ -101868,7 +101868,9 @@
       "synonyms": [
         "the madelung energy ordering rule"
       ],
-      "definition": "An approximate rule about atomic orbital stating that the order of their being filled is the order of increasing n + l and that when two or more orbitals have the same value of n + l then the order of filling is increasing n . This rule was first put forward by Erwin Madelung (1881-1972) in 1936. There are some exceptions to it but it does have some theoretical justification."
+      "definition": "An approximate rule about atomic orbital stating that the order of their being filled is the order of increasing n + l and that when two or more orbitals have the same value of n + l then the order of filling is increasing n . This rule was first put forward by Erwin Madelung (1881-1972) in 1936. There are some exceptions to it but it does have some theoretical justification.",
+      "formula": "$$E \\propto (n + l), \\quad \\text{if } (n_1+l_1) = (n_2+l_2) \\implies \\text{lower } n \\text{ fills first}$$",
+      "formula_description": "Determines electron subshell filling sequence (Aufbau $(n+l)$ rule). Subshells fill in increasing order of $n+l$. For ties (e.g. $3d$ vs $4p$, both $n+l=5$), the orbital with smaller principal quantum number $n$ fills first."
     },
     {
       "word": "mads box gene",
@@ -102087,7 +102089,9 @@
       "synonyms": [
         "absolute permeability"
       ],
-      "definition": "The permeability of free space ( μ 0 ) with the value of 4 π × 10 -7 henry per metre."
+      "definition": "The permeability of free space ( μ 0 ) with the value of 4 π × 10 -7 henry per metre.",
+      "formula": "$$\\mu_0 = 4\\pi \\times 10^{-7}\\ \\mathrm{H\\cdot m^{-1}} \\approx 1.2566 \\times 10^{-6}\\ \\mathrm{N\\cdot A^{-2}}, \\qquad c = \\frac{1}{\\sqrt{\\varepsilon_0 \\mu_0}}$$",
+      "formula_description": "Permeability of free space ($\\mu_0$). Relates magnetic flux density $\\mathbf{B}$ to magnetic field strength $\\mathbf{H}$ in vacuum ($\\mathbf{B} = \\mu_0 \\mathbf{H}$) and ties directly to the speed of light $c$ via Maxwell's electrodynamics."
     },
     {
       "word": "magnetic core",
@@ -102612,7 +102616,9 @@
       "word": "magnus effect",
       "raw_headword": "MAGNUS EFFECT",
       "synonyms": [],
-      "definition": "The effect on a spinning cylinder or sphere moving through a fluid, in which force acts perpendicular to the direction of motion and to the direction of spin."
+      "definition": "The effect on a spinning cylinder or sphere moving through a fluid, in which force acts perpendicular to the direction of motion and to the direction of spin.",
+      "formula": "$$\\mathbf{F}_L = \\rho_\\infty \\mathbf{v}_\\infty \\times \\boldsymbol{\\Gamma}, \\qquad F_L = 2\\pi r^2 \\rho v \\omega L$$",
+      "formula_description": "Lift force generated on a spinning cylinder or sphere moving through a fluid of density $\\rho$. $v$ = flow velocity, $\\omega$ = angular spin speed, $\\Gamma = 2\\pi r^2 \\omega$ = circulation (Kutta–Joukowski theorem)."
     },
     {
       "word": "mahogany",
@@ -102960,7 +102966,9 @@
       "word": "malus' law",
       "raw_headword": "MALUS' LAW",
       "synonyms": [],
-      "definition": "A law, discovered by the French scientist Etienne Louis Malus (1775-1812) in 1809 concerning the polarisation of light. It states that if linearly polarised light passes through a polariser, the intensity of the light transmitted is given by I1 = I o cos 2 ( q ), where q is the angle between the polarisation direction of the light and the transmission axis of the polariser."
+      "definition": "A law, discovered by the French scientist Etienne Louis Malus (1775-1812) in 1809 concerning the polarisation of light. It states that if linearly polarised light passes through a polariser, the intensity of the light transmitted is given by I1 = I o cos 2 ( q ), where q is the angle between the polarisation direction of the light and the transmission axis of the polariser.",
+      "formula": "$$I = I_0 \\cos^2\\theta$$",
+      "formula_description": "Transmitted intensity $I$ of plane-polarized light through an analyzer oriented at angle $\\theta$ relative to the transmission axis of the polarizer. $I = I_0$ at $\\theta = 0^\\circ$; $I = 0$ at $\\theta = 90^\\circ$ (complete extinction)."
     },
     {
       "word": "malvaceous",
@@ -103566,7 +103574,9 @@
         "boyle's law",
         "boyle-mariotte law"
       ],
-      "definition": "A gas law that refers to the relationship between pressure and volume of a perfect gas. It states that at a constant temperature, the volume ( V ) of a given mass of gas is inversely proportional to the pressure ( P ) acting on the gas: V ∝ 1/ P . Thus, increasing the pressure of a gas causes a proportional decrease in its volume. Conversely, decreasing the pressure causes an increase in the volume of the gas, for example, when a diver rises to the surface, the gases within the lungs expand."
+      "definition": "A gas law that refers to the relationship between pressure and volume of a perfect gas. It states that at a constant temperature, the volume ( V ) of a given mass of gas is inversely proportional to the pressure ( P ) acting on the gas: V ∝ 1/ P . Thus, increasing the pressure of a gas causes a proportional decrease in its volume. Conversely, decreasing the pressure causes an increase in the volume of the gas, for example, when a diver rises to the surface, the gases within the lungs expand.",
+      "formula": "$$P_1 V_1 = P_2 V_2 \\quad (T = \\text{constant}), \\qquad P V = \\text{constant}$$",
+      "formula_description": "Boyle–Mariotte law: for a given mass of an ideal gas at constant temperature, pressure is inversely proportional to volume ($P \\propto 1/V$)."
     },
     {
       "word": "mark sensing",
@@ -103612,7 +103622,9 @@
       "synonyms": [
         "markownikoff's rule"
       ],
-      "definition": "Formulated by the Russian chemist, Vladimir Vasilevich Markovnikov in 1870, it states that in the electrophilic addition of a hydrogen halide across a double bond in an unsymmetrical alkene, the hydrogen will add to the carbon atom with the greatest number of hydrogen atoms. When an acid HA adds to an alkene, a mixture of products can be formed if the alkene is not symmetrical. For instance, the reaction between C2 H5 CH=CH2 and HCl can give (i) C2 H5 CH2 CH2 Cl and (ii) C2 H5 CHClCH3 . In general, a mixture of product occurs in which one predominates over the other. In this reaction, product (ii) would be the major product. This reaction proceeds through the formation of a carbocation and so the most stable carbocation intermediate would lead to major product formation."
+      "definition": "Formulated by the Russian chemist, Vladimir Vasilevich Markovnikov in 1870, it states that in the electrophilic addition of a hydrogen halide across a double bond in an unsymmetrical alkene, the hydrogen will add to the carbon atom with the greatest number of hydrogen atoms. When an acid HA adds to an alkene, a mixture of products can be formed if the alkene is not symmetrical. For instance, the reaction between C2 H5 CH=CH2 and HCl can give (i) C2 H5 CH2 CH2 Cl and (ii) C2 H5 CHClCH3 . In general, a mixture of product occurs in which one predominates over the other. In this reaction, product (ii) would be the major product. This reaction proceeds through the formation of a carbocation and so the most stable carbocation intermediate would lead to major product formation.",
+      "formula": "$$\\mathrm{R{-}CH{=}CH_2} + \\mathrm{HX} \\;\\longrightarrow\\; \\mathrm{R{-}CH(X){-}CH_3} \\quad (3^\\circ > 2^\\circ > 1^\\circ \\text{ carbocation stability})$$",
+      "formula_description": "Electrophilic addition of hydrogen halides (HX) to unsymmetrical alkenes: hydrogen bonds to the carbon already possessing more hydrogen atoms, proceeding via the more stable carbocation intermediate."
     },
     {
       "word": "marksman",
@@ -103788,7 +103800,9 @@
       "synonyms": [
         "guldberg and waage law"
       ],
-      "definition": "It states that the rate of a chemical reaction for a uniform system at constant temperature is proportional to the product of the active masses of the reactants. The active mass of a reactant is taken to be its molar concentration. For example, for a reaction xA + yB → products, the rate is given by R = k [ A ] x [ B ] y , where k is the rate constant."
+      "definition": "It states that the rate of a chemical reaction for a uniform system at constant temperature is proportional to the product of the active masses of the reactants. The active mass of a reactant is taken to be its molar concentration. For example, for a reaction xA + yB → products, the rate is given by R = k [ A ] x [ B ] y , where k is the rate constant.",
+      "formula": "$$a\\mathrm{A} + b\\mathrm{B} \\rightleftharpoons c\\mathrm{C} + d\\mathrm{D}, \\qquad K_c = \\frac{[\\mathrm{C}]^c [\\mathrm{D}]^d}{[\\mathrm{A}]^a [\\mathrm{B}]^b}, \\quad \\Delta G^\\circ = -RT \\ln K$$",
+      "formula_description": "The rate and thermodynamic equilibrium of a chemical reaction are directly proportional to the product of active masses (concentrations) of reactants raised to their stoichiometric powers."
     },
     {
       "word": "mass analysis",
@@ -103990,7 +104004,9 @@
       "word": "mass-energy equation",
       "raw_headword": "MASS-ENERGY EQUATION",
       "synonyms": [],
-      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy."
+      "definition": "The equation $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$E = mc^2$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where E is the energy in joules, m is the mass in kilograms and c , the speed of light in a vacuum that equals 300,000 km per second. It was formulated by German-born US physicist, Albert Einstein (1879-1955) in his special theory of relativity to denote the equivalence between mass and energy. The conversion of mass into energy in accordance with this equation occurs in ordinary chemical reactions, but a much larger percentage occurs in nuclear reactions. This forms the basis of atomic energy.",
+      "formula": "$$E_0 = m_0 c^2, \\qquad E^2 = (pc)^2 + (m_0 c^2)^2, \\qquad E = \\gamma m_0 c^2 = \\frac{m_0 c^2}{\\sqrt{1 - v^2/c^2}}$$",
+      "formula_description": "Einstein's relativistic mass-energy equivalence principle relating total energy $E$, momentum $p$, rest mass $m_0$, and speed of light $c$."
     },
     {
       "word": "mass-energy relationship",
@@ -104263,7 +104279,9 @@
       "word": "mathieu's differential equation",
       "raw_headword": "MATHIEU'S DIFFERENTIAL EQUATION",
       "synonyms": [],
-      "definition": "The differential equation originating in the study of vibrations in the two-dimensional wave equation. It is of the form d 2 y dt 2 + ( a + 116 q cos 2 t ) y = 0. For a appropriately related to q , periodic solutions with period 2 π exist; of these, the even and odd solutions are Mathieu functions."
+      "definition": "The differential equation originating in the study of vibrations in the two-dimensional wave equation. It is of the form d 2 y dt 2 + ( a + 116 q cos 2 t ) y = 0. For a appropriately related to q , periodic solutions with period 2 π exist; of these, the even and odd solutions are Mathieu functions.",
+      "formula": "$$\\frac{d^2 y}{dx^2} + (a - 2q \\cos 2x)y = 0$$",
+      "formula_description": "Second-order linear ODE with periodic coefficients; models parametric resonance, elliptical drumhead oscillations, and ion motion inside quadrupole mass filters."
     },
     {
       "word": "mating",
@@ -104416,7 +104434,9 @@
       "word": "max-flow min-cut theorem",
       "raw_headword": "MAX-FLOW MIN-CUT THEOREM",
       "synonyms": [],
-      "definition": "The important duality theorem, which states that in a flow network, the maximum amount of flow passing from the source to the sink is equal to the minimum capacity that, when removed in a specific way from the network, causes the situation that no flow can pass from the source to the sink."
+      "definition": "The important duality theorem, which states that in a flow network, the maximum amount of flow passing from the source to the sink is equal to the minimum capacity that, when removed in a specific way from the network, causes the situation that no flow can pass from the source to the sink.",
+      "formula": "$$\\max |f| = \\min_{S,T} c(S, T) = \\min_{S,T} \\sum_{u \\in S, v \\in T} c(u, v)$$",
+      "formula_description": "Ford–Fulkerson theorem in combinatorial optimization: the maximum flow passing from source to sink in a flow network equals the minimum capacity of an $s\\text{-}t$ cut separating them."
     },
     {
       "word": "maxicell",
@@ -104554,7 +104574,9 @@
       "word": "maximum modulus theorem",
       "raw_headword": "MAXIMUM MODULUS THEOREM",
       "synonyms": [],
-      "definition": "The theorem of complex analysis that if a function is analytic and attains its maximum modulus in some open region, it is constant. As a consequence, if the region D is bounded and the modulus of the function f is continuous on the closure of D , then ∣ f ( z ) ∣ achieves its maximum on the boundary of D . If the function vanishes nowhere in the domain, the minimum modulus is also achieved on the boundary."
+      "definition": "The theorem of complex analysis that if a function is analytic and attains its maximum modulus in some open region, it is constant. As a consequence, if the region D is bounded and the modulus of the function f is continuous on the closure of D , then ∣ f ( z ) ∣ achieves its maximum on the boundary of D . If the function vanishes nowhere in the domain, the minimum modulus is also achieved on the boundary.",
+      "formula": "$$|f(z_0)| \\le \\max_{z \\in \\partial D} |f(z)| \\quad \\forall\\, z_0 \\in D$$",
+      "formula_description": "Complex analysis: if $f(z)$ is holomorphic on a bounded domain $D$ and continuous on $\\overline{D}$, its modulus $|f(z)|$ cannot achieve a strict local maximum inside $D$ unless $f$ is constant."
     },
     {
       "word": "maximum permissible dose",
@@ -104620,7 +104642,9 @@
       "word": "maximum value theorem",
       "raw_headword": "MAXIMUM VALUE THEOREM",
       "synonyms": [],
-      "definition": "The theorem that for a real-valued continuous function f on a closed bounded interval or any compact set, there is at least one element x in the domain of f for which f ( x ) achieves its maximum value. For example, on the closed interval [0,1], the function y = x 3 - x 2 + 1 achieves its maximum at x = 1, but on the open interval ]0, 1[ it does not, as for all x < 1 there is an x < x ' < 1 for which f ( x ') > f ( x )."
+      "definition": "The theorem that for a real-valued continuous function f on a closed bounded interval or any compact set, there is at least one element x in the domain of f for which f ( x ) achieves its maximum value. For example, on the closed interval [0,1], the function y = x 3 - x 2 + 1 achieves its maximum at x = 1, but on the open interval ]0, 1[ it does not, as for all x < 1 there is an x < x ' < 1 for which f ( x ') > f ( x ).",
+      "formula": "$$f \\in C[a,b] \\;\\implies\\; \\exists\\, c, d \\in [a,b] \\text{ such that } f(c) \\le f(x) \\le f(d) \\quad \\forall\\, x \\in [a,b]$$",
+      "formula_description": "Extreme Value Theorem (EVT): any continuous real-valued function on a closed and bounded interval $[a, b]$ attains both its absolute minimum and absolute maximum at least once."
     },
     {
       "word": "maximum water holding capacity",
@@ -104656,7 +104680,9 @@
       "synonyms": [
         "maxwellian distribution"
       ],
-      "definition": "A function giving the number of molecules of a gas in thermal equilibrium whose velocities lie within a given, infinitesimal range of values, assuming that the molecules obey classical mechanics and do not interact."
+      "definition": "A function giving the number of molecules of a gas in thermal equilibrium whose velocities lie within a given, infinitesimal range of values, assuming that the molecules obey classical mechanics and do not interact.",
+      "formula": "$$f(v) = 4\\pi \\left(\\frac{m}{2\\pi k_B T}\\right)^{\\!3/2} v^2 \\exp\\!\\left(-\\frac{mv^2}{2k_B T}\\right)$$",
+      "formula_description": "Probability distribution of molecular speeds $v$ in an ideal gas at thermal equilibrium. Characteristic speeds: most probable $v_p = \\sqrt{2k_B T/m}$, average $\\bar{v} = \\sqrt{8k_B T/\\pi m}$, RMS $v_{\\text{rms}} = \\sqrt{3k_B T/m}$."
     },
     {
       "word": "maxwell's equations",
@@ -105628,7 +105654,9 @@
       "word": "meissner effect",
       "raw_headword": "MEISSNER EFFECT",
       "synonyms": [],
-      "definition": "The falling offof the magnetic flux from the interior of a superconducting metal, when it is cooled in a magnetic field to a temperature below the critical temperature."
+      "definition": "The falling offof the magnetic flux from the interior of a superconducting metal, when it is cooled in a magnetic field to a temperature below the critical temperature.",
+      "formula": "$$\\mathbf{B} = 0 \\quad (T < T_c), \\qquad \\nabla^2\\mathbf{B} = \\frac{1}{\\lambda_L^2}\\mathbf{B}, \\quad \\lambda_L = \\sqrt{\\frac{m}{\\mu_0 n_s e^2}}$$",
+      "formula_description": "Complete expulsion of magnetic flux lines from the interior of a superconductor cooled below critical temperature $T_c$. Governed by London's second equation with penetration depth $\\lambda_L$."
     },
     {
       "word": "meissner's corpuscles",
@@ -105727,7 +105755,9 @@
       "synonyms": [
         "mellin invasion formula"
       ],
-      "definition": "Named after Robert Mellin (1854-1933), it is the integral transform defined by g ( s ) = x s^-1 f ( x ) ∞ ∫ dx, and that is invertible under reasonable conditions, The Mellin transform of the negative exponential is the gamma function."
+      "definition": "Named after Robert Mellin (1854-1933), it is the integral transform defined by g ( s ) = x s^-1 f ( x ) ∞ ∫ dx, and that is invertible under reasonable conditions, The Mellin transform of the negative exponential is the gamma function.",
+      "formula": "$$\\{\\mathcal{M}f\\}(s) = \\varphi(s) = \\int_{0}^{\\infty} x^{s-1} f(x)\\,dx, \\qquad f(x) = \\frac{1}{2\\pi i} \\int_{c-i\\infty}^{c+i\\infty} x^{-s} \\varphi(s)\\,ds$$",
+      "formula_description": "Multiplicative integral transform closely related to Dirichlet series and the Riemann zeta function $\\zeta(s)\\Gamma(s) = \\mathcal{M}[1/(e^x-1)]$. Foundational in analytic number theory and asymptotic analysis."
     },
     {
       "word": "mellitic acid",
@@ -108290,7 +108320,9 @@
       "synonyms": [
         "rectangle method"
       ],
-      "definition": "Rule for finding the area under a curve, bounded by a horizontal below the curve."
+      "definition": "Rule for finding the area under a curve, bounded by a horizontal below the curve.",
+      "formula": "$$\\int_{a}^{b} f(x)\\,dx \\approx h \\sum_{i=1}^{n} f\\!\\left(\\frac{x_{i-1} + x_i}{2}\\right), \\qquad h = \\frac{b - a}{n}, \\quad |E| \\le \\frac{(b-a)^3}{24n^2} M_2$$",
+      "formula_description": "Midpoint numerical integration evaluating $f(x)$ at the midpoint of each subinterval $m_i$. Offers global error $\\mathcal{O}(h^2)$ with half the truncation error of the trapezoidal rule."
     },
     {
       "word": "midbrain",
@@ -109231,7 +109263,9 @@
       "synonyms": [
         "law of isomorphism"
       ],
-      "definition": "It states that compounds crystallising together probably have similar structures and compositions. The law can be used to determine the formula of an unknown compound if it is isomophous with a compound of known formula. It is named after Eilhard Mistcherilich (1794 -1863), a German chemist."
+      "definition": "It states that compounds crystallising together probably have similar structures and compositions. The law can be used to determine the formula of an unknown compound if it is isomophous with a compound of known formula. It is named after Eilhard Mistcherilich (1794 -1863), a German chemist.",
+      "formula": "$$\\text{Substances of similar crystal structure} \\iff \\text{similar chemical formulas / stoichiometry}$$",
+      "formula_description": "Law of Isomorphism (1819): chemical compounds with analogous stoichiometry and atomic ratios crystallize into identical isomorphic forms and interfacial angles."
     },
     {
       "word": "mixed bud",
@@ -111100,7 +111134,9 @@
       "word": "moore's law",
       "raw_headword": "MOORE'S LAW",
       "synonyms": [],
-      "definition": "The statement that the number of transistors that can be placed on an integrated circuit doubles every year, named after Intel co-founder Gordon E. Moore, who described the trend in his 1965 paper. It describes a long-term trend in the history of computing hardware."
+      "definition": "The statement that the number of transistors that can be placed on an integrated circuit doubles every year, named after Intel co-founder Gordon E. Moore, who described the trend in his 1965 paper. It describes a long-term trend in the history of computing hardware.",
+      "formula": "$$N(t) = N_0 \\cdot 2^{t / T}, \\qquad T \\approx 18\\text{--}24\\ \\text{months}$$",
+      "formula_description": "Empirical observation by Gordon Moore (1965): the density of transistors on integrated circuit chips doubles approximately every 18 to 24 months."
     },
     {
       "word": "moore-osgood theorem",
@@ -111144,7 +111180,9 @@
       "word": "morera's theorem",
       "raw_headword": "MORERA'S THEOREM",
       "synonyms": [],
-      "definition": "In mathematics, the consequence of Cauchys integral formula that a complex-valued function that is continuous on a region and of which the contour integral over all triangles is zero, must be analytic. It is named after Giacinto Morera (1856-1909), Italian engineer and mathematician."
+      "definition": "In mathematics, the consequence of Cauchys integral formula that a complex-valued function that is continuous on a region and of which the contour integral over all triangles is zero, must be analytic. It is named after Giacinto Morera (1856-1909), Italian engineer and mathematician.",
+      "formula": "$$\\oint_{\\gamma} f(z)\\,dz = 0 \\quad (\\forall \\text{ closed loops } \\gamma \\subset D) \\implies f(z) \\text{ is holomorphic on } D$$",
+      "formula_description": "Converse of Cauchy's integral theorem: if $f$ is continuous on an open domain $D$ and its contour integral along every closed curve vanishes, then $f$ is analytic throughout $D$."
     },
     {
       "word": "morinda",
@@ -111997,13 +112035,17 @@
       "word": "multinomial distribution",
       "raw_headword": "MULTINOMIAL DISTRIBUTION",
       "synonyms": [],
-      "definition": "A principle of the binomial distribution to situations in which k outcomes can occur on each of n trials, where k > 2. Specifically, the distribution is given by P ( n 1 , ... , n k ) = n ! n 1 , ... , n k p 1 n 1 p 2 n 2 ... pknk , where n i is the number of trials with outcomes i and p i is the probability of the outcome i occurring on a particular trial. Thus, and The expected value of n i is np i and its variance is np i (1 - p i ). The covariance of n i and n j is - np i p j ."
+      "definition": "A principle of the binomial distribution to situations in which k outcomes can occur on each of n trials, where k > 2. Specifically, the distribution is given by P ( n 1 , ... , n k ) = n ! n 1 , ... , n k p 1 n 1 p 2 n 2 ... pknk , where n i is the number of trials with outcomes i and p i is the probability of the outcome i occurring on a particular trial. Thus, and The expected value of n i is np i and its variance is np i (1 - p i ). The covariance of n i and n j is - np i p j .",
+      "formula": "$$P(X_1=k_1, \\ldots, X_m=k_m) = \\frac{n!}{\\prod_{i=1}^m k_i!} \\prod_{i=1}^m p_i^{k_i}, \\quad \\sum_{i=1}^m k_i = n, \\ \\sum_{i=1}^m p_i = 1$$",
+      "formula_description": "Generalization of the binomial distribution to $m$ discrete categories with probabilities $p_1, \\dots, p_m$ in $n$ independent mutually exclusive trials."
     },
     {
       "word": "multinomial theorem",
       "raw_headword": "MULTINOMIAL THEOREM",
       "synonyms": [],
-      "definition": "The generalisation of the binomial theorem to polynomials of n variables. For any positive integer m and any nonnegative integer n , with m terms, the expansion when raised to an arbitrary power n is as follows: ( x 1 + x 2 + ... + x m ) n = n ! n 1 ! n 2 ! ... n m ! ∑ x 1 n 1 x 2 n 2 ... xmnm , where the sum is over all non-negative integers summing to n ."
+      "definition": "The generalisation of the binomial theorem to polynomials of n variables. For any positive integer m and any nonnegative integer n , with m terms, the expansion when raised to an arbitrary power n is as follows: ( x 1 + x 2 + ... + x m ) n = n ! n 1 ! n 2 ! ... n m ! ∑ x 1 n 1 x 2 n 2 ... xmnm , where the sum is over all non-negative integers summing to n .",
+      "formula": "$$\\left(\\sum_{i=1}^m x_i\\right)^{\\!n} = \\sum_{k_1+\\cdots+k_m=n} \\binom{n}{k_1, k_2, \\ldots, k_m} \\prod_{t=1}^m x_t^{k_t}, \\quad \\binom{n}{k_1, \\dots, k_m} = \\frac{n!}{k_1!\\cdots k_m!}$$",
+      "formula_description": "Algebraic expansion of the $n$-th power of a multivariable sum, with coefficients equal to the number of permutations of a multiset."
     },
     {
       "word": "multinucleate",
@@ -112201,7 +112243,9 @@
       "word": "multiplication law of probability",
       "raw_headword": "MULTIPLICATION LAW OF PROBABILITY",
       "synonyms": [],
-      "definition": "Theory that the probability of two independent events will occur is equal to the probability that one independent event will occur times the probability that a second independent event will occur. For example, on a single toss of two dimes (each dime having a head and a tail), the probability that both will land on their tails is equal to 1 4 = 1 2 × 1 2 ."
+      "definition": "Theory that the probability of two independent events will occur is equal to the probability that one independent event will occur times the probability that a second independent event will occur. For example, on a single toss of two dimes (each dime having a head and a tail), the probability that both will land on their tails is equal to 1 4 = 1 2 × 1 2 .",
+      "formula": "$$P(A \\cap B) = P(A) \\cdot P(B \\mid A) = P(B) \\cdot P(A \\mid B), \\qquad P(A \\cap B) = P(A)P(B) \\iff \\text{independent}$$",
+      "formula_description": "Calculates the joint probability of two events; for statistically independent events, reduces to the direct product $P(A \\cap B) = P(A) \\cdot P(B)$."
     },
     {
       "word": "multiplication principle",
@@ -112864,7 +112908,9 @@
       "word": "möbius inversion formula",
       "raw_headword": "MÖBIUS INVERSION FORMULA",
       "synonyms": [],
-      "definition": "The formula that, given any arithmetic function f , one considers the related arithmetic function F ( n ) = f ( d ) d n ∑ ; where the summation is over the divisors d of n ; then one recovers f as f ( n ) = F ( d ) µ $n_d$ ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ d n ∑ , where µ is the Möbius function and f is multiplicative exactly F is."
+      "definition": "The formula that, given any arithmetic function f , one considers the related arithmetic function F ( n ) = f ( d ) d n ∑ ; where the summation is over the divisors d of n ; then one recovers f as f ( n ) = F ( d ) µ $n_d$ ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ d n ∑ , where µ is the Möbius function and f is multiplicative exactly F is.",
+      "formula": "$$g(n) = \\sum_{d \\mid n} f(d) \\iff f(n) = \\sum_{d \\mid n} \\mu(d)\\,g\\!\\left(\\frac{n}{d}\\right)$$",
+      "formula_description": "Fundamental identity in arithmetic number theory. $\\mu(d)$ is the Möbius function: $+1$ if square-free with even prime count, $-1$ with odd prime count, $0$ if non-square-free."
     },
     {
       "word": "möbius strip",
@@ -112894,7 +112940,9 @@
       "word": "mössbauer effect",
       "raw_headword": "MÖSSBAUER EFFECT",
       "synonyms": [],
-      "definition": "An effect occurringwhen certain nuclides decay with emission of gamma radiation, discovered in 1957 by the German physicist, Rudolph Mossbaurer ( 1 9 2 9 ) . Foran isolated nucleus, the gamma radiation would usually have a spread of energies because the energy of the process is partitioned between the gamma-ray photon and the recoil energy of the nucleus. In 1957, Rudolph Mossbaurer (1929-) found that in certain solids, in which the emitting nucleus is held by strong forces in the lattice, the recoil energy is taken up by the whole lattice. Since this may typically contain 1010 - 1029 atoms, the recoil energy is negligible and the energy of the emitted photon is sharply defined in a very narrow energy spread. The effect is exploited in Mossbuer spectroscopy in which gamma- ray source is mounted on a moving platform and a similar sample is mounted nearby. A detector measures gamma rays scattered by the sample. The source is moved slowly towards the sample at a varying speed, so as to continuously change the frequency of the emitted gamma radiation by the Doppler Effect, a sharp decrease in the signal from the detector levels. In chemistry, Mossbaurer spectroscopy can also give information about the bonding and structure of compounds because chemical shifts in the resonance energy are produced by the presence of surrounded atoms."
+      "definition": "An effect occurringwhen certain nuclides decay with emission of gamma radiation, discovered in 1957 by the German physicist, Rudolph Mossbaurer ( 1 9 2 9 ) . Foran isolated nucleus, the gamma radiation would usually have a spread of energies because the energy of the process is partitioned between the gamma-ray photon and the recoil energy of the nucleus. In 1957, Rudolph Mossbaurer (1929-) found that in certain solids, in which the emitting nucleus is held by strong forces in the lattice, the recoil energy is taken up by the whole lattice. Since this may typically contain 1010 - 1029 atoms, the recoil energy is negligible and the energy of the emitted photon is sharply defined in a very narrow energy spread. The effect is exploited in Mossbuer spectroscopy in which gamma- ray source is mounted on a moving platform and a similar sample is mounted nearby. A detector measures gamma rays scattered by the sample. The source is moved slowly towards the sample at a varying speed, so as to continuously change the frequency of the emitted gamma radiation by the Doppler Effect, a sharp decrease in the signal from the detector levels. In chemistry, Mossbaurer spectroscopy can also give information about the bonding and structure of compounds because chemical shifts in the resonance energy are produced by the presence of surrounded atoms.",
+      "formula": "$$E_R = \\frac{E_\\gamma^2}{2 M c^2}, \\qquad f_{\\text{LM}} = \\exp\\!\\left(-\\frac{k^2 \\langle x^2 \\rangle}{3}\\right) = \\exp\\!\\left(-\\frac{E_\\gamma^2 \\langle x^2 \\rangle}{3(\\hbar c)^2}\\right)$$",
+      "formula_description": "Recoilless emission and resonant absorption of gamma photons by atomic nuclei bound in solid crystal lattices. Enables extremely high-resolution hyperfine spectroscopy."
     },
     {
       "word": "müller cell",
