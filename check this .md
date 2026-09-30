@@ -1,94 +1,95 @@
-# 🚀 Osmosis Engineering Log & Next Session Roadmap
+# 🚀 Osmosis Engineering Log & Formula Enrichment Progress
 
-> **Session Date:** September 29, 2026  
-> **Milestone Achieved:** Letter M Formula Enrichment Complete (51 Terms) + Universal Definition Embedder & Fast Node Builder  
-> **Current Git Head:** `5c032f0` (`feat(formulas): embed formula blocks into definitions and rebuild runtime`)
+> **Session Date:** September 30, 2026  
+> **Session Lead:** Desmond Mifetu  
+> **Milestones Achieved:** Sections N, O, and P Formula Enrichments Complete (77 Formulas Enriched & Live-Compiled)  
+> **Runtime Status:** `core_dictionary.js` recompiled and fully synchronized (12.31 MB)
 
 ---
 
 ## 📌 Executive Summary of Today's Work
 
-1. **Letter M Formula Enrichment (Batch 3 Integrated):**
-   - Added **24 new core STEM mathematical and physical formulas** with full KaTeX LaTeX typography and engineering descriptions.
-   - Combined with Batch 1 (16 terms) and Batch 2 (11 terms), **Letter M now has 51 fully enriched formula terms**.
+1. **Section N Formulas Complete (22 Terms Enriched):**
+   - Added full LaTeX formulas with complete physical/mathematical variables, physical units, and KaTeX rendering.
+   - Key formulas integrated: *Nernst equation*, *Nernst–Einstein equation*, *Nernst heat theorem*, *Navier–Stokes equations*, *Newton's laws of motion (1st, 2nd, 3rd)*, *Newton's law of cooling*, *Universal gravitation*, *Newton's method (Newton–Raphson)*, *Newton's rings*, *Newton–Cotes formulae*, *Newtonian fluid*, *Nuclear binding energy*, *Nuclear energy*, *Normal distribution*, *Natural logarithm*, *Napierian logarithm*, *Negative binomial distribution*, *Negative exponential distribution*, *Net force*, *Newton (unit)*, *Newton's constant (G)*, *Newton's conjugate formula*.
 
-2. **UI Search & Formula Rendering Fix:**
-   - **Root Cause Identified:** Previously, formulas were stored only under the separate `entry.formula` JSON property, but `module_library.js` and other screens render `entry.definition`.
-   - **Engine Solution:** Created and ran [`scripts/embed_formulas_in_definitions.js`](file:///c:/Users/Desmond/Desktop/final_osmosis/scripts/embed_formulas_in_definitions.js), which automatically embedded formula blocks (`$$...$$`) and descriptions directly into the `definition` field for **108 entries** across the dictionary.
-   - Now, searching any formula term in `module_library.html` immediately renders the math equation card with the interactive copy button.
+2. **Section O Formulas Complete (22 Terms Enriched):**
+   - Added rigorous mathematical and physical equations with interactive KaTeX rendering.
+   - Key formulas integrated: *Ohm's law*, *Ohm (unit)*, *Ohmic heating (Joule heating)*, *Optical activity (Biot's law)*, *Optical density (Beer–Lambert law)*, *Orbital velocity*, *Orbital period (Kepler's Third Law)*, *Orbital quantum number*, *Osmotic pressure (van 't Hoff equation)*, *Osmotic potential*, *Order of reaction (Chemical kinetics)*, *Order of convergence*, *Harmonic oscillator differential equation*, *Overtone frequencies*, *Octet rule*, *Operational amplifier (Inverting and Non-inverting)*, *Orthogonal matrix*, *Orthogonal vectors*, *Orthogonal functions*, *Odd function*, *Odds ratio*, *Oxidation number rules*.
 
-3. **High-Speed Node.js Runtime Builder:**
-   - Created [`scripts/rebuild_core_dict.js`](file:///c:/Users/Desmond/Desktop/final_osmosis/scripts/rebuild_core_dict.js) which generates [`core_dictionary.js`](file:///c:/Users/Desmond/Desktop/final_osmosis/core_dictionary.js) (12.26 MB) in under 2 seconds without external dependencies.
+3. **Section P Formulas Complete (33 Terms Enriched):**
+   - Implemented high-fidelity KaTeX equations, variable explanations, and SI units across 33 fundamental STEM concepts.
+   - Fixed corrupted definition for `pH` (previously had an accidental photosynthesis text collision) and replaced it with Sørensen's hydronium ion concentration formulation.
+   - Key formulas integrated: *Planck constant ($h, \hbar$)*, *Planck's radiation law*, *Planck length*, *Planck mass*, *Planck time*, *Photoelectric effect (Einstein equation)*, *Pascal (unit)*, *Pascal's principle (fluid statics & hydraulics)*, *Poisson distribution*, *Poisson's ratio*, *Poisson equation*, *Poynting vector*, *Poiseuille's equation*, *Parallelogram law of inner product spaces*, *Parallelogram of vectors*, *Parallelogram of forces*, *Pythagoras' theorem*, *Pendulum period (simple harmonic motion)*, *Potential energy (gravitational, elastic, electrostatic)*, *Potential difference (voltage & electric work)*, *Power (mechanical & electrical)*, *Pressure (general & hydrostatic)*, *Partial pressure (Dalton's law)*, *Photon (energy-momentum relations)*, *pH (hydronium logarithmic scale)*, *Phase rule (Gibbs)*, *Pauli exclusion principle*, *Permutation ($^nP_r$ & repeated elements)*, *Prism (refractive index minimum deviation & geometry)*, *Peltier effect (thermoelectric coefficient)*, *Projectile motion (range, peak height, trajectory)*, *Parabola (conic section & focal parameter)*, *Piezoelectric effect (direct & converse)*.
+
+4. **Runtime Engine Sync:**
+   - Sections N, O, and P were injected into `dictionary.json` and cleanly embedded with `$$...$$` KaTeX blocks directly in `entry.definition`.
+   - `core_dictionary.js` (12.31 MB, 12,316,004 characters) was recompiled via [`scripts/rebuild_core_dict.js`](file:///c:/Users/Desmond/Desktop/final_osmosis/scripts/rebuild_core_dict.js). Searching any of these terms in `module_library.html` immediately renders the math cards.
+
+5. **Diagrams Track Status:**
+   - As instructed by Desmond, diagram mapping for `n-o diagrams/` and `p_diagrams/` is handled in parallel.
+   - Our pipeline remains focused on completing the STEM formulas letter-by-letter.
 
 ---
 
-## 🔬 Letter M — Enriched Formulas Overview (51 Terms Total)
+## 🔬 Summary Table of Section P Enriched Terms (33 Terms)
 
-### Batch 3 Terms (Added Today — 24 Terms)
 | Term | Domain | Formula Summary |
 |---|---|---|
-| `malus' law` | Optics | $I = I_0 \cos^2\theta$ |
-| `magnetic constant` | Electromagnetism | $\mu_0 = 4\pi \times 10^{-7}\ \text{H/m},\ c = 1/\sqrt{\varepsilon_0\mu_0}$ |
-| `madelung's rule` | Quantum / Chemistry | $E \propto (n+l)$, lower $n$ fills first |
-| `magnus effect` | Fluid Dynamics | $\mathbf{F}_L = \rho_\infty \mathbf{v}_\infty \times \boldsymbol{\Gamma}$ |
-| `markovnikoff's rule` | Organic Chemistry | Carbocation stability in HX alkene addition |
-| `mass action law` | Physical Chemistry | $K_c = \frac{[\text{C}]^c [\text{D}]^d}{[\text{A}]^a [\text{B}]^b},\ \Delta G^\circ = -RT\ln K$ |
-| `maxwell's distribution` | Thermodynamics | $f(v) = 4\pi (m / 2\pi k_B T)^{3/2} v^2 e^{-mv^2 / 2k_B T}$ |
-| `meissner effect` | Superconductivity | $\mathbf{B} = 0,\ \nabla^2\mathbf{B} = \frac{1}{\lambda_L^2}\mathbf{B}$ |
-| `mellin transform` | Complex Analysis | $\{\mathcal{M}f\}(s) = \int_0^\infty x^{s-1} f(x)\,dx$ |
-| `mid-ordinate rule` | Numerical Methods | $\int_a^b f(x) dx \approx h \sum f(m_i),\ \mathcal{O}(h^2)$ |
-| `mariotte law` | Gas Laws | $P_1 V_1 = P_2 V_2\ (T = \text{const})$ |
-| `mass-energy equation` | Special Relativity | $E_0 = m_0 c^2,\ E^2 = (pc)^2 + (m_0 c^2)^2$ |
-| `mathieu's differential equation` | Mathematics | $y'' + (a - 2q\cos 2x)y = 0$ |
-| `max-flow min-cut theorem` | Optimization | $\max \text{flow} = \min \text{cut}$ |
-| `maximum modulus theorem` | Complex Analysis | $|f(z_0)| \le \max_{\partial D} |f(z)|$ |
-| `maximum value theorem` | Real Analysis | Extreme Value Theorem on compact $[a,b]$ |
-| `moore's law` | Computing | $N(t) = N_0 \cdot 2^{t/T}\ (T \approx 18\text{--}24\text{ mo})$ |
-| `morera's theorem` | Complex Analysis | $\oint_\gamma f(z)dz = 0 \implies \text{holomorphic}$ |
-| `multinomial distribution` | Probability | $P = \frac{n!}{\prod k_i!} \prod p_i^{k_i}$ |
-| `multinomial theorem` | Algebra | $(\sum x_i)^n = \sum \binom{n}{k_1,\dots,k_m} \prod x_i^{k_i}$ |
-| `multiplication law of probability`| Probability | $P(A \cap B) = P(A) \cdot P(B \mid A)$ |
-| `möbius inversion formula` | Number Theory | $g(n) = \sum_{d \mid n} f(d) \iff f(n) = \sum_{d \mid n} \mu(d)g(n/d)$ |
-| `mössbauer effect` | Nuclear Physics | $E_R = E_\gamma^2 / 2Mc^2,\ f_{\text{LM}} = \exp(-k^2\langle x^2\rangle / 3)$ |
-| `mitscherlich's law` | Crystallography | Isomorphism law of crystals and stoichiometry |
-
-### Batches 1 & 2 Terms (Committed in `ab417f8` & `06be327` — 27 Terms)
-* `mach number`, `mach angle`, `maclaurin's series`, `maclaurin's formula`, `madelung constant`, `maxwell's equations`, `maxwell-boltzmann distribution`, `michaelis-menten kinetics`, `moment of inertia`, `momentum`, `magnetic field & flux`, `mass-energy equivalence`, `mean free path`, `modulus of elasticity`, `molar mass`, `muon`, `markov chain`, `maxwell relations`, `mean value theorem`, `melting point`, `michelson-morley experiment`, `molality`, `molar volume`, `mole fraction`, `molecular orbital theory`, `moseley's law`, `möbius function`.
-
----
-
-## 📂 Key Files Modified / Created Today
-
-| File | Purpose |
-|---|---|
-| [`dictionary.json`](file:///c:/Users/Desmond/Desktop/final_osmosis/dictionary.json) | Master STEM database with all 51 Section M formulas embedded |
-| [`core_dictionary.js`](file:///c:/Users/Desmond/Desktop/final_osmosis/core_dictionary.js) | Compiled browser runtime dictionary & search index |
-| [`scripts/enrich_section_m_batch3.js`](file:///c:/Users/Desmond/Desktop/final_osmosis/scripts/enrich_section_m_batch3.js) | Section M Batch 3 enrichment script |
-| [`scripts/embed_formulas_in_definitions.js`](file:///c:/Users/Desmond/Desktop/final_osmosis/scripts/embed_formulas_in_definitions.js) | Universal script that embeds `entry.formula` into `entry.definition` |
-| [`scripts/rebuild_core_dict.js`](file:///c:/Users/Desmond/Desktop/final_osmosis/scripts/rebuild_core_dict.js) | Fast Node builder for `core_dictionary.js` |
-| [`check this .md`](file:///c:/Users/Desmond/Desktop/final_osmosis/check%20this%20.md) | Permanent handoff & log file |
+| `planck constant` | Quantum Physics | $h = 6.626 \times 10^{-34}\ \text{J}\cdot\text{s}, \quad \hbar = h / (2\pi)$ |
+| `planck's radiation law` | Thermodynamics / Quantum | $B_\lambda(\lambda, T) = \frac{2hc^2}{\lambda^5} \frac{1}{e^{hc/(\lambda k_B T)} - 1}$ |
+| `planck length` | Quantum Gravity | $\ell_P = \sqrt{\frac{\hbar G}{c^3}} \approx 1.616 \times 10^{-35}\ \text{m}$ |
+| `planck mass` | Quantum Gravity | $m_P = \sqrt{\frac{\hbar c}{G}} \approx 2.176 \times 10^{-8}\ \text{kg}$ |
+| `planck time` | Quantum Gravity | $t_P = \sqrt{\frac{\hbar G}{c^5}} \approx 5.391 \times 10^{-44}\ \text{s}$ |
+| `photoelectric effect` | Quantum Mechanics | $K_{\max} = h\nu - \Phi = h(\nu - \nu_0) = e V_0$ |
+| `pascal` | Units / Fluid Mechanics | $1\ \text{Pa} = 1\ \text{N/m}^2 = 1\ \text{kg}\cdot\text{m}^{-1}\cdot\text{s}^{-2}$ |
+| `pascal's principle` | Fluid Statics | $\Delta P = \rho g \Delta h, \quad F_1/A_1 = F_2/A_2$ |
+| `poisson distribution` | Probability Theory | $P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}, \quad \mathbb{E}[X] = \mathrm{Var}(X) = \lambda$ |
+| `poisson's ratio` | Mechanics of Materials | $\nu = -\frac{\varepsilon_{\text{transverse}}}{\varepsilon_{\text{axial}}} = -\frac{\Delta d / d_0}{\Delta L / L_0}$ |
+| `poisson equation` | Potential Theory / EM | $\nabla^2 \varphi = f, \quad \nabla^2 V = -\rho / \varepsilon_0$ |
+| `poynting vector` | Electrodynamics | $\mathbf{S} = \frac{1}{\mu_0}(\mathbf{E} \times \mathbf{B}) = \mathbf{E} \times \mathbf{H}$ |
+| `poiseuille's equation` | Fluid Dynamics | $Q = \frac{\pi r^4 \Delta P}{8 \mu L}, \quad R_{\text{flow}} = \frac{8\mu L}{\pi r^4}$ |
+| `parallelogram law` | Functional Analysis | $\|\mathbf{u} + \mathbf{v}\|^2 + \|\mathbf{u} - \mathbf{v}\|^2 = 2\|\mathbf{u}\|^2 + 2\|\mathbf{v}\|^2$ |
+| `parallelogram of vectors`| Vector Algebra | $R = \sqrt{P^2 + Q^2 + 2PQ\cos\theta}$ |
+| `parallelogram of forces` | Statics / Mechanics | $\mathbf{F}_{\text{net}} = \mathbf{F}_1 + \mathbf{F}_2 = \sqrt{F_1^2 + F_2^2 + 2F_1 F_2\cos\theta}$ |
+| `pythagoras' theorem` | Euclidean Geometry | $a^2 + b^2 = c^2, \quad \sin^2\theta + \cos^2\theta = 1$ |
+| `pendulum` | Oscillations / Mechanics | $T \approx 2\pi\sqrt{L/g}$ |
+| `potential energy` | Mechanics / Electrostatics| $U_g = mgh, \quad U_s = \frac{1}{2}kx^2, \quad U_e = \frac{q_1 q_2}{4\pi\varepsilon_0 r}$ |
+| `potential difference` | Circuit Theory / EM | $V = -\int_A^B \mathbf{E}\cdot d\mathbf{r} = W/q = IR$ |
+| `power` | Work & Energy / Circuits | $P = \frac{dW}{dt} = \mathbf{F}\cdot\mathbf{v} = VI = I^2 R = V^2/R$ |
+| `pressure` | Continuum Mechanics | $P = F/A, \quad P_{\text{hydro}} = P_0 + \rho gh$ |
+| `partial pressure` | Thermodynamics of Gases | $P_i = x_i P_{\text{total}}, \quad P_{\text{total}} = \sum P_i$ (Dalton) |
+| `photon` | Quantum Optics | $E = h\nu = \hbar\omega = hc/\lambda, \quad p = h/\lambda = E/c$ |
+| `ph` | Physical Chemistry | $\text{pH} = -\log_{10}[\text{H}^+], \quad \text{pH} + \text{pOH} = 14$ |
+| `phase rule` | Thermodynamics | $F = C - P + 2$ (Gibbs' phase rule) |
+| `pauli exclusion principle`| Quantum Mechanics | $\Psi(1, 2) = -\Psi(2, 1), \quad \{a_i, a_j^\dagger\} = \delta_{ij}$ |
+| `permutation` | Combinatorics | $^n P_r = \frac{n!}{(n-r)!}, \quad P = \frac{n!}{\prod n_i!}$ |
+| `prism` | Optics / Stereometry | $n = \frac{\sin((A+D_m)/2)}{\sin(A/2)}, \quad V = B \cdot h$ |
+| `peltier effect` | Thermoelectrics | $\dot{Q} = \Pi_{AB} I, \quad \Pi_{AB} = S_{AB} T$ |
+| `projectile` | Kinematics | $R = \frac{v_0^2\sin 2\theta}{g}, \quad H_{\max} = \frac{v_0^2\sin^2\theta}{2g}$ |
+| `parabola` | Analytic Geometry | $y = ax^2 + bx + c, \quad (x-h)^2 = 4p(y-k)$ |
+| `piezoelectric effect` | Solid-State Physics | $P_i = d_{ijk}\sigma_{jk} \quad (\text{Direct}), \quad \varepsilon_{jk} = d_{ijk}E_i \quad (\text{Converse})$ |
 
 ---
 
-## 🎯 Next Session Launchpad (Where to Start Next Time)
+## 🎯 Next Letter: Section Q & R Roadmap
 
-1. **Section N Formula Enrichment (Next in Line):**
-   - Section N contains **801 terms**.
-   - Prime STEM candidates include:
-     - *Nernst equation* ($E = E^\circ - \frac{RT}{zF} \ln Q$)
-     - *Newton's laws of motion* ($F = ma$, $F = dp/dt$, action-reaction)
-     - *Newton's law of cooling* ($\frac{dT}{dt} = -k(T - T_{\text{env}})$)
-     - *Newton's law of universal gravitation* ($F = G \frac{m_1 m_2}{r^2}$)
-     - *Newton–Raphson method* ($x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$)
-     - *Navier–Stokes equations* ($\rho (\frac{\partial \mathbf{u}}{\partial t} + \mathbf{u}\cdot\nabla\mathbf{u}) = -\nabla p + \mu \nabla^2\mathbf{u} + \mathbf{f}$)
-     - *Napierian / Natural logarithm* ($\ln x = \int_1^x \frac{1}{t}dt$)
-     - *Norton's theorem* ($I_N, R_N$ equivalent circuit)
-     - *Nuclear binding energy* ($\Delta E = \Delta m \cdot c^2$)
-     - *Normal distribution* ($f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$)
+### Section Q Candidates (207 Total Terms)
+1. *Q-factor (Quality factor)*: $Q = 2\pi \frac{\text{Energy Stored}}{\text{Energy Dissipated/cycle}} = \frac{\omega_0}{\Delta\omega} = \frac{1}{R}\sqrt{\frac{L}{C}}$
+2. *Q-value (Nuclear reactions)*: $Q = (m_{\text{reactants}} - m_{\text{products}})c^2 = \Delta m \cdot c^2$
+3. *Quadratic formula / equation*: $a x^2 + b x + c = 0 \implies x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}, \quad \Delta = b^2 - 4ac$
+4. *Quotient rule (Calculus)*: $\frac{d}{dx}\left[\frac{u}{v}\right] = \frac{u' v - u v'}{v^2}$
+5. *Quantum efficiency*: $\eta = \frac{N_{\text{electrons emitted}}}{N_{\text{photons absorbed}}}$
+6. *Quadrupole moment*: $Q_{ij} = \int (3x_i x_j - r^2 \delta_{ij})\rho(\mathbf{r}) d^3r$
 
-2. **Publishing Local Commits to GitHub:**
-   - In your authenticated terminal, simply run:
-     ```bash
-     git push
-     ```
-   - This will publish commits `5400db3` and `5c032f0` directly to origin.
+### Section R Key Candidates (1,210 Total Terms)
+1. *Radioactive decay law*: $N(t) = N_0 e^{-\lambda t}, \quad t_{1/2} = \frac{\ln 2}{\lambda} \approx \frac{0.693}{\lambda}$
+2. *Raoult's law*: $P_A = x_A P_A^*, \quad \Delta P = x_B P_A^*$
+3. *Rayleigh scattering*: $I \propto \frac{1}{\lambda^4} \left(\frac{1 + \cos^2\theta}{2}\right)$
+4. *Rayleigh criterion*: $\theta_{\min} = 1.22 \frac{\lambda}{D}$
+5. *Rayleigh–Jeans law*: $B_\nu(T) = \frac{2\nu^2 k_B T}{c^2}$
+6. *Reynolds number*: $Re = \frac{\rho v D}{\mu} = \frac{v D}{\nu}$
+7. *Rydberg formula*: $\frac{1}{\lambda} = R_\infty \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)$
+8. *Root mean square velocity*: $v_{\text{rms}} = \sqrt{\frac{3 k_B T}{m}} = \sqrt{\frac{3 R T}{M}}$
+9. *Resistance & resistivity*: $R = \rho \frac{L}{A}, \quad R(T) = R_0(1 + \alpha \Delta T)$
+10. *Refraction (Snell's law)*: $n_1 \sin\theta_1 = n_2 \sin\theta_2$

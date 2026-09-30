@@ -113206,7 +113206,9 @@
         "naperian logarithm",
         "natural logarithms"
       ],
-      "definition": "A term often used to mean the natural logarithm, as first defined by John Napier. In natural or Napierian logarithms it is the exponent of base e , where e is the irrational number with the value 2.71828. It is generally written as ln( x ), where ln( x ) is the exponent to which e must be raised to get x . It is also written as log e ( x ) or sometimes, if the base of e is implicit, written as log( x )."
+      "definition": "A term often used to mean the natural logarithm, as first defined by John Napier. In natural or Napierian logarithms it is the exponent of base e , where e is the irrational number with the value 2.71828. It is generally written as ln( x ), where ln( x ) is the exponent to which e must be raised to get x . It is also written as log e ( x ) or sometimes, if the base of e is implicit, written as log( x ).\n\n$$\n\\text{NapLog}(x) = 10^7 \\ln\\left(\\frac{10^7}{x}\\right)\n$$\n*Formula:* The historical logarithm introduced by John Napier (1614), defined originally with base $(1 - 10^{-7})^{10^7} \\approx 1/e$ scaled by $10^7$ to avoid decimals in astronomical navigation.",
+      "formula": "\\text{NapLog}(x) = 10^7 \\ln\\left(\\frac{10^7}{x}\\right)",
+      "formula_description": "The historical logarithm introduced by John Napier (1614), defined originally with base $(1 - 10^{-7})^{10^7} \\approx 1/e$ scaled by $10^7$ to avoid decimals in astronomical navigation."
     },
     {
       "word": "napiform",
@@ -113520,7 +113522,9 @@
         "napierian logarithm",
         "(naperian logarithm"
       ],
-      "definition": "A term often used to mean the natural logarithm, as first defined by John Napier. In natural or Napierian logarithms it is the exponent of base e , where e is the irrational number with the value 2.71828. It is generally written as ln( x ), where ln( x ) is the exponent to which e must be raised to get x . It is also written as log e ( x ) or sometimes, if the base of e is implicit, written as log( x )."
+      "definition": "A term often used to mean the natural logarithm, as first defined by John Napier. In natural or Napierian logarithms it is the exponent of base e , where e is the irrational number with the value 2.71828. It is generally written as ln( x ), where ln( x ) is the exponent to which e must be raised to get x . It is also written as log e ( x ) or sometimes, if the base of e is implicit, written as log( x ).\n\n$$\n\\ln(x) = \\log_e(x) = \\int_{1}^{x} \\frac{1}{t} \\, dt, \\quad e^{\\ln(x)} = x\n$$\n*Formula:* Logarithm to the mathematical base $e \\approx 2.71828$. Satisfies $\\frac{d}{dx}[\\ln(x)] = \\frac{1}{x}$ and fundamental identities $\\ln(ab) = \\ln a + \\ln b$ and $\\ln(a^b) = b \\ln a$.",
+      "formula": "\\ln(x) = \\log_e(x) = \\int_{1}^{x} \\frac{1}{t} \\, dt, \\quad e^{\\ln(x)} = x",
+      "formula_description": "Logarithm to the mathematical base $e \\approx 2.71828$. Satisfies $\\frac{d}{dx}[\\ln(x)] = \\frac{1}{x}$ and fundamental identities $\\ln(ab) = \\ln a + \\ln b$ and $\\ln(a^b) = b \\ln a$."
     },
     {
       "word": "natural number",
@@ -113676,7 +113680,9 @@
       "word": "navier-stokes equation",
       "raw_headword": "NAVIER-STOKES EQUATION",
       "synonyms": [],
-      "definition": "An equation describing the flow of a Newtonian Fluid. The Navier-Stokes equation can be written in the form dv / dt + ( v grad) v =1/ p grad p + h 2 v , where v is the velocity, p is the density and p is the pressure, respectively, of the fluid. The equation can be derived using fluid mechanics or in certain cases from kinetic theory. It requires approximation techniques for a solution in all but the simplest problems."
+      "definition": "An equation describing the flow of a Newtonian Fluid. The Navier-Stokes equation can be written in the form dv / dt + ( v grad) v =1/ p grad p + h 2 v , where v is the velocity, p is the density and p is the pressure, respectively, of the fluid. The equation can be derived using fluid mechanics or in certain cases from kinetic theory. It requires approximation techniques for a solution in all but the simplest problems.\n\n$$\n\\rho \\left( \\frac{\\partial \\mathbf{u}}{\\partial t} + \\mathbf{u} \\cdot \\nabla \\mathbf{u} \\right) = -\\nabla p + \\mu \\nabla^2 \\mathbf{u} + \\mathbf{f}\n$$\n*Formula:* The fundamental continuum equations governing fluid motion (Newton's second law for viscous fluids), where $\\rho$ is fluid density, $\\mathbf{u}$ is velocity field, $p$ is pressure, $\\mu$ is dynamic viscosity, and $\\mathbf{f}$ represents external body forces (e.g. gravity).",
+      "formula": "\\rho \\left( \\frac{\\partial \\mathbf{u}}{\\partial t} + \\mathbf{u} \\cdot \\nabla \\mathbf{u} \\right) = -\\nabla p + \\mu \\nabla^2 \\mathbf{u} + \\mathbf{f}",
+      "formula_description": "The fundamental continuum equations governing fluid motion (Newton's second law for viscous fluids), where $\\rho$ is fluid density, $\\mathbf{u}$ is velocity field, $p$ is pressure, $\\mu$ is dynamic viscosity, and $\\mathbf{f}$ represents external body forces (e.g. gravity)."
     },
     {
       "word": "navigation",
@@ -113848,7 +113854,9 @@
       "word": "negative binomial distribution",
       "raw_headword": "NEGATIVE BINOMIAL DISTRIBUTION",
       "synonyms": [],
-      "definition": "The probability distribution of the number of failures, X , before the k th success in a sequence of Bernoulli trials where the probability of success at each trial is p and probability of failure is q = 1 - p . The distribution is given by: P ( X = x ) = , 0 ≤ x ≤ ∞. The mean and variance are given by: Mean = , variance = ."
+      "definition": "The probability distribution of the number of failures, X , before the k th success in a sequence of Bernoulli trials where the probability of success at each trial is p and probability of failure is q = 1 - p . The distribution is given by: P ( X = x ) = , 0 ≤ x ≤ ∞. The mean and variance are given by: Mean = , variance = .\n\n$$\nP(X = k) = \\binom{k + r - 1}{k} p^r (1 - p)^k, \\quad \\mathbb{E}[X] = \\frac{r(1-p)}{p}, \\; \\mathrm{Var}(X) = \\frac{r(1-p)}{p^2}\n$$\n*Formula:* Discrete probability distribution modeling the number of failures $k$ observed before achieving $r$ successes in independent Bernoulli trials with success probability $p$.",
+      "formula": "P(X = k) = \\binom{k + r - 1}{k} p^r (1 - p)^k, \\quad \\mathbb{E}[X] = \\frac{r(1-p)}{p}, \\; \\mathrm{Var}(X) = \\frac{r(1-p)}{p^2}",
+      "formula_description": "Discrete probability distribution modeling the number of failures $k$ observed before achieving $r$ successes in independent Bernoulli trials with success probability $p$."
     },
     {
       "word": "negative charge",
@@ -113866,7 +113874,9 @@
       "word": "negative exponential distribution",
       "raw_headword": "NEGATIVE EXPONENTIAL DISTRIBUTION",
       "synonyms": [],
-      "definition": "A continuous probability distribution, whose density function is given by f ( x ) = ae ax , where a > 0 for x < 0 and f ( x ) = 0 for x > 0. The mean and the standard deviation are 1 a and 1 a 2 respectively."
+      "definition": "A continuous probability distribution, whose density function is given by f ( x ) = ae ax , where a > 0 for x < 0 and f ( x ) = 0 for x > 0. The mean and the standard deviation are 1 a and 1 a 2 respectively.\n\n$$\nf(x) = \\lambda e^{-\\lambda x} \\quad (x \\ge 0), \\quad F(x) = 1 - e^{-\\lambda x}, \\; \\mathbb{E}[X] = \\frac{1}{\\lambda}\n$$\n*Formula:* Continuous memoryless probability distribution representing the time elapsed between independent Poisson point events occurring at a constant average rate $\\lambda$.",
+      "formula": "f(x) = \\lambda e^{-\\lambda x} \\quad (x \\ge 0), \\quad F(x) = 1 - e^{-\\lambda x}, \\; \\mathbb{E}[X] = \\frac{1}{\\lambda}",
+      "formula_description": "Continuous memoryless probability distribution representing the time elapsed between independent Poisson point events occurring at a constant average rate $\\lambda$."
     },
     {
       "word": "negative feedback",
@@ -114171,13 +114181,17 @@
       "word": "nernst equation",
       "raw_headword": "NERNST EQUATION",
       "synonyms": [],
-      "definition": "An equation that relates the redox potential to the standard redox potential and the concentration of the oxidised and reduced form of two half-cells. It is expressed mathematically as E cell = E ° cell - RT ZF ln Qr , where E cell = cell potential at absolute temperature (T in K), E cell = standard cell potential, R = ideal gas constant (8.314 J/K/mol) , T = absolute temperature, F = Faraday's constant, Z = number of electrons transferred and Qr = reaction quotient."
+      "definition": "An equation that relates the redox potential to the standard redox potential and the concentration of the oxidised and reduced form of two half-cells. It is expressed mathematically as E cell = E ° cell - RT ZF ln Qr , where E cell = cell potential at absolute temperature (T in K), E cell = standard cell potential, R = ideal gas constant (8.314 J/K/mol) , T = absolute temperature, F = Faraday's constant, Z = number of electrons transferred and Qr = reaction quotient.\n\n$$\nE = E^\\circ - \\frac{RT}{zF} \\ln Q = E^\\circ - \\frac{0.0592}{z} \\log_{10} Q \\quad (\\text{at } 298\\text{ K})\n$$\n*Formula:* Calculates the reduction potential of an electrochemical half-cell or full cell under non-standard conditions, where $E^\\circ$ is standard potential, $R$ is gas constant ($8.314\\text{ J/mol}\\cdot\\text{K}$), $T$ is temperature, $z$ is moles of electrons transferred, $F$ is Faraday's constant ($96,485\\text{ C/mol}$), and $Q$ is the reaction quotient.",
+      "formula": "E = E^\\circ - \\frac{RT}{zF} \\ln Q = E^\\circ - \\frac{0.0592}{z} \\log_{10} Q \\quad (\\text{at } 298\\text{ K})",
+      "formula_description": "Calculates the reduction potential of an electrochemical half-cell or full cell under non-standard conditions, where $E^\\circ$ is standard potential, $R$ is gas constant ($8.314\\text{ J/mol}\\cdot\\text{K}$), $T$ is temperature, $z$ is moles of electrons transferred, $F$ is Faraday's constant ($96,485\\text{ C/mol}$), and $Q$ is the reaction quotient."
     },
     {
       "word": "nernst heat theorem",
       "raw_headword": "NERNST HEAT THEOREM",
       "synonyms": [],
-      "definition": "A statement of the third law of thermodynamics in a restricted form; which states that if a chemical change takes place between pure crystalline solids at absolute zero there is no change of entropy between the final and initial substances."
+      "definition": "A statement of the third law of thermodynamics in a restricted form; which states that if a chemical change takes place between pure crystalline solids at absolute zero there is no change of entropy between the final and initial substances.\n\n$$\n\\lim_{T \\to 0} \\Delta S = 0, \\quad \\lim_{T \\to 0} \\Delta G = \\lim_{T \\to 0} \\Delta H\n$$\n*Formula:* The historical foundation of the Third Law of Thermodynamics: as absolute temperature $T$ approaches zero, the entropy change $\\Delta S$ for any reversible isothermal process between condensed phases approaches zero.",
+      "formula": "\\lim_{T \\to 0} \\Delta S = 0, \\quad \\lim_{T \\to 0} \\Delta G = \\lim_{T \\to 0} \\Delta H",
+      "formula_description": "The historical foundation of the Third Law of Thermodynamics: as absolute temperature $T$ approaches zero, the entropy change $\\Delta S$ for any reversible isothermal process between condensed phases approaches zero."
     },
     {
       "word": "nernst,",
@@ -114192,7 +114206,9 @@
       "word": "nernst-einstein equation",
       "raw_headword": "NERNST-EINSTEIN EQUATION",
       "synonyms": [],
-      "definition": "An equation relating the limiting molar conductivity Ʌm 0 to the ionic diffusion coefficients. The Nernst-Einstein equation is mathematically described as ∧ m 0 = ( F2 / Rt )( v + z + 2 D + v -- 22 D - ), where F is the Faraday constant, R is the gas constant temperature, v+ and v - are the number of cations and anions per formula unit if electrolyte, z + and z - are the valences of the ions and D + and D - are the diffusion coefficients of the ions. It is applied to calculate the ionic diffusion coefficients from experimental determination of conductivity."
+      "definition": "An equation relating the limiting molar conductivity Ʌm 0 to the ionic diffusion coefficients. The Nernst-Einstein equation is mathematically described as ∧ m 0 = ( F2 / Rt )( v + z + 2 D + v -- 22 D - ), where F is the Faraday constant, R is the gas constant temperature, v+ and v - are the number of cations and anions per formula unit if electrolyte, z + and z - are the valences of the ions and D + and D - are the diffusion coefficients of the ions. It is applied to calculate the ionic diffusion coefficients from experimental determination of conductivity.\n\n$$\nD = \\mu k_B T = \\frac{u R T}{z F}\n$$\n*Formula:* Relates the diffusion coefficient $D$ of particles to their electrical mobility $\\mu$ (or ionic mobility $u$), where $k_B$ is the Boltzmann constant, $T$ is absolute temperature, $z$ is ionic charge number, and $F$ is Faraday's constant.",
+      "formula": "D = \\mu k_B T = \\frac{u R T}{z F}",
+      "formula_description": "Relates the diffusion coefficient $D$ of particles to their electrical mobility $\\mu$ (or ionic mobility $u$), where $k_B$ is the Boltzmann constant, $T$ is absolute temperature, $z$ is ionic charge number, and $F$ is Faraday's constant."
     },
     {
       "word": "nervation",
@@ -114310,7 +114326,9 @@
       "word": "net force",
       "raw_headword": "NET FORCE",
       "synonyms": [],
-      "definition": "The single force that has the same effect both in magnitude and direction as all the original forces acting together. The net force is calculated by adding all the forces vectorially, taking into consideration the forces in the positive and negative x and y directions. This is done by the resolution of the various forces in the x and y directions. The direction of the net force is that of the combined forces. If the forces are parallel but opposite, the net (resultant) force is obtained by subtration (algebraic addition). If there are several forces acting on the object, the net force for each direction must be determined."
+      "definition": "The single force that has the same effect both in magnitude and direction as all the original forces acting together. The net force is calculated by adding all the forces vectorially, taking into consideration the forces in the positive and negative x and y directions. This is done by the resolution of the various forces in the x and y directions. The direction of the net force is that of the combined forces. If the forces are parallel but opposite, the net (resultant) force is obtained by subtration (algebraic addition). If there are several forces acting on the object, the net force for each direction must be determined.\n\n$$\n\\mathbf{F}_{\\text{net}} = \\sum_{i=1}^{n} \\mathbf{F}_i = m \\mathbf{a} = \\frac{d\\mathbf{p}}{dt}\n$$\n*Formula:* The vector sum of all external forces acting upon a body of mass $m$, dictating its acceleration $\\mathbf{a}$ and the time rate of change of its linear momentum $\\mathbf{p}$.",
+      "formula": "\\mathbf{F}_{\\text{net}} = \\sum_{i=1}^{n} \\mathbf{F}_i = m \\mathbf{a} = \\frac{d\\mathbf{p}}{dt}",
+      "formula_description": "The vector sum of all external forces acting upon a body of mass $m$, dictating its acceleration $\\mathbf{a}$ and the time rate of change of its linear momentum $\\mathbf{p}$."
     },
     {
       "word": "net ionic equation",
@@ -115044,7 +115062,9 @@
       "word": "newton",
       "raw_headword": "NEWTON",
       "synonyms": [],
-      "definition": "The SI unit of force, with the symbol N, named after Sir Isaac Newton (1642-1727), British physicist and mathematician. One newton is the force needed to accelerate an object with a mass of one kilogram by one metre per second squared."
+      "definition": "The SI unit of force, with the symbol N, named after Sir Isaac Newton (1642-1727), British physicist and mathematician. One newton is the force needed to accelerate an object with a mass of one kilogram by one metre per second squared.\n\n$$\n1\\text{ N} = 1\\text{ kg}\\cdot\\text{m}/\\text{s}^2 = 10^5\\text{ dynes}\n$$\n*Formula:* The SI derived unit of force, defined as the force required to accelerate a mass of one kilogram at the rate of one metre per second squared.",
+      "formula": "1\\text{ N} = 1\\text{ kg}\\cdot\\text{m}/\\text{s}^2 = 10^5\\text{ dynes}",
+      "formula_description": "The SI derived unit of force, defined as the force required to accelerate a mass of one kilogram at the rate of one metre per second squared."
     },
     {
       "word": "newton diagram",
@@ -115059,13 +115079,17 @@
         "gravitational constant",
         "universal gravitational constant"
       ],
-      "definition": "The numerical factor relating force, mass and distance in Newton's theory of gravitation that yields the force one body exerts on another when multiplied by the product of the masses of the two bodies and divided by the square of the distance between them. Its symbol is G . The attractive force, F , between two bodies of mass m 1 and m2 and the distance between them, r is expressed as F = Gm 1 m2 r 2 . The numerical value of G is expressed as G = Fr 2 m 1 m2 = 6 . 67259 85 ( ) × 10 - 11 m3 kg^-1 s^-2 ."
+      "definition": "The numerical factor relating force, mass and distance in Newton's theory of gravitation that yields the force one body exerts on another when multiplied by the product of the masses of the two bodies and divided by the square of the distance between them. Its symbol is G . The attractive force, F , between two bodies of mass m 1 and m2 and the distance between them, r is expressed as F = Gm 1 m2 r 2 . The numerical value of G is expressed as G = Fr 2 m 1 m2 = 6 . 67259 85 ( ) × 10 - 11 m3 kg^-1 s^-2 .\n\n$$\nG = 6.67430(15) \\times 10^{-11} \\; \\text{m}^3\\text{ kg}^{-1}\\text{ s}^{-2} = \\text{N}\\cdot\\text{m}^2/\\text{kg}^2\n$$\n*Formula:* The universal gravitational constant $G$ appearing in Newton's law of universal gravitation and Einstein's field equations of General Relativity.",
+      "formula": "G = 6.67430(15) \\times 10^{-11} \\; \\text{m}^3\\text{ kg}^{-1}\\text{ s}^{-2} = \\text{N}\\cdot\\text{m}^2/\\text{kg}^2",
+      "formula_description": "The universal gravitational constant $G$ appearing in Newton's law of universal gravitation and Einstein's field equations of General Relativity."
     },
     {
       "word": "newton's formula",
       "raw_headword": "NEWTON'S FORMULA",
       "synonyms": [],
-      "definition": "For a lens, the distance p and q between two conjugate points and their respective foci is given by pq = f 2 , where f is the focal length for the lens. It is named after Sir Isaac Newton (1642-1727), British physicist and mathematician."
+      "definition": "For a lens, the distance p and q between two conjugate points and their respective foci is given by pq = f 2 , where f is the focal length for the lens. It is named after Sir Isaac Newton (1642-1727), British physicist and mathematician.\n\n$$\nx x' = f^2\n$$\n*Formula:* Newton's conjugate mirror and thin-lens formula relating object distance $x$ and image distance $x'$ measured from their respective principal focal points to focal length $f$.",
+      "formula": "x x' = f^2",
+      "formula_description": "Newton's conjugate mirror and thin-lens formula relating object distance $x$ and image distance $x'$ measured from their respective principal focal points to focal length $f$."
     },
     {
       "word": "newton's identities",
@@ -115077,31 +115101,41 @@
       "word": "newton's law of cooling",
       "raw_headword": "NEWTON'S LAW OF COOLING",
       "synonyms": [],
-      "definition": "Formulated by Sir Isaac Newton (1642-1727), British physicist and mathematician, it states that the rate at which a body loses heat is proportional to the difference in temperature between the body and the surrounding. Mathematically, this is given by or dQ dt =- k ( T2 - T1 ), where is change in heat with respect to time, change in temperature and k is a constant. Temperature Time (t) in seconds Newton's Law of Cooling."
+      "definition": "Formulated by Sir Isaac Newton (1642-1727), British physicist and mathematician, it states that the rate at which a body loses heat is proportional to the difference in temperature between the body and the surrounding. Mathematically, this is given by or dQ dt =- k ( T2 - T1 ), where is change in heat with respect to time, change in temperature and k is a constant. Temperature Time (t) in seconds Newton's Law of Cooling.\n\n$$\n\\frac{dT}{dt} = -k (T - T_{\\text{env}}) \\implies T(t) = T_{\\text{env}} + (T_0 - T_{\\text{env}})e^{-kt}\n$$\n*Formula:* States that the rate of heat loss of a body is proportional to the difference in temperatures between the body ($T$) and its surrounding environment ($T_{\\text{env}}$), where $k > 0$ is heat transfer coefficient.",
+      "formula": "\\frac{dT}{dt} = -k (T - T_{\\text{env}}) \\implies T(t) = T_{\\text{env}} + (T_0 - T_{\\text{env}})e^{-kt}",
+      "formula_description": "States that the rate of heat loss of a body is proportional to the difference in temperatures between the body ($T$) and its surrounding environment ($T_{\\text{env}}$), where $k > 0$ is heat transfer coefficient."
     },
     {
       "word": "newton's law of gravity",
       "raw_headword": "NEWTON'S LAW OF GRAVITY",
       "synonyms": [],
-      "definition": "Formulated by Sir Isaac Newton (1642-1727), British physicist and mathematician, it states that there is a force of attraction between any two massive particles in the universe. For any two point masses m 1 and m2 , separated by a distance d , the force of attraction F is directly proportional to the product of their masses and inversely proportional to the square of the distance between them. Mathematically, it is expressed as F = , where G is the gravitational constant."
+      "definition": "Formulated by Sir Isaac Newton (1642-1727), British physicist and mathematician, it states that there is a force of attraction between any two massive particles in the universe. For any two point masses m 1 and m2 , separated by a distance d , the force of attraction F is directly proportional to the product of their masses and inversely proportional to the square of the distance between them. Mathematically, it is expressed as F = , where G is the gravitational constant.\n\n$$\n\\mathbf{F} = -G \\frac{m_1 m_2}{r^2} \\hat{\\mathbf{r}}, \\quad U(r) = -G \\frac{m_1 m_2}{r}\n$$\n*Formula:* Every point mass attracts every other point mass with a central force proportional to the product of their masses $m_1, m_2$ and inversely proportional to the square of the distance $r$ separating them.",
+      "formula": "\\mathbf{F} = -G \\frac{m_1 m_2}{r^2} \\hat{\\mathbf{r}}, \\quad U(r) = -G \\frac{m_1 m_2}{r}",
+      "formula_description": "Every point mass attracts every other point mass with a central force proportional to the product of their masses $m_1, m_2$ and inversely proportional to the square of the distance $r$ separating them."
     },
     {
       "word": "newton's laws of motion",
       "raw_headword": "NEWTON'S LAWS OF MOTION",
       "synonyms": [],
-      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction."
+      "definition": "Three fundamental principles which form the bases of classical mechanics. They are: (i) A body continues in a state of rest or uniform motion in a straight line unless it is acted upon by external force or an object at rest stays at rest and a moving object continues moving at the same speed in the same straight line N unless acted upon by an external resultant force. (ii) The rate of change of momentum of a moving body is proportional to and in the same direction as the forces acting on it, expressed as F = , where F is the applied force, v is the velocity of the body and m it's mass. If the mass remains constant, F = m dv dt or $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$F = ma$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ , where a is the acceleration. (iii) If one body exerts a force on another, there is an equal and opposite force, called a reaction, exerted on the first body by the second or to every action, there is an equal and opposite reaction.",
+      "formula": "\\begin{cases} \\sum \\mathbf{F} = 0 \\implies \\mathbf{v} = \\text{const} & (\\text{1st: Inertia}) \\\\[4pt] \\mathbf{F}_{\\text{net}} = m\\mathbf{a} = \\frac{d\\mathbf{p}}{dt} & (\\text{2nd: Momentum}) \\\\[4pt] \\mathbf{F}_{AB} = -\\mathbf{F}_{BA} & (\\text{3rd: Action-Reaction}) \\end{cases}",
+      "formula_description": "The three classical laws formulated by Sir Isaac Newton in 1687 underpinning classical mechanics: the law of inertia, force and momentum rate of change, and mutual reciprocal action."
     },
     {
       "word": "newton's method",
       "raw_headword": "NEWTON'S METHOD",
       "synonyms": [],
-      "definition": "A method of obtaining rough approximations to the values of the roots of an equation f ( x ) = a by repeatedly computing in one dimension x NEW = x OLD - f ( x OLD ) f '( x OLD ) . This corresponds to approximating the function by its tangent and exhibits a quadratic rate of convergence if the initial estimate is sufficiently good. It was named after Sir Isaac Newton, British physicist and mathematician and Joseph Raphson, an English mathematician."
+      "definition": "A method of obtaining rough approximations to the values of the roots of an equation f ( x ) = a by repeatedly computing in one dimension x NEW = x OLD - f ( x OLD ) f '( x OLD ) . This corresponds to approximating the function by its tangent and exhibits a quadratic rate of convergence if the initial estimate is sufficiently good. It was named after Sir Isaac Newton, British physicist and mathematician and Joseph Raphson, an English mathematician.\n\n$$\nx_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}, \\quad |e_{n+1}| \\approx \\frac{|f''(r)|}{2|f'(r)|} |e_n|^2\n$$\n*Formula:* The Newton–Raphson algorithm: an iterative numerical root-finding method that starts with an initial approximation $x_0$ and exhibits quadratic convergence near a simple root $r$.",
+      "formula": "x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}, \\quad |e_{n+1}| \\approx \\frac{|f''(r)|}{2|f'(r)|} |e_n|^2",
+      "formula_description": "The Newton–Raphson algorithm: an iterative numerical root-finding method that starts with an initial approximation $x_0$ and exhibits quadratic convergence near a simple root $r$."
     },
     {
       "word": "newton's rings",
       "raw_headword": "NEWTON'S RINGS",
       "synonyms": [],
-      "definition": "Interference fringes formed by placing a slightly convex lens on a flat glass plate or the irregular patterns produced by thin film interference between a projected transparency and its cover glass. It was named after Sir Isaac Newton (1642-1727), British physicist and mathematician."
+      "definition": "Interference fringes formed by placing a slightly convex lens on a flat glass plate or the irregular patterns produced by thin film interference between a projected transparency and its cover glass. It was named after Sir Isaac Newton (1642-1727), British physicist and mathematician.\n\n$$\nr_m = \\sqrt{m \\lambda R} \\quad (\\text{dark rings, transmitted light: } r_m = \\sqrt{(m + \\tfrac{1}{2})\\lambda R})\n$$\n*Formula:* Interference pattern produced by thin air-film reflection between a spherical lens of radius of curvature $R$ and an adjacent flat optical surface, yielding concentric circular fringes of radius $r_m$ for wavelength $\\lambda$.",
+      "formula": "r_m = \\sqrt{m \\lambda R} \\quad (\\text{dark rings, transmitted light: } r_m = \\sqrt{(m + \\tfrac{1}{2})\\lambda R})",
+      "formula_description": "Interference pattern produced by thin air-film reflection between a spherical lens of radius of curvature $R$ and an adjacent flat optical surface, yielding concentric circular fringes of radius $r_m$ for wavelength $\\lambda$."
     },
     {
       "word": "newton, sir isaac",
@@ -115117,13 +115151,17 @@
       "synonyms": [
         "newton-cotes quadrature rules"
       ],
-      "definition": "A class of numerical quadrature methods for numerical integration that extend the trapezoidal rule and Simpson's rule. They may be closed if the interval [ x 1 , x n ] is included in the fit, open if the points [ x 2 , x n^-1 ] are used or a variation of these two. If the formula uses n points (closed or open), the coefficients of terms sum to n^-1."
+      "definition": "A class of numerical quadrature methods for numerical integration that extend the trapezoidal rule and Simpson's rule. They may be closed if the interval [ x 1 , x n ] is included in the fit, open if the points [ x 2 , x n^-1 ] are used or a variation of these two. If the formula uses n points (closed or open), the coefficients of terms sum to n^-1.\n\n$$\n\\int_a^b f(x) dx \\approx \\sum_{i=0}^n w_i f(x_i) \\quad (\\text{Trapezoid: } n=1; \\; \\text{Simpson's 1/3: } n=2)\n$$\n*Formula:* Class of numerical quadrature formulas integrating equally spaced points, including the Trapezoidal rule (linear interpolation) and Simpson's rules (quadratic and cubic interpolations).",
+      "formula": "\\int_a^b f(x) dx \\approx \\sum_{i=0}^n w_i f(x_i) \\quad (\\text{Trapezoid: } n=1; \\; \\text{Simpson's 1/3: } n=2)",
+      "formula_description": "Class of numerical quadrature formulas integrating equally spaced points, including the Trapezoidal rule (linear interpolation) and Simpson's rules (quadratic and cubic interpolations)."
     },
     {
       "word": "newtonian fluid",
       "raw_headword": "NEWTONIAN FLUID",
       "synonyms": [],
-      "definition": "A fluid in which the components of the stress tensor are linear functions of the first spatial derivatives of the velocity components. These functions involve two material parameters (taken as constants throughout the fluid, although depending on ambient temperature and pressure). It was named after Sir Isaac Newton (1642-1727), British physicist and mathematician, who first deduced the concept."
+      "definition": "A fluid in which the components of the stress tensor are linear functions of the first spatial derivatives of the velocity components. These functions involve two material parameters (taken as constants throughout the fluid, although depending on ambient temperature and pressure). It was named after Sir Isaac Newton (1642-1727), British physicist and mathematician, who first deduced the concept.\n\n$$\n\\tau = \\mu \\frac{du}{dy}\n$$\n*Formula:* A fluid in which the viscous shear stress $\\tau$ is linearly proportional to the local strain rate (velocity gradient) $\\frac{du}{dy}$, where the proportionality constant $\\mu$ is independent of shear rate.",
+      "formula": "\\tau = \\mu \\frac{du}{dy}",
+      "formula_description": "A fluid in which the viscous shear stress $\\tau$ is linearly proportional to the local strain rate (velocity gradient) $\\frac{du}{dy}$, where the proportionality constant $\\mu$ is independent of shear rate."
     },
     {
       "word": "newtonian mechanics",
@@ -116950,7 +116988,9 @@
       "synonyms": [
         "gaussian distribution"
       ],
-      "definition": "A probability distribution, f ( x ), of a random variable, x that is assumed by many statistical methods. This is given by f ( x )= σ 2 π exp -­‐ 1 ( x -­‐ µ ) 2 σ 2 ⎡ ⎣ ⎢⎢⎢ ⎤ ⎦ ⎥⎥⎥ , where μ is the mean and σ 2 is the varia Scores Frequency Normal Curve nce. All normal distributions are symmetric and have bell-shaped density curves with a single peak when plotted on a graph, and also known as normal curve , normal distribution curve or Gausian curve . The area of a vertical section of the curve represents the probability that the random variable lies between the values that delimit the sectionandthese probabilities can be found from statistical tables. The mean, median and mode all occupy the same high middle point of the curve, which is perfectly symmetrical around this point. : The simultaneous equations involving experimental unknowns derived from a larger number of observation equations that describe the best least square approximation for the distance of a vector from a set of n vectors."
+      "definition": "A probability distribution, f ( x ), of a random variable, x that is assumed by many statistical methods. This is given by f ( x )= σ 2 π exp -­‐ 1 ( x -­‐ µ ) 2 σ 2 ⎡ ⎣ ⎢⎢⎢ ⎤ ⎦ ⎥⎥⎥ , where μ is the mean and σ 2 is the varia Scores Frequency Normal Curve nce. All normal distributions are symmetric and have bell-shaped density curves with a single peak when plotted on a graph, and also known as normal curve , normal distribution curve or Gausian curve . The area of a vertical section of the curve represents the probability that the random variable lies between the values that delimit the sectionandthese probabilities can be found from statistical tables. The mean, median and mode all occupy the same high middle point of the curve, which is perfectly symmetrical around this point. : The simultaneous equations involving experimental unknowns derived from a larger number of observation equations that describe the best least square approximation for the distance of a vector from a set of n vectors.\n\n$$\nf(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} \\exp\\left( -\\frac{(x - \\mu)^2}{2\\sigma^2} \\right), \\quad \\Phi(z) = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^z e^{-t^2/2} dt\n$$\n*Formula:* The Gaussian continuous probability distribution characterized by mean $\\mu$ and standard deviation $\\sigma$, ubiquitously governing natural variations by virtue of the Central Limit Theorem.",
+      "formula": "f(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} \\exp\\left( -\\frac{(x - \\mu)^2}{2\\sigma^2} \\right), \\quad \\Phi(z) = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^z e^{-t^2/2} dt",
+      "formula_description": "The Gaussian continuous probability distribution characterized by mean $\\mu$ and standard deviation $\\sigma$, ubiquitously governing natural variations by virtue of the Central Limit Theorem."
     },
     {
       "word": "normal equationsnormal extension field",
@@ -117382,7 +117422,9 @@
       "word": "nuclear binding energy",
       "raw_headword": "NUCLEAR BINDING ENERGY",
       "synonyms": [],
-      "definition": "The energy required to break up a nucleus to its protons and neutrons."
+      "definition": "The energy required to break up a nucleus to its protons and neutrons.\n\n$$\nB = \\Delta m \\cdot c^2 = \\left[ Z m_p + (A - Z)m_n - M_{\\text{nucleus}} \\right] c^2\n$$\n*Formula:* The energy required to disassemble an atomic nucleus into its component protons ($Z$) and neutrons ($A-Z$), derived from mass defect $\\Delta m$ via mass-energy equivalence ($E = mc^2$).",
+      "formula": "B = \\Delta m \\cdot c^2 = \\left[ Z m_p + (A - Z)m_n - M_{\\text{nucleus}} \\right] c^2",
+      "formula_description": "The energy required to disassemble an atomic nucleus into its component protons ($Z$) and neutrons ($A-Z$), derived from mass defect $\\Delta m$ via mass-energy equivalence ($E = mc^2$)."
     },
     {
       "word": "nuclear detection satellites",
@@ -117406,7 +117448,9 @@
       "word": "nuclear energy",
       "raw_headword": "NUCLEAR ENERGY",
       "synonyms": [],
-      "definition": "Energy from the inner core or nucleus of an atom or energy obtained from nuclear fission or nuclear fusion. The energy is released as a result of nuclear reaction."
+      "definition": "Energy from the inner core or nucleus of an atom or energy obtained from nuclear fission or nuclear fusion. The energy is released as a result of nuclear reaction.\n\n$$\nE = \\Delta m \\cdot c^2 \\quad (\\approx 200\\text{ MeV per } ^{235}\\text{U fission})\n$$\n*Formula:* Energy released by the rearrangement of nuclear bonds in fission or fusion processes, determined by the mass difference between reactants and reaction products multiplied by $c^2$.",
+      "formula": "E = \\Delta m \\cdot c^2 \\quad (\\approx 200\\text{ MeV per } ^{235}\\text{U fission})",
+      "formula_description": "Energy released by the rearrangement of nuclear bonds in fission or fusion processes, determined by the mass difference between reactants and reaction products multiplied by $c^2$."
     },
     {
       "word": "nuclear envelope",
@@ -118961,7 +119005,9 @@
       "word": "octet rule",
       "raw_headword": "OCTET RULE",
       "synonyms": [],
-      "definition": "A chemical rule stating that in the formation of compounds, atoms of low atomic numbers (less than 20) tend to combine such that they have 8 valence electrons, giving them the same electronic configuration as noble gases."
+      "definition": "A chemical rule stating that in the formation of compounds, atoms of low atomic numbers (less than 20) tend to combine such that they have 8 valence electrons, giving them the same electronic configuration as noble gases.\n\n$$\nn s^2 n p^6 \\quad (\\text{8 valence electrons})\n$$\n*Formula:* Chemical rule of thumb reflecting the stability of atoms possessing eight valence electrons, matching the closed-shell noble gas configuration.",
+      "formula": "n s^2 n p^6 \\quad (\\text{8 valence electrons})",
+      "formula_description": "Chemical rule of thumb reflecting the stability of atoms possessing eight valence electrons, matching the closed-shell noble gas configuration."
     },
     {
       "word": "octogynous",
@@ -119027,7 +119073,9 @@
       "word": "odd function",
       "raw_headword": "ODD FUNCTION",
       "synonyms": [],
-      "definition": "A function f ( x ) is odd if f (- x ) = - f ( x ) for all x . For example, if f ( x ) = x 3 , f (- x ) = - x 3 , then f ( x ) = x 3 is an odd function. Some other examples of an odd function are f ( x ) = sin x , f ( x ) = sin (- x ) = -sin x , f ( x ) = tan x , f (- x ) = tan (- x ) = -tan x ."
+      "definition": "A function f ( x ) is odd if f (- x ) = - f ( x ) for all x . For example, if f ( x ) = x 3 , f (- x ) = - x 3 , then f ( x ) = x 3 is an odd function. Some other examples of an odd function are f ( x ) = sin x , f ( x ) = sin (- x ) = -sin x , f ( x ) = tan x , f (- x ) = tan (- x ) = -tan x .\n\n$$\nf(-x) = -f(x), \\quad \\int_{-a}^{a} f(x) \\, dx = 0\n$$\n*Formula:* A mathematical function possessing rotational symmetry about the origin; the definite integral over any symmetric interval $[-a, a]$ is identically zero (e.g., $\\sin x, x^3$).",
+      "formula": "f(-x) = -f(x), \\quad \\int_{-a}^{a} f(x) \\, dx = 0",
+      "formula_description": "A mathematical function possessing rotational symmetry about the origin; the definite integral over any symmetric interval $[-a, a]$ is identically zero (e.g., $\\sin x, x^3$)."
     },
     {
       "word": "odd number",
@@ -119075,7 +119123,9 @@
       "word": "odds ratio",
       "raw_headword": "ODDS RATIO",
       "synonyms": [],
-      "definition": "The ratio of the odds for a binary variable in two groups of subjects, for example, boys and girls. If the two possible states of the variable are labelled \"success\" and \"failure\" then the odds ratio is a measure of the odds of a success in one group relative to that in the other. When the odds of a success in each group are identical then the odds ratio is equal to one. It is expressed as: Odds Ratio = , where D , C , B and E are appropriate frequencies in the two-by-two contingency table formed from the data."
+      "definition": "The ratio of the odds for a binary variable in two groups of subjects, for example, boys and girls. If the two possible states of the variable are labelled \"success\" and \"failure\" then the odds ratio is a measure of the odds of a success in one group relative to that in the other. When the odds of a success in each group are identical then the odds ratio is equal to one. It is expressed as: Odds Ratio = , where D , C , B and E are appropriate frequencies in the two-by-two contingency table formed from the data.\n\n$$\nOR = \\frac{p_1 / (1 - p_1)}{p_2 / (1 - p_2)} = \\frac{a \\cdot d}{b \\cdot c}\n$$\n*Formula:* Statistic quantifying the association strength between an exposure and an outcome in biostatistics and epidemiology contingency tables.",
+      "formula": "OR = \\frac{p_1 / (1 - p_1)}{p_2 / (1 - p_2)} = \\frac{a \\cdot d}{b \\cdot c}",
+      "formula_description": "Statistic quantifying the association strength between an exposure and an outcome in biostatistics and epidemiology contingency tables."
     },
     {
       "word": "odonata",
@@ -119261,13 +119311,17 @@
       "word": "ohm",
       "raw_headword": "OHM",
       "synonyms": [],
-      "definition": "The SI unit of electrical resistance. It is defined as the resistance in a circuit between two points when a potential difference of one volt between them produces a current of one ampere. One ohm equals 1 volt/ampere. Its symbol is (Ω)."
+      "definition": "The SI unit of electrical resistance. It is defined as the resistance in a circuit between two points when a potential difference of one volt between them produces a current of one ampere. One ohm equals 1 volt/ampere. Its symbol is (Ω).\n\n$$\n1\\;\\Omega = 1\\;\\text{V}/\\text{A} = 1\\;\\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-3}\\cdot\\text{A}^{-2}\n$$\n*Formula:* The SI derived unit of electrical resistance, impedance, and reactance, defined as the resistance between two points of a conductor when a constant potential difference of 1 volt produces a current of 1 ampere.",
+      "formula": "1\\;\\Omega = 1\\;\\text{V}/\\text{A} = 1\\;\\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-3}\\cdot\\text{A}^{-2}",
+      "formula_description": "The SI derived unit of electrical resistance, impedance, and reactance, defined as the resistance between two points of a conductor when a constant potential difference of 1 volt produces a current of 1 ampere."
     },
     {
       "word": "ohm's law",
       "raw_headword": "OHM'S LAW",
       "synonyms": [],
-      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current."
+      "definition": "A law, which states that the current ( I ) flowing in a metallic conductor is directly proportional to the potential difference ( V ) across its ends provided temperature and other physical conditions remain constant. The other physical conditions include the length of wire, cross sectional area and the type of material (for example, copper or aluminium). It is expressed as $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$V = IR$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ . Ohm's law holds true for only resistive circuits without the effects of inductances, capacitances to the flow of current.",
+      "formula": "V = IR \\iff I = \\frac{V}{R}, \\quad \\mathbf{J} = \\sigma \\mathbf{E} = \\frac{1}{\\rho} \\mathbf{E}",
+      "formula_description": "States that electric current $I$ through a conductor between two points is directly proportional to voltage $V$ across the two points and inversely proportional to resistance $R$. In microscopic form, current density $\\mathbf{J}$ equals conductivity $\\sigma$ times electric field $\\mathbf{E}$."
     },
     {
       "word": "ohm, george simon",
@@ -119290,7 +119344,9 @@
         "joule heating",
         "resistive heating"
       ],
-      "definition": "The process by which the passage of an electric current through a conductor releases heat. It was first studied by James Prescott Joule, English physicist in 1841. Joule heating is caused by interactions between the moving particles that form the current, mainly electrons and the atomic ions that make up the body of the conductor. Charged particles in an electric circuit are accelerated by an electric field but give up some of their kinetic energy each time they collide with an ion. The increase in the kinetic or vibrational energy of the ions manifests itself as heat and a rise in the temperature of the conductor. This method finds practical applications in the food processing industry, in which an electric current is passed through foodstuffs to sterilise them before packing. It is also applied in incandescent light bulb when the filament is heated by joule heating that it glows white with thermal radiation, in electric stoves and other electric heaters. Power stations reduce the transmission loss associated with Joule heating of the power lines, by transmitting power at very low current and very high voltage instead of high current and low voltage."
+      "definition": "The process by which the passage of an electric current through a conductor releases heat. It was first studied by James Prescott Joule, English physicist in 1841. Joule heating is caused by interactions between the moving particles that form the current, mainly electrons and the atomic ions that make up the body of the conductor. Charged particles in an electric circuit are accelerated by an electric field but give up some of their kinetic energy each time they collide with an ion. The increase in the kinetic or vibrational energy of the ions manifests itself as heat and a rise in the temperature of the conductor. This method finds practical applications in the food processing industry, in which an electric current is passed through foodstuffs to sterilise them before packing. It is also applied in incandescent light bulb when the filament is heated by joule heating that it glows white with thermal radiation, in electric stoves and other electric heaters. Power stations reduce the transmission loss associated with Joule heating of the power lines, by transmitting power at very low current and very high voltage instead of high current and low voltage.\n\n$$\nP = I^2 R = \\frac{V^2}{R} = V I, \\quad Q = I^2 R t\n$$\n*Formula:* Joule heating: the rate of electrical energy dissipated as thermal heat $P$ when current $I$ passes through a resistance $R$ over duration $t$.",
+      "formula": "P = I^2 R = \\frac{V^2}{R} = V I, \\quad Q = I^2 R t",
+      "formula_description": "Joule heating: the rate of electrical energy dissipated as thermal heat $P$ when current $I$ passes through a resistance $R$ over duration $t$."
     },
     {
       "word": "ohmmeter",
@@ -120193,7 +120249,9 @@
       "synonyms": [
         "opamp"
       ],
-      "definition": "An electronic device used with an external feedback to achieve high gain. It is the basic building block of many electronic circuits. It is a differential amplifier, because the output is directly proportional to the difference in voltage between the two inputs of the amplifier, which include the positive (+) input, referred to as \"non-inverting\"; and the negative (-) input, referred to as \"inverting\". A non-inverting amplifier has a positive gain and the output voltage is a positive multiple of the input voltage. An inverting amplifier has a negative gain; the output voltage is a negative multiple of the input voltage. It is used especially in circuits for performing mathematical operations such as addition, subtraction, multiplication and integration. + - output input Vin Vout in phase with input voltage (V in ) for non-inverting amplifier + - output input Vin Vout."
+      "definition": "An electronic device used with an external feedback to achieve high gain. It is the basic building block of many electronic circuits. It is a differential amplifier, because the output is directly proportional to the difference in voltage between the two inputs of the amplifier, which include the positive (+) input, referred to as \"non-inverting\"; and the negative (-) input, referred to as \"inverting\". A non-inverting amplifier has a positive gain and the output voltage is a positive multiple of the input voltage. An inverting amplifier has a negative gain; the output voltage is a negative multiple of the input voltage. It is used especially in circuits for performing mathematical operations such as addition, subtraction, multiplication and integration. + - output input Vin Vout in phase with input voltage (V in ) for non-inverting amplifier + - output input Vin Vout.\n\n$$\nV_{\\text{out}} = A_{\\text{OL}}(V^+ - V^-), \\quad V_{\\text{out}} = -\\frac{R_f}{R_{\\text{in}}} V_{\\text{in}} \\quad (\\text{Inverting}), \\quad V_{\\text{out}} = \\left(1 + \\frac{R_f}{R_1}\\right) V_{\\text{in}} \\quad (\\text{Non-inverting})\n$$\n*Formula:* High-gain DC-coupled differential voltage amplifier equations in open-loop and standard negative-feedback configurations.",
+      "formula": "V_{\\text{out}} = A_{\\text{OL}}(V^+ - V^-), \\quad V_{\\text{out}} = -\\frac{R_f}{R_{\\text{in}}} V_{\\text{in}} \\quad (\\text{Inverting}), \\quad V_{\\text{out}} = \\left(1 + \\frac{R_f}{R_1}\\right) V_{\\text{in}} \\quad (\\text{Non-inverting})",
+      "formula_description": "High-gain DC-coupled differential voltage amplifier equations in open-loop and standard negative-feedback configurations."
     },
     {
       "word": "operational ph cell",
@@ -120449,7 +120507,9 @@
       "synonyms": [
         "optical isomers"
       ],
-      "definition": "The ability of certain substances to rotate the plane of polarisation of a beam of light as it passes through a crystal, liquid or solution. It occurs when the molecules of the substance are asymmetric, so they can exist in two different structural forms, each being a mirror image of the other. The two forms are optical isomers or enantiomers and occur in pairs that are non-superimposable mirror images of one another. The existence of such forms is also known as enantiomorphism . One form will rotate the light in a clockwise direction as one faces the light source and it is labelled positive or dextrorotatory . The counterclockwise rotation is negative or levorotatory . Molecules that show optical activity have no plane of symmetry. Glucose is found in the dextrorotatory form. The other isomer, (-) glucose, can be synthesised in the laboratory, but cannot be synthesised by living organisms."
+      "definition": "The ability of certain substances to rotate the plane of polarisation of a beam of light as it passes through a crystal, liquid or solution. It occurs when the molecules of the substance are asymmetric, so they can exist in two different structural forms, each being a mirror image of the other. The two forms are optical isomers or enantiomers and occur in pairs that are non-superimposable mirror images of one another. The existence of such forms is also known as enantiomorphism . One form will rotate the light in a clockwise direction as one faces the light source and it is labelled positive or dextrorotatory . The counterclockwise rotation is negative or levorotatory . Molecules that show optical activity have no plane of symmetry. Glucose is found in the dextrorotatory form. The other isomer, (-) glucose, can be synthesised in the laboratory, but cannot be synthesised by living organisms.\n\n$$\n[\\alpha]_\\lambda^T = \\frac{\\alpha}{l \\cdot c}\n$$\n*Formula:* Biot's law of optical rotation for chiral substances, where $\\alpha$ is measured rotation angle in degrees, $l$ is optical path length in decimetres, $c$ is concentration in $\\text{g/cm}^3$, and $[\\alpha]$ is specific rotation at temperature $T$ and wavelength $\\lambda$ (commonly sodium D-line $589\\text{ nm}$).",
+      "formula": "[\\alpha]_\\lambda^T = \\frac{\\alpha}{l \\cdot c}",
+      "formula_description": "Biot's law of optical rotation for chiral substances, where $\\alpha$ is measured rotation angle in degrees, $l$ is optical path length in decimetres, $c$ is concentration in $\\text{g/cm}^3$, and $[\\alpha]$ is specific rotation at temperature $T$ and wavelength $\\lambda$ (commonly sodium D-line $589\\text{ nm}$)."
     },
     {
       "word": "optical axis",
@@ -120479,7 +120539,9 @@
       "synonyms": [
         "refractive index"
       ],
-      "definition": "A measure of a bending power of the medium as light passes through it. It is expressed as a ratio of the speed of light in vacuum to that in the considered medium. Light slows down as it passes from air or vacuum into any other medium. This causes the light to change its direction or be refracted. Refractive index ( μ ) = C/v , where C is the speed of light in vacuum and v is the speed of light in a medium. The statement that the refractive index of water is 1.33 means that light travels 1.33 times as fast in a vacuum than it does in water."
+      "definition": "A measure of a bending power of the medium as light passes through it. It is expressed as a ratio of the speed of light in vacuum to that in the considered medium. Light slows down as it passes from air or vacuum into any other medium. This causes the light to change its direction or be refracted. Refractive index ( μ ) = C/v , where C is the speed of light in vacuum and v is the speed of light in a medium. The statement that the refractive index of water is 1.33 means that light travels 1.33 times as fast in a vacuum than it does in water.\n\n$$\nOD = A = -\\log_{10}\\left(\\frac{I}{I_0}\\right) = \\varepsilon \\cdot c \\cdot l\n$$\n*Formula:* Absorbance ($A$) in spectrophotometry defined by the Beer–Lambert law, relating transmitted light intensity $I$ to incident intensity $I_0$, molar absorptivity $\\varepsilon$, molar concentration $c$, and path length $l$.",
+      "formula": "OD = A = -\\log_{10}\\left(\\frac{I}{I_0}\\right) = \\varepsilon \\cdot c \\cdot l",
+      "formula_description": "Absorbance ($A$) in spectrophotometry defined by the Beer–Lambert law, relating transmitted light intensity $I$ to incident intensity $I_0$, molar absorptivity $\\varepsilon$, molar concentration $c$, and path length $l$."
     },
     {
       "word": "optical disk",
@@ -120820,7 +120882,9 @@
       "word": "orbital period",
       "raw_headword": "ORBITAL PERIOD",
       "synonyms": [],
-      "definition": "The time taken for a body to go once around a closed orbit. The orbital period of a planet is described as a year."
+      "definition": "The time taken for a body to go once around a closed orbit. The orbital period of a planet is described as a year.\n\n$$\nT = 2\\pi \\sqrt{\\frac{a^3}{G(M + m)}} \\implies T^2 = \\frac{4\\pi^2}{GM} a^3 \\quad (\\text{Kepler's Third Law})\n$$\n*Formula:* The time required for an astronomical body of mass $m$ to complete one orbit around mass $M$ with semi-major axis $a$, dictated by Newton's formulation of Kepler's Third Law.",
+      "formula": "T = 2\\pi \\sqrt{\\frac{a^3}{G(M + m)}} \\implies T^2 = \\frac{4\\pi^2}{GM} a^3 \\quad (\\text{Kepler's Third Law})",
+      "formula_description": "The time required for an astronomical body of mass $m$ to complete one orbit around mass $M$ with semi-major axis $a$, dictated by Newton's formulation of Kepler's Third Law."
     },
     {
       "word": "orbital plane",
@@ -120835,7 +120899,9 @@
         "azimuthal quantum number",
         "second quantum number"
       ],
-      "definition": "The atomic orbital quantum number l, which determines the angular momentum of the electron. It is the second of a set of four quantum numbers which describe the unique quantum state of an electron. The possible values of l are (n^-1), (n^-2) ...1, 0. Thus in the first shell (n = 1) the electrons can only have angular momentum zero. In the second shell (n = 2), the value of l can be 1 or 0, giving rise to two sub shells of slightly different energy."
+      "definition": "The atomic orbital quantum number l, which determines the angular momentum of the electron. It is the second of a set of four quantum numbers which describe the unique quantum state of an electron. The possible values of l are (n^-1), (n^-2) ...1, 0. Thus in the first shell (n = 1) the electrons can only have angular momentum zero. In the second shell (n = 2), the value of l can be 1 or 0, giving rise to two sub shells of slightly different energy.\n\n$$\nL = \\sqrt{l(l+1)}\\,\\hbar, \\quad l \\in \\{0, 1, 2, \\dots, n-1\\}, \\quad L_z = m_l \\hbar\n$$\n*Formula:* The azimuthal/orbital angular momentum quantum number $l$ quantifying the magnitude of atomic electron orbital angular momentum $L$ and its projection $L_z$ with magnetic quantum number $m_l \\in \\{-l, \\dots, +l\\}$.",
+      "formula": "L = \\sqrt{l(l+1)}\\,\\hbar, \\quad l \\in \\{0, 1, 2, \\dots, n-1\\}, \\quad L_z = m_l \\hbar",
+      "formula_description": "The azimuthal/orbital angular momentum quantum number $l$ quantifying the magnitude of atomic electron orbital angular momentum $L$ and its projection $L_z$ with magnetic quantum number $m_l \\in \\{-l, \\dots, +l\\}$."
     },
     {
       "word": "orbital resonance",
@@ -120861,7 +120927,9 @@
       "synonyms": [
         "orbital speed"
       ],
-      "definition": "The speed of a planet, a satellite, a spacecraft or other bodies travelling in an orbit around the Earth or around some other celestial body."
+      "definition": "The speed of a planet, a satellite, a spacecraft or other bodies travelling in an orbit around the Earth or around some other celestial body.\n\n$$\nv_{\\text{orb}} = \\sqrt{\\frac{GM}{r}}, \\quad v_{\\text{esc}} = \\sqrt{2}\\, v_{\\text{orb}} = \\sqrt{\\frac{2GM}{r}}\n$$\n*Formula:* The speed required for a body to maintain a stable circular orbit of radius $r$ around a central mass $M$, where $v_{\\text{esc}}$ is the escape velocity.",
+      "formula": "v_{\\text{orb}} = \\sqrt{\\frac{GM}{r}}, \\quad v_{\\text{esc}} = \\sqrt{2}\\, v_{\\text{orb}} = \\sqrt{\\frac{2GM}{r}}",
+      "formula_description": "The speed required for a body to maintain a stable circular orbit of radius $r$ around a central mass $M$, where $v_{\\text{esc}}$ is the escape velocity."
     },
     {
       "word": "orbiter",
@@ -120932,7 +121000,9 @@
       "synonyms": [
         "rate of convergence"
       ],
-      "definition": "The speed at which a convergent sequence approaches its limit. It is often measured by the number of terms or evaluations involved in obtaining a given accuracy. Convergence of a sequence subject to the condition, for p > 1 that x n + 1 - x x - x p = O (1) as n increases is called p th - order convergence. An example is quadratic convergence when p = 2."
+      "definition": "The speed at which a convergent sequence approaches its limit. It is often measured by the number of terms or evaluations involved in obtaining a given accuracy. Convergence of a sequence subject to the condition, for p > 1 that x n + 1 - x x - x p = O (1) as n increases is called p th - order convergence. An example is quadratic convergence when p = 2.\n\n$$\n\\lim_{k \\to \\infty} \\frac{|e_{k+1}|}{|e_k|^p} = C \\quad (p=1: \\text{linear}, \\; p=2: \\text{quadratic})\n$$\n*Formula:* Measure of the speed at which an iterative numerical sequence $x_k$ approaches its root/limit $r$, where $e_k = x_k - r$ and $p$ is the order of convergence.",
+      "formula": "\\lim_{k \\to \\infty} \\frac{|e_{k+1}|}{|e_k|^p} = C \\quad (p=1: \\text{linear}, \\; p=2: \\text{quadratic})",
+      "formula_description": "Measure of the speed at which an iterative numerical sequence $x_k$ approaches its root/limit $r$, where $e_k = x_k - r$ and $p$ is the order of convergence."
     },
     {
       "word": "order of magnitude",
@@ -120954,7 +121024,9 @@
       "synonyms": [
         "reaction order"
       ],
-      "definition": "The classification of chemical reactions based on the power to which the concentration of components of the reaction is raised in the rate law. The overall order is all the exponents of the terms expressing concentrations of the molecules or atoms determining the rate of the reaction. For example, given a chemical reaction 2A + B → C which occurs at the rate determining step, the rate equation is given as r = k[A]2[B] and the reaction order with respect to A would be 2 and with respect to B would be 1, the total reaction order would be 2 + 1 = 3. The order of reaction can be zero or even fractional. Reaction orders can be determined only by experiment."
+      "definition": "The classification of chemical reactions based on the power to which the concentration of components of the reaction is raised in the rate law. The overall order is all the exponents of the terms expressing concentrations of the molecules or atoms determining the rate of the reaction. For example, given a chemical reaction 2A + B → C which occurs at the rate determining step, the rate equation is given as r = k[A]2[B] and the reaction order with respect to A would be 2 and with respect to B would be 1, the total reaction order would be 2 + 1 = 3. The order of reaction can be zero or even fractional. Reaction orders can be determined only by experiment.\n\n$$\nr = k [A]^m [B]^n, \\quad \\text{Overall Order } = m + n\n$$\n*Formula:* Rate law in chemical kinetics, where reaction rate $r$ depends on rate constant $k$, reactant concentrations, and partial reaction orders $m$ and $n$ determined experimentally.",
+      "formula": "r = k [A]^m [B]^n, \\quad \\text{Overall Order } = m + n",
+      "formula_description": "Rate law in chemical kinetics, where reaction rate $r$ depends on rate constant $k$, reactant concentrations, and partial reaction orders $m$ and $n$ determined experimentally."
     },
     {
       "word": "order of rotational symmetry",
@@ -121510,7 +121582,9 @@
       "word": "orthogonal functions",
       "raw_headword": "ORTHOGONAL FUNCTIONS",
       "synonyms": [],
-      "definition": "In mathematics, a set of functions f 1 , ..., f n that may be infinite, of which every pair of distinct functions satisfies the identity fiab ∫ ( x ) f j ( x )dx = 0 on some given range of integration ] a , b [ or for a more general set and measure. The Legendre polynomials are orthogonal on ]-1, 1[."
+      "definition": "In mathematics, a set of functions f 1 , ..., f n that may be infinite, of which every pair of distinct functions satisfies the identity fiab ∫ ( x ) f j ( x )dx = 0 on some given range of integration ] a , b [ or for a more general set and measure. The Legendre polynomials are orthogonal on ]-1, 1[.\n\n$$\n\\langle f, g \\rangle = \\int_a^b f(x) g(x) w(x) \\, dx = 0 \\quad (f \\ne g)\n$$\n*Formula:* Functions whose inner product over an interval $[a,b]$ with weighting function $w(x)$ vanishes, forming the foundation of Fourier series, Legendre polynomials, and quantum state bases.",
+      "formula": "\\langle f, g \\rangle = \\int_a^b f(x) g(x) w(x) \\, dx = 0 \\quad (f \\ne g)",
+      "formula_description": "Functions whose inner product over an interval $[a,b]$ with weighting function $w(x)$ vanishes, forming the foundation of Fourier series, Legendre polynomials, and quantum state bases."
     },
     {
       "word": "orthogonal group",
@@ -121528,7 +121602,9 @@
       "word": "orthogonal matrix",
       "raw_headword": "ORTHOGONAL MATRIX",
       "synonyms": [],
-      "definition": "A matrix whose transpose is the same as its inverse. A square matrix A is orthogonal, if A T A = I, where A T is the transpose of the matrix A and I is the identity matrix. It has the following properties: (i) if A is orthogonal A^-1 = A t , then AA t = I; (ii) the determinant of an orthogonal matrix, i.e. det(A) = ±1; (iii) if two matrices A and B are orthogonal matrices of the same order, then their product is also orthogonal, i.e. AB is orthogonal."
+      "definition": "A matrix whose transpose is the same as its inverse. A square matrix A is orthogonal, if A T A = I, where A T is the transpose of the matrix A and I is the identity matrix. It has the following properties: (i) if A is orthogonal A^-1 = A t , then AA t = I; (ii) the determinant of an orthogonal matrix, i.e. det(A) = ±1; (iii) if two matrices A and B are orthogonal matrices of the same order, then their product is also orthogonal, i.e. AB is orthogonal.\n\n$$\nQ^T Q = Q Q^T = I \\iff Q^{-1} = Q^T, \\quad \\det(Q) = \\pm 1\n$$\n*Formula:* A real square matrix whose columns and rows are orthonormal vectors, preserving Euclidean distances and angles under linear transformations (rotations and reflections).",
+      "formula": "Q^T Q = Q Q^T = I \\iff Q^{-1} = Q^T, \\quad \\det(Q) = \\pm 1",
+      "formula_description": "A real square matrix whose columns and rows are orthonormal vectors, preserving Euclidean distances and angles under linear transformations (rotations and reflections)."
     },
     {
       "word": "orthogonal projection",
@@ -121546,7 +121622,9 @@
       "word": "orthogonal vectors",
       "raw_headword": "ORTHOGONAL VECTORS",
       "synonyms": [],
-      "definition": "Vectors that are perpendicular, for example, if x and y are non-zero vectors and y = 0, then x and y are orthogonal."
+      "definition": "Vectors that are perpendicular, for example, if x and y are non-zero vectors and y = 0, then x and y are orthogonal.\n\n$$\n\\mathbf{u} \\cdot \\mathbf{v} = \\sum_{i=1}^n u_i v_i = 0 \\iff \\mathbf{u} \\perp \\mathbf{v}\n$$\n*Formula:* Two vectors in an inner product space whose dot product equals zero, signifying geometric perpendicularity ($90^\\circ$ angle).",
+      "formula": "\\mathbf{u} \\cdot \\mathbf{v} = \\sum_{i=1}^n u_i v_i = 0 \\iff \\mathbf{u} \\perp \\mathbf{v}",
+      "formula_description": "Two vectors in an inner product space whose dot product equals zero, signifying geometric perpendicularity ($90^\\circ$ angle)."
     },
     {
       "word": "orthologous",
@@ -121673,7 +121751,9 @@
       "word": "oscillator",
       "raw_headword": "OSCILLATOR",
       "synonyms": [],
-      "definition": "An electronic device that generates a periodic output, often a sinusoid or a square wave or any device producing a desired oscillation (vibration). Examples of their uses in electronic circuits are to produce and decode radio signals, to produce the scanning signals for television tubes and to convert signals from transducers into a readily transmitted form."
+      "definition": "An electronic device that generates a periodic output, often a sinusoid or a square wave or any device producing a desired oscillation (vibration). Examples of their uses in electronic circuits are to produce and decode radio signals, to produce the scanning signals for television tubes and to convert signals from transducers into a readily transmitted form.\n\n$$\nm \\ddot{x} + c \\dot{x} + k x = F(t) \\implies \\omega_0 = \\sqrt{\\frac{k}{m}}, \\quad f_0 = \\frac{1}{2\\pi}\\sqrt{\\frac{k}{m}}\n$$\n*Formula:* Classical harmonic oscillator differential equation, where $m$ is mass, $c$ is damping coefficient, $k$ is spring stiffness, $\\omega_0$ is natural angular frequency, and $f_0$ is cyclic frequency.",
+      "formula": "m \\ddot{x} + c \\dot{x} + k x = F(t) \\implies \\omega_0 = \\sqrt{\\frac{k}{m}}, \\quad f_0 = \\frac{1}{2\\pi}\\sqrt{\\frac{k}{m}}",
+      "formula_description": "Classical harmonic oscillator differential equation, where $m$ is mass, $c$ is damping coefficient, $k$ is spring stiffness, $\\omega_0$ is natural angular frequency, and $f_0$ is cyclic frequency."
     },
     {
       "word": "oscillograph",
@@ -121823,13 +121903,17 @@
       "word": "osmotic potential",
       "raw_headword": "OSMOTIC POTENTIAL",
       "synonyms": [],
-      "definition": "A difference in osmotic pressure that draws water from an area of less osmotic pressure to an area of greater osmotic pressure. Osmotic potential in plants is a factor which affects water movement, hence the amount of dissolved salts in soil. Soils high in soluble salt tend to reduce uptake of water by plant roots and seeds. The osmotic potential and pressure potential combined make up the water potential of a plant cell. If there are two cells next to each other of different water potentials, water will move from the cell with the higher water potential to the cell with the lower water potential. Water enters plant cells from the environment via osmosis. Water moves because the overall water potential in the soil is higher than the water potential in the roots and plant parts. If the soil is desiccated then there will be no net movement into the plant cells and the plant will die."
+      "definition": "A difference in osmotic pressure that draws water from an area of less osmotic pressure to an area of greater osmotic pressure. Osmotic potential in plants is a factor which affects water movement, hence the amount of dissolved salts in soil. Soils high in soluble salt tend to reduce uptake of water by plant roots and seeds. The osmotic potential and pressure potential combined make up the water potential of a plant cell. If there are two cells next to each other of different water potentials, water will move from the cell with the higher water potential to the cell with the lower water potential. Water enters plant cells from the environment via osmosis. Water moves because the overall water potential in the soil is higher than the water potential in the roots and plant parts. If the soil is desiccated then there will be no net movement into the plant cells and the plant will die.\n\n$$\n\\Psi_s = -\\Pi = -i C R T\n$$\n*Formula:* Solute potential (osmotic potential $\\Psi_s$) in plant physiology: represents the contribution of dissolved solutes to total water potential $\\Psi_w = \\Psi_s + \\Psi_p$, always taking a negative or zero value.",
+      "formula": "\\Psi_s = -\\Pi = -i C R T",
+      "formula_description": "Solute potential (osmotic potential $\\Psi_s$) in plant physiology: represents the contribution of dissolved solutes to total water potential $\\Psi_w = \\Psi_s + \\Psi_p$, always taking a negative or zero value."
     },
     {
       "word": "osmotic pressure",
       "raw_headword": "OSMOTIC PRESSURE",
       "synonyms": [],
-      "definition": "The pressure required to prevent the flow of a solvent into a solution through a semi-permeable membrane or pressure that must be applied to stop osmosis from happening. It can be demonstrated in an osmometer. This process is of vital importance in biology as the cell's membrane is selective towards many of the solutes found in living organisms."
+      "definition": "The pressure required to prevent the flow of a solvent into a solution through a semi-permeable membrane or pressure that must be applied to stop osmosis from happening. It can be demonstrated in an osmometer. This process is of vital importance in biology as the cell's membrane is selective towards many of the solutes found in living organisms.\n\n$$\n\\Pi = i M R T = i \\left(\\frac{n}{V}\\right) R T\n$$\n*Formula:* The van 't Hoff equation for osmotic pressure $\\Pi$, where $i$ is the van 't Hoff dissociation factor, $M = n/V$ is molarity, $R$ is ideal gas constant ($0.08206\\text{ L}\\cdot\\text{atm}/\\text{mol}\\cdot\\text{K}$ or $8.314\\text{ J/mol}\\cdot\\text{K}$), and $T$ is absolute temperature.",
+      "formula": "\\Pi = i M R T = i \\left(\\frac{n}{V}\\right) R T",
+      "formula_description": "The van 't Hoff equation for osmotic pressure $\\Pi$, where $i$ is the van 't Hoff dissociation factor, $M = n/V$ is molarity, $R$ is ideal gas constant ($0.08206\\text{ L}\\cdot\\text{atm}/\\text{mol}\\cdot\\text{K}$ or $8.314\\text{ J/mol}\\cdot\\text{K}$), and $T$ is absolute temperature."
     },
     {
       "word": "osmotroph",
@@ -122324,7 +122408,9 @@
       "word": "overtone",
       "raw_headword": "OVERTONE",
       "synonyms": [],
-      "definition": "A faint higher tone that has a frequency or pitch higher than the fundamental frequency (the natural frequency of the main body producing the sound). Overtones contribute greatly to the musical tone quality of a sound source."
+      "definition": "A faint higher tone that has a frequency or pitch higher than the fundamental frequency (the natural frequency of the main body producing the sound). Overtones contribute greatly to the musical tone quality of a sound source.\n\n$$\nf_n = n f_1 \\quad (\\text{strings / open pipes}), \\quad f_m = (2m - 1) f_1 \\quad (\\text{closed pipes})\n$$\n*Formula:* Any frequency higher than the fundamental frequency ($f_1$) of a sound or vibrating system. The $n$-th harmonic corresponds to the $(n-1)$-th overtone.",
+      "formula": "f_n = n f_1 \\quad (\\text{strings / open pipes}), \\quad f_m = (2m - 1) f_1 \\quad (\\text{closed pipes})",
+      "formula_description": "Any frequency higher than the fundamental frequency ($f_1$) of a sound or vibrating system. The $n$-th harmonic corresponds to the $(n-1)$-th overtone."
     },
     {
       "word": "overtype mode",
@@ -122518,7 +122604,9 @@
       "synonyms": [
         "oxidation state"
       ],
-      "definition": "A hypothetical charge that an atom would have if all bonds to atoms of different elements were 100% ionic, used to track electron transfer in oxidation-reduction (redox) reactions."
+      "definition": "A hypothetical charge that an atom would have if all bonds to atoms of different elements were 100% ionic, used to track electron transfer in oxidation-reduction (redox) reactions.\n\n$$\n\\sum_{\\text{atoms}} \\text{Oxidation Number} = \\text{Net Charge of Species}\n$$\n*Formula:* Bookkeeping formal charge assigned to an atom in a molecule assuming all bonds are 100% ionic. Pure elements equal 0; alkali metals are +1; fluorine is -1; oxygen is generally -2.",
+      "formula": "\\sum_{\\text{atoms}} \\text{Oxidation Number} = \\text{Net Charge of Species}",
+      "formula_description": "Bookkeeping formal charge assigned to an atom in a molecule assuming all bonds are 100% ionic. Pure elements equal 0; alkali metals are +1; fluorine is -1; oxygen is generally -2."
     },
     {
       "word": "oxidation of organic matter",
@@ -123844,7 +123932,9 @@
       "word": "parabola",
       "raw_headword": "PARABOLA",
       "synonyms": [],
-      "definition": "A symmetrical open plane curve formed by the intersection of a cone with a plane parallel to its side. It is defined formally as a set of all points in a plane that is equidistant from a fixed point, called the focus and a fixed line called the directrix . The focus may not be on the directrix. The line through the focus and perpendicular to the directrix is called the axis of symmetry or axis of the parabola. The line segment through the focus and perpendicular to the axis of symmetry, which is cut by the parabola, is called the focal chord and its length is called the focal width . The vertex is the point of intersection of the axis of symmetry and the parabola on the X-axis The graph of any quadratic equation is a parabola of the form: y = ax 2 + bx + c . Any line parallel to its axis of symmetry reflects through its focus and vice versa. Rotating a parabola about its axis produces a surface, called a paraboloid with the same reflection property and therefore, is an ideal shape for satellite dishes and reflectors in headlights. Parabolas occur naturally as the paths of projectiles such as a bullet or rocket. The shape is also seen in architectural designs such as bridges and arches. au xx + bu xy + cu xy + du x + eu y + fu = h , is the general form of a second order partial differential equation."
+      "definition": "A symmetrical open plane curve formed by the intersection of a cone with a plane parallel to its side. It is defined formally as a set of all points in a plane that is equidistant from a fixed point, called the focus and a fixed line called the directrix . The focus may not be on the directrix. The line through the focus and perpendicular to the directrix is called the axis of symmetry or axis of the parabola. The line segment through the focus and perpendicular to the axis of symmetry, which is cut by the parabola, is called the focal chord and its length is called the focal width . The vertex is the point of intersection of the axis of symmetry and the parabola on the X-axis The graph of any quadratic equation is a parabola of the form: y = ax 2 + bx + c . Any line parallel to its axis of symmetry reflects through its focus and vice versa. Rotating a parabola about its axis produces a surface, called a paraboloid with the same reflection property and therefore, is an ideal shape for satellite dishes and reflectors in headlights. Parabolas occur naturally as the paths of projectiles such as a bullet or rocket. The shape is also seen in architectural designs such as bridges and arches. au xx + bu xy + cu xy + du x + eu y + fu = h , is the general form of a second order partial differential equation.\n\n$$\ny = a x^2 + b x + c, \\quad (x - h)^2 = 4p(y - k), \\quad r = \\frac{2p}{1 - \\cos\\theta}, \\quad e = 1\n$$\n*Formula:* Conic section with eccentricity $e = 1$, defined as the locus of all points in a plane equidistant from a fixed focal point and a straight line directrix.",
+      "formula": "y = a x^2 + b x + c, \\quad (x - h)^2 = 4p(y - k), \\quad r = \\frac{2p}{1 - \\cos\\theta}, \\quad e = 1",
+      "formula_description": "Conic section with eccentricity $e = 1$, defined as the locus of all points in a plane equidistant from a fixed focal point and a straight line directrix."
     },
     {
       "word": "parabolic orbit",
@@ -124061,19 +124151,25 @@
       "word": "parallelogram law",
       "raw_headword": "PARALLELOGRAM LAW",
       "synonyms": [],
-      "definition": "1. In mathematics, the equation that relates norms in an inner product space, expressed as ∣∣ x + y ∣∣ 2 + ∣∣ x - y ∣∣ 2 = 2 ∣∣ x ∣∣ 2 + 2 ∣∣ y ∣∣ 2 , for all vectors x and y . 2. Also known as parallelogram rule , it permits vector addition of two vectors in two-dimensional space by constructing a parallelogram with the two adjacent sides representing the magnitudes and directions of the vectors and the resultant vector is the diagonal through the point of intersection of the vectors. This rule is applied in parallelogram of forces to determine the resultant force where two forces act on a particle at a point."
+      "definition": "1. In mathematics, the equation that relates norms in an inner product space, expressed as ∣∣ x + y ∣∣ 2 + ∣∣ x - y ∣∣ 2 = 2 ∣∣ x ∣∣ 2 + 2 ∣∣ y ∣∣ 2 , for all vectors x and y . 2. Also known as parallelogram rule , it permits vector addition of two vectors in two-dimensional space by constructing a parallelogram with the two adjacent sides representing the magnitudes and directions of the vectors and the resultant vector is the diagonal through the point of intersection of the vectors. This rule is applied in parallelogram of forces to determine the resultant force where two forces act on a particle at a point.\n\n$$\n\\|\\mathbf{u} + \\mathbf{v}\\|^2 + \\|\\mathbf{u} - \\mathbf{v}\\|^2 = 2\\|\\mathbf{u}\\|^2 + 2\\|\\mathbf{v}\\|^2\n$$\n*Formula:* Fundamental geometric theorem in inner product spaces: the sum of the squares of the lengths of all four sides of a parallelogram equals the sum of the squares of the lengths of its two diagonals.",
+      "formula": "\\|\\mathbf{u} + \\mathbf{v}\\|^2 + \\|\\mathbf{u} - \\mathbf{v}\\|^2 = 2\\|\\mathbf{u}\\|^2 + 2\\|\\mathbf{v}\\|^2",
+      "formula_description": "Fundamental geometric theorem in inner product spaces: the sum of the squares of the lengths of all four sides of a parallelogram equals the sum of the squares of the lengths of its two diagonals."
     },
     {
       "word": "parallelogram of forces",
       "raw_headword": "PARALLELOGRAM OF FORCES",
       "synonyms": [],
-      "definition": "A method for solving or visualising the results of applying several different forces to an object. In physics and applied mathematics, it is a method where two forces acting on a particle at a point can be represented both in magnitude and direction by the sides of a parallelogram taken from that point and are equivalent to a single force or resultant represented in magnitude and direction taken from that point as shown in the diagram below. Forces, being vectors are observed to obey the laws of vector addition. F1 F2 FR (Resutant Force) Parallelogram of forces θ F R ² = F1 + F2 - 2 F1 F2 Cos (180 - θ)"
+      "definition": "A method for solving or visualising the results of applying several different forces to an object. In physics and applied mathematics, it is a method where two forces acting on a particle at a point can be represented both in magnitude and direction by the sides of a parallelogram taken from that point and are equivalent to a single force or resultant represented in magnitude and direction taken from that point as shown in the diagram below. Forces, being vectors are observed to obey the laws of vector addition. F1 F2 FR (Resutant Force) Parallelogram of forces θ F R ² = F1 + F2 - 2 F1 F2 Cos (180 - θ)\n\n$$\n\\mathbf{F}_{\\text{net}} = \\mathbf{F}_1 + \\mathbf{F}_2, \\quad F_{\\text{net}} = \\sqrt{F_1^2 + F_2^2 + 2F_1 F_2 \\cos\\theta}\n$$\n*Formula:* Classical statics principle for combining two concurrent force vectors $\\mathbf{F}_1$ and $\\mathbf{F}_2$ acting on a single point into a single statically equivalent resultant force.",
+      "formula": "\\mathbf{F}_{\\text{net}} = \\mathbf{F}_1 + \\mathbf{F}_2, \\quad F_{\\text{net}} = \\sqrt{F_1^2 + F_2^2 + 2F_1 F_2 \\cos\\theta}",
+      "formula_description": "Classical statics principle for combining two concurrent force vectors $\\mathbf{F}_1$ and $\\mathbf{F}_2$ acting on a single point into a single statically equivalent resultant force."
     },
     {
       "word": "parallelogram of vectors",
       "raw_headword": "PARALLELOGRAM OF VECTORS",
       "synonyms": [],
-      "definition": "A method of determining the resultant of two vector quantities. The two quantities are represented by two adjacent sides of a parallelogram and the resultant is the diagonal through their point of intersection. The method can be used either with careful scale drawing or with trigonometry. The trigonometrical relations is expressed as F = F1 2 + F2 2 + 2 F1 F2 cos θ or F2 1 + F2 2 - 2 F1 F2 (180 - θ ), where θ is the angle between F1 and F2 . FROS Parallelogram of vectors F1 F2 F2 Q F R = F1 + F2 - 2 F1 F2 Cos (180 - θ)"
+      "definition": "A method of determining the resultant of two vector quantities. The two quantities are represented by two adjacent sides of a parallelogram and the resultant is the diagonal through their point of intersection. The method can be used either with careful scale drawing or with trigonometry. The trigonometrical relations is expressed as F = F1 2 + F2 2 + 2 F1 F2 cos θ or F2 1 + F2 2 - 2 F1 F2 (180 - θ ), where θ is the angle between F1 and F2 . FROS Parallelogram of vectors F1 F2 F2 Q F R = F1 + F2 - 2 F1 F2 Cos (180 - θ)\n\n$$\nR = \\sqrt{P^2 + Q^2 + 2PQ\\cos\\theta}, \\quad \\tan\\alpha = \\frac{Q\\sin\\theta}{P + Q\\cos\\theta}\n$$\n*Formula:* The geometric and analytical rule of vector addition: when two coplanar vectors $\\mathbf{P}$ and $\\mathbf{Q}$ act at an angle $\theta$, their resultant $\\mathbf{R}$ forms the diagonal of the completed parallelogram at angle $\\alpha$.",
+      "formula": "R = \\sqrt{P^2 + Q^2 + 2PQ\\cos\\theta}, \\quad \\tan\\alpha = \\frac{Q\\sin\\theta}{P + Q\\cos\\theta}",
+      "formula_description": "The geometric and analytical rule of vector addition: when two coplanar vectors $\\mathbf{P}$ and $\\mathbf{Q}$ act at an angle $\theta$, their resultant $\\mathbf{R}$ forms the diagonal of the completed parallelogram at angle $\\alpha$."
     },
     {
       "word": "parallelogram of velocities",
@@ -124721,7 +124817,9 @@
       "word": "partial pressure",
       "raw_headword": "PARTIAL PRESSURE",
       "synonyms": [],
-      "definition": "The pressure exerted by one gas in a mixture of gases or the pressure which the gas would have if it alone occupied the volume. It is a measure of the thermodynamic activity of the gas's molecules. Gases dissolve, diffuse and react according to their partial pressures and not necessarily to their concentrations in a gas mixture."
+      "definition": "The pressure exerted by one gas in a mixture of gases or the pressure which the gas would have if it alone occupied the volume. It is a measure of the thermodynamic activity of the gas's molecules. Gases dissolve, diffuse and react according to their partial pressures and not necessarily to their concentrations in a gas mixture.\n\n$$\nP_i = x_i P_{\\text{total}} = \\frac{n_i R T}{V}, \\quad P_{\\text{total}} = \\sum_{i=1}^k P_i \\quad (\\text{Dalton's Law})\n$$\n*Formula:* Dalton's law of partial pressures: the pressure exerted by gas component $i$ in an ideal gas mixture equals its mole fraction $x_i$ times total pressure $P_{\\text{total}}$.",
+      "formula": "P_i = x_i P_{\\text{total}} = \\frac{n_i R T}{V}, \\quad P_{\\text{total}} = \\sum_{i=1}^k P_i \\quad (\\text{Dalton's Law})",
+      "formula_description": "Dalton's law of partial pressures: the pressure exerted by gas component $i$ in an ideal gas mixture equals its mole fraction $x_i$ times total pressure $P_{\\text{total}}$."
     },
     {
       "word": "partial product",
@@ -124999,7 +125097,9 @@
       "word": "pascal",
       "raw_headword": "PASCAL",
       "synonyms": [],
-      "definition": "1. The SI unit of pressure or stress, equal to one newton per square metre. Its symbol is Pa. 2. A high-level programming language designed to support structured programming, used in teaching, applications and systems programming."
+      "definition": "1. The SI unit of pressure or stress, equal to one newton per square metre. Its symbol is Pa. 2. A high-level programming language designed to support structured programming, used in teaching, applications and systems programming.\n\n$$\n1\\;\\text{Pa} = 1\\;\\text{N/m}^2 = 1\\;\\text{kg}\\cdot\\text{m}^{-1}\\cdot\\text{s}^{-2} = 10^{-5}\\;\\text{bar} \\approx 9.8692 \\times 10^{-6}\\;\\text{atm}\n$$\n*Formula:* The SI derived unit of pressure, mechanical stress, Young's modulus, and tensile strength, defined as one newton of perpendicular force applied uniformly across an area of one square metre.",
+      "formula": "1\\;\\text{Pa} = 1\\;\\text{N/m}^2 = 1\\;\\text{kg}\\cdot\\text{m}^{-1}\\cdot\\text{s}^{-2} = 10^{-5}\\;\\text{bar} \\approx 9.8692 \\times 10^{-6}\\;\\text{atm}",
+      "formula_description": "The SI derived unit of pressure, mechanical stress, Young's modulus, and tensile strength, defined as one newton of perpendicular force applied uniformly across an area of one square metre."
     },
     {
       "word": "pascal's distribution",
@@ -125016,7 +125116,9 @@
       "synonyms": [
         "pascal's law"
       ],
-      "definition": "A law of physics stating that in a confined fluid, externally applied pressure is transmitted uniformly in all directions. In a static fluid, force is transmitted at the velocity of sound throughout Pascal's Triangle the fluid and acts at right angles to any surface in or bounding the fluid. The practical applications of the law are the hydraulic jack, balloon and pneumatic tyre."
+      "definition": "A law of physics stating that in a confined fluid, externally applied pressure is transmitted uniformly in all directions. In a static fluid, force is transmitted at the velocity of sound throughout Pascal's Triangle the fluid and acts at right angles to any surface in or bounding the fluid. The practical applications of the law are the hydraulic jack, balloon and pneumatic tyre.\n\n$$\n\\Delta P = \\rho g \\Delta h, \\quad \\frac{F_1}{A_1} = \\frac{F_2}{A_2} \\implies F_2 = F_1 \\left(\\frac{A_2}{A_1}\\right)\n$$\n*Formula:* Pascal's law of fluid statics: an external pressure change applied to an enclosed, incompressible static fluid is transmitted undiminished throughout the fluid and to container walls, establishing hydraulic multiplication.",
+      "formula": "\\Delta P = \\rho g \\Delta h, \\quad \\frac{F_1}{A_1} = \\frac{F_2}{A_2} \\implies F_2 = F_1 \\left(\\frac{A_2}{A_1}\\right)",
+      "formula_description": "Pascal's law of fluid statics: an external pressure change applied to an enclosed, incompressible static fluid is transmitted undiminished throughout the fluid and to container walls, establishing hydraulic multiplication."
     },
     {
       "word": "pascal's triangle",
@@ -125385,7 +125487,9 @@
       "word": "pauli exclusion principle",
       "raw_headword": "PAULI EXCLUSION PRINCIPLE",
       "synonyms": [],
-      "definition": "A law of quantum physics formulated by the Austrian physicist, Wolfgang Pauli in 1925. It states that no two electrons can have the same four quantum numbers in an atom or no two electrons can simultaneously occupy the same quantum or energy state at the same time."
+      "definition": "A law of quantum physics formulated by the Austrian physicist, Wolfgang Pauli in 1925. It states that no two electrons can have the same four quantum numbers in an atom or no two electrons can simultaneously occupy the same quantum or energy state at the same time.\n\n$$\n\\Psi(\\mathbf{r}_1, s_1; \\mathbf{r}_2, s_2) = -\\Psi(\\mathbf{r}_2, s_2; \\mathbf{r}_1, s_1), \\quad \\{a_i, a_j^\\dagger\\} = \\delta_{ij}\n$$\n*Formula:* Fundamental quantum mechanical principle establishing that two identical half-integer spin fermions (e.g. electrons) cannot occupy the same quantum state simultaneously, mandating antisymmetric wavefunctions.",
+      "formula": "\\Psi(\\mathbf{r}_1, s_1; \\mathbf{r}_2, s_2) = -\\Psi(\\mathbf{r}_2, s_2; \\mathbf{r}_1, s_1), \\quad \\{a_i, a_j^\\dagger\\} = \\delta_{ij}",
+      "formula_description": "Fundamental quantum mechanical principle establishing that two identical half-integer spin fermions (e.g. electrons) cannot occupy the same quantum state simultaneously, mandating antisymmetric wavefunctions."
     },
     {
       "word": "pauli, wolfgang ernst",
@@ -125843,7 +125947,9 @@
       "word": "peltier effect",
       "raw_headword": "PELTIER EFFECT",
       "synonyms": [],
-      "definition": "A rise or drop in temperature produced when electric current flows through the junction of two dissimilar metals such as copper and bismuth. The rise or drop in temperature depends upon the direction of the current. For example, when a battery is connected by two pieces of copper wire to a length of bismuth wire, a temperature rise occurs at the junction where the current passes from copper to bismuth and a temperature drop occurs at the junction, where the current flows from bismuth to copper. It was discovered in 1834 by Jean Peltier (1785-1845), French physicist. The heat produced at the junction is proportional to the magnitude of the current, showing that an electromotive force known as Peltier's emf is present at the junction."
+      "definition": "A rise or drop in temperature produced when electric current flows through the junction of two dissimilar metals such as copper and bismuth. The rise or drop in temperature depends upon the direction of the current. For example, when a battery is connected by two pieces of copper wire to a length of bismuth wire, a temperature rise occurs at the junction where the current passes from copper to bismuth and a temperature drop occurs at the junction, where the current flows from bismuth to copper. It was discovered in 1834 by Jean Peltier (1785-1845), French physicist. The heat produced at the junction is proportional to the magnitude of the current, showing that an electromotive force known as Peltier's emf is present at the junction.\n\n$$\n\\dot{Q} = \\Pi_{AB} I = (\\Pi_A - \\Pi_B) I, \\quad \\Pi_{AB} = S_{AB} \\cdot T \\quad (\\text{Kelvin relation})\n$$\n*Formula:* Thermoelectric effect wherein electric current $I$ passing across the junction of two distinct conductors generates or absorbs heat flux $\\dot{Q}$, proportional to relative Peltier coefficient $\\Pi_{AB}$ and absolute temperature $T$.",
+      "formula": "\\dot{Q} = \\Pi_{AB} I = (\\Pi_A - \\Pi_B) I, \\quad \\Pi_{AB} = S_{AB} \\cdot T \\quad (\\text{Kelvin relation})",
+      "formula_description": "Thermoelectric effect wherein electric current $I$ passing across the junction of two distinct conductors generates or absorbs heat flux $\\dot{Q}$, proportional to relative Peltier coefficient $\\Pi_{AB}$ and absolute temperature $T$."
     },
     {
       "word": "pelvic fins",
@@ -125917,7 +126023,9 @@
       "word": "pendulum",
       "raw_headword": "PENDULUM",
       "synonyms": [],
-      "definition": "A weight hung from a pivot so that it can swing freely back and forth subject to a restoring force due to gravity that accelerates it back toward the equilibrium position. It has a weight, called a bob, swinging at the end of a rod or chord. One complete cycle of swing is called a period, which depends on the length of the pendulum. Pendulum was discovered by Galileo Galilei and was used for timekeeping and has found applications in pendulum clocks, accelerometers and seismometers."
+      "definition": "A weight hung from a pivot so that it can swing freely back and forth subject to a restoring force due to gravity that accelerates it back toward the equilibrium position. It has a weight, called a bob, swinging at the end of a rod or chord. One complete cycle of swing is called a period, which depends on the length of the pendulum. Pendulum was discovered by Galileo Galilei and was used for timekeeping and has found applications in pendulum clocks, accelerometers and seismometers.\n\n$$\nT = 2\\pi \\sqrt{\\frac{L}{g}} \\left(1 + \\frac{1}{4}\\sin^2\\frac{\\theta_0}{2} + \\dots\\right) \\approx 2\\pi \\sqrt{\\frac{L}{g}} \\quad (\\theta_0 \\ll 1\\text{ rad})\n$$\n*Formula:* Period of oscillation $T$ for a simple gravitational pendulum of length $L$ in acceleration field $g$, under the small-angle simple harmonic motion approximation.",
+      "formula": "T = 2\\pi \\sqrt{\\frac{L}{g}} \\left(1 + \\frac{1}{4}\\sin^2\\frac{\\theta_0}{2} + \\dots\\right) \\approx 2\\pi \\sqrt{\\frac{L}{g}} \\quad (\\theta_0 \\ll 1\\text{ rad})",
+      "formula_description": "Period of oscillation $T$ for a simple gravitational pendulum of length $L$ in acceleration field $g$, under the small-angle simple harmonic motion approximation."
     },
     {
       "word": "peneplain",
@@ -127213,7 +127321,9 @@
       "synonyms": [
         "ordered arrangement"
       ],
-      "definition": "A specified arrangement of a group of n objects or the arrangement of n distinct objects taken r of them at a time in all possible orders. It is given by n P r = n ! ( n - r )! , where '!' stands for factorial. For example, 6 P2 = 6! (6 - 2)! = 6 x 5 x 4! 4! = 30."
+      "definition": "A specified arrangement of a group of n objects or the arrangement of n distinct objects taken r of them at a time in all possible orders. It is given by n P r = n ! ( n - r )! , where '!' stands for factorial. For example, 6 P2 = 6! (6 - 2)! = 6 x 5 x 4! 4! = 30.\n\n$$\n^n P_r = P(n, r) = \\frac{n!}{(n - r)!}, \\quad P_{\\text{repeated}} = \\frac{n!}{n_1! \\, n_2! \\dots n_k!}\n$$\n*Formula:* The total number of ordered arrangements of $r$ elements selected from $n$ distinct elements without replacement, where selection sequence and ordering are significant.",
+      "formula": "^n P_r = P(n, r) = \\frac{n!}{(n - r)!}, \\quad P_{\\text{repeated}} = \\frac{n!}{n_1! \\, n_2! \\dots n_k!}",
+      "formula_description": "The total number of ordered arrangements of $r$ elements selected from $n$ distinct elements without replacement, where selection sequence and ordering are significant."
     },
     {
       "word": "permutation group",
@@ -127684,7 +127794,9 @@
       "synonyms": [
         "power of hydrogen"
       ],
-      "definition": "The biological process by which green plants, algae, and cyanobacteria convert light energy into chemical energy, synthesizing glucose and oxygen from carbon dioxide and water: 6CO2 + 6H2O + light -> C6H12O6 + 6O2."
+      "definition": "A logarithmic measure of the acidity or basicity of an aqueous solution, defined as the negative common logarithm of the hydrogen ion (or hydronium ion) concentration [H+]. Solutions with pH less than 7 are acidic, pH equal to 7 are neutral, and pH greater than 7 are basic (alkaline).\n\n$$\n\\text{pH} = -\\log_{10}[\\text{H}^+] = -\\log_{10}[\\text{H}_3\\text{O}^+], \\quad \\text{pH} + \\text{pOH} = 14.00 \\quad (\\text{at } 25^\\circ\\text{C})\n$$\n*Formula:* The logarithmic scale introduced by Sørensen measuring aqueous acidity or alkalinity, defined as the negative base-10 logarithm of hydrogen/hydronium ion activity in moles per litre.",
+      "formula": "\\text{pH} = -\\log_{10}[\\text{H}^+] = -\\log_{10}[\\text{H}_3\\text{O}^+], \\quad \\text{pH} + \\text{pOH} = 14.00 \\quad (\\text{at } 25^\\circ\\text{C})",
+      "formula_description": "The logarithmic scale introduced by Sørensen measuring aqueous acidity or alkalinity, defined as the negative base-10 logarithm of hydrogen/hydronium ion activity in moles per litre."
     },
     {
       "word": "ph glass electrode",
@@ -127932,7 +128044,9 @@
       "word": "phase rule",
       "raw_headword": "PHASE RULE",
       "synonyms": [],
-      "definition": "The number of degrees of freedom, F , (the number of intensive properties such as temperature or pressure which are independent of other intensive variables) of a heterogeneous system is related to the number of components ( C ) such as one-component system like pure chemical or a two component system such as mixtures of water and ethanol and phase ( P ) such as solids, liquids and gases, present at equilibrium. The equation is given by P + F = C + 2."
+      "definition": "The number of degrees of freedom, F , (the number of intensive properties such as temperature or pressure which are independent of other intensive variables) of a heterogeneous system is related to the number of components ( C ) such as one-component system like pure chemical or a two component system such as mixtures of water and ethanol and phase ( P ) such as solids, liquids and gases, present at equilibrium. The equation is given by P + F = C + 2.\n\n$$\nF = C - P + 2\n$$\n*Formula:* Gibbs' phase rule relating degrees of freedom $F$ (independent intensive state variables) to the number of non-reacting chemical components $C$ and coexisting phases $P$ in thermodynamic equilibrium.",
+      "formula": "F = C - P + 2",
+      "formula_description": "Gibbs' phase rule relating degrees of freedom $F$ (independent intensive state variables) to the number of non-reacting chemical components $C$ and coexisting phases $P$ in thermodynamic equilibrium."
     },
     {
       "word": "phase separation",
@@ -128947,7 +129061,9 @@
         "photoconductive effect",
         "photovoltaic effect"
       ],
-      "definition": "The emission of electrons from the surface of a metal, when it is incident by photons of appropriate frequency called threshold frequency ( f o ). Electrons can only be removed from the metal surface if the frequency of the incident photon or radiation is equal or greater than the threshold frequency ( f o ). There would be no emission of electrons if the frequency of the incident photon or radiation is less than the threshold frequency ( f o ). The effect was discovered by H. R. Hertz in 1887."
+      "definition": "The emission of electrons from the surface of a metal, when it is incident by photons of appropriate frequency called threshold frequency ( f o ). Electrons can only be removed from the metal surface if the frequency of the incident photon or radiation is equal or greater than the threshold frequency ( f o ). There would be no emission of electrons if the frequency of the incident photon or radiation is less than the threshold frequency ( f o ). The effect was discovered by H. R. Hertz in 1887.\n\n$$\nK_{\\max} = h\\nu - \\Phi = h(\\nu - \\nu_0) = e V_0\n$$\n*Formula:* Einstein's photoelectric equation: the maximum kinetic energy $K_{\\max}$ of emitted photoelectrons equals incident photon energy $h\\nu$ minus the metal's work function $\\Phi = h\\nu_0$, where $V_0$ is stopping voltage and $e$ is electron charge.",
+      "formula": "K_{\\max} = h\\nu - \\Phi = h(\\nu - \\nu_0) = e V_0",
+      "formula_description": "Einstein's photoelectric equation: the maximum kinetic energy $K_{\\max}$ of emitted photoelectrons equals incident photon energy $h\\nu$ minus the metal's work function $\\Phi = h\\nu_0$, where $V_0$ is stopping voltage and $e$ is electron charge."
     },
     {
       "word": "photoelectric peak",
@@ -129189,7 +129305,9 @@
       "word": "photon",
       "raw_headword": "PHOTON",
       "synonyms": [],
-      "definition": "An elementary particle or quantum of electromagnetic radiation which demonstrates both particle and wave properties. It has neither rest mass nor electric charge but possesses energy, which is the product of Planck's constant and the frequency of the electromagnetic field and momentum and angular momentum corresponding to a spin of unity. The effects of this force are easily observable at both the macroscopic and microscopic level, because the photon has no rest mass. Photons also exhibit wave-particle dualism. The interaction of radiation with matter involves the absorption, scattering and emission of photons."
+      "definition": "An elementary particle or quantum of electromagnetic radiation which demonstrates both particle and wave properties. It has neither rest mass nor electric charge but possesses energy, which is the product of Planck's constant and the frequency of the electromagnetic field and momentum and angular momentum corresponding to a spin of unity. The effects of this force are easily observable at both the macroscopic and microscopic level, because the photon has no rest mass. Photons also exhibit wave-particle dualism. The interaction of radiation with matter involves the absorption, scattering and emission of photons.\n\n$$\nE = h\\nu = \\hbar\\omega = \\frac{hc}{\\lambda}, \\quad p = \\frac{h}{\\lambda} = \\frac{E}{c}, \\quad m_0 = 0\n$$\n*Formula:* The discrete quantum of electromagnetic radiation, carrying energy $E$ and momentum $p$ inversely proportional to wavelength $\\lambda$, with zero rest mass and speed $c$ in vacuum.",
+      "formula": "E = h\\nu = \\hbar\\omega = \\frac{hc}{\\lambda}, \\quad p = \\frac{h}{\\lambda} = \\frac{E}{c}, \\quad m_0 = 0",
+      "formula_description": "The discrete quantum of electromagnetic radiation, carrying energy $E$ and momentum $p$ inversely proportional to wavelength $\\lambda$, with zero rest mass and speed $c$ in vacuum."
     },
     {
       "word": "photon counting",
@@ -130113,7 +130231,9 @@
       "word": "piezoelectric effect",
       "raw_headword": "PIEZOELECTRIC EFFECT",
       "synonyms": [],
-      "definition": "The production of potential difference across the opposite faces of certain non-conducting crystals, called piezoelectric crystals by applying a mechanical stress between these faces. Pressure polarises some crystals, such as quartz, by slightly separating the centres of positive and negative charge, which is detected as voltage. Using this effect, a high-frequency alternating electric current can be converted to an ultrasonic wave of the same frequency, while a mechanical vibration, such as sound, can be converted into a corresponding electrical signal. Piezoelectricity is utilised in microphones, phonograph pickups and telephone communications systems."
+      "definition": "The production of potential difference across the opposite faces of certain non-conducting crystals, called piezoelectric crystals by applying a mechanical stress between these faces. Pressure polarises some crystals, such as quartz, by slightly separating the centres of positive and negative charge, which is detected as voltage. Using this effect, a high-frequency alternating electric current can be converted to an ultrasonic wave of the same frequency, while a mechanical vibration, such as sound, can be converted into a corresponding electrical signal. Piezoelectricity is utilised in microphones, phonograph pickups and telephone communications systems.\n\n$$\nP_i = d_{ijk} \\sigma_{jk} \\quad (\\text{Direct Effect}), \\quad \\varepsilon_{jk} = d_{ijk} E_i \\quad (\\text{Converse Effect})\n$$\n*Formula:* Linear electromechanical interaction in non-centrosymmetric crystals (such as quartz or PZT) where mechanical stress $\\sigma$ generates dielectric polarization $P$ and applied electric field $E$ produces mechanical strain $\\varepsilon$.",
+      "formula": "P_i = d_{ijk} \\sigma_{jk} \\quad (\\text{Direct Effect}), \\quad \\varepsilon_{jk} = d_{ijk} E_i \\quad (\\text{Converse Effect})",
+      "formula_description": "Linear electromechanical interaction in non-centrosymmetric crystals (such as quartz or PZT) where mechanical stress $\\sigma$ generates dielectric polarization $P$ and applied electric field $E$ produces mechanical strain $\\varepsilon$."
     },
     {
       "word": "piezoelectric polymer",
@@ -130862,25 +130982,33 @@
       "word": "planck constant",
       "raw_headword": "PLANCK CONSTANT",
       "synonyms": [],
-      "definition": "The fundamental constant, which is equal to the ratio of the energy of a photon and the frequency of its associated electromagnetic wave having a value 6.626 0755(40) × 10 -34 Js. It is named after Max Planck (1858-1947), German physicist. In quantum-mechanical calculation, rationalised Planck constant or Dirac constant h = h /2 π = 1.054 589 x 10 -34 Js is frequently used."
+      "definition": "The fundamental constant, which is equal to the ratio of the energy of a photon and the frequency of its associated electromagnetic wave having a value 6.626 0755(40) × 10 -34 Js. It is named after Max Planck (1858-1947), German physicist. In quantum-mechanical calculation, rationalised Planck constant or Dirac constant h = h /2 π = 1.054 589 x 10 -34 Js is frequently used.\n\n$$\nh = 6.62607015 \\times 10^{-34}\\;\\text{J}\\cdot\\text{s} = 4.135667696 \\times 10^{-15}\\;\\text{eV}\\cdot\\text{s}, \\quad \\hbar = \\frac{h}{2\\pi} = 1.054571817 \\times 10^{-34}\\;\\text{J}\\cdot\\text{s}\n$$\n*Formula:* The fundamental physical quantum constant relating photon energy to electromagnetic frequency ($E = h\\nu = \\hbar\\omega$). Serves as the universal quantum of action defining microscopic physics.",
+      "formula": "h = 6.62607015 \\times 10^{-34}\\;\\text{J}\\cdot\\text{s} = 4.135667696 \\times 10^{-15}\\;\\text{eV}\\cdot\\text{s}, \\quad \\hbar = \\frac{h}{2\\pi} = 1.054571817 \\times 10^{-34}\\;\\text{J}\\cdot\\text{s}",
+      "formula_description": "The fundamental physical quantum constant relating photon energy to electromagnetic frequency ($E = h\\nu = \\hbar\\omega$). Serves as the universal quantum of action defining microscopic physics."
     },
     {
       "word": "planck length",
       "raw_headword": "PLANCK LENGTH",
       "synonyms": [],
-      "definition": "The length scale at which a classical description of gravity ceases to be valid and quantum mechanics must be taken into account. It is given by, √( G ħ /2 π c 3 ), where G is the gravitational constant, ħ is the rationalised Planck constant and C is the speed of light. The value is equal to 1.6162 × 10 -35 m (twenty orders of magnitude smaller than the size of a proton, 10 -15 m)."
+      "definition": "The length scale at which a classical description of gravity ceases to be valid and quantum mechanics must be taken into account. It is given by, √( G ħ /2 π c 3 ), where G is the gravitational constant, ħ is the rationalised Planck constant and C is the speed of light. The value is equal to 1.6162 × 10 -35 m (twenty orders of magnitude smaller than the size of a proton, 10 -15 m).\n\n$$\n\\ell_P = \\sqrt{\\frac{\\hbar G}{c^3}} \\approx 1.616255(18) \\times 10^{-35}\\;\\text{m}\n$$\n*Formula:* The fundamental base unit of length in natural Planck units, defining the quantum scale beneath which classical spacetime geometry breaks down under quantum gravity.",
+      "formula": "\\ell_P = \\sqrt{\\frac{\\hbar G}{c^3}} \\approx 1.616255(18) \\times 10^{-35}\\;\\text{m}",
+      "formula_description": "The fundamental base unit of length in natural Planck units, defining the quantum scale beneath which classical spacetime geometry breaks down under quantum gravity."
     },
     {
       "word": "planck mass",
       "raw_headword": "PLANCK MASS",
       "synonyms": [],
-      "definition": "The mass, √(ħ c /2 π G ), of a particle whose Compton wavelength is equal to the Planck length, where ħ is the rationalised Planck constant, c is the speed of light and G is the gravitational constant. Planck mass is equal to 21.764 micrograms or 1.2209 × 10 19 GeV/ c."
+      "definition": "The mass, √(ħ c /2 π G ), of a particle whose Compton wavelength is equal to the Planck length, where ħ is the rationalised Planck constant, c is the speed of light and G is the gravitational constant. Planck mass is equal to 21.764 micrograms or 1.2209 × 10 19 GeV/ c.\n\n$$\nm_P = \\sqrt{\\frac{\\hbar c}{G}} \\approx 2.176434(24) \\times 10^{-8}\\;\\text{kg} \\approx 1.2209 \\times 10^{19}\\;\\text{GeV}/c^2\n$$\n*Formula:* The natural unit of mass in Planck units, representing the mass at which an elementary particle's Compton wavelength equals its Schwarzschild radius.",
+      "formula": "m_P = \\sqrt{\\frac{\\hbar c}{G}} \\approx 2.176434(24) \\times 10^{-8}\\;\\text{kg} \\approx 1.2209 \\times 10^{19}\\;\\text{GeV}/c^2",
+      "formula_description": "The natural unit of mass in Planck units, representing the mass at which an elementary particle's Compton wavelength equals its Schwarzschild radius."
     },
     {
       "word": "planck time",
       "raw_headword": "PLANCK TIME",
       "synonyms": [],
-      "definition": "The time taken for light to travel in a vacuum, a distance equal to the Planck length. It is given by t p = (Għ/c 5 ), where G is the gravitational constant and ħ is the rationalised Planck constant. The value of the Planck time is of order 10 -43 s. In the big-bang cosmology, up until a time tp after the initial instant, it is necessary to use a quantum theory of gravity to describe the evolution of the universe. The unit is named after Max Planck, who was the first to propose it."
+      "definition": "The time taken for light to travel in a vacuum, a distance equal to the Planck length. It is given by t p = (Għ/c 5 ), where G is the gravitational constant and ħ is the rationalised Planck constant. The value of the Planck time is of order 10 -43 s. In the big-bang cosmology, up until a time tp after the initial instant, it is necessary to use a quantum theory of gravity to describe the evolution of the universe. The unit is named after Max Planck, who was the first to propose it.\n\n$$\nt_P = \\sqrt{\\frac{\\hbar G}{c^5}} = \\frac{\\ell_P}{c} \\approx 5.391247(60) \\times 10^{-44}\\;\\text{s}\n$$\n*Formula:* The time required for light in vacuum to travel one Planck length; the shortest theoretically meaningful physical interval of time in quantum cosmology.",
+      "formula": "t_P = \\sqrt{\\frac{\\hbar G}{c^5}} = \\frac{\\ell_P}{c} \\approx 5.391247(60) \\times 10^{-44}\\;\\text{s}",
+      "formula_description": "The time required for light in vacuum to travel one Planck length; the shortest theoretically meaningful physical interval of time in quantum cosmology."
     },
     {
       "word": "planck units",
@@ -130892,7 +131020,9 @@
       "word": "planck's radiation law",
       "raw_headword": "PLANCK'S RADIATION LAW",
       "synonyms": [],
-      "definition": "A law stated by Max Planck (1889 - 1928) which gives the spectral energy distribution of the heat radiation P emitted from a so-called blackbody at any temperature. The law laid the foundation for the advent of the quantum theory because it was the first physical law to postulate that electromagnetic energy exists in discrete bundles or quanta."
+      "definition": "A law stated by Max Planck (1889 - 1928) which gives the spectral energy distribution of the heat radiation P emitted from a so-called blackbody at any temperature. The law laid the foundation for the advent of the quantum theory because it was the first physical law to postulate that electromagnetic energy exists in discrete bundles or quanta.\n\n$$\nB_\\lambda(\\lambda, T) = \\frac{2hc^2}{\\lambda^5} \\frac{1}{e^{\\frac{hc}{\\lambda k_B T}} - 1}, \\quad B_\\nu(\\nu, T) = \\frac{2h\\nu^3}{c^2} \\frac{1}{e^{\\frac{h\\nu}{k_B T}} - 1}\n$$\n*Formula:* Planck's spectral distribution describing the energy density and spectral radiance of black-body thermal radiation at temperature $T$, resolving the ultraviolet catastrophe of classical Rayleigh–Jeans physics.",
+      "formula": "B_\\lambda(\\lambda, T) = \\frac{2hc^2}{\\lambda^5} \\frac{1}{e^{\\frac{hc}{\\lambda k_B T}} - 1}, \\quad B_\\nu(\\nu, T) = \\frac{2h\\nu^3}{c^2} \\frac{1}{e^{\\frac{h\\nu}{k_B T}} - 1}",
+      "formula_description": "Planck's spectral distribution describing the energy density and spectral radiance of black-body thermal radiation at temperature $T$, resolving the ultraviolet catastrophe of classical Rayleigh–Jeans physics."
     },
     {
       "word": "planck, max karl ernst ludwig",
@@ -132256,7 +132386,9 @@
         "hagen-poiseuille law",
         "poiseuille law"
       ],
-      "definition": "An equation relating the volume flow of an incompressible fluid through a circular tube, V , to the pressure difference p, between the ends of the tube, The volume flowing per second, dv dt , is given by: dv dt = π pr 2 8 l η , where r is the radius and l is the length of the tube and η is the viscosity of the fluid."
+      "definition": "An equation relating the volume flow of an incompressible fluid through a circular tube, V , to the pressure difference p, between the ends of the tube, The volume flowing per second, dv dt , is given by: dv dt = π pr 2 8 l η , where r is the radius and l is the length of the tube and η is the viscosity of the fluid.\n\n$$\nQ = \\frac{dV}{dt} = \\frac{\\pi r^4 \\Delta P}{8 \\mu L}, \\quad R_{\\text{flow}} = \\frac{8 \\mu L}{\\pi r^4}\n$$\n*Formula:* The Hagen–Poiseuille law for laminar, incompressible, viscous fluid flow rate $Q$ through a cylindrical pipe of radius $r$ and length $L$ driven by pressure gradient $\\Delta P$ with dynamic viscosity $\\mu$.",
+      "formula": "Q = \\frac{dV}{dt} = \\frac{\\pi r^4 \\Delta P}{8 \\mu L}, \\quad R_{\\text{flow}} = \\frac{8 \\mu L}{\\pi r^4}",
+      "formula_description": "The Hagen–Poiseuille law for laminar, incompressible, viscous fluid flow rate $Q$ through a cylindrical pipe of radius $r$ and length $L$ driven by pressure gradient $\\Delta P$ with dynamic viscosity $\\mu$."
     },
     {
       "word": "poison",
@@ -132276,7 +132408,9 @@
       "word": "poisson distribution",
       "raw_headword": "POISSON DISTRIBUTION",
       "synonyms": [],
-      "definition": "A discrete probability distribution that expresses the number of events that occur randomly in a given time at an average rate and independently of the time since the last event, written as Po ( l ). The distribution was first introduced by Siméon-Denis Poisson (1781-1840), a French physicist and mathematician."
+      "definition": "A discrete probability distribution that expresses the number of events that occur randomly in a given time at an average rate and independently of the time since the last event, written as Po ( l ). The distribution was first introduced by Siméon-Denis Poisson (1781-1840), a French physicist and mathematician.\n\n$$\nP(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}, \\quad \\mathbb{E}[X] = \\lambda, \\quad \\mathrm{Var}(X) = \\lambda\n$$\n*Formula:* Discrete probability distribution expressing the likelihood of $k$ independent events occurring in a fixed interval given a known average occurrence rate $\\lambda$.",
+      "formula": "P(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}, \\quad \\mathbb{E}[X] = \\lambda, \\quad \\mathrm{Var}(X) = \\lambda",
+      "formula_description": "Discrete probability distribution expressing the likelihood of $k$ independent events occurring in a fixed interval given a known average occurrence rate $\\lambda$."
     },
     {
       "word": "poisson equation",
@@ -132284,7 +132418,9 @@
       "synonyms": [
         "poisson's differential equation"
       ],
-      "definition": "A generalisation of the Laplace equation in which there is a function f ( x , y , z) on the right hand side of the equation. This implies that the Poisson equation is of the form ∇ 2 ∅ = ( x , y , z ) where ∇ 2 is the three-dimensional Laplacian."
+      "definition": "A generalisation of the Laplace equation in which there is a function f ( x , y , z) on the right hand side of the equation. This implies that the Poisson equation is of the form ∇ 2 ∅ = ( x , y , z ) where ∇ 2 is the three-dimensional Laplacian.\n\n$$\n\\nabla^2 \\varphi = f, \\quad \\nabla^2 V = -\\frac{\\rho}{\\varepsilon_0} \\quad (\\text{Electrostatics}), \\quad \\nabla^2 \\Phi = 4\\pi G \\rho \\quad (\\text{Gravitation})\n$$\n*Formula:* Fundamental second-order elliptic partial differential equation relating the Laplacian of an electrostatic potential $V$ (or gravitational potential $\\Phi$) to the source charge or mass density $\\rho$.",
+      "formula": "\\nabla^2 \\varphi = f, \\quad \\nabla^2 V = -\\frac{\\rho}{\\varepsilon_0} \\quad (\\text{Electrostatics}), \\quad \\nabla^2 \\Phi = 4\\pi G \\rho \\quad (\\text{Gravitation})",
+      "formula_description": "Fundamental second-order elliptic partial differential equation relating the Laplacian of an electrostatic potential $V$ (or gravitational potential $\\Phi$) to the source charge or mass density $\\rho$."
     },
     {
       "word": "poisson's integral",
@@ -132296,7 +132432,9 @@
       "word": "poisson's ratio",
       "raw_headword": "POISSON'S RATIO",
       "synonyms": [],
-      "definition": "The ratio of a lateral strain to the longitudinal strain when a rod is stretched by forces which are applied at its ends and which are parallel to the rod's axis."
+      "definition": "The ratio of a lateral strain to the longitudinal strain when a rod is stretched by forces which are applied at its ends and which are parallel to the rod's axis.\n\n$$\n\\nu = -\\frac{\\varepsilon_{\\text{transverse}}}{\\varepsilon_{\\text{axial}}} = -\\frac{\\Delta d / d_0}{\\Delta L / L_0}\n$$\n*Formula:* The negative ratio of transverse (lateral) strain to axial (longitudinal) strain when a material undergoes tensile or compressive stress, typically ranging between $0.25$ and $0.35$ for elastic metals.",
+      "formula": "\\nu = -\\frac{\\varepsilon_{\\text{transverse}}}{\\varepsilon_{\\text{axial}}} = -\\frac{\\Delta d / d_0}{\\Delta L / L_0}",
+      "formula_description": "The negative ratio of transverse (lateral) strain to axial (longitudinal) strain when a material undergoes tensile or compressive stress, typically ranging between $0.25$ and $0.35$ for elastic metals."
     },
     {
       "word": "poisson's spot",
@@ -134443,7 +134581,9 @@
       "word": "potential difference",
       "raw_headword": "POTENTIAL DIFFERENCE",
       "synonyms": [],
-      "definition": "1. Electrical potential difference with the Symbol V, is a measure of the work done by a unit of charged particle as it flows between two points in a static electric field. Its unit is the volt (joule per coulomb). 2. Gravitational potential difference between two points on Earth is related to the energy needed to move a unit mass from one point to the other against the Earth's gravitational field. Its unit is joules per kilogram."
+      "definition": "1. Electrical potential difference with the Symbol V, is a measure of the work done by a unit of charged particle as it flows between two points in a static electric field. Its unit is the volt (joule per coulomb). 2. Gravitational potential difference between two points on Earth is related to the energy needed to move a unit mass from one point to the other against the Earth's gravitational field. Its unit is joules per kilogram.\n\n$$\nV = V_B - V_A = -\\int_A^B \\mathbf{E} \\cdot d\\mathbf{r} = \\frac{W}{q} = I R\n$$\n*Formula:* The work done $W$ per unit electric charge $q$ in moving between two points in an electric field, measured in volts ($1\\;\\text{V} = 1\\;\\text{J/C}$).",
+      "formula": "V = V_B - V_A = -\\int_A^B \\mathbf{E} \\cdot d\\mathbf{r} = \\frac{W}{q} = I R",
+      "formula_description": "The work done $W$ per unit electric charge $q$ in moving between two points in an electric field, measured in volts ($1\\;\\text{V} = 1\\;\\text{J/C}$)."
     },
     {
       "word": "potential divider",
@@ -134463,7 +134603,9 @@
       "word": "potential energy",
       "raw_headword": "POTENTIAL ENERGY",
       "synonyms": [],
-      "definition": "The energy of an object resulting from its position such as in electric, gravitational or magnetic field or because of its configuration rather than motion relative to other objects that it interacts with. For example, a raised weight, coiled spring or charged battery has potential energy. Water dropping down a waterfall, a mass held above the ground and a compressed spring all have potential energies equal to the work done against the force of gravity which changes to kinetic energy when they fall back to the ground or in the case of the spring, when the tension is released. Potential Energy, PE is expressed as: mgh , where m is mass, g is acceleration due to gravity and h is height. This term was coined by the 19th century Scottish engineer and physicist William Rankine. Some types of potential energy are gravitational potential energy, chemical potential energy, and electrical potential energy. Gravitational potential energy ( GPE ) is the energy an object has due to its position in a gravitational field relative to some reference point. It is the energy stored in an object as the result of its vertical position or height. The energy is stored as the result of the gravitational attraction of the Earth for the object. Its unit is joule and the symbol is J. GPE is related to height and the higher up an object is placed, the more GPE it has. Its equation is EP = mgh, where EP is the potential energy (measured in joules, J), m is mass of the object (measured in kg), g is gravitational acceleration (9, 8m·s^-2 ), and h is the perpendicular height from the reference point (measured in metres, m). Chemical potential energy is the energy stored in the bonds of atoms and molecules of a substance and released during a chemical reaction. For example, the chemical potential energy stored in coal is released as heat when it is burnt. Electrical potential energy also known as electrostatic potential energy is the energy that charged particles such as electrons and protons have because of their own electric charge and their relative position to other charged particles. For example, when a circuit is connected to a power source it must store electric potential energy and supply it to heaters, lights, motors, etc."
+      "definition": "The energy of an object resulting from its position such as in electric, gravitational or magnetic field or because of its configuration rather than motion relative to other objects that it interacts with. For example, a raised weight, coiled spring or charged battery has potential energy. Water dropping down a waterfall, a mass held above the ground and a compressed spring all have potential energies equal to the work done against the force of gravity which changes to kinetic energy when they fall back to the ground or in the case of the spring, when the tension is released. Potential Energy, PE is expressed as: mgh , where m is mass, g is acceleration due to gravity and h is height. This term was coined by the 19th century Scottish engineer and physicist William Rankine. Some types of potential energy are gravitational potential energy, chemical potential energy, and electrical potential energy. Gravitational potential energy ( GPE ) is the energy an object has due to its position in a gravitational field relative to some reference point. It is the energy stored in an object as the result of its vertical position or height. The energy is stored as the result of the gravitational attraction of the Earth for the object. Its unit is joule and the symbol is J. GPE is related to height and the higher up an object is placed, the more GPE it has. Its equation is EP = mgh, where EP is the potential energy (measured in joules, J), m is mass of the object (measured in kg), g is gravitational acceleration (9, 8m·s^-2 ), and h is the perpendicular height from the reference point (measured in metres, m). Chemical potential energy is the energy stored in the bonds of atoms and molecules of a substance and released during a chemical reaction. For example, the chemical potential energy stored in coal is released as heat when it is burnt. Electrical potential energy also known as electrostatic potential energy is the energy that charged particles such as electrons and protons have because of their own electric charge and their relative position to other charged particles. For example, when a circuit is connected to a power source it must store electric potential energy and supply it to heaters, lights, motors, etc.\n\n$$\nU_g = mgh, \\quad U_s = \\frac{1}{2}kx^2, \\quad U_e = \\frac{1}{4\\pi\\varepsilon_0}\\frac{q_1 q_2}{r}, \\quad U_G = -\\frac{G M m}{r}\n$$\n*Formula:* Stored mechanical, elastic, or field energy possessed by a body due to its position or spatial configuration within a conservative force field (satisfying $\\mathbf{F} = -\\nabla U$).",
+      "formula": "U_g = mgh, \\quad U_s = \\frac{1}{2}kx^2, \\quad U_e = \\frac{1}{4\\pi\\varepsilon_0}\\frac{q_1 q_2}{r}, \\quad U_G = -\\frac{G M m}{r}",
+      "formula_description": "Stored mechanical, elastic, or field energy possessed by a body due to its position or spatial configuration within a conservative force field (satisfying $\\mathbf{F} = -\\nabla U$)."
     },
     {
       "word": "potential flow",
@@ -134601,7 +134743,9 @@
       "word": "power",
       "raw_headword": "POWER",
       "synonyms": [],
-      "definition": "1. A representation by exponent or index, denoted by a superior small numeral or superscript. It indicates the number of times a number multiplies itself. 2. The power of a point with respect to a circle is the quantity d 2 - R2 , where R is the radius of the given circle and d is the distance from the given point to the centre of the circle. 3. The sum of integrals P( R t ) = ρ b ⋅ v R ∫ dv + t ∂ R ∫ ⋅ v dv, respectively over the volume and the surface area of the configuration at time t of a sub-body, R , of which ρ is the density, b is the body force density, v is the velocity and t is the contact force density. 4. In statistics, the probability of rejecting the null hypothesis in a statistical test when it is in fact false; the power of a test of a given null clearly depends on the particular alternative hypothesis against which it is being tested. 5. The rate of doing work or consuming energy. It is measured in watts (joules per second). Its symbol is P. 6. The product of applied potential difference or voltage ( V ) and current ( I ) in a direct-current circuit system, expressed as IV . 7. The product of the effective values of the voltage ( V ) and current ( I ) with the cosine of the phase angle (cosθ) between current and voltage in an alternating current (a.c.) circuit. It is expressed as IV cosθ or I2 R , where R is the resistance of the circuit. For the steady-state a.c. circuit under sinusoidal voltage and current, cosθ is the power factor (p. f.). 8. A measure of the amount by which a lens will deviate light rays."
+      "definition": "1. A representation by exponent or index, denoted by a superior small numeral or superscript. It indicates the number of times a number multiplies itself. 2. The power of a point with respect to a circle is the quantity d 2 - R2 , where R is the radius of the given circle and d is the distance from the given point to the centre of the circle. 3. The sum of integrals P( R t ) = ρ b ⋅ v R ∫ dv + t ∂ R ∫ ⋅ v dv, respectively over the volume and the surface area of the configuration at time t of a sub-body, R , of which ρ is the density, b is the body force density, v is the velocity and t is the contact force density. 4. In statistics, the probability of rejecting the null hypothesis in a statistical test when it is in fact false; the power of a test of a given null clearly depends on the particular alternative hypothesis against which it is being tested. 5. The rate of doing work or consuming energy. It is measured in watts (joules per second). Its symbol is P. 6. The product of applied potential difference or voltage ( V ) and current ( I ) in a direct-current circuit system, expressed as IV . 7. The product of the effective values of the voltage ( V ) and current ( I ) with the cosine of the phase angle (cosθ) between current and voltage in an alternating current (a.c.) circuit. It is expressed as IV cosθ or I2 R , where R is the resistance of the circuit. For the steady-state a.c. circuit under sinusoidal voltage and current, cosθ is the power factor (p. f.). 8. A measure of the amount by which a lens will deviate light rays.\n\n$$\nP = \\frac{dW}{dt} = \\mathbf{F} \\cdot \\mathbf{v}, \\quad P_{\\text{elec}} = V I = I^2 R = \\frac{V^2}{R}\n$$\n*Formula:* The time rate of performing mechanical work or expending/transferring electrical energy, measured in watts ($1\\;\\text{W} = 1\\;\\text{J/s} = 1\\;\\text{N}\\cdot\\text{m/s}$).",
+      "formula": "P = \\frac{dW}{dt} = \\mathbf{F} \\cdot \\mathbf{v}, \\quad P_{\\text{elec}} = V I = I^2 R = \\frac{V^2}{R}",
+      "formula_description": "The time rate of performing mechanical work or expending/transferring electrical energy, measured in watts ($1\\;\\text{W} = 1\\;\\text{J/s} = 1\\;\\text{N}\\cdot\\text{m/s}$)."
     },
     {
       "word": "power factor",
@@ -134690,7 +134834,9 @@
       "word": "poynting vector",
       "raw_headword": "POYNTING VECTOR",
       "synonyms": [],
-      "definition": "A vector that gives a measure of the flow of energy in an electromagnetic field. Its Symbol is S . It is equal to the cross product of the electric-field strength and the magnetic-field strength: S = EH , where E is the electrical field strength and H is the magnetic field strength."
+      "definition": "A vector that gives a measure of the flow of energy in an electromagnetic field. Its Symbol is S . It is equal to the cross product of the electric-field strength and the magnetic-field strength: S = EH , where E is the electrical field strength and H is the magnetic field strength.\n\n$$\n\\mathbf{S} = \\frac{1}{\\mu_0} (\\mathbf{E} \\times \\mathbf{B}) = \\mathbf{E} \\times \\mathbf{H}, \\quad \\langle S \\rangle = I = \\frac{1}{2 c \\mu_0} E_0^2\n$$\n*Formula:* Vector quantity representing the directional energy flux density (rate of electromagnetic energy transfer per unit area in $\\text{W/m}^2$) of an electromagnetic field, where $\\mathbf{E}$ is electric field and $\\mathbf{B}$ is magnetic flux density.",
+      "formula": "\\mathbf{S} = \\frac{1}{\\mu_0} (\\mathbf{E} \\times \\mathbf{B}) = \\mathbf{E} \\times \\mathbf{H}, \\quad \\langle S \\rangle = I = \\frac{1}{2 c \\mu_0} E_0^2",
+      "formula_description": "Vector quantity representing the directional energy flux density (rate of electromagnetic energy transfer per unit area in $\\text{W/m}^2$) of an electromagnetic field, where $\\mathbf{E}$ is electric field and $\\mathbf{B}$ is magnetic flux density."
     },
     {
       "word": "ppb",
@@ -135095,7 +135241,9 @@
       "word": "pressure",
       "raw_headword": "PRESSURE",
       "synonyms": [],
-      "definition": "The ratio of the force acting on a body to the area of the surface, expressed as Force/Area. The SI unit of pressure is pascal (newton per square metre. Pressure law is a law that relates volume and amount when pressure and temperature are held constant. It states that the pressure of a fixed mass of gas at constant volume is directly proportional to its absolute temperature. This may be expressed as P ∝ T, if V is fixed: P T = constant or P = constant × T . It can also be expressed as P1 T1 = P2 T2 , where P1 and T1 are the initial pressure and absolute temperature of a gas and P2 and T1 are its final pressure and temperature."
+      "definition": "The ratio of the force acting on a body to the area of the surface, expressed as Force/Area. The SI unit of pressure is pascal (newton per square metre. Pressure law is a law that relates volume and amount when pressure and temperature are held constant. It states that the pressure of a fixed mass of gas at constant volume is directly proportional to its absolute temperature. This may be expressed as P ∝ T, if V is fixed: P T = constant or P = constant × T . It can also be expressed as P1 T1 = P2 T2 , where P1 and T1 are the initial pressure and absolute temperature of a gas and P2 and T1 are its final pressure and temperature.\n\n$$\nP = \\frac{dF_{\\perp}}{dA} \\approx \\frac{F}{A}, \\quad P_{\\text{hydro}} = P_0 + \\rho g h\n$$\n*Formula:* The perpendicular compressive force exerted per unit area of a boundary surface, measured in pascals ($\\text{N/m}^2$). At depth $h$ in a static fluid, hydrostatic pressure increases by $\\rho g h$.",
+      "formula": "P = \\frac{dF_{\\perp}}{dA} \\approx \\frac{F}{A}, \\quad P_{\\text{hydro}} = P_0 + \\rho g h",
+      "formula_description": "The perpendicular compressive force exerted per unit area of a boundary surface, measured in pascals ($\\text{N/m}^2$). At depth $h$ in a static fluid, hydrostatic pressure increases by $\\rho g h$."
     },
     {
       "word": "pressure cooker",
@@ -135947,7 +136095,9 @@
       "word": "prism",
       "raw_headword": "PRISM",
       "synonyms": [],
-      "definition": "1. A polyhedron of which two faces are congruent polygons in parallel planes and the other faces are parallelograms, or a three dimensional (3-D) geometric figure with two congruent and parallel faces. A triangular prism is a prism composed of two triangular bases and three rectangular sides, a pentahedron. A right prism is one whose bases are perpendicular to all of the edges that connect the two bases. Various forms of prism are shown in the diagrams. Rectangular prism is a 3-dimensional object which has six faces that are rectangles. A hexagonal prism is a prism composed of two hexagonal bases and six rectangular sides, an octahedron. Rectangular prism is just like a cuboid. A right rectangular prism is a prism in which the angles between the base and sides are right angles. 2. A solid transparent material such as glass, plastic and silica, commonly used to reflect a ray of light or split a beam into spectral colours."
+      "definition": "1. A polyhedron of which two faces are congruent polygons in parallel planes and the other faces are parallelograms, or a three dimensional (3-D) geometric figure with two congruent and parallel faces. A triangular prism is a prism composed of two triangular bases and three rectangular sides, a pentahedron. A right prism is one whose bases are perpendicular to all of the edges that connect the two bases. Various forms of prism are shown in the diagrams. Rectangular prism is a 3-dimensional object which has six faces that are rectangles. A hexagonal prism is a prism composed of two hexagonal bases and six rectangular sides, an octahedron. Rectangular prism is just like a cuboid. A right rectangular prism is a prism in which the angles between the base and sides are right angles. 2. A solid transparent material such as glass, plastic and silica, commonly used to reflect a ray of light or split a beam into spectral colours.\n\n$$\nn = \\frac{\\sin\\left(\\frac{A + D_m}{2}\\right)}{\\sin\\left(\\frac{A}{2}\\right)}, \\quad V_{\\text{prism}} = B \\cdot h\n$$\n*Formula:* The optical prism formula relating refractive index $n$ to refracting apex angle $A$ and minimum deviation angle $D_m$. In stereometry, prism volume equals cross-sectional base area $B$ times height $h$.",
+      "formula": "n = \\frac{\\sin\\left(\\frac{A + D_m}{2}\\right)}{\\sin\\left(\\frac{A}{2}\\right)}, \\quad V_{\\text{prism}} = B \\cdot h",
+      "formula_description": "The optical prism formula relating refractive index $n$ to refracting apex angle $A$ and minimum deviation angle $D_m$. In stereometry, prism volume equals cross-sectional base area $B$ times height $h$."
     },
     {
       "word": "prism binoculars",
@@ -136483,7 +136633,9 @@
       "word": "projectile",
       "raw_headword": "PROJECTILE",
       "synonyms": [],
-      "definition": "1. Projectile motion is the curved path an object follows when thrown or propelled near the surface of the Earth under the action of gravity. Objects experiencing projectile motion have a constant velocity in the horizontal direction, and a constantly changing velocity in the vertical direction. The trajectory resulting from this combination always has the shape of a parabola. 2. An object such as an artillery shell or a rocket that can be fired or launched. 3. A term describing a part of an animal's body that can thrust forward, for example, the jaws in some types of fish."
+      "definition": "1. Projectile motion is the curved path an object follows when thrown or propelled near the surface of the Earth under the action of gravity. Objects experiencing projectile motion have a constant velocity in the horizontal direction, and a constantly changing velocity in the vertical direction. The trajectory resulting from this combination always has the shape of a parabola. 2. An object such as an artillery shell or a rocket that can be fired or launched. 3. A term describing a part of an animal's body that can thrust forward, for example, the jaws in some types of fish.\n\n$$\nR = \\frac{v_0^2 \\sin(2\\theta)}{g}, \\quad H_{\\max} = \\frac{v_0^2 \\sin^2\\theta}{2g}, \\quad T_{\\text{flight}} = \\frac{2v_0 \\sin\\theta}{g}, \\quad y = x\\tan\\theta - \\frac{gx^2}{2v_0^2 \\cos^2\\theta}\n$$\n*Formula:* Classical kinematic equations for projectile trajectory under gravitational acceleration $g$, giving range $R$, peak height $H_{\\max}$, flight time $T_{\\text{flight}}$, and parabolic trajectory.",
+      "formula": "R = \\frac{v_0^2 \\sin(2\\theta)}{g}, \\quad H_{\\max} = \\frac{v_0^2 \\sin^2\\theta}{2g}, \\quad T_{\\text{flight}} = \\frac{2v_0 \\sin\\theta}{g}, \\quad y = x\\tan\\theta - \\frac{gx^2}{2v_0^2 \\cos^2\\theta}",
+      "formula_description": "Classical kinematic equations for projectile trajectory under gravitational acceleration $g$, giving range $R$, peak height $H_{\\max}$, flight time $T_{\\text{flight}}$, and parabolic trajectory."
     },
     {
       "word": "projection",
@@ -138922,7 +139074,9 @@
       "word": "pythagoras' theorem",
       "raw_headword": "PYTHAGORAS' THEOREM",
       "synonyms": [],
-      "definition": "A proved geometric proposition stating that the square of the longest side (the hypotenuse) of a right-angled triangle is equal to the sum of the squares of the other two sides or a theorem that states that in a right-angled triangle, the area of the square on the hypotenuse (the longest side) is equal to the sum of the areas of the squares drawn on the other two sides. If the hypotenuse is c units long and the lengths of the other sides are a and b , then c 2 = a 2 + b 2 . It is named after the Greek mathematician Pythagoras (c. 570 BC- c. 495 BC)"
+      "definition": "A proved geometric proposition stating that the square of the longest side (the hypotenuse) of a right-angled triangle is equal to the sum of the squares of the other two sides or a theorem that states that in a right-angled triangle, the area of the square on the hypotenuse (the longest side) is equal to the sum of the areas of the squares drawn on the other two sides. If the hypotenuse is c units long and the lengths of the other sides are a and b , then c 2 = a 2 + b 2 . It is named after the Greek mathematician Pythagoras (c. 570 BC- c. 495 BC)\n\n$$\na^2 + b^2 = c^2 \\iff c = \\sqrt{a^2 + b^2}, \\quad \\sin^2\\theta + \\cos^2\\theta = 1\n$$\n*Formula:* Euclidean geometric theorem stating that in any right-angled triangle with legs $a$ and $b$, the square of the hypotenuse $c$ equals the sum of the squares of the other two sides.",
+      "formula": "a^2 + b^2 = c^2 \\iff c = \\sqrt{a^2 + b^2}, \\quad \\sin^2\\theta + \\cos^2\\theta = 1",
+      "formula_description": "Euclidean geometric theorem stating that in any right-angled triangle with legs $a$ and $b$, the square of the hypotenuse $c$ equals the sum of the squares of the other two sides."
     },
     {
       "word": "pythagorean means",
