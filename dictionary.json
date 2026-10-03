@@ -149256,7 +149256,9 @@
       "word": "sampling distribution",
       "raw_headword": "SAMPLING DISTRIBUTION",
       "synonyms": [],
-      "definition": "The probability distribution of a statistic calculated from a random sample of a particular size. For example, the sampling distribution of the arithmetic mean of the sample of size n taken from a normal distribution with mean μ and standard deviation σ, is a normal distribution also with mean μ but with standard deviation, σ n ."
+      "definition": "The probability distribution of a statistic calculated from a random sample of a particular size. For example, the sampling distribution of the arithmetic mean of the sample of size n taken from a normal distribution with mean μ and standard deviation σ, is a normal distribution also with mean μ but with standard deviation, σ n .\n\n$$\n\\bar{X} \\sim N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right) \\text{ (CLT)}, \\quad Z = \\frac{\\bar{X} - \\mu}{\\sigma/\\sqrt{n}}\n$$\n*Formula:* Distribution of sample statistic (e.g., mean $\\bar{X}$) across repeated samples. By the Central Limit Theorem, $\\bar{X}$ approaches normality as $n \\to \\infty$ regardless of population distribution.",
+      "formula": "\\bar{X} \\sim N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\right) \\text{ (CLT)}, \\quad Z = \\frac{\\bar{X} - \\mu}{\\sigma/\\sqrt{n}}",
+      "formula_description": "Distribution of sample statistic (e.g., mean $\\bar{X}$) across repeated samples. By the Central Limit Theorem, $\\bar{X}$ approaches normality as $n \\to \\infty$ regardless of population distribution."
     },
     {
       "word": "sampling error",
@@ -149392,7 +149394,9 @@
       "word": "saponification",
       "raw_headword": "SAPONIFICATION",
       "synonyms": [],
-      "definition": "Hydrolysis of an ester, using an alkali, to produce a free alcohol and a salt of the organic acid (carboxylic acid): RCOOR′+OH - → RCOO - +R′OH. It is the chemical processes that produce soap from fatty acid derivatives. When triglycerides in fat/oil react with aqueous NaOH (sodium hydroxide, also known as caustic soda or lye) or potassium hydroxide, also known as caustic potash or potassium hydrate (KOH), they are converted into soap and glycerol: Fat/oil + alkali + heat → soap + glycerol. For example, glyceryl stearate-based fats react with sodium hydroxide to form sodium stearate (ordinary soap) and glycerine."
+      "definition": "Hydrolysis of an ester, using an alkali, to produce a free alcohol and a salt of the organic acid (carboxylic acid): RCOOR′+OH - → RCOO - +R′OH. It is the chemical processes that produce soap from fatty acid derivatives. When triglycerides in fat/oil react with aqueous NaOH (sodium hydroxide, also known as caustic soda or lye) or potassium hydroxide, also known as caustic potash or potassium hydrate (KOH), they are converted into soap and glycerol: Fat/oil + alkali + heat → soap + glycerol. For example, glyceryl stearate-based fats react with sodium hydroxide to form sodium stearate (ordinary soap) and glycerine.\n\n$$\n\\text{Ester} + \\text{NaOH} \\to \\text{Alcohol} + \\text{Sodium salt of acid}, \\quad n_{\\text{NaOH}} = n_{\\text{ester}}\n$$\n*Formula:* Base hydrolysis of an ester to yield an alcohol and carboxylate salt. Saponification value: milligrams of KOH needed to saponify 1 g of fat — used to characterize fats and oils.",
+      "formula": "\\text{Ester} + \\text{NaOH} \\to \\text{Alcohol} + \\text{Sodium salt of acid}, \\quad n_{\\text{NaOH}} = n_{\\text{ester}}",
+      "formula_description": "Base hydrolysis of an ester to yield an alcohol and carboxylate salt. Saponification value: milligrams of KOH needed to saponify 1 g of fat — used to characterize fats and oils."
     },
     {
       "word": "saponification equivalent",
@@ -149762,7 +149766,9 @@
       "word": "scalar",
       "raw_headword": "SCALAR",
       "synonyms": [],
-      "definition": "1. In physics, a one-dimensional physical quantity, such as speed, mass, charge, volume, time and temperature, having magnitude (size) but not direction. This contrasts with velocity, which has magnitude and direction. 2. In mathematics, a real number that is defined in the context of vectors or matrices that a variable such as a is just a real number and not a vector or matrix. The real numbers relate to vectors in a vector space through the operation of scalar multiplication, in which a vector can be multiplied by a number to produce another vector. 3. An element of the ring over which a commutative group is module."
+      "definition": "1. In physics, a one-dimensional physical quantity, such as speed, mass, charge, volume, time and temperature, having magnitude (size) but not direction. This contrasts with velocity, which has magnitude and direction. 2. In mathematics, a real number that is defined in the context of vectors or matrices that a variable such as a is just a real number and not a vector or matrix. The real numbers relate to vectors in a vector space through the operation of scalar multiplication, in which a vector can be multiplied by a number to produce another vector. 3. An element of the ring over which a commutative group is module.\n\n$$\n\\mathbf{v} = v_x\\hat{i} + v_y\\hat{j} + v_z\\hat{k}, \\quad |\\mathbf{v}| = \\sqrt{v_x^2+v_y^2+v_z^2} \\in \\mathbb{R}\n$$\n*Formula:* A scalar is a quantity defined by a single real number magnitude (no direction), such as mass, temperature, or speed. Contrasted with vectors which have both magnitude and direction.",
+      "formula": "\\mathbf{v} = v_x\\hat{i} + v_y\\hat{j} + v_z\\hat{k}, \\quad |\\mathbf{v}| = \\sqrt{v_x^2+v_y^2+v_z^2} \\in \\mathbb{R}",
+      "formula_description": "A scalar is a quantity defined by a single real number magnitude (no direction), such as mass, temperature, or speed. Contrasted with vectors which have both magnitude and direction."
     },
     {
       "word": "scalar field",
@@ -149801,13 +149807,17 @@
         "dot product",
         "inner product"
       ],
-      "definition": "The dot product of U with unit vector V , denoted U · V , is defined as the S projection of U in the direction of V or the amount that U is pointing in the same direction as unit vector V . This operation that can be defined algebraically as: U · V = U1 V1 + U2 V2 + U3 V3 or geometrically as: U ·V = | U || V |cos θ , where | U | and | V | are the magnitudes of the vectors U and V respectively and θ is the angle between them."
+      "definition": "The dot product of U with unit vector V , denoted U · V , is defined as the S projection of U in the direction of V or the amount that U is pointing in the same direction as unit vector V . This operation that can be defined algebraically as: U · V = U1 V1 + U2 V2 + U3 V3 or geometrically as: U ·V = | U || V |cos θ , where | U | and | V | are the magnitudes of the vectors U and V respectively and θ is the angle between them.\n\n$$\n\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}||\\mathbf{b}|\\cos\\theta = a_x b_x + a_y b_y + a_z b_z\n$$\n*Formula:* The dot product of two vectors: equals the product of their magnitudes and the cosine of the angle $\\theta$ between them. Results in a scalar value. Used to compute work, projections, and angles.",
+      "formula": "\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}||\\mathbf{b}|\\cos\\theta = a_x b_x + a_y b_y + a_z b_z",
+      "formula_description": "The dot product of two vectors: equals the product of their magnitudes and the cosine of the angle $\\theta$ between them. Results in a scalar value. Used to compute work, projections, and angles."
     },
     {
       "word": "scalar quantity",
       "raw_headword": "SCALAR QUANTITY",
       "synonyms": [],
-      "definition": "A measure that has quantity, amount, size or magnitude but does not show direction. Examples are length, area, mass, volume, density, speed, energy and temperature. Vector quantity has both magnitude and direction. For example, a scalar quantity can be exemplified by the distance 6 km; a vector quantity can be exemplified by the term 6 km north."
+      "definition": "A measure that has quantity, amount, size or magnitude but does not show direction. Examples are length, area, mass, volume, density, speed, energy and temperature. Vector quantity has both magnitude and direction. For example, a scalar quantity can be exemplified by the distance 6 km; a vector quantity can be exemplified by the term 6 km north.\n\n$$\nW = \\mathbf{F} \\cdot \\mathbf{d} = Fd\\cos\\theta \\in \\mathbb{R}, \\quad T \\in \\mathbb{R}, \\quad m \\in \\mathbb{R}^+\n$$\n*Formula:* A physical quantity described by magnitude only — no direction. Examples: temperature $T$, mass $m$, energy, time. Contrasted with vector quantities like force and velocity.",
+      "formula": "W = \\mathbf{F} \\cdot \\mathbf{d} = Fd\\cos\\theta \\in \\mathbb{R}, \\quad T \\in \\mathbb{R}, \\quad m \\in \\mathbb{R}^+",
+      "formula_description": "A physical quantity described by magnitude only — no direction. Examples: temperature $T$, mass $m$, energy, time. Contrasted with vector quantities like force and velocity."
     },
     {
       "word": "scalar triple product",
@@ -150281,7 +150291,9 @@
       "word": "schwarzschild radius",
       "raw_headword": "SCHWARZSCHILD RADIUS",
       "synonyms": [],
-      "definition": "A critical radius of an object of a given mass that must be exceeded if light is to be emitted from that body. It is equal to 2 GM / c 2 , where G is the gravitational constant, c is the speed of light and M is the mass of the body."
+      "definition": "A critical radius of an object of a given mass that must be exceeded if light is to be emitted from that body. It is equal to 2 GM / c 2 , where G is the gravitational constant, c is the speed of light and M is the mass of the body.\n\n$$\nr_s = \\frac{2GM}{c^2} = \\frac{2GM}{c^2} \\approx 2.95 \\;\\frac{M}{M_{\\odot}} \\text{ km}\n$$\n*Formula:* The critical radius of a non-rotating black hole's event horizon: if an object is compressed below $r_s$, even light cannot escape. For the Sun, $r_s \\approx 2.95$ km.",
+      "formula": "r_s = \\frac{2GM}{c^2} = \\frac{2GM}{c^2} \\approx 2.95 \\;\\frac{M}{M_{\\odot}} \\text{ km}",
+      "formula_description": "The critical radius of a non-rotating black hole's event horizon: if an object is compressed below $r_s$, even light cannot escape. For the Sun, $r_s \\approx 2.95$ km."
     },
     {
       "word": "schweizer's reagent",
@@ -150342,7 +150354,9 @@
         "standard form",
         "standard index form"
       ],
-      "definition": "A system of representing very large or very small numbers which expresses them as multiples of ten to a given power. It is of the form N × 10 n , where N is a decimal number between 0 and 10 that is rounded offto a few decimal places and n is known as the exponent and is an integer. For example, the scientific notation of 10677 is 1.0677 × 10 4 . If n > 0 it represents how many times the decimal place in N should be moved to the right. If n < 0, then it represents how many times the decimal place in N should be moved to the left. For example 5.34 × 10 3 represents 5340, where the decimal moved three places to the right) and 3.24 × 10 -3 represents 0.00324 where the decimal moved three places to the left."
+      "definition": "A system of representing very large or very small numbers which expresses them as multiples of ten to a given power. It is of the form N × 10 n , where N is a decimal number between 0 and 10 that is rounded offto a few decimal places and n is known as the exponent and is an integer. For example, the scientific notation of 10677 is 1.0677 × 10 4 . If n > 0 it represents how many times the decimal place in N should be moved to the right. If n < 0, then it represents how many times the decimal place in N should be moved to the left. For example 5.34 × 10 3 represents 5340, where the decimal moved three places to the right) and 3.24 × 10 -3 represents 0.00324 where the decimal moved three places to the left.\n\n$$\nN = a \\times 10^n, \\quad 1 \\leq |a| < 10, \\quad n \\in \\mathbb{Z}\n$$\n*Formula:* A way of expressing numbers as a coefficient $a$ (with $1 \\leq |a| < 10$) times a power of 10. Essential for representing very large or very small values compactly.",
+      "formula": "N = a \\times 10^n, \\quad 1 \\leq |a| < 10, \\quad n \\in \\mathbb{Z}",
+      "formula_description": "A way of expressing numbers as a coefficient $a$ (with $1 \\leq |a| < 10$) times a power of 10. Essential for representing very large or very small values compactly."
     },
     {
       "word": "scientific theories",
@@ -150856,7 +150870,9 @@
       "word": "secant",
       "raw_headword": "SECANT",
       "synonyms": [],
-      "definition": "1. Abbreviated sec, in geometry, it is a straight line cutting a curve or surface. If it intersects the curve in two different points, as in the secant of a circle, the segment of the secant between the points is called a chord. The limiting position of a secant is called the tangent to the curve or surface at that point. 2. The secant sec A is the reciprocal of cos A or the ratio of the length of the hypotenuse to the length of the adjacent side: sec A = cos A = hypotenuse adjacent ."
+      "definition": "1. Abbreviated sec, in geometry, it is a straight line cutting a curve or surface. If it intersects the curve in two different points, as in the secant of a circle, the segment of the secant between the points is called a chord. The limiting position of a secant is called the tangent to the curve or surface at that point. 2. The secant sec A is the reciprocal of cos A or the ratio of the length of the hypotenuse to the length of the adjacent side: sec A = cos A = hypotenuse adjacent .\n\n$$\n\\sec\\theta = \\frac{1}{\\cos\\theta} = \\frac{\\text{hypotenuse}}{\\text{adjacent}}, \\quad \\sec^2\\theta = 1 + \\tan^2\\theta\n$$\n*Formula:* Trigonometric function: reciprocal of cosine. The Pythagorean identity $\\sec^2\\theta = 1 + \\tan^2\\theta$ is widely used in integration and identities.",
+      "formula": "\\sec\\theta = \\frac{1}{\\cos\\theta} = \\frac{\\text{hypotenuse}}{\\text{adjacent}}, \\quad \\sec^2\\theta = 1 + \\tan^2\\theta",
+      "formula_description": "Trigonometric function: reciprocal of cosine. The Pythagorean identity $\\sec^2\\theta = 1 + \\tan^2\\theta$ is widely used in integration and identities."
     },
     {
       "word": "secant method",
@@ -150944,7 +150960,9 @@
       "word": "second law of thermodynamics",
       "raw_headword": "SECOND LAW OF THERMODYNAMICS",
       "synonyms": [],
-      "definition": "It states that the universe tends towards a state of greater disorder in spontaneous process or all processes occur spontaneously in the direction that increases the total entropy of the universe. There are many versions of the second law, but they all have the same effect, which is to explain the phenomenon of irreversibility in nature."
+      "definition": "It states that the universe tends towards a state of greater disorder in spontaneous process or all processes occur spontaneously in the direction that increases the total entropy of the universe. There are many versions of the second law, but they all have the same effect, which is to explain the phenomenon of irreversibility in nature.\n\n$$\n\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}} \\geq 0, \\quad \\eta_{\\text{Carnot}} = 1 - \\frac{T_C}{T_H}\n$$\n*Formula:* Entropy of an isolated system never decreases. Heat flows spontaneously from hot to cold. Maximum efficiency of any heat engine is the Carnot efficiency $\\eta = 1 - T_C/T_H$.",
+      "formula": "\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}} \\geq 0, \\quad \\eta_{\\text{Carnot}} = 1 - \\frac{T_C}{T_H}",
+      "formula_description": "Entropy of an isolated system never decreases. Heat flows spontaneously from hot to cold. Maximum efficiency of any heat engine is the Carnot efficiency $\\eta = 1 - T_C/T_H$."
     },
     {
       "word": "second life",
@@ -152716,7 +152734,9 @@
       "word": "sequence",
       "raw_headword": "SEQUENCE",
       "synonyms": [],
-      "definition": "1. An ordered set of elements whose domain of definition is the set of positive integers that can be put into a one-to-one correspondence with the set of positive integers. 2. A collection of numbers in a prescribed order such as a 1 , a 2 , a 3 , ... . It may be used to generate subsequent numbers in the list. 3. The order in which subunits appear in a chain, for example, amino acids in a polypeptide or nucleotide bases in a dNA or rNA molecule."
+      "definition": "1. An ordered set of elements whose domain of definition is the set of positive integers that can be put into a one-to-one correspondence with the set of positive integers. 2. A collection of numbers in a prescribed order such as a 1 , a 2 , a 3 , ... . It may be used to generate subsequent numbers in the list. 3. The order in which subunits appear in a chain, for example, amino acids in a polypeptide or nucleotide bases in a dNA or rNA molecule.\n\n$$\na_n = a_1 + (n-1)d \\text{ (AP)}, \\quad a_n = a_1 r^{n-1} \\text{ (GP)}, \\quad \\lim_{n\\to\\infty} a_n = L\n$$\n*Formula:* An ordered list of numbers following a rule. Arithmetic progressions (AP) have constant difference $d$; geometric progressions (GP) have constant ratio $r$. Convergence is defined by limit $L$.",
+      "formula": "a_n = a_1 + (n-1)d \\text{ (AP)}, \\quad a_n = a_1 r^{n-1} \\text{ (GP)}, \\quad \\lim_{n\\to\\infty} a_n = L",
+      "formula_description": "An ordered list of numbers following a rule. Arithmetic progressions (AP) have constant difference $d$; geometric progressions (GP) have constant ratio $r$. Convergence is defined by limit $L$."
     },
     {
       "word": "sequence analysis",
@@ -152866,7 +152886,9 @@
       "word": "series",
       "raw_headword": "SERIES",
       "synonyms": [],
-      "definition": "1. The sum of the terms of a sequence, each of which can be written in a form that is an algebraic function of its position or a number of things, events, etc., each of which is related in some way to the others, especially to the one before it or the indicated sum of a finite or infinite sequence of terms, with each term being added to those that precede it. An arithmetic series is the sum of the terms S of an arithmetic sequence. For example, 3 + 7 + 11 + 15 + ···, which has a constant difference of 4 between terms. A geometric series is the sum of the terms of geometric or exponential sequence, for example 2 + 4 + 8 + 16 +... 2. A group of related chemicals that is similar in structure or properties. 3. Also known as series circuit , it is a set of two or more electrical or electronic components connected end to end that the entire current (I) passes through each element without division or branching into parallel circuits. For resistors in series, the total resistance R, is the sum of all the resistances: R = r 1 + r 2 + r 3 ... . For capacitance in series, total capacitance C = c 1 + c 2 + c 3 ... . 4. A succession of rock strata deposited during a particular period of geologic time. 5. A rank in the taxonomic hierarchy above species but subordinate to section."
+      "definition": "1. The sum of the terms of a sequence, each of which can be written in a form that is an algebraic function of its position or a number of things, events, etc., each of which is related in some way to the others, especially to the one before it or the indicated sum of a finite or infinite sequence of terms, with each term being added to those that precede it. An arithmetic series is the sum of the terms S of an arithmetic sequence. For example, 3 + 7 + 11 + 15 + ···, which has a constant difference of 4 between terms. A geometric series is the sum of the terms of geometric or exponential sequence, for example 2 + 4 + 8 + 16 +... 2. A group of related chemicals that is similar in structure or properties. 3. Also known as series circuit , it is a set of two or more electrical or electronic components connected end to end that the entire current (I) passes through each element without division or branching into parallel circuits. For resistors in series, the total resistance R, is the sum of all the resistances: R = r 1 + r 2 + r 3 ... . For capacitance in series, total capacitance C = c 1 + c 2 + c 3 ... . 4. A succession of rock strata deposited during a particular period of geologic time. 5. A rank in the taxonomic hierarchy above species but subordinate to section.\n\n$$\nS_n = \\sum_{k=1}^{n} a_k, \\quad S_{\\infty} = \\sum_{k=0}^{\\infty} a r^k = \\frac{a}{1-r} \\quad (|r|<1), \\quad S_n^{\\text{AP}} = \\frac{n}{2}(2a_1 + (n-1)d)\n$$\n*Formula:* The sum of a sequence's terms. A geometric series converges to $a/(1-r)$ when $|r| < 1$; the arithmetic series sum to $n$ terms is $S_n = n/2 \\cdot (2a_1 + (n-1)d)$.",
+      "formula": "S_n = \\sum_{k=1}^{n} a_k, \\quad S_{\\infty} = \\sum_{k=0}^{\\infty} a r^k = \\frac{a}{1-r} \\quad (|r|<1), \\quad S_n^{\\text{AP}} = \\frac{n}{2}(2a_1 + (n-1)d)",
+      "formula_description": "The sum of a sequence's terms. A geometric series converges to $a/(1-r)$ when $|r| < 1$; the arithmetic series sum to $n$ terms is $S_n = n/2 \\cdot (2a_1 + (n-1)d)$."
     },
     {
       "word": "serine",
@@ -153042,7 +153064,9 @@
       "word": "set",
       "raw_headword": "SET",
       "synonyms": [],
-      "definition": "1. Also known as class , it is a well-defined collection of elements in mathematics or logic, for example, numbers or terms or a collection of objects. Members of a set usually have something in common and may be defined by a membership rule or formula or by listing its members within braces, {}. For example, the set of common domestic animals may include {cat, dog, cow, sheep, etc.}. An object x that is a member of a set A is written as x ∊ A, if x is not a member of A, it is written x ∉ A. The operator, ⊂ is used to denote a union between two sets, for example, the union between two sets, A and B is written as A ⊂ B. The intersection symbol, ∩ is used when two sets, A and B intersect, which is defined as the set composed of all elements that belong to both A and B and read as \"A intersection B\" or \"the intersection of A and B\". 2. To adjust a mechanical or electronic device to a desired level. 3. In agriculture, a set means the number of eggs a hen lays at a time; or seedlings that are ready to be transplanted. 4. To become bent from strain."
+      "definition": "1. Also known as class , it is a well-defined collection of elements in mathematics or logic, for example, numbers or terms or a collection of objects. Members of a set usually have something in common and may be defined by a membership rule or formula or by listing its members within braces, {}. For example, the set of common domestic animals may include {cat, dog, cow, sheep, etc.}. An object x that is a member of a set A is written as x ∊ A, if x is not a member of A, it is written x ∉ A. The operator, ⊂ is used to denote a union between two sets, for example, the union between two sets, A and B is written as A ⊂ B. The intersection symbol, ∩ is used when two sets, A and B intersect, which is defined as the set composed of all elements that belong to both A and B and read as \"A intersection B\" or \"the intersection of A and B\". 2. To adjust a mechanical or electronic device to a desired level. 3. In agriculture, a set means the number of eggs a hen lays at a time; or seedlings that are ready to be transplanted. 4. To become bent from strain.\n\n$$\nA \\cup B = \\{x : x \\in A \\text{ or } x \\in B\\}, \\quad A \\cap B = \\{x : x \\in A \\text{ and } x \\in B\\}, \\quad |A \\cup B| = |A| + |B| - |A \\cap B|\n$$\n*Formula:* A well-defined collection of distinct objects (elements). Key operations: union $\\cup$, intersection $\\cap$, complement $A^c$, and difference $A \\setminus B$. Inclusion-Exclusion gives cardinality of union.",
+      "formula": "A \\cup B = \\{x : x \\in A \\text{ or } x \\in B\\}, \\quad A \\cap B = \\{x : x \\in A \\text{ and } x \\in B\\}, \\quad |A \\cup B| = |A| + |B| - |A \\cap B|",
+      "formula_description": "A well-defined collection of distinct objects (elements). Key operations: union $\\cup$, intersection $\\cap$, complement $A^c$, and difference $A \\setminus B$. Inclusion-Exclusion gives cardinality of union."
     },
     {
       "word": "set stocking",
@@ -153443,7 +153467,9 @@
       "word": "shear modulus",
       "raw_headword": "SHEAR MODULUS",
       "synonyms": [],
-      "definition": "Shear stress divided by shear strain. Its symbol is G . O X Shear strain Ygzgz."
+      "definition": "Shear stress divided by shear strain. Its symbol is G . O X Shear strain Ygzgz.\n\n$$\nG = \\frac{\\tau}{\\gamma} = \\frac{F/A}{\\Delta x/L} = \\frac{E}{2(1+\\nu)}\n$$\n*Formula:* Elastic modulus measuring a material's response to shear stress $\\tau$ relative to shear strain $\\gamma$. Related to Young's modulus $E$ and Poisson's ratio $\\nu$ by $G = E/[2(1+\\nu)]$.",
+      "formula": "G = \\frac{\\tau}{\\gamma} = \\frac{F/A}{\\Delta x/L} = \\frac{E}{2(1+\\nu)}",
+      "formula_description": "Elastic modulus measuring a material's response to shear stress $\\tau$ relative to shear strain $\\gamma$. Related to Young's modulus $E$ and Poisson's ratio $\\nu$ by $G = E/[2(1+\\nu)]$."
     },
     {
       "word": "shear rate",
@@ -154293,7 +154319,9 @@
       "word": "significant figures",
       "raw_headword": "SIGNIFICANT FIGURES",
       "synonyms": [],
-      "definition": "1. The required number of digits used to express the degree of accuracy of a number, starting from the first non-zero digit. For example, in 2,350,086 all the digits are significant; in 47,6000, only the digits 4,7 and 6 are significant; and in 0.005769, S only the digits 5, 7, 6 and 9 are significant. To express a number n of significant figures if the ( n + 1) th digit in the number is greater than or equal to five, it is approximated to one and added to the n th digit to give the number of significant digits required. 2. A digit which makes a contribution to the value of a number."
+      "definition": "1. The required number of digits used to express the degree of accuracy of a number, starting from the first non-zero digit. For example, in 2,350,086 all the digits are significant; in 47,6000, only the digits 4,7 and 6 are significant; and in 0.005769, S only the digits 5, 7, 6 and 9 are significant. To express a number n of significant figures if the ( n + 1) th digit in the number is greater than or equal to five, it is approximated to one and added to the n th digit to give the number of significant digits required. 2. A digit which makes a contribution to the value of a number.\n\n$$\n\\text{Round to } n \\text{ s.f.: } 12345 \\to 12300, \\quad \\text{Relative error} \\approx \\frac{1}{2} \\times 10^{-(n-1)}, \\quad 0.00340 \\to 3\\text{ s.f.}\n$$\n*Formula:* The number of meaningful digits in a measurement, determining precision. Non-zero digits are always significant; leading zeros are not; trailing zeros after a decimal point are significant.",
+      "formula": "\\text{Round to } n \\text{ s.f.: } 12345 \\to 12300, \\quad \\text{Relative error} \\approx \\frac{1}{2} \\times 10^{-(n-1)}, \\quad 0.00340 \\to 3\\text{ s.f.}",
+      "formula_description": "The number of meaningful digits in a measurement, determining precision. Non-zero digits are always significant; leading zeros are not; trailing zeros after a decimal point are significant."
     },
     {
       "word": "signum function",
@@ -154711,7 +154739,9 @@
         "shm",
         "harmonic motion"
       ],
-      "definition": "Repetitive back-and-forth movement through a central or equilibrium position in which the maximum displacement on one side is equal to the maximum displacement on the other. A body in simple harmonic motion experiences a single force which is given by Hooke's law; that is, the force is directly proportional to the displacement x and points in the opposite direction. Each complete vibration takes the same time, the period; the reciprocal of the period is the frequency of vibration. Each oscillation is identical and thus the period, frequency and amplitude of the motion are constant. If the equilibrium position is taken to be zero, the displacement x of the body at any time t is given by x ( t ) = A cos(2 π ft + ϕ ), where A is the amplitude, f is the frequency and φ is the phase. The force that causes the motion is always directed toward the equilibrium position and is directly proportional to the distance from it. Other examples include the electrons in a wire carrying alternating current and the vibrating particles of a medium carrying sound wave."
+      "definition": "Repetitive back-and-forth movement through a central or equilibrium position in which the maximum displacement on one side is equal to the maximum displacement on the other. A body in simple harmonic motion experiences a single force which is given by Hooke's law; that is, the force is directly proportional to the displacement x and points in the opposite direction. Each complete vibration takes the same time, the period; the reciprocal of the period is the frequency of vibration. Each oscillation is identical and thus the period, frequency and amplitude of the motion are constant. If the equilibrium position is taken to be zero, the displacement x of the body at any time t is given by x ( t ) = A cos(2 π ft + ϕ ), where A is the amplitude, f is the frequency and φ is the phase. The force that causes the motion is always directed toward the equilibrium position and is directly proportional to the distance from it. Other examples include the electrons in a wire carrying alternating current and the vibrating particles of a medium carrying sound wave.\n\n$$\nx(t) = A\\cos(\\omega t + \\phi), \\quad \\ddot{x} = -\\omega^2 x, \\quad \\omega = 2\\pi f = \\sqrt{\\frac{k}{m}}, \\quad T = 2\\pi\\sqrt{\\frac{m}{k}}\n$$\n*Formula:* Oscillatory motion where restoring force is proportional and opposite to displacement: $F = -kx$. Characterized by amplitude $A$, angular frequency $\\omega$, and period $T = 2\\pi/\\omega$.",
+      "formula": "x(t) = A\\cos(\\omega t + \\phi), \\quad \\ddot{x} = -\\omega^2 x, \\quad \\omega = 2\\pi f = \\sqrt{\\frac{k}{m}}, \\quad T = 2\\pi\\sqrt{\\frac{m}{k}}",
+      "formula_description": "Oscillatory motion where restoring force is proportional and opposite to displacement: $F = -kx$. Characterized by amplitude $A$, angular frequency $\\omega$, and period $T = 2\\pi/\\omega$."
     },
     {
       "word": "simple interest",
@@ -154863,7 +154893,9 @@
       "synonyms": [
         "sine law"
       ],
-      "definition": "An equation relating the lengths of the sides of an arbitrary triangle to the sines of its angles. According to the law, a sin A = b sin B = c sinC , where a , b and c are the lengths of the sides of a triangle and A , B and C are the opposite angles. Sometimes the law is stated using the reciprocal of this equation: sinA s = sin B b = sinC c ."
+      "definition": "An equation relating the lengths of the sides of an arbitrary triangle to the sines of its angles. According to the law, a sin A = b sin B = c sinC , where a , b and c are the lengths of the sides of a triangle and A , B and C are the opposite angles. Sometimes the law is stated using the reciprocal of this equation: sinA s = sin B b = sinC c .\n\n$$\n\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R\n$$\n*Formula:* Law of Sines: in any triangle, the ratio of a side length to the sine of its opposite angle is constant and equals $2R$, where $R$ is the circumradius.",
+      "formula": "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R",
+      "formula_description": "Law of Sines: in any triangle, the ratio of a side length to the sine of its opposite angle is constant and equals $2R$, where $R$ is the circumradius."
     },
     {
       "word": "sine wave",
@@ -155374,7 +155406,9 @@
       "word": "skewness",
       "raw_headword": "SKEWNESS",
       "synonyms": [],
-      "definition": "In statistics, a measure of the asymmetry of a distribution of a real-valued random variable about its mean. The skewness can be positive or negative or even undefined. A positive skewness is when the data points are skewed to the right of the data average; when skewed to left it is negative skewness ."
+      "definition": "In statistics, a measure of the asymmetry of a distribution of a real-valued random variable about its mean. The skewness can be positive or negative or even undefined. A positive skewness is when the data points are skewed to the right of the data average; when skewed to left it is negative skewness .\n\n$$\ng_1 = \\frac{m_3}{m_2^{3/2}} = \\frac{\\frac{1}{n}\\sum(x_i-\\bar{x})^3}{\\left(\\frac{1}{n}\\sum(x_i-\\bar{x})^2\\right)^{3/2}}, \\quad \\text{Pearson: } Sk = \\frac{3(\\bar{x}-\\text{median})}{\\sigma}\n$$\n*Formula:* Statistical measure of asymmetry in a probability distribution. Positive skew: long tail right (mean > median); negative skew: long tail left (mean < median).",
+      "formula": "g_1 = \\frac{m_3}{m_2^{3/2}} = \\frac{\\frac{1}{n}\\sum(x_i-\\bar{x})^3}{\\left(\\frac{1}{n}\\sum(x_i-\\bar{x})^2\\right)^{3/2}}, \\quad \\text{Pearson: } Sk = \\frac{3(\\bar{x}-\\text{median})}{\\sigma}",
+      "formula_description": "Statistical measure of asymmetry in a probability distribution. Positive skew: long tail right (mean > median); negative skew: long tail left (mean < median)."
     },
     {
       "word": "skim coulter",
@@ -155645,7 +155679,9 @@
       "synonyms": [
         "gradient"
       ],
-      "definition": "1. A position or direction at an angle less than 90° to the Earth's surface. 2. An inclined line, surface, plane, position or direction. 3. The rate at which an ordinate of a point of a line on a coordinate plane changes with respect to a change in the abscissa. 4. The tangent of the angle of inclination of a line or the slope of the tangent line for a curve or surface."
+      "definition": "1. A position or direction at an angle less than 90° to the Earth's surface. 2. An inclined line, surface, plane, position or direction. 3. The rate at which an ordinate of a point of a line on a coordinate plane changes with respect to a change in the abscissa. 4. The tangent of the angle of inclination of a line or the slope of the tangent line for a curve or surface.\n\n$$\nm = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{\\Delta y}{\\Delta x} = \\tan\\theta, \\quad y = mx + c\n$$\n*Formula:* Gradient of a straight line: ratio of vertical rise to horizontal run. Equals $\\tan\\theta$ where $\\theta$ is the angle made with the positive $x$-axis. Negative reciprocal slopes are perpendicular.",
+      "formula": "m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{\\Delta y}{\\Delta x} = \\tan\\theta, \\quad y = mx + c",
+      "formula_description": "Gradient of a straight line: ratio of vertical rise to horizontal run. Equals $\\tan\\theta$ where $\\theta$ is the angle made with the positive $x$-axis. Negative reciprocal slopes are perpendicular."
     },
     {
       "word": "slope form",
@@ -155993,7 +156029,9 @@
         "the snell-descartes law",
         "law of refraction"
       ],
-      "definition": "A law of refraction discovered by Dutch astronomer and mathematician Willebrord Snellius in 1620. It states that for light rays passing from one transparent medium to S another, the ratio of the sine of the angles of incidence to the sine of the angle of refraction is constant. In other words, for a given pair of media, the ratio of the sine of the angle of incidence to the sine of angle of refraction is a constant. It is defined mathematically as µ = sin i sin r , where i is the angle of incidence and r is the angle of refraction and μ is the refractive index. In optics, the law is used in ray tracing to compute the angles of incidence or refraction and in experimental optics and gemology (the science dealing with natural and artificial gems and gemstones) to find the refractive index of a material."
+      "definition": "A law of refraction discovered by Dutch astronomer and mathematician Willebrord Snellius in 1620. It states that for light rays passing from one transparent medium to S another, the ratio of the sine of the angles of incidence to the sine of the angle of refraction is constant. In other words, for a given pair of media, the ratio of the sine of the angle of incidence to the sine of angle of refraction is a constant. It is defined mathematically as µ = sin i sin r , where i is the angle of incidence and r is the angle of refraction and μ is the refractive index. In optics, the law is used in ray tracing to compute the angles of incidence or refraction and in experimental optics and gemology (the science dealing with natural and artificial gems and gemstones) to find the refractive index of a material.\n\n$$\nn_1 \\sin\\theta_1 = n_2 \\sin\\theta_2, \\quad \\frac{\\sin\\theta_1}{\\sin\\theta_2} = \\frac{n_2}{n_1} = \\frac{v_1}{v_2}\n$$\n*Formula:* Fundamental law of optics governing refraction: the product of refractive index and sine of incidence angle is constant across a boundary between two media.",
+      "formula": "n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2, \\quad \\frac{\\sin\\theta_1}{\\sin\\theta_2} = \\frac{n_2}{n_1} = \\frac{v_1}{v_2}",
+      "formula_description": "Fundamental law of optics governing refraction: the product of refractive index and sine of incidence angle is constant across a boundary between two media."
     },
     {
       "word": "snorkel",
@@ -156984,7 +157022,9 @@
       "word": "solar constant",
       "raw_headword": "SOLAR CONSTANT",
       "synonyms": [],
-      "definition": "The rate at which the energy of the Sun is received per unit area at the outer limit of the Earth's atmosphere at the mean distance between the Sun and the Earth. Its value is 1.353 kWm^-2 ."
+      "definition": "The rate at which the energy of the Sun is received per unit area at the outer limit of the Earth's atmosphere at the mean distance between the Sun and the Earth. Its value is 1.353 kWm^-2 .\n\n$$\nS_0 \\approx 1361 \\;\\text{W/m}^2, \\quad P_{\\text{absorbed}} = S_0 \\pi R_E^2 (1 - A), \\quad T_e = \\left[\\frac{S_0(1-A)}{4\\sigma}\\right]^{1/4}\n$$\n*Formula:* Average solar irradiance at Earth's mean orbital distance: $S_0 \\approx 1361\\;\\text{W/m}^2$. Earth's effective radiating temperature $T_e$ depends on albedo $A$ and $S_0$.",
+      "formula": "S_0 \\approx 1361 \\;\\text{W/m}^2, \\quad P_{\\text{absorbed}} = S_0 \\pi R_E^2 (1 - A), \\quad T_e = \\left[\\frac{S_0(1-A)}{4\\sigma}\\right]^{1/4}",
+      "formula_description": "Average solar irradiance at Earth's mean orbital distance: $S_0 \\approx 1361\\;\\text{W/m}^2$. Earth's effective radiating temperature $T_e$ depends on albedo $A$ and $S_0$."
     },
     {
       "word": "solar cycle",
@@ -157316,7 +157356,9 @@
       "word": "solubility",
       "raw_headword": "SOLUBILITY",
       "synonyms": [],
-      "definition": "The amount of a solute that will dissolve in a fixed volume of a solvent at a given temperature to form a saturated solution or a measure of one substance's ability to dissolve in a specific amount of another substance at standard temperature and pressure. It may be expressed as moles per dm3 (moles/dm3 ) or grams of solute per dm3 (grams/dm3 ) of solvent."
+      "definition": "The amount of a solute that will dissolve in a fixed volume of a solvent at a given temperature to form a saturated solution or a measure of one substance's ability to dissolve in a specific amount of another substance at standard temperature and pressure. It may be expressed as moles per dm3 (moles/dm3 ) or grams of solute per dm3 (grams/dm3 ) of solvent.\n\n$$\nK_{sp} = [M^+]^m [X^-]^n, \\quad \\text{Solubility} = \\sqrt[m+n]{\\frac{K_{sp}}{m^m n^n}}\n$$\n*Formula:* Maximum amount of a substance that dissolves in a given volume of solvent at a specific temperature. Governed by the solubility product constant $K_{sp}$ for sparingly soluble ionic compounds.",
+      "formula": "K_{sp} = [M^+]^m [X^-]^n, \\quad \\text{Solubility} = \\sqrt[m+n]{\\frac{K_{sp}}{m^m n^n}}",
+      "formula_description": "Maximum amount of a substance that dissolves in a given volume of solvent at a specific temperature. Governed by the solubility product constant $K_{sp}$ for sparingly soluble ionic compounds."
     },
     {
       "word": "solubility curve",
@@ -157328,7 +157370,9 @@
       "word": "solubility product",
       "raw_headword": "SOLUBILITY PRODUCT",
       "synonyms": [],
-      "definition": "The product of the concentrations of ions in a saturated solution raised to the power of the coefficient of the substance in the dissociation equation. For example, if a compound AxBy is in equilibrium with its solution AxBy (s) ⇌ x A + (aq) + y B - (aq) the equilibrium constant is K c = [A + ] x [B - ] y /[AxBy ]. Since the concentration of the undissolved solid can be put equal to 1, the solubility product is given by K s = [A + ] x [B - ] y . The expression is only true for sparingly soluble salts. If the product of ionic concentrations in a solution exceeds the solubility product, then precipitation occurs."
+      "definition": "The product of the concentrations of ions in a saturated solution raised to the power of the coefficient of the substance in the dissociation equation. For example, if a compound AxBy is in equilibrium with its solution AxBy (s) ⇌ x A + (aq) + y B - (aq) the equilibrium constant is K c = [A + ] x [B - ] y /[AxBy ]. Since the concentration of the undissolved solid can be put equal to 1, the solubility product is given by K s = [A + ] x [B - ] y . The expression is only true for sparingly soluble salts. If the product of ionic concentrations in a solution exceeds the solubility product, then precipitation occurs.\n\n$$\nK_{sp} = [\\text{cation}]^m [\\text{anion}]^n, \\quad \\text{e.g. } \\text{AgCl}: K_{sp} = [\\text{Ag}^+][\\text{Cl}^-]\n$$\n*Formula:* Equilibrium constant for dissolution of a sparingly soluble ionic compound. If ionic product $Q_{sp} > K_{sp}$, precipitation occurs; if $Q_{sp} < K_{sp}$, the solid dissolves.",
+      "formula": "K_{sp} = [\\text{cation}]^m [\\text{anion}]^n, \\quad \\text{e.g. } \\text{AgCl}: K_{sp} = [\\text{Ag}^+][\\text{Cl}^-]",
+      "formula_description": "Equilibrium constant for dissolution of a sparingly soluble ionic compound. If ionic product $Q_{sp} > K_{sp}$, precipitation occurs; if $Q_{sp} < K_{sp}$, the solid dissolves."
     },
     {
       "word": "soluble",
@@ -157362,7 +157406,9 @@
       "word": "solute",
       "raw_headword": "SOLUTE",
       "synonyms": [],
-      "definition": "The minor component of a solution which is regarded as having been dissolved by the solvent. It is the dissolved particles in a solution. For example, salt is the main solute in seawater."
+      "definition": "The minor component of a solution which is regarded as having been dissolved by the solvent. It is the dissolved particles in a solution. For example, salt is the main solute in seawater.\n\n$$\nC = \\frac{n_{\\text{solute}}}{V_{\\text{solution}}} \\text{ (mol/L)}, \\quad \\%w/v = \\frac{m_{\\text{solute}}(g)}{V_{\\text{soln}}(\\text{mL})} \\times 100\n$$\n*Formula:* Substance dissolved in a solvent to form a solution. Molar concentration $C = n/V$ (mol/L); mass/volume percentage $\\% w/v = m/V \\times 100$.",
+      "formula": "C = \\frac{n_{\\text{solute}}}{V_{\\text{solution}}} \\text{ (mol/L)}, \\quad \\%w/v = \\frac{m_{\\text{solute}}(g)}{V_{\\text{soln}}(\\text{mL})} \\times 100",
+      "formula_description": "Substance dissolved in a solvent to form a solution. Molar concentration $C = n/V$ (mol/L); mass/volume percentage $\\% w/v = m/V \\times 100$."
     },
     {
       "word": "solute potential",
@@ -158396,13 +158442,17 @@
       "synonyms": [
         "relative density"
       ],
-      "definition": "The ratio of the density of a substance to the density of a standard substance at the same temperature and pressure. Its symbol is ρ . For liquids and solids the standard substance is usually water; for gases it is air. Also, for liquids and solids it is the ratio of the density, usually at 20 degrees Celsius to the density of water at its maximum density. Gold has a density of 19.3 g/cm3 , so its specific gravity is 19.3 g/cm3 divided by 1 g/cm3 (the density of water at 4°C) or 19.3."
+      "definition": "The ratio of the density of a substance to the density of a standard substance at the same temperature and pressure. Its symbol is ρ . For liquids and solids the standard substance is usually water; for gases it is air. Also, for liquids and solids it is the ratio of the density, usually at 20 degrees Celsius to the density of water at its maximum density. Gold has a density of 19.3 g/cm3 , so its specific gravity is 19.3 g/cm3 divided by 1 g/cm3 (the density of water at 4°C) or 19.3.\n\n$$\n\\text{SG} = \\frac{\\rho_{\\text{substance}}}{\\rho_{\\text{water at 4°C}}} = \\frac{\\rho}{1000 \\;\\text{kg/m}^3}\n$$\n*Formula:* Ratio of density of a substance to density of water at $4^\\circ\\text{C}$ ($\\rho_w = 1000\\;\\text{kg/m}^3$). Dimensionless and numerically equal to density in $\\text{g/cm}^3$.",
+      "formula": "\\text{SG} = \\frac{\\rho_{\\text{substance}}}{\\rho_{\\text{water at 4°C}}} = \\frac{\\rho}{1000 \\;\\text{kg/m}^3}",
+      "formula_description": "Ratio of density of a substance to density of water at $4^\\circ\\text{C}$ ($\\rho_w = 1000\\;\\text{kg/m}^3$). Dimensionless and numerically equal to density in $\\text{g/cm}^3$."
     },
     {
       "word": "specific heat capacity",
       "raw_headword": "SPECIFIC HEAT CAPACITY",
       "synonyms": [],
-      "definition": "The quantity of heat required to raise a unit mass (one kilogram) of a substance by one Kelvin. Its unit is joule per kilogram per Kelvin (Jkg^-1 k^-1 )."
+      "definition": "The quantity of heat required to raise a unit mass (one kilogram) of a substance by one Kelvin. Its unit is joule per kilogram per Kelvin (Jkg^-1 k^-1 ).\n\n$$\nQ = mc\\Delta T, \\quad c = \\frac{Q}{m\\Delta T}, \\quad c_{\\text{water}} = 4186 \\;\\text{J kg}^{-1}\\text{K}^{-1}\n$$\n*Formula:* Heat energy $Q$ required to raise the temperature of mass $m$ by $\\Delta T$: $Q = mc\\Delta T$. Water has one of the highest specific heat capacities ($4186\\;\\text{J kg}^{-1}\\text{K}^{-1}$).",
+      "formula": "Q = mc\\Delta T, \\quad c = \\frac{Q}{m\\Delta T}, \\quad c_{\\text{water}} = 4186 \\;\\text{J kg}^{-1}\\text{K}^{-1}",
+      "formula_description": "Heat energy $Q$ required to raise the temperature of mass $m$ by $\\Delta T$: $Q = mc\\Delta T$. Water has one of the highest specific heat capacities ($4186\\;\\text{J kg}^{-1}\\text{K}^{-1}$)."
     },
     {
       "word": "specific humidity",
@@ -158432,7 +158482,9 @@
       "word": "specific latent heat",
       "raw_headword": "SPECIFIC LATENT HEAT",
       "synonyms": [],
-      "definition": "The amount of heat needed to change a unit mass of a substance from a solid to a liquid or from a liquid to a gas, without changing its temperature. The equation relating energy to specific latent heat is given as: Energy (J) = mass (kg) × specific latent heat (J/kg). liquid latent heat of fusion Latent heat of vaporization gas solid Temperature ( °C ) - 40 -20 t/s Temperature-time graph showing a heating curve of water heated from^-40 o c to 140 o c."
+      "definition": "The amount of heat needed to change a unit mass of a substance from a solid to a liquid or from a liquid to a gas, without changing its temperature. The equation relating energy to specific latent heat is given as: Energy (J) = mass (kg) × specific latent heat (J/kg). liquid latent heat of fusion Latent heat of vaporization gas solid Temperature ( °C ) - 40 -20 t/s Temperature-time graph showing a heating curve of water heated from^-40 o c to 140 o c.\n\n$$\nQ = mL, \\quad L_f(\\text{water}) = 3.34 \\times 10^5 \\;\\text{J/kg}, \\quad L_v(\\text{water}) = 2.26 \\times 10^6 \\;\\text{J/kg}\n$$\n*Formula:* Heat energy $Q = mL$ exchanged during a phase change (fusion or vaporization) at constant temperature. $L_f$ is latent heat of fusion; $L_v$ is latent heat of vaporization.",
+      "formula": "Q = mL, \\quad L_f(\\text{water}) = 3.34 \\times 10^5 \\;\\text{J/kg}, \\quad L_v(\\text{water}) = 2.26 \\times 10^6 \\;\\text{J/kg}",
+      "formula_description": "Heat energy $Q = mL$ exchanged during a phase change (fusion or vaporization) at constant temperature. $L_f$ is latent heat of fusion; $L_v$ is latent heat of vaporization."
     },
     {
       "word": "specific latent heat of fusion",
@@ -158466,7 +158518,9 @@
       "synonyms": [
         "resistivity"
       ],
-      "definition": "The electrical resistance offered by a homogeneous unit cube of material to the flow of a direct current of uniform density between opposite faces of the cube. It is usually determined by calculation from the measurement of electrical resistance of samples having a known length and uniform cross section according to the following equation: ρl / A , where ρ is the resistivity, R the measured resistance, A the cross-sectional area and l the length. In SI, the unit of resistivity is the ohm-metre. The room-temperature resistivity of pure metals extends from approximately 1.5 × 10 -8 ohm-metre for silver, the best conductor, to 135 × 10 -8 ohm-metre for manganese, the poorest pure metallic conductor. Most metallic alloys also fall within the same range. Insulators have resistivities within the approximate range of 10 8 to 10 16 ohm-metres."
+      "definition": "The electrical resistance offered by a homogeneous unit cube of material to the flow of a direct current of uniform density between opposite faces of the cube. It is usually determined by calculation from the measurement of electrical resistance of samples having a known length and uniform cross section according to the following equation: ρl / A , where ρ is the resistivity, R the measured resistance, A the cross-sectional area and l the length. In SI, the unit of resistivity is the ohm-metre. The room-temperature resistivity of pure metals extends from approximately 1.5 × 10 -8 ohm-metre for silver, the best conductor, to 135 × 10 -8 ohm-metre for manganese, the poorest pure metallic conductor. Most metallic alloys also fall within the same range. Insulators have resistivities within the approximate range of 10 8 to 10 16 ohm-metres.\n\n$$\n\\rho = \\frac{RA}{L}, \\quad R = \\rho \\frac{L}{A}, \\quad \\rho(T) = \\rho_0[1 + \\alpha(T - T_0)]\n$$\n*Formula:* Resistivity $\\rho$: intrinsic measure of a material's opposition to electrical current flow. The resistance of a conductor $R = \\rho L/A$ depends on length $L$, area $A$, and material resistivity $\\rho$.",
+      "formula": "\\rho = \\frac{RA}{L}, \\quad R = \\rho \\frac{L}{A}, \\quad \\rho(T) = \\rho_0[1 + \\alpha(T - T_0)]",
+      "formula_description": "Resistivity $\\rho$: intrinsic measure of a material's opposition to electrical current flow. The resistance of a conductor $R = \\rho L/A$ depends on length $L$, area $A$, and material resistivity $\\rho$."
     },
     {
       "word": "specific surface",
@@ -158478,7 +158532,9 @@
       "word": "specific volume",
       "raw_headword": "SPECIFIC VOLUME",
       "synonyms": [],
-      "definition": "The volume of a substance per unit mass of a material or the volume occupied by a unit of mass of a material. It is equal to the reciprocal of mass density. Its unit is m3 kg^-1 ."
+      "definition": "The volume of a substance per unit mass of a material or the volume occupied by a unit of mass of a material. It is equal to the reciprocal of mass density. Its unit is m3 kg^-1 .\n\n$$\nv = \\frac{1}{\\rho} = \\frac{V}{m} \\quad \\text{(m}^3/\\text{kg)}, \\quad \\text{Ideal gas: } Pv = R_{\\text{specific}} T\n$$\n*Formula:* Volume per unit mass: reciprocal of density $\\rho$. Used extensively in thermodynamics and fluid mechanics for the ideal gas law in specific form $Pv = R_{\\text{specific}} T$.",
+      "formula": "v = \\frac{1}{\\rho} = \\frac{V}{m} \\quad \\text{(m}^3/\\text{kg)}, \\quad \\text{Ideal gas: } Pv = R_{\\text{specific}} T",
+      "formula_description": "Volume per unit mass: reciprocal of density $\\rho$. Used extensively in thermodynamics and fluid mechanics for the ideal gas law in specific form $Pv = R_{\\text{specific}} T$."
     },
     {
       "word": "specific weight",
@@ -158764,7 +158820,9 @@
       "word": "speed",
       "raw_headword": "SPEED",
       "synonyms": [],
-      "definition": "The ratio of the distance covered by a body to the time taken. Its unit is the metre per second, m/s. Speed is a scalar quantity as its direction does not matter. Average speed is the total distance travelled divided by the time in which it has taken to do it. It is a scalar quantity. Instantaneous speed is the speed of an object at a particular moment in time. It is a scalar quantity."
+      "definition": "The ratio of the distance covered by a body to the time taken. Its unit is the metre per second, m/s. Speed is a scalar quantity as its direction does not matter. Average speed is the total distance travelled divided by the time in which it has taken to do it. It is a scalar quantity. Instantaneous speed is the speed of an object at a particular moment in time. It is a scalar quantity.\n\n$$\nv = \\frac{d}{t}, \\quad v_{\\text{avg}} = \\frac{\\text{total distance}}{\\text{total time}}, \\quad |\\mathbf{v}| = \\sqrt{v_x^2 + v_y^2 + v_z^2}\n$$\n*Formula:* Scalar magnitude of velocity: distance traveled per unit time. Average speed = total distance / total time. Instantaneous speed is the magnitude of the velocity vector.",
+      "formula": "v = \\frac{d}{t}, \\quad v_{\\text{avg}} = \\frac{\\text{total distance}}{\\text{total time}}, \\quad |\\mathbf{v}| = \\sqrt{v_x^2 + v_y^2 + v_z^2}",
+      "formula_description": "Scalar magnitude of velocity: distance traveled per unit time. Average speed = total distance / total time. Instantaneous speed is the magnitude of the velocity vector."
     },
     {
       "word": "speed of light",
@@ -159934,7 +159992,9 @@
       "word": "spring constant",
       "raw_headword": "SPRING CONSTANT",
       "synonyms": [],
-      "definition": "The force per unit extension of spring, or the ratio of the force affecting the spring to the displacement caused by it. Its SI unit is Newton per meter (N/m)."
+      "definition": "The force per unit extension of spring, or the ratio of the force affecting the spring to the displacement caused by it. Its SI unit is Newton per meter (N/m).\n\n$$\nF = -kx, \\quad k = -\\frac{F}{x}, \\quad U_\\text{spring} = \\frac{1}{2}kx^2, \\quad \\omega = \\sqrt{\\frac{k}{m}}\n$$\n*Formula:* Hooke's Law spring stiffness constant $k$: relates restoring force $F = -kx$ to displacement $x$. Determines potential energy $U = \\frac{1}{2}kx^2$ and oscillation frequency $\\omega = \\sqrt{k/m}$.",
+      "formula": "F = -kx, \\quad k = -\\frac{F}{x}, \\quad U_\\text{spring} = \\frac{1}{2}kx^2, \\quad \\omega = \\sqrt{\\frac{k}{m}}",
+      "formula_description": "Hooke's Law spring stiffness constant $k$: relates restoring force $F = -kx$ to displacement $x$. Determines potential energy $U = \\frac{1}{2}kx^2$ and oscillation frequency $\\omega = \\sqrt{k/m}$."
     },
     {
       "word": "spring lamb",
@@ -160528,7 +160588,9 @@
       "word": "standard deviation",
       "raw_headword": "STANDARD DEVIATION",
       "synonyms": [],
-      "definition": "A statistical measure of the amount of variation or dispersion of a set of values relative to their arithmetic mean."
+      "definition": "A statistical measure of the amount of variation or dispersion of a set of values relative to their arithmetic mean.\n\n$$\n\\sigma = \\sqrt{\\frac{\\sum(x_i - \\mu)^2}{N}} = \\sqrt{E[X^2] - (E[X])^2}, \\quad s = \\sqrt{\\frac{\\sum(x_i - \\bar{x})^2}{n-1}}\n$$\n*Formula:* Measure of spread or dispersion around the mean. Population standard deviation $\\sigma$ uses $N$; sample standard deviation $s$ uses $n-1$ (Bessel's correction) for unbiased estimation.",
+      "formula": "\\sigma = \\sqrt{\\frac{\\sum(x_i - \\mu)^2}{N}} = \\sqrt{E[X^2] - (E[X])^2}, \\quad s = \\sqrt{\\frac{\\sum(x_i - \\bar{x})^2}{n-1}}",
+      "formula_description": "Measure of spread or dispersion around the mean. Population standard deviation $\\sigma$ uses $N$; sample standard deviation $s$ uses $n-1$ (Bessel's correction) for unbiased estimation."
     },
     {
       "word": "standard electrode potential",
@@ -160537,7 +160599,9 @@
         "e0",
         "eθ"
       ],
-      "definition": "An electrode potential measured under standard conditions of a temperature of 25°C (298 K), 1 atmosphere pressure and at 1 mole of the activity of redox participants of the half-reaction. In other words, it is the electrode potential specified by a comparison with a standard electrode or the measure of individual potential of a reversible electrode at standard state, which is with solutes at an effective concentration of 1 mol dm^-3 and gases at a pressure of 1 bar. Electrode potential is the potential difference difference between the electrode in question acting as a cathode and the standard hydrogen electrode acting as an anode. The larger the value of the standard electrode potential, the further the reaction is from equilibrium. Li + + e - Li^-3.05 K + + e - K^-2.93 Ca 2+ + 2e - Ca^-2.87 Na + + e - Na^-2.71 Mg2+ + 2e - Mg^-2.36 Al 3+ + 3e - Al^-1.66 Mn 2+ + 2e - Mn^-1.18 Zn 2+ + 2e - Zn^-0.76 Fe 2+ + 2e - Fe^-0.44 Cd 2+ + 2e - Cd^-0.40 Sn 2+ + 2e - Sn^-0.14 Pb 2+ + 2e - Pb^-0.13 2H + + 2e - H2 0.00 Cu 2+ + 2e - Cu +0.34 I2 + 2e - 2I - +0.54 Fe 3+ + e - Fe 2+ +0.77 Hg2 2+ + 2e - 2Hg +0.79 Ag + + e - Ag +0.80 NO3 - + 4H + + 3e - NO + 2H2 O +0.96 Br 2 + 2e - 2Br - +1.07 MnO2 + 4H + + 2e - Mn 2+ + 2H2 O +1.23 S Cr 2 O7 2- + 14H + + 6e - 2Cr 3+ + 7H2 O +1.33 Cl 2 + 2e - 2Cl - +1.36 ClO3 - + 6H + + 6e - Cl - + 3H2 O +1.45 MnO^-4 + 8H + + 5e - Mn 2+ + 4H2 O +1.51 F2 + 2e - 2F - +2.87 Standard electrode potential (standard redox potential)"
+      "definition": "An electrode potential measured under standard conditions of a temperature of 25°C (298 K), 1 atmosphere pressure and at 1 mole of the activity of redox participants of the half-reaction. In other words, it is the electrode potential specified by a comparison with a standard electrode or the measure of individual potential of a reversible electrode at standard state, which is with solutes at an effective concentration of 1 mol dm^-3 and gases at a pressure of 1 bar. Electrode potential is the potential difference difference between the electrode in question acting as a cathode and the standard hydrogen electrode acting as an anode. The larger the value of the standard electrode potential, the further the reaction is from equilibrium. Li + + e - Li^-3.05 K + + e - K^-2.93 Ca 2+ + 2e - Ca^-2.87 Na + + e - Na^-2.71 Mg2+ + 2e - Mg^-2.36 Al 3+ + 3e - Al^-1.66 Mn 2+ + 2e - Mn^-1.18 Zn 2+ + 2e - Zn^-0.76 Fe 2+ + 2e - Fe^-0.44 Cd 2+ + 2e - Cd^-0.40 Sn 2+ + 2e - Sn^-0.14 Pb 2+ + 2e - Pb^-0.13 2H + + 2e - H2 0.00 Cu 2+ + 2e - Cu +0.34 I2 + 2e - 2I - +0.54 Fe 3+ + e - Fe 2+ +0.77 Hg2 2+ + 2e - 2Hg +0.79 Ag + + e - Ag +0.80 NO3 - + 4H + + 3e - NO + 2H2 O +0.96 Br 2 + 2e - 2Br - +1.07 MnO2 + 4H + + 2e - Mn 2+ + 2H2 O +1.23 S Cr 2 O7 2- + 14H + + 6e - 2Cr 3+ + 7H2 O +1.33 Cl 2 + 2e - 2Cl - +1.36 ClO3 - + 6H + + 6e - Cl - + 3H2 O +1.45 MnO^-4 + 8H + + 5e - Mn 2+ + 4H2 O +1.51 F2 + 2e - 2F - +2.87 Standard electrode potential (standard redox potential)\n\n$$\nE^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}, \\quad \\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}, \\quad \\ln K = \\frac{nFE^\\circ}{RT}\n$$\n*Formula:* Electromotive force (EMF) of an electrochemical cell measured under standard conditions. Positive $E^\\circ_{\\text{cell}}$ indicates spontaneous reaction. Related to free energy by $\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}$.",
+      "formula": "E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}, \\quad \\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}, \\quad \\ln K = \\frac{nFE^\\circ}{RT}",
+      "formula_description": "Electromotive force (EMF) of an electrochemical cell measured under standard conditions. Positive $E^\\circ_{\\text{cell}}$ indicates spontaneous reaction. Related to free energy by $\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}$."
     },
     {
       "word": "standard enthalpy of combustion",
@@ -160586,7 +160650,9 @@
         "scientific notation",
         "standard index form"
       ],
-      "definition": "A way of writing or expressing very large or very small numbers in a compact form that is easy to use in computations. It is often used in physics, where this extrema values are used regularly. Only one integer appears before the decimal point, the value being adjusted by multiplying by the appropriate power of 10. Any number is expressed as a number between 1 and 10 multiplied by a power of 10 that indicates the correct position of the decimal point in the original number. Numbers greater than 10 are expressed by positive powers of 10 and numbers less than 1 are expressed by negative powers of 10. For example, 43,700 is written as 4.37 × 10 4 and 0.00526 as 5.26 × 10 -3 . The larger the converted number, the more compact it is. For example, 400,000,000,000,000 can be written as 4 × 10 14 . In general this is given by k x 10 n , where 1 ≤ k < 10 and n can be either positive or negative integer."
+      "definition": "A way of writing or expressing very large or very small numbers in a compact form that is easy to use in computations. It is often used in physics, where this extrema values are used regularly. Only one integer appears before the decimal point, the value being adjusted by multiplying by the appropriate power of 10. Any number is expressed as a number between 1 and 10 multiplied by a power of 10 that indicates the correct position of the decimal point in the original number. Numbers greater than 10 are expressed by positive powers of 10 and numbers less than 1 are expressed by negative powers of 10. For example, 43,700 is written as 4.37 × 10 4 and 0.00526 as 5.26 × 10 -3 . The larger the converted number, the more compact it is. For example, 400,000,000,000,000 can be written as 4 × 10 14 . In general this is given by k x 10 n , where 1 ≤ k < 10 and n can be either positive or negative integer.\n\n$$\nax + by = c, \\quad N = a \\times 10^n \\quad (1 \\leq |a| < 10), \\quad ax^2 + bx + c = 0\n$$\n*Formula:* The conventional arrangement of a mathematical expression: linear equations $ax+by=c$, numbers as $a \\times 10^n$, or quadratics as $ax^2+bx+c=0$.",
+      "formula": "ax + by = c, \\quad N = a \\times 10^n \\quad (1 \\leq |a| < 10), \\quad ax^2 + bx + c = 0",
+      "formula_description": "The conventional arrangement of a mathematical expression: linear equations $ax+by=c$, numbers as $a \\times 10^n$, or quadratics as $ax^2+bx+c=0$."
     },
     {
       "word": "standard gravity",
@@ -161243,7 +161309,9 @@
       "word": "stefan-boltzmann law",
       "raw_headword": "STEFAN-BOLTZMANN LAW",
       "synonyms": [],
-      "definition": "The law, which states that the total energy radiated per unit surface of a black body in unit time is proportional to the fourth power of its thermodynamic temperature. It is the constant of proportionality known as Stefan constant (or Stefan Boltzmann constant) and has the value 5.6697 × 10 -8 Js^-1 m^-2 K^-2 . The law was postulated by an Austrian physicist, Joseph Stefan (1835- 1893) and theoretically derived by Ludwig Boltzmann (1844-1906). It is represented by the equation, Q = e σ AT4 t , where Q is the thermal energy emitted, e is the emissivity of the body, which varies from zero to one. σ is a constant called the Stefan - Boltzmann constant and it has a value of σ = 5.67 × 10 -8 Wm^-2 k^-4 , A is the area of the emitting body, T is absolute temperature and t is the time."
+      "definition": "The law, which states that the total energy radiated per unit surface of a black body in unit time is proportional to the fourth power of its thermodynamic temperature. It is the constant of proportionality known as Stefan constant (or Stefan Boltzmann constant) and has the value 5.6697 × 10 -8 Js^-1 m^-2 K^-2 . The law was postulated by an Austrian physicist, Joseph Stefan (1835- 1893) and theoretically derived by Ludwig Boltzmann (1844-1906). It is represented by the equation, Q = e σ AT4 t , where Q is the thermal energy emitted, e is the emissivity of the body, which varies from zero to one. σ is a constant called the Stefan - Boltzmann constant and it has a value of σ = 5.67 × 10 -8 Wm^-2 k^-4 , A is the area of the emitting body, T is absolute temperature and t is the time.\n\n$$\nP = \\epsilon \\sigma A T^4, \\quad \\sigma = 5.67 \\times 10^{-8} \\;\\text{W m}^{-2}\\text{K}^{-4}, \\quad P_{\\text{net}} = \\epsilon \\sigma A (T^4 - T_0^4)\n$$\n*Formula:* Total radiated power from a blackbody: proportional to the fourth power of absolute temperature $T$, emissivity $\\epsilon$, and surface area $A$. $\\sigma$ is the Stefan-Boltzmann constant.",
+      "formula": "P = \\epsilon \\sigma A T^4, \\quad \\sigma = 5.67 \\times 10^{-8} \\;\\text{W m}^{-2}\\text{K}^{-4}, \\quad P_{\\text{net}} = \\epsilon \\sigma A (T^4 - T_0^4)",
+      "formula_description": "Total radiated power from a blackbody: proportional to the fourth power of absolute temperature $T$, emissivity $\\epsilon$, and surface area $A$. $\\sigma$ is the Stefan-Boltzmann constant."
     },
     {
       "word": "steganography",
@@ -161930,7 +161998,9 @@
       "word": "stoichiometry",
       "raw_headword": "STOICHIOMETRY",
       "synonyms": [],
-      "definition": "The quantitative study of reactants and products in a chemical reaction or the relative proportions in which elements form compounds or in which substances react. In other words, it is a branch of chemistry that deals with numerical relationships in reactions."
+      "definition": "The quantitative study of reactants and products in a chemical reaction or the relative proportions in which elements form compounds or in which substances react. In other words, it is a branch of chemistry that deals with numerical relationships in reactions.\n\n$$\nn = \\frac{m}{M}, \\quad \\frac{n_A}{a} = \\frac{n_B}{b} = \\frac{n_C}{c}, \\quad \\% \\text{yield} = \\frac{\\text{actual}}{\\text{theoretical}} \\times 100\n$$\n*Formula:* Quantitative calculation of reactant/product amounts in chemical reactions. Molar ratios from balanced equation stoichiometry (coefficients $a, b, c$) relate moles $n = m/M$ of each species.",
+      "formula": "n = \\frac{m}{M}, \\quad \\frac{n_A}{a} = \\frac{n_B}{b} = \\frac{n_C}{c}, \\quad \\% \\text{yield} = \\frac{\\text{actual}}{\\text{theoretical}} \\times 100",
+      "formula_description": "Quantitative calculation of reactant/product amounts in chemical reactions. Molar ratios from balanced equation stoichiometry (coefficients $a, b, c$) relate moles $n = m/M$ of each species."
     },
     {
       "word": "stokes",
@@ -162192,13 +162262,17 @@
       "word": "strain",
       "raw_headword": "STRAIN",
       "synonyms": [],
-      "definition": "1. A group of organisms such as virus, bacterium or fungus of the same species but with different characteristics. For example, a flu strain is a certain biological form of the influenza or flu virus. 2. In chemistry, a molecule experiences strain when its chemical structure undergoes some stress which raises its internal energy in comparison to a strain-free reference compound. 3. In physics, it is also known as deformation , it is the change in the metric properties of a continuous body B in the displacement from an initial placement κ 0 (B) to a final placement κ(B). A change in the metric properties means that a curve drawn in the initial body placement changes its length when displaced to a curve in the final placement. If all the curves do not change length, it is said that a rigid body displacement occurred."
+      "definition": "1. A group of organisms such as virus, bacterium or fungus of the same species but with different characteristics. For example, a flu strain is a certain biological form of the influenza or flu virus. 2. In chemistry, a molecule experiences strain when its chemical structure undergoes some stress which raises its internal energy in comparison to a strain-free reference compound. 3. In physics, it is also known as deformation , it is the change in the metric properties of a continuous body B in the displacement from an initial placement κ 0 (B) to a final placement κ(B). A change in the metric properties means that a curve drawn in the initial body placement changes its length when displaced to a curve in the final placement. If all the curves do not change length, it is said that a rigid body displacement occurred.\n\n$$\n\\varepsilon = \\frac{\\Delta L}{L_0}, \\quad \\gamma = \\frac{\\Delta x}{L} = \\tan\\phi, \\quad \\varepsilon_v = \\frac{\\Delta V}{V_0}\n$$\n*Formula:* Dimensionless deformation: ratio of change in dimension to original dimension. Tensile strain $\\varepsilon = \\Delta L/L_0$; shear strain $\\gamma = \\Delta x/L$; volumetric strain $\\varepsilon_v = \\Delta V/V_0$.",
+      "formula": "\\varepsilon = \\frac{\\Delta L}{L_0}, \\quad \\gamma = \\frac{\\Delta x}{L} = \\tan\\phi, \\quad \\varepsilon_v = \\frac{\\Delta V}{V_0}",
+      "formula_description": "Dimensionless deformation: ratio of change in dimension to original dimension. Tensile strain $\\varepsilon = \\Delta L/L_0$; shear strain $\\gamma = \\Delta x/L$; volumetric strain $\\varepsilon_v = \\Delta V/V_0$."
     },
     {
       "word": "strain energy",
       "raw_headword": "STRAIN ENERGY",
       "synonyms": [],
-      "definition": "The excess energy due to steric strain of a molecular entity or transition state structure. In other words, it is the potential energy stored in a body by virtue of an elastic deformation, equal to the work that must be done to produce this deformation. The strain energy components involve the following destabilising terms: non-bonded repulsions, bond-angle distortions, bond stretch or compression, rotation around or twisting of double bonds and electrostatic strain. In general, the contributions of these components are inseparable and interdependent."
+      "definition": "The excess energy due to steric strain of a molecular entity or transition state structure. In other words, it is the potential energy stored in a body by virtue of an elastic deformation, equal to the work that must be done to produce this deformation. The strain energy components involve the following destabilising terms: non-bonded repulsions, bond-angle distortions, bond stretch or compression, rotation around or twisting of double bonds and electrostatic strain. In general, the contributions of these components are inseparable and interdependent.\n\n$$\nU = \\frac{1}{2}\\sigma\\varepsilon V = \\frac{F^2 L}{2AE} = \\frac{\\sigma^2 V}{2E}\n$$\n*Formula:* Elastic potential energy stored in a deformed material per unit volume: $u = \\sigma^2/(2E)$, where $E$ is Young's modulus. Total strain energy $U = uV = \\sigma^2 V/(2E)$.",
+      "formula": "U = \\frac{1}{2}\\sigma\\varepsilon V = \\frac{F^2 L}{2AE} = \\frac{\\sigma^2 V}{2E}",
+      "formula_description": "Elastic potential energy stored in a deformed material per unit volume: $u = \\sigma^2/(2E)$, where $E$ is Young's modulus. Total strain energy $U = uV = \\sigma^2 V/(2E)$."
     },
     {
       "word": "strain gauge",
@@ -162504,7 +162578,9 @@
       "word": "stress",
       "raw_headword": "STRESS",
       "synonyms": [],
-      "definition": "1. In biology, it is a stimulus or succession of stimuli of such magnitude as to tend to disrupt the homeostasis of the organism. 2. In physics, it is the force or system of forces per unit area on a body that tends to cause it to deform. It is a measure of the internal forces in a body between particles of the material of which it consists. They resist separation, compression or sliding in response to externally applied forces. Tensile and compressive stresses are axial forces per unit area applied to a body that tend to extend it or compress it linearly whiles shear stress is a tangential force per unit area that tends to shear it. The unit of stress is the pascal and its symbol is Pa. 1 pascal is equal to 1 N/m^-2 [equivalent to one newton (N) per square metre (m²)]. 3. An abbreviation in computing which means structural engineering solver . It is a computer language designed for use in solving structural analysis problems in civil engineering. 4. A state of anxiety or strain. It may result in high blood pressure or depression."
+      "definition": "1. In biology, it is a stimulus or succession of stimuli of such magnitude as to tend to disrupt the homeostasis of the organism. 2. In physics, it is the force or system of forces per unit area on a body that tends to cause it to deform. It is a measure of the internal forces in a body between particles of the material of which it consists. They resist separation, compression or sliding in response to externally applied forces. Tensile and compressive stresses are axial forces per unit area applied to a body that tend to extend it or compress it linearly whiles shear stress is a tangential force per unit area that tends to shear it. The unit of stress is the pascal and its symbol is Pa. 1 pascal is equal to 1 N/m^-2 [equivalent to one newton (N) per square metre (m²)]. 3. An abbreviation in computing which means structural engineering solver . It is a computer language designed for use in solving structural analysis problems in civil engineering. 4. A state of anxiety or strain. It may result in high blood pressure or depression.\n\n$$\n\\sigma = \\frac{F}{A}, \\quad \\sigma_{\\text{shear}} = \\frac{F_{\\parallel}}{A}, \\quad P = \\frac{F}{A}\n$$\n*Formula:* Internal force per unit area acting within a material. Normal (tensile/compressive) stress $\\sigma = F/A$; shear stress acts parallel to the surface. Measured in Pascals (Pa).",
+      "formula": "\\sigma = \\frac{F}{A}, \\quad \\sigma_{\\text{shear}} = \\frac{F_{\\parallel}}{A}, \\quad P = \\frac{F}{A}",
+      "formula_description": "Internal force per unit area acting within a material. Normal (tensile/compressive) stress $\\sigma = F/A$; shear stress acts parallel to the surface. Measured in Pascals (Pa)."
     },
     {
       "word": "stress genes",
@@ -163345,7 +163421,9 @@
       "word": "sublimation",
       "raw_headword": "SUBLIMATION",
       "synonyms": [],
-      "definition": "The transition of a substance from the solid phase to the gas phase without passing through an intermediate liquid phase or change of state from the solid to gaseous state without passing through the liquid state. It is an endothermic phase transition that occurs at temperatures and pressures below a substance's triple point in its phase diagram. Examples of substances subjected to this process are carbon dioxide, iron(II) chloride and iodine."
+      "definition": "The transition of a substance from the solid phase to the gas phase without passing through an intermediate liquid phase or change of state from the solid to gaseous state without passing through the liquid state. It is an endothermic phase transition that occurs at temperatures and pressures below a substance's triple point in its phase diagram. Examples of substances subjected to this process are carbon dioxide, iron(II) chloride and iodine.\n\n$$\n\\Delta G_{\\text{sub}} = \\Delta H_{\\text{sub}} - T\\Delta S_{\\text{sub}} = 0 \\text{ at triple point}, \\quad \\Delta H_{\\text{sub}} = \\Delta H_{\\text{fus}} + \\Delta H_{\\text{vap}}\n$$\n*Formula:* Direct phase transition from solid to gas without passing through liquid phase. Sublimation enthalpy $\\Delta H_{\\text{sub}} = \\Delta H_{\\text{fus}} + \\Delta H_{\\text{vap}}$ by Hess's Law.",
+      "formula": "\\Delta G_{\\text{sub}} = \\Delta H_{\\text{sub}} - T\\Delta S_{\\text{sub}} = 0 \\text{ at triple point}, \\quad \\Delta H_{\\text{sub}} = \\Delta H_{\\text{fus}} + \\Delta H_{\\text{vap}}",
+      "formula_description": "Direct phase transition from solid to gas without passing through liquid phase. Sublimation enthalpy $\\Delta H_{\\text{sub}} = \\Delta H_{\\text{fus}} + \\Delta H_{\\text{vap}}$ by Hess's Law."
     },
     {
       "word": "sublime number",
@@ -164632,7 +164710,9 @@
       "synonyms": [
         "superposition property"
       ],
-      "definition": "It states that, for all linear systems, the net response at a given place and time caused by two or more stimuli is the sum of the responses which would have been caused by each stimulus individually. This is a general principle of linear systems that when applied to wave phenomena asserts that the combined effect of any number of interacting waves at a point may be obtained by the algebraic summation of the amplitudes of all the waves at the point. For example, the superposition of two oscillations, x 1 and x 2 , both of frequency v , produces a disturbance of the same frequency. The amplitude and phase angle of the resulting disturbance are functions of the component amplitudes."
+      "definition": "It states that, for all linear systems, the net response at a given place and time caused by two or more stimuli is the sum of the responses which would have been caused by each stimulus individually. This is a general principle of linear systems that when applied to wave phenomena asserts that the combined effect of any number of interacting waves at a point may be obtained by the algebraic summation of the amplitudes of all the waves at the point. For example, the superposition of two oscillations, x 1 and x 2 , both of frequency v , produces a disturbance of the same frequency. The amplitude and phase angle of the resulting disturbance are functions of the component amplitudes.\n\n$$\ny_{\\text{total}} = y_1 + y_2 + \\dots + y_n = \\sum_{i=1}^n y_i, \\quad A_{\\text{total}}^2 = A_1^2 + A_2^2 + 2A_1 A_2 \\cos\\delta\n$$\n*Formula:* In wave physics and linear systems, the net response is the sum of all individual responses. Constructive interference when $\\delta = 2n\\pi$; destructive when $\\delta = (2n+1)\\pi$.",
+      "formula": "y_{\\text{total}} = y_1 + y_2 + \\dots + y_n = \\sum_{i=1}^n y_i, \\quad A_{\\text{total}}^2 = A_1^2 + A_2^2 + 2A_1 A_2 \\cos\\delta",
+      "formula_description": "In wave physics and linear systems, the net response is the sum of all individual responses. Constructive interference when $\\delta = 2n\\pi$; destructive when $\\delta = (2n+1)\\pi$."
     },
     {
       "word": "superradiance",
@@ -164928,7 +165008,9 @@
       "word": "surface area",
       "raw_headword": "SURFACE AREA",
       "synonyms": [],
-      "definition": "The area of the outer surface of a three dimensional shape or solid. The surface area of a cube is the area of the six squares that cover it. The area of one of them is a x a or a 2 . Since these are all the same, one of them is multiplied by 6, so the surface area of a cube is 6 times the area of the square. The surface area of a rectangular prism is equal to 2 ab + 2 bc + 2 ac , where a , b and c are the lengths of the 3 sides. The surface area of a sphere = 4 πr 2 . The surface area of a cylinder = 2 πr 2 + 2 πrh , where h is the height of the cylinder and r is the radius of the cylinder. Since there is both a top and a bottom, it is multiplied by two."
+      "definition": "The area of the outer surface of a three dimensional shape or solid. The surface area of a cube is the area of the six squares that cover it. The area of one of them is a x a or a 2 . Since these are all the same, one of them is multiplied by 6, so the surface area of a cube is 6 times the area of the square. The surface area of a rectangular prism is equal to 2 ab + 2 bc + 2 ac , where a , b and c are the lengths of the 3 sides. The surface area of a sphere = 4 πr 2 . The surface area of a cylinder = 2 πr 2 + 2 πrh , where h is the height of the cylinder and r is the radius of the cylinder. Since there is both a top and a bottom, it is multiplied by two.\n\n$$\nS_{\\text{sphere}} = 4\\pi r^2, \\quad S_{\\text{cylinder}} = 2\\pi r(r+h), \\quad S_{\\text{cone}} = \\pi r(r + l), \\quad l = \\sqrt{r^2 + h^2}\n$$\n*Formula:* Total area of all external surfaces of a 3D solid. Key formulae: sphere $4\\pi r^2$, cylinder $2\\pi r(r+h)$, cone $\\pi r(r+l)$ where $l$ is the slant height.",
+      "formula": "S_{\\text{sphere}} = 4\\pi r^2, \\quad S_{\\text{cylinder}} = 2\\pi r(r+h), \\quad S_{\\text{cone}} = \\pi r(r + l), \\quad l = \\sqrt{r^2 + h^2}",
+      "formula_description": "Total area of all external surfaces of a 3D solid. Key formulae: sphere $4\\pi r^2$, cylinder $2\\pi r(r+h)$, cone $\\pi r(r+l)$ where $l$ is the slant height."
     },
     {
       "word": "surface barrier semiconductor detector",
@@ -165092,7 +165174,9 @@
       "word": "surface tension",
       "raw_headword": "SURFACE TENSION",
       "synonyms": [],
-      "definition": "The property of a liquid which makes the surface to behave as if it were a stretched elastic skin or the property of liquids that gives their surfaces a slightly elastic quality and enables them to form into separate drops. A drop of water, for example, tends to assume the shape of a sphere. It results from forces of attraction between the molecules in the liquid or from the interaction of molecules at or near the surface that tend to cohere and contract the surface into the smallest possible area."
+      "definition": "The property of a liquid which makes the surface to behave as if it were a stretched elastic skin or the property of liquids that gives their surfaces a slightly elastic quality and enables them to form into separate drops. A drop of water, for example, tends to assume the shape of a sphere. It results from forces of attraction between the molecules in the liquid or from the interaction of molecules at or near the surface that tend to cohere and contract the surface into the smallest possible area.\n\n$$\n\\gamma = \\frac{F}{L} = \\frac{W}{\\Delta A}, \\quad \\Delta P = \\frac{2\\gamma}{r} \\text{ (sphere)}, \\quad \\Delta P = \\frac{4\\gamma}{r} \\text{ (bubble)}\n$$\n*Formula:* Force per unit length (or energy per unit area) at a liquid surface due to intermolecular cohesion. Excess pressure inside a spherical bubble of radius $r$ is $4\\gamma/r$.",
+      "formula": "\\gamma = \\frac{F}{L} = \\frac{W}{\\Delta A}, \\quad \\Delta P = \\frac{2\\gamma}{r} \\text{ (sphere)}, \\quad \\Delta P = \\frac{4\\gamma}{r} \\text{ (bubble)}",
+      "formula_description": "Force per unit length (or energy per unit area) at a liquid surface due to intermolecular cohesion. Excess pressure inside a spherical bubble of radius $r$ is $4\\gamma/r$."
     },
     {
       "word": "surface water",
@@ -165632,7 +165716,9 @@
       "word": "symmetry",
       "raw_headword": "SYMMETRY",
       "synonyms": [],
-      "definition": "1. Exact likeness in shape about a given line, axis, point or plane."
+      "definition": "1. Exact likeness in shape about a given line, axis, point or plane.\n\n$$\nf(x) = f(-x) \\iff \\text{even (y-axis symmetry)}, \\quad f(-x) = -f(x) \\iff \\text{odd (rotational symmetry)}, \\quad n\\text{-fold: } \\theta = \\frac{360^\\circ}{n}\n$$\n*Formula:* A geometric transformation leaving an object unchanged. Even functions have y-axis symmetry; odd functions have $180^\\circ$ rotational symmetry. Regular polygons have $n$-fold symmetry with rotation angle $360^\\circ/n$.",
+      "formula": "f(x) = f(-x) \\iff \\text{even (y-axis symmetry)}, \\quad f(-x) = -f(x) \\iff \\text{odd (rotational symmetry)}, \\quad n\\text{-fold: } \\theta = \\frac{360^\\circ}{n}",
+      "formula_description": "A geometric transformation leaving an object unchanged. Even functions have y-axis symmetry; odd functions have $180^\\circ$ rotational symmetry. Regular polygons have $n$-fold symmetry with rotation angle $360^\\circ/n$."
     },
     {
       "word": "symmetry concentration",
