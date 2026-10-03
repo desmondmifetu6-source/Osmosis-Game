@@ -1,0 +1,1466 @@
+Total candidates: 488
+
+Index 2 | Word: r group | Has Formula: False
+  Def: The specific identity side chain of an amino acid. There are 20 amino acids present in proteins, eac
+
+Index 3 | Word: r plasmid | Has Formula: False
+  Def: Abbreviation for resistance plasmid , a bacterial plasmid carrying genes that confer resistance to c
+
+Index 6 | Word: r-selected species | Has Formula: False
+  Def: Species whose populations increase rapidly, often exponentially, quickly filling available environme
+
+Index 7 | Word: r-selection | Has Formula: False
+  Def: A type of selection that favours organisms with a high biotic potential (optimal ability to survive 
+
+Index 8 | Word: raabe's test | Has Formula: False
+  Def: In mathematics, a test for the convergence of a series: if a n < 0, and a n + 1 a n < 1 - A n for so
+
+Index 12 | Word: rabies | Has Formula: False
+  Def: An acute viral disease that causes inflammation of the brain and affects the central nervous systems
+
+Index 14 | Word: racemate | Has Formula: False
+  Def: An equimolar mixture of a pair of enantiomers. It does not exhibit optical activity. The chemical na
+
+Index 22 | Word: rad | Has Formula: False
+  Def: A unit of energy absorbed from ionising radiation, defined as the dose when one kilogram of matter a
+
+Index 23 | Word: radar | Has Formula: False
+  Def: A device for locating objects in space, that uses reflected radio waves to detect, find the range, a
+
+Index 31 | Word: radial component | Has Formula: False
+  Def: The component of a vector quantity in the direction of the radius vector. In polar coordinates, the 
+
+Index 32 | Word: radial distribution function | Has Formula: False
+  Def: The variation of atomic density as a function of the distance from one particular atom. In the case 
+
+Index 39 | Word: radiation | Has Formula: False
+  Def: Energy travelling in the form of particles or electromagnetic waves through a medium or space. There
+
+Index 40 | Word: radiation belts | Has Formula: False
+  Def: A toroidal region within a planet's magnetosphere, where charged particles become trapped for long p
+
+Index 45 | Word: radiation detector | Has Formula: False
+  Def: A device in which incident radiation produces a measurable effect. If this effect is a rise in tempe
+
+Index 47 | Word: radiation pressure | Has Formula: False
+  Def: The pressure exerted on objects by an electromagnetic radiation because it transmits energy and poss
+
+Index 52 | Word: radiation trapping | Has Formula: False
+  Def: A process by which the resonance radiation emitted in a lamp is absorbed and re-emitted many times i
+
+Index 53 | Word: radiation units | Has Formula: False
+  Def: Units of measurement for radioactivity and radiation doses and for quantifying the amount of radiati
+
+Index 54 | Word: radiationless deactivation | Has Formula: False
+  Def: Loss of electronic excitation energy without photon emission or chemical change. Often, ultrafast ra
+
+Index 55 | Word: radiationless decay | Has Formula: False
+  Def: The decay of an atom or molecule from an excited state to a lower energy state without photon emissi
+
+Index 57 | Word: radiative absorption | Has Formula: False
+  Def: A process by which a particle in the ground state or an excited state may undergo transition to a hi
+
+Index 59 | Word: radiative collision | Has Formula: False
+  Def: A collision between two charged particles in which part of the kinetic energy is radiated in the for
+
+Index 60 | Word: radiative de-excitation | Has Formula: False
+  Def: The change in the internal energy of a particle may be due to radiative processes, i.e. the emission
+
+Index 61 | Word: radiative energy transfer | Has Formula: False
+  Def: Transfer of excitation energy by radiative deactivation of a donor molecular entity and reabsorption
+
+Index 62 | Word: radiative forcing | Has Formula: False
+  Def: The change in the value of the net radiative flux (i.e., the incoming flux minus the outgoing flux) 
+
+Index 64 | Word: radiative lifetime | Has Formula: False
+  Def: Lifetime of an excited molecular entity in the absence of radiationless transitions. The reciprocal 
+
+Index 65 | Word: radiative transition | Has Formula: False
+  Def: A transition between two states of a molecular entity, the energy difference being emitted or absorb
+
+Index 66 | Word: radiators | Has Formula: False
+  Def: 1. A device that cools an internal combustion engine and prevents it from overheating. It consists o
+
+Index 67 | Word: radical | Has Formula: False
+  Def: 1. Also called free radicals , it is a group of atoms, molecules or ions with unpaired electrons for
+
+Index 68 | Word: radical axis | Has Formula: False
+  Def: The locus of points (P) at which tangents drawn to two circles have the same length, which can be ex
+
+Index 69 | Word: radical centre | Has Formula: False
+  Def: 1. The point of intersection of the respective radical axes of three intersecting circles. 2. The at
+
+Index 72 | Word: radical pair | Has Formula: False
+  Def: The term is used to identify two radicals in close proximity in solution, within a solvent cage. The
+
+Index 73 | Word: radicand | Has Formula: False
+  Def: A number or quantity, usually put under the radical sign from which a root is to be extracted. For e
+
+Index 84 | Word: radio galaxy | Has Formula: False
+  Def: An active galaxy that strongly radiates energy in the form of radio waves or electromagnetic radiati
+
+Index 87 | Word: radio star | Has Formula: False
+  Def: Stellar objects that produce copious emissions of various radio frequencies, whether constant or pul
+
+Index 93 | Word: radioactive | Has Formula: False
+  Def: Referring to a substance such as uranium or plutonium that emits energy in the form alpha, beta or g
+
+Index 95 | Word: radioactive collision | Has Formula: False
+  Def: A collision between charged particles in which a neutron is absorbed by a nucleus and kinetic energy
+
+Index 98 | Word: radioactive dating | Has Formula: False
+  Def: A method of estimating the age of an ancient object or specimen using radioactive decay based on the
+
+Index 99 | Word: radioactive decay | Has Formula: False
+  Def: A process of continuous spontaneous disintegration in which the unstable nuclei of radioactive eleme
+
+Index 100 | Word: radioactive decay law | Has Formula: False
+  Def: A law stating that the rate at which radioactive nuclei in a sample decay (the activity) per unit ti
+
+Index 101 | Word: radioactive emissions | Has Formula: False
+  Def: Alpha and beta particles and gamma rays emitted during radioactive decay. Alpha particle is a positi
+
+Index 102 | Word: radioactive equilibrium | Has Formula: False
+  Def: The condition of equilibrium reached by a radioactive series in which the rate of decay of the paren
+
+Index 105 | Word: radioactive series | Has Formula: False
+  Def: A series of radioactive decay in which each nuclide is transformed by the radioactive decay of the n
+
+Index 107 | Word: radioactive standard | Has Formula: False
+  Def: A radioactive-isotope of a known number and rate of radioactive atoms at some definite time used for
+
+Index 108 | Word: radioactive tracer | Has Formula: False
+  Def: A substance or compound containing radioactive isotope concentrations or some radioactive atoms that
+
+Index 109 | Word: radioactive tracer technique | Has Formula: False
+  Def: A technique for investigating recovery and loss of a microcomponent, in which a radioactively labell
+
+Index 110 | Word: radioactive waste | Has Formula: False
+  Def: Any material such as a solid, liquid or gaseous waste, which is the waste product of mining and proc
+
+Index 111 | Word: radioactivity | Has Formula: False
+  Def: The spontaneous disintegration of unstable nuclei to produce a more stable nucleus with emission of 
+
+Index 113 | Word: radiocarbon cycle | Has Formula: False
+  Def: Production and recycling of the radioisotope carbon-l4 ( 14 C). The radioisotope occurs when a neutr
+
+Index 114 | Word: radiocarbon dating | Has Formula: False
+  Def: The method of dating organic remains such as bone or wood, based on the carbon 14 it contains by whi
+
+Index 115 | Word: radiochemical activation analysis | Has Formula: False
+  Def: A kind of activation analysis in which, after the irradiation, chemical or physical separation is ap
+
+Index 116 | Word: radiochemical purification | Has Formula: False
+  Def: Chemical separation applied to a radioactive preparation in order to improve the radiochemical purit
+
+Index 118 | Word: radiochemical separation | Has Formula: False
+  Def: Separation by a chemical means of the radioactive isotopes of a specific element from a mixture of r
+
+Index 119 | Word: radiochemical yield | Has Formula: False
+  Def: The yield of a radiochemical separation expressed as a fraction of the activity originally present.
+
+Index 120 | Word: radiochemistry | Has Formula: False
+  Def: The branch of chemistry that is concerned with radioactive substances. It includes the study of the 
+
+Index 121 | Word: radiochromatograph | Has Formula: False
+  Def: A measuring assembly designed to measure the spatial or time distribution of the activity of a mixtu
+
+Index 122 | Word: radiogenic | Has Formula: False
+  Def: An isotope produced by the process of radioactive decay. An example is the stable isotope lead^-208 
+
+Index 123 | Word: radiography | Has Formula: False
+  Def: The process of producing images of an opaque object on photographic frame by the penetration of radi
+
+Index 125 | Word: radioimmunoassay | Has Formula: False
+  Def: A sensitive method for measuring the level of antigens such as enzymes, hormones and steroids in blo
+
+Index 127 | Word: radioisotope | Has Formula: False
+  Def: An isotope that is radioactive and having an unstable nucleus that decays, emitting alpha, beta or g
+
+Index 134 | Word: radioluminescence | Has Formula: False
+  Def: Luminescence arising from excitation by high-energy particles or radiation such as beta particles. F
+
+Index 135 | Word: radiolysis | Has Formula: False
+  Def: The cleavage of one or several bonds resulting from exposure to high-energy radiation. The term is a
+
+Index 136 | Word: radiometer | Has Formula: False
+  Def: An instrument that detects and measures the intensity of radiant energy, especially that of infrared
+
+Index 139 | Word: radiometric titration | Has Formula: False
+  Def: A titration in which a radioactive indicator is used to monitor the end-point of the titration.
+
+Index 140 | Word: radiometry | Has Formula: False
+  Def: The measurement of quantities associated with radiant energy. The quantities may also describe the v
+
+Index 142 | Word: radionuclide scanning | Has Formula: False
+  Def: A diagnostic technique that is based on the detection of radiation emitted by radionuclides (radioac
+
+Index 149 | Word: radiosonde | Has Formula: False
+  Def: A package of meteorological instruments launched into the atmosphere by balloon, rocket or parachute
+
+Index 151 | Word: radium | Has Formula: False
+  Def: A white highly radioactive metallic element in Group 2 (IIA) of the Periodic Table and one of the al
+
+Index 153 | Word: radius of convergence | Has Formula: False
+  Def: The radius of the largest circle or interval in the real case around a given point such that a given
+
+Index 154 | Word: radius of curvature | Has Formula: False
+  Def: The radius of a circle that touches the inside of the curve at that point. The radius of curvature o
+
+Index 155 | Word: radius of gyration | Has Formula: False
+  Def: The distance between the point about which rotation of a body occurs and the point at which the body
+
+Index 156 | Word: radius of normal curvature | Has Formula: False
+  Def: Of a surface in a given direction, it is the absolute value of the reciprocal of the curvature of th
+
+Index 157 | Word: radius vector | Has Formula: False
+  Def: 1. A directed line from the origin of a coordinate system to a point in space that is regarded as va
+
+Index 161 | Word: radon | Has Formula: False
+  Def: A heavy, colourless and gaseous radioactive element with a short half-life. Its symbol is Rn, atomic
+
+Index 162 | Word: radon's theorem | Has Formula: False
+  Def: The theorem that any n + 2 points in an n -dimensional vector space can be partitioned into two non-
+
+Index 163 | Word: radon-nikodym derivative | Has Formula: False
+  Def: In mathematics, the function f , denoted d λ / d µ, that possesses a Lebesgue integral and is unique
+
+Index 164 | Word: radon-nikodym theorem | Has Formula: False
+  Def: The theorem that, given a sigma- finite measure µ. and a signed measure λ that is absolutely continu
+
+Index 167 | Word: raffinose | Has Formula: False
+  Def: A colourless or white, crystalline trisaccharide carbohydrate with the chemical formula C18 H32 O16 
+
+Index 170 | Word: rain | Has Formula: False
+  Def: A liquid precipitation in which water condensed from vapour in the atmosphere falls to the Earth's s
+
+Index 178 | Word: ram | Has Formula: False
+  Def: 1. An abbreviation in computing for Random-access memory , which is a form of computer data storage 
+
+Index 180 | Word: raman effect | Has Formula: False
+  Def: The change in wavelength and phase exhibited by monochromatic light as it passes through a transpare
+
+Index 186 | Word: ramjet | Has Formula: False
+  Def: A jet engine in which air is drawn in and compressed by the forward motion of the aircraft for combu
+
+Index 190 | Word: ramsey theorem | Has Formula: False
+  Def: In mathematics, the theorem, which states that for any two positive integers k and l there is a leas
+
+Index 194 | Word: randall-sundrum scenario | Has Formula: False
+  Def: A variant of the brane world picture in which gravity is trapped by warping of the higher dimensions
+
+Index 196 | Word: random access memory | Has Formula: False
+  Def: A type of primary computer memory in the form of integrated circuits, consisting of a collection of 
+
+Index 205 | Word: random number generator | Has Formula: False
+  Def: A part of the software of most computers and many calculators, used to produce a sequence of random 
+
+Index 210 | Word: random variable | Has Formula: False
+  Def: A variable whose value is determined by the result of a random experiment and may take any range of 
+
+Index 211 | Word: random vector | Has Formula: False
+  Def: An n -tuple of random variables, whose values depend on the outcome of experiments. In other words, 
+
+Index 212 | Word: random walk | Has Formula: False
+  Def: 1. In statistics, a route taken by a point or quantity, consisting of successive and unconnected ste
+
+Index 217 | Word: range | Has Formula: False
+  Def: 1. In mathematics, it is the set of all values that can be taken by a function or a variable. That i
+
+Index 224 | Word: ranitidine | Has Formula: False
+  Def: The name for an anti-ulcer drug with the chemical formula C13 H22 N4 O3 S. It is a histamine H2 -rec
+
+Index 225 | Word: rank | Has Formula: False
+  Def: 1. Also known as category , it is a position or status of a taxon in a classification hierarchy. Exa
+
+Index 226 | Word: rankine cycle | Has Formula: False
+  Def: A cycle of operations in a heat engine consisting of heat addition at constant pressure, isentropic 
+
+Index 228 | Word: ranksite | Has Formula: False
+  Def: A mineral with the chemical formula 2Na 2 CO3 .9Na 2 SO4 . KCl consisting of mixed sodium carbonate,
+
+Index 229 | Word: raoult's law | Has Formula: False
+  Def: A law established by François-Marie Raoult in 1882, which states that the partial vapour pressure of
+
+Index 237 | Word: rare gases | Has Formula: False
+  Def: Any of the seven chemical elements that make up Group 18 (VIIIA) of the Periodic Table. They are ext
+
+Index 238 | Word: rare-earth elements | Has Formula: False
+  Def: Series of elements in the Periodic Table, with atomic numbers of between 57 and 71. They include lan
+
+Index 239 | Word: rarefaction | Has Formula: False
+  Def: A reduction in the pressure or density of a fluid or gas.
+
+Index 242 | Word: rasmol | Has Formula: False
+  Def: A computer program originally developed by Roger Sayle in the early 90s commonly used for visualisin
+
+Index 244 | Word: raster graphics | Has Formula: False
+  Def: One of the two main formats in which graphical images are stored and transmitted; the other being ve
+
+Index 245 | Word: raster image processor | Has Formula: False
+  Def: A program in a laser printer or other high-resolution printer that converts images described in the 
+
+Index 248 | Word: rate | Has Formula: False
+  Def: 1. A measurement, quantity, or frequency, typically one measured against another quantity or measure
+
+Index 249 | Word: rate constant | Has Formula: False
+  Def: The mathematical constant of proportionality for a chemical reaction at a particular temperature tha
+
+Index 250 | Word: rate equation | Has Formula: False
+  Def: An equation that relates the rate of a chemical reaction to the concentrations or pressures of react
+
+Index 251 | Word: rate law expression | Has Formula: False
+  Def: The mathematical expression relating the rate of reaction to the rate constant and the concentration
+
+Index 252 | Word: rate of change | Has Formula: False
+  Def: The rate at which one quantity changes with respect to another variable, for example, speed. In othe
+
+Index 253 | Word: rate of convergence | Has Formula: False
+  Def: The speed at which a convergent sequence approaches its limit. It is often measured by the number of
+
+Index 255 | Word: rate of migration | Has Formula: False
+  Def: The distance of migration divided by time, sometimes called velocity of migration. Its symbol v is a
+
+Index 257 | Word: rate of reaction | Has Formula: False
+  Def: The speed at which a chemical reaction takes place in a reactant. For example, in the oxidation of i
+
+Index 262 | Word: ratio | Has Formula: False
+  Def: A measure of the relative size of two quantities a to b expressed as a proportion, which can be writ
+
+Index 263 | Word: ratio of similitude | Has Formula: False
+  Def: In mathematics, it is the ratio of proportionality between similar figures. In other words, it is th
+
+Index 264 | Word: ratio scale | Has Formula: False
+  Def: In statistics, it is a scale of measurement of data that has a fixed zero value and allows the compa
+
+Index 265 | Word: ratio test | Has Formula: False
+  Def: 1. Also known as Cauchy's ratio test , it is a test for a complex series a n n = 1 ∞ ∑ to determine 
+
+Index 266 | Word: ratio theorem | Has Formula: False
+  Def: The theorem that if a point P divides a directed line segment, AB, in the ratio m : n , then the pos
+
+Index 267 | Word: ration | Has Formula: False
+  Def: A fixed amount of food given to an animal or person per day.
+
+Index 268 | Word: ration formulation | Has Formula: False
+  Def: The process of putting together different amounts of feed ingredients to be included in a ration to 
+
+Index 269 | Word: rational | Has Formula: False
+  Def: 1. In mathematics, expressing as a ratio of two integers involving or consisting of rational numbers
+
+Index 270 | Word: rational element | Has Formula: False
+  Def: A Dedekind cut corresponding to a rational number in Dedekind's construction of the real numbers.
+
+Index 271 | Word: rational exponents | Has Formula: False
+  Def: For any non zero number b and any integer m and n, with n > 1, = except is not a real number.
+
+Index 272 | Word: rational form | Has Formula: False
+  Def: A square matrix in which the only non-zero entries are in submatrices arranged down the main diagona
+
+Index 273 | Word: rational function | Has Formula: False
+  Def: A function of the form , g ( x ) ≠ 0, where f ( x ) and g ( x ) are polynomial functions.
+
+Index 274 | Word: rational numbers | Has Formula: False
+  Def: Any number that is the result of dividing one integer by another. For example, the numbers, 5 (5/1) 
+
+Index 275 | Word: rational polynomial | Has Formula: False
+  Def: Any ratio of two polynomials.
+
+Index 276 | Word: rational root theorem | Has Formula: False
+  Def: It states that, if the polynomial equation anxn + a n^-1 x n^-1 + a n^-2 x n^-2 + ... + a 2 x 2 + a 
+
+Index 277 | Word: rationalise | Has Formula: False
+  Def: 1. The process of eliminating radicals from an irrational fraction, algebraic expression or equation
+
+Index 278 | Word: rationalised unit | Has Formula: False
+  Def: A unit for which the defining equation conforms to the geometry of the system. Equations involving c
+
+Index 282 | Word: raunkiaerian system | Has Formula: False
+  Def: A system of plant classification in which plants are grouped according to the position of their pere
+
+Index 283 | Word: rauwolfia | Has Formula: False
+  Def: A genus of evergreen flowering shrub of between 3-6 m high; or a small tree, seldom more than 10 m h
+
+Index 286 | Word: ray | Has Formula: False
+  Def: 1. In physics, it is a narrow beam of radiating light from the Sun or an artificial light source. 2.
+
+Index 290 | Word: rayleigh criterion | Has Formula: False
+  Def: The criterion for spontaneous pressure oscillations to accompany combustion, namely, that combustion
+
+Index 291 | Word: rayleigh distribution | Has Formula: False
+  Def: The distribution of the distance between a point and its nearest neighbour in a spatial Poisson proc
+
+Index 292 | Word: rayleigh quotient | Has Formula: False
+  Def: The ratio r A ( x ) = x , Ax x , x of which, for a positive definite matrix A, the supremum produces
+
+Index 295 | Word: rayleigh-jeans formula | Has Formula: False
+  Def: A law giving the intensity of radiation emitted by a blackbody within a narrow band of wavelengths. 
+
+Index 296 | Word: rayleigh-ritz method | Has Formula: False
+  Def: A method of obtaining approximate solutions to functional equations or variational problems by repla
+
+Index 298 | Word: raynaud's disease | Has Formula: False
+  Def: A chronic condition in which the blood supply to the skin is reduced due to the narrowing of the sma
+
+Index 302 | Word: re-entrant polygon | Has Formula: False
+  Def: A concave three dimensional figure with many sides and an internal angle greater than 180 o .
+
+Index 303 | Word: reabsorption | Has Formula: False
+  Def: The return to the blood of most of the glomerular filtrate such as water, sodium, amino acids and gl
+
+Index 306 | Word: reactance | Has Formula: False
+  Def: The opposition to the flow of alternating current by either a inductor (L) and capacitor (C) in a ci
+
+Index 307 | Word: reactant | Has Formula: False
+  Def: A substance that directly reacts with another in a chemical reaction, for example in the equation A 
+
+Index 308 | Word: reacting bond rules | Has Formula: False
+  Def: 1. For an internal motion of a molecular entity corresponding to progress over a transition state (e
+
+Index 309 | Word: reaction | Has Formula: False
+  Def: 1. A transformation in which one or more chemical elements or compounds decompose, combine or react 
+
+Index 310 | Word: reaction barrier | Has Formula: False
+  Def: The energy barrier to chemical reaction. In vibrationally adiabatic transition-state theory its heig
+
+Index 311 | Word: reaction centre | Has Formula: False
+  Def: The site of the light reactions of photosynthesis in the chloroplast that receives the energy trappe
+
+Index 312 | Word: reaction dynamics | Has Formula: False
+  Def: A branch of chemical kinetics that is concerned with the intermolecular and intramolecular motions t
+
+Index 313 | Word: reaction force | Has Formula: False
+  Def: The equal and opposite force produced by an object in reaction to a force (action force) applied on 
+
+Index 314 | Word: reaction mechanism | Has Formula: False
+  Def: The sequence of elementary reactions that lead to chemical transformation or a series of elementary 
+
+Index 316 | Word: reaction order | Has Formula: False
+  Def: The classification of chemical reactions based on the power to which the concentration of components
+
+Index 317 | Word: reaction propulsion | Has Formula: False
+  Def: Propulsion by means of reaction to a jet of gas or fluid projected rearward, in which a jet nozzle c
+
+Index 318 | Word: reaction quotient | Has Formula: False
+  Def: The function of the activities of any set of conditions involved in a chemical reaction that is not 
+
+Index 321 | Word: reaction stoichiometry | Has Formula: False
+  Def: It describes the quantitative relationships in substances as they undergo chemical reactions.
+
+Index 322 | Word: reaction time | Has Formula: False
+  Def: 1. Also known as latent period , it is the period of time that elapses between the detection of a se
+
+Index 324 | Word: reactive | Has Formula: False
+  Def: As applied to a chemical species, the term expresses a kinetic property. A species is said to be mor
+
+Index 328 | Word: reactive oxygen species | Has Formula: False
+  Def: Any of various highly reactive molecules that contain oxygen. Examples of ROS are superoxide anion (
+
+Index 331 | Word: reactivity index | Has Formula: False
+  Def: Any numerical index derived from quantum mechanical model calculations that permits the prediction o
+
+Index 332 | Word: reactivity series | Has Formula: False
+  Def: A series of chemical elements arranged in descending order of their chemical reactivity or electrode
+
+Index 333 | Word: reactor | Has Formula: False
+  Def: 1. In electricity, it is a device such as inductor or capacitor that introduces reactance into an el
+
+Index 343 | Word: ready reckoner | Has Formula: False
+  Def: A set of mathematical tables, especially one used for ready calculation of rates of interest, discou
+
+Index 347 | Word: real analytic | Has Formula: False
+  Def: The real analytic of a real function is one possessing derivatives of all orders and agreeing with i
+
+Index 349 | Word: real function | Has Formula: False
+  Def: A function f that takes only real values, such as the numerical trace of a self-adjoint matrix. In o
+
+Index 350 | Word: real gas | Has Formula: False
+  Def: A gas that does not behave or exhibit the properties of an ideal gas due to interactions between gas
+
+Index 352 | Word: real line | Has Formula: False
+  Def: The real numbers regarded as the points on a line; it is usually denoted by R or R . In other words,
+
+Index 353 | Word: real number | Has Formula: False
+  Def: Any number that is irrational or rational and include all positive and negative numbers including ze
+
+Index 354 | Word: real part | Has Formula: False
+  Def: In complex number z = x + iy the real number x is called the real part and it is part of a complex n
+
+Index 356 | Word: real-is-positive convention | Has Formula: False
+  Def: A convention used in optical formulae relating to lenses and mirrors in which the distances to the r
+
+Index 357 | Word: real-symmetric | Has Formula: False
+  Def: The real-symmetric of a square matrix, n × n is equal to its transpose and satisfies A T = A, where 
+
+Index 359 | Word: real-time system | Has Formula: False
+  Def: Software and hardware systems in computing that process information and responds to operational even
+
+Index 360 | Word: real-valued function | Has Formula: False
+  Def: A function f that takes only real values, such as the numerical trace of a self-adjoint matrix. In o
+
+Index 361 | Word: realgar | Has Formula: False
+  Def: An important ore of arsenic with the chemical formula As 2 S2 , specific gravity 3.56 and melting po
+
+Index 364 | Word: rearrangement | Has Formula: False
+  Def: 1. In chemistry, it is a type of chemical reaction in which atoms or group of atoms migrate from one
+
+Index 375 | Word: receptor potential | Has Formula: False
+  Def: An initial response of a receptor cell to a stimulus, consisting of a change in voltage across the r
+
+Index 379 | Word: rechargeable battery | Has Formula: False
+  Def: An electrochemical cell in which the chemical reaction producing the electromotive force) e.m.f.) is
+
+Index 380 | Word: reciprocal | Has Formula: False
+  Def: 1. Also known as inverse , the reciprocal of a number is 1 divided by that number. For example, the 
+
+Index 383 | Word: reciprocal lattice | Has Formula: False
+  Def: A lattice for a crystal constructed by drawing perpendiculars to each plane through a common point s
+
+Index 386 | Word: reciprocal polar figure | Has Formula: False
+  Def: The figure related to a given configuration of points and lines in the plane in such a way that each
+
+Index 387 | Word: reciprocating engine | Has Formula: False
+  Def: An engine in which a piston oscillates in a cylinder, being driven by the pressure of the working fl
+
+Index 388 | Word: reciprocation | Has Formula: False
+  Def: In mathematics (geometry), it is the transformation of a configuration of points and lines into its 
+
+Index 402 | Word: recommended standard-232 | Has Formula: False
+  Def: A standard type of computer interface approved by the Electronic Industries Alliance (EIA) used to c
+
+Index 404 | Word: reconnaissance satellite | Has Formula: False
+  Def: An Earth observation satellite or communications satellite that is used for military or intelligence
+
+Index 405 | Word: reconstructive transition | Has Formula: False
+  Def: A transition which involves a major reorganisation of the crystal structure and a change of local to
+
+Index 407 | Word: recovery | Has Formula: False
+  Def: 1. In toxicology, the process leading to partial or complete restoration of a cell, tissue organ or 
+
+Index 413 | Word: rectangle | Has Formula: False
+  Def: A four-sided plane figure with four right angles (90°). Its area ( A ) is the product of the length 
+
+Index 414 | Word: rectangle method | Has Formula: False
+  Def: 1. A method for finding the area of a polygon in which one or more rectangles are drawn around all o
+
+Index 415 | Word: rectangular coordinates | Has Formula: False
+  Def: A set of coordinates that gives the position of an object with respect to two or three mut y o x xy 
+
+Index 416 | Word: rectangular hyperbola | Has Formula: False
+  Def: A hyperbola whose asymptotes are perpendicular. If xy = C2 , then the asymptotes are the coordinate 
+
+Index 417 | Word: rectangular number | Has Formula: False
+  Def: Any number that is not prime and can be expressed as a rectangular arrangement of dots with the numb
+
+Index 418 | Word: rectifiable curve | Has Formula: False
+  Def: In mathematics, a curve that has a finite arc length such that, if a 1 , ... a n , are a set of poin
+
+Index 426 | Word: recumbent | Has Formula: False
+  Def: Lying down or reclining on the surface from which it arises. It is used of an organ or other structu
+
+Index 428 | Word: recur | Has Formula: False
+  Def: Of a digit or sequence of digits, to repeat an infinite number of times at the end of the decimal ex
+
+Index 429 | Word: recurrence relation | Has Formula: False
+  Def: An equation that defines a sequence based on a rule that gives the next term as a function of the pr
+
+Index 430 | Word: recurring decimal | Has Formula: False
+  Def: A rational number that is a decimal or radical fraction containing a pattern of digits that repeats 
+
+Index 432 | Word: recursion formula | Has Formula: False
+  Def: The formula for determining the next term of a sequence from one or more of the preceding terms. For
+
+Index 434 | Word: recursive function | Has Formula: False
+  Def: 1. A function defined in terms of the repeated application of a number of simpler functions to their
+
+Index 435 | Word: recursive partial function | Has Formula: False
+  Def: A function of which the graph (the set of points x , f ( x ) ) is recursively enumerable.
+
+Index 441 | Word: recycling | Has Formula: False
+  Def: Recovering and processing of used or waste materials such as glass, paper, metal, plastic and textil
+
+Index 450 | Word: red fescue | Has Formula: False
+  Def: A species of grass, Festuca rubra , a nutritious forage grass for animals and also used for lawns an
+
+Index 452 | Word: red lead | Has Formula: False
+  Def: The bright red to orange-red powdery oxide of lead with the chemical formula Pb 3 O4 , density 8.3 g
+
+Index 454 | Word: red queen hypothesis | Has Formula: False
+  Def: An evolutionary hypothesis that explains two similar ideas: microevolutionary and macroevolutionary.
+
+Index 457 | Word: redu cedp ress ured isti llat ion | Has Formula: False
+  Def: A method of distilling in which the pressure above the liquid mixture to be distilled is reduced to 
+
+Index 460 | Word: reduced echelon form | Has Formula: False
+  Def: An echelon form with the conditions that in a row-reduced echelon or row echelon form matrix, (i) al
+
+Index 461 | Word: reduced equation of state | Has Formula: False
+  Def: A law, which relates the reduced parameters of a thermodynamic equilibrium system of a substance, ba
+
+Index 464 | Word: reduced word | Has Formula: False
+  Def: A word on a non-empty set that contains no consecutive pair of letters of the form xx^-1 or x^-1 x .
+
+Index 466 | Word: reducible | Has Formula: False
+  Def: 1. In mathematics, a reducible surface or curve is one that is deformable within a given region to a
+
+Index 468 | Word: reduction half-equation | Has Formula: False
+  Def: The separate equation which describes an oxidation or reduction half-reaction and the substance that
+
+Index 470 | Word: redundant | Has Formula: False
+  Def: 1. In mathematics, implied by the remaining members of the system and so unnecessary in the sense th
+
+Index 477 | Word: reference | Has Formula: False
+  Def: 1. In logic, the relation between a word, phrase, individual constant or other expression and the en
+
+Index 480 | Word: reference configuration | Has Formula: False
+  Def: An arbitrary fixed configuration of a body with respect to which its motion is described.
+
+Index 486 | Word: reflection electron energy loss spectroscopy | Has Formula: False
+  Def: Any technique in which a specimen is bombarded with a focused low energy ( E0 < 10 eV) electron beam
+
+Index 487 | Word: reflection high energy electron diffraction | Has Formula: False
+  Def: Any technique which measures the angular intensity distribution of electrons 'reflected' from a crys
+
+Index 488 | Word: reflection principle of schwarz | Has Formula: False
+  Def: In complex functions, the theorem concerning analytic continuation that if a function is analytic on
+
+Index 489 | Word: reflection symmetry | Has Formula: False
+  Def: A line through a plane or a 2-dimensional (2-D) shape so that each side of this line is a mirror ima
+
+Index 495 | Word: reflex property of equality | Has Formula: False
+  Def: An axiom that states an obvious fact a = a , for all a . That means that any number is equal to itse
+
+Index 497 | Word: reflexive | Has Formula: False
+  Def: A mathematical relationship among the elements of a set such that they are self-related or a relatio
+
+Index 506 | Word: refractive index | Has Formula: False
+  Def: A measure of the refraction of a beam of light entering a denser medium from a transparent one. Refr
+
+Index 512 | Word: refrigerant | Has Formula: False
+  Def: A substance used in a heat transfer system such as an air conditioner or a refrigerator, which opera
+
+Index 513 | Word: refrigeration | Has Formula: False
+  Def: The heat exchange technique of removing heat from a substance in an enclosed area and maintaining it
+
+Index 514 | Word: regelation | Has Formula: False
+  Def: A phenomenon in which water is refrozen after being melted under pressure, for example, beneath a gl
+
+Index 515 | Word: regeneration | Has Formula: False
+  Def: 1. Re-growth and restoration of normal functions of an organism's organ or tissue after loss or dama
+
+Index 516 | Word: region | Has Formula: False
+  Def: 1. In mathematics, a connected subset of two-dimensional space, such as the set of points ( x , y ) 
+
+Index 519 | Word: region of maturation | Has Formula: False
+  Def: The zone in a root where the cells of the primary tissues differentiate into specialised cells of th
+
+Index 520 | Word: regioselectivity | Has Formula: False
+  Def: In chemical reactions, the preference of complex molecules to bond or break over all other possible 
+
+Index 524 | Word: registry | Has Formula: False
+  Def: A database used by Microsoft Windows to store configuration information about the software installed
+
+Index 526 | Word: regnault's method | Has Formula: False
+  Def: A technique for measuring the volume co-efficient of a gas, named after the French chemist Henri Vic
+
+Index 528 | Word: regress | Has Formula: False
+  Def: In mathematics, a supposed definition or explanation each stage of which requires to be similarly de
+
+Index 529 | Word: regression | Has Formula: False
+  Def: In statistics, a measure that determines the strength of the association between one dependent varia
+
+Index 530 | Word: regression analysis | Has Formula: False
+  Def: A method used to model and calculate the relationships among several variables. It is used to predic
+
+Index 531 | Word: regression line | Has Formula: False
+  Def: A line of the form y = bx + c , is the regression line of y on x . This gives the expected value of 
+
+Index 532 | Word: regula falsi | Has Formula: False
+  Def: A method of solving equations by using a trial and error values for the variables and then adjusting
+
+Index 536 | Word: regular function | Has Formula: False
+  Def: A complex function that is single-valued and differentiable at every point of its domain and in cons
+
+Index 540 | Word: regular polygon | Has Formula: False
+  Def: A closed two dimensional many sided plane figure with all its sides and internal angles equal. The s
+
+Index 544 | Word: regular singular point | Has Formula: False
+  Def: In mathematics, a point a of a second order differential equation y " + P( x ) y ' + Q( x ) y = 0, f
+
+Index 545 | Word: regular solid | Has Formula: False
+  Def: Any of the five regular polyhedrons, which are solids with regular polygon faces and the same number
+
+Index 546 | Word: regularity condition | Has Formula: False
+  Def: In mathematics, any condition imposed on a problem to guarantee that it meets the demands of a theor
+
+Index 549 | Word: regulator | Has Formula: False
+  Def: A control device which may act as a feedback, used to maintain the constant value of some systems su
+
+Index 556 | Word: reinforcement | Has Formula: False
+  Def: Increasing the frequency of a particular behaviour through conditioning by arranging for stimuli suc
+
+Index 560 | Word: related angle | Has Formula: False
+  Def: In mathematics, the acute angle for which the trigonometric functions have the same absolute values 
+
+Index 561 | Word: relation | Has Formula: False
+  Def: 1. An association between elements of one set and that of another set usually represented in ordered
+
+Index 562 | Word: relational database | Has Formula: False
+  Def: A database structure in which data is organised into related tables, with the rows in the table cont
+
+Index 563 | Word: relational theory | Has Formula: False
+  Def: A type of theory in which absolute space and absolute time do not occur, with the theory depending o
+
+Index 564 | Word: relationship symbols | Has Formula: False
+  Def: Symbols that show how numbers or terms of an equation relate to each other. The following are some o
+
+Index 567 | Word: relative angular momentum | Has Formula: False
+  Def: Of a particle about a point with position vector ! p , the quantity m (x - p) x ( ! x - ! p), where 
+
+Index 568 | Word: relative aperture | Has Formula: False
+  Def: A dimensionless number that is a quantitative measure of lens speed, an important concept in photogr
+
+Index 569 | Word: relative atomic mass | Has Formula: False
+  Def: Formerly known as atomic weight , it is the weighted average of the masses of the constituent isotop
+
+Index 571 | Word: relative biological effectiveness | Has Formula: False
+  Def: The relative damage caused to living tissue by different types of radiation, which affects living or
+
+Index 572 | Word: relative biological effectiveness | Has Formula: False
+  Def: The linear-energy-transfer dependent factor by which absorbed dose is multiplied to obtain dose equi
+
+Index 574 | Word: relative complement | Has Formula: False
+  Def: The members of a set lying outside another set. The relative complement of A in B, is written B \ A.
+
+Index 575 | Word: relative counting | Has Formula: False
+  Def: A measurement in which the activity of a test portion is derived from the ratio between the count ra
+
+Index 577 | Word: relative density | Has Formula: False
+  Def: The ratio of the density of a substance to the known density of a reference substance, usually with 
+
+Index 578 | Word: relative displacement | Has Formula: False
+  Def: The difference between the position vector x of a particle and a chosen point with position vector p
+
+Index 580 | Word: relative entropy | Has Formula: False
+  Def: In information science, the relative entropy is a measure of the distance between two distributions.
+
+Index 582 | Word: relative fitness | Has Formula: False
+  Def: One of the two ways by which fitness can be measured, it is biological fitness expressed as the rati
+
+Index 583 | Word: relative frequency | Has Formula: False
+  Def: A way of estimating statistical data if they cannot be accurately interpreted. It is the ratio of th
+
+Index 584 | Word: relative growth rate | Has Formula: False
+  Def: A measure of the productivity of a plant defined as the mass increase in dry mass per unit of plant 
+
+Index 585 | Word: relative humidity | Has Formula: False
+  Def: The ratio of the amount of water moisture/ vapour in the air to the saturated or maximum amount that
+
+Index 586 | Word: relative identity | Has Formula: False
+  Def: A relation of qualitative identity that defines a partition of its domain, so that the elements are 
+
+Index 587 | Word: relative interior | Has Formula: False
+  Def: The interior of a convex set in the induced topology determined by the affine span of the set. It is
+
+Index 590 | Word: relative molecular mass | Has Formula: False
+  Def: The ratio of the average mass per molecule of the natural nuclidic composition of an element or comp
+
+Index 591 | Word: relative momentum | Has Formula: False
+  Def: Of a particle about a point with position vector ! p , the quantity m ( ! x - ! p), , where m is the
+
+Index 592 | Word: relative permeability | Has Formula: False
+  Def: 1. Also known as dielectric constant , it is the ratio of the permeability of a substance to the per
+
+Index 593 | Word: relative permittivity | Has Formula: False
+  Def: The permittivity of a material given relative to that of free space or a vacuum or simply the ratio 
+
+Index 595 | Word: relative sea level | Has Formula: False
+  Def: Sea level measured by a tide gauge with respect to the land upon which it is situated. Relative sea 
+
+Index 597 | Word: relative time | Has Formula: False
+  Def: Geologic time that places events in a sequence relative to each other, especially time based on Law 
+
+Index 599 | Word: relative velocity | Has Formula: False
+  Def: The vector difference between the velocities of two objects, as evaluated in terms of a single coord
+
+Index 601 | Word: relatively consistent | Has Formula: False
+  Def: Able to be shown to be consistent with respect to some larger theory, that is, having a model within
+
+Index 607 | Word: relativistic jets | Has Formula: False
+  Def: Extremely powerful jets of plasma of matter or electromagnetic radiation that move away from some ac
+
+Index 608 | Word: relativistic mass | Has Formula: False
+  Def: The mass of a body in motion at a velocity exceeding about one-tenth the velocity of light, measured
+
+Index 609 | Word: relativistic mechanics | Has Formula: False
+  Def: Any form of mechanics compatible with either the special or the general theory of relativity. It is 
+
+Index 610 | Word: relativistic quantum theory | Has Formula: False
+  Def: The formulation of quantum theory that applies to particles that have zero rest and move close to th
+
+Index 613 | Word: relativity theory | Has Formula: False
+  Def: Albert Einstein's theory of space and time, comprising the special theory of relativity, which descr
+
+Index 614 | Word: relatum | Has Formula: False
+  Def: One of the entities by which a relation is related.
+
+Index 616 | Word: relaxation | Has Formula: False
+  Def: 1. In physics, it is the return to the equilibrium state of a perturbed or disturbed system due to a
+
+Index 632 | Word: reluctance | Has Formula: False
+  Def: A measure of magnetic resistance in a closed magnetic circuit. It is the ratio of the magnetomotive 
+
+Index 633 | Word: rem sleep | Has Formula: False
+  Def: One of the stages of sleep that recurs several times in most humans, characterised by rapid eye move
+
+Index 634 | Word: remainder theorem | Has Formula: False
+  Def: 1. Also known as little Bézout's theorem , it is an application of polynomial long division. It stat
+
+Index 635 | Word: remanence | Has Formula: False
+  Def: The magnetic flux density remaining in a ferromagnetic substance when the external magnetic field is
+
+Index 649 | Word: renaturation | Has Formula: False
+  Def: The restoration of the physical and chemical properties of a denatured protein or nucleic acid to it
+
+Index 652 | Word: renewable energy source | Has Formula: False
+  Def: A source of energy that cannot be used up and replenishes itself in a short period. Examples are hyd
+
+Index 654 | Word: renin | Has Formula: False
+  Def: An enzyme produced by the kidney in response to low blood pressure, reduced blood sodium levels and 
+
+Index 658 | Word: renormalisation | Has Formula: False
+  Def: A mathematical technique used in quantum physics that eliminates infinite terms by carefully definin
+
+Index 659 | Word: renormalisation/renormalization group | Has Formula: False
+  Def: A mathematical technique used to understand the changes of a physical system as one views it at diff
+
+Index 660 | Word: renormalon | Has Formula: False
+  Def: A type of divergent behaviour in a quantum field theory such as quantum electrodynamics (QED) that i
+
+Index 667 | Word: repeatability | Has Formula: False
+  Def: The closeness of agreement between independent results obtained with the same method on identical te
+
+Index 669 | Word: repeated integral | Has Formula: False
+  Def: An expression requiring more than one integration. Multiple integration or repeated integration is t
+
+Index 671 | Word: repeated root | Has Formula: False
+  Def: One of a number of equal roots of the same polynomial or equation that occurs when the polynomial ha
+
+Index 674 | Word: repel | Has Formula: False
+  Def: In physics, to push back or away by a force, such as two similar magnetic fields opposing the force 
+
+Index 679 | Word: repetitive strain injury | Has Formula: False
+  Def: Inflammation of tendon sheaths, mainly in the hands and wrists due to recurrent overuse or improper 
+
+Index 682 | Word: replacement operation | Has Formula: False
+  Def: The exchange of one group of atoms or a single non-hydrogen atom for another.
+
+Index 692 | Word: repolarisation | Has Formula: False
+  Def: The restoration of the normal electrical polarity of a muscle cell membrane potential to a negative 
+
+Index 697 | Word: reppe processes | Has Formula: False
+  Def: A family of high-pressure, catalytic acetylene- reaction processes, which yield butadiene, allyl alc
+
+Index 699 | Word: represent | Has Formula: False
+  Def: In mathematics, of a series of functions, to converge to the value of the given function at each poi
+
+Index 702 | Word: representing function | Has Formula: False
+  Def: In mathematics, it is the function with the same domain as a given predicate that for each domain va
+
+Index 703 | Word: repressible enzyme | Has Formula: False
+  Def: An enzyme whose synthesis is generally continuous but can be halted if a particular substance is pre
+
+Index 707 | Word: reproduction | Has Formula: False
+  Def: The process by which organisms replicate ensuring continuation of their species. The two main types 
+
+Index 711 | Word: reptile | Has Formula: False
+  Def: A type of cold-blooded vertebrates of the class Reptilia. They have tough, dry skin covered with hor
+
+Index 712 | Word: reptilia | Has Formula: False
+  Def: A class of terrestrial vertebrates of four orders: Chelonia (tortoises, turtles and terapins), Squam
+
+Index 713 | Word: repulsion | Has Formula: False
+  Def: A force between two objects of the same electric charge or magnetic polarity that tends to repel or 
+
+Index 714 | Word: research | Has Formula: False
+  Def: A systematic gathering, investigation or examination of data, reports and observations in a search f
+
+Index 715 | Word: research, development, and demonstration | Has Formula: False
+  Def: Scientific and/or technical research and development of new production processes or products, togeth
+
+Index 720 | Word: residence time | Has Formula: False
+  Def: 1. In instrumentation, it is the time required for air or reagent parcel to pass from the entrance t
+
+Index 722 | Word: residual | Has Formula: False
+  Def: 1. In statistics, the difference between an actual, observed value and a value predicted by a regres
+
+Index 725 | Word: residual herbicide | Has Formula: False
+  Def: A chemical preparation applied to the surface of soil that remains active in the soil so that weeds 
+
+Index 726 | Word: residual liquid junction error | Has Formula: False
+  Def: Error arising from breakdown in the assumption that the liquid junction potential remains constant w
+
+Index 729 | Word: residual volume | Has Formula: False
+  Def: The amount of air remaining in the lungs after the maximum expiration possible and which cannot be e
+
+Index 730 | Word: residue | Has Formula: False
+  Def: 1. The waste material that remains after the completion of a chemical or physical process such as ev
+
+Index 732 | Word: residue theorem of cauchy | Has Formula: False
+  Def: A tool used to evaluate line integrals of analytic functions over closed curves. It generalises the 
+
+Index 733 | Word: resilience | Has Formula: False
+  Def: The elastic property of a material to absorb energy when it is stretched, deformed or bent and upon 
+
+Index 735 | Word: resistance | Has Formula: False
+  Def: 1. A property of an electrical conductor to oppose the free flow of current, resulting in the conver
+
+Index 736 | Word: resistance arm | Has Formula: False
+  Def: The part of a lever that moves against weight or resistance. It is the resistance distance in a leve
+
+Index 737 | Word: resistance response | Has Formula: False
+  Def: A response lasting for a long time to any stimulus that potentially threatens the wellbeing of an or
+
+Index 738 | Word: resistance thermometer | Has Formula: False
+  Def: A sensor used for measuring temperature by the property of some materials that increase electrical r
+
+Index 739 | Word: resistivity | Has Formula: False
+  Def: The resistance of a wire per unit cross sectional area. It is the measure of a material's ability to
+
+Index 740 | Word: resistor | Has Formula: False
+  Def: A component in an electrical or electronic circuit which resists the free flow of current. Its symbo
+
+Index 741 | Word: resistors in parallel | Has Formula: False
+  Def: Resistors in parallel have the same potential difference (p.d). The reason is that each coulomb of c
+
+Index 742 | Word: resistors in series | Has Formula: False
+  Def: Resistors in series give the same current (I). The reason is that equal amounts of charges pass thro
+
+Index 743 | Word: resolution | Has Formula: False
+  Def: 1. The separation of a vector quantity into two components which are usually at right angles to each
+
+Index 744 | Word: resolvent | Has Formula: False
+  Def: In mathematics, the inverse of the matrix t l - A , where A is a given matrix or operator and t is n
+
+Index 745 | Word: resolving power | Has Formula: False
+  Def: A measure of the ability of an optical instrument to form separate images of close objects or to sep
+
+Index 746 | Word: resolving time | Has Formula: False
+  Def: The smallest time interval which must elapse between the occurrence of two consecutive ionising even
+
+Index 747 | Word: resonance | Has Formula: False
+  Def: 1. The increased amplitude of oscillation of an electric or mechanical system when it is subjected t
+
+Index 749 | Word: resonance effect magnitude | Has Formula: False
+  Def: Ratio of the difference in the transmitted or scattered intensity at resonance maximum and off- reso
+
+Index 750 | Word: resonance energy | Has Formula: False
+  Def: The difference in potential energy between the actual molecular entity and the contributing structur
+
+Index 753 | Word: resonance hybrid | Has Formula: False
+  Def: A localised valence bond representation of a molecule. This describes pictorially an electronic wave
+
+Index 754 | Word: resonance integral | Has Formula: False
+  Def: The integral, over all or some specified portion of the resonance energy range, of the cross-section
+
+Index 757 | Word: resonance neutrons | Has Formula: False
+  Def: Neutrons whose energy corresponds to the resonance energy of a specified nuclide or element. If the 
+
+Index 758 | Word: resonant cavity | Has Formula: False
+  Def: An enclosure within a conductor in which an electromagnetic field can be made to oscillate at freque
+
+Index 759 | Word: resonant circuit | Has Formula: False
+  Def: A reactive circuit, arranged in such a way that it is capable of resonance in a resistor, inductor a
+
+Index 761 | Word: resorcinol | Has Formula: False
+  Def: Crystalline dihydric phenol, the 1,3-isomer of benzenediol with the chemical formula C6 H4 (OH) 2 . 
+
+Index 764 | Word: respiration | Has Formula: False
+  Def: The metabolic process in animals and plants in which organic substances derived from foodstuffs are 
+
+Index 765 | Word: respiratory chain | Has Formula: False
+  Def: A series of membrane-linked oxidation- reduction reactions in which electrons are transferred from r
+
+Index 766 | Word: respiratory movement | Has Formula: False
+  Def: The muscular movement of the diaphragm and the rib cage (in humans) that enables the passage of air 
+
+Index 768 | Word: respiratory pigment | Has Formula: False
+  Def: A coloured compound, such as haemoglobin in humans and haemocyanin in invertebrates that is capable 
+
+Index 769 | Word: respiratory quotient, rq | Has Formula: False
+  Def: The unitless number, which is the ratio of the volume of carbon dioxide produced by an organism duri
+
+Index 771 | Word: respiratory system | Has Formula: False
+  Def: The system of organs in the body responsible for the intake of oxygen and the expiration of carbon d
+
+Index 772 | Word: respirometer | Has Formula: False
+  Def: Any device that measures an organism's oxygen uptake. An example is spirometer used in measuring oxy
+
+Index 774 | Word: response constant | Has Formula: False
+  Def: A quantity whose expression includes a current, whose value is characteristic of a charge-transfer p
+
+Index 775 | Word: response curve | Has Formula: False
+  Def: A graph that is used to plot the results of many kinds of experiments showing the yield (or some ass
+
+Index 781 | Word: rest | Has Formula: False
+  Def: The state of an object when it is not in motion relative to a particular frame of reference or anoth
+
+Index 782 | Word: rest length | Has Formula: False
+  Def: The length of an object measured by an observer in a frame of reference where the object is at rest.
+
+Index 783 | Word: rest mass | Has Formula: False
+  Def: The mass of a body when its velocity is zero, as opposed to the additional mass it gains as a result
+
+Index 786 | Word: resting potential | Has Formula: False
+  Def: The potential difference between the electrical charges that exists across the membrane of nerve cel
+
+Index 787 | Word: restitution coefficient | Has Formula: False
+  Def: A measure of the constant elasticity of colliding bodies. It is the ratio of the relative velocity o
+
+Index 790 | Word: restriction | Has Formula: False
+  Def: 1. A condition that imposes a constraint on the possible values of a variable, on the domain of defi
+
+Index 794 | Word: result | Has Formula: False
+  Def: 1. In chemical analysis, it is the final value reported for a measured or computed quantity, after p
+
+Index 795 | Word: resultant | Has Formula: False
+  Def: 1. A s ingle vector that is equivalent to two or more other vectors or is the sum of two or more vec
+
+Index 798 | Word: retardation | Has Formula: False
+  Def: 1. Also known as deceleration , it is the rate of reduction of velocity. Deceleration is acceleratio
+
+Index 799 | Word: retardation factor | Has Formula: False
+  Def: The ratio of time spent in the stationary phase relative to time spent in the mobile phase or the di
+
+Index 802 | Word: retention efficiency | Has Formula: False
+  Def: The ratio of the quantity of particles retained by a separator to the quantity entering it, generall
+
+Index 803 | Word: retention factor | Has Formula: False
+  Def: A measure of the time the sample component resides in the stationary phase relative to the time it r
+
+Index 804 | Word: retentivity | Has Formula: False
+  Def: 1. In a ferromagnetic material, it is the ability to retain its magnetisation after an external indu
+
+Index 809 | Word: reticulum | Has Formula: False
+  Def: 1. Anything resembling a network in structure, as shown in the diagram. 2. Also known as tripe , it 
+
+Index 812 | Word: retinal | Has Formula: False
+  Def: A crystalline retinal pigment, with the chemical formula C19 H27 CHO, which is the aldehyde of vitam
+
+Index 813 | Word: retinol | Has Formula: False
+  Def: A fat-soluble chemical with the chemical formula C20 H30 O. It is diterpenoid and an alcohol derived
+
+Index 821 | Word: retrolental fibroplasia | Has Formula: False
+  Def: A form of blindness occurring in premature babies exposed to high oxygen concentrations during the t
+
+Index 827 | Word: reverse fault | Has Formula: False
+  Def: A type of fault (fracture) which occurs where two blocks of rock are forced together by compression 
+
+Index 828 | Word: reverse genetics | Has Formula: False
+  Def: Any approach to genetic investigation that aims to discover the function for some known protein or g
+
+Index 829 | Word: reverse migration | Has Formula: False
+  Def: A phenomenon in which the migrating organism migrates in the opposite direction of the correct and n
+
+Index 830 | Word: reverse multiplication | Has Formula: False
+  Def: In mathematics, the non- commutative operator defined by reversing the order of multiplication in so
+
+Index 831 | Word: reverse osmosis | Has Formula: False
+  Def: A filtration process that removes many types of large molecules and ions from solutions by applying 
+
+Index 832 | Word: reverse polish notation | Has Formula: False
+  Def: A notation that does not use parenthesis and write operators such as logical constants after their a
+
+Index 837 | Word: reversible process | Has Formula: False
+  Def: Any process in which the variables that define the state of the system can be made to reverse by mea
+
+Index 838 | Word: reversible reaction | Has Formula: False
+  Def: A chemical reaction in which the product(s) formed from the combinationofthe reactant(s) also recomb
+
+Index 840 | Word: reversion | Has Formula: False
+  Def: 1. The restoration of mutation to the wild-type genotype or phenotype by a second mutation. The gene
+
+Index 843 | Word: reynolds number | Has Formula: False
+  Def: A number used in fluid mechanics to determine whether fluid flow in a particular situation will be t
+
+Index 844 | Word: rf value | Has Formula: False
+  Def: The ratio of time spent in the stationary phase relative to time spent in the mobile phase or the di
+
+Index 850 | Word: rhenium | Has Formula: False
+  Def: A heavy, silvery-white metallic element with the symbol Re, atomic number 75, relative atomic mass 1
+
+Index 855 | Word: rheostat | Has Formula: False
+  Def: A type of variable resistor that is used to vary the value of electric current in a circuit without 
+
+Index 859 | Word: rheumatoid arthritis | Has Formula: False
+  Def: A chronic, systemic inflammatory that mainly affects synovial joints but may also affect many tissue
+
+Index 865 | Word: rhizobium | Has Formula: False
+  Def: A soil bacterium found in the nodules of roots of legume species that takes up nitrogen from the atm
+
+Index 876 | Word: rhizosphere | Has Formula: False
+  Def: The soil surrounding the roots of plant containing exudates of the root. It is characterised by a zo
+
+Index 880 | Word: rhodium | Has Formula: False
+  Def: A hard, durable, silvery-white metallic element with the symbol Rh, atomic number 45, relative densi
+
+Index 883 | Word: rhombic | Has Formula: False
+  Def: 1. In botany, a 2-dimensional shape or diamond shaped in outline with the broadest axis in the middl
+
+Index 884 | Word: rhombic sulfur | Has Formula: False
+  Def: A transparent pale yellow crystalline solid, which crystallises from a solution in carbon disulfide.
+
+Index 898 | Word: riboflavine | Has Formula: False
+  Def: The yellow component of the B complex group with the chemical formula C17 H20 N4 O6 . It is an easil
+
+Index 901 | Word: ribose | Has Formula: False
+  Def: An organic compound of aldopentose, which is a monossacharide containing five carbon atoms that, in 
+
+Index 906 | Word: riboswitch | Has Formula: False
+  Def: A region of an RNA molecule, usually a messenger RNA (mRNA), that can directly bind a small target m
+
+Index 908 | Word: ribulose | Has Formula: False
+  Def: A ketopentose sugar with the chemical formula, C5 H10 O5 which is a monosaccharide containing five c
+
+Index 909 | Word: ribulose bisphosphate | Has Formula: False
+  Def: A five-carbon sugar that is combined with carbon dioxide to form three-carbon intermediatesin photos
+
+Index 910 | Word: riccati equation | Has Formula: False
+  Def: In mathematics, a non-linear differential equation of the form y ' = f ( x ) + P( x ) y + Q( x ) y 2
+
+Index 911 | Word: riccia | Has Formula: False
+  Def: A genus of liverworts in the order Marchantiales, family Ricciaceae that is widely distributed throu
+
+Index 913 | Word: rice-herzfeld mechanism | Has Formula: False
+  Def: A mechanism enabling complex chain reactions to give simple rate laws in chemical kinetics. An examp
+
+Index 914 | Word: rice-ramsperger-kassel-marcus theory | Has Formula: False
+  Def: A theory of unimolecular chemical reactions that enables the computation of simple estimates of the 
+
+Index 915 | Word: rich ards onex trap olat ion | Has Formula: False
+  Def: An extrapolation method for improving the rate of convergence of a sequence, using two computed valu
+
+Index 916 | Word: rich text format | Has Formula: False
+  Def: A file format standardised by Microsoft for creating formatted text files. Unlike text files, RTF fi
+
+Index 917 | Word: richter scale | Has Formula: False
+  Def: A measure of the magnitude of seismic waves from an earthquake at its epicentre based on a scale fro
+
+Index 924 | Word: ridge | Has Formula: False
+  Def: 1. A long narrow protuberance or crest, such as on a bone or the backbone of an animal such as a wha
+
+Index 927 | Word: riemann hypothesis | Has Formula: False
+  Def: The conjecture that the zeta function, defined by zeta ( z ) = SUM k = 1 to ∞ k 2 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ 
+
+Index 928 | Word: riemann integral | Has Formula: False
+  Def: Mathematically, it is the definite integral of a real-valued bounded function, defined on a bounded 
+
+Index 929 | Word: riemann mapping theorem | Has Formula: False
+  Def: The theorem that any simply- connected complex domain, whose boundary contains at least two points, 
+
+Index 931 | Word: riemann sum | Has Formula: False
+  Def: A method for approximating the total area underneath a curve or lines on a graph and may also be use
+
+Index 932 | Word: riemann surface | Has Formula: False
+  Def: A complex manifold with one complex dimension. The Riemann surface is a conformal structure.
+
+Index 933 | Word: riemann, georg friedrich bernhard | Has Formula: False
+  Def: German mathematician, who studied mathematics under Gauss at Göttingen, where he later became Profes
+
+Index 934 | Word: riemann-lebesgue lemma | Has Formula: False
+  Def: The lemma that is of importance in harmonic analysis and asymptotic analysis that lim t →∞ f ( x )ex
+
+Index 935 | Word: riemann-stieltjes integration | Has Formula: False
+  Def: A generalisation of the Riemann integral allowing integration of a function, f , with respect to a f
+
+Index 937 | Word: riemann-zeta function | Has Formula: False
+  Def: In mathematics, it is the special function, denoted ζ( s ) that is defined over the complex plane fo
+
+Index 938 | Word: riemannian geometry | Has Formula: False
+  Def: 1. In mathematics, a type of non- Euclidean geometry ideally suited to describing the curvature of s
+
+Index 940 | Word: riesz representation theorem | Has Formula: False
+  Def: In mathematics, it is the theorem that all continuous linear functionals on the space C(S) of real v
+
+Index 941 | Word: riesz-fischer theorem | Has Formula: False
+  Def: In mathematics, it is the theorem that every square summable sequence is the sequence of Fourier coe
+
+Index 942 | Word: riffling | Has Formula: False
+  Def: The separation of a free-flowing sample into (usually) equal parts by means of a mechanical device c
+
+Index 948 | Word: right | Has Formula: False
+  Def: 1. In mathematics, also called right-angled , possessing a right angle; for example, a right circula
+
+Index 950 | Word: right click | Has Formula: False
+  Def: In computing, to press the right button on the mouse and release it, which opens a drop-down menu of
+
+Index 951 | Word: right hand rule | Has Formula: False
+  Def: A relative direction of motion, magnetic field and current flow in a (fore-f inger) f ield motion (t
+
+Index 953 | Word: right-angle | Has Formula: False
+  Def: An angle whose size or measure is ninety degrees (90°) or π /2 radians. Perpendicular lines form rig
+
+Index 954 | Word: right-hand limit | Has Formula: False
+  Def: In mathematics, the one-sided limit of a function defined on an interval from above or from the righ
+
+Index 955 | Word: right-handed coordinate system | Has Formula: False
+  Def: In mathematics, a three-dimensional coordinate system, with the x -, y - and z -axes satisfying the 
+
+Index 956 | Word: rigid body | Has Formula: False
+  Def: In physics, it is a solid body that is not deformable, thus the distance between two points or parti
+
+Index 957 | Word: rigid body motion | Has Formula: False
+  Def: In physics, it is a motion of a body consisting only of rotations described by angular motion; and t
+
+Index 959 | Word: rigidity | Has Formula: False
+  Def: The ability of a body or substance to oppose or withstand forces directed toward changing the body's
+
+Index 960 | Word: rigidity modulus | Has Formula: False
+  Def: The modulus of elasticity for an object exposed to shearing stress. It is expressed as the ratio bet
+
+Index 961 | Word: rigor mortis | Has Formula: False
+  Def: The recognisable sign of death, caused by a chemical change in the muscles after death, resulting in
+
+Index 966 | Word: rinderpest | Has Formula: False
+  Def: An acute and highly infectious viral disease affecting mostly cattle and also seen in sheep and goat
+
+Index 967 | Word: ring | Has Formula: False
+  Def: 1. A set with the following properties: (i) it has two binary operations, addition and multiplicatio
+
+Index 970 | Word: ring network | Has Formula: False
+  Def: A local area network (LAN) in which each device is connected to two other devices to form a closed l
+
+Index 973 | Word: ring rot | Has Formula: False
+  Def: 1. A fungus disease that affects sweet potatoes caused by Rhizopus stolonifer and marked by rings of
+
+Index 974 | Word: ring species | Has Formula: False
+  Def: A connected series of neighbouring species that can interbreed with relatively closely related speci
+
+Index 978 | Word: ringelmann chart | Has Formula: False
+  Def: A chart which has been used in air pollution evaluation for assigning the degree of blackness of smo
+
+Index 986 | Word: ripple | Has Formula: False
+  Def: 1. Also known as capillary wave and capillary ripple , it is a surface wave occurring at the interfa
+
+Index 988 | Word: rise | Has Formula: False
+  Def: In mathematics, the vertical distance between a pair of points on a graph or the difference between 
+
+Index 997 | Word: river continuum concept | Has Formula: False
+  Def: The concept of a river as an ecosystem whose character changes continually between its source and mo
+
+Index 1013 | Word: robotics | Has Formula: False
+  Def: The study of the design, manufacture and operation of general purpose, programmable machine systems 
+
+Index 1014 | Word: rochelle salt | Has Formula: False
+  Def: A colourless cyrstalline double salt with the chemicalformula KNaC4 H4 O6 .4H2 O. It is tartaric aci
+
+Index 1017 | Word: rock crystal | Has Formula: False
+  Def: A colourless transparent, flawless variety of the silica mineral quartz. It has good optical propert
+
+Index 1018 | Word: rock cycle | Has Formula: False
+  Def: The system of the three main rock types (sedimentary, metamorphic, and igneous) changing from one in
+
+Index 1020 | Word: rock salt | Has Formula: False
+  Def: A naturally occurring crystalline mineral consisting of sodium chloride (NaCl) with a hardness of 2.
+
+Index 1022 | Word: rocket | Has Formula: False
+  Def: A projectile such as a missile, spacecraft, aircraft or other vehicle containing its own fuel, as we
+
+Index 1023 | Word: rocket engine | Has Formula: False
+  Def: A reaction engine that obtains thrust based on the Newtonian principle that "to every action there i
+
+Index 1024 | Word: rocket plane | Has Formula: False
+  Def: An aircraft that uses one or more rocket engines for propulsion, possibly in addition to jet engines
+
+Index 1025 | Word: rocket propulsion | Has Formula: False
+  Def: A type of reaction propulsion in which the propulsive force is generated by accelerating and dischar
+
+Index 1034 | Word: roentgen-hour-metre | Has Formula: False
+  Def: The unit of effective strength of a radioactive source that produces gamma rays, a form of high- ene
+
+Index 1036 | Word: rogers-ramanujan identities | Has Formula: False
+  Def: In mathematics, they are two identities related to basic hypergeometric series.
+
+Index 1038 | Word: rogue value | Has Formula: False
+  Def: In computing, it is a special value in the context of an algorithm that is used to mark the end of a
+
+Index 1040 | Word: rolle's theorem | Has Formula: False
+  Def: In mathematics, the theorem that any real- valued differentiable function that attains equal values 
+
+Index 1044 | Word: rolling | Has Formula: False
+  Def: 1. Moving by revolving or turning over and over as a ball or a wheel. 2. Rising and falling in gentl
+
+Index 1045 | Word: rolling friction | Has Formula: False
+  Def: The friction or force that hinders the motion of an object such as aballortirerolling along a surfac
+
+Index 1046 | Word: roman numerals | Has Formula: False
+  Def: A numeration system, created and originally used by the ancient Romans more than 2000 years ago, bas
+
+Index 1049 | Word: root | Has Formula: False
+  Def: 1. In anatomy, it is the end of a nerve that is nearer to the centre of the body or the portion of a
+
+Index 1050 | Word: root cap | Has Formula: False
+  Def: A cone-shaped structure that covers the root tip and develops as a result of cell division by merist
+
+Index 1053 | Word: root directory | Has Formula: False
+  Def: In computer science, it is t he top-level directory of a tree-and-branch filing system that contains
+
+Index 1056 | Word: root mean square | Has Formula: False
+  Def: 1. In mathematics, it is also known as quadratic mean and is a statistical measure of the magnitude 
+
+Index 1058 | Word: root of unity | Has Formula: False
+  Def: A solution of the equation x n =1, where n is a positive integer. They are located on the unit circl
+
+Index 1059 | Word: root pressure | Has Formula: False
+  Def: The osmotic pressure within the cells of a root system that forces water absorbed from the soil to m
+
+Index 1064 | Word: rootkit | Has Formula: False
+  Def: A software program designed to provide a user with administrator access to a computer without being 
+
+Index 1069 | Word: rose curve | Has Formula: False
+  Def: Also known as rose in mathematics, it is a curve plotted in polar coordinates and shaped like a peta
+
+Index 1074 | Word: rosin | Has Formula: False
+  Def: A hard, brittle, colourless, yellow, brown or black natural resin, insoluble in water, but soluble i
+
+Index 1083 | Word: rotary cultivator | Has Formula: False
+  Def: A motorised cultivator mounted on or trailed by a machine with a shaft bearing and a number of L-sha
+
+Index 1091 | Word: rotation | Has Formula: False
+  Def: 1. A mathematical transformation of an object in a circular motion around an imaginary line called a
+
+Index 1093 | Word: rotation group | Has Formula: False
+  Def: A group formed by the set of all rotations about the origin of three-dimensional Euclidean space und
+
+Index 1095 | Word: rotational diffusion | Has Formula: False
+  Def: A process by which the equilibrium statistical distribution of the overall orientation of molecules 
+
+Index 1097 | Word: rotational inertia | Has Formula: False
+  Def: A measure of an object's resistance to changes to its rotation, which is the sum of all the.
+
+Index 1098 | Word: rotational motion | Has Formula: False
+  Def: The rotation of a particle about a fixed point in space or the motion of a rigid body in such a way 
+
+Index 1099 | Word: rotational spectroscopy | Has Formula: False
+  Def: The study in the electromagnetic radiation spectrum, especially in the microwave region, of absorpti
+
+Index 1100 | Word: rotational symmetry | Has Formula: False
+  Def: The property of a plane figure that does not change its identity when rotated, but remains identical
+
+Index 1106 | Word: rotenone | Has Formula: False
+  Def: The active ingredient of the insecticide derris, which is an odourless white crystalline compound wi
+
+Index 1107 | Word: roth's theorem | Has Formula: False
+  Def: The culminating theorem of rational approximation that for any algebraic irrational number α and for
+
+Index 1109 | Word: rotometer | Has Formula: False
+  Def: A device, based on Stokes law, for measuring the rate of fluid flow. It is a tapered vertical tube h
+
+Index 1112 | Word: rouché's theorem | Has Formula: False
+  Def: In mathematics, it states that if the complex-valued functions f and g are holomorphic in and on som
+
+Index 1121 | Word: round | Has Formula: False
+  Def: 1. Shaped like a circle, a cylinder or a sphere. In topology, the terms circle and sphere refer to t
+
+Index 1127 | Word: round-off error | Has Formula: False
+  Def: In mathematics, it is the difference between the precise value of some quantity and its exact mathem
+
+Index 1131 | Word: row | Has Formula: False
+  Def: In mathematics, it is a horizontal linear array of numbers or terms, especially in a matrix. For exa
+
+Index 1134 | Word: row equivalence | Has Formula: False
+  Def: In mathematics, two matrices are row equivalent if one can be obtained from the other by a finite se
+
+Index 1136 | Word: row rank | Has Formula: False
+  Def: In mathematics, it is the maximum number of linearly independent row space in the matrix. Column ran
+
+Index 1137 | Word: row space | Has Formula: False
+  Def: In a matrix, it is the vector space spanned by the rows of a matrix. This space has dimension equal 
+
+Index 1139 | Word: row vector | Has Formula: False
+  Def: A1 × n matrix having only one row.
+
+Index 1140 | Word: row-reduced echelon form | Has Formula: False
+  Def: A matrix that is in a row echelon form (has undergone Gaussian elimination), with the following prop
+
+Index 1144 | Word: rrkm theory | Has Formula: False
+  Def: A theory of unimolecular chemical reactions that enables the computation of simple estimates of the 
+
+Index 1145 | Word: rs-232 interface | Has Formula: False
+  Def: A standard type of computer interface approved by the Electronic Industries Alliance (EIA) used to c
+
+Index 1149 | Word: rubidium | Has Formula: False
+  Def: A soft reactive silvery-white metal in Group 1 (IA) of the periodic table (the alkali metals), that 
+
+Index 1150 | Word: rubidium-strontium dating | Has Formula: False
+  Def: A method of dating geological specimens such as rocks, minerals and meteorites, based on the decay o
+
+Index 1153 | Word: ruby | Has Formula: False
+  Def: Natural pink to red impure form of the mineral corundum (aluminium oxide, Al 2 O3 ) with Mohs scale 
+
+Index 1158 | Word: ruffini's capsule | Has Formula: False
+  Def: A flattened capsule containing specialised nerve endings, found in skin and in joint and ligament. I
+
+Index 1162 | Word: rule | Has Formula: False
+  Def: 1. In mathematics, a widely accepted procedure for solving a problem, for example, the transformatio
+
+Index 1163 | Word: rule of detachment | Has Formula: False
+  Def: In logic, the principle or rule of inference that whenever a conditional statement and its anteceden
+
+Index 1164 | Word: rule of false position | Has Formula: False
+  Def: A method of solving equations by using a trial and error values for the variables and then adjusting
+
+Index 1165 | Word: rule of inference | Has Formula: False
+  Def: In logic, a function which takes premises, analyses their syntax and returns a conclusion. In other 
+
+Index 1166 | Word: rule of three | Has Formula: False
+  Def: In mathematics, the rule that the product of the extremes of a proportion is equal to the product of
+
+Index 1167 | Word: ruled surface | Has Formula: False
+  Def: A surface that is built up from an infinite number of perfectly straight lines. A cylinder, for exam
+
+Index 1168 | Word: ruler | Has Formula: False
+  Def: A long narrow flat piece of plastic, metal or wood with straight edges marked in centimetres or inch
+
+Index 1169 | Word: rules of good husbandry | Has Formula: False
+  Def: A set of rules in agriculture passed in the United Kingdom, which if they are deemed to have been br
+
+Index 1172 | Word: rumford, count benjamin thompson | Has Formula: False
+  Def: American-born British physicist, who acted as a British spy during the American Revolution, forced t
+
+Index 1175 | Word: run | Has Formula: False
+  Def: 1. In mathematics, it is how far a line goes along (for a given distance going up). In mathematics, 
+
+Index 1177 | Word: runge-kutta method | Has Formula: False
+  Def: A numerical approximation technique for solving ordinary differential equations, used in computer an
+
+Index 1181 | Word: runoff rate | Has Formula: False
+  Def: 1. The amount of excess fertiliser or pesticide from farmland that flow into rivers in a specific pe
+
+Index 1194 | Word: ruthenium | Has Formula: False
+  Def: A hard silvery-white metallic element in Group 8 (VIIIB) of the Periodic Table (the transition eleme
+
+Index 1196 | Word: rutherford and royds' apparatus | Has Formula: False
+  Def: An apparatus designed by Ernest Rutherford (1871-1937), British physicist and Thomas Royds (1884 - 1
+
+Index 1197 | Word: rutherford scattering | Has Formula: False
+  Def: The elastic scattering of charged particles by the Coulomb interaction exerted by the atomic nuclei 
+
+Index 1198 | Word: rutherford, ernest | Has Formula: False
+  Def: A New Zealand-born British physicist, who became known as the father of nuclear physics. After studi
+
+Index 1200 | Word: rutile | Has Formula: False
+  Def: A natural form of titanium(IV) oxide, which is a dark reddish brown titanium dioxide with the chemic
+
+Index 1201 | Word: rydberg constant | Has Formula: False
+  Def: The most accurately measured of the fundamental constants, relating to the wave number of atomic spe
+
+Index 1202 | Word: rydberg formula | Has Formula: False
+  Def: A formula named after Swedish physicist, Johannes Rydberg (1854-1919). It is used in atomic physics 
+
+Index 1204 | Word: rydberg spectrum | Has Formula: False
+  Def: The ultraviolet absorption spectrum of a gas in the ultraviolet region, which is made up of a series
+
+Index 1208 | Word: rye grass | Has Formula: False
+  Def: A short-lived perennial, leafy, tufted plant, native to Europe and belonging to the family Gramineae
+

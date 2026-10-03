@@ -1,0 +1,1210 @@
+0 | r | Having a reddish-brown or rust-like colour, frequently used 
+1 | r | Having a reddish-brown or rust-like colour, frequently used 
+2 | r group | The specific identity side chain of an amino acid. There are
+3 | r plasmid | Abbreviation for resistance plasmid , a bacterial plasmid ca
+4 | r-process | The nucleosynthesis process in which a nucleus captures a la
+5 | r-programming language | An open source scripting language for predictive analytics a
+6 | r-selected species | Species whose populations increase rapidly, often exponentia
+7 | r-selection | A type of selection that favours organisms with a high bioti
+8 | raabe's test | In mathematics, a test for the convergence of a series: if a
+9 | rabbit | 1. A small common herbivorous burrowing mammal of the family
+10 | rabbit hutch | A container with a wire front in which a rabbit is kept.
+11 | rabi model | A quantum mechanical model describing the interaction betwee
+12 | rabies | An acute viral disease that causes inflammation of the brain
+13 | race | A population of interbreeding species that develops distinct
+14 | racemate | An equimolar mixture of a pair of enantiomers. It does not e
+15 | raceme | A type of inflorescence in which the main flower stalk is un
+16 | racemic compound | A crystalline racemate in which the two enantiomers are pres
+17 | racemic conglomerate | An equimolar mechanical mixture of crystals each one of whic
+18 | racemiform | An inflorescence with the form of a raceme, but not necessar
+19 | racemisation | The formation of racemic mixtures from optically active comp
+20 | racemose inflorescence | A type of flowering shoot in which the meristematic activity
+21 | rachis | 1. The main axis or shaft such as the main stem of a compoun
+22 | rad | A unit of energy absorbed from ionising radiation, defined a
+23 | radar | A device for locating objects in space, that uses reflected 
+24 | radar astronomy | The use of radar techniques in which short bursts of radio w
+25 | radar meteor | A meteor detected by bouncing a radar signal offthe train of
+26 | raddle | A long, flexible length of wood which is interwoven with oth
+27 | radial | 1. Of or arranged like rays. 2. Of, relating to or situated 
+28 | radial artery | A major artery that follows the course of the radius on the 
+29 | radial circuit | A circuit used in household wiring for lights or sockets whe
+30 | radial cleavage | A type of holoblastic cleavage in which embryonic developmen
+31 | radial component | The component of a vector quantity in the direction of the r
+32 | radial distribution function | The variation of atomic density as a function of the distanc
+33 | radial electrostatic field analyser | An arrangement of two conducting sheets forming a capacitor 
+34 | radial field | A field in which the field lines diverge radially outward fr
+35 | radial nerve | One of the main nerves of the arm, running from the shoulder
+36 | radial symmetry | 1. A line or symmetry about one of several lines or planes t
+37 | radian | A unit of measurement whose angle is equal to 57.3 o , equiv
+38 | radiata | A taxonomic rank that has been used for members of the radia
+39 | radiation | Energy travelling in the form of particles or electromagneti
+40 | radiation belts | A toroidal region within a planet's magnetosphere, where cha
+41 | radiation biology | The study of how living things are affected by ionising radi
+42 | radiation chemistry | The part of chemistry which deals with the chemical effects 
+43 | radiation counter | Radiation measuring assembly comprising a radiation detector
+44 | radiation damage | Damage caused by changes in the properties of liquids, gases
+45 | radiation detector | A device in which incident radiation produces a measurable e
+46 | radiation hazard | Hazard that exists in a region where there is a radiation fi
+47 | radiation pressure | The pressure exerted on objects by an electromagnetic radiat
+48 | radiation sickness | A damage to organ tissue caused by over-exposure to ionising
+49 | radiation spectrum | The components of radiation arranged in order of their wavel
+50 | radiation temperature | The surface temperature of an object in space, measured over
+51 | radiation therapy | The use of ionising radiation, in the form of rays from an o
+52 | radiation trapping | A process by which the resonance radiation emitted in a lamp
+53 | radiation units | Units of measurement for radioactivity and radiation doses a
+54 | radiationless deactivation | Loss of electronic excitation energy without photon emission
+55 | radiationless decay | The decay of an atom or molecule from an excited state to a 
+56 | radiationless transition | A transition between two states of a system without photon e
+57 | radiative absorption | A process by which a particle in the ground state or an exci
+58 | radiative capture | The capture of a particle by a nucleus followed by immediate
+59 | radiative collision | A collision between two charged particles in which part of t
+60 | radiative de-excitation | The change in the internal energy of a particle may be due t
+61 | radiative energy transfer | Transfer of excitation energy by radiative deactivation of a
+62 | radiative forcing | The change in the value of the net radiative flux (i.e., the
+63 | radiative forcing scenario | A plausible representation of the future development of radi
+64 | radiative lifetime | Lifetime of an excited molecular entity in the absence of ra
+65 | radiative transition | A transition between two states of a molecular entity, the e
+66 | radiators | 1. A device that cools an internal combustion engine and pre
+67 | radical | 1. Also called free radicals , it is a group of atoms, molec
+68 | radical axis | The locus of points (P) at which tangents drawn to two circl
+69 | radical centre | 1. The point of intersection of the respective radical axes 
+70 | radical fraction | The generalisation of decimal fractions to other bases of pl
+71 | radical ion | A polyatomic ion that has a positive charge called radical c
+72 | radical pair | The term is used to identify two radicals in close proximity
+73 | radicand | A number or quantity, usually put under the radical sign fro
+74 | radicant | A root arising from or above the prostrate stem.
+75 | radicicolous | Positioned directly upon the root crown or in roots.
+76 | radicle | The embryonic root of seed plants which is the first structu
+77 | radii | Plural of radius. The radius is half a diameter or the dista
+78 | radio | A means of transmitting signals by modulation of electromagn
+79 | radio astronomy | A branch of astronomy that studies the radio- frequency radi
+80 | radio beacon | A fixed ground-based radio transmitter that sends out radio 
+81 | radio button | In computing, it is a dialogue box that presents two or more
+82 | radio frequencies | The range of electromagnetic waves with frequencies between 
+83 | radio frequency identification | A small tag that uses radio-frequency electromagnetic fields
+84 | radio galaxy | An active galaxy that strongly radiates energy in the form o
+85 | radio interferometer | An array of antennas that operate together as if they were a
+86 | radio source | Astronomical objects that emit radio waves. Radio sources in
+87 | radio star | Stellar objects that produce copious emissions of various ra
+88 | radio telescope | A system of instruments for detecting radio waves emitted by
+89 | radio transmission | The transmission of signals from a transmitting aerial throu
+90 | radio transparent | Materials that are transparent to radiation, especially to x
+91 | radio waves | Electromagnetic wavelengths in the electromagnetic spectrum 
+92 | radio window | A range of frequencies in the range of 10 000 to 40 000 mega
+93 | radioactive | Referring to a substance such as uranium or plutonium that e
+94 | radioactive age | The time, estimated from measurement of the isotopic composi
+95 | radioactive collision | A collision between charged particles in which a neutron is 
+96 | radioactive contamination | A radioactive substance in a material or place where it is u
+97 | radioactive cooling | The cooling of the earth's surface and the air near the surf
+98 | radioactive dating | A method of estimating the age of an ancient object or speci
+99 | radioactive decay | A process of continuous spontaneous disintegration in which 
+100 | radioactive decay law | A law stating that the rate at which radioactive nuclei in a
+101 | radioactive emissions | Alpha and beta particles and gamma rays emitted during radio
+102 | radioactive equilibrium | The condition of equilibrium reached by a radioactive series
+103 | radioactive fallout | The deposition on the ground of radioactive substances from 
+104 | radioactive material | A material that emits radiation due to radioactive decay. Ex
+105 | radioactive series | A series of radioactive decay in which each nuclide is trans
+106 | radioactive source | Any quantity of radioactive material which is intended for u
+107 | radioactive standard | A radioactive-isotope of a known number and rate of radioact
+108 | radioactive tracer | A substance or compound containing radioactive isotope conce
+109 | radioactive tracer technique | A technique for investigating recovery and loss of a microco
+110 | radioactive waste | Any material such as a solid, liquid or gaseous waste, which
+111 | radioactivity | The spontaneous disintegration of unstable nuclei to produce
+112 | radiobiology | A branch of science that studies the radioactive effects of 
+113 | radiocarbon cycle | Production and recycling of the radioisotope carbon-l4 ( 14 
+114 | radiocarbon dating | The method of dating organic remains such as bone or wood, b
+115 | radiochemical activation analysis | A kind of activation analysis in which, after the irradiatio
+116 | radiochemical purification | Chemical separation applied to a radioactive preparation in 
+117 | radiochemical purity | For a material, the fraction of the stated isotope present i
+118 | radiochemical separation | Separation by a chemical means of the radioactive isotopes o
+119 | radiochemical yield | The yield of a radiochemical separation expressed as a fract
+120 | radiochemistry | The branch of chemistry that is concerned with radioactive s
+121 | radiochromatograph | A measuring assembly designed to measure the spatial or time
+122 | radiogenic | An isotope produced by the process of radioactive decay. An 
+123 | radiography | The process of producing images of an opaque object on photo
+124 | radiogravimetric analysis | A kind of quantitative analysis in which the activity of a p
+125 | radioimmunoassay | A sensitive method for measuring the level of antigens such 
+126 | radioiodination | The process of incorporating the radionuclides of iodine, us
+127 | radioisotope | An isotope that is radioactive and having an unstable nucleu
+128 | radioisotope imaging | The formation of images by administering radioisotopes inter
+129 | radioisotope induced x-ray emission analysis | A kind of analysis based on the measurement of the energies 
+130 | radioisotope scanning | The use of a radioactive substance, which is administered in
+131 | radiolarian | Any protozoan of the class Polycystinea (superclass Actinopo
+132 | radiolocation | The location of distant objects by means of radar using radi
+133 | radiology | The study and use of x-rays, gamma rays, radioactive isotope
+134 | radioluminescence | Luminescence arising from excitation by high-energy particle
+135 | radiolysis | The cleavage of one or several bonds resulting from exposure
+136 | radiometer | An instrument that detects and measures the intensity of rad
+137 | radiometric analysis | A kind of quantitative analysis in which measurement of the 
+138 | radiometric dating | A method of dating geological features such as rocks by the 
+139 | radiometric titration | A titration in which a radioactive indicator is used to moni
+140 | radiometry | The measurement of quantities associated with radiant energy
+141 | radionuclide | A naturally occurring or artificially produced atom with an 
+142 | radionuclide scanning | A diagnostic technique that is based on the detection of rad
+143 | radionuclidic purity | For a material, that fraction of the total activity which is
+144 | radiopaque | Any material such as a metal object that does not allow elec
+145 | radiopharmaceutical | A radioactive drug or substance, such as radioactive iodine 
+146 | radioresistant | Able to withstand high doses of ionising radiation without s
+147 | radioscopy | The use of x-rays or other electromagnetic radiation to stud
+148 | radiosensitive | Quickly injured by exposure to ionising radiation.
+149 | radiosonde | A package of meteorological instruments launched into the at
+150 | radiotherapy | The treatment of diseases such as cancerous growths by which
+151 | radium | A white highly radioactive metallic element in Group 2 (IIA)
+152 | radius | 1. The shorter of the two long bones of the lower arm of hum
+153 | radius of convergence | The radius of the largest circle or interval in the real cas
+154 | radius of curvature | The radius of a circle that touches the inside of the curve 
+155 | radius of gyration | The distance between the point about which rotation of a bod
+156 | radius of normal curvature | Of a surface in a given direction, it is the absolute value 
+157 | radius vector | 1. A directed line from the origin of a coordinate system to
+158 | radix | 1. The number that is to be raised to a power. For example, 
+159 | radix fraction | The generalisation of decimal fractions to other bases of pl
+160 | radix point | The symbol or decimal part, usually a dot (.) used to separa
+161 | radon | A heavy, colourless and gaseous radioactive element with a s
+162 | radon's theorem | The theorem that any n + 2 points in an n -dimensional vecto
+163 | radon-nikodym derivative | In mathematics, the function f , denoted d λ / d µ, that pos
+164 | radon-nikodym theorem | The theorem that, given a sigma- finite measure µ. and a sig
+165 | radula | A tongue-like organ of molluscs, used for feeding. It consis
+166 | raffinate | A liquid purified by solvent extraction to remove solutes fr
+167 | raffinose | A colourless or white, crystalline trisaccharide carbohydrat
+168 | ragwort | A weed of the genus Senecio in the composite family with yel
+169 | raid | Formerly called redundant array of inexpensive disks, it is 
+170 | rain | A liquid precipitation in which water condensed from vapour 
+171 | rain forest | A region characterised by high annual rainfall and evergreen
+172 | rain gauge | An instrument for measuring precipitations such as rain, sno
+173 | rain out | The mechanism by which small particles in the clouds are rem
+174 | rain shadow | An area of low rainfall on the lee side of a mountain barrie
+175 | rain tree | A large tropical tree of about 60 metres tall belonging to t
+176 | rainbow | An optical effect of the sky appearing as spectrum of light 
+177 | raise | In mathematics, to raise to a power is to multiply a number 
+178 | ram | 1. An abbreviation in computing for Random-access memory , w
+179 | ramal | Relating to the branches.
+180 | raman effect | The change in wavelength and phase exhibited by monochromati
+181 | raman spectroscope | A type of spectrometer based on the Raman effect. Unlike mos
+182 | raman, chandrasekhar venkata | Indian physicist who was awarded the 1930 Nobel Prize in Phy
+183 | ramapithecus | A genus of extinct primates that lived about 12 to 14 millio
+184 | ramentum | Any of the small brown chaff-like that cover the young frond
+185 | ramification | The arrangement of branches or branching parts. Ramiform mea
+186 | ramjet | A jet engine in which air is drawn in and compressed by the 
+187 | ramose | Having many branches.
+188 | ramsay, sir william | British chemist, who became a professor at University Colleg
+189 | ramsden eyepiece | An eyepiece used for optical instruments consisting of two i
+190 | ramsey theorem | In mathematics, the theorem, which states that for any two p
+191 | ramus communicans | A nerve which connects two other nerves. It is most often us
+192 | ranch | A large-scale commercial farm where cattle, sheep, horses or
+193 | rancid | The strong unpleasant taste or smell associated with decompo
+194 | randall-sundrum scenario | A variant of the brane world picture in which gravity is tra
+195 | random | 1. In statistics, describing a set in which all the members 
+196 | random access memory | A type of primary computer memory in the form of integrated 
+197 | random access memory digital-to-analogue converter | The portion of a computer video card that converts the digit
+198 | random coil | The complete set of spatial arrangements of a chain molecule
+199 | random coincidence | A coincidence of events occurring in not physically connecte
+200 | random copolymer | A copolymer consisting of macromolecules in which the probab
+201 | random draw | Taking an object from a set of objects in which each object 
+202 | random error | Result of a measurement minus the mean that would result fro
+203 | random events | Events which do not have deterministic regularity but posses
+204 | random experiment | An experiment in which the outcome is not predictable in adv
+205 | random number generator | A part of the software of most computers and many calculator
+206 | random number table | A table made up of a sequence of randomly chosen digits from
+207 | random numbers | A sequence of numbers that have no detectable pattern in the
+208 | random sample | The sample so selected that any portion of the population ha
+209 | random uncertainty | An uncertainty produced by unknown and unpredictable variati
+210 | random variable | A variable whose value is determined by the result of a rand
+211 | random vector | An n -tuple of random variables, whose values depend on the 
+212 | random walk | 1. In statistics, a route taken by a point or quantity, cons
+213 | randomize | To select or order data or individuals in a deliberate way, 
+214 | randomly amplified polymorphic dna | A polymerase chain reaction, used to amplify segments of an 
+215 | randomness | The lack of accuracy in a pattern or order in a physical sys
+216 | raney nickel | A spongy form of nickel, made by treating aluminium-nickel a
+217 | range | 1. In mathematics, it is the set of all values that can be t
+218 | range of data | The difference between the highest and the lowest data point
+219 | range of function | The complete set of all possible outputs (values of the depe
+220 | range of significance | The set of subjects for which a given predicate is intelligi
+221 | rangefinder | An optical instrument used to determine the distance of an o
+222 | rangeland | A collection of native grasses and shrubs that cover an arid
+223 | ranging pole | A pole usually held vertically, used to mark a specific posi
+224 | ranitidine | The name for an anti-ulcer drug with the chemical formula C1
+225 | rank | 1. Also known as category , it is a position or status of a 
+226 | rankine cycle | A cycle of operations in a heat engine consisting of heat ad
+227 | rankine scale | A temperature scale expressing absolute temperature in Fahre
+228 | ranksite | A mineral with the chemical formula 2Na 2 CO3 .9Na 2 SO4 . K
+229 | raoult's law | A law established by François-Marie Raoult in 1882, which st
+230 | raphe | 1. A line or ridge visible on a seed coat which marks the fu
+231 | raphide | A needle-shaped crystal, often of calcium oxalate, found in 
+232 | rapid access computing environment | A software service platform by the United States Department 
+233 | rapid climate change | Sudden unexpected changes in the climate due to non-linearit
+234 | rapid-eye-movement sleep | One of the stages of sleep that recurs several times in most
+235 | rapiformis | Shaped like a turnip.
+236 | raptor | 1. A bird of prey, such as an eagle or hawk. 2. A small or m
+237 | rare gases | Any of the seven chemical elements that make up Group 18 (VI
+238 | rare-earth elements | Series of elements in the Periodic Table, with atomic number
+239 | rarefaction | A reduction in the pressure or density of a fluid or gas.
+240 | ras protein | A small G protein that controls cell growth and other activi
+241 | raschig process | An industrial process for making chlorobenzene and phenol by
+242 | rasmol | A computer program originally developed by Roger Sayle in th
+243 | raster | The pattern of horizontal lines called scan lines of a telev
+244 | raster graphics | One of the two main formats in which graphical images are st
+245 | raster image processor | A program in a laser printer or other high-resolution printe
+246 | rat | 1. Common name for any large member of the mammalian order o
+247 | ratchet | A mechanism used especially in lifting devices and some hand
+248 | rate | 1. A measurement, quantity, or frequency, typically one meas
+249 | rate constant | The mathematical constant of proportionality for a chemical 
+250 | rate equation | An equation that relates the rate of a chemical reaction to 
+251 | rate law expression | The mathematical expression relating the rate of reaction to
+252 | rate of change | The rate at which one quantity changes with respect to anoth
+253 | rate of convergence | The speed at which a convergent sequence approaches its limi
+254 | rate of cooling | The rate of fall in temperature, which equals the slope of a
+255 | rate of migration | The distance of migration divided by time, sometimes called 
+256 | rate of nucleation | The number of nuclei formed in unit time per unit volume of 
+257 | rate of reaction | The speed at which a chemical reaction takes place in a reac
+258 | rate table | A display of rate information. In a rate table, the fraction
+259 | rate unit | A compound unit such as kilometres per hour, dollars per kil
+260 | rate-determining step | The slowest step in a mechanism, which is the step that dete
+261 | ratemeter | An instrument used to measure the count rate of a radioactiv
+262 | ratio | A measure of the relative size of two quantities a to b expr
+263 | ratio of similitude | In mathematics, it is the ratio of proportionality between s
+264 | ratio scale | In statistics, it is a scale of measurement of data that has
+265 | ratio test | 1. Also known as Cauchy's ratio test , it is a test for a co
+266 | ratio theorem | The theorem that if a point P divides a directed line segmen
+267 | ration | A fixed amount of food given to an animal or person per day.
+268 | ration formulation | The process of putting together different amounts of feed in
+269 | rational | 1. In mathematics, expressing as a ratio of two integers inv
+270 | rational element | A Dedekind cut corresponding to a rational number in Dedekin
+271 | rational exponents | For any non zero number b and any integer m and n, with n > 
+272 | rational form | A square matrix in which the only non-zero entries are in su
+273 | rational function | A function of the form , g ( x ) ≠ 0, where f ( x ) and g ( 
+274 | rational numbers | Any number that is the result of dividing one integer by ano
+275 | rational polynomial | Any ratio of two polynomials.
+276 | rational root theorem | It states that, if the polynomial equation anxn + a n^-1 x n
+277 | rationalise | 1. The process of eliminating radicals from an irrational fr
+278 | rationalised unit | A unit for which the defining equation conforms to the geome
+279 | ratitae | Any of flightless species of birds including the ostrich ( S
+280 | ratoon | The regrowth of a crop after it has been harvested once. Exa
+281 | rattle | 1.The sound-producing organ on a rattlesnake's tail, consist
+282 | raunkiaerian system | A system of plant classification in which plants are grouped
+283 | rauwolfia | A genus of evergreen flowering shrub of between 3-6 m high; 
+284 | raw data | Data that has not been processed or ordered or arranged in a
+285 | raw file | A collection of unprocessed data or a file that has not been
+286 | ray | 1. In physics, it is a narrow beam of radiating light from t
+287 | ray diagram | A diagram used to locate the paths of selected rays through 
+288 | ray fungus | A group of prokaryotic organisms called actinomycetes , whic
+289 | ray-finned | A group of bony fish such as trout, tuna, salmon, goldfish, 
+290 | rayleigh criterion | The criterion for spontaneous pressure oscillations to accom
+291 | rayleigh distribution | The distribution of the distance between a point and its nea
+292 | rayleigh quotient | The ratio r A ( x ) = x , Ax x , x of which, for a positive 
+293 | rayleigh scattering | Named after the British physicist Lord Rayleigh (1842-1910),
+294 | rayleigh, john william strutt | British physicist, educated at the University of Cambridge a
+295 | rayleigh-jeans formula | A law giving the intensity of radiation emitted by a blackbo
+296 | rayleigh-ritz method | A method of obtaining approximate solutions to functional eq
+297 | rayleigh-taylor instability | A type of fluid instability that occurs any time a dense, he
+298 | raynaud's disease | A chronic condition in which the blood supply to the skin is
+299 | rayon | A silky artificial fibre produced from naturally occurring p
+300 | rca cable | An audio/video cable with yellow, red and white connectors o
+301 | re-entrant angle | In an irregular polygon, it is an interior angle that is gre
+302 | re-entrant polygon | A concave three dimensional figure with many sides and an in
+303 | reabsorption | The return to the blood of most of the glomerular filtrate s
+304 | reachable set | 1. In mathematics, the set of state values that can be attai
+305 | reachable set | In a directed graph, the set of points that can be reached f
+306 | reactance | The opposition to the flow of alternating current by either 
+307 | reactant | A substance that directly reacts with another in a chemical 
+308 | reacting bond rules | 1. For an internal motion of a molecular entity correspondin
+309 | reaction | 1. A transformation in which one or more chemical elements o
+310 | reaction barrier | The energy barrier to chemical reaction. In vibrationally ad
+311 | reaction centre | The site of the light reactions of photosynthesis in the chl
+312 | reaction dynamics | A branch of chemical kinetics that is concerned with the int
+313 | reaction force | The equal and opposite force produced by an object in reacti
+314 | reaction mechanism | The sequence of elementary reactions that lead to chemical t
+315 | reaction norm | The pattern of expression of a given phenotype of a single g
+316 | reaction order | The classification of chemical reactions based on the power 
+317 | reaction propulsion | Propulsion by means of reaction to a jet of gas or fluid pro
+318 | reaction quotient | The function of the activities of any set of conditions invo
+319 | reaction stage | A set of one or more (possibly experimentally inseparable) r
+320 | reaction step | An elementary reaction, constituting one of the stages of a 
+321 | reaction stoichiometry | It describes the quantitative relationships in substances as
+322 | reaction time | 1. Also known as latent period , it is the period of time th
+323 | reaction wood | Structurally abnormal wood formed in response to various str
+324 | reactive | As applied to a chemical species, the term expresses a kinet
+325 | reactive blending | Mixing process that is accompanied by the chemical reaction(
+326 | reactive complex | A species of very short life that occurs as an intermediate 
+327 | reactive dye | A method of dyeing introduced in 1956, which forms stable ch
+328 | reactive oxygen species | Any of various highly reactive molecules that contain oxygen
+329 | reactive polymer | Polymer having reactive functional groups that can undergo c
+330 | reactive scattering | If in a molecular-beam experiment a chemical reaction occurs
+331 | reactivity index | Any numerical index derived from quantum mechanical model ca
+332 | reactivity series | A series of chemical elements arranged in descending order o
+333 | reactor | 1. In electricity, it is a device such as inductor or capaci
+334 | read | 1. In computing, it refers to acessing programme instruction
+335 | read error | In computing, it refers to a failure that occurs when the co
+336 | read head | Electromagnetic device that converts digital information sto
+337 | read-only memory | A memory chip from which data can only be read by the CPU. T
+338 | read-write head | Electromagnetic part of a disk drive that transforms the rec
+339 | readability | The smallest fraction of a division to which the index scale
+340 | reading frame | A sequence of bases in the messenger RNA (mRNA) that encodes
+341 | readme | A text file containing information for the user about the so
+342 | readthrough | A very important process of information decoding, which is t
+343 | ready reckoner | A set of mathematical tables, especially one used for ready 
+344 | reagent | A substance or compound substance taking part in a chemical 
+345 | real | In mathematics, involving or consisting of real numbers with
+346 | real analysis | The branch of mathematics that deals with real functions. In
+347 | real analytic | The real analytic of a real function is one possessing deriv
+348 | real axis | The x-axis or horizontal axis of an Euclidean or Argand diag
+349 | real function | A function f that takes only real values, such as the numeri
+350 | real gas | A gas that does not behave or exhibit the properties of an i
+351 | real image | An optical representation of an object produced by refractio
+352 | real line | The real numbers regarded as the points on a line; it is usu
+353 | real number | Any number that is irrational or rational and include all po
+354 | real part | In complex number z = x + iy the real number x is called the
+355 | real variable | A variable whose value ranges over the real numbers.
+356 | real-is-positive convention | A convention used in optical formulae relating to lenses and
+357 | real-symmetric | The real-symmetric of a square matrix, n × n is equal to its
+358 | real-time clock, rtc | An on-board semiconductor chip powered by a CMOS battery ins
+359 | real-time system | Software and hardware systems in computing that process info
+360 | real-valued function | A function f that takes only real values, such as the numeri
+361 | realgar | An important ore of arsenic with the chemical formula As 2 S
+362 | really simple syndication | A method of providing website content such as news stories o
+363 | reannealing | In biology, it is the process in which two single strands of
+364 | rearrangement | 1. In chemistry, it is a type of chemical reaction in which 
+365 | rearrangement ion | An electrically charged species, involving a molecular or pa
+366 | rearrangement stage | The elementary reaction or reaction stage (of a molecular re
+367 | reaumur temperature scale | A temperature scale in which water freezes at 0°R and boils 
+368 | reccurring decimal | A decimal in which a pattern of one or more digits is repeat
+369 | received exchange data | In data transfer, the term refers to the line that transmits
+370 | receiver radio | Radio communication system that receives its input in the fo
+371 | receptacle | 1. Also known as thalamus or torus in botany, it is the enla
+372 | receptive field | A region of space in which stimulus influences the activity 
+373 | receptor | 1. A specialised cell or group of cells that detect stimuli 
+374 | receptor mediated endocytosis | An endocytotic mechanism in which specific molecules are ing
+375 | receptor potential | An initial response of a receptor cell to a stimulus, consis
+376 | receptor tyrosine kinases | A diverse group of transmembrane proteins that act as recept
+377 | recessiveness | 1. A condition in which an allele fails to produce a charact
+378 | recharge zone | An area in which water travels downward to become part of an
+379 | rechargeable battery | An electrochemical cell in which the chemical reaction produ
+380 | reciprocal | 1. Also known as inverse , the reciprocal of a number is 1 d
+381 | reciprocal altruism | Altruistic behaviour between unrelated individuals in manner
+382 | reciprocal cross | A type of experimental hybrid breeding which reverses the ro
+383 | reciprocal lattice | A lattice for a crystal constructed by drawing perpendicular
+384 | reciprocal link | A mutual link between two websites. For example, if website 
+385 | reciprocal polar curve | A pair of curves such that the polar of each point of one is
+386 | reciprocal polar figure | The figure related to a given configuration of points and li
+387 | reciprocating engine | An engine in which a piston oscillates in a cylinder, being 
+388 | reciprocation | In mathematics (geometry), it is the transformation of a con
+389 | reclaim | To make land such as marshy land, desert and even water bodi
+390 | reclinate | Bent abruptly downward towards the base.
+391 | reclining | Bending downward; leaning or lying upon something and being 
+392 | recognition sequence | A specific sequence of nucleotides, typically composed of 4,
+393 | recognition site | The site in a polynucleotide chain as to where the restricti
+394 | recognition species concept | The idea that specific mating adaptations become fixed in a 
+395 | recoil | The motion acquired by a particle through a collision with o
+396 | recoil labelling | Labelling by a chemical reaction initiated by recoil.
+397 | recombinant dna | A synthetic DNA that contains genes from unrelated organisms
+398 | recombination | A process that regroups the genetic material during meiosis,
+399 | recombination era | The period, about 300,000 years after the big bang, when the
+400 | recombination process | The process in which a neutral atom or molecule is formed by
+401 | recommended daily amount | The amount of nutrients such as vitamin, fat, carbohydrates 
+402 | recommended standard-232 | A standard type of computer interface approved by the Electr
+403 | recon | The smallest genetic unit of DNA consisting of a single pair
+404 | reconnaissance satellite | An Earth observation satellite or communications satellite t
+405 | reconstructive transition | A transition which involves a major reorganisation of the cr
+406 | record | In a database, it is a collection of related data items in a
+407 | recovery | 1. In toxicology, the process leading to partial or complete
+408 | recreational drug | A psychoactive drug such as marijuana, cocaine and amphetami
+409 | recruitment | 1. The activation of extra motor neuron to achieve maximum r
+410 | recrystallisation | 1. A purification method involving dissolving and crystallis
+411 | rectal gland | A salt-secreting gland found in the cloacae of cartilaginous
+412 | rectal palpation | A physical examination technique of the posterior abdomen by
+413 | rectangle | A four-sided plane figure with four right angles (90°). Its 
+414 | rectangle method | 1. A method for finding the area of a polygon in which one o
+415 | rectangular coordinates | A set of coordinates that gives the position of an object wi
+416 | rectangular hyperbola | A hyperbola whose asymptotes are perpendicular. If xy = C2 ,
+417 | rectangular number | Any number that is not prime and can be expressed as a recta
+418 | rectifiable curve | In mathematics, a curve that has a finite arc length such th
+419 | rectification | 1. The regulation of membrane conductance by the voltage acr
+420 | rectified concentrated grape must | A type of natural grape sugar produced by distillation, whic
+421 | rectified spirit | Solution of ethanol (ethyl alcohol) and water containing abo
+422 | rectifier | 1. An electrical device that converts alternating current (A
+423 | rectilinear | 1. Moving in or formed from a straight line, such as a recti
+424 | rectrices | The large, stifftail feathers of a bird that is used to navi
+425 | rectum | The part of the large intestine between the colon and the an
+426 | recumbent | Lying down or reclining on the surface from which it arises.
+427 | recuperative potential | The ability of an organism's part to recover after being inj
+428 | recur | Of a digit or sequence of digits, to repeat an infinite numb
+429 | recurrence relation | An equation that defines a sequence based on a rule that giv
+430 | recurring decimal | A rational number that is a decimal or radical fraction cont
+431 | recursion | The process of applying the output of a function or algorith
+432 | recursion formula | The formula for determining the next term of a sequence from
+433 | recursive definition | The definition of a sequence by specifying its first term by
+434 | recursive function | 1. A function defined in terms of the repeated application o
+435 | recursive partial function | A function of which the graph (the set of points x , f ( x )
+436 | recursive predicate | A predicate that possesses a representing function that is r
+437 | recursively enumerable | Of a predicate, P, such that there is a recursive predicate,
+438 | recursively generated | Of a sequence, able to be given a recursive definition; gene
+439 | recurved | To be curved or bent backwards, as found in the teeth of sna
+440 | recycle bin | A location where deleted files are temporarily stored on Mic
+441 | recycling | Recovering and processing of used or waste materials such as
+442 | red algae | Members of the phylum Rhodophyta, growing mostly in tropical
+443 | red blood cells | The most common type of blood cells that carry oxygen from t
+444 | red bone marrow | Tissues that develop red blood cells, white blood cells and 
+445 | red clay | Fine-grained, reddish-brown sediment, covering about 50% of 
+446 | red data book | A catalogue which is the world's inventory of the global con
+447 | red desert soil | A type of coarse zonal soil rich in salts and lime (a pedoca
+448 | red dwarf | Any small low-mass (0.08 to 0.8 times that of the solar mass
+449 | red effects | Those physiological responses exhibited by many plants as a 
+450 | red fescue | A species of grass, Festuca rubra , a nutritious forage gras
+451 | red giant | A stage in stellar evolution in which a star has used up its
+452 | red lead | The bright red to orange-red powdery oxide of lead with the 
+453 | red light | Electromagnetic radiation of approximately 630 nm wavelength
+454 | red queen hypothesis | An evolutionary hypothesis that explains two similar ideas: 
+455 | red spiderling tarvine | A perennial plant in the Nyctaginaceae, the Four O'Clock fam
+456 | redshift | A systematic shift in the spectral lines of certain distant 
+457 | redu cedp ress ured isti llat ion | A method of distilling in which the pressure above the liqui
+458 | reduce | In mathematics, to simplify or convert an expression by subs
+459 | reduced complexity method | Any algorithm that performs with a complexity below that of 
+460 | reduced echelon form | An echelon form with the conditions that in a row-reduced ec
+461 | reduced equation of state | A law, which relates the reduced parameters of a thermodynam
+462 | reduced fraction | A fraction that is simplified into its lowest terms, as both
+463 | reduced instruction set computing | Abbreviated RISC, it is a major type of microprocessor archi
+464 | reduced word | A word on a non-empty set that contains no consecutive pair 
+465 | reduced-tillage system | A type of preparing land for planting which leaves 15-30 per
+466 | reducible | 1. In mathematics, a reducible surface or curve is one that 
+467 | reduction division | The first cell division in meiosis, the process by which ger
+468 | reduction half-equation | The separate equation which describes an oxidation or reduct
+469 | redundancy | In computing, it refers to the duplication or mirroring of a
+470 | redundant | 1. In mathematics, implied by the remaining members of the s
+471 | redundant array of independent disks | Originally called redundant array of inexpensive disks , it 
+472 | redwater | A parasitic disease of the red blood cells caused by a paras
+473 | reed | An aquatic plant of the family Graminae growing near shores 
+474 | reed switch | An electrical switch invented by W. B. Ellwood in 1936 for t
+475 | reef | A bar of rock, sand, coral or similar material, at or near t
+476 | refection | Consumption by an animal of its own feaces. This may be bene
+477 | reference | 1. In logic, the relation between a word, phrase, individual
+478 | reference angle | An acute angle in the first quadrant with vertex at the orig
+479 | reference atom | The atom to which a primitive change is nucleophilic, electr
+480 | reference configuration | An arbitrary fixed configuration of a body with respect to w
+481 | reference dose, rfd | An estimate of daily exposure to the human population (inclu
+482 | reference electrode | 1. An external electrode system which comprises an inner ele
+483 | reference frame | 1. A system for locating numbers within a given context, usu
+484 | reflecting telescope | A telescope in which light from the object is initially refl
+485 | reflection | 1. A process in which radiation or waves such as light or so
+486 | reflection electron energy loss spectroscopy | Any technique in which a specimen is bombarded with a focuse
+487 | reflection high energy electron diffraction | Any technique which measures the angular intensity distribut
+488 | reflection principle of schwarz | In complex functions, the theorem concerning analytic contin
+489 | reflection symmetry | A line through a plane or a 2-dimensional (2-D) shape so tha
+490 | reflective anisotropy spectrosopy | A spectroscopic technique for studying surfaces by reflectio
+491 | reflex action | An automatic and involuntary response of the nervous system 
+492 | reflex angle | An angle between 180 o and 360 o .
+493 | reflex arc | A nerve pathway consisting of receptors, sensory neurone, re
+494 | reflex camera | A camera for viewing and focusing with mirror and prisms to 
+495 | reflex property of equality | An axiom that states an obvious fact a = a , for all a . Tha
+496 | reflexed | 1. Bent backward or downward, as in milkweed, shown in the d
+497 | reflexive | A mathematical relationship among the elements of a set such
+498 | reflux | A distillation process for boiling in which vapour is conden
+499 | refoliate | Producing leaves, usually after rain, wind or diseases.
+500 | reforestation | Planting of forests on lands that have previously contained 
+501 | reforming | A thermal or catalytic process of re-arranging molecules of 
+502 | refracted | 1. Bent backward from the base, as in leaves. 2. To defect f
+503 | refracting telescope | A telescope in which a lens receives light and forms an imag
+504 | refraction | The change in direction or bending of a wave of light, heat 
+505 | refraction effects | The luminescence flux emitted from the interior of a rectang
+506 | refractive index | A measure of the refraction of a beam of light entering a de
+507 | refractometer | Any device or instrument used for the measurement of the ref
+508 | refractory | A material that is able to withstand high temperatures witho
+509 | refractory period | A brief period of time (lasting between 0.5 to 10 millisecon
+510 | refresh | In computer science, it is a command that is used to reopen 
+511 | refresh rate | A CRT monitor measurement in Hz that indicates how many time
+512 | refrigerant | A substance used in a heat transfer system such as an air co
+513 | refrigeration | The heat exchange technique of removing heat from a substanc
+514 | regelation | A phenomenon in which water is refrozen after being melted u
+515 | regeneration | 1. Re-growth and restoration of normal functions of an organ
+516 | region | 1. In mathematics, a connected subset of two-dimensional spa
+517 | region of division | The zone of cell division in the tip of a plant root compose
+518 | region of elongation | The zone in the tip of a plant root where one daughter cell 
+519 | region of maturation | The zone in a root where the cells of the primary tissues di
+520 | regioselectivity | In chemical reactions, the preference of complex molecules t
+521 | register | In computer processor, it is a storage location of the centr
+522 | registered jack-11, rj-11 | A four or six wire connection primarily used for telephones 
+523 | registered jack-45 | An 8-pin connection used for Ethernet network adapters. This
+524 | registry | A database used by Microsoft Windows to store configuration 
+525 | regma | A dry fruit that is characteristic of geranium family, consi
+526 | regnault's method | A technique for measuring the volume co-efficient of a gas, 
+527 | regolith | The surface layer of loose, heterogeneous material composed 
+528 | regress | In mathematics, a supposed definition or explanation each st
+529 | regression | In statistics, a measure that determines the strength of the
+530 | regression analysis | A method used to model and calculate the relationships among
+531 | regression line | A line of the form y = bx + c , is the regression line of y 
+532 | regula falsi | A method of solving equations by using a trial and error val
+533 | regular | 1. In botany, also known as actinomorphic , it refers to a r
+534 | regular approximating sequence | In mathematics, it is a strictly increasing sequence of real
+535 | regular coke | A petroleum coke with good graphitisability, characterised b
+536 | regular function | A complex function that is single-valued and differentiable 
+537 | regular macromolecule | A macromolecule the structure of which essentially comprises
+538 | regular oligomer molecule | An oligomer molecule the structure of which essentially comp
+539 | regular point | In mathematics, of a holomorphic function, f , analytic on a
+540 | regular polygon | A closed two dimensional many sided plane figure with all it
+541 | regular polyhedron | A solid figure with all its faces having the shape of congru
+542 | regular polymer | A polymer composed of regular macromolecules, regular star m
+543 | regular reflection | Bouncing back of light from a smooth, even surface such as a
+544 | regular singular point | In mathematics, a point a of a second order differential equ
+545 | regular solid | Any of the five regular polyhedrons, which are solids with r
+546 | regularity condition | In mathematics, any condition imposed on a problem to guaran
+547 | regulation | In embryology, it is the process in which animal embryonic d
+548 | regulative development | A pattern of development, such as that of a mammal, in which
+549 | regulator | A control device which may act as a feedback, used to mainta
+550 | regulatory enzyme | Any enzyme, either active or inactive that controls the meta
+551 | regulatory genes | Genes that control development by regulating the expression 
+552 | regulatory protein | 1. Any special protein that controls or regulates the transc
+553 | regulus | 1. A semi-purified mass of metal that sinks to the bottom of
+554 | regurgitation | 1. The return of partially digested or undigested food from 
+555 | rein | A long narrow strap used to control a horse by a rider. Each
+556 | reinforcement | Increasing the frequency of a particular behaviour through c
+557 | reissert compounds | Compounds formed by formal addition of an acyl group and a c
+558 | reissner's membrane | Named after a German anatomist Ernst Reissner (1824-1878), i
+559 | rejuvenation | 1. To stimulate a river or stream to erode the land it runs 
+560 | related angle | In mathematics, the acute angle for which the trigonometric 
+561 | relation | 1. An association between elements of one set and that of an
+562 | relational database | A database structure in which data is organised into related
+563 | relational theory | A type of theory in which absolute space and absolute time d
+564 | relationship symbols | Symbols that show how numbers or terms of an equation relate
+565 | relative address | A memory address that is some distance from a starting point
+566 | relative age | The geologic age of a fossil organism, rock, or geologic fea
+567 | relative angular momentum | Of a particle about a point with position vector ! p , the q
+568 | relative aperture | A dimensionless number that is a quantitative measure of len
+569 | relative atomic mass | Formerly known as atomic weight , it is the weighted average
+570 | relative automorphism | An automorphism of an extension field that leaves the base f
+571 | relative biological effectiveness | The relative damage caused to living tissue by different typ
+572 | relative biological effectiveness | The linear-energy-transfer dependent factor by which absorbe
+573 | relative compactness | Of a set in a topological space, possessing a closure that i
+574 | relative complement | The members of a set lying outside another set. The relative
+575 | relative counting | A measurement in which the activity of a test portion is der
+576 | relative dating | A dating method which places events in chronological order w
+577 | relative density | The ratio of the density of a substance to the known density
+578 | relative displacement | The difference between the position vector x of a particle a
+579 | relative electrode potential | The electrode potential of a single electrode is not amenabl
+580 | relative entropy | In information science, the relative entropy is a measure of
+581 | relative error | Error of measurement divided by the true value of the measur
+582 | relative fitness | One of the two ways by which fitness can be measured, it is 
+583 | relative frequency | A way of estimating statistical data if they cannot be accur
+584 | relative growth rate | A measure of the productivity of a plant defined as the mass
+585 | relative humidity | The ratio of the amount of water moisture/ vapour in the air
+586 | relative identity | A relation of qualitative identity that defines a partition 
+587 | relative interior | The interior of a convex set in the induced topology determi
+588 | relative maximum | A value of a function at a point x 0 which is equal to or gr
+589 | relative minimum | A value of a function at a point x 0 which is equal to or le
+590 | relative molecular mass | The ratio of the average mass per molecule of the natural nu
+591 | relative momentum | Of a particle about a point with position vector ! p , the q
+592 | relative permeability | 1. Also known as dielectric constant , it is the ratio of th
+593 | relative permittivity | The permittivity of a material given relative to that of fre
+594 | relative refractory period | A point of time after a nerve (cell) axon has produced an ac
+595 | relative sea level | Sea level measured by a tide gauge with respect to the land 
+596 | relative sea level secular change | Long-term changes in relative sea level caused by either eus
+597 | relative time | Geologic time that places events in a sequence relative to e
+598 | relative topology | The topology defined on a subset of the underlying set of a 
+599 | relative velocity | The vector difference between the velocities of two objects,
+600 | relatively complete | Of a partially ordered set, such that every set with an uppe
+601 | relatively consistent | Able to be shown to be consistent with respect to some large
+602 | relatively prime | A set of numbers which do not have any other common factor o
+603 | relativistic | 1. A term used to describe any situation involving a speed c
+604 | relativistic beaming | An effect in which charged particles moving at a significant
+605 | relativistic effects | Several peculiar effects such as time dilation, mass increas
+606 | relativistic electronics | A branch of electronics that involves the special theory of 
+607 | relativistic jets | Extremely powerful jets of plasma of matter or electromagnet
+608 | relativistic mass | The mass of a body in motion at a velocity exceeding about o
+609 | relativistic mechanics | Any form of mechanics compatible with either the special or 
+610 | relativistic quantum theory | The formulation of quantum theory that applies to particles 
+611 | relativistic runaway theory | A theory of the origin of lighting in which it is proposed t
+612 | relativistic speed | A speed that is a significant proportion of the speed of lig
+613 | relativity theory | Albert Einstein's theory of space and time, comprising the s
+614 | relatum | One of the entities by which a relation is related.
+615 | relaxants | Agents or substances containing properties which relax the b
+616 | relaxation | 1. In physics, it is the return to the equilibrium state of 
+617 | relaxation oscillator | An oscillator, whose fundamental frequency is determined by 
+618 | relaxin | A peptide hormone produced naturally by the corpus luteum an
+619 | relay | An electromagnetically operated switch, used to control a lo
+620 | relay intercropping | In agriculture, it is a type of growing two types of crops t
+621 | relay neuron | A nerve cell found within the central nervous system that tr
+622 | release agent | A chemical substance such as wax, polyvinyl alcohol (PVA) an
+623 | release factor | A protein that terminates translation of messenger RNA durin
+624 | release-inhibiting hormone, rih | A hormone produced mainly by the hypothalamus that inhibits 
+625 | releaser | The essential features of a stimulus, which is necessary to 
+626 | releasing hormones | A hormone such as thyrotrophin-releasing hormone (TRH) and c
+627 | reliability | 1. In statistics, consistency and validity of test results d
+628 | reliable data protocol | A network transport protocol intended to efficiently provide
+629 | relict | 1. A species, genera, taxa or population of organisms that e
+630 | relief | In geography, it is the difference in elevations on land sur
+631 | reload | In computer science, it is a command that is used to reopen 
+632 | reluctance | A measure of magnetic resistance in a closed magnetic circui
+633 | rem sleep | One of the stages of sleep that recurs several times in most
+634 | remainder theorem | 1. Also known as little Bézout's theorem , it is an applicat
+635 | remanence | The magnetic flux density remaining in a ferromagnetic subst
+636 | remiges | Stifflong feathers of a bird that is adapted for flight, con
+637 | remote | In botany, parts that are separated by an interval or distan
+638 | remote access | A term used to describe a device capable of accessing a shar
+639 | remote access trojan | A malware program usually downloaded by a user that is invis
+640 | remote authentication dial-in user service | An authentication program used on computers and networking e
+641 | remote desktop protocol | A Microsoft multi-channel secure network communications prot
+642 | remote desktop technology | A technology that makes it possible to view another computer
+643 | remote sensing | Gathering and recording of information concerning the Earth'
+644 | remote terminal | A terminal that communicates with a computer via a modem or 
+645 | renal | Relating to the kidneys. Examples are renal capsule and rena
+646 | renal clearance | The measure of the volume of plasma from which a substance i
+647 | renal dialysis | A medical treatment for removing harmful wastes and surplus 
+648 | renal tubule | Any nephron of the kidneys, which extends from the glomerulu
+649 | renaturation | The restoration of the physical and chemical properties of a
+650 | rendering | The process of extracting fat from fatty animal tissue by sl
+651 | rendzina | Dark rich soil that develops beneath grassland above a layer
+652 | renewable energy source | A source of energy that cannot be used up and replenishes it
+653 | reniform | Having the shape of a kidney with the petiole attached at th
+654 | renin | An enzyme produced by the kidney in response to low blood pr
+655 | rennet | A natural complex of enzymes produced in the stomach of calv
+656 | rennin | A protease enzyme found in the stomach, which cuddles milk f
+657 | renorm | In mathematics, to construct an equivalent norm (called a re
+658 | renormalisation | A mathematical technique used in quantum physics that elimin
+659 | renormalisation/renormalization group | A mathematical technique used to understand the changes of a
+660 | renormalon | A type of divergent behaviour in a quantum field theory such
+661 | renshaw cell | A type of inhibitory interneuron in the grey matter of the s
+662 | reorganisation | The molecular process by which (i) amorphous or poorly order
+663 | rep-unit | A repand leaf An integer such as 11, 111 or 1111 consisting 
+664 | repand | Having an undulating or slightly wavy margin, as seen in som
+665 | repdigit | An integer of repeated digits, for example, 88888.
+666 | repeat-until loop | A programming language used in a programme called Pascal, wh
+667 | repeatability | The closeness of agreement between independent results obtai
+668 | repeated addition strategy | Adding the same addend a given number of times in order to s
+669 | repeated integral | An expression requiring more than one integration. Multiple 
+670 | repeated measures design | In statistics, it is a type of an experiment, which repeated
+671 | repeated root | One of a number of equal roots of the same polynomial or equ
+672 | repeater | A network device that is used to regenerate or replicate inc
+673 | repeating decimal | Decimal numbers that repeat indefinitely in a pattern after 
+674 | repel | In physics, to push back or away by a force, such as two sim
+675 | repellent | 1. Any substance used to keep organisms away from destroying
+676 | repent | In botany, it refers to lying or creeping along the ground, 
+677 | repetend | In mathematics, the digit(s) that repeat in a recurring deci
+678 | repetitive dna | DNA whose nucleotide sequence is repeated many times through
+679 | repetitive strain injury | Inflammation of tendon sheaths, mainly in the hands and wris
+680 | replacement milk | Milk used to feed young animals, which cannot be fed by thei
+681 | replacement name | A name in which the replacement of an atom or a group of a p
+682 | replacement operation | The exchange of one group of atoms or a single non-hydrogen 
+683 | replacement rate | The rate at which heifers are introduced into a dairy herd t
+684 | replant disease | A disease characterised by weak and blackened roots affectin
+685 | replicase enzyme | An enzyme that catalyses the synthesis of DNA and RNA within
+686 | replicate | 1. In botany, it refers to folding over or backward. 2. To r
+687 | replicate sample | Multiple (or two) samples taken under comparable conditions.
+688 | replication | The duplication of the genetic information of DNA. During re
+689 | replication fork | Y-shaped point on a replicating DNA molecule where new stran
+690 | replicon | A DNA or RNA molecule that replicates as a unit for single i
+691 | replum | A thin wall or septum that partitions the two valves in some
+692 | repolarisation | The restoration of the normal electrical polarity of a muscl
+693 | report | A combination of specimen information and results. The repor
+694 | reporter gene | A gene that is easily identified and monitored and used to t
+695 | repository | In software development, it is a central file storage locati
+696 | repot | To take a plant out of its pot and plant it in another, chan
+697 | reppe processes | A family of high-pressure, catalytic acetylene- reaction pro
+698 | reprecipitation | The planned repetition of a precipitation in order to remove
+699 | represent | In mathematics, of a series of functions, to converge to the
+700 | representative elements | The entire elements in Group 1 (IA) to 17 (VIIA) of the Peri
+701 | representative sample | A sample resulting from a sampling plan that can be expected
+702 | representing function | In mathematics, it is the function with the same domain as a
+703 | repressible enzyme | An enzyme whose synthesis is generally continuous but can be
+704 | repression | Binding of a protein (repressor) to the operator sequence in
+705 | repressor | A DNA-binding protein that can prevent the expression of a g
+706 | reproducibility | The closeness of agreement between independent results obtai
+707 | reproduction | The process by which organisms replicate ensuring continuati
+708 | reproductive isolating mechanism | Biological or behavioural characteristics that prevent inter
+709 | reproductive system | The organs of an organism that are involved in the process o
+710 | reptation | A thermal motion of polymer chains in a highly entangled sta
+711 | reptile | A type of cold-blooded vertebrates of the class Reptilia. Th
+712 | reptilia | A class of terrestrial vertebrates of four orders: Chelonia 
+713 | repulsion | A force between two objects of the same electric charge or m
+714 | research | A systematic gathering, investigation or examination of data
+715 | research, development, and demonstration | Scientific and/or technical research and development of new 
+716 | reseed | To re-plant seeds on an area of land.
+717 | reserve | In ecology, it is an area of land set aside for the welfare 
+718 | reserved word | A reserved word that has a meaning special to a programming 
+719 | reservoir | An artificial or natural area of water, for capturing and st
+720 | residence time | 1. In instrumentation, it is the time required for air or re
+721 | resident | A non-migratory species of birds or other animals that do no
+722 | residual | 1. In statistics, the difference between an actual, observed
+723 | residual current | The current that flows, at any particular value of the appli
+724 | residual fuel/oil | The liquid or semi-liquid, high-boiling fraction of residue 
+725 | residual herbicide | A chemical preparation applied to the surface of soil that r
+726 | residual liquid junction error | Error arising from breakdown in the assumption that the liqu
+727 | residual shrinkage | The decrease in volume after the proportionality between wat
+728 | residual soil | Soil formed from, or resting on, consolidated rock of the sa
+729 | residual volume | The amount of air remaining in the lungs after the maximum e
+730 | residue | 1. The waste material that remains after the completion of a
+731 | residue class ring | The ring, denoted R/K, whose members are the cosets of an id
+732 | residue theorem of cauchy | A tool used to evaluate line integrals of analytic functions
+733 | resilience | The elastic property of a material to absorb energy when it 
+734 | resin | 1. A sticky solid or semisolid, viscous organic substance ex
+735 | resistance | 1. A property of an electrical conductor to oppose the free 
+736 | resistance arm | The part of a lever that moves against weight or resistance.
+737 | resistance response | A response lasting for a long time to any stimulus that pote
+738 | resistance thermometer | A sensor used for measuring temperature by the property of s
+739 | resistivity | The resistance of a wire per unit cross sectional area. It i
+740 | resistor | A component in an electrical or electronic circuit which res
+741 | resistors in parallel | Resistors in parallel have the same potential difference (p.
+742 | resistors in series | Resistors in series give the same current (I). The reason is
+743 | resolution | 1. The separation of a vector quantity into two components w
+744 | resolvent | In mathematics, the inverse of the matrix t l - A , where A 
+745 | resolving power | A measure of the ability of an optical instrument to form se
+746 | resolving time | The smallest time interval which must elapse between the occ
+747 | resonance | 1. The increased amplitude of oscillation of an electric or 
+748 | resonance absorption technique | The monitoring of atoms or radicals generated in the gas pha
+749 | resonance effect magnitude | Ratio of the difference in the transmitted or scattered inte
+750 | resonance energy | The difference in potential energy between the actual molecu
+751 | resonance fluorescence | Fluorescence from the primary excited atomic or molecular sp
+752 | resonance fluorescence technique | The monitoring of atoms or radicals generated in the gas pha
+753 | resonance hybrid | A localised valence bond representation of a molecule. This 
+754 | resonance integral | The integral, over all or some specified portion of the reso
+755 | resonance lamp | Lamp emitting resonance radiation of atoms and their ions. D
+756 | resonance line | The longest wavelength capable of exciting fluorescence in a
+757 | resonance neutrons | Neutrons whose energy corresponds to the resonance energy of
+758 | resonant cavity | An enclosure within a conductor in which an electromagnetic 
+759 | resonant circuit | A reactive circuit, arranged in such a way that it is capabl
+760 | resonating valence bond theory | An extension of valence bond theory to solids in which there
+761 | resorcinol | Crystalline dihydric phenol, the 1,3-isomer of benzenediol w
+762 | resource description framework | A specification that defines how metadata or descriptive inf
+763 | resource partitioning | The evolutionary process of species living in the same ecosy
+764 | respiration | The metabolic process in animals and plants in which organic
+765 | respiratory chain | A series of membrane-linked oxidation- reduction reactions i
+766 | respiratory movement | The muscular movement of the diaphragm and the rib cage (in 
+767 | respiratory organ | Any organ such as a lung or gill in vertebrates and lung boo
+768 | respiratory pigment | A coloured compound, such as haemoglobin in humans and haemo
+769 | respiratory quotient, rq | The unitless number, which is the ratio of the volume of car
+770 | respiratory surface | Surface used by an organism for gas exchange. Examples in an
+771 | respiratory system | The system of organs in the body responsible for the intake 
+772 | respirometer | Any device that measures an organism's oxygen uptake. An exa
+773 | response | The physiological, muscular or behavioural activity that can
+774 | response constant | A quantity whose expression includes a current, whose value 
+775 | response curve | A graph that is used to plot the results of many kinds of ex
+776 | response function | The symmetric tensor-valued function which defines the stres
+777 | response generalisation | The act or process by which an an organism makes a different
+778 | response time | 1. The interval between entering a command and seeing its ef
+779 | response variable | In statistics, it is the variable whose values are measured 
+780 | responsible care | A voluntary initiative of the chemical industry run in 52 co
+781 | rest | The state of an object when it is not in motion relative to 
+782 | rest length | The length of an object measured by an observer in a frame o
+783 | rest mass | The mass of a body when its velocity is zero, as opposed to 
+784 | rest point | The position of the pointer with respect to the pointer scal
+785 | resting | 1. Describing or referring to organisms that are dormant or 
+786 | resting potential | The potential difference between the electrical charges that
+787 | restitution coefficient | A measure of the constant elasticity of colliding bodies. It
+788 | restricted quantifier | In logic, a quantifier regarded as ranging over the extensio
+789 | restricting fragment length polymorphism | The occurrence of different cleavage sites for the restricti
+790 | restriction | 1. A condition that imposes a constraint on the possible val
+791 | restriction enzyme | A bacterial enzyme that recognises a short specific sequence
+792 | restriction mapping | A technique for determining the restriction sites within a s
+793 | restriction recognition site | The site in a polynucleotide chain as to where the restricti
+794 | result | 1. In chemical analysis, it is the final value reported for 
+795 | resultant | 1. A s ingle vector that is equivalent to two or more other 
+796 | resupinate | Inverted or turned upside down as a result of twisting of th
+797 | retained placenta | A condition after childbirth in which all or part of the pla
+798 | retardation | 1. Also known as deceleration , it is the rate of reduction 
+799 | retardation factor | The ratio of time spent in the stationary phase relative to 
+800 | retardation plate | A transparent plate of a birefringent material, such as quar
+801 | retention | 1. The abnormal holding within the body of waste such as uri
+802 | retention efficiency | The ratio of the quantity of particles retained by a separat
+803 | retention factor | A measure of the time the sample component resides in the st
+804 | retentivity | 1. In a ferromagnetic material, it is the ability to retain 
+805 | reticular formation | A network of nerve pathways and nuclei throughout the brains
+806 | reticulate chloroplast | A complex plastid that forms a cylindrical network in the pe
+807 | reticulate thickening | A type of secondary wall patterning in tracheary elements in
+808 | reticulated | 1. Resembling a network or a net, as seen in some leaves. 2.
+809 | reticulum | 1. Anything resembling a network in structure, as shown in t
+810 | retina | The light sensitive tissue that lines the interior of the ve
+811 | retina display | A term coined by Apple in June, 2010 to describe display scr
+812 | retinal | A crystalline retinal pigment, with the chemical formula C19
+813 | retinol | A fat-soluble chemical with the chemical formula C20 H30 O. 
+814 | retort | A spherical vessel with a long downward-pointing neck vessel
+815 | retraction | In mathematics, it is a continuous mapping from a topologica
+816 | retractor | 1. A muscle that retracts an organ or a protruded body part.
+817 | retro- | 1. A prefix which indicates a shift by one position of all s
+818 | retrocurved | To be curved or bent downwards.
+819 | retroflexed | Bent backward or downward.
+820 | retrograde motion | The apparent motion of a planet from the East to West as see
+821 | retrolental fibroplasia | A form of blindness occurring in premature babies exposed to
+822 | retrorocket | A backward facing rocket fired to slow the speed of a capsul
+823 | retrorse | In botany, it describes a plant part that is directed or tur
+824 | retrotransposon | A type of genetic element that can amplify itself in a genom
+825 | retrovirus | Any of a family of viruses containing the genetic material R
+826 | reverse | In mathematics, the reverse of a module, ring or other struc
+827 | reverse fault | A type of fault (fracture) which occurs where two blocks of 
+828 | reverse genetics | Any approach to genetic investigation that aims to discover 
+829 | reverse migration | A phenomenon in which the migrating organism migrates in the
+830 | reverse multiplication | In mathematics, the non- commutative operator defined by rev
+831 | reverse osmosis | A filtration process that removes many types of large molecu
+832 | reverse polish notation | A notation that does not use parenthesis and write operators
+833 | reverse transcriptase | The replication enzyme of retroviruses, that catalyses the f
+834 | reversed | Isotope dilution analysis used for the determination of the 
+835 | reversed-phase chromatography | An elution procedure used in liquid chromatography in which 
+836 | reversible plough | A plough with two mouldboard ploughs mounted back-to-back, l
+837 | reversible process | Any process in which the variables that define the state of 
+838 | reversible reaction | A chemical reaction in which the product(s) formed from the 
+839 | reversible transition | A transition that returns a system directly to its original 
+840 | reversion | 1. The restoration of mutation to the wild-type genotype or 
+841 | revolute | Having margins or tip rolled backwards towards the underside
+842 | revolution | 1. A complete circular movement of 360 0 made by a circular 
+843 | reynolds number | A number used in fluid mechanics to determine whether fluid 
+844 | rf value | The ratio of time spent in the stationary phase relative to 
+845 | rh incompatibility | A condition that occurs during pregnancy if a woman has Rh-n
+846 | rhabdocarpous | Having long, rod-shaped fruits.
+847 | rhachilla | 1. The secondary axis of a pinnately compound leaf, such as 
+848 | rhe | 1. A unit of dynamic fluidity, which is equal to the dynamic
+849 | rhea | 1. The second largest moon of Saturn and the ninth largest m
+850 | rhenium | A heavy, silvery-white metallic element with the symbol Re, 
+851 | rheo discolour | A herb belonging to the Rhoeo genus in the Commelinaceae fam
+852 | rheology | The study of the deformation and flow of matter. It applies 
+853 | rheopexic gel | Gel for which the time of solidification after discontinuati
+854 | rheopexy | The property exhibited by certain sols to become fluid when 
+855 | rheostat | A type of variable resistor that is used to vary the value o
+856 | rhesus disease | A serious condition affecting some babies as a result of inc
+857 | rhesus factor | A protein substance antigen on the surface of red blood cell
+858 | rhesus monkey | A common brownish macaque monkey ( Macaca mulatta ) family c
+859 | rheumatoid arthritis | A chronic, systemic inflammatory that mainly affects synovia
+860 | rhinoceros | Large odd-toed ungulate mammal belonging to the order Periss
+861 | rhipidium | A flattened, fan-shaped cymose inflorescence in which the br
+862 | rhiz obiu mrad ioba cter | A gram-negative bacterium which is of significance for its u
+863 | rhizanthous | Producing flowers from a rootstock or having flowers that gr
+864 | rhizaria | An assemblage of unicellular eukaryotic protists comprising 
+865 | rhizobium | A soil bacterium found in the nodules of roots of legume spe
+866 | rhizocarpous | Having the stem dying each year, but the leaves living for s
+867 | rhizoctonia root rot | Rotting of roots affecting some plants such as diseases of s
+868 | rhizogenic | Producing root.
+869 | rhizoid | Miniature root-like structures formed by the gametophytes of
+870 | rhizomania | A notifiable virus disease affecting sugar beets, in which h
+871 | rhizome | A horizontal underground stem having nodes, buds and tiny le
+872 | rhizomorph | Mass of fungal hyphae that are organised in long, thick stra
+873 | rhizoplane | The external surface of roots that strongly adheres to soil 
+874 | rhizopoda | A phylum of the Protoctista free-living species found in the
+875 | rhizopus | A widespread genus of saprobic fungi of the family Mucoracea
+876 | rhizosphere | The soil surrounding the roots of plant containing exudates 
+877 | rhizosphere competence | Ability of an organism to colonise the rhizosphere.
+878 | rhizotaxis | The type of root arrangement on a plant.
+879 | rhobombohedron | A six-sided prism of which the sides are parallelograms or a
+880 | rhodium | A hard, durable, silvery-white metallic element with the sym
+881 | rhodophyta | A large diverse phylum or division of plants of mostly multi
+882 | rhodopsin | The light sensitive purple-red organic pigment found in the 
+883 | rhombic | 1. In botany, a 2-dimensional shape or diamond shaped in out
+884 | rhombic sulfur | A transparent pale yellow crystalline solid, which crystalli
+885 | rhomboid | The two rhomboid muscles extend as parallel bands from the s
+886 | rhomboidal | Shaped nearly like a rhomboid, with obtuse lateral angles. R
+887 | rhombus | A parallelogram with four equal sides and oblique angles or 
+888 | rhubarb | Any of several species of the genus Rheum (family Polygonace
+889 | rhyniophytes | An extinct division of the subkingdom Embryo- bionta of vasc
+890 | rhyolite | A fine-grained light-coloured volcanic rock, occurring princ
+891 | rhythm method | A method of natural contraception that works by avoiding sex
+892 | ria | 1. A long narrow sea inlet, usually branching and surrounded
+893 | rib | 1. A long, slender bone attached to the backbone that curves
+894 | rib grass | A palatable, deep-rooting weedy Eurasian plant ( Plantago la
+895 | ribbon | A new feature of Microsoft Office 2007 Window that replaces 
+896 | ribbon cable | A flat cable in which all the wires are parallel to one anot
+897 | ribbon lake | A long, narrow finger-shaped lake found on the floor of a gl
+898 | riboflavine | The yellow component of the B complex group with the chemica
+899 | ribonucleic acid | A molecule occurring in certain viruses (RNA viruses) and in
+900 | ribonucleoprotein | Any nucleoprotein that contains RNA that forms during the sy
+901 | ribose | An organic compound of aldopentose, which is a monossacharid
+902 | ribosomal dna | Genes that code for the various forms of ribosomal RNA and t
+903 | ribosomal rna | One of the three types of RNA, which is found in the cell's 
+904 | ribosomal subunits | Two units that combine with mRNA to form the ribosomal mRNA 
+905 | ribosomes | A submicroscopic cluster of proteins and RNA found in the cy
+906 | riboswitch | A region of an RNA molecule, usually a messenger RNA (mRNA),
+907 | ribozyme | Any RNA molecule that can catalyse a chemical reaction, whic
+908 | ribulose | A ketopentose sugar with the chemical formula, C5 H10 O5 whi
+909 | ribulose bisphosphate | A five-carbon sugar that is combined with carbon dioxide to 
+910 | riccati equation | In mathematics, a non-linear differential equation of the fo
+911 | riccia | A genus of liverworts in the order Marchantiales, family Ric
+912 | rice | An edible starchy cereal grain and the cereal grass o ryza s
+913 | rice-herzfeld mechanism | A mechanism enabling complex chain reactions to give simple 
+914 | rice-ramsperger-kassel-marcus theory | A theory of unimolecular chemical reactions that enables the
+915 | rich ards onex trap olat ion | An extrapolation method for improving the rate of convergenc
+916 | rich text format | A file format standardised by Microsoft for creating formatt
+917 | richter scale | A measure of the magnitude of seismic waves from an earthqua
+918 | ricin | A highly toxic substance that is extracted from the castor b
+919 | rickets | A nutritional disorder in children characterised by skeletal
+920 | rickettsia | A very small pathogenic coccoid-shaped or rod-shaped gram-ne
+921 | rictal bristles | A stiffbristle-like feather, with little or no vane, which g
+922 | rictus | 1. The cleft of an open mouth or beak. 2. The mouth of a bil
+923 | riddle | 1. A coarse sieve, for sieving soil. 2. Grading and sorting 
+924 | ridge | 1. A long narrow protuberance or crest, such as on a bone or
+925 | ridge tillage system | A type of reduced tillage system where the crop is grown on 
+926 | riemann condition | In mathematics, the condition that a function is integrable 
+927 | riemann hypothesis | The conjecture that the zeta function, defined by zeta ( z )
+928 | riemann integral | Mathematically, it is the definite integral of a real-valued
+929 | riemann mapping theorem | The theorem that any simply- connected complex domain, whose
+930 | riemann sphere | A topological sphere consisting of the complex plane and the
+931 | riemann sum | A method for approximating the total area underneath a curve
+932 | riemann surface | A complex manifold with one complex dimension. The Riemann s
+933 | riemann, georg friedrich bernhard | German mathematician, who studied mathematics under Gauss at
+934 | riemann-lebesgue lemma | The lemma that is of importance in harmonic analysis and asy
+935 | riemann-stieltjes integration | A generalisation of the Riemann integral allowing integratio
+936 | riemann-stieltjes measure | A measure on sigma algebra on a general topological space su
+937 | riemann-zeta function | In mathematics, it is the special function, denoted ζ( s ) t
+938 | riemannian geometry | 1. In mathematics, a type of non- Euclidean geometry ideally
+939 | riemannian manifold | A manifold endowed with a metric tensor. In other words, it 
+940 | riesz representation theorem | In mathematics, it is the theorem that all continuous linear
+941 | riesz-fischer theorem | In mathematics, it is the theorem that every square summable
+942 | riffling | The separation of a free-flowing sample into (usually) equal
+943 | rift valley | A valley formed between highlands or mountain by the subside
+944 | rift zone | An elongate system of crustal fractures associated with an a
+945 | rig | 1. A condition in a male animal, especially pigs and horses 
+946 | rigel | The seventh brightest star in the sky in the constellation O
+947 | rigescent | Becoming rigid or numb.
+948 | right | 1. In mathematics, also called right-angled , possessing a r
+949 | right ascension | The coordinate on the celestial sphere or equatorial coordin
+950 | right click | In computing, to press the right button on the mouse and rel
+951 | right hand rule | A relative direction of motion, magnetic field and current f
+952 | right of access | 1. The right of someone to be able to get to his land by pas
+953 | right-angle | An angle whose size or measure is ninety degrees (90°) or π 
+954 | right-hand limit | In mathematics, the one-sided limit of a function defined on
+955 | right-handed coordinate system | In mathematics, a three-dimensional coordinate system, with 
+956 | rigid body | In physics, it is a solid body that is not deformable, thus 
+957 | rigid body motion | In physics, it is a motion of a body consisting only of rota
+958 | rigid motion | In physics, any transformation, consisting of translation, r
+959 | rigidity | The ability of a body or substance to oppose or withstand fo
+960 | rigidity modulus | The modulus of elasticity for an object exposed to shearing 
+961 | rigor mortis | The recognisable sign of death, caused by a chemical change 
+962 | rigorous | In mathematical logic, of a proof, making completely explici
+963 | rill | 1. An artificial channel, often a straight and narrow one, a
+964 | rimous | Having fissures, cracks or crevices, as in the bark of a tre
+965 | rind | The tough outer protective layer or covering of some fruits 
+966 | rinderpest | An acute and highly infectious viral disease affecting mostl
+967 | ring | 1. A set with the following properties: (i) it has two binar
+968 | ring assembly | Two or more cyclic systems (single rings or fused systems) w
+969 | ring main | A domestic wiring system in which all the socket outlets hav
+970 | ring network | A local area network (LAN) in which each device is connected
+971 | ring of fire | A major geographical zone, with a length of about 40,000 kil
+972 | ring of sets | In mathematics, it is a Boolean ring of sets that is closed 
+973 | ring rot | 1. A fungus disease that affects sweet potatoes caused by Rh
+974 | ring species | A connected series of neighbouring species that can interbre
+975 | ring-barking | The complete removal of a strip of bark, which consist of se
+976 | ring-bone | A growth of bony tissue in the joint of a horse's foot.
+977 | ring-sector | A sequence of ring atoms, linked together as an unbranched c
+978 | ringelmann chart | A chart which has been used in air pollution evaluation for 
+979 | ringent | Having lips or lip-like parts widely spreading, as seen in s
+980 | ringworm | A fungal disease of the superficial skin, scalp or nails cau
+981 | rip currents | Strong surface currents that move like small rivers perpendi
+982 | riparian | Growing or situated along banks of rivers, streams, springs 
+983 | ripe | 1. Fully grown and developed, matured such as fruit or grain
+984 | ripper | 1. A programme used to copy digital music from a compact dis
+985 | ripping | In computer terminology, it is the process of copying data f
+986 | ripple | 1. Also known as capillary wave and capillary ripple , it is
+987 | ripple tank | A shallow water-filled glass tank used to demonstrate variou
+988 | rise | In mathematics, the vertical distance between a pair of poin
+989 | riser card | A circuit board that connects directly into the computer mot
+990 | risk | 1. Probability of adverse effects caused under specified cir
+991 | risk assessment | Identification and quantification of the risk resulting from
+992 | risk estimation | Assessment with or without mathematical modelling, of the pr
+993 | ritualisation | A behaviour that occurs typically in a member of a given spe
+994 | river | A natural stream of water that flows through a channel with 
+995 | river blindness | A parasitic disease transmitted by the blackfly of the genus
+996 | river capture | The diversion of the head water of one river from its own be
+997 | river continuum concept | The concept of a river as an ecosystem whose character chang
+998 | river terrace | Part of an old flooded plain that has been lifted and perche
+999 | riveting | A method of mechanically joining metal plates by a metal pin
+1000 | rna | Abbreviation for ribonucleic acid, a molecule occurring in c
+1001 | rna interference | A system within living cells that helps to control which gen
+1002 | rna polymerase | An enzyme that attaches to the promoter region of the DNA te
+1003 | rna splicing | The removal of non-coding portions (introns) of the RNA mole
+1004 | rna transcript | The creation of an equivalent RNA copy of a sequence of DNA.
+1005 | rnap roce ssin g | The modification of newly formed RNA transcripts to produce 
+1006 | rnase | Any of a group of enzymes, widely distributed in nature that
+1007 | roan | The coat of an animal in which the main colour is mixed with
+1008 | roasting | 1. A cooking method that uses dry heat, on an open flame, ov
+1009 | robinson projection | A world map projection showing the poles as lines rather tha
+1010 | robles' disease | A parasitic disease transmitted by the blackfly of the genus
+1011 | robot | A mechanical device that sometimes resembles, in whole or in
+1012 | robot milker | A system in an automated milking parlour using lasers, mirro
+1013 | robotics | The study of the design, manufacture and operation of genera
+1014 | rochelle salt | A colourless cyrstalline double salt with the chemicalformul
+1015 | rochon prism | An optical device consisting of two quartz prisms of a biref
+1016 | rock | A naturally occurring and coherent composed of mineral parti
+1017 | rock crystal | A colourless transparent, flawless variety of the silica min
+1018 | rock cycle | The system of the three main rock types (sedimentary, metamo
+1019 | rock phosphate | A natural sedimentary rock composed largely of phosphate min
+1020 | rock salt | A naturally occurring crystalline mineral consisting of sodi
+1021 | rock salt structure | A type of ionic crystal structure in which the cations have 
+1022 | rocket | A projectile such as a missile, spacecraft, aircraft or othe
+1023 | rocket engine | A reaction engine that obtains thrust based on the Newtonian
+1024 | rocket plane | An aircraft that uses one or more rocket engines for propuls
+1025 | rocket propulsion | A type of reaction propulsion in which the propulsive force 
+1026 | rocking-chair cell | A type of secondary cell in which layered electrodes usually
+1027 | rod | A unit of length, now obsolete, which is equal to 5.03 m or 
+1028 | rod cell | Any of various cylindrically-shaped photoreceptor cells in t
+1029 | rode ntul cer | A malignant tumour that spreads slowly usually occurring on 
+1030 | rodent | Any mammal su Giant rat Examples of rodent squirrel grasscut
+1031 | rodentia | An order of mammals consisting of the rodents, characterised
+1032 | roentgen equivalent man | Named after Wilhelm Röntgen (1845-1923), German scientist, i
+1033 | roentgen, william konrad | German physicist, who made many contributions to physics, th
+1034 | roentgen-hour-metre | The unit of effective strength of a radioactive source that 
+1035 | roentgenium | A radioactive transactinide in Group 11 (IB) on the Periodic
+1036 | rogers-ramanujan identities | In mathematics, they are two identities related to basic hyp
+1037 | rogue | 1. A plant of different variety found growing in a crop. 2. 
+1038 | rogue value | In computing, it is a special value in the context of an alg
+1039 | roll | A tractor-drawn implement used for breaking clods, firming t
+1040 | rolle's theorem | In mathematics, the theorem that any real- valued differenti
+1041 | rolled grain | Grain rolled into flat plates by passing it through flat rol
+1042 | roller mill | A piece of equipment that uses cylindrical rollers to grind 
+1043 | roller table | A machine, consisting of a horizontal line for rotating roll
+1044 | rolling | 1. Moving by revolving or turning over and over as a ball or
+1045 | rolling friction | The friction or force that hinders the motion of an object s
+1046 | roman numerals | A numeration system, created and originally used by the anci
+1047 | roost | A place where birds rest at night, such as a perch.
+1048 | rooster | A name used especially in the United States for cock or male
+1049 | root | 1. In anatomy, it is the end of a nerve that is nearer to th
+1050 | root cap | A cone-shaped structure that covers the root tip and develop
+1051 | root crop | In agriculture, a crop grown for the thick, fleshy storage r
+1052 | root cutting | A section of a root with adventitious buds cut and used for 
+1053 | root directory | In computer science, it is t he top-level directory of a tre
+1054 | root hair | A tubular outgrowth from an epidermal cell of a plant root. 
+1055 | root harvester | A machine for lifting underground crops such as sugar beet o
+1056 | root mean square | 1. In mathematics, it is also known as quadratic mean and is
+1057 | root nodule | A swelling on the root of certain plants especially those of
+1058 | root of unity | A solution of the equation x n =1, where n is a positive int
+1059 | root pressure | The osmotic pressure within the cells of a root system that 
+1060 | root pruning | A systematic cutting back of the roots by hand or machine to
+1061 | rootbound | Roots of a plant grown for too long in a container which hav
+1062 | rooting compound | A natural or synthetic compound containing plant homornes (a
+1063 | rooting depths | The depth of soil from which plant roots take up water or th
+1064 | rootkit | A software program designed to provide a user with administr
+1065 | rootlet | A little root which grows from a main root.
+1066 | rootstock | 1. Also known as rhizome , it is a horizontal underground st
+1067 | roridulate | Having a covering of waxy platelets that appears moist.
+1068 | rosdal | A type of line notation used in databases based on connectio
+1069 | rose curve | Also known as rose in mathematics, it is a curve plotted in 
+1070 | rose's metal | An alloy of low melting point about 100 o C (273 K) consisti
+1071 | roseate | 1. Having the colour of rose; tinged with red. 2. A term use
+1072 | rosemary | A small perennial evergreen upright to trailing shrub ( Rosm
+1073 | rosette | In botany, it is a circular arrangement of dense radiating c
+1074 | rosin | A hard, brittle, colourless, yellow, brown or black natural 
+1075 | rostellate | Having a tiny, short, stout, terminal beak.
+1076 | rostellum | A small beak-like part of a plant or an animal that such as 
+1077 | rostral scale | A scale present on the tip of the upper jaw of a snout, usua
+1078 | rostrum | A set of mouthparts that look like a beak. Many insects have
+1079 | rosulate | Having leaves or bracts arranged in basal rosette and either
+1080 | rot | 1. The breakdown of organic matter from a complex to a simpl
+1081 | rotamer | One of a set of conformational isomers that differ from each
+1082 | rotary converter | A type of motor-generator, in which the two machines share a
+1083 | rotary cultivator | A motorised cultivator mounted on or trailed by a machine wi
+1084 | rotary mower | A machine used for cutting grass and other upright crops. Ro
+1085 | rotary parlour | The most expensive and complex of the four milking systems, 
+1086 | rotary sprinkler | A machine used for irrigation purposes. It can be fitted wit
+1087 | rotate | 1. To cause to turn around an axis or centre point or to rev
+1088 | rotating flails | Parts used on manure spreaders to distribute materials on a 
+1089 | rotating frame of reference | In physics, it is a frame of reference without inertia that 
+1090 | rotating tines | Spikes used on machines such as rotavators and power harrows
+1091 | rotation | 1. A mathematical transformation of an object in a circular 
+1092 | rotation design | A system of conserving soil nutrients in organic farming by 
+1093 | rotation group | A group formed by the set of all rotations about the origin 
+1094 | rotation symmetry | A plane figure has rotation symmetry point O if there are a 
+1095 | rotational diffusion | A process by which the equilibrium statistical distribution 
+1096 | rotational grazing | The division of pasturing range into several fields or paddo
+1097 | rotational inertia | A measure of an object's resistance to changes to its rotati
+1098 | rotational motion | The rotation of a particle about a fixed point in space or t
+1099 | rotational spectroscopy | The study in the electromagnetic radiation spectrum, especia
+1100 | rotational symmetry | The property of a plane figure that does not change its iden
+1101 | rotator phase transition | A transition from a fully-ordered crystal of globular or qua
+1102 | rotatory power | The quantitative measure of optical activity.
+1103 | rotavirus | A wheel shaped double-stranded RNA virus in the family Reovi
+1104 | rotaxane | A compound with two or more independent portions not bonded 
+1105 | rotenoids | Naturally occurring substances containing a cis -fused tetra
+1106 | rotenone | The active ingredient of the insecticide derris, which is an
+1107 | roth's theorem | The culminating theorem of rational approximation that for a
+1108 | rotifera | A phylum of microscopic pseudocoelomate, mainly free- living
+1109 | rotometer | A device, based on Stokes law, for measuring the rate of flu
+1110 | rotor | 1. The rotating part of an electric generator, motor, turbin
+1111 | rotund | 1. Round or spherical. 2. Ripe, as for example, a ripe fruit
+1112 | rouché's theorem | In mathematics, it states that if the complex-valued functio
+1113 | rouen | A breed of common domestic ducks descended from and resembli
+1114 | rough endoplasmic reticulum | A type of the endoplasmic reticulum studded with ribosomes i
+1115 | rough fell | A hardy moorland breed of horned sheep originating in the UK
+1116 | rough grazing | Underdeveloped grazing, common in mountain, heath and moorla
+1117 | rough stalked meadow grass | A type of perennial grass, Poa trivialis , of the Poa family
+1118 | roughage | A material of plant origin that cannot be digested or be bro
+1119 | rouging glove | A glove impregnated with herbicides and used to destroy wild
+1120 | roulette | 1. The curve traced by a fixed point on a closed convex curv
+1121 | round | 1. Shaped like a circle, a cylinder or a sphere. In topology
+1122 | round and round ploughing | A ploughing method in which fields are ploughed from the cen
+1123 | round angle | An angle of 360 o .
+1124 | round baler | A tractor drawn machine in which grass is rolled up inside t
+1125 | round robin | In time division multiplex system, it is a method of allocat
+1126 | round window | An opening covered by the secondary tympanic membrane betwee
+1127 | round-off error | In mathematics, it is the difference between the precise val
+1128 | roundworm | A common name for any of a phylum of parasitic, unsegmented 
+1129 | router | A hardware device that directs data from a local area networ
+1130 | routing information protocol | A protocol used by computers and other network devices such 
+1131 | row | In mathematics, it is a horizontal linear array of numbers o
+1132 | row crop | A crop planted in rows wide enough to allow cultivators betw
+1133 | row crop rotation | A lightweight tractor used mostly by market gardeners and fa
+1134 | row equivalence | In mathematics, two matrices are row equivalent if one can b
+1135 | row intercropping | The practice of cultivating different crops simultaneously i
+1136 | row rank | In mathematics, it is the maximum number of linearly indepen
+1137 | row space | In a matrix, it is the vector space spanned by the rows of a
+1138 | row spacing | In agriculture, it is the lateral spacing between the centre
+1139 | row vector | A1 × n matrix having only one row.
+1140 | row-reduced echelon form | A matrix that is in a row echelon form (has undergone Gaussi
+1141 | royal jelly | A highly nutritious food substance secreted from the pharyng
+1142 | royal palm | A large and attractive tree planted throughout the tropics a
+1143 | royal poinciana | A many- branched, broad, spreading, flat-crowned deciduous t
+1144 | rrkm theory | A theory of unimolecular chemical reactions that enables the
+1145 | rs-232 interface | A standard type of computer interface approved by the Electr
+1146 | rubber | 1. Natural rubber is natural polymer or hydrocarbon, which i
+1147 | rubella | A mild viral disease, usually contracted in childhood causin
+1148 | rubescent | To become red or reddish.
+1149 | rubidium | A soft reactive silvery-white metal in Group 1 (IA) of the p
+1150 | rubidium-strontium dating | A method of dating geological specimens such as rocks, miner
+1151 | rubiginose | Rust coloured or reddish brown.
+1152 | rubus | A genus of flowering plants in the rose family, Rosaceae, su
+1153 | ruby | Natural pink to red impure form of the mineral corundum (alu
+1154 | rudaceous | A term used to describe a coarse-grained sedimentary rock. E
+1155 | ruddle | A red colouring material on a harness temporarily worn by ra
+1156 | ruderal | A plant species first to colonise a land with a high level o
+1157 | rudimentary | 1. Elementary or basic. 2. Incompletely or imperfectly devel
+1158 | ruffini's capsule | A flattened capsule containing specialised nerve endings, fo
+1159 | rufous | Having a reddish-brown or rust-like colour, frequently used 
+1160 | ruga | A fold or wrinkle, as in the lining of the stomach.
+1161 | rugulose | Slightly wrinkled; having many small wrinkles.
+1162 | rule | 1. In mathematics, a widely accepted procedure for solving a
+1163 | rule of detachment | In logic, the principle or rule of inference that whenever a
+1164 | rule of false position | A method of solving equations by using a trial and error val
+1165 | rule of inference | In logic, a function which takes premises, analyses their sy
+1166 | rule of three | In mathematics, the rule that the product of the extremes of
+1167 | ruled surface | A surface that is built up from an infinite number of perfec
+1168 | ruler | A long narrow flat piece of plastic, metal or wood with stra
+1169 | rules of good husbandry | A set of rules in agriculture passed in the United Kingdom, 
+1170 | rumen | The larger part of the reticulorumen, which is the first cha
+1171 | rumen liquor | Concentrated liquid found in the rumen of an animal. It is u
+1172 | rumford, count benjamin thompson | American-born British physicist, who acted as a British spy 
+1173 | ruminant | Any of various cud-chewing hoofed mammals of the suborder Ru
+1174 | ruminate | 1. To chew food that is regurgitated from the first stomach 
+1175 | run | 1. In mathematics, it is how far a line goes along (for a gi
+1176 | runcinate | Having tooth-like projections or sharp pinnatifids such that
+1177 | runge-kutta method | A numerical approximation technique for solving ordinary dif
+1178 | runner | 1. Horizontal connections between organisms that may be part
+1179 | runner bean | A perennial vine, Phaseolus coccineus , belonging to the sub
+1180 | runoff | 1. Rainwater or melted snow from the surface of land that is
+1181 | runoff rate | 1. The amount of excess fertiliser or pesticide from farmlan
+1182 | runt | An individual animal born in multiple births that is smaller
+1183 | runtime | In computing, it refers to the period of time when a program
+1184 | runtime error | A program error that occurs while the program is running. Th
+1185 | runtime version | In computer science, it is a copy of a program that is provi
+1186 | ruptile | Dehiscing or splitting irregularly.
+1187 | rush | A common weed growing near water, in moors and marshes.
+1188 | rushlike | Plants that resemble grasses and possess inconspicuous flowe
+1189 | russell-saunders coupling | A type of coupling in systems involving many fermions (elect
+1190 | russet | A type of dessert apple with a rough brown skin.
+1191 | russeting | The formation of brown patches on the skin of an apple, in r
+1192 | rust | 1. The reddish brown powdery hydrated iron oxides (Fe 2 O3 .
+1193 | rut | A period of intensive sexual activity that occurs in the mal
+1194 | ruthenium | A hard silvery-white metallic element in Group 8 (VIIIB) of 
+1195 | ruthenium red | A temporary stain that turns mucilage and certain gums pink.
+1196 | rutherford and royds' apparatus | An apparatus designed by Ernest Rutherford (1871-1937), Brit
+1197 | rutherford scattering | The elastic scattering of charged particles by the Coulomb i
+1198 | rutherford, ernest | A New Zealand-born British physicist, who became known as th
+1199 | rutherfordium | An artificially produced radioactive metal with the symbol R
+1200 | rutile | A natural form of titanium(IV) oxide, which is a dark reddis
+1201 | rydberg constant | The most accurately measured of the fundamental constants, r
+1202 | rydberg formula | A formula named after Swedish physicist, Johannes Rydberg (1
+1203 | rydberg orbital | For an atom, an orbital with principal quantum number greate
+1204 | rydberg spectrum | The ultraviolet absorption spectrum of a gas in the ultravio
+1205 | rydberg state | An electronic state that arises by the excitation of a valen
+1206 | rydberg transition | An electronic transition described approximately as promotio
+1207 | rye | A tall hardy annual cereal crop, Secale cereale and its edib
+1208 | rye grass | A short-lived perennial, leafy, tufted plant, native to Euro
+1209 | ryeland | A rare breed of sheep and one of the oldest of British sheep

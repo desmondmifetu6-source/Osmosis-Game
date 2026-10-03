@@ -140786,7 +140786,9 @@
       "word": "radian",
       "raw_headword": "RADIAN",
       "synonyms": [],
-      "definition": "A unit of measurement whose angle is equal to 57.3 o , equivalent to the angle subtended at the centre of a circle by an arc equal in length to the radius. Angle can also be measured in degrees, with the symbol o ."
+      "definition": "A unit of measurement whose angle is equal to 57.3 o , equivalent to the angle subtended at the centre of a circle by an arc equal in length to the radius. Angle can also be measured in degrees, with the symbol o .\n\n$$\n\\theta = \\frac{s}{r}, \\quad 1\\text{ rad} = \\frac{180^\\circ}{\\pi} \\approx 57.2958^\\circ, \\quad 2\\pi\\text{ rad} = 360^\\circ\n$$\n*Formula:* The standard unit of angular measure: the angle subtended at the center of a circle by an arc equal in length to the radius $r$. Converted to degrees by multiplying by $180/\\pi$.",
+      "formula": "\\theta = \\frac{s}{r}, \\quad 1\\text{ rad} = \\frac{180^\\circ}{\\pi} \\approx 57.2958^\\circ, \\quad 2\\pi\\text{ rad} = 360^\\circ",
+      "formula_description": "The standard unit of angular measure: the angle subtended at the center of a circle by an arc equal in length to the radius $r$. Converted to degrees by multiplying by $180/\\pi$."
     },
     {
       "word": "radiata",
@@ -141008,7 +141010,9 @@
       "word": "radicand",
       "raw_headword": "RADICAND",
       "synonyms": [],
-      "definition": "A number or quantity, usually put under the radical sign from which a root is to be extracted. For example, in the expression , the symbol √ is the radical sign and 15 is the radicand."
+      "definition": "A number or quantity, usually put under the radical sign from which a root is to be extracted. For example, in the expression , the symbol √ is the radical sign and 15 is the radicand.\n\n$$\n\\sqrt[n]{x} = a \\iff a^n = x, \\quad \\sqrt[n]{x^m} = x^{m/n}, \\quad \\sqrt[n]{ab} = \\sqrt[n]{a}\\cdot\\sqrt[n]{b}\n$$\n*Formula:* The number or expression $x$ under a radical sign $\\sqrt[n]{x}$. If $n$ is even, $x \\geq 0$ for real outputs; exponent rules dictate $\\sqrt[n]{x^m} = x^{m/n}$.",
+      "formula": "\\sqrt[n]{x} = a \\iff a^n = x, \\quad \\sqrt[n]{x^m} = x^{m/n}, \\quad \\sqrt[n]{ab} = \\sqrt[n]{a}\\cdot\\sqrt[n]{b}",
+      "formula_description": "The number or expression $x$ under a radical sign $\\sqrt[n]{x}$. If $n$ is even, $x \\geq 0$ for real outputs; exponent rules dictate $\\sqrt[n]{x^m} = x^{m/n}$."
     },
     {
       "word": "radicant",
@@ -141173,7 +141177,9 @@
       "word": "radioactive decay",
       "raw_headword": "RADIOACTIVE DECAY",
       "synonyms": [],
-      "definition": "A process of continuous spontaneous disintegration in which the unstable nuclei of radioactive elements lose energy by emission of electromagnetic radiation or alpha particles and beta particles and gamma rays. Examples of such elements are radium and various isotopes of uranium and also those having atomic R numbers higher than that of uranium, known as the transuranic elements . This changes the element's atomic number and transforms an element commonly referred to as the parent isotope into another called the daughter isotope . The four common forms of decay are alpha decay, beta decay, inverse beta decay and isomeric transition. Radioactivity is measured in the SI unit of Becquerel (Bq) per second, which has replaced the former unit, Curie (Ci). The becquerel (Bq) is defined as the activity of a radionuclide decaying at a rate, on average, of one spontaneous nuclear transition per second; 1 1Bq = 1s - 1 . The curie (Ci), is equal to 3.7 × 10 10 Bq."
+      "definition": "A process of continuous spontaneous disintegration in which the unstable nuclei of radioactive elements lose energy by emission of electromagnetic radiation or alpha particles and beta particles and gamma rays. Examples of such elements are radium and various isotopes of uranium and also those having atomic R numbers higher than that of uranium, known as the transuranic elements . This changes the element's atomic number and transforms an element commonly referred to as the parent isotope into another called the daughter isotope . The four common forms of decay are alpha decay, beta decay, inverse beta decay and isomeric transition. Radioactivity is measured in the SI unit of Becquerel (Bq) per second, which has replaced the former unit, Curie (Ci). The becquerel (Bq) is defined as the activity of a radionuclide decaying at a rate, on average, of one spontaneous nuclear transition per second; 1 1Bq = 1s - 1 . The curie (Ci), is equal to 3.7 × 10 10 Bq.\n\n$$\nN(t) = N_0 e^{-\\lambda t}, \\quad A(t) = \\lambda N(t) = A_0 e^{-\\lambda t}, \\quad t_{1/2} = \\frac{\\ln 2}{\\lambda} \\approx \\frac{0.693}{\\lambda}\n$$\n*Formula:* First-order kinetics governing radioactive decay: the number of undecayed nuclei $N(t)$ decreases exponentially over time at decay constant $\\lambda$, with half-life $t_{1/2} = \\ln 2 / \\lambda$.",
+      "formula": "N(t) = N_0 e^{-\\lambda t}, \\quad A(t) = \\lambda N(t) = A_0 e^{-\\lambda t}, \\quad t_{1/2} = \\frac{\\ln 2}{\\lambda} \\approx \\frac{0.693}{\\lambda}",
+      "formula_description": "First-order kinetics governing radioactive decay: the number of undecayed nuclei $N(t)$ decreases exponentially over time at decay constant $\\lambda$, with half-life $t_{1/2} = \\ln 2 / \\lambda$."
     },
     {
       "word": "radioactive decay law",
@@ -141251,7 +141257,9 @@
       "word": "radioactivity",
       "raw_headword": "RADIOACTIVITY",
       "synonyms": [],
-      "definition": "The spontaneous disintegration of unstable nuclei to produce a more stable nucleus with emission of radiation. The types of radiation emitted are alpha particles, beta particles and gamma rays. The rate of disintegration is not influenced by chemical reactions or any normal changes such as temperature and pressure in the environment. On the other hand, the bombardment of a previously stable nuclei with high-speed subatomic particles (protons, neutrons, etc.) also creates unstable nuclei which disintegrates with emission of radiation, a process known as induced or stimulated nuclei reaction, which used to be called artificial radioactivity. Radioactive isotopes are useful in archaeology for carbon-dating or measuring the age of carbon-bearing items using carbon^-14, in medicine for diagnosis and treatment of diseases such as tumors, studying living organisms and sterilizing medical equipment, producing nuclear weapons, generating energy for heat and electric power, in agriculture for pest control, as tracers to monitor fluid flow and filtration as well as in all types of industrial processes."
+      "definition": "The spontaneous disintegration of unstable nuclei to produce a more stable nucleus with emission of radiation. The types of radiation emitted are alpha particles, beta particles and gamma rays. The rate of disintegration is not influenced by chemical reactions or any normal changes such as temperature and pressure in the environment. On the other hand, the bombardment of a previously stable nuclei with high-speed subatomic particles (protons, neutrons, etc.) also creates unstable nuclei which disintegrates with emission of radiation, a process known as induced or stimulated nuclei reaction, which used to be called artificial radioactivity. Radioactive isotopes are useful in archaeology for carbon-dating or measuring the age of carbon-bearing items using carbon^-14, in medicine for diagnosis and treatment of diseases such as tumors, studying living organisms and sterilizing medical equipment, producing nuclear weapons, generating energy for heat and electric power, in agriculture for pest control, as tracers to monitor fluid flow and filtration as well as in all types of industrial processes.\n\n$$\nA = -\\frac{dN}{dt} = \\lambda N, \\quad A(t) = A_0 e^{-\\lambda t}, \\quad 1\\text{ Bq} = 1\\text{ decay/s}, \\quad 1\\text{ Ci} = 3.7 \\times 10^{10}\\text{ Bq}\n$$\n*Formula:* The spontaneous emission of radiation from unstable atomic nuclei. Activity $A$ measures decay rate in Becquerels ($1\\text{ Bq} = 1\\text{ decay/s}$) or Curies ($1\\text{ Ci} = 3.7 \\times 10^{10}\\text{ Bq}$).",
+      "formula": "A = -\\frac{dN}{dt} = \\lambda N, \\quad A(t) = A_0 e^{-\\lambda t}, \\quad 1\\text{ Bq} = 1\\text{ decay/s}, \\quad 1\\text{ Ci} = 3.7 \\times 10^{10}\\text{ Bq}",
+      "formula_description": "The spontaneous emission of radiation from unstable atomic nuclei. Activity $A$ measures decay rate in Becquerels ($1\\text{ Bq} = 1\\text{ decay/s}$) or Curies ($1\\text{ Ci} = 3.7 \\times 10^{10}\\text{ Bq}$)."
     },
     {
       "word": "radiobiology",
@@ -141521,13 +141529,17 @@
       "word": "radius of curvature",
       "raw_headword": "RADIUS OF CURVATURE",
       "synonyms": [],
-      "definition": "The radius of a circle that touches the inside of the curve at that point. The radius of curvature of a plane curve at a point is the radius of a circle that is equal to that of the given curve at that point. The rate of change of the tangent to the curve with respect to the arc length is the absolute value of the reciprocal of the curvature of a curve at a given point. For y = f ( x ), it is given by d ds df dy ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ . Y=(x^-1) 2 1.0 0.5 x y Radius of curvature."
+      "definition": "The radius of a circle that touches the inside of the curve at that point. The radius of curvature of a plane curve at a point is the radius of a circle that is equal to that of the given curve at that point. The rate of change of the tangent to the curve with respect to the arc length is the absolute value of the reciprocal of the curvature of a curve at a given point. For y = f ( x ), it is given by d ds df dy ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ . Y=(x^-1) 2 1.0 0.5 x y Radius of curvature.\n\n$$\nR = \\frac{[1 + (y')^2]^{3/2}}{|y''|}, \\quad a_c = \\frac{v^2}{R}, \\quad f = \\frac{R}{2}\n$$\n*Formula:* The radius of the osculating circle that best fits a curve at a given point. For spherical mirrors, focal length $f = R/2$; for circular motion, centripetal acceleration $a_c = v^2/R$.",
+      "formula": "R = \\frac{[1 + (y')^2]^{3/2}}{|y''|}, \\quad a_c = \\frac{v^2}{R}, \\quad f = \\frac{R}{2}",
+      "formula_description": "The radius of the osculating circle that best fits a curve at a given point. For spherical mirrors, focal length $f = R/2$; for circular motion, centripetal acceleration $a_c = v^2/R$."
     },
     {
       "word": "radius of gyration",
       "raw_headword": "RADIUS OF GYRATION",
       "synonyms": [],
-      "definition": "The distance between the point about which rotation of a body occurs and the point at which the body's mass is distributed, having the maximum effect. It is expressed as k 2 = I / m where k is the radius of gyration and I the body's moment of inertia and m is the mass."
+      "definition": "The distance between the point about which rotation of a body occurs and the point at which the body's mass is distributed, having the maximum effect. It is expressed as k 2 = I / m where k is the radius of gyration and I the body's moment of inertia and m is the mass.\n\n$$\nk = \\sqrt{\\frac{I}{M}}, \\quad I = M k^2, \\quad k_{\\text{disk}} = \\frac{R}{\\sqrt{2}}, \\quad k_{\\text{sphere}} = \\sqrt{\\frac{2}{5}}R\n$$\n*Formula:* The radial distance $k$ from a rotational axis at which the entire mass $M$ of a body could be concentrated without altering its moment of inertia $I = Mk^2$.",
+      "formula": "k = \\sqrt{\\frac{I}{M}}, \\quad I = M k^2, \\quad k_{\\text{disk}} = \\frac{R}{\\sqrt{2}}, \\quad k_{\\text{sphere}} = \\sqrt{\\frac{2}{5}}R",
+      "formula_description": "The radial distance $k$ from a rotational axis at which the entire mass $M$ of a body could be concentrated without altering its moment of inertia $I = Mk^2$."
     },
     {
       "word": "radius of normal curvature",
@@ -141547,7 +141559,9 @@
       "synonyms": [
         "base"
       ],
-      "definition": "1. The number that is to be raised to a power. For example, in 16 2 , 16 is the radix or the base. 2. A number that is the base of a number system or of a system of logarithms. For example, in the decimal system, the radix is ten, because it uses the ten digits: 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9; and in the binary system, it is 2."
+      "definition": "1. The number that is to be raised to a power. For example, in 16 2 , 16 is the radix or the base. 2. A number that is the base of a number system or of a system of logarithms. For example, in the decimal system, the radix is ten, because it uses the ten digits: 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9; and in the binary system, it is 2.\n\n$$\nN = \\sum_{i=-m}^{n-1} d_i \\cdot b^i = d_{n-1}b^{n-1} + \\dots + d_0 b^0 + d_{-1}b^{-1} + \\dots + d_{-m}b^{-m}\n$$\n*Formula:* The base $b$ of a positional numeral system (e.g., $b=10$ decimal, $b=2$ binary, $b=16$ hexadecimal). Determines the number of unique digits and the power-of-$b$ weight of each digit position.",
+      "formula": "N = \\sum_{i=-m}^{n-1} d_i \\cdot b^i = d_{n-1}b^{n-1} + \\dots + d_0 b^0 + d_{-1}b^{-1} + \\dots + d_{-m}b^{-m}",
+      "formula_description": "The base $b$ of a positional numeral system (e.g., $b=10$ decimal, $b=2$ binary, $b=16$ hexadecimal). Determines the number of unique digits and the power-of-$b$ weight of each digit position."
     },
     {
       "word": "radix fraction",
@@ -141704,7 +141718,9 @@
       "synonyms": [
         "raman scattering"
       ],
-      "definition": "The change in wavelength and phase exhibited by monochromatic light as it passes through a transparent medium due to a change in rotational or vibrational energy of the scattering molecules. It is used in Raman spectroscopy to obtain information about the structure of molecules."
+      "definition": "The change in wavelength and phase exhibited by monochromatic light as it passes through a transparent medium due to a change in rotational or vibrational energy of the scattering molecules. It is used in Raman spectroscopy to obtain information about the structure of molecules.\n\n$$\n\\Delta \\nu = \\nu_0 \\pm \\nu_{\\text{vib}}, \\quad E_{\\text{Stokes}} = h(\\nu_0 - \\nu_m), \\quad E_{\\text{anti-Stokes}} = h(\\nu_0 + \nu_m)\n$$\n*Formula:* Inelastic scattering of photons by molecules, resulting in frequency shifts $\\Delta \\nu$ corresponding to vibrational or rotational energy transitions of the scattering medium.",
+      "formula": "\\Delta \\nu = \\nu_0 \\pm \\nu_{\\text{vib}}, \\quad E_{\\text{Stokes}} = h(\\nu_0 - \\nu_m), \\quad E_{\\text{anti-Stokes}} = h(\\nu_0 + \nu_m)",
+      "formula_description": "Inelastic scattering of photons by molecules, resulting in frequency shifts $\\Delta \\nu$ corresponding to vibrational or rotational energy transitions of the scattering medium."
     },
     {
       "word": "raman spectroscope",
@@ -141903,7 +141919,9 @@
         "chance variable",
         "stochastic variable"
       ],
-      "definition": "A variable whose value is determined by the result of a random experiment and may take any range of values, which are either continuous or discrete that cannot be predicted with certainty but only described probabilistically. It may also be defined as a measurable function defined on a probability space having range in the interval [0, 1]."
+      "definition": "A variable whose value is determined by the result of a random experiment and may take any range of values, which are either continuous or discrete that cannot be predicted with certainty but only described probabilistically. It may also be defined as a measurable function defined on a probability space having range in the interval [0, 1].\n\n$$\nE[X] = \\sum_{i} x_i p(x_i) \\text{ or } \\int_{-\\infty}^{\\infty} x f(x)dx, \\quad \\text{Var}(X) = E[X^2] - (E[X])^2 = \\sigma^2\n$$\n*Formula:* A numerical variable $X$ whose values depend on outcomes of a random phenomenon. Characterized by its probability mass function $p(x)$ (discrete) or probability density function $f(x)$ (continuous), with mean $E[X]$ and variance $\\text{Var}(X)$.",
+      "formula": "E[X] = \\sum_{i} x_i p(x_i) \\text{ or } \\int_{-\\infty}^{\\infty} x f(x)dx, \\quad \\text{Var}(X) = E[X^2] - (E[X])^2 = \\sigma^2",
+      "formula_description": "A numerical variable $X$ whose values depend on outcomes of a random phenomenon. Characterized by its probability mass function $p(x)$ (discrete) or probability density function $f(x)$ (continuous), with mean $E[X]$ and variance $\\text{Var}(X)$."
     },
     {
       "word": "random vector",
@@ -142025,7 +142043,9 @@
       "word": "raoult's law",
       "raw_headword": "RAOULT'S LAW",
       "synonyms": [],
-      "definition": "A law established by François-Marie Raoult in 1882, which states that the partial vapour pressure of a solution is proportional to its chemical component and the mole fraction. A solution that obeys Raoult's law is said to be an ideal solution . Generally, the law holds only for mixtures of liquids such as benzene and toluene that are very similar in chemical structure and described as perfect solutions. Some mixtures of liquids conform to the law over a whole range of concentrations. Deviations in the law occur in most cases making one component only slightly soluble in the other and its volatility is abnormally increased. For example, the volatility of alcohol in dilute aqueous solution is several times as great as predicted by Raoult's law. For a mixture of two solutions A and B with partial vapour pressures P A and P B respectively and with respective mole fractions X A and X B , the total pressure above the mixture according to Raoult's law is P = PAXA + PBXB . Since X A = 1 - X B , the equation can also be written as: P = PAXA + (1 - X A )P B = (P A - P B ) X A + P B , etc. Diagrametrically, the equation is as represented in the illustration."
+      "definition": "A law established by François-Marie Raoult in 1882, which states that the partial vapour pressure of a solution is proportional to its chemical component and the mole fraction. A solution that obeys Raoult's law is said to be an ideal solution . Generally, the law holds only for mixtures of liquids such as benzene and toluene that are very similar in chemical structure and described as perfect solutions. Some mixtures of liquids conform to the law over a whole range of concentrations. Deviations in the law occur in most cases making one component only slightly soluble in the other and its volatility is abnormally increased. For example, the volatility of alcohol in dilute aqueous solution is several times as great as predicted by Raoult's law. For a mixture of two solutions A and B with partial vapour pressures P A and P B respectively and with respective mole fractions X A and X B , the total pressure above the mixture according to Raoult's law is P = PAXA + PBXB . Since X A = 1 - X B , the equation can also be written as: P = PAXA + (1 - X A )P B = (P A - P B ) X A + P B , etc. Diagrametrically, the equation is as represented in the illustration.\n\n$$\nP_A = X_A P_A^\\circ, \\quad \\Delta P = X_B P_A^\\circ, \\quad P_{\\text{total}} = X_A P_A^\\circ + X_B P_B^\\circ\n$$\n*Formula:* Thermodynamic chemistry law stating that partial vapor pressure of solvent $A$ above an ideal solution $P_A$ equals solvent mole fraction $X_A$ multiplied by pure solvent vapor pressure $P_A^\\circ$.",
+      "formula": "P_A = X_A P_A^\\circ, \\quad \\Delta P = X_B P_A^\\circ, \\quad P_{\\text{total}} = X_A P_A^\\circ + X_B P_B^\\circ",
+      "formula_description": "Thermodynamic chemistry law stating that partial vapor pressure of solvent $A$ above an ideal solution $P_A$ equals solvent mole fraction $X_A$ multiplied by pure solvent vapor pressure $P_A^\\circ$."
     },
     {
       "word": "raphe",
@@ -142156,7 +142176,9 @@
       "synonyms": [
         "specific rate constant"
       ],
-      "definition": "The mathematical constant of proportionality for a chemical reaction at a particular temperature that relates the concentrations of the reactants in a chemical reaction."
+      "definition": "The mathematical constant of proportionality for a chemical reaction at a particular temperature that relates the concentrations of the reactants in a chemical reaction.\n\n$$\nk = A e^{-E_a / RT}, \\quad \\ln k = \\ln A - \\frac{E_a}{R T}\n$$\n*Formula:* Reaction rate coefficient $k$ in chemical kinetics, governed by the Arrhenius equation: depends exponentially on activation energy $E_a$ and absolute temperature $T$.",
+      "formula": "k = A e^{-E_a / RT}, \\quad \\ln k = \\ln A - \\frac{E_a}{R T}",
+      "formula_description": "Reaction rate coefficient $k$ in chemical kinetics, governed by the Arrhenius equation: depends exponentially on activation energy $E_a$ and absolute temperature $T$."
     },
     {
       "word": "rate equation",
@@ -142208,7 +142230,9 @@
       "word": "rate of reaction",
       "raw_headword": "RATE OF REACTION",
       "synonyms": [],
-      "definition": "The speed at which a chemical reaction takes place in a reactant. For example, in the oxidation of iron under atmospheric conditions, the rate of reaction may take several years, whilst the combustion of benzene takes a very short time (seconds). It is usually expressed in terms of the concentration of a reactant consumed or product formed in a unit time."
+      "definition": "The speed at which a chemical reaction takes place in a reactant. For example, in the oxidation of iron under atmospheric conditions, the rate of reaction may take several years, whilst the combustion of benzene takes a very short time (seconds). It is usually expressed in terms of the concentration of a reactant consumed or product formed in a unit time.\n\n$$\nr = -\\frac{1}{a}\\frac{d[A]}{dt} = -\\frac{1}{b}\\frac{d[B]}{dt} = \\frac{1}{c}\\frac{d[C]}{dt} = \\frac{1}{d}\\frac{d[D]}{dt}\n$$\n*Formula:* Speed at which reactants turn into products in chemical reaction $aA + bB \\to cC + dD$: defined as change in concentration per unit time divided by stoichiometric coefficients.",
+      "formula": "r = -\\frac{1}{a}\\frac{d[A]}{dt} = -\\frac{1}{b}\\frac{d[B]}{dt} = \\frac{1}{c}\\frac{d[C]}{dt} = \\frac{1}{d}\\frac{d[D]}{dt}",
+      "formula_description": "Speed at which reactants turn into products in chemical reaction $aA + bB \\to cC + dD$: defined as change in concentration per unit time divided by stoichiometric coefficients."
     },
     {
       "word": "rate table",
@@ -142242,7 +142266,9 @@
       "word": "ratio",
       "raw_headword": "RATIO",
       "synonyms": [],
-      "definition": "A measure of the relative size of two quantities a to b expressed as a proportion, which can be written as a : b or as the fraction a b . For example, if the population of boys in a class is 30 and that of girls is 20, the ratio of boys to girls is 30 to 20, written as 3:2 or 3 ."
+      "definition": "A measure of the relative size of two quantities a to b expressed as a proportion, which can be written as a : b or as the fraction a b . For example, if the population of boys in a class is 30 and that of girls is 20, the ratio of boys to girls is 30 to 20, written as 3:2 or 3 .\n\n$$\na : b = \\frac{a}{b}, \\quad \\frac{a}{b} = \\frac{c}{d} \\iff ad = bc, \\quad \\text{Ratio of areas} = \\left(\\frac{a}{b}\\right)^2\n$$\n*Formula:* A quantitative relation showing the number of times one value contains or is contained within another. A proportion $a/b = c/d$ asserts equality of two ratios.",
+      "formula": "a : b = \\frac{a}{b}, \\quad \\frac{a}{b} = \\frac{c}{d} \\iff ad = bc, \\quad \\text{Ratio of areas} = \\left(\\frac{a}{b}\\right)^2",
+      "formula_description": "A quantitative relation showing the number of times one value contains or is contained within another. A proportion $a/b = c/d$ asserts equality of two ratios."
     },
     {
       "word": "ratio of similitude",
@@ -142262,7 +142288,9 @@
       "word": "ratio test",
       "raw_headword": "RATIO TEST",
       "synonyms": [],
-      "definition": "1. Also known as Cauchy's ratio test , it is a test for a complex series a n n = 1 ∞ ∑ to determine whether the series is absolutely convergent by testing the limit of the ratio of the absolute values of successive terms. If the term lim n →∞ a n + 1 a n is less than unity, the series converges absolutely; if it is greater than unity, it diverges. 2. Also known as d'Alembert's ratio test or generalised ratio test , it is a test of convergence for an infinite series by testing whether there is a k < 1 such that the ratio of the absolute values of its predecessors are less than k , for all terms after some terms; if this ratio is always greater than unity, then the series diverges."
+      "definition": "1. Also known as Cauchy's ratio test , it is a test for a complex series a n n = 1 ∞ ∑ to determine whether the series is absolutely convergent by testing the limit of the ratio of the absolute values of successive terms. If the term lim n →∞ a n + 1 a n is less than unity, the series converges absolutely; if it is greater than unity, it diverges. 2. Also known as d'Alembert's ratio test or generalised ratio test , it is a test of convergence for an infinite series by testing whether there is a k < 1 such that the ratio of the absolute values of its predecessors are less than k , for all terms after some terms; if this ratio is always greater than unity, then the series diverges.\n\n$$\nL = \\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|: \\quad L < 1 \\implies \\text{converges absolutely}, \\quad L > 1 \\implies \\text{diverges}\n$$\n*Formula:* D'Alembert's convergence test for infinite series $\\sum a_n$: if $L < 1$ the series converges absolutely, if $L > 1$ it diverges, and if $L = 1$ the test is inconclusive.",
+      "formula": "L = \\lim_{n \\to \\infty} \\left| \\frac{a_{n+1}}{a_n} \\right|: \\quad L < 1 \\implies \\text{converges absolutely}, \\quad L > 1 \\implies \\text{diverges}",
+      "formula_description": "D'Alembert's convergence test for infinite series $\\sum a_n$: if $L < 1$ the series converges absolutely, if $L > 1$ it diverges, and if $L = 1$ the test is inconclusive."
     },
     {
       "word": "ratio theorem",
@@ -142312,7 +142340,9 @@
       "word": "rational function",
       "raw_headword": "RATIONAL FUNCTION",
       "synonyms": [],
-      "definition": "A function of the form , g ( x ) ≠ 0, where f ( x ) and g ( x ) are polynomial functions."
+      "definition": "A function of the form , g ( x ) ≠ 0, where f ( x ) and g ( x ) are polynomial functions.\n\n$$\nf(x) = \\frac{P(x)}{Q(x)}, \\quad Q(x) \\neq 0, \\quad \\text{Vertical asymptotes at } Q(x) = 0\n$$\n*Formula:* Any function defined as the quotient of two polynomial functions $P(x)$ and $Q(x)$. Discontinuities and vertical asymptotes occur at roots of the denominator $Q(x)=0$ not shared by $P(x)$.",
+      "formula": "f(x) = \\frac{P(x)}{Q(x)}, \\quad Q(x) \\neq 0, \\quad \\text{Vertical asymptotes at } Q(x) = 0",
+      "formula_description": "Any function defined as the quotient of two polynomial functions $P(x)$ and $Q(x)$. Discontinuities and vertical asymptotes occur at roots of the denominator $Q(x)=0$ not shared by $P(x)$."
     },
     {
       "word": "rational numbers",
@@ -142441,7 +142471,9 @@
       "word": "rayleigh scattering",
       "raw_headword": "RAYLEIGH SCATTERING",
       "synonyms": [],
-      "definition": "Named after the British physicist Lord Rayleigh (1842-1910), it is the scattering of electromagnetic radiation by particles much smaller than the wavelength of the light and in which there is no change in frequency of the scattered radiations from the original beam of radiation. It is mostly observed in gases, but can also occur when light permeates solids and liquids. An example is the blue colour of the sky which occurs due to the scattering of sunlight by molecules in the Earth's atmosphere."
+      "definition": "Named after the British physicist Lord Rayleigh (1842-1910), it is the scattering of electromagnetic radiation by particles much smaller than the wavelength of the light and in which there is no change in frequency of the scattered radiations from the original beam of radiation. It is mostly observed in gases, but can also occur when light permeates solids and liquids. An example is the blue colour of the sky which occurs due to the scattering of sunlight by molecules in the Earth's atmosphere.\n\n$$\nI(\\theta) = I_0 \\frac{1 + \\cos^2\\theta}{2 R^2} \\left(\\frac{2\\pi}{\\lambda}\\right)^4 \\left(\\frac{n^2-1}{n^2+2}\\right)^2 \\left(\\frac{d}{2}\\right)^6 \\implies I \\propto \\frac{1}{\\lambda^4}\n$$\n*Formula:* Elastic scattering of light by particles smaller than the wavelength $\\lambda$. Scattering intensity varies inversely with $\\lambda^4$, explaining the blue color of the daytime sky.",
+      "formula": "I(\\theta) = I_0 \\frac{1 + \\cos^2\\theta}{2 R^2} \\left(\\frac{2\\pi}{\\lambda}\\right)^4 \\left(\\frac{n^2-1}{n^2+2}\\right)^2 \\left(\\frac{d}{2}\\right)^6 \\implies I \\propto \\frac{1}{\\lambda^4}",
+      "formula_description": "Elastic scattering of light by particles smaller than the wavelength $\\lambda$. Scattering intensity varies inversely with $\\lambda^4$, explaining the blue color of the daytime sky."
     },
     {
       "word": "rayleigh, john william strutt",
@@ -142531,13 +142563,17 @@
       "word": "reactance",
       "raw_headword": "REACTANCE",
       "synonyms": [],
-      "definition": "The opposition to the flow of alternating current by either a inductor (L) and capacitor (C) in a circuit, measured in ohms. There are two types of reactance: inductive reactance (X L ) , resulting from the changing magnetic field around a current carrying conductor; and capacitive (X C ) , which results from the changing electric field between two conducting plates separated by an insulator such as a capacitor. X L = 2 πfland X c = 2 π fc ."
+      "definition": "The opposition to the flow of alternating current by either a inductor (L) and capacitor (C) in a circuit, measured in ohms. There are two types of reactance: inductive reactance (X L ) , resulting from the changing magnetic field around a current carrying conductor; and capacitive (X C ) , which results from the changing electric field between two conducting plates separated by an insulator such as a capacitor. X L = 2 πfland X c = 2 π fc .\n\n$$\nX_L = \\omega L = 2\\pi f L, \\quad X_C = \\frac{1}{\\omega C} = \\frac{1}{2\\pi f C}, \\quad Z = \\sqrt{R^2 + (X_L - X_C)^2}\n$$\n*Formula:* The opposition of a circuit element to alternating current (AC) caused by inductance ($X_L$) or capacitance ($X_C$), measured in Ohms ($\\Omega$).",
+      "formula": "X_L = \\omega L = 2\\pi f L, \\quad X_C = \\frac{1}{\\omega C} = \\frac{1}{2\\pi f C}, \\quad Z = \\sqrt{R^2 + (X_L - X_C)^2}",
+      "formula_description": "The opposition of a circuit element to alternating current (AC) caused by inductance ($X_L$) or capacitance ($X_C$), measured in Ohms ($\\Omega$)."
     },
     {
       "word": "reactant",
       "raw_headword": "REACTANT",
       "synonyms": [],
-      "definition": "A substance that directly reacts with another in a chemical reaction, for example in the equation A + B → C, the reactants are A and B."
+      "definition": "A substance that directly reacts with another in a chemical reaction, for example in the equation A + B → C, the reactants are A and B.\n\n$$\naA + bB \\longrightarrow cC + dD, \\quad n_{\\text{limiting}} = \\min\\left(\\frac{n_A}{a}, \\frac{n_B}{b}\\right)\n$$\n*Formula:* Starting substance consumed during a chemical reaction to form products. The limiting reactant determines maximum theoretical product yield based on stoichiometry.",
+      "formula": "aA + bB \\longrightarrow cC + dD, \\quad n_{\\text{limiting}} = \\min\\left(\\frac{n_A}{a}, \\frac{n_B}{b}\\right)",
+      "formula_description": "Starting substance consumed during a chemical reaction to form products. The limiting reactant determines maximum theoretical product yield based on stoichiometry."
     },
     {
       "word": "reacting bond rules",
@@ -142611,7 +142647,9 @@
       "synonyms": [
         "qr"
       ],
-      "definition": "The function of the activities of any set of conditions involved in a chemical reaction that is not in equilibrium."
+      "definition": "The function of the activities of any set of conditions involved in a chemical reaction that is not in equilibrium.\n\n$$\nQ_c = \\frac{[C]^c [D]^d}{[A]^a [B]^b}, \\quad Q < K_c \\implies \\text{shift right}, \\quad Q > K_c \\implies \\text{shift left}\n$$\n*Formula:* Ratio of product concentrations to reactant concentrations at any instant during a reaction. Comparing $Q_c$ to equilibrium constant $K_c$ determines reaction direction.",
+      "formula": "Q_c = \\frac{[C]^c [D]^d}{[A]^a [B]^b}, \\quad Q < K_c \\implies \\text{shift right}, \\quad Q > K_c \\implies \\text{shift left}",
+      "formula_description": "Ratio of product concentrations to reactant concentrations at any instant during a reaction. Comparing $Q_c$ to equilibrium constant $K_c$ determines reaction direction."
     },
     {
       "word": "reaction stage",
@@ -143022,7 +143060,9 @@
       "word": "reciprocal",
       "raw_headword": "RECIPROCAL",
       "synonyms": [],
-      "definition": "1. Also known as inverse , the reciprocal of a number is 1 divided by that number. For example, the reciprocal of 2 is 1/2. 2. Of or relating to a multiplicative inverse. For example, the multiplicative inverse for a number x , denoted by 1/ x or x^-1 , is a number which when multiplied by x yields the multiplicative identity; the multiplicative inverse of a fraction a / b is b / a . 3. Relating to nerve and muscle tissues in which the activity of one group of muscles results in the inhibition of another."
+      "definition": "1. Also known as inverse , the reciprocal of a number is 1 divided by that number. For example, the reciprocal of 2 is 1/2. 2. Of or relating to a multiplicative inverse. For example, the multiplicative inverse for a number x , denoted by 1/ x or x^-1 , is a number which when multiplied by x yields the multiplicative identity; the multiplicative inverse of a fraction a / b is b / a . 3. Relating to nerve and muscle tissues in which the activity of one group of muscles results in the inhibition of another.\n\n$$\nx \\cdot \\frac{1}{x} = 1 \\quad (x \\neq 0), \\quad \\left(\\frac{a}{b}\\right)^{-1} = \\frac{b}{a}, \\quad f(x) = x^{-1}\n$$\n*Formula:* The multiplicative inverse of a number $x$: a quantity which when multiplied by $x$ yields 1. For a fraction $a/b$, the reciprocal is $b/a$.",
+      "formula": "x \\cdot \\frac{1}{x} = 1 \\quad (x \\neq 0), \\quad \\left(\\frac{a}{b}\\right)^{-1} = \\frac{b}{a}, \\quad f(x) = x^{-1}",
+      "formula_description": "The multiplicative inverse of a number $x$: a quantity which when multiplied by $x$ yields 1. For a fraction $a/b$, the reciprocal is $b/a$."
     },
     {
       "word": "reciprocal altruism",
@@ -143238,7 +143278,9 @@
       "synonyms": [
         "oblong"
       ],
-      "definition": "A four-sided plane figure with four right angles (90°). Its area ( A ) is the product of the length ( L ) and breadth ( B ): A = L x B . Rectangular means shaped like a rectangle; also mutually perpendicular."
+      "definition": "A four-sided plane figure with four right angles (90°). Its area ( A ) is the product of the length ( L ) and breadth ( B ): A = L x B . Rectangular means shaped like a rectangle; also mutually perpendicular.\n\n$$\nA = l \\cdot w, \\quad P = 2(l + w), \\quad d = \\sqrt{l^2 + w^2}\n$$\n*Formula:* A 4-sided polygon (quadrilateral) with four right angles ($90^\\circ$). Area $A = l w$, perimeter $P = 2(l+w)$, and diagonal length $d = \\sqrt{l^2+w^2}$.",
+      "formula": "A = l \\cdot w, \\quad P = 2(l + w), \\quad d = \\sqrt{l^2 + w^2}",
+      "formula_description": "A 4-sided polygon (quadrilateral) with four right angles ($90^\\circ$). Area $A = l w$, perimeter $P = 2(l+w)$, and diagonal length $d = \\sqrt{l^2+w^2}$."
     },
     {
       "word": "rectangle method",
@@ -143260,7 +143302,9 @@
       "word": "rectangular hyperbola",
       "raw_headword": "RECTANGULAR HYPERBOLA",
       "synonyms": [],
-      "definition": "A hyperbola whose asymptotes are perpendicular. If xy = C2 , then the asymptotes are the coordinate axes."
+      "definition": "A hyperbola whose asymptotes are perpendicular. If xy = C2 , then the asymptotes are the coordinate axes.\n\n$$\nxy = c^2 \\quad \\text{or} \\quad x^2 - y^2 = a^2, \\quad e = \\sqrt{2}, \\quad \\theta_{\\text{asymptotes}} = 90^\\circ\n$$\n*Formula:* A hyperbola whose asymptotes are perpendicular ($90^\\circ$), having eccentricity $e = \\sqrt{2}$. When aligned with coordinate axes, its equation simplifies to $xy = c^2$.",
+      "formula": "xy = c^2 \\quad \\text{or} \\quad x^2 - y^2 = a^2, \\quad e = \\sqrt{2}, \\quad \\theta_{\\text{asymptotes}} = 90^\\circ",
+      "formula_description": "A hyperbola whose asymptotes are perpendicular ($90^\\circ$), having eccentricity $e = \\sqrt{2}$. When aligned with coordinate axes, its equation simplifies to $xy = c^2$."
     },
     {
       "word": "rectangular number",
@@ -143298,7 +143342,9 @@
       "word": "rectifier",
       "raw_headword": "RECTIFIER",
       "synonyms": [],
-      "definition": "1. An electrical device that converts alternating current (AC) to direct current (DC). The common device used for rectification is the semiconductor diode, which permits current to pass in only one direction, effectively blocking its flow in the other direction. Uses of rectifiers include in power supplies, where direct current is needed to operate components in devices such as televisions, radios and devices. 2. An apparatus used for purifying or refining liquid by distillation."
+      "definition": "1. An electrical device that converts alternating current (AC) to direct current (DC). The common device used for rectification is the semiconductor diode, which permits current to pass in only one direction, effectively blocking its flow in the other direction. Uses of rectifiers include in power supplies, where direct current is needed to operate components in devices such as televisions, radios and devices. 2. An apparatus used for purifying or refining liquid by distillation.\n\n$$\nV_{\\text{dc, half}} = \\frac{V_m}{\\pi} \\approx 0.318 V_m, \\quad V_{\\text{dc, full}} = \\frac{2V_m}{\\pi} \\approx 0.637 V_m, \\quad V_{\\text{rms}} = \\frac{V_m}{\\sqrt{2}}\n$$\n*Formula:* An electrical device converting alternating current (AC) to direct current (DC). Full-wave rectification doubles average output DC voltage relative to half-wave rectification.",
+      "formula": "V_{\\text{dc, half}} = \\frac{V_m}{\\pi} \\approx 0.318 V_m, \\quad V_{\\text{dc, full}} = \\frac{2V_m}{\\pi} \\approx 0.637 V_m, \\quad V_{\\text{rms}} = \\frac{V_m}{\\sqrt{2}}",
+      "formula_description": "An electrical device converting alternating current (AC) to direct current (DC). Full-wave rectification doubles average output DC voltage relative to half-wave rectification."
     },
     {
       "word": "rectilinear",
@@ -143530,7 +143576,9 @@
       "word": "redshift",
       "raw_headword": "REDSHIFT",
       "synonyms": [],
-      "definition": "A systematic shift in the spectral lines of certain distant galaxies toward longer wavelengths or toward the red end of the spectrum. It is caused by its motion away from the Earth. There are three types: (i) Doppler Effect is a shift in the spectral lines of certain distant galaxies towards the red end of the visible spectrum, the longer wavelengths. Edwin Hubble, who first studied the redshift effects, concluded therefore, that all galaxies are receding from each other. (ii) Gravitational or Einstein redshift is the displacement of the spectral lines towards the red caused by a high gravitational field. (iii) Cosmological redshift , is redshift produced by the expansion of the universe and the reason most galaxies in the universe have red-shifts."
+      "definition": "A systematic shift in the spectral lines of certain distant galaxies toward longer wavelengths or toward the red end of the spectrum. It is caused by its motion away from the Earth. There are three types: (i) Doppler Effect is a shift in the spectral lines of certain distant galaxies towards the red end of the visible spectrum, the longer wavelengths. Edwin Hubble, who first studied the redshift effects, concluded therefore, that all galaxies are receding from each other. (ii) Gravitational or Einstein redshift is the displacement of the spectral lines towards the red caused by a high gravitational field. (iii) Cosmological redshift , is redshift produced by the expansion of the universe and the reason most galaxies in the universe have red-shifts.\n\n$$\nz = \\frac{\\lambda_{\\text{obs}} - \\lambda_{\\text{emit}}}{\\lambda_{\\text{emit}}} = \\frac{\\Delta\\lambda}{\\lambda_0}, \\quad 1 + z = \\sqrt{\\frac{1 + v/c}{1 - v/c}} \\approx 1 + \\frac{v}{c}\n$$\n*Formula:* The displacement of spectral lines toward longer (redder) wavelengths due to Doppler motion ($v$) or cosmic expansion of spacetime, quantified by redshift parameter $z$.",
+      "formula": "z = \\frac{\\lambda_{\\text{obs}} - \\lambda_{\\text{emit}}}{\\lambda_{\\text{emit}}} = \\frac{\\Delta\\lambda}{\\lambda_0}, \\quad 1 + z = \\sqrt{\\frac{1 + v/c}{1 - v/c}} \\approx 1 + \\frac{v}{c}",
+      "formula_description": "The displacement of spectral lines toward longer (redder) wavelengths due to Doppler motion ($v$) or cosmic expansion of spacetime, quantified by redshift parameter $z$."
     },
     {
       "word": "redu cedp ress ured isti llat ion",
@@ -143841,7 +143889,9 @@
       "word": "refraction",
       "raw_headword": "REFRACTION",
       "synonyms": [],
-      "definition": "The change in direction or bending of a wave of light, heat or sound due to a change in its speed, when it passes from one medium to another. substance 1 substance 2 Normal Angle of incidence Angle of refraction Incident ray Boundary 90o Refracted ray Refraction of light."
+      "definition": "The change in direction or bending of a wave of light, heat or sound due to a change in its speed, when it passes from one medium to another. substance 1 substance 2 Normal Angle of incidence Angle of refraction Incident ray Boundary 90o Refracted ray Refraction of light.\n\n$$\nn_1 \\sin\\theta_1 = n_2 \\sin\\theta_2, \\quad n = \\frac{c}{v} = \\frac{\\lambda_0}{\\lambda}\n$$\n*Formula:* The bending of a light wave as it passes across the boundary between two media with different refractive indices $n_1, n_2$, governed by Snell's Law.",
+      "formula": "n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2, \\quad n = \\frac{c}{v} = \\frac{\\lambda_0}{\\lambda}",
+      "formula_description": "The bending of a light wave as it passes across the boundary between two media with different refractive indices $n_1, n_2$, governed by Snell's Law."
     },
     {
       "word": "refraction effects",
@@ -143853,7 +143903,9 @@
       "word": "refractive index",
       "raw_headword": "REFRACTIVE INDEX",
       "synonyms": [],
-      "definition": "A measure of the refraction of a beam of light entering a denser medium from a transparent one. Refractive index is the ratio between the sine of the angle of incidence of the ray of light and the sine of the angle of refraction. For example, if i is the angle of incidence and r is the angle of refraction, then the refractive index, µ = sin i sin r . Refractive index is used as a measure of the purity of sugar, salt, diamond, oils, etc."
+      "definition": "A measure of the refraction of a beam of light entering a denser medium from a transparent one. Refractive index is the ratio between the sine of the angle of incidence of the ray of light and the sine of the angle of refraction. For example, if i is the angle of incidence and r is the angle of refraction, then the refractive index, µ = sin i sin r . Refractive index is used as a measure of the purity of sugar, salt, diamond, oils, etc.\n\n$$\nn = \\frac{c}{v} = \\sqrt{\\epsilon_r \\mu_r}, \\quad n = \\frac{\\sin i}{\\sin r} = \\frac{\\lambda_1}{\\lambda_2}\n$$\n*Formula:* Dimensionless ratio of the speed of light in vacuum $c$ to phase velocity $v$ in a medium. Connects optical bending to relative permittivity $\\epsilon_r$ and permeability $\\mu_r$.",
+      "formula": "n = \\frac{c}{v} = \\sqrt{\\epsilon_r \\mu_r}, \\quad n = \\frac{\\sin i}{\\sin r} = \\frac{\\lambda_1}{\\lambda_2}",
+      "formula_description": "Dimensionless ratio of the speed of light in vacuum $c$ to phase velocity $v$ in a medium. Connects optical bending to relative permittivity $\\epsilon_r$ and permeability $\\mu_r$."
     },
     {
       "word": "refractometer",
@@ -144269,7 +144321,9 @@
       "word": "relative atomic mass",
       "raw_headword": "RELATIVE ATOMIC MASS",
       "synonyms": [],
-      "definition": "Formerly known as atomic weight , it is the weighted average of the masses of the constituent isotopes of a chemical element or the ratio of the average mass of a chemical element's atoms to 1/12 th the mass of an atom of the carbon^-12 isotope. Its symbol is Ar. Measuring the masses of atoms in grams, for example, would imply dealing with extremely small numbers; thus, the mass of an atom is compared with that of an atom of carbon^-12. In calculating the relative atomic mass of an element with isotopes, the relative mass and proportion of each is taken into account. For example, naturally occurring chlorine consists of atoms of relative isotopic masses 35 (75%) and 37 (25%). Its relative atomic mass is 35.5, i.e., Ar = 100 × 35 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟+ 25 100 × 37 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟= 35.5. The relative masses of atoms are measured using an instrument called a mass spectrometer, invented by the English physicist Francis William Aston (1877-1945). The cations formed are brought down on to a detector in turn according to their mass-to-charge ratio. The instrument provides a measure of the relative mass (compared to 12C) and the relative number of each isotope. It was in his use of this instrument that the existence of isotopes of elements was discovered. Relative masses have no units."
+      "definition": "Formerly known as atomic weight , it is the weighted average of the masses of the constituent isotopes of a chemical element or the ratio of the average mass of a chemical element's atoms to 1/12 th the mass of an atom of the carbon^-12 isotope. Its symbol is Ar. Measuring the masses of atoms in grams, for example, would imply dealing with extremely small numbers; thus, the mass of an atom is compared with that of an atom of carbon^-12. In calculating the relative atomic mass of an element with isotopes, the relative mass and proportion of each is taken into account. For example, naturally occurring chlorine consists of atoms of relative isotopic masses 35 (75%) and 37 (25%). Its relative atomic mass is 35.5, i.e., Ar = 100 × 35 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟+ 25 100 × 37 ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟= 35.5. The relative masses of atoms are measured using an instrument called a mass spectrometer, invented by the English physicist Francis William Aston (1877-1945). The cations formed are brought down on to a detector in turn according to their mass-to-charge ratio. The instrument provides a measure of the relative mass (compared to 12C) and the relative number of each isotope. It was in his use of this instrument that the existence of isotopes of elements was discovered. Relative masses have no units.\n\n$$\nA_r = \\frac{\\text{average mass of 1 atom of element}}{\\frac{1}{12} \\text{ mass of 1 atom of } ^{12}\\text{C}} = \\sum_{i} (f_i \\cdot M_i)\n$$\n*Formula:* Dimensionless ratio of the average atomic mass of an element's naturally occurring isotopes (weighted by abundance $f_i$) to $1/12\\text{th}$ the mass of a carbon-12 atom.",
+      "formula": "A_r = \\frac{\\text{average mass of 1 atom of element}}{\\frac{1}{12} \\text{ mass of 1 atom of } ^{12}\\text{C}} = \\sum_{i} (f_i \\cdot M_i)",
+      "formula_description": "Dimensionless ratio of the average atomic mass of an element's naturally occurring isotopes (weighted by abundance $f_i$) to $1/12\\text{th}$ the mass of a carbon-12 atom."
     },
     {
       "word": "relative automorphism",
@@ -144321,7 +144375,9 @@
       "word": "relative density",
       "raw_headword": "RELATIVE DENSITY",
       "synonyms": [],
-      "definition": "The ratio of the density of a substance to the known density of a reference substance, usually with respect to pure water at a temperature of 4 o C (277 K), which is 1000 kg/m3 or simply 1. Relative density has no unit because it is the ratio of two similar quantities. It was formerly called specific gravity , it is without dimension. If the relative density of a substance is in reference to water and less than 1, then the substance can float in water and if greater than 1, then the substance will sink. Relative density is dependent on temperature and the value varies with temperature variations, for example, the relative density of water at 25 o C (298 K) is 0.997074. A spring balance is used to determine it. Relative density (R.D.) of a solid and liquid can be determined by the following formulae: R e lative Density ( R . D .) of a solid = weight of solid in air upthrust of water . R . D . of liquid = weight of liquid displaced weight of equal volume of water displaced = weight of liquid displaced weight of water displaced by same solid = upthrust in liquid upthrust in water ."
+      "definition": "The ratio of the density of a substance to the known density of a reference substance, usually with respect to pure water at a temperature of 4 o C (277 K), which is 1000 kg/m3 or simply 1. Relative density has no unit because it is the ratio of two similar quantities. It was formerly called specific gravity , it is without dimension. If the relative density of a substance is in reference to water and less than 1, then the substance can float in water and if greater than 1, then the substance will sink. Relative density is dependent on temperature and the value varies with temperature variations, for example, the relative density of water at 25 o C (298 K) is 0.997074. A spring balance is used to determine it. Relative density (R.D.) of a solid and liquid can be determined by the following formulae: R e lative Density ( R . D .) of a solid = weight of solid in air upthrust of water . R . D . of liquid = weight of liquid displaced weight of equal volume of water displaced = weight of liquid displaced weight of water displaced by same solid = upthrust in liquid upthrust in water .\n\n$$\n\\text{RD} = \\frac{\\rho_{\\text{substance}}}{\\rho_{\\text{water}}} = \\frac{m_{\\text{substance}}}{m_{\\text{equal volume of water}}} = \\frac{W_{\\text{air}}}{W_{\\text{air}} - W_{\\text{water}}}\n$$\n*Formula:* Specific gravity: ratio of the density of a substance to the density of reference fluid (water at $4^\\circ\\text{C}$, $\\rho = 1000\\;\\text{kg/m}^3$). Determined via Archimedes' Principle.",
+      "formula": "\\text{RD} = \\frac{\\rho_{\\text{substance}}}{\\rho_{\\text{water}}} = \\frac{m_{\\text{substance}}}{m_{\\text{equal volume of water}}} = \\frac{W_{\\text{air}}}{W_{\\text{air}} - W_{\\text{water}}}",
+      "formula_description": "Specific gravity: ratio of the density of a substance to the density of reference fluid (water at $4^\\circ\\text{C}$, $\\rho = 1000\\;\\text{kg/m}^3$). Determined via Archimedes' Principle."
     },
     {
       "word": "relative displacement",
@@ -144373,7 +144429,9 @@
       "word": "relative humidity",
       "raw_headword": "RELATIVE HUMIDITY",
       "synonyms": [],
-      "definition": "The ratio of the amount of water moisture/ vapour in the air to the saturated or maximum amount that the air could hold at a given temperature, expressed as a percentage."
+      "definition": "The ratio of the amount of water moisture/ vapour in the air to the saturated or maximum amount that the air could hold at a given temperature, expressed as a percentage.\n\n$$\n\\text{RH} = \\frac{p_{H_2O}}{P_{H_2O}^*} \\times 100\\% = \\frac{\\text{actual vapor pressure}}{\\text{saturation vapor pressure}} \\times 100\\%\n$$\n*Formula:* Percentage ratio of the partial pressure of water vapor in air to the equilibrium saturation vapor pressure at a given temperature.",
+      "formula": "\\text{RH} = \\frac{p_{H_2O}}{P_{H_2O}^*} \\times 100\\% = \\frac{\\text{actual vapor pressure}}{\\text{saturation vapor pressure}} \\times 100\\%",
+      "formula_description": "Percentage ratio of the partial pressure of water vapor in air to the equilibrium saturation vapor pressure at a given temperature."
     },
     {
       "word": "relative identity",
@@ -144463,7 +144521,9 @@
       "word": "relative velocity",
       "raw_headword": "RELATIVE VELOCITY",
       "synonyms": [],
-      "definition": "The vector difference between the velocities of two objects, as evaluated in terms of a single coordinate system. When two objects are moving with velocities V C and V D in a given direction the velocity of C relative to D is C V D = V C - V D in that direction, where C V D is the velocity C to D ."
+      "definition": "The vector difference between the velocities of two objects, as evaluated in terms of a single coordinate system. When two objects are moving with velocities V C and V D in a given direction the velocity of C relative to D is C V D = V C - V D in that direction, where C V D is the velocity C to D .\n\n$$\n\\mathbf{v}_{B/A} = \\mathbf{v}_B - \\mathbf{v}_A, \\quad v'_{x} = \\frac{v_x - u}{1 - uv_x/c^2} \\text{ (relativistic)}\n$$\n*Formula:* The velocity of object $B$ as observed in the rest frame of object $A$. Governed by vector subtraction in classical mechanics and Einstein's velocity addition formula in relativity.",
+      "formula": "\\mathbf{v}_{B/A} = \\mathbf{v}_B - \\mathbf{v}_A, \\quad v'_{x} = \\frac{v_x - u}{1 - uv_x/c^2} \\text{ (relativistic)}",
+      "formula_description": "The velocity of object $B$ as observed in the rest frame of object $A$. Governed by vector subtraction in classical mechanics and Einstein's velocity addition formula in relativity."
     },
     {
       "word": "relatively complete",
@@ -144710,7 +144770,9 @@
       "word": "remainder theorem",
       "raw_headword": "REMAINDER THEOREM",
       "synonyms": [],
-      "definition": "1. Also known as little Bézout's theorem , it is an application of polynomial long division. It states that the remainder of a polynomial f ( x ) divided by a linear divisor x - a is equal to f ( a ). 2. Also known as Chinese remainder theorem , it is a result about congruences in number theory and its generalisations in abstract algebra. In its basic form, the Chinese remainder theorem will determine a number n that when divided by some given divisors leave given remainders."
+      "definition": "1. Also known as little Bézout's theorem , it is an application of polynomial long division. It states that the remainder of a polynomial f ( x ) divided by a linear divisor x - a is equal to f ( a ). 2. Also known as Chinese remainder theorem , it is a result about congruences in number theory and its generalisations in abstract algebra. In its basic form, the Chinese remainder theorem will determine a number n that when divided by some given divisors leave given remainders.\n\n$$\nP(x) = (x - a)Q(x) + R \\implies P(a) = R; \\quad P(a) = 0 \\iff (x - a) \\text{ is a factor of } P(x)\n$$\n*Formula:* Polynomial remainder theorem: when polynomial $P(x)$ is divided by $(x - a)$, the remainder equals $P(a)$. The Factor Theorem follows: $(x - a)$ is a factor if and only if $P(a) = 0$.",
+      "formula": "P(x) = (x - a)Q(x) + R \\implies P(a) = R; \\quad P(a) = 0 \\iff (x - a) \\text{ is a factor of } P(x)",
+      "formula_description": "Polynomial remainder theorem: when polynomial $P(x)$ is divided by $(x - a)$, the remainder equals $P(a)$. The Factor Theorem follows: $(x - a)$ is a factor if and only if $P(a) = 0$."
     },
     {
       "word": "remanence",
@@ -145373,7 +145435,9 @@
       "word": "resistance",
       "raw_headword": "RESISTANCE",
       "synonyms": [],
-      "definition": "1. A property of an electrical conductor to oppose the free flow of current, resulting in the conversion of electrical energy to heat energy. The SI unit of resistance is the ohm, with symbol Ω. 2. The resistance to antibiotics and other drugs by a pathogen. 3. The degree to which a pest can withstand the effects of a pesticide, which is normally lethal to the organisms of that species. 4. The natural resistance to infectious agents that an organism possesses."
+      "definition": "1. A property of an electrical conductor to oppose the free flow of current, resulting in the conversion of electrical energy to heat energy. The SI unit of resistance is the ohm, with symbol Ω. 2. The resistance to antibiotics and other drugs by a pathogen. 3. The degree to which a pest can withstand the effects of a pesticide, which is normally lethal to the organisms of that species. 4. The natural resistance to infectious agents that an organism possesses.\n\n$$\nR = \\frac{V}{I} = \\rho \\frac{L}{A}, \\quad P = I^2 R = \\frac{V^2}{R} = VI\n$$\n*Formula:* Electric resistance: opposition to electric current flow governed by Ohm's Law $V = IR$. Proportional to length $L$ and resistivity $\\rho$, inversely proportional to cross-sectional area $A$.",
+      "formula": "R = \\frac{V}{I} = \\rho \\frac{L}{A}, \\quad P = I^2 R = \\frac{V^2}{R} = VI",
+      "formula_description": "Electric resistance: opposition to electric current flow governed by Ohm's Law $V = IR$. Proportional to length $L$ and resistivity $\\rho$, inversely proportional to cross-sectional area $A$."
     },
     {
       "word": "resistance arm",
@@ -145403,13 +145467,17 @@
       "word": "resistivity",
       "raw_headword": "RESISTIVITY",
       "synonyms": [],
-      "definition": "The resistance of a wire per unit cross sectional area. It is the measure of a material's ability to resist the flow of an electric current. A high value resistivity denotes higher resistance to current flow. Its symbol is ρ (rho) and the SI unit is ohm metre [Ωm]. The resistivity of a material is given by RA / l , where R is the resistance of the uniform specimen of the material having a length l and A is the cross sectional area of the wire."
+      "definition": "The resistance of a wire per unit cross sectional area. It is the measure of a material's ability to resist the flow of an electric current. A high value resistivity denotes higher resistance to current flow. Its symbol is ρ (rho) and the SI unit is ohm metre [Ωm]. The resistivity of a material is given by RA / l , where R is the resistance of the uniform specimen of the material having a length l and A is the cross sectional area of the wire.\n\n$$\n\\rho = R \\frac{A}{L} = \\frac{1}{\\sigma}, \\quad \\rho(T) = \\rho_0 [1 + \\alpha(T - T_0)]\n$$\n*Formula:* Intrinsic property of a material measuring electrical opposition: $\\rho = RA/L$, inverse of conductivity $\\sigma$. Varies linearly with temperature coefficient $\\alpha$.",
+      "formula": "\\rho = R \\frac{A}{L} = \\frac{1}{\\sigma}, \\quad \\rho(T) = \\rho_0 [1 + \\alpha(T - T_0)]",
+      "formula_description": "Intrinsic property of a material measuring electrical opposition: $\\rho = RA/L$, inverse of conductivity $\\sigma$. Varies linearly with temperature coefficient $\\alpha$."
     },
     {
       "word": "resistor",
       "raw_headword": "RESISTOR",
       "synonyms": [],
-      "definition": "A component in an electrical or electronic circuit which resists the free flow of current. Its symbol is Ω and its unit is ohms. Resistors control current, voltage, and protect an electric circuit. One important characteristic of a resistor is that it converts electrical energy into other forms of heat energy, for example, heaters or electric lights. Examples of resistors are rheostats and potentiometers. Resistors are related with current I and voltage or potential difference V across an electrical circuit by Ohm's law, expressed as R = V/I. Resistors are either wire-wound or consist of carbon particles in a ceramic binder, with colour coding indicating the value of the resistance. Resistors may be fixed or variable. The resistance of a fixed resistor is set at a specific resistance which changes slightly with temperature, time or operating voltage. Variable resistors can regulate current flows at and below a specific level and can be used, for example, as rheostats to adjust brightness of lamps; as thermistors for temperature or voltage regulation, volume control, time delays, and circuit protection; and for potentiometers as a voltage divider, in radio and television (TV) receiver, for volume control, frequency attenuation, etc. R1 I1 I I I2 I3 R2 Resistors in parallel V R3 R= resistance. V= potential difference (voltage)"
+      "definition": "A component in an electrical or electronic circuit which resists the free flow of current. Its symbol is Ω and its unit is ohms. Resistors control current, voltage, and protect an electric circuit. One important characteristic of a resistor is that it converts electrical energy into other forms of heat energy, for example, heaters or electric lights. Examples of resistors are rheostats and potentiometers. Resistors are related with current I and voltage or potential difference V across an electrical circuit by Ohm's law, expressed as R = V/I. Resistors are either wire-wound or consist of carbon particles in a ceramic binder, with colour coding indicating the value of the resistance. Resistors may be fixed or variable. The resistance of a fixed resistor is set at a specific resistance which changes slightly with temperature, time or operating voltage. Variable resistors can regulate current flows at and below a specific level and can be used, for example, as rheostats to adjust brightness of lamps; as thermistors for temperature or voltage regulation, volume control, time delays, and circuit protection; and for potentiometers as a voltage divider, in radio and television (TV) receiver, for volume control, frequency attenuation, etc. R1 I1 I I I2 I3 R2 Resistors in parallel V R3 R= resistance. V= potential difference (voltage)\n\n$$\nR_{\\text{series}} = \\sum_{i=1}^n R_i, \\quad \\frac{1}{R_{\\text{parallel}}} = \\sum_{i=1}^n \\frac{1}{R_i}, \\quad P = I^2 R\n$$\n*Formula:* Passive electrical component implementing electrical resistance. Series connection sums resistance values; parallel connection sums conductances ($1/R$).",
+      "formula": "R_{\\text{series}} = \\sum_{i=1}^n R_i, \\quad \\frac{1}{R_{\\text{parallel}}} = \\sum_{i=1}^n \\frac{1}{R_i}, \\quad P = I^2 R",
+      "formula_description": "Passive electrical component implementing electrical resistance. Series connection sums resistance values; parallel connection sums conductances ($1/R$)."
     },
     {
       "word": "resistors in parallel",
@@ -145451,7 +145519,9 @@
       "word": "resonance",
       "raw_headword": "RESONANCE",
       "synonyms": [],
-      "definition": "1. The increased amplitude of oscillation of an electric or mechanical system when it is subjected to a periodic force such as vibration from another source whose frequency is near or equal to the natural frequency of the system. 2. A subatomic particle lasting too short a time to be observed directly. The existence of such particles is usually inferred from a peak in the energy distribution of its decay products. 3. The sound heard during diagnostic percussion of a normal abdomen or chest. 4. The property of a chemical compound having simultaneously the characteristics of two or more limiting structures that differ in the arrangement of electrons. Such compounds are highly stable and cannot be properly represented by a single structural formula."
+      "definition": "1. The increased amplitude of oscillation of an electric or mechanical system when it is subjected to a periodic force such as vibration from another source whose frequency is near or equal to the natural frequency of the system. 2. A subatomic particle lasting too short a time to be observed directly. The existence of such particles is usually inferred from a peak in the energy distribution of its decay products. 3. The sound heard during diagnostic percussion of a normal abdomen or chest. 4. The property of a chemical compound having simultaneously the characteristics of two or more limiting structures that differ in the arrangement of electrons. Such compounds are highly stable and cannot be properly represented by a single structural formula.\n\n$$\nf_0 = \\frac{1}{2\\pi\\sqrt{LC}}, \\quad \\omega_0 = \\frac{1}{\\sqrt{LC}}, \\quad Z_{\\text{min}} = R, \\quad I_{\\text{max}} = \\frac{V_0}{R}\n$$\n*Formula:* Phenomenon in driven oscillating systems where amplitude reaches a maximum at resonant frequency $f_0$. In series RLC circuits, inductive reactance cancels capacitive reactance ($X_L = X_C$).",
+      "formula": "f_0 = \\frac{1}{2\\pi\\sqrt{LC}}, \\quad \\omega_0 = \\frac{1}{\\sqrt{LC}}, \\quad Z_{\\text{min}} = R, \\quad I_{\\text{max}} = \\frac{V_0}{R}",
+      "formula_description": "Phenomenon in driven oscillating systems where amplitude reaches a maximum at resonant frequency $f_0$. In series RLC circuits, inductive reactance cancels capacitive reactance ($X_L = X_C$)."
     },
     {
       "word": "resonance absorption technique",
@@ -145760,7 +145830,9 @@
       "word": "resultant",
       "raw_headword": "RESULTANT",
       "synonyms": [],
-      "definition": "1. A s ingle vector that is equivalent to two or more other vectors or is the sum of two or more vectors. For example, referring to the diagram, AB   + BC   = AC ,   therefore AC   is the resultant vector. 2. Also called eliminant , it is the outcome of eliminating n variables between n homogeneous of any degree."
+      "definition": "1. A s ingle vector that is equivalent to two or more other vectors or is the sum of two or more vectors. For example, referring to the diagram, AB   + BC   = AC ,   therefore AC   is the resultant vector. 2. Also called eliminant , it is the outcome of eliminating n variables between n homogeneous of any degree.\n\n$$\nR = \\sqrt{F_1^2 + F_2^2 + 2F_1 F_2 \\cos\\theta}, \\quad \\tan\\alpha = \\frac{F_2 \\sin\\theta}{F_1 + F_2 \\cos\\theta}\n$$\n*Formula:* The single vector obtained by combining two or more vectors. For forces $F_1, F_2$ at angle $\\theta$, magnitude is given by the law of cosines and direction by trigonometry.",
+      "formula": "R = \\sqrt{F_1^2 + F_2^2 + 2F_1 F_2 \\cos\\theta}, \\quad \\tan\\alpha = \\frac{F_2 \\sin\\theta}{F_1 + F_2 \\cos\\theta}",
+      "formula_description": "The single vector obtained by combining two or more vectors. For forces $F_1, F_2$ at angle $\\theta$, magnitude is given by the law of cosines and direction by trigonometry."
     },
     {
       "word": "resupinate",
@@ -146031,7 +146103,9 @@
       "word": "reversible reaction",
       "raw_headword": "REVERSIBLE REACTION",
       "synonyms": [],
-      "definition": "A chemical reaction in which the product(s) formed from the combinationofthe reactant(s) also recombine to reform the reactants. Equilibrium is reached when the rate of formation of the products is equal to the rate of formation of the reactants. Reversible reactions are represented by a double arrow; one pointing to the product and the other pointing to the reactant. If the system attains equilibrium, then the full arrows are replaced by half-arrows."
+      "definition": "A chemical reaction in which the product(s) formed from the combinationofthe reactant(s) also recombine to reform the reactants. Equilibrium is reached when the rate of formation of the products is equal to the rate of formation of the reactants. Reversible reactions are represented by a double arrow; one pointing to the product and the other pointing to the reactant. If the system attains equilibrium, then the full arrows are replaced by half-arrows.\n\n$$\naA + bB \\rightleftharpoons cC + dD, \\quad K_c = \\frac{[C]^c [D]^d}{[A]^a [B]^b}, \\quad \\Delta G^\\circ = -RT \\ln K\n$$\n*Formula:* Chemical reaction where products re-react to form reactants. Reaches dynamic equilibrium when forward and reverse reaction rates become equal ($\\,\\Delta G = 0\\,$).",
+      "formula": "aA + bB \\rightleftharpoons cC + dD, \\quad K_c = \\frac{[C]^c [D]^d}{[A]^a [B]^b}, \\quad \\Delta G^\\circ = -RT \\ln K",
+      "formula_description": "Chemical reaction where products re-react to form reactants. Reaches dynamic equilibrium when forward and reverse reaction rates become equal ($\\,\\Delta G = 0\\,$)."
     },
     {
       "word": "reversible transition",
@@ -146061,7 +146135,9 @@
       "word": "reynolds number",
       "raw_headword": "REYNOLDS NUMBER",
       "synonyms": [],
-      "definition": "A number used in fluid mechanics to determine whether fluid flow in a particular situation will be turbulent or smooth. The Reynolds number is calculated using the flow velocity, viscosity of the fluid and the dimensions of the flow channel. It is important in the design of a model of any system in which the effect of viscosity is important in controlling the velocities or the flow pattern."
+      "definition": "A number used in fluid mechanics to determine whether fluid flow in a particular situation will be turbulent or smooth. The Reynolds number is calculated using the flow velocity, viscosity of the fluid and the dimensions of the flow channel. It is important in the design of a model of any system in which the effect of viscosity is important in controlling the velocities or the flow pattern.\n\n$$\nRe = \\frac{\\rho v D}{\\mu} = \\frac{v D}{\\nu}, \\quad Re < 2300 \\implies \\text{laminar}, \\quad Re > 4000 \\implies \\text{turbulent}\n$$\n*Formula:* Dimensionless quantity in fluid dynamics measuring the ratio of inertial forces to viscous forces. Predicts flow regime transitions between smooth laminar flow and chaotic turbulent flow.",
+      "formula": "Re = \\frac{\\rho v D}{\\mu} = \\frac{v D}{\\nu}, \\quad Re < 2300 \\implies \\text{laminar}, \\quad Re > 4000 \\implies \\text{turbulent}",
+      "formula_description": "Dimensionless quantity in fluid dynamics measuring the ratio of inertial forces to viscous forces. Predicts flow regime transitions between smooth laminar flow and chaotic turbulent flow."
     },
     {
       "word": "rf value",
@@ -146638,7 +146714,9 @@
       "word": "riemann integral",
       "raw_headword": "RIEMANN INTEGRAL",
       "synonyms": [],
-      "definition": "Mathematically, it is the definite integral of a real-valued bounded function, defined on a bounded interval as the value R to which all Riemann sums, converge as their mesh-fineness tends to zero. It is a process of integration of a function on an interval that can be evaluated by the fundamental theorem of calculus or approximated by numerical integration, which amounts to finding the area under a curve."
+      "definition": "Mathematically, it is the definite integral of a real-valued bounded function, defined on a bounded interval as the value R to which all Riemann sums, converge as their mesh-fineness tends to zero. It is a process of integration of a function on an interval that can be evaluated by the fundamental theorem of calculus or approximated by numerical integration, which amounts to finding the area under a curve.\n\n$$\n\\int_a^b f(x)\\,dx = \\lim_{\\|\\Delta x\\| \\to 0} \\sum_{i=1}^n f(x_i^*)\\,\\Delta x_i\n$$\n*Formula:* The foundational definition of a definite integral as the limit of Riemann sums as partition width approaches zero, representing signed net area under curve $f(x)$.",
+      "formula": "\\int_a^b f(x)\\,dx = \\lim_{\\|\\Delta x\\| \\to 0} \\sum_{i=1}^n f(x_i^*)\\,\\Delta x_i",
+      "formula_description": "The foundational definition of a definite integral as the limit of Riemann sums as partition width approaches zero, representing signed net area under curve $f(x)$."
     },
     {
       "word": "riemann mapping theorem",
@@ -146656,7 +146734,9 @@
       "word": "riemann sum",
       "raw_headword": "RIEMANN SUM",
       "synonyms": [],
-      "definition": "A method for approximating the total area underneath a curve or lines on a graph and may also be used to define the integration operation. For a real function f on an interval [ a , b ]), it is any sum of the form f ( c i + 1 ) i = 0 n ∑ Δ i , where ∆ i = t i + 1 - t i , for any partition with b = t n > t n^-1 > ... > t 1 > t 0 = a , where t i + 1 ≥ citi ."
+      "definition": "A method for approximating the total area underneath a curve or lines on a graph and may also be used to define the integration operation. For a real function f on an interval [ a , b ]), it is any sum of the form f ( c i + 1 ) i = 0 n ∑ Δ i , where ∆ i = t i + 1 - t i , for any partition with b = t n > t n^-1 > ... > t 1 > t 0 = a , where t i + 1 ≥ citi .\n\n$$\nS_n = \\sum_{i=1}^n f(c_i)\\,\\Delta x, \\quad \\Delta x = \\frac{b - a}{n}, \\quad c_i \\in [x_{i-1}, x_i]\n$$\n*Formula:* An approximation of the area under a curve by dividing the interval $[a,b]$ into $n$ subintervals of width $\\Delta x$ and summing sample rectangle areas $f(c_i)\\Delta x$.",
+      "formula": "S_n = \\sum_{i=1}^n f(c_i)\\,\\Delta x, \\quad \\Delta x = \\frac{b - a}{n}, \\quad c_i \\in [x_{i-1}, x_i]",
+      "formula_description": "An approximation of the area under a curve by dividing the interval $[a,b]$ into $n$ subintervals of width $\\Delta x$ and summing sample rectangle areas $f(c_i)\\Delta x$."
     },
     {
       "word": "riemann surface",
@@ -146894,7 +146974,9 @@
       "word": "ring",
       "raw_headword": "RING",
       "synonyms": [],
-      "definition": "1. A set with the following properties: (i) it has two binary operations, addition and multiplication (+ and ×); (ii) it is an Abelian group under addition; (iii) multiplication is associative and distributive over addition; and (iv) a and b are members of the set, a × b has a unique value c , also a member of the set. If there is a member n of the set such that a × n = a for every member a of the set, the ring is a ring with unity. A ring in which multiplication is commutative is a commutative ring. 2. Planetary ring is an annulus of material, in the form of countless numbers of small objects, in orbit around a planet. 3. A circular band of metal or other durable material such as copper, diamond, gold or steel. An example is a wedding ring."
+      "definition": "1. A set with the following properties: (i) it has two binary operations, addition and multiplication (+ and ×); (ii) it is an Abelian group under addition; (iii) multiplication is associative and distributive over addition; and (iv) a and b are members of the set, a × b has a unique value c , also a member of the set. If there is a member n of the set such that a × n = a for every member a of the set, the ring is a ring with unity. A ring in which multiplication is commutative is a commutative ring. 2. Planetary ring is an annulus of material, in the form of countless numbers of small objects, in orbit around a planet. 3. A circular band of metal or other durable material such as copper, diamond, gold or steel. An example is a wedding ring.\n\n$$\n(R, +, \\cdot): \\quad a(b+c) = ab + ac, \\quad (a+b)c = ac + bc\n$$\n*Formula:* An algebraic structure consisting of a set $R$ equipped with two binary operations (addition $+$ and multiplication $\\cdot$) satisfying ring axioms: abelian group under $+$, associative multiplication, and left/right distributivity.",
+      "formula": "(R, +, \\cdot): \\quad a(b+c) = ab + ac, \\quad (a+b)c = ac + bc",
+      "formula_description": "An algebraic structure consisting of a set $R$ equipped with two binary operations (addition $+$ and multiplication $\\cdot$) satisfying ring axioms: abelian group under $+$, associative multiplication, and left/right distributivity."
     },
     {
       "word": "ring assembly",
@@ -147389,7 +147471,9 @@
       "word": "rolle's theorem",
       "raw_headword": "ROLLE'S THEOREM",
       "synonyms": [],
-      "definition": "In mathematics, the theorem that any real- valued differentiable function that attains equal values at two distinct points must have a point where the first derivative (the slope of the tangent line to the graph of the function) is zero."
+      "definition": "In mathematics, the theorem that any real- valued differentiable function that attains equal values at two distinct points must have a point where the first derivative (the slope of the tangent line to the graph of the function) is zero.\n\n$$\nf(a) = f(b) \\implies \\exists c \\in (a,b) : f'(c) = 0\n$$\n*Formula:* Calculus mean value theorem variant: if $f(x)$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $f(a) = f(b)$, then there exists at least one $c \\in (a,b)$ where $f'(c) = 0$.",
+      "formula": "f(a) = f(b) \\implies \\exists c \\in (a,b) : f'(c) = 0",
+      "formula_description": "Calculus mean value theorem variant: if $f(x)$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $f(a) = f(b)$, then there exists at least one $c \\in (a,b)$ where $f'(c) = 0$."
     },
     {
       "word": "rolled grain",
@@ -147490,7 +147574,9 @@
       "synonyms": [
         "rms"
       ],
-      "definition": "1. In mathematics, it is also known as quadratic mean and is a statistical measure of the magnitude of a varying quantity. The RMS value of a set of values or a continuous- time waveform is the square root of the arithmetic mean (average) of the squares of the original values or the square of the function that defines the continuous waveform. For example, a typical value of a number ( n ) of values of a quantity ( x 1 , x 2 , x 3 , ... x n ) is equal to the square root of the sum of the squares of the values divided by n and the RMS value = √ ( x 1 2 + x 2 2 + x 3 2 + ..... x n )/ n . 2. In electrical engineering, it is the effective value of a varying voltage or current. It is the equivalent steady DC (constant) value which gives the same effect. The root mean square voltage (V RMS ) is 0.7 of the peak voltage (V peak ). V RMS = 0.7 × V peak and V peak = 1.4 × V RMS . These equations also apply to current. They are only true for sine waves because the 0.7 and 1.4 are different values for other shapes."
+      "definition": "1. In mathematics, it is also known as quadratic mean and is a statistical measure of the magnitude of a varying quantity. The RMS value of a set of values or a continuous- time waveform is the square root of the arithmetic mean (average) of the squares of the original values or the square of the function that defines the continuous waveform. For example, a typical value of a number ( n ) of values of a quantity ( x 1 , x 2 , x 3 , ... x n ) is equal to the square root of the sum of the squares of the values divided by n and the RMS value = √ ( x 1 2 + x 2 2 + x 3 2 + ..... x n )/ n . 2. In electrical engineering, it is the effective value of a varying voltage or current. It is the equivalent steady DC (constant) value which gives the same effect. The root mean square voltage (V RMS ) is 0.7 of the peak voltage (V peak ). V RMS = 0.7 × V peak and V peak = 1.4 × V RMS . These equations also apply to current. They are only true for sine waves because the 0.7 and 1.4 are different values for other shapes.\n\n$$\nx_{\\text{rms}} = \\sqrt{\\frac{1}{n}\\sum_{i=1}^n x_i^2} = \\sqrt{\\frac{1}{T}\\int_0^T [f(t)]^2 dt}\n$$\n*Formula:* Statistical measure defined as the square root of the mean of the squares of a set of values or continuous waveform $f(t)$.",
+      "formula": "x_{\\text{rms}} = \\sqrt{\\frac{1}{n}\\sum_{i=1}^n x_i^2} = \\sqrt{\\frac{1}{T}\\int_0^T [f(t)]^2 dt}",
+      "formula_description": "Statistical measure defined as the square root of the mean of the squares of a set of values or continuous waveform $f(t)$."
     },
     {
       "word": "root nodule",
@@ -147761,7 +147847,9 @@
         "mass moment of inertia",
         "moment of inertia"
       ],
-      "definition": "A measure of an object's resistance to changes to its rotation, which is the sum of all the."
+      "definition": "A measure of an object's resistance to changes to its rotation, which is the sum of all the.\n\n$$\nI = \\sum m_i r_i^2 = \\int r^2 dm, \\quad K_{\\text{rot}} = \\frac{1}{2}I\\omega^2, \\quad L = I\\omega\n$$\n*Formula:* Moment of inertia $I$: quantitative measure of a body's resistance to angular acceleration. Relates angular momentum $L = I\\omega$ and rotational kinetic energy $K = \\frac{1}{2}I\\omega^2$.",
+      "formula": "I = \\sum m_i r_i^2 = \\int r^2 dm, \\quad K_{\\text{rot}} = \\frac{1}{2}I\\omega^2, \\quad L = I\\omega",
+      "formula_description": "Moment of inertia $I$: quantitative measure of a body's resistance to angular acceleration. Relates angular momentum $L = I\\omega$ and rotational kinetic energy $K = \\frac{1}{2}I\\omega^2$."
     },
     {
       "word": "rotational motion",
@@ -148461,7 +148549,9 @@
       "word": "rydberg formula",
       "raw_headword": "RYDBERG FORMULA",
       "synonyms": [],
-      "definition": "A formula named after Swedish physicist, Johannes Rydberg (1854-1919). It is used in atomic physics to describe the wavelengths of spectral lines of many chemical elements. The value of its constant, named the Rydberg constant with the symbol R∞ is 1.097373157 × 10 7 /m (1.097373157 × 10 7 per metre). His findings were combined with Bohr's model of the atom to give the formula: 1/λ = RZ2 (1/n 1 2 - 1/n 2 2 ), where λ is the wavelength of the photon (wavenumber = 1/wavelength), R is the Rydberg's constant, Z is the atomic number of the atom, n 1 and n 2 are integers where n 2 > n 1 . This formula works very well for transitions between R energy levels of a hydrogen atom with only one electron. For atoms with multiple electrons, this formula begins to break down and give results that are incorrect."
+      "definition": "A formula named after Swedish physicist, Johannes Rydberg (1854-1919). It is used in atomic physics to describe the wavelengths of spectral lines of many chemical elements. The value of its constant, named the Rydberg constant with the symbol R∞ is 1.097373157 × 10 7 /m (1.097373157 × 10 7 per metre). His findings were combined with Bohr's model of the atom to give the formula: 1/λ = RZ2 (1/n 1 2 - 1/n 2 2 ), where λ is the wavelength of the photon (wavenumber = 1/wavelength), R is the Rydberg's constant, Z is the atomic number of the atom, n 1 and n 2 are integers where n 2 > n 1 . This formula works very well for transitions between R energy levels of a hydrogen atom with only one electron. For atoms with multiple electrons, this formula begins to break down and give results that are incorrect.\n\n$$\n\\frac{1}{\\lambda} = R_\\infty Z^2 \\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right), \\quad R_\\infty = \\frac{m_e e^4}{8 \\epsilon_0^2 h^3 c} \\approx 1.097373 \\times 10^7 \\; \\text{m}^{-1}\n$$\n*Formula:* Formula predicting spectral emission wavelengths $\\lambda$ of hydrogen-like elements as electrons transition between quantum levels $n_2 \\to n_1$, where $R_\\infty$ is the Rydberg constant.",
+      "formula": "\\frac{1}{\\lambda} = R_\\infty Z^2 \\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right), \\quad R_\\infty = \\frac{m_e e^4}{8 \\epsilon_0^2 h^3 c} \\approx 1.097373 \\times 10^7 \\; \\text{m}^{-1}",
+      "formula_description": "Formula predicting spectral emission wavelengths $\\lambda$ of hydrogen-like elements as electrons transition between quantum levels $n_2 \\to n_1$, where $R_\\infty$ is the Rydberg constant."
     },
     {
       "word": "rydberg orbital",
