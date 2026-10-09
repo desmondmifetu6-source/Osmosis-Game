@@ -456,3 +456,113 @@ Source Folder: `n-o diagrams/` (September 28, 2026 Pristine Author Captures)
 | 58 | `Screenshot_28-9-2026_174522_.jpeg` | Chemical structure of Ozone (bond length & angle) | `dict_ozone.png` | `ozone`, `trioxygen` |
 | 59 | `Screenshot_28-9-2026_174534_.jpeg` | Generalised reaction scheme of Ozonolysis | `dict_ozonolysis.png` | `ozonolysis`, `ozonide` |
 | 60 | `Screenshot_28-9-2026_17457_.jpeg` | The production of Oxygen gas (laboratory preparation) | `dict_oxygen_production.png` | `oxygen`, `preparation of oxygen`, `oxygen gas` |
+
+
+---
+
+### Section L & M Series: Batch 1 (Completed) — Screenshots 1 to 101
+Source Folder: `l-m diagrams/` (September 25-26, 2026 Pristine Author Captures)
+
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 1 | `Screenshot_25-9-2026_172950_.jpeg` | Labiate corolla | `dict_labiate.png` | `labiate`, `labiate corolla`, `bilabiate`, `labiate flower` |
+| 2 | `Screenshot_25-9-2026_173027_.jpeg` | Lacerate leaf | `dict_lacerate_leaf.png` | `lacerate`, `lacerate leaf` |
+| 3 | `Screenshot_25-9-2026_173038_.jpeg` | Laciniate leaf | `dict_laciniate_leaf.png` | `laciniate`, `laciniate leaf` |
+| 4 | `Screenshot_25-9-2026_17307_.jpeg` | Lactic acid (2-Hydroxypropanoic Acid) | `dict_lactic_acid.png` | `lactic acid`, `2-hydroxypropanoic acid`, `2-hydroxypropanoate`, `lactate` |
+| 5 | `Screenshot_25-9-2026_173155_.jpeg` | Lactam and lactim tautomerism | `dict_lactam_lactim.png` | `lactam`, `lactim`, `lactam-lactim tautomerism`, `lactams` |
+| 6 | `Screenshot_25-9-2026_173249_.jpeg` | Lami's Theorem (3 forces in equilibrium) | `dict_lamis_theorem.png` | `lami's theorem`, `lamis theorem`, `triangle of forces`, `forces in equilibrium` |
+| 7 | `Screenshot_25-9-2026_173321_.jpeg` | Lanceolate leaf | `dict_lanceolate_leaf.png` | `lanceolate`, `lanceolate leaf` |
+| 8 | `Screenshot_25-9-2026_17335_.jpeg` | Leaf lamina & Petal lamina | `dict_lamina.png` | `lamina`, `leaf lamina`, `petal lamina`, `blade` |
+| 9 | `Screenshot_25-9-2026_173437_.jpeg` | Latin square (3 x 3) | `dict_latin_square.png` | `latin square`, `latin square design` |
+| 10 | `Screenshot_25-9-2026_17346_.jpeg` | Electrical method for latent heat of evaporation | `dict_latent_heat_evaporation.png` | `latent heat of vaporization`, `latent heat of evaporation`, `specific latent heat of vaporization` |
+| 11 | `Screenshot_26-9-2026_142138_.jpeg` | Layering (plant propagation) | `dict_layering.png` | `layering`, `plant layering`, `mound layering` |
+| 12 | `Screenshot_26-9-2026_142221_.jpeg` | Leclanche dry cell | `dict_leclanche_cell.png` | `leclanche cell`, `leclanché cell`, `dry cell`, `zinc-carbon cell` |
+| 13 | `Screenshot_26-9-2026_142245_.jpeg` | Types of lenses & symbols (converging / diverging) | `dict_lens_types.png` | `lens`, `convex lens`, `concave lens`, `converging lens`, `diverging lens`, `types of lenses` |
+| 14 | `Screenshot_26-9-2026_14225_.jpeg` | Parts of a leaf | `dict_leaf_parts.png` | `leaf`, `parts of a leaf`, `leaf structure`, `petiole`, `midrib`, `leaf blade` |
+| 15 | `Screenshot_26-9-2026_14232_.jpeg` | Leslie's Cube | `dict_leslies_cube.png` | `leslie's cube`, `leslies cube`, `thermal radiation cube` |
+| 16 | `Screenshot_26-9-2026_142343_.jpeg` | Classes of levers (1st, 2nd, 3rd class) | `dict_levers.png` | `lever`, `first class lever`, `second class lever`, `third class lever`, `classes of levers` |
+| 17 | `Screenshot_26-9-2026_142429_.jpeg` | Parabola line of symmetry & equation | `dict_parabola_line_of_symmetry.png` | `line of symmetry`, `axis of symmetry`, `parabola symmetry` |
+| 18 | `Screenshot_26-9-2026_142442_.jpeg` | Linear Combination of Atomic Orbitals (LCAO) | `dict_lcao.png` | `linear combination of atomic orbitals`, `lcao`, `molecular orbital theory` |
+| 19 | `Screenshot_26-9-2026_14248_.jpeg` | Ligulate Corolla | `dict_ligulate_corolla.png` | `ligulate`, `ligulate corolla`, `ray floret` |
+| 20 | `Screenshot_26-9-2026_14267_.jpeg` | Linear leaf | `dict_linear_leaf.png` | `linear leaf` |
+| 21 | `Screenshot_26-9-2026_142722_.jpeg` | Linear Graph (y = mx + c) | `dict_linear_graph.png` | `linear graph`, `linear equation graph`, `gradient`, `straight line graph` |
+| 22 | `Screenshot_26-9-2026_142756_.jpeg` | Measuring linear expansivity of a metal | `dict_linear_expansivity.png` | `linear expansivity`, `thermal expansivity`, `coefficient of linear expansion` |
+| 23 | `Screenshot_26-9-2026_142955_.jpeg` | Lipoic Acid | `dict_lipoic_acid.png` | `lipoic acid`, `alpha-lipoic acid`, `thioctic acid` |
+| 24 | `Screenshot_26-9-2026_14336_.jpeg` | Lobed leaf | `dict_lobed_leaf.png` | `lobed leaf`, `lobed` |
+| 25 | `Screenshot_26-9-2026_143633_.jpeg` | Benzene localized electrons | `dict_localized_electrons.png` | `localized electrons`, `delocalized electrons` |
+| 26 | `Screenshot_26-9-2026_143659_.jpeg` | Ammonia lone pair trigonal pyramid | `dict_lone_pair.png` | `lone pair`, `lone pair electrons`, `unshared pair` |
+| 27 | `Screenshot_26-9-2026_143734_.jpeg` | Lumbar vertebra of a mammal (anterior & lateral) | `dict_lumbar_vertebra.png` | `lumbar vertebra`, `lumbar vertebrae`, `vertebra` |
+| 28 | `Screenshot_26-9-2026_143846_.jpeg` | Lysine | `dict_lysine.png` | `lysine`, `l-lysine` |
+| 29 | `Screenshot_26-9-2026_143916_.jpeg` | Mach Angle (Mach cone) | `dict_mach_angle.png` | `mach angle`, `mach cone`, `mach number` |
+| 30 | `Screenshot_26-9-2026_143922_.jpeg` | 2-methylpropenoic Acid (Methacrylic acid) | `dict_methacrylic_acid.png` | `2-methylpropenoic acid`, `methacrylic acid` |
+| 31 | `Screenshot_26-9-2026_143933_.jpeg` | Ecstasy (MDMA) | `dict_mdma.png` | `mdma`, `ecstasy`, `3,4-methylenedioxymethamphetamine` |
+| 32 | `Screenshot_26-9-2026_143946_.jpeg` | Magic-Angle Spinning | `dict_magic_angle_spinning.png` | `magic angle`, `magic-angle spinning` |
+| 33 | `Screenshot_26-9-2026_144125_.jpeg` | Right hand grip rule (conductor & solenoid) | `dict_right_hand_grip_rule.png` | `right hand grip rule`, `grip rule`, `magnetic field of conductor` |
+| 34 | `Screenshot_26-9-2026_14413_.jpeg` | Lateral view of a maggot | `dict_maggot.png` | `maggot`, `housefly larva` |
+| 35 | `Screenshot_26-9-2026_144142_.jpeg` | Magnetic field lines near a bar magnet | `dict_magnetic_field_lines.png` | `magnetic field lines`, `magnetic flux lines`, `bar magnet` |
+| 36 | `Screenshot_26-9-2026_14419_.jpeg` | 3 x 3 Magic Square | `dict_magic_square.png` | `magic square` |
+| 37 | `Screenshot_26-9-2026_144225_.jpeg` | Magnifying glass | `dict_magnifying_glass.png` | `magnifying glass`, `simple magnifier` |
+| 38 | `Screenshot_26-9-2026_144245_.jpeg` | Maize fruit (external & longitudinal section) | `dict_maize_fruit.png` | `maize fruit`, `caryopsis`, `grain of maize`, `maize grain` |
+| 39 | `Screenshot_26-9-2026_14426_.jpeg` | Using electricity to magnetise a nail | `dict_electromagnet_nail.png` | `electromagnet`, `magnetisation`, `magnetization` |
+| 40 | `Screenshot_26-9-2026_144312_.jpeg` | Major segment & Minor arc | `dict_major_segment.png` | `major segment`, `segment of a circle` |
+| 41 | `Screenshot_26-9-2026_144334_.jpeg` | Maleic Anhydride | `dict_maleic_anhydride.png` | `maleic anhydride`, `furan-2,5-dione` |
+| 42 | `Screenshot_26-9-2026_144345_.jpeg` | Malfatti Circles | `dict_malfatti_circles.png` | `malfatti circles`, `malfatti's circles` |
+| 43 | `Screenshot_26-9-2026_144413_.jpeg` | Malleus (Hammer) of the human ear | `dict_malleus.png` | `malleus`, `hammer bone`, `ear ossicles` |
+| 44 | `Screenshot_26-9-2026_14441_.jpeg` | Malpighian Body (Glomerulus + Bowman's capsule) | `dict_malpighian_body.png` | `malpighian body`, `malpighian corpuscle`, `renal corpuscle` |
+| 45 | `Screenshot_26-9-2026_144712_.jpeg` | Left breast of a human showing the mammary glands | `dict_mammary_gland.png` | `mammary gland`, `mammary glands`, `lactiferous duct` |
+| 46 | `Screenshot_26-9-2026_144721_.jpeg` | Lateral view of a rodent, an example of a mammal | `dict_mammal.png` | `mammal`, `mammalia`, `rodent` |
+| 47 | `Screenshot_26-9-2026_144742_.jpeg` | Longitudinal section of a mango | `dict_mango.png` | `mango`, `drupe`, `mango fruit`, `longitudinal section of mango` |
+| 48 | `Screenshot_26-9-2026_144813_.jpeg` | The manometer | `dict_manometer.png` | `manometer`, `u-tube manometer`, `gas pressure measurement` |
+| 49 | `Screenshot_26-9-2026_144824_.jpeg` | Mechanism of Mannich Reaction | `dict_mannich_reaction.png` | `mannich reaction`, `mannich base` |
+| 50 | `Screenshot_26-9-2026_144830_.jpeg` | Chemical structure of Mannitol | `dict_mannitol.png` | `mannitol`, `d-mannitol` |
+| 51 | `Screenshot_26-9-2026_144845_.jpeg` | Earth crust showing the layers | `dict_mantle_earth.png` | `mantle`, `earth's mantle`, `upper mantle`, `lower mantle` |
+| 52 | `Screenshot_26-9-2026_144850_.jpeg` | Mantle of a snail | `dict_mantle_snail.png` | `mantle (mollusc)`, `snail mantle`, `mollusc mantle` |
+| 53 | `Screenshot_26-9-2026_144857_.jpeg` | Earth crust & snail mantle | `dict_mantle.png` | `mantle`, `mantle structure` |
+| 54 | `Screenshot_26-9-2026_144914_.jpeg` | Margin of a leaf | `dict_leaf_margin.png` | `margin`, `leaf margin` |
+| 55 | `Screenshot_26-9-2026_144920_.jpeg` | Marginal placentation of apocarpous gynoecium | `dict_marginal_placentation.png` | `marginal placentation`, `placentation` |
+| 56 | `Screenshot_26-9-2026_144937_.jpeg` | Mass spectrometer | `dict_mass_spectrometer.png` | `mass spectrometer`, `mass spectrometry` |
+| 57 | `Screenshot_26-9-2026_144948_.jpeg` | The mass spectrograph | `dict_mass_spectrograph.png` | `mass spectrograph` |
+| 58 | `Screenshot_26-9-2026_14497_.jpeg` | Air layering (marcotting) | `dict_marcotting.png` | `marcotting`, `air layering` |
+| 59 | `Screenshot_26-9-2026_145039_.jpeg` | Chemical structure of Melamine | `dict_melamine.png` | `melamine`, `1,3,5-triazine-2,4,6-triamine` |
+| 60 | `Screenshot_26-9-2026_145049_.jpeg` | Chemical structure of Melatonin | `dict_melatonin.png` | `melatonin`, `n-acetyl-5-methoxytryptamine` |
+| 61 | `Screenshot_26-9-2026_145055_.jpeg` | Chemical structure of Mellitic Acid | `dict_mellitic_acid.png` | `mellitic acid`, `benzenehexacarboxylic acid` |
+| 62 | `Screenshot_26-9-2026_145120_.jpeg` | Plane of Symmetry of Meso Compound | `dict_meso_compound.png` | `meso compound`, `plane of symmetry`, `meso form` |
+| 63 | `Screenshot_26-9-2026_145128_.jpeg` | Chemical structure of Mescaline | `dict_mescaline.png` | `mescaline`, `3,4,5-trimethoxyphenethylamine` |
+| 64 | `Screenshot_26-9-2026_145145_.jpeg` | Human hand showing the metacarpal | `dict_metacarpal.png` | `metacarpal`, `metacarpals`, `carpal`, `carpus` |
+| 65 | `Screenshot_26-9-2026_145155_.jpeg` | Structure of (Benzene) chromium tricarbonyl, an example of metallocene | `dict_metallocene.png` | `metallocene`, `sandwich compound`, `dibenzenechromium` |
+| 66 | `Screenshot_26-9-2026_14516_.jpeg` | Chemical structure of Menthol | `dict_menthol.png` | `menthol`, `2-isopropyl-5-methylcyclohexanol` |
+| 67 | `Screenshot_26-9-2026_145218_.jpeg` | Human leg showing the metatarsals | `dict_metatarsals.png` | `metatarsals`, `metatarsal`, `tarsals`, `tarsus` |
+| 68 | `Screenshot_26-9-2026_14522_.jpeg` | Chemical structure of Metaldehyde | `dict_metaldehyde.png` | `metaldehyde` |
+| 69 | `Screenshot_26-9-2026_145232_.jpeg` | Chemical structure of methanal | `dict_methanal.png` | `methanal`, `formaldehyde` |
+| 70 | `Screenshot_26-9-2026_145247_.jpeg` | Chemical structure of Methionine | `dict_methionine.png` | `methionine`, `l-methionine` |
+| 71 | `Screenshot_26-9-2026_145258_.jpeg` | Chemical structure of Methyl Orange | `dict_methyl_orange.png` | `methyl orange`, `helianthin` |
+| 72 | `Screenshot_26-9-2026_145313_.jpeg` | Chemical structure of Methylbenzene (Toluene) | `dict_methylbenzene.png` | `methylbenzene`, `toluene` |
+| 73 | `Screenshot_26-9-2026_145321_.jpeg` | Chemical structure of Methyl Salicylate | `dict_methyl_salicylate.png` | `methyl salicylate`, `oil of wintergreen` |
+| 74 | `Screenshot_26-9-2026_145329_.jpeg` | Chemical structure of Methyl Violet | `dict_methyl_violet.png` | `methyl violet`, `gentian violet`, `crystal violet` |
+| 75 | `Screenshot_26-9-2026_145339_.jpeg` | Chemical structure of Methylene Blue | `dict_methylene_blue.png` | `methylene blue`, `methylthioninium chloride` |
+| 76 | `Screenshot_26-9-2026_145352_.jpeg` | Using a metre bridge to measure an unknown resistance | `dict_metre_bridge.png` | `metre bridge`, `meter bridge`, `slide wire bridge` |
+| 77 | `Screenshot_26-9-2026_14535_.jpeg` | Chemical structure of Methyl Red | `dict_methyl_red.png` | `methyl red` |
+| 78 | `Screenshot_26-9-2026_145415_.jpeg` | Michelson-Morley Interferometer | `dict_michelson_morley_interferometer.png` | `michelson-morley interferometer`, `interferometer`, `michelson interferometer` |
+| 79 | `Screenshot_26-9-2026_145433_.jpeg` | A micrometer screw gauge | `dict_micrometer_screw_gauge.png` | `micrometer screw gauge`, `micrometer`, `screw gauge` |
+| 80 | `Screenshot_26-9-2026_145453_.jpeg` | Carbon microphone | `dict_carbon_microphone.png` | `carbon microphone`, `microphone` |
+| 81 | `Screenshot_26-9-2026_145512_.jpeg` | Fig. I: A simple light microscope | `dict_light_microscope.png` | `light microscope`, `optical microscope`, `simple light microscope` |
+| 82 | `Screenshot_26-9-2026_145524_.jpeg` | Fig. II: A compound microscope | `dict_compound_microscope.png` | `compound microscope` |
+| 83 | `Screenshot_26-9-2026_145538_.jpeg` | Simple and compound microscopes | `dict_microscope.png` | `microscope` |
+| 84 | `Screenshot_26-9-2026_145554_.jpeg` | Midpoint (M) of a line segment | `dict_midpoint.png` | `midpoint`, `midpoint formula`, `midpoint of a line segment` |
+| 85 | `Screenshot_26-9-2026_145625_.jpeg` | Minor Arc | `dict_minor_arc.png` | `minor arc`, `arc of a circle` |
+| 86 | `Screenshot_26-9-2026_145640_.jpeg` | Mitochondrion | `dict_mitochondrion.png` | `mitochondrion`, `mitochondria`, `crista`, `cristae` |
+| 87 | `Screenshot_26-9-2026_145659_.jpeg` | Mode of a graph | `dict_mode_graph.png` | `mode`, `modal class`, `mode of a graph`, `histogram mode` |
+| 88 | `Screenshot_26-9-2026_14569_.jpeg` | Lateral view of a millepede | `dict_millipede.png` | `millipede`, `millepede`, `diplopoda` |
+| 89 | `Screenshot_26-9-2026_145714_.jpeg` | Amplitude modulation (AM) | `dict_amplitude_modulation.png` | `amplitude modulation`, `am`, `modulation` |
+| 90 | `Screenshot_26-9-2026_145729_.jpeg` | Molar | `dict_molar_tooth.png` | `molar`, `molar tooth`, `teeth` |
+| 91 | `Screenshot_26-9-2026_145750_.jpeg` | Monochasium | `dict_monochasium.png` | `monochasium`, `cyme`, `monochasial cyme` |
+| 92 | `Screenshot_26-9-2026_145759_.jpeg` | A monochord (sonometer) | `dict_monochord.png` | `monochord`, `sonometer` |
+| 93 | `Screenshot_26-9-2026_145812_.jpeg` | The digestive tract of chicken (monogastric) | `dict_monogastric_digestive_tract.png` | `monogastric`, `monogastric digestive system`, `gizzard`, `proventriculus`, `avian digestive system` |
+| 94 | `Screenshot_26-9-2026_145830_.jpeg` | Chemical structure of Morphine | `dict_morphine.png` | `morphine` |
+| 95 | `Screenshot_26-9-2026_145845_.jpeg` | Mosquito life cycle stages and head / Fig. I: Larva of a mosquito / Fig. II: Pupa of a mosquito / Fig. III: Dorsal view of anopheles mosquito / Fig IV: Lateral view of the head of a mosquito | `dict_mosquito.png`, `dict_mosquito_larva.png`, `dict_mosquito_pupa.png`, `dict_anopheles_mosquito.png`, `dict_mosquito_proboscis.png` | `mosquito`, `life cycle of mosquito`, `mosquito larva`, `larva of a mosquito`, `mosquito pupa`, `pupa of a mosquito`, `anopheles`, `anopheles mosquito` |
+| 96 | `Screenshot_26-9-2026_145853_.jpeg` | Moss plant | `dict_moss_plant.png` | `moss`, `moss plant`, `bryophyte`, `rhizoid`, `capsule (moss)` |
+| 97 | `Screenshot_26-9-2026_145914_.jpeg` | A motor neurone | `dict_motor_neurone.png` | `motor neurone`, `motor neuron`, `efferent neurone`, `axon`, `dendron`, `myelin sheath` |
+| 98 | `Screenshot_26-9-2026_145933_.jpeg` | The permanent-magnet moving-coil instrument | `dict_moving_coil_instrument.png` | `moving-coil instrument`, `moving coil galvanometer`, `galvanometer`, `pmmc` |
+| 99 | `Screenshot_26-9-2026_145957_.jpeg` | Multicentre Bond (diboranes (B2H6)) | `dict_multicentre_bond.png` | `multicentre bond`, `multicenter bond`, `diborane`, `banana bond`, `three-centre two-electron bond` |
+| 100 | `Screenshot_26-9-2026_15020_.jpeg` | Mushroom | `dict_mushroom.png` | `mushroom`, `agaricus`, `pileus`, `stipe`, `gills (fungi)`, `basidiomycete` |
+| 101 | `Screenshot_26-9-2026_15057_.jpeg` | Myopia (Short Sightedness) | `dict_myopia.png` | `myopia`, `short sightedness`, `shortsightedness`, `nearsightedness` |
