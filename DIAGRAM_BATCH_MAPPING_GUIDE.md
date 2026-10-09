@@ -387,3 +387,72 @@ Source Folder: `k_diagrams/`
 
 
 
+
+
+---
+
+### Section N & O Series: Batch 1 (Completed) — Screenshots 1 to 60
+Source Folder: `n-o diagrams/` (September 28, 2026 Pristine Author Captures)
+
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 1 | `Screenshot_28-9-2026_172012_.jpeg` | Chemical Structure of Paracetamol | `dict_paracetamol.png` | `paracetamol`, `acetaminophen`, `4-acetamidophenol` |
+| 2 | `Screenshot_28-9-2026_172019_.jpeg` | 1-Naphthol and 2-Naphthol | `dict_naphthol.png` | `naphthol`, `1-naphthol`, `2-naphthol`, `naphthols` |
+| 3 | `Screenshot_28-9-2026_172027_.jpeg` | Chemical formula of Naphthalene | `dict_naphthalene.png` | `naphthalene`, `chemical formula of naphthalene` |
+| 4 | `Screenshot_28-9-2026_172123_.jpeg` | Nephroid leaf | `dict_nephroid.png` | `nephroid`, `nephroid leaf` |
+| 5 | `Screenshot_28-9-2026_172133_.jpeg` | Nephron (labelled anatomy) | `dict_nephron.png` | `nephron`, `renal tubule`, `bowman's capsule`, `glomerulus` |
+| 6 | `Screenshot_28-9-2026_172143_.jpeg` | Nephron structure and tubules | `dict_nephron_structure.png` | `nephron structure`, `loop of henle` |
+| 7 | `Screenshot_28-9-2026_172155_.jpeg` | Human nervous system | `dict_nervous_system.png` | `nervous system`, `human nervous system`, `central nervous system`, `spinal cord` |
+| 8 | `Screenshot_28-9-2026_172226_.jpeg` | Net force of forces acting on an object | `dict_net_force.png` | `net force`, `resultant force` |
+| 9 | `Screenshot_28-9-2026_172245_.jpeg` | von Neumann's Computer Architecture | `dict_von_neumann_architecture.png` | `von neumann architecture`, `computer architecture`, `neumann`, `von neumann` |
+| 10 | `Screenshot_28-9-2026_172328_.jpeg` | Newton's Law of Cooling (Temperature vs Time) | `dict_newtons_law_of_cooling.png` | `newton's law of cooling`, `newtons law of cooling`, `law of cooling` |
+| 11 | `Screenshot_28-9-2026_172349_.jpeg` | Chemical structure of Niacin | `dict_niacin.png` | `niacin`, `nicotinic acid`, `vitamin b3` |
+| 12 | `Screenshot_28-9-2026_17236_.jpeg` | Neutral points (magnetic field lines) | `dict_neutral_points.png` | `neutral point`, `neutral points`, `magnetic neutral points` |
+| 13 | `Screenshot_28-9-2026_172419_.jpeg` | Chemical Structure of Ninhydrin | `dict_ninhydrin.png` | `ninhydrin`, `2,2-dihydroxyindane-1,3-dione` |
+| 14 | `Screenshot_28-9-2026_172445_.jpeg` | The nitrogen cycle | `dict_nitrogen_cycle.png` | `nitrogen cycle`, `nitrogen fixation`, `nitrification` |
+| 15 | `Screenshot_28-9-2026_17244_.jpeg` | Chemical Structure of Nicotine | `dict_nicotine.png` | `nicotine` |
+| 16 | `Screenshot_28-9-2026_172543_.jpeg` | Chemical Structure of Noradrenaline | `dict_noradrenaline.png` | `noradrenaline`, `norepinephrine` |
+| 17 | `Screenshot_28-9-2026_17254_.jpeg` | Decibel scale of sounds (Noise pollution) | `dict_decibel_scale_noise.png` | `noise`, `noise pollution`, `decibel`, `decibel scale` |
+| 18 | `Screenshot_28-9-2026_17266_.jpeg` | Normal Curve (Scores vs Frequency) | `dict_normal_curve.png` | `normal curve`, `normal distribution`, `gaussian distribution`, `bell curve` |
+| 19 | `Screenshot_28-9-2026_172751_.jpeg` | A truth table describing the operation of NOT | `dict_not_truth_table.png` | `not`, `not operation`, `inverter table` |
+| 20 | `Screenshot_28-9-2026_172813_.jpeg` | Nucellus (botanical ovule cross-section) | `dict_nucellus.png` | `nucellus`, `megasporocyte`, `integument`, `micropyle` |
+| 21 | `Screenshot_28-9-2026_17282_.jpeg` | Not gate symbol and truth table | `dict_not_gate.png` | `not gate`, `inverter`, `not circuit` |
+| 22 | `Screenshot_28-9-2026_172840_.jpeg` | Nuclear reactor (labelled cross-section) | `dict_nuclear_reactor.png` | `nuclear reactor`, `moderator`, `control rods`, `fuel rods` |
+| 23 | `Screenshot_28-9-2026_172916_.jpeg` | Chemical Structure of 3-oxobutanoic Acid | `dict_3_oxobutanoic_acid.png` | `3-oxobutanoic acid`, `acetoacetic acid`, `oxoacid` |
+| 24 | `Screenshot_28-9-2026_17291_.jpeg` | Number line | `dict_number_line.png` | `number line`, `real line` |
+| 25 | `Screenshot_28-9-2026_172940_.jpeg` | Obcordate leaf / Obcordate fruit | `dict_obcordate_leaf.png`, `dict_obcordate_fruit.png` | `obcordate`, `obcordate leaf`, `obcordate fruit` |
+| 26 | `Screenshot_28-9-2026_172949_.jpeg` | Obdeltoid leaf | `dict_obdeltoid.png` | `obdeltoid`, `obdeltoid leaf` |
+| 27 | `Screenshot_28-9-2026_173055_.jpeg` | Oblique leaf base | `dict_oblique_leaf_base.png` | `oblique leaf base`, `oblique leaf` |
+| 28 | `Screenshot_28-9-2026_173134_.jpeg` | Oblanceolate leaf | `dict_oblanceolate.png` | `oblanceolate`, `oblancelate`, `oblanceolate leaf` |
+| 29 | `Screenshot_28-9-2026_17313_.jpeg` | Oblique Triangle | `dict_oblique_triangle.png` | `oblique triangle`, `oblique` |
+| 30 | `Screenshot_28-9-2026_173215_.jpeg` | Obovate leaf | `dict_obovate.png` | `obovate`, `obovate leaf` |
+| 31 | `Screenshot_28-9-2026_173226_.jpeg` | Obtuse leaf | `dict_obtuse_leaf.png` | `obtuse leaf`, `obtuse apex` |
+| 32 | `Screenshot_28-9-2026_173239_.jpeg` | Ocreate structure (ocrea / ochrea) | `dict_ocrea.png` | `ocrea`, `ochrea`, `ocreate structure` |
+| 33 | `Screenshot_28-9-2026_17323_.jpeg` | Oblong Leaf | `dict_oblong_leaf.png` | `oblong`, `oblong leaf` |
+| 34 | `Screenshot_28-9-2026_17330_.jpeg` | Oestrogen structures (Oestradiol, Oestrone, Oestriol) | `dict_oestrogen.png` | `oestrogen`, `estrogen`, `oestradiol`, `estradiol`, `oestrone`, `estrone`, `oestriol` |
+| 35 | `Screenshot_28-9-2026_173712_.jpeg` | Ogive (cumulative frequency curve) | `dict_ogive.png` | `ogive`, `cumulative frequency curve`, `cumulative frequency` |
+| 36 | `Screenshot_28-9-2026_173812_.jpeg` | Okro pod (cross-section & vertical splits) | `dict_okro.png` | `okro`, `okra`, `lady's finger`, `gumbo` |
+| 37 | `Screenshot_28-9-2026_173824_.jpeg` | Olecranon Process (elbow joint anatomy) | `dict_olecranon_process.png` | `olecranon process`, `olecranon`, `ulna` |
+| 38 | `Screenshot_28-9-2026_173839_.jpeg` | Omasum of a cow (ruminant digestive tract) | `dict_omasum.png` | `omasum`, `manyplies`, `psalterium`, `ruminant stomach` |
+| 39 | `Screenshot_28-9-2026_173926_.jpeg` | Operational amplifiers (inverting & non-inverting) | `dict_operational_amplifier.png` | `operational amplifier`, `op-amp`, `non-inverting amplifier`, `inverting amplifier` |
+| 40 | `Screenshot_28-9-2026_17393_.jpeg` | Longitudinal section of onion (tunicated bulb) | `dict_onion.png` | `onion`, `tunicated bulb`, `bulb` |
+| 41 | `Screenshot_28-9-2026_173941_.jpeg` | Chemical structure of alpha-Neoendorphin | `dict_neoendorphin.png` | `neoendorphin`, `alpha-neoendorphin`, `endorphin` |
+| 42 | `Screenshot_28-9-2026_173959_.jpeg` | Optical fibre (laser light path and cladding) | `dict_optical_fibre.png` | `optical fibre`, `optical fiber`, `total internal reflection`, `core cladding` |
+| 43 | `Screenshot_28-9-2026_174012_.jpeg` | Optical Isomerism (non-superimposable mirror images) | `dict_optical_isomerism.png` | `optical isomerism`, `enantiomers`, `chiral`, `chirality` |
+| 44 | `Screenshot_28-9-2026_174018_.jpeg` | Optical pyrometer (apparatus diagram) | `dict_optical_pyrometer.png` | `optical pyrometer`, `pyrometer` |
+| 45 | `Screenshot_28-9-2026_174032_.jpeg` | The operation of OR illustrated by the truth table | `dict_or_gate.png` | `or`, `or gate`, `or circuit`, `disjunction` |
+| 46 | `Screenshot_28-9-2026_174059_.jpeg` | Orange, Citrus spp. (morphology & cross-section) | `dict_orange.png` | `orange`, `citrus`, `hesperidium` |
+| 47 | `Screenshot_28-9-2026_174120_.jpeg` | S-orbital and P-orbital electron density shapes | `dict_atomic_orbitals.png` | `orbital`, `atomic orbital`, `s-orbital`, `p-orbital` |
+| 48 | `Screenshot_28-9-2026_174137_.jpeg` | Orgel diagrams (D, F and P energy state splitting) | `dict_orgel_diagrams.png` | `orgel diagrams`, `orgel diagram` |
+| 49 | `Screenshot_28-9-2026_17418_.jpeg` | Orbicular Leaf | `dict_orbicular_leaf.png` | `orbicular`, `orbicular leaf` |
+| 50 | `Screenshot_28-9-2026_17420_.jpeg` | Orthogonal circles | `dict_orthogonal_circles.png` | `orthogonal`, `orthogonal circles` |
+| 51 | `Screenshot_28-9-2026_174246_.jpeg` | An experimental set up to show the process of osmosis | `dict_osmosis_experiment.png` | `osmosis`, `osmosis experiment`, `semi-permeable membrane` |
+| 52 | `Screenshot_28-9-2026_174320_.jpeg` | Ovate leaf | `dict_ovate_leaf.png` | `ovate`, `ovate leaf` |
+| 53 | `Screenshot_28-9-2026_17432_.jpeg` | Otto cycle (P-V indicator diagram) | `dict_otto_cycle.png` | `otto cycle`, `otto engine`, `four-stroke cycle`, `four stroke engine` |
+| 54 | `Screenshot_28-9-2026_174338_.jpeg` | Chemical Structure of oxalic acid (ethanedioic acid) | `dict_oxalic_acid.png` | `oxalic acid`, `ethanedioic acid` |
+| 55 | `Screenshot_28-9-2026_174410_.jpeg` | Chemical structure of Oxazole | `dict_oxazole.png` | `oxazole`, `1,3-oxazole` |
+| 56 | `Screenshot_28-9-2026_174444_.jpeg` | Chemical Structure of oxoanions (sulphate and sulphite) | `dict_oxoanion.png` | `oxoanion`, `oxyanion`, `sulphate`, `sulphite` |
+| 57 | `Screenshot_28-9-2026_174456_.jpeg` | Chemical Structure of sulphuric acid (an example of oxoacid) / Chemical structure of Oxycodone | `dict_oxoacid.png`, `dict_oxycodone.png` | `oxoacid`, `oxoacids`, `sulphuric acid`, `oxycodone` |
+| 58 | `Screenshot_28-9-2026_174522_.jpeg` | Chemical structure of Ozone (bond length & angle) | `dict_ozone.png` | `ozone`, `trioxygen` |
+| 59 | `Screenshot_28-9-2026_174534_.jpeg` | Generalised reaction scheme of Ozonolysis | `dict_ozonolysis.png` | `ozonolysis`, `ozonide` |
+| 60 | `Screenshot_28-9-2026_17457_.jpeg` | The production of Oxygen gas (laboratory preparation) | `dict_oxygen_production.png` | `oxygen`, `preparation of oxygen`, `oxygen gas` |
