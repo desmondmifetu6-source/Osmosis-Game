@@ -46744,7 +46744,7 @@
       "word": "deduction theorem",
       "raw_headword": "DEDUCTION THEOREM",
       "synonyms": [],
-      "definition": "In logic, the property of many formal systems that if an argument is valid, then its premises imply its conclusion; that is, it is true that if the premises of the given argument are true then so is its conclusion. Formally, the conditional statement is derived from an argument by taking the conjunction of the premises as antecedent and the conclusion as consequent."
+      "definition": "In mathematical logic and proof theory, a fundamental meta-theorem stating that if a formula $B$ is provable from a set of hypotheses $\\Gamma$ augmented by an assumption $A$ ($\\Gamma, A \\vdash B$), then the conditional statement $A \\to B$ is provable from $\\Gamma$ alone:\n\n$$\\Gamma, A \\vdash B \\iff \\Gamma \\vdash (A \\to B)$$\n\nHolds in classical and intuitionistic propositional and first-order predicate logic, provided no free variable of $A$ is generalized during the deduction."
     },
     {
       "word": "deductive reasoning",
@@ -47649,7 +47649,7 @@
       "word": "dense in itself",
       "raw_headword": "DENSE IN ITSELF",
       "synonyms": [],
-      "definition": "Of a set in a topological space, such that every punctured neighbourhood of every element of the set intersects the set. An example of such a set which is not closed is the subset of irrational numbers, because every neighbourhood of an irrational number x contains at least one other irrational number y ≠ x ."
+      "definition": "In point-set topology, a subset $A$ of a topological space $X$ is described as dense-in-itself (or dense in itself) if every point $x \\in A$ is an accumulation point (limit point) of $A$. In terms of the derived set $A'$ (the set of all limit points of $A$):\n\n$$A \\subseteq A'$$\n\nEquivalently, $A$ contains no isolated points. A set that is both closed ($A' \\subseteq A$) and dense-in-itself is termed a perfect set ($A = A'$)."
     },
     {
       "word": "densification",
@@ -48274,7 +48274,7 @@
       "word": "desargues' theorem",
       "raw_headword": "DESARGUES' THEOREM",
       "synonyms": [],
-      "definition": "A theorem in geometry that if the lines joining corresponding vertices of two triangles in three-dimensional space pass through a common point then the extended corresponding lines of the two triangles meet in three points, all on the same line. It was named after Gerard Desargues (1591-1661), French mathematician and engineer, a founder of modern geometry."
+      "definition": "In projective and synthetic geometry, a seminal theorem formulated by Girard Desargues (1639). It states that two triangles $\\triangle ABC$ and $\\triangle A'B'C'$ are in perspective from a point $P$ (the lines $AA', BB', CC'$ are concurrent) if and only if they are in perspective from a line $\\ell$ (the intersection points of corresponding sides $AB \\cap A'B'$, $BC \\cap B'C'$, $CA \\cap C'A'$ are collinear):\n\n$$\\text{Lines } AA', BB', CC' \\text{ concurrent at } P \\iff \\text{Points } (AB \\cap A'B'), (BC \\cap B'C'), (CA \\cap C'A') \\text{ lie on line } \\ell$$\n\nUniversally valid in any projective space of dimension $n \\ge 3$ and in Desarguesian planes."
     },
     {
       "word": "descartes' rule of signs",
@@ -48312,7 +48312,7 @@
       "word": "descending chain condition",
       "raw_headword": "DESCENDING CHAIN CONDITION",
       "synonyms": [],
-      "definition": "A finiteness condition for ascending or descending chains in a partially ordered set. In other words, the condition on submodules that no descending chain M1 ⊇ M2 ⊇ M3 ⊇ ... has more than a finite number of distinct members; for every such chain there is an n such that M n = M m for all m ≥ n . Equivalently, every non-empty set of submoduless has a minimal element. Similar conditions are defined for rings, groups, etc."
+      "definition": "In abstract algebra and ring theory, an algebraic finiteness condition on a partially ordered set $(S, \\le)$, module, or ring $R$. The descending chain condition (DCC) states that every descending sequence of submodules or ideals:\n\n$$I_1 \\supseteq I_2 \\supseteq I_3 \\supseteq \\dots \\supseteq I_k \\supseteq \\dots$$\n\neventually stabilizes; that is, there exists an integer $N \\in \\mathbb{N}$ such that:\n\n$$I_n = I_N \\quad \\forall n \\ge N$$\n\nEquivalently, every non-empty family of ideals possesses a minimal element under inclusion. A ring satisfying the DCC on left (or right) ideals is called an Artinian ring."
     },
     {
       "word": "descending elution/development",
@@ -50590,7 +50590,7 @@
       "word": "dini's theorem",
       "raw_headword": "DINI'S THEOREM",
       "synonyms": [],
-      "definition": "The result that a monotone decreasing sequence of continuous functions defined on a compact set that converges pointwise to a continuous limit actually exhibits uniform convergence."
+      "definition": "In real mathematical analysis, an important theorem concerning uniform convergence established by Ulisse Dini. It asserts that if a sequence of real-valued continuous functions $f_n: K \\to \\mathbb{R}$ defined on a compact topological space $K$ converges monotonically (either $f_{n+1}(x) \\le f_n(x)$ or $f_{n+1}(x) \\ge f_n(x)$ for all $x \\in K$) to a continuous limit function $f: K \\to \\mathbb{R}$, then the convergence is necessarily uniform:\n\n$$f_n(x) \\searrow f(x) \\quad \\forall x \\in K, \\quad f_n, f \\in C(K) \\implies f_n \\rightrightarrows f \\text{ on } K$$\n\nEquivalently: $\\lim_{n \\to \\infty} \\sup_{x \\in K} |f_n(x) - f(x)| = 0$."
     },
     {
       "word": "dinitro compounds",
@@ -52207,7 +52207,7 @@
       "word": "distribution constant",
       "raw_headword": "DISTRIBUTION CONSTANT",
       "synonyms": [],
-      "definition": "The concentration of a component in or on the stationary phase divided by the concentration of the component in the mobile phase. Since in chromatography a component may be present in more than one form, for example, associated and dissociated forms, the analytical condition used here refers to the total amount present without regard to the existence of various forms. These terms are also called the distribution coefficients . However, the present term conforms more closely to the general usage in science."
+      "definition": "In analytical chemistry, chromatography, and solvent extraction, the equilibrium ratio of the concentration of a chemical solute $A$ partitioned between two immiscible phases (typically stationary phase and mobile phase) at constant temperature:\n\n$$K_D = \\frac{[A]_{\\text{stationary}}}{[A]_{\\text{mobile}}} = \\frac{C_s}{C_m}$$\n\nAlso known as the partition coefficient ($P$). Governs chromatographic retention factor $k = K_D \\frac{V_s}{V_m}$ and separation efficiency."
     },
     {
       "word": "distribution function",
@@ -52512,7 +52512,7 @@
       "word": "division",
       "raw_headword": "DIVISION",
       "synonyms": [],
-      "definition": "1. Splitting into parts, sharing of something or the act of separating or splitting something into parts. 2. An operation used to calculate the number of times one number is contained in another. The symbols usually used, for example, x divided by y are x ÷ y = z (called the obelus method), x / z (called the slash method) and by placing the dividend over the divisor with a horizontal line x y = z . Another method, called the long division is usually used for dividing simple or complex numbers by breaking them into simple steps. A dividend is a number or quantity to be divided by another number or quantity. A number that divides another number is called a divisor . Quotient is the result of the division. For example, in 10 ÷ 2 = 5, 10 is the dividend, 2 the divisor and 5 is the quotient. Divisible denotes how many times one number contains or is contained in another number. For example, 30 is divisible by 3 to give 10. 3. The process of separating the root mass of a perennial plant into smaller pieces that are used to grow new plants. 4. The process by which a cell divides to form two new cells either to produce identical cells, mitosis or to produce cells with half the number of chromosomes, meiosis. 5. A classification category, which groups plants and animals with similar characteristics together or a major category in the taxonomic classification of plants comprising a group of classes. The corresponding category in animal classification is called phylum. 6. A fallacy in which it is argued that what is true of a whole collectively is true of any of its parts."
+      "definition": "In elementary arithmetic and algebra, the mathematical operation inverse to multiplication. For any dividend $a$ and non-zero divisor $b \\neq 0$, division computes the unique quotient $q = \\frac{a}{b}$ such that:\n\n$$a \\div b = \\frac{a}{b} = q \\iff a = b \\times q, \\quad b \\neq 0$$\n\nIn Euclidean division for integers, $a = bq + r$ where the remainder satisfies $0 \\le r < |b|$. Division by zero ($b = 0$) is strictly undefined in all fields."
     },
     {
       "word": "division algebra",
@@ -71421,7 +71421,7 @@
       "synonyms": [
         "general factor"
       ],
-      "definition": "The number of specified chemical events in an irradiated substance produced or destroyed for each 100 electronvolts absorbed by a substance from ionising radiation."
+      "definition": "The dimensionless quantity relating the magnetic moment of a particle to its angular momentum (spin). For the electron:\n\n$$\\mu = g \\frac{e}{2m_e} S$$\n\nwhere $g \\approx 2.00232$ for an electron (with QED corrections), $e$ is the elementary charge, $m_e$ is the electron mass, and $S$ is the spin angular momentum. Also called the Landé g-factor in atomic physics."
     },
     {
       "word": "g protein",
@@ -71458,7 +71458,7 @@
       "synonyms": [
         "g force"
       ],
-      "definition": "Gravitational force that pilots and astronauts experience when their craft accelerates or decelerates rapidly. The g -force, on something is its acceleration relative to free-fall. This is due to the vector sum of non-gravitational forces. Accelerations not produced by gravity are termed proper accelerations and cause stresses and strains on objects. Because of these strains, large g -forces may be destructive."
+      "definition": "Apparent weight experienced per unit mass relative to standard gravitational acceleration $g_0 = 9.80665\\,\\text{m s}^{-2}$:\n\n$$\\text{g-force} = \\frac{a}{g_0}$$\n\nwhere $a$ is the net proper acceleration. A g-force of 1 g corresponds to normal Earth surface weight; sustained exposure above 5 g causes loss of consciousness."
     },
     {
       "word": "g-scale",
@@ -71569,7 +71569,7 @@
       "word": "galactic coordinates",
       "raw_headword": "GALACTIC COORDINATES",
       "synonyms": [],
-      "definition": "Coordinates based on the plane of the Milky Way Galaxy, which is inclined about 63° to the celestial equator and centred on the Sun, with the zero point of longitude and latitude pointing directly at the galactic centre."
+      "definition": "A spherical coordinate system centred on the Sun with the galactic plane as the reference. Galactic longitude $l$ is measured from the galactic centre and galactic latitude $b$ from the galactic plane:\n\n$$b = \\arcsin(\\sin\\delta_0 \\sin\\delta + \\cos\\delta_0 \\cos\\delta \\cos(\\alpha - \\alpha_0))$$\n\nwhere $\\alpha, \\delta$ are right ascension and declination and $\\alpha_0, \\delta_0$ are the coordinates of the galactic north pole."
     },
     {
       "word": "galactic disk",
@@ -71836,7 +71836,7 @@
       "synonyms": [
         "voltaic cell"
       ],
-      "definition": "An electrochemical cell that uses an irreversible spontaneous chemical reaction to generate electricity and hence cannot be recharged. It generally consists of two different metals connected by a salt bridge or individual half-cells separated by a porous membrane."
+      "definition": "An electrochemical cell that converts chemical energy into electrical energy via spontaneous redox reactions. The electromotive force (EMF) is given by the Nernst equation:\n\n$$E = E^\\circ - \\frac{RT}{nF}\\ln Q$$\n\nwhere $E^\\circ$ is the standard EMF, $R$ is the gas constant, $T$ is temperature, $n$ is the number of electrons transferred, $F$ is Faraday's constant, and $Q$ is the reaction quotient."
     },
     {
       "word": "galvanisation",
@@ -72607,7 +72607,7 @@
       "synonyms": [
         "gaussian pivoting"
       ],
-      "definition": "A method for solving a set of linear equations in many unknown variables. It is usually carried out by the use of elementary row operations to the augmented matrix."
+      "definition": "A systematic method for solving systems of linear equations by row-reducing an augmented matrix $[A|b]$ to upper-triangular form, then back-substituting:\n\n$$\\begin{pmatrix} a_{11} & a_{12} & \\cdots \\\\ 0 & a_{22} & \\cdots \\\\ 0 & 0 & \\cdots \\end{pmatrix} \\mathbf{x} = \\mathbf{b}$$\n\nComplexity: $O(n^3)$ for an $n \\times n$ system. Forms the basis of LU decomposition."
     },
     {
       "word": "gaussian field",
@@ -73794,7 +73794,7 @@
       "synonyms": [
         "geostationary earth orbit-geo"
       ],
-      "definition": "A geosynchronous orbit directly above the Earth's equator (0° latitude), from west to east at an altitude of approximately 35,900 kilometres and at a speed matching that of Earth's rotation, thus remaining stationary in relation to Earth. Communication satellites and weather satellites are often given geostationary orbits, so that the satellite antennas that communicate with them do not have to move to track them, but can be pointed permanently at the position in the sky where they stay. Due to the constant 0° latitude and circularity of geostationary orbits, satellites in GEO differ in location by longitude only."
+      "definition": "A circular orbit at altitude $h$ above the equator where the orbital period equals Earth's rotation period ($T = 24\\,\\text{h}$). Radius from Earth's centre:\n\n$$r = \\left(\\frac{GM_E T^2}{4\\pi^2}\\right)^{1/3} \\approx 42{,}164\\,\\text{km}$$\n\nSatellites here appear stationary relative to Earth's surface. Used for weather and communications satellites."
     },
     {
       "word": "geostatistics",
@@ -74091,7 +74091,7 @@
       "synonyms": [
         "gibbs function"
       ],
-      "definition": "Denoted by G , it is a measure of the energy that would be liberated or absorbed during a reversible process or a measure of the capacity of a system to do work, such as the likelihood of a particular chemical reaction to form products. It is expressed as G=H-TS , where H is heat content, T is thermodynamic temperature and S is entropy."
+      "definition": "A thermodynamic potential determining spontaneity of reactions at constant temperature and pressure:\n\n$$G = H - TS$$\n\n$$\\Delta G = \\Delta H - T\\Delta S$$\n\nA reaction is spontaneous when $\\Delta G < 0$. At equilibrium $\\Delta G = 0$. Related to the equilibrium constant: $\\Delta G^\\circ = -RT\\ln K$."
     },
     {
       "word": "gibbs paradox",
@@ -75673,7 +75673,7 @@
       "word": "gradient",
       "raw_headword": "GRADIENT",
       "synonyms": [],
-      "definition": "1. In mathematics, often denoted grad , it is the slope of a straight or curved line at any given point, represented by the slope of the tangent at that point. In Cartesian coordinates, a straight line, y = mx + c , has a gradient m , which is given by m = y 1 - y 2 x 1 - x 2 = Δ y Δ x = tan θ , or m = y 2 - y 1 x 2 - x 1 = Δ y Δ x = tan θ , where θ is the angle the line makes with the x axis (horizontal axis). For a curve, y = f ( x ) , the gradient at a point is the derivative dy / dx at that point, i.e. the slope of the tangent to the curve at that point. For a curve, y = f ( x ) , the gradient at a point is the derivative dy / dx at that point, i.e. the slope of the tangent to the curve at that point. 2. The vector whose components parallel to each coordinate axis are the partial derivatives of a given function with respect to the variable mapped on that axis and whose direction is that in which the derivative of the function has its maximum value. In other words, the gradient of a function f on the set of real numbers R n is defined as the vector field . 2. In physics, it is the rate at which a physical quantity, such as temperature or pressure, increases or decreases relative to change in a given variable, especially distance. 3. In biology, it is a series of progressively increasing or decreasing differences in the growth rate, metabolism or physiological activity of a cell organ or organism. B C intercept CYXAY=mx + c Gradient ∆X ∆Y ∆Y ∆X AC BC Gradient 'm' = = θ (x 1 ,y 1 ) (x 2 ,y 2 ) x 1 x 2."
+      "definition": "The vector operator giving the direction and rate of greatest increase of a scalar field $f$:\n\n$$\\nabla f = \\frac{\\partial f}{\\partial x}\\hat{i} + \\frac{\\partial f}{\\partial y}\\hat{j} + \\frac{\\partial f}{\\partial z}\\hat{k}$$\n\nThe magnitude $|\\nabla f|$ gives the maximum rate of change; the direction is perpendicular to level surfaces of $f$."
     },
     {
       "word": "gradient elution",
@@ -76278,7 +76278,7 @@
       "word": "gravitational field strength",
       "raw_headword": "GRAVITATIONAL FIELD STRENGTH",
       "synonyms": [],
-      "definition": "The strength of the Earth's gravitational field at a particular point, defined as the gravitational force in Newton that acts on a mass of one kilogram. Its symbol is g . The gravitational field strength of the Earth is equal to the acceleration of free fall at its surface, with a value of 9.81ms -2 . It is expressed as gravitational force per unit mass on a point mass: g = Fg /m."
+      "definition": "The force per unit mass exerted on a test mass in a gravitational field. Near a mass $M$ at distance $r$:\n\n$$g = \\frac{GM}{r^2}$$\n\nUnits: $\\text{N kg}^{-1}$ or $\\text{m s}^{-2}$. At Earth's surface, $g \\approx 9.81\\,\\text{m s}^{-2}$. Equivalent to gravitational acceleration."
     },
     {
       "word": "gravitational instability",
@@ -76318,7 +76318,7 @@
       "synonyms": [
         "gravitational energy"
       ],
-      "definition": "Energy an object possesses because of its height in a gravitational field above Earth."
+      "definition": "The energy stored by a mass $m$ in a gravitational field at height $h$ (near Earth's surface):\n\n$$E_p = mgh$$\n\nFor large separations from a central mass $M$ at distance $r$:\n\n$$E_p = -\\frac{GMm}{r}$$\n\nThe zero reference point is at infinity. Near Earth's surface, $g = 9.81\\,\\text{m s}^{-2}$ is taken as constant."
     },
     {
       "word": "gravitational red shift",
@@ -76581,7 +76581,7 @@
       "word": "green's theorem",
       "raw_headword": "GREEN'S THEOREM",
       "synonyms": [],
-      "definition": "1. Named after George Green (1793-1841), English mathematician, it is the relationship between a line integral around a simple closed curve C and a double integral over the plane region D enclosed by C. If P and Q have continuous first order partial derivatives on D then, P dx + Q dy c ∫ = ∂ Q ∂ x -∂ P ∂ y ⎛ ⎝ ⎜⎜⎜⎜ ⎞ ⎠ ⎟⎟⎟⎟ D ∫∫ dA. 2. The two- dimensional special case of the more general Kelvin-Stokes theorem that ( f dx + g dy) ∂ Ω ∫ = ∂ f ∂ y Ω ∫∫ dA, when f and g are continuously differentiable on a planar region containing a set n with reasonable boundary. The case where f =- y , g = x gives a useful formula for the area of Ω. There are various corresponding Greens identities involving the Laplacian."
+      "definition": "Relates a line integral around a closed curve $C$ to a double integral over the region $D$ it encloses:\n\n$$\\oint_C (P\\,dx + Q\\,dy) = \\iint_D \\left(\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y}\\right)dA$$\n\nA special case of Stokes' theorem in two dimensions. Used in calculating area and flux in 2D fields."
     },
     {
       "word": "greenfly",
@@ -77659,7 +77659,7 @@
       "synonyms": [
         "haber-bosch process"
       ],
-      "definition": "An industrial process developed by German chemist and Nobel laureate Fritz Haber, for manufacturing ammonia economically from nitrogen and hydrogen by direct combination of its elements, nitrogen and hydrogen. The hydrogen is obtained from seawater by passing an electric current through the water. The reaction process can be represented by N2(g) + 3H2(g) 2NH3(g) ."
+      "definition": "Industrial synthesis of ammonia from nitrogen and hydrogen:\n\n$$\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g) \\quad \\Delta H = -92\\,\\text{kJ mol}^{-1}$$\n\nConditions: iron catalyst, 400–500°C, 150–300 atm pressure. Yield is a compromise between thermodynamic favourability (low $T$) and kinetic feasibility (high $T$). Basis of nitrogen-based fertiliser production."
     },
     {
       "word": "habit",
@@ -77754,7 +77754,7 @@
       "word": "hadamard inequality",
       "raw_headword": "HADAMARD INEQUALITY",
       "synonyms": [],
-      "definition": "1. The inequality that the determinant of a positive definite matrix is not greater than the product of the diagonal entries of the matrix. 2. The inequality that the determinant of a square matrix is no greater than the product of the Euclidean norms of each row in the matrix."
+      "definition": "An upper bound on the absolute value of a matrix determinant in terms of its column (or row) vectors $\\mathbf{v}_1, \\ldots, \\mathbf{v}_n$:\n\n$$|\\det A| \\leq \\prod_{j=1}^{n}\\|\\mathbf{v}_j\\|$$\n\nEquality holds if and only if the columns are mutually orthogonal. Provides geometric intuition: the determinant (volume of parallelepiped) is maximised when column vectors are orthogonal."
     },
     {
       "word": "hadamard matrix",
@@ -78190,7 +78190,7 @@
         "half life",
         "t1"
       ],
-      "definition": "The time required for half of a sample of a radioactive isotope to break down by radioactive decay to form a daughter isotope. Also, for a drug, it is the time it takes for the concentration of the drug in the plasma or the total amount in the body to be reduced by 50%."
+      "definition": "The time required for half of a radioactive sample to decay, or for a reactant concentration to fall to half its initial value:\n\n$$t_{1/2} = \\frac{\\ln 2}{\\lambda} \\approx \\frac{0.693}{\\lambda}$$\n\nFor a first-order reaction: $t_{1/2} = \\ln 2 / k$ (independent of initial concentration). For a second-order reaction: $t_{1/2} = 1/(k[A]_0)$."
     },
     {
       "word": "half-line",
@@ -79060,13 +79060,13 @@
         "simple harmonic motion",
         "shm"
       ],
-      "definition": "A periodic motion that is neither driven nor damped. An object in simple harmonic motion experiences a net force which obeys Hooke′s law (the force is directly proportional to the displacement from the equilibrium position and acts in the opposite direction of the displacement)."
+      "definition": "Oscillatory motion described by a sinusoidal function of time:\n\n$$x(t) = A\\cos(\\omega t + \\phi)$$\n\nwhere $A$ is amplitude, $\\omega = 2\\pi f$ is angular frequency, and $\\phi$ is the phase. The restoring force obeys Hooke's law: $F = -kx$. Period $T = 2\\pi/\\omega = 2\\pi\\sqrt{m/k}$."
     },
     {
       "word": "harmonic oscillator",
       "raw_headword": "HARMONIC OSCILLATOR",
       "synonyms": [],
-      "definition": "A system that oscillates with simple harmonic motion or when displaced from its equilibrium position, experiences a restoring force, proportional to the displacement. The harmonic oscillator is exactly solvable in both classical mechanics and quantum mechanics. An example of this in classical mechanics is a simple pendulum whose atoms vibrate about their mean positions in molecules or crystal lattices when at low temperatures."
+      "definition": "A system experiencing a restoring force proportional to displacement ($F = -kx$), producing simple harmonic motion. Quantum mechanical energy levels:\n\n$$E_n = \\left(n + \\frac{1}{2}\\right)\\hbar\\omega, \\quad n = 0, 1, 2, \\ldots$$\n\nClassical: $\\omega = \\sqrt{k/m}$. The zero-point energy $E_0 = \\hbar\\omega/2$ is a purely quantum effect."
     },
     {
       "word": "harmonic pencil",
@@ -79556,7 +79556,7 @@
       "word": "heat of combustion",
       "raw_headword": "HEAT OF COMBUSTION",
       "synonyms": [],
-      "definition": "The heat energy released when one mole of a substance is completely burnt in excess oxygen or oxidised at constant volume under standard conditions. It may be expressed as energy/mole of fuel (J/mol), energy/mass of fuel or energy/volume of fuel. It is the heat energy released when one mole of a substance is completely burnt in excess of oxygen. Its value determines the calorific values of fuel and the enthalpy of formation of substances from their oxidation products."
+      "definition": "The enthalpy change when one mole of a substance undergoes complete combustion under standard conditions:\n\n$$\\Delta_c H^\\circ = \\sum \\Delta_f H^\\circ(\\text{products}) - \\sum \\Delta_f H^\\circ(\\text{reactants})$$\n\nMeasured by bomb calorimetry. Example for methane: $\\text{CH}_4 + 2\\text{O}_2 \\to \\text{CO}_2 + 2\\text{H}_2\\text{O}$, $\\Delta H = -890\\,\\text{kJ mol}^{-1}$."
     },
     {
       "word": "heat of condensation",
@@ -79574,7 +79574,7 @@
       "word": "heat of formation",
       "raw_headword": "HEAT OF FORMATION",
       "synonyms": [],
-      "definition": "The energy liberated or absorbed when one mole of a compound is formed from its constituent elements at standard conditions. In other words, it is the enthalpy change when one mole of a compound is formed from its elements in their standard state."
+      "definition": "Standard enthalpy of formation $\\Delta_f H^\\circ$: the enthalpy change when one mole of a compound is formed from its elements in their standard states at 298 K and 1 bar:\n\n$$\\Delta_r H^\\circ = \\sum \\Delta_f H^\\circ(\\text{products}) - \\sum \\Delta_f H^\\circ(\\text{reactants})$$\n\n(Hess's Law). By convention, $\\Delta_f H^\\circ$ of any element in its standard state = 0."
     },
     {
       "word": "heat of fusion",
@@ -79918,7 +79918,7 @@
       "word": "heisenberg uncertainty principle",
       "raw_headword": "HEISENBERG UNCERTAINTY PRINCIPLE",
       "synonyms": [],
-      "definition": "A fundamental principle in quantum mechanics stating that the position and momentum of a particle cannot both be simultaneously known with arbitrary precision: delta x * delta p >= hbar / 2."
+      "definition": "A fundamental quantum limit on the precision with which conjugate variables can be simultaneously known:\n\n$$\\Delta x \\cdot \\Delta p \\geq \\frac{\\hbar}{2}$$\n\nFor energy and time: $\\Delta E \\cdot \\Delta t \\geq \\hbar/2$. Where $\\hbar = h/(2\\pi)$ is the reduced Planck constant. Not a measurement limitation but a fundamental property of quantum systems."
     },
     {
       "word": "helical thickening",
@@ -84166,13 +84166,13 @@
       "word": "hyperbola",
       "raw_headword": "HYPERBOLA",
       "synonyms": [],
-      "definition": "The set of all points in a plane such that for equal point of the set, the absolute value of the difference of the distances to two fixed points, called the foci in the plane is constant. For example, if P is a point on the curve, then PF1 - PF2 = k , where k is a constant and F1 and F2 are the foci. It is an open curve formed by cutting a circular cone with a plane so that the angle between the plane and the base is greater than the angle between the base and the side of the cone. In other words, it is an open curve that has no ends and has two separate curves in mirror image. Its graph is symmetrical with respect to both coordinate axes and the origin and has no y -intercepts. A hyperbola with foci F1 (- c , 0) and F2 ( c , 0) and difference of focal H radii 2 a has equations of the form, x 2 a 2 - y 2 b 2 = 1, where b 2 = c 2 - a 2 . The equations of its asymptotes are y = ± b a x . If the foci are on the y -axis at F1 (0, - c ) and F2 (0, c ), the equations of the hyperbola is of the form y 2 a 2 - x 2 b 2 = 1, where b 2 = c 2 - a 2 and the asymptotes are y = ± a b x . There are hyperbolas that are not symmetric to the x and y axes, for example, the equation of the form xy = k ; k ≠ 0 is a hyperbola symmetric to the lines y = - x and also y = x . In this case, xy = c 2 and the asymptotes are perpendicular and the coordinate axes are the asymptotes. The directrices (plural of directrix) of a hyperbola are two parallel lines which are perpendicular to the major axis of a hyperbola. The directrices are between the two parts of a hyperbola and can be used to define it as the locus of points such that the ratio of the distance to the nearer focus to the distance to the nearer directrix equals a constant, called eccentricity that is greater than one. The asymptote of a curve is a line such that the distance between the curve and the line approaches zero as they tend to infinity. The asymptotes are the boundaries of a hyperbola and are used as guidelines in sketching the graph of a hyperbola. The conjugate axis (the minor axis, indicated by y in the diagram) of a hyperbola is the axis perpendicular to the transverse axis at a point equidistant from the foci; it passes through the centre of the hyperbola and is perpendicular to the transverse axis. The segment of this axis is equal to one side of a rectangle that has its other side equal to the transverse axis and diagonals that are along the asymptotes of the hyperbola. The transverse axis (the major axis, indicated by x in the diagram) of a hyperbola is the axis along the direction the hyperbola opens or the axis that passes through the two foci. The vertices are points of intersection of the hyperbola and the transverse axis. F1 (focus) Transverse axis F2 (focus) vertex Asymtote Asymtote y x A."
+      "definition": "A conic section defined as the locus of points where the difference of distances from two foci $F_1$ and $F_2$ is constant:\n\n$$|PF_1 - PF_2| = 2a$$\n\nStandard form: $\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$ where $c^2 = a^2 + b^2$. Asymptotes: $y = \\pm (b/a)x$. Eccentricity $e = c/a > 1$."
     },
     {
       "word": "hyperbolic functions",
       "raw_headword": "HYPERBOLIC FUNCTIONS",
       "synonyms": [],
-      "definition": "A set of functions, sinh , cosh , and tanh , that have similar properties to trigonometric functions but are related to the hyperbola in the manner that trigonometric functions are also related to the circle. For an angle x , the hyperbolic functions are defined as: sinh x = ½( e x - e -x ); cosh x = ½( e x + e -x ); tanh x = ( e x - e - x ) ( e x + e - x ) ."
+      "definition": "Analogues of trigonometric functions defined via exponentials:\n\n$$\\sinh x = \\frac{e^x - e^{-x}}{2}, \\quad \\cosh x = \\frac{e^x + e^{-x}}{2}, \\quad \\tanh x = \\frac{\\sinh x}{\\cosh x}$$\n\nIdentity: $\\cosh^2 x - \\sinh^2 x = 1$. Arise in solutions to differential equations and describe the shape of a hanging cable (catenary)."
     },
     {
       "word": "hyperbolic geometry",
@@ -84732,7 +84732,7 @@
       "word": "hypothesis testing",
       "raw_headword": "HYPOTHESIS TESTING",
       "synonyms": [],
-      "definition": "A general term for the procedure of accessing whether sample data is consistent or otherwise with statements made about the population."
+      "definition": "Statistical procedure to decide between a null hypothesis $H_0$ and alternative $H_1$ based on sample data:\n\n$$z = \\frac{\\bar{X} - \\mu_0}{\\sigma/\\sqrt{n}}$$\n\nReject $H_0$ if the test statistic falls in the critical region (p-value $< \\alpha$). Type I error: rejecting a true $H_0$ (probability $\\alpha$). Type II error: failing to reject a false $H_0$ (probability $\\beta$)."
     },
     {
       "word": "hypothetical syllogism",
@@ -85683,7 +85683,7 @@
       "word": "impedance",
       "raw_headword": "IMPEDANCE",
       "synonyms": [],
-      "definition": "A measure of the opposition of a circuit to the passage of alternating current, which determines the amplitude of the current. Its symbol is Z . In a d.c. circuit this is the resistance ( R ) alone. In an a.c. circuit, however, Z2 = R2 + ( X L - X c ) 2 , where Z is impedance, R is the resistance, X c is the capacitive reactance and X L is the inductive reactance."
+      "definition": "The total opposition to alternating current flow in a circuit, combining resistance $R$ and reactance $X$:\n\n$$Z = \\sqrt{R^2 + X^2}, \\quad \\text{or in complex form: } Z = R + jX$$\n\nFor capacitive reactance: $X_C = 1/(\\omega C)$. For inductive reactance: $X_L = \\omega L$. Ohm's law in AC circuits: $V = IZ$. Units: ohms ($\\Omega$)."
     },
     {
       "word": "impedance matching",
@@ -87151,7 +87151,7 @@
       "word": "infinite series",
       "raw_headword": "INFINITE SERIES",
       "synonyms": [],
-      "definition": "A series of numbers consisting of infinite sequence of terms. An infinite series is a sum with infinitely many terms, for example, An infinite series that results in a finite sum is known as convergent series ."
+      "definition": "The sum of infinitely many terms of a sequence $\\{a_n\\}$:\n\n$$S = \\sum_{n=1}^{\\infty} a_n = \\lim_{N\\to\\infty}\\sum_{n=1}^N a_n$$\n\nConverges if the limit exists and is finite. Geometric series: $\\sum_{n=0}^{\\infty} ar^n = a/(1-r)$ for $|r| < 1$. Convergence tested by ratio, root, integral, or comparison tests."
     },
     {
       "word": "infinite set",
@@ -88117,7 +88117,7 @@
       "word": "instantaneous velocity",
       "raw_headword": "INSTANTANEOUS VELOCITY",
       "synonyms": [],
-      "definition": "For a body moving with varying velocities, it is the velocity at a particular instance of time."
+      "definition": "The rate of change of position at a specific instant in time — the derivative of displacement:\n\n$$v = \\lim_{\\Delta t \\to 0}\\frac{\\Delta x}{\\Delta t} = \\frac{dx}{dt}$$\n\nContrasted with average velocity $\\bar{v} = \\Delta x / \\Delta t$. Represents the slope of the position-time graph at a given point."
     },
     {
       "word": "instantiation",
@@ -88683,7 +88683,7 @@
       "word": "interference",
       "raw_headword": "INTERFERENCE",
       "synonyms": [],
-      "definition": "1. A systematic error in the measure of a signal caused by the presence of concomitants in a sample. 2. The superimpositioning of two waves of equal frequency or amplitude to form a new wave pattern. When waves reinforce, it is called constructive interference and when they cancel out, it is called destructive interference . Constructive interference occurs if two components have the same frequency and phase and the wave amplitudes are reinforced. Destructive interference occurs when the two waves are out of phase by one-half period; if the waves are of equal amplitude, they cancel each other. Two waves moving in the same direction but having slightly different frequencies interfere constructively at regular intervals, resulting in a pulsating frequency called a beat . Two waves travelling in opposite directions but having equal frequencies interfere constructively in some places and destructively in others, resulting in a standing wave ."
+      "definition": "The superposition of two or more waves leading to constructive or destructive combinations:\n\n$$\\text{Constructive: } \\Delta = m\\lambda \\quad (m = 0, \\pm1, \\pm2, \\ldots)$$\n$$\\text{Destructive: } \\Delta = (m + \\tfrac{1}{2})\\lambda$$\n\nwhere $\\Delta$ is path difference. Young's double-slit fringe spacing: $y = \\lambda D/d$, where $D$ is screen distance and $d$ is slit separation."
     },
     {
       "word": "interference fringe",
@@ -88930,7 +88930,7 @@
       "synonyms": [
         "thermodynamic energy"
       ],
-      "definition": "The sum of both the kinetic and potential energies of the particles (i.e. atoms or molecules) in a matter sample or the energy that substances contain in the form of the kinetic energy of their atoms and molecules and of the potential energy in their bonds. The symbol is U . It does not include the kinetic and potential energies of the system as a whole or their nuclear energies."
+      "definition": "The total microscopic energy of a system — kinetic energy of molecules plus potential energy of molecular interactions:\n\n$$\\Delta U = Q - W$$\n\n(First Law of Thermodynamics), where $Q$ is heat added to the system and $W$ is work done by the system. For an ideal monatomic gas: $U = \\frac{3}{2}nRT$."
     },
     {
       "word": "internal energy density",
@@ -89456,7 +89456,7 @@
       "synonyms": [
         "confidence interval"
       ],
-      "definition": "In statistics, it is the the probability that the true value of a population parameter will fall within an upper and lower bound of a probability distribution. For example, if [ F , G ] is a 95% confidence interval of some parameter and F and G are both functions of a random sample from the given distribution, then 95% of such samples yield intervals that include the true value of the parameter. In other words, if the same sampling method is used to select different samples and an interval estimate for each sample is computed, one would expect the true population parameter to fall within the interval estimates 95% of the time. It is used to express the degree of uncertainty associated with a sample statistic."
+      "definition": "A range of values $[\\hat{\\theta}_L, \\hat{\\theta}_U]$ likely to contain the true population parameter, characterised by confidence level $1-\\alpha$:\n\n$$\\bar{x} \\pm z_{\\alpha/2}\\frac{\\sigma}{\\sqrt{n}} \\quad \\text{(confidence interval for mean)}$$\n\nA 95% CI means that in repeated sampling, 95% of such intervals will contain the true parameter. Wider intervals give higher confidence but less precision."
     },
     {
       "word": "interval graph",
@@ -89649,7 +89649,7 @@
         "undoped semiconductor",
         "i-type semiconductor"
       ],
-      "definition": "A pure semiconductor without any significant dopant species present. It is an undoped semiconductor, meaning that holes in the vane band are vacancies created by electrons that have been thermally excited to the conduction band. Thus, the number of charge carriers is determined by the properties of the material itself instead o the amount of purities. On the other hand, doped semiconductors refer to a situation where holes or electrons are supplied by a foreign atom acting as an impurity."
+      "definition": "A pure semiconductor in which charge carriers are generated thermally. Carrier concentration $n_i$:\n\n$$n_i = \\sqrt{N_c N_v}\\exp\\!\\left(-\\frac{E_g}{2k_BT}\\right)$$\n\nwhere $N_c$, $N_v$ are effective densities of states in the conduction and valence bands, $E_g$ is the band gap, $k_B$ is Boltzmann's constant. Equal numbers of electrons and holes: $n = p = n_i$."
     },
     {
       "word": "introduced species",
@@ -89855,7 +89855,7 @@
       "word": "inverse function",
       "raw_headword": "INVERSE FUNCTION",
       "synonyms": [],
-      "definition": "In mathematics, if y = f ( x ) and a function can be found such that x = g ( y ), then g ( x ) is said to be the inverse function of f ( x ). Also, if the function is trigonometrical and of angle h , i.e. y = sin h , then h is the inverse trigonometrical function of y ."
+      "definition": "A function $f^{-1}$ that reverses the action of $f$. If $f: A \\to B$ is bijective, then:\n\n$$f^{-1}(y) = x \\iff f(x) = y$$\n\n$(f^{-1} \\circ f)(x) = x$ and $(f \\circ f^{-1})(y) = y$. The graph of $f^{-1}$ is the reflection of the graph of $f$ about the line $y = x$. Example: $\\ln x$ is the inverse of $e^x$."
     },
     {
       "word": "inverse function theorem",
@@ -90729,7 +90729,7 @@
         "radiant emittance",
         "radiant exitance"
       ],
-      "definition": "The radiant flux per unit area of electromagnetic radiation reaching a surface. It is a radiometry term for the power per unit area at a surface. Its SI unit is watts per square metre (W/m2 ). Its symbol is E."
+      "definition": "The radiant flux (power) received per unit area of a surface, from all directions in a hemisphere:\n\n$$E = \\frac{d\\Phi}{dA}$$\n\nSI unit: W·m⁻². Also called intensity in optics. For a point source of power $P$ at distance $r$: $E = P/(4\\pi r^2)$ (follows the inverse square law)."
     },
     {
       "word": "irradiation",
@@ -90875,7 +90875,7 @@
       "word": "isentropic process",
       "raw_headword": "ISENTROPIC PROCESS",
       "synonyms": [],
-      "definition": "Any process that takes place without any increase or decrease of entropy."
+      "definition": "A reversible adiabatic process in which entropy remains constant ($\\Delta S = 0$). For an ideal gas:\n\n$$PV^\\gamma = \\text{constant}, \\quad TV^{\\gamma-1} = \\text{constant}, \\quad TP^{(1-\\gamma)/\\gamma} = \\text{constant}$$\n\nwhere $\\gamma = C_p/C_v$ is the adiabatic index. Describes processes in compressors, turbines, and nozzles."
     },
     {
       "word": "isidium",
@@ -91261,7 +91261,7 @@
       "word": "isomerism",
       "raw_headword": "ISOMERISM",
       "synonyms": [],
-      "definition": "1. The existence of two or more nuclides that have the same atomic number and the same mass number but different energy states. 2. The existence of two or more substances that have the same molecular formula but different structural formulae or different arrangement of atoms in space. The different types of isomers include structural isomers (ethanol and methoxymethane), cis-trans isomers (trans-but^-2-ene and cis-but^-2-ene), etc. Other isomers include meri-isomers and fac-isomer."
+      "definition": "The phenomenon where two or more compounds have the same molecular formula but different structural arrangements or spatial orientations:\n\n$$\\text{Structural (constitutional): different connectivity}$$\n$$\\text{Stereoisomerism: same connectivity, different 3D arrangement}$$\n\nFor enantiomers: optical rotation $+\\alpha$ and $-\\alpha$ (equal magnitude, opposite sign). Chiral centre (asymmetric carbon): four different substituents give $2^n$ possible stereoisomers for $n$ chiral centres."
     },
     {
       "word": "isomerous",
@@ -91420,7 +91420,7 @@
       "word": "isosceles triangle",
       "raw_headword": "ISOSCELES TRIANGLE",
       "synonyms": [],
-      "definition": "A triangle with two or at least two equal sides (as in the case of the equilateral triangle which has all three sides and angles equal). The angles opposite the equal sides are also equal. It has one line of symmetry."
+      "definition": "A triangle with two equal sides $a = b$. The base angles are equal:\n\n$$\\alpha = \\beta = \\frac{180^\\circ - \\gamma}{2}$$\n\nArea: $A = \\frac{a}{4}\\sqrt{4a^2 - b^2}$ where $b$ is the base. The perpendicular from the apex to the base bisects it (line of symmetry). A special case with $a = b = c$ is the equilateral triangle."
     },
     {
       "word": "isospin",
@@ -91496,7 +91496,7 @@
       "word": "isotope",
       "raw_headword": "ISOTOPE",
       "synonyms": [],
-      "definition": "A form of the same chemical element having the same number of protons but different number of neutrons in the atomic nucleus. For example, carbon 12 and carbon 14 are isotopes of carbon. They both have 6 protons but different number of neutrons. Carbon^-12 has 6 neutrons and carbon^-14 has 8 neutrons. Most chemical elements have several stable isotopes. For example, lithium has two stable isotopes, one with three neutrons in the nucleus ( 6 Li) and one with four ( 7 Li). Isotopes of a single element possess almost identical chemical properties but have very different nuclear properties. There are 275 isotopes of the 81 stable elements (non-radioactive), in addition to over 800 radioactive isotopes and every element has known isotopic forms. Radioisotopes or radionuclides are radioactive isotopes."
+      "definition": "Atoms of the same element (same proton number $Z$) but different mass numbers (different neutron numbers $N$):\n\n$$A = Z + N$$\n\nwhere $A$ is mass number, $Z$ is atomic (proton) number, $N$ is neutron number. Example: $^{12}$C, $^{13}$C, $^{14}$C all have $Z = 6$. Radioactive isotopes decay; stable isotopes do not."
     },
     {
       "word": "isotope dilution",
@@ -91712,7 +91712,7 @@
       "word": "iterated integral",
       "raw_headword": "ITERATED INTEGRAL",
       "synonyms": [],
-      "definition": "A repeated integral of the form that arises when evaluating a multiple integral by Fubini's theorem, dx a b ∫ dycd ∫ f ( x , y , z )dz, e f ∫ in which one first integrates with respect to z , then y then x , treating the remaining variables as parameters."
+      "definition": "A double (or multiple) integral computed by successive single integrations:\n\n$$\\iint_R f(x,y)\\,dA = \\int_a^b\\left(\\int_c^d f(x,y)\\,dy\\right)dx$$\n\nFubini's theorem guarantees the order of integration can be exchanged when $f$ is continuous on $R$. Used to compute volumes, masses, and moments of 2D and 3D regions."
     },
     {
       "word": "iterated series",
@@ -91724,7 +91724,7 @@
       "word": "iteration",
       "raw_headword": "ITERATION",
       "synonyms": [],
-      "definition": "1. The process of successive approximations, used as a technique for solving a mathematical problem. 2. The repetition of a sequence of instructions in a computer program until a result is achieved. Iterations of functions are common in computer programming, since they allow multiple blocks of data to be processed in sequence."
+      "definition": "A method for solving equations by repeatedly applying a formula to successive approximations. Newton's method:\n\n$$x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}$$\n\nConverges quadratically to a root of $f(x) = 0$ near the initial guess. The fixed-point iteration $x_{n+1} = g(x_n)$ converges when $|g'(x)| < 1$ near the solution."
     },
     {
       "word": "iteroparity",
@@ -92046,13 +92046,13 @@
       "word": "jeans length",
       "raw_headword": "JEANS LENGTH",
       "synonyms": [],
-      "definition": "The critical size of a gas cloud, of a given temperature and density, above which the cloud must collapse under its own gravity. Below this size, the cloud's internal pressure is enough to resist collapse."
+      "definition": "In astrophysics and stellar dynamics, the critical spatial radius $\\lambda_J$ (or $R_J$) of an interstellar gas cloud above which thermal gas pressure cannot support the cloud against gravitational collapse:\n\n$$\\lambda_J = \\sqrt{\\frac{\\pi c_s^2}{G \\rho_0}} = \\sqrt{\\frac{\\pi \\gamma k_B T}{G \\mu m_H \\rho_0}}$$\n\nwhere $c_s = \\sqrt{\\frac{\\gamma k_B T}{\\mu m_H}}$ is the isothermal sound speed, $G \\approx 6.674 \\times 10^{-11}\\ \\text{m}^3\\text{kg}^{-1}\\text{s}^{-2}$ is the gravitational constant, $\\rho_0$ is mass density, and $T$ is temperature in kelvins. Clouds of size $R > \\lambda_J$ undergo spontaneous gravitational collapse to trigger star formation."
     },
     {
       "word": "jeans mass",
       "raw_headword": "JEANS MASS",
       "synonyms": [],
-      "definition": "The critical mass a volume of space must contain before it will collapse under the force of its own gravity."
+      "definition": "In theoretical astrophysics, the minimum mass $M_J$ that an interstellar cloud of gas and dust must possess to initiate runaway gravitational collapse into protostars:\n\n$$M_J = \\frac{4\\pi}{3} \\rho_0 \\left(\\frac{\\lambda_J}{2}\\right)^3 = \\frac{\\pi}{6} \\left(\\frac{\\pi k_B T}{G \\mu m_H}\\right)^{3/2} \\rho_0^{-1/2}$$\n\nwhere $\\rho_0$ is ambient density, $T$ is cloud temperature, $\\mu$ is mean molecular weight, and $G$ is the gravitational constant. When cloud mass $M > M_J$, gravitational potential energy overcomes internal thermal kinetic energy (virial criterion $|2K| < |U|$)."
     },
     {
       "word": "jejunum",
@@ -92134,13 +92134,13 @@
       "word": "johnson's theorem",
       "raw_headword": "JOHNSON'S THEOREM",
       "synonyms": [],
-      "definition": "It states that if three congruent circles all intersect in a single point, then the other three points of intersection will lie on another circle of the same radius."
+      "definition": "In classical Euclidean geometry, an elegant circle theorem proven by Roger Arthur Johnson in 1916. It states that if three congruent circles of equal radius $r$ all intersect at a common central point $H$, then the three other pairwise intersection points between the circles lie on a fourth circle whose radius is also exactly $r$:\n\n$$\\text{Radius}(C_1) = \\text{Radius}(C_2) = \\text{Radius}(C_3) = r, \\quad C_1 \\cap C_2 \\cap C_3 = \\{H\\} \\implies \\text{Radius}(C_{\\text{intersections}}) = r$$\n\nThe orthocenter of the triangle formed by the three intersection points coincides with the original intersection point $H$."
     },
     {
       "word": "join",
       "raw_headword": "JOIN",
       "synonyms": [],
-      "definition": "In mathematics, in a partially ordered set, the join of a subset is the supremum of the subset. Given a pair of elements x and y their join, denoted x V y , is the element m such that m ≥ x , m ≥ y and there is no n < m that has the same relations to x and y ."
+      "definition": "In lattice theory, order theory, and discrete mathematics, the binary algebraic operation $\\vee$ that assigns to any pair of elements $a, b$ in a partially ordered set $(P, \\le)$ their least upper bound (supremum):\n\n$$a \\vee b = \\sup\\{a, b\\}, \\quad \\text{where } a \\le a \\vee b, \\ b \\le a \\vee b, \\text{ and } (a \\le c \\wedge b \\le c) \\implies a \\vee b \\le c$$\n\nFor an arbitrary subset $S \\subseteq P$, the join is denoted $\\bigvee S = \\sup(S)$. Dual to the meet operation ($\\wedge = \\inf$)."
     },
     {
       "word": "join problems",
@@ -92188,13 +92188,13 @@
       "word": "joint probability function",
       "raw_headword": "JOINT PROBABILITY FUNCTION",
       "synonyms": [],
-      "definition": "A function that gives the probability that each of two or more random variables take a particular value."
+      "definition": "In multivariate probability theory and statistics, the function $f_{X,Y}(x, y)$ that assigns probabilities to the simultaneous realization of two or more discrete random variables $X$ and $Y$:\n\n$$P(X = x, Y = y) = p_{X,Y}(x, y), \\quad \\text{where } \\sum_{x} \\sum_{y} p_{X,Y}(x, y) = 1$$\n\nFor continuous random variables, the joint probability density function (PDF) satisfies $P(a \\le X \\le b, c \\le Y \\le d) = \\int_a^b \\int_c^d f_{X,Y}(x, y)\\,dy\\,dx$. Marginal probabilities are obtained by summation or integration: $f_X(x) = \\int_{-\\infty}^\\infty f_{X,Y}(x, y)\\,dy$."
     },
     {
       "word": "joint variation",
       "raw_headword": "JOINT VARIATION",
       "synonyms": [],
-      "definition": "A mathematical relationship which expresses how two or more variables vary with respect to another."
+      "definition": "In algebra and quantitative mathematics, a functional relationship where a dependent variable $z$ varies directly as the product of two or more independent variables $x$ and $y$:\n\n$$z = k \\cdot x^m y^n, \\quad k \\neq 0$$\n\nwhere $k$ is the non-zero constant of proportionality (variation constant). For example, Newton's second law ($F = ma$, $k=1$) and kinetic energy ($E_k = \\frac{1}{2}m v^2$, $k=\\frac{1}{2}$) represent joint variations."
     },
     {
       "word": "joliot-curie, irène",
@@ -92254,13 +92254,13 @@
       "word": "jordan curve theorem",
       "raw_headword": "JORDAN CURVE THEOREM",
       "synonyms": [],
-      "definition": "A theorem that every Jordan curve separates the plane into exactly two components: a bounded interior region (bounded by the curve) and an unbounded exterior region that contains all of the nearby and far away exterior points, so that any continuous path connecting a point of one region to a point of the other intersects with that loop somewhere."
+      "definition": "In algebraic topology and plane geometry, a fundamental theorem proved by Camille Jordan (1887) and Oswald Veblen (1905). It asserts that every simple closed curve (homeomorphic to the circle $S^1$) $C \\subset \\mathbb{R}^2$ divides the Euclidean plane into exactly two connected components:\n\n$$\\mathbb{R}^2 \\setminus C = U_{\\text{int}} \\cup U_{\\text{ext}}, \\quad U_{\\text{int}} \\cap U_{\\text{ext}} = \\emptyset$$\n\nwhere $U_{\\text{int}}$ is bounded (the inside) and $U_{\\text{ext}}$ is unbounded (the outside), with the curve $C$ forming the common boundary of both domains: $\\partial U_{\\text{int}} = \\partial U_{\\text{ext}} = C$."
     },
     {
       "word": "jordan decomposition",
       "raw_headword": "JORDAN DECOMPOSITION",
       "synonyms": [],
-      "definition": "The Jordan decomposition of a signed measure is the expression of such a measure as the difference of two non-negative measures. Often these two measures are required to be mutually singular and then uniquely define the positive and negative parts of the signed measure."
+      "definition": "1. In measure theory, the Hahn-Jordan decomposition theorem representing any signed measure $\\mu$ uniquely as the difference of two mutually singular positive measures:\n\n$$\\mu = \\mu^+ - \\mu^-, \\quad \\mu^+ \\perp \\mu^-$$\n\nwhere $|\\mu| = \\mu^+ + \\mu^-$ is the total variation measure.\n2. In linear algebra, the decomposition of any square matrix $A \\in M_n(\\mathbb{C})$ uniquely into the sum of a diagonalizable (semisimple) matrix $S$ and a nilpotent matrix $N$ that commute: $A = S + N$ with $SN = NS$."
     },
     {
       "word": "jordan elimination",
@@ -92268,19 +92268,19 @@
       "synonyms": [
         "gauss-jordan elimination"
       ],
-      "definition": "A method of solving linear equations by row operations until an augmented matrix is transformed into a row echelon or reduced row-echelon form."
+      "definition": "In numerical linear algebra, the Gauss-Jordan elimination algorithm: an exact systematic procedure of elementary row operations transforming an augmented matrix $[A \\mid \\mathbf{b}]$ directly into reduced row echelon form (RREF) $[I \\mid \\mathbf{x}]$:\n\n$$[A \\mid \\mathbf{b}] \\xrightarrow{\\text{Elementary Row Operations}} [I_n \\mid A^{-1}\\mathbf{b}]$$\n\nUsed to solve linear systems $A\\mathbf{x} = \\mathbf{b}$ in $\\mathcal{O}(n^3)$ floating-point operations and to compute the exact matrix inverse via $[A \\mid I] \\to [I \\mid A^{-1}]$."
     },
     {
       "word": "jordan matrix",
       "raw_headword": "JORDAN MATRIX",
       "synonyms": [],
-      "definition": "A matrix whose diagonal elements are all equal and nonzero. Its elements above the principal diagonal are equal to 1, but all other elements are 0."
+      "definition": "In linear algebra and matrix analysis, an upper triangular square block matrix $J_k(\\lambda) \\in M_k(F)$ with a scalar eigenvalue $\\lambda$ along its main diagonal, ones along the first superdiagonal, and zeros elsewhere:\n\n$$J_k(\\lambda) = \\begin{pmatrix} \\lambda & 1 & 0 & \\cdots & 0 \\\\ 0 & \\lambda & 1 & \\cdots & 0 \\\\ \\vdots & \\vdots & \\ddots & \\ddots & \\vdots \\\\ 0 & 0 & \\cdots & \\lambda & 1 \\\\ 0 & 0 & \\cdots & 0 & \\lambda \\end{pmatrix}_{k \\times k}$$\n\nThe characteristic polynomial is $p(t) = (t - \\lambda)^k$ and the geometric multiplicity of $\\lambda$ in $J_k(\\lambda)$ is strictly 1."
     },
     {
       "word": "jordan normal form",
       "raw_headword": "JORDAN NORMAL FORM",
       "synonyms": [],
-      "definition": "Of a matrix, a matrix similar to a given one and expressible in block diagonal matrix form as diag[ J ( λ 1 ), ..., J ( λ k ), ..., J ( λ n )], where each J ( λ k ) is a Jordan block. This representation is unique up to permutation of the blocks. If the scalar field is not algebraically closed a more complicated form results. Over the reals it is necessary to introduce factors corresponding to (real) irreducible quadratic factors of the characteristic polynomial."
+      "definition": "In advanced linear algebra, a canonical matrix representation established by Camille Jordan. Every square matrix $A \\in M_n(\\mathbb{C})$ is similar to a block diagonal matrix $J$ composed of Jordan blocks $J_{k_i}(\\lambda_i)$:\n\n$$A = P J P^{-1}, \\quad J = \\begin{pmatrix} J_{k_1}(\\lambda_1) & 0 & \\cdots & 0 \\\\ 0 & J_{k_2}(\\lambda_2) & \\cdots & 0 \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ 0 & 0 & \\cdots & J_{k_m}(\\lambda_m) \\end{pmatrix}$$\n\nwhere $P$ is an invertible transition matrix formed by generalized eigenvectors $(A - \\lambda I)^k v = 0$. Provides the algebraic foundation for matrix exponentials $e^{At}$ in differential equations."
     },
     {
       "word": "jordan product",
@@ -92300,7 +92300,7 @@
       "word": "jordan-holder theorem",
       "raw_headword": "JORDAN-HOLDER THEOREM",
       "synonyms": [],
-      "definition": "The theorem that for any two composition series of a finite group, an isomorphism exists between the corresponding quotient groups of each series, taken in some specified order."
+      "definition": "In abstract group theory and module theory, a cornerstone theorem proven by Camille Jordan and Otto Hölder. It states that for any two composition series of a finite group $G$:\n\n$$\\{1\\} = G_0 \\triangleleft G_1 \\triangleleft \\dots \\triangleleft G_r = G \\quad \\text{and} \\quad \\{1\\} = H_0 \\triangleleft H_1 \\triangleleft \\dots \\triangleleft H_s = G$$\n\nthe series have equal length ($r = s$) and their simple factor groups (composition factors) are isomorphic up to permutation:\n\n$$\\{G_{i}/G_{i-1}\\}_{i=1}^r \\cong \\{H_{\\pi(i)}/H_{\\pi(i)-1}\\}_{i=1}^s$$\n\nProves that finite groups are uniquely composed of simple group building blocks."
     },
     {
       "word": "josephson junction",
@@ -92426,7 +92426,7 @@
       "word": "jump discontinuity",
       "raw_headword": "JUMP DISCONTINUITY",
       "synonyms": [],
-      "definition": "A point in a mathematical function where the left and right-hand limits exist but are not equal to each other."
+      "definition": "In mathematical analysis and calculus, a point $x = c$ in the domain of a piecewise continuous function $f(x)$ where both the one-sided left limit and right limit exist as finite numbers, but are not equal:\n\n$$\\lim_{x \\to c^-} f(x) = L^- \\neq \\lim_{x \\to c^+} f(x) = L^+, \\quad |L^+|, |L^-| < \\infty$$\n\nThe magnitude of the jump is defined as $\\Delta = |L^+ - L^-|$. Characteristic of step functions such as the Heaviside step function $H(x)$."
     },
     {
       "word": "jumper",
@@ -92781,7 +92781,7 @@
       "word": "katetov's interpolation theorem",
       "raw_headword": "KATETOV'S INTERPOLATION THEOREM",
       "synonyms": [],
-      "definition": "The result that if a lower semi-continuous real-valued function, f , majorises an upper semi-continuous real valued function, g , both with domain a normal topological space, then there is a continuous function, h , such that f ( x ) ≥ h ( x ) ≥ g ( x )."
+      "definition": "In general topology and functional analysis, a major theorem proved by Miroslav Katětov (1951). It states that if $X$ is a normal topological space and $g, f: X \\to \\mathbb{R}$ are functions such that $g$ is upper semi-continuous, $f$ is lower semi-continuous, and $g(x) \\le f(x)$ for all $x \\in X$, then there exists a continuous function $h \\in C(X)$ interpolating between them:\n\n$$g(x) \\le h(x) \\le f(x) \\quad \\forall x \\in X, \\quad h \\in C(X, \\mathbb{R})$$\n\nGeneralizes the classical Tietze extension theorem."
     },
     {
       "word": "katharometer",
@@ -92961,19 +92961,19 @@
       "word": "kerr effect",
       "raw_headword": "KERR EFFECT",
       "synonyms": [],
-      "definition": "1. The ability of certain transparent substances to refract differently light waves whose vibrations are in two directions when the substance is placed in an electric field. 2. The elliptical polarisation of plane-polarised or unpolarised light when reflected from the polished pole of a magnetised material."
+      "definition": "In non-linear optics and electro-optics, the quadratic electro-optic effect discovered by John Kerr (1875). A material subjected to an external static or optical electric field $E$ develops birefringence $\\Delta n = n_\\parallel - n_\\perp$ proportional to the square of the field strength:\n\n$$\\Delta n = \\lambda K E^2$$\n\nwhere $\\lambda$ is vacuum wavelength, $K$ is the Kerr electro-optic constant ($\\text{m}\\cdot\\text{V}^{-2}$), and $E$ is electric field intensity. In optical Kerr effect, the refractive index varies with light intensity $I$: $n(I) = n_0 + n_2 I$, driving optical solitons and Kerr-lens mode-locking in femtosecond lasers."
     },
     {
       "word": "ketals",
       "raw_headword": "KETALS",
       "synonyms": [],
-      "definition": "A type of acetal compound with the general structure R2 C(OR') 2 where neither of the R group is a hydrogen atom. It is an organic compound formed when two moles of alcohol react with the carboxyl carbon of a ketone. In other words, it is a functional group containing two alkyl groups and two alkoxy groups on one carbon atom; produced in the acid-catalysed alcoholysis of a ketone or a hemiketal. An example of a ketal compound is cyclohexanone diethyl ketal. The compound formed when one mole of alcohol reacts with the carbonyl carbon of a ketone is called hemiketal . Formation of a ketal 1st Mole Alcohol 2nd Mole Alcohol O R R OR' OR' + H2O RCRRR OH OR'' C C + R'OH + R''OH Ketone Hemiketal ketal K."
+      "definition": "In organic chemistry, a class of acetal functional groups derived from the condensation of a ketone with two equivalents of an alcohol (or one equivalent of a diol):\n\n$$R_2\\text{C}=\\text{O} + 2\\,R'\\text{OH} \\xrightleftharpoons{\\text{H}^+} R_2\\text{C}(\\text{OR}')_2 + \\text{H}_2\\text{O}$$\n\nwhere neither $R$ group is a hydrogen atom. Cyclic ketals formed with ethylene glycol are extensively used as protecting groups for carbonyl groups against nucleophilic attack and strong bases in multi-step organic synthesis."
     },
     {
       "word": "ketamine",
       "raw_headword": "KETAMINE",
       "synonyms": [],
-      "definition": "A white crystalline powder with the chemical formula C13 H16 ClNO and melting point 262 °C (535 K). It is used as anaesthetic in humans and veterinary medicine. It produces hallucinogenic effects and is used illegally in clubs."
+      "definition": "In pharmacology and medicinal chemistry, an arylcyclohexylamine dissociative anaesthetic with IUPAC name 2-(2-chlorophenyl)-2-(methylamino)cyclohexan-1-one and molecular formula $\\text{C}_{13}\\text{H}_{16}\\text{ClNO}$, molar mass $237.73\\ \\text{g/mol}$:\n\n$$\\text{C}_{13}\\text{H}_{16}\\text{ClNO}, \\quad \\text{Melting Point: } 262\\ ^\\circ\\text{C}\\ (535\\ \\text{K})$$\n\nActs as a non-competitive antagonist at the $N$-methyl-$D$-aspartate (NMDA) receptor, blocking the open $\\text{Ca}^{2+}$ channel pore to produce analgesia and rapid antidepressant effects."
     },
     {
       "word": "ketenes",
@@ -93448,7 +93448,7 @@
       "word": "kinetic activity factor",
       "raw_headword": "KINETIC ACTIVITY FACTOR",
       "synonyms": [],
-      "definition": "A factor involving activity coefficients that appears as a multiplier in the rate equation."
+      "definition": "In chemical kinetics and non-ideal solution thermodynamics, a correction factor $\\gamma^\\ddagger / (\\gamma_A \\gamma_B)$ appearing in the Brønsted-Bjerrum equation relating empirical rate constants $k$ to ionic strength $I$:\n\n$$\\log_{10}\\left(\\frac{k}{k_0}\\right) = 2 z_A z_B A \\sqrt{I}$$\n\nwhere $z_A, z_B$ are reactant charge numbers, $A \\approx 0.51\\ \\text{dm}^{3/2}\\text{mol}^{-1/2}$ at $25^\\circ\\text{C}$ in water, and $I = \\frac{1}{2}\\sum c_i z_i^2$ is ionic strength. Quantifies how ionic atmospheres accelerate or retard reaction rates."
     },
     {
       "word": "kinetic control",
@@ -93478,7 +93478,7 @@
       "word": "kinetic equations",
       "raw_headword": "KINETIC EQUATIONS",
       "synonyms": [],
-      "definition": "Equations used in kinetic theory. A key application of kinetic equations is to calculate transport coefficients such as conductivity and viscosity in non-equilibrium statistical mechanics. In general, kinetic equations do not have exact solutions for interacting systems. An example of a kinetic equation is the Boltzmann Equation."
+      "definition": "In non-equilibrium statistical mechanics, integro-differential transport equations governing the microscopic velocity distribution function $f(\\mathbf{r}, \\mathbf{v}, t)$ of gas particles. The canonical example is the Boltzmann transport equation:\n\n$$\\frac{\\partial f}{\\partial t} + \\mathbf{v}\\cdot\\nabla_{\\mathbf{r}} f + \\frac{\\mathbf{F}}{m}\\cdot\\nabla_{\\mathbf{v}} f = \\left(\\frac{\\partial f}{\\partial t}\\right)_{\\text{coll}}$$\n\nUsed to rigorously derive macroscopic transport coefficients including thermal conductivity $\\kappa$, shear viscosity $\\mu$, and electrical conductivity $\\sigma$ via the Chapman-Enskog expansion."
     },
     {
       "word": "kinetic method",
@@ -93508,7 +93508,7 @@
       "word": "kinetic theory of gases",
       "raw_headword": "KINETIC THEORY OF GASES",
       "synonyms": [],
-      "definition": "A theory that explains the behaviour of gases as follows: (i) Any gas is composed of very large number of molecules and the collision of the molecules is perfectly elastic; (ii) the forces between gas molecules are negligible; (iii) the gas molecules move randomly in straight line; (iv) they collide with each other and the walls of the container; and (v) the volume of the gas is negligible compared to the volume of the container. A gas corresponding to these assumptions is called an ideal gas ."
+      "definition": "In classical thermodynamics and statistical physics, a molecular model relating microscopic particle mechanics to macroscopic gas laws. For $N$ molecules of mass $m$ in volume $V$:\n\n$$P = \\frac{1}{3}\\frac{N m}{V} \\langle v^2 \\rangle = \\frac{1}{3} \\rho v_{\\text{rms}}^2, \\quad \\langle E_k \\rangle = \\frac{1}{2}m v_{\\text{rms}}^2 = \\frac{3}{2}k_B T$$\n\nYields the ideal gas equation of state $PV = N k_B T = n R T$ and Maxwell-Boltzmann molecular speed distribution."
     },
     {
       "word": "kinetic theory of matter",
@@ -93520,7 +93520,7 @@
       "word": "kinetic viscosity",
       "raw_headword": "KINETIC VISCOSITY",
       "synonyms": [],
-      "definition": "The ratio of the viscosity of a liquid to its density. It is denoted by v. Its SI unit is m²s-¹."
+      "definition": "In fluid dynamics and continuum mechanics, kinematic viscosity (denoted $\\nu$) is the ratio of dynamic shear viscosity $\\mu$ to fluid mass density $\\rho$:\n\n$$\\nu = \\frac{\\mu}{\\rho}, \\quad \\text{SI Unit: } \\text{m}^2\\cdot\\text{s}^{-1}$$\n\nIn CGS units, $1\\ \\text{stokes (St)} = 1\\ \\text{cm}^2/\\text{s} = 10^{-4}\\ \\text{m}^2/\\text{s}$. Represents the momentum diffusivity of a fluid and appears in the Reynolds number $\\text{Re} = \\frac{u L}{\\nu}$."
     },
     {
       "word": "kinetic-molecular theory",
@@ -93777,7 +93777,7 @@
       "word": "knoevenagel reaction",
       "raw_headword": "KNOEVENAGEL REACTION",
       "synonyms": [],
-      "definition": "A condensation reaction between a carbonyl compound (aldehyde or ketone) and an active methylene compound (RCH2 R1 ), where R and R1 are acid, ester or cyanogen functional group with the elimination of water to form α,β-unsaturated compounds. They are usually catalysed by a base. Knoevenagel Reaction OR OR O base OOHH -H2 OORRRRO OR OR."
+      "definition": "In organic synthesis, the base-catalyzed condensation of an aldehyde or ketone with an active methylene compound $Z-\\text{CH}_2-Z'$ (e.g. malonic esters, cyanoacetates, acetoacetates):\n\n$$R\\text{CHO} + \\text{CH}_2(\\text{COOEt})_2 \\xrightarrow{\\text{base (e.g. pyridine)}} R-\\text{CH}=\\text{C}(\\text{COOEt})_2 + \\text{H}_2\\text{O}$$\n\nYields $\\alpha,\\beta$-unsaturated carbonyl compounds via an enolate addition and subsequent dehydration."
     },
     {
       "word": "knot",
@@ -93821,13 +93821,13 @@
       "word": "knudsen flow",
       "raw_headword": "KNUDSEN FLOW",
       "synonyms": [],
-      "definition": "A model of the flow of gas in a container at a very low density, named after Martin Hans Christian Knudsen (1871- 1949). For a gas passing through small holes in a thin wall in the Knudsen flow regime, the number of molecules that pass through a hole is proportional to the pressure of the gas and inversely proportional to its molecular weight. Knudsen flow can be used to do a partial separation of a mixture of gases if the components have different molecular weights. Knudsen flow uses porous membranes to separate isotopic mixtures such as uranium. In hydrogen production, it is used to separate hydrogen from the gaseous product mixture created when water is heated at high temperatures using solar or other energy sources."
+      "definition": "In rarefied gas dynamics and vacuum physics, gas transport occurring when the molecular mean free path $\\lambda$ is significantly larger than the characteristic pipe diameter $d$ (Knudsen number $\\text{Kn} = \\frac{\\lambda}{d} > 10$). Mass flow rate $Q_m$ is governed by molecular wall collisions rather than intermolecular collisions:\n\n$$Q_m = \\frac{4}{3} \\sqrt{\\frac{2\\pi M}{R T}} \\frac{r^3}{L} \\Delta P$$\n\nwhere $M$ is molar mass, $r$ is tube radius, and $L$ is length."
     },
     {
       "word": "koch curve",
       "raw_headword": "KOCH CURVE",
       "synonyms": [],
-      "definition": "The fractal curve of Hausdorffdimension ln4/lnS, generated by a replacement rule that at each step, the middle third of each line segment must be replaced with two sides of a right triangle having sides of length equal to the replaced segment."
+      "definition": "In fractal geometry, the continuous snowflake curve introduced by Helge von Koch (1904). Generated iteratively from a line segment by replacing the middle third with two sides of an equilateral triangle. At step $n$, the length is $L_n = L_0 \\left(\\frac{4}{3}\\right)^n \\to \\infty$, while enclosing a finite area. Its exact Hausdorff dimension is:\n\n$$D = \\frac{\\ln 4}{\\ln 3} \\approx 1.26186$$\n\nServing as a classic example of a continuous curve that is nowhere differentiable."
     },
     {
       "word": "koch's postulates",
@@ -93871,7 +93871,7 @@
       "word": "kolmogorov's three series theorem",
       "raw_headword": "KOLMOGOROV'S THREE SERIES THEOREM",
       "synonyms": [],
-      "definition": "The result that a series of independent random variables, { f n }, converges pointwise (almost everywhere) if and only if three numerical series converge. When the variables are uniformly bounded, this reduces to verifying the convergence of the sums of the expectations, E( f n ) and of the variances, σ( f n ). It was named after Russian mathematician Andrey Kolmogorov (1903-87)."
+      "definition": "In advanced probability theory, a seminal criterion established by Andrey Kolmogorov (1928) for the almost sure convergence of infinite series of independent random variables $\\sum_{n=1}^\\infty X_n$. For truncated variables $Y_n = X_n \\mathbf{1}_{\\{|X_n| \\le c\\}}$ with $c > 0$, $\\sum X_n$ converges almost surely if and only if three scalar series converge simultaneously:\n\n$$\\text{(i) } \\sum_{n=1}^\\infty P(|X_n| > c) < \\infty, \\quad \\text{(ii) } \\sum_{n=1}^\\infty \\mathbb{E}[Y_n] \\text{ converges}, \\quad \\text{(iii) } \\sum_{n=1}^\\infty \\mathrm{Var}(Y_n) < \\infty$$"
     },
     {
       "word": "kolmogorov-smirnoff test",
@@ -93891,7 +93891,7 @@
       "word": "konig's theorem",
       "raw_headword": "KONIG'S THEOREM",
       "synonyms": [],
-      "definition": "The result that the number of edges in a maximum matching of a bipartite graph equals the number of vertices in a minimal covering of the graph, that is, in a subset K of vertices such that each edge has a vertex in K ."
+      "definition": "In combinatorial optimization and graph theory, Dénes Kőnig's theorem (1931) stating that in any bipartite graph $G = (V_1 \\cup V_2, E)$, the maximum size of a matching $\\nu(G)$ equals the minimum size of a vertex cover $\\tau(G)$:\n\n$$\\nu(G) = \\tau(G)$$\n\nForms the theoretical foundation of the Hungarian maximum bipartite matching algorithm and Hall's Marriage Theorem."
     },
     {
       "word": "konigsberg bridge problem",
@@ -93903,7 +93903,7 @@
       "word": "korovkin theorems",
       "raw_headword": "KOROVKIN THEOREMS",
       "synonyms": [],
-      "definition": "A class of theorems regarding uniform approximation of which the most basic is that if a sequence { L n } of non-negative linear operators on C [ a , b ] is such that L n ( x k ) converges uniformly to x k for k = 0, 1, 2, then L n ( f ) converges uniformly to f for all continuous functions."
+      "definition": "In approximation theory and functional analysis, Pavel Korovkin's theorem (1953) establishing that if a sequence of positive linear operators $T_n: C[a,b] \\to C[a,b]$ converges uniformly for just three test functions $f_0(x) = 1$, $f_1(x) = x$, and $f_2(x) = x^2$:\n\n$$T_n(x^k) \\rightrightarrows x^k \\quad \\text{for } k \\in \\{0, 1, 2\\} \\implies T_n(f) \\rightrightarrows f \\quad \\forall f \\in C[a,b]$$\n\nProvides an elegant constructive proof of the Weierstrass approximation theorem via Bernstein polynomials."
     },
     {
       "word": "korsakoff's syndrome",
@@ -94062,7 +94062,7 @@
       "synonyms": [
         "zorn's lemma"
       ],
-      "definition": "In mathematics, it is a theorem of set theory that in an ordered set in which every chain has an upper bound, there is an element in the set such that the set contains no element greater than the specified given element. It is named after the German-born American mathematician, Max August Zorn (1906-1993) and Kazimierz Kuratowski (1896-1980), Polish mathematician."
+      "definition": "In axiomatic set theory (ZFC), an equivalent formulation of the Axiom of Choice and the Well-Ordering Theorem. It asserts that if $(P, \\le)$ is a non-empty partially ordered set in which every totally ordered subset (chain) has an upper bound in $P$, then $P$ contains at least one maximal element:\n\n$$\\forall \\text{ chain } C \\subseteq P, \\ \\exists u \\in P: (\\forall c \\in C, c \\le u) \\implies \\exists m \\in P: (\\forall x \\in P, m \\le x \\implies m = x)$$\n\nEssential in modern algebra for proving that every non-trivial vector space has a Hamel basis and every proper ring ideal is contained in a maximal ideal."
     },
     {
       "word": "kurtosis",
