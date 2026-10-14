@@ -566,3 +566,62 @@ Source Folder: `l-m diagrams/` (September 25-26, 2026 Pristine Author Captures)
 | 99 | `Screenshot_26-9-2026_145957_.jpeg` | Multicentre Bond (diboranes (B2H6)) | `dict_multicentre_bond.png` | `multicentre bond`, `multicenter bond`, `diborane`, `banana bond`, `three-centre two-electron bond` |
 | 100 | `Screenshot_26-9-2026_15020_.jpeg` | Mushroom | `dict_mushroom.png` | `mushroom`, `agaricus`, `pileus`, `stipe`, `gills (fungi)`, `basidiomycete` |
 | 101 | `Screenshot_26-9-2026_15057_.jpeg` | Myopia (Short Sightedness) | `dict_myopia.png` | `myopia`, `short sightedness`, `shortsightedness`, `nearsightedness` |
+
+
+---
+
+### Section P Series: Batch 1 (Completed) — Screenshots 1 to 50
+Source Folder: `p_diagrams/` (September 29, 2026 Pristine Author Captures)
+
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 1 | `Screenshot_29-9-2026_152717_.jpeg` | Chemical Structure of 3-Phosphoglyceraldehyde | `dict_3_phosphoglyceraldehyde.png` | 3-phosphoglyceraldehyde, glyceraldehyde-3-phosphate, g3p, 3-phospho-d-glyceraldehyde |
+| 2 | `Screenshot_29-9-2026_152738_.jpeg` | Paleolate (Lodicule) | `dict_paleolate.png` | paleolate, lodicule, paleola, lodicules |
+| 3 | `Screenshot_29-9-2026_152747_.jpeg` | Palmately-lobed, simple leaf / Palmate compound leaf | `dict_palmately_lobed_leaf.png`, `dict_palmate_compound_leaf.png` | palmately lobed, palmately-lobed leaf, palmatifid, palmately lobed leaf, palmate, palmate leaf, palmate compound leaf, palmately compound leaf |
+| 4 | `Screenshot_29-9-2026_152752_.jpeg` | Palmatisect leaf | `dict_palmatisect.png` | palmatisect, palmatisect leaf, palmatisect venation |
+| 5 | `Screenshot_29-9-2026_15279_.jpeg` | Voltage-current characteristic of p-n junction | `dict_pn_junction.png` | p-n junction, pn junction, p-n junction diode, junction diode, semiconductor diode, voltage-current characteristic of p-n junction |
+| 6 | `Screenshot_29-9-2026_15280_.jpeg` | Pandurate leaf | `dict_pandurate_leaf.png` | pandurate, pandurate leaf, panduriform, panduriform leaf |
+| 7 | `Screenshot_29-9-2026_152816_.jpeg` | Chemical Structure of Pantothenic Acid | `dict_pantothenic_acid.png` | pantothenic acid, vitamin b5, pantothenate, pantothenate (vitamin b5) |
+| 8 | `Screenshot_29-9-2026_152825_.jpeg` | Papilionaceous corolla | `dict_papilionaceous.png` | papilionaceous, papilionaceous corolla, butterfly flower, papilionate, papilionaceus |
+| 9 | `Screenshot_29-9-2026_152832_.jpeg` | Parabolic reflection | `dict_parabolic_reflection.png` | parabolic reflection, parabolic dish, parabolic reflector, parabola (optics) |
+| 10 | `Screenshot_29-9-2026_152843_.jpeg` | Parallax Error | `dict_parallax_error.png` | parallax error, parallax, parallax (measurement) |
+| 11 | `Screenshot_29-9-2026_152850_.jpeg` | Chemical Structure of Paraldehyde | `dict_paraldehyde.png` | paraldehyde, 2,4,6-trimethyl-1,3,5-trioxane, para-acetaldehyde |
+| 12 | `Screenshot_29-9-2026_152856_.jpeg` | Parallel Circuit | `dict_parallel_circuit.png` | parallel circuit, parallel connection, resistors in parallel, parallel combination |
+| 13 | `Screenshot_29-9-2026_15288_.jpeg` | Panicle inflorescence | `dict_panicle.png` | panicle, panicle inflorescence, paniculate, paniculate inflorescence |
+| 14 | `Screenshot_29-9-2026_152915_.jpeg` | Parallelodromous leaf | `dict_parallelodromous_leaf.png` | parallelodromous, parallelodromous leaf, parallel venation, parallel-veined leaf, parelleldromous |
+| 15 | `Screenshot_29-9-2026_152922_.jpeg` | Parallelogram of vectors | `dict_parallelogram_of_vectors.png` | parallelogram of vectors, parallelogram law of vectors, parallelogram law, parallelogram rule |
+| 16 | `Screenshot_29-9-2026_152931_.jpeg` | Parallelogram | `dict_parallelogram.png` | parallelogram, parallelogram (shape), height of a parallelogram |
+| 17 | `Screenshot_29-9-2026_152939_.jpeg` | Paramecium | `dict_paramecium.png` | paramecium, paramecia, slipper animalcule, paramecium caudatum, ciliophora |
+| 18 | `Screenshot_29-9-2026_152947_.jpeg` | Ectoparasites (louse, tick, tsetsefly) | `dict_ectoparasite.png` | ectoparasite, ectoparasites, louse, tick, tsetse fly, tsetsefly, external parasite |
+| 19 | `Screenshot_29-9-2026_152955_.jpeg` | Chemical Structure of Parathion | `dict_parathion.png` | parathion, o,o-diethyl o-(4-nitrophenyl) phosphorothioate, parathion-ethyl |
+| 20 | `Screenshot_29-9-2026_15297_.jpeg` | Parallelogram of forces | `dict_parallelogram_of_forces.png` | parallelogram of forces, parallelogram law of forces, resultant force parallelogram |
+| 21 | `Screenshot_29-9-2026_153010_.jpeg` | Paripinnate leaves | `dict_paripinnate_leaf.png` | paripinnate, paripinnate leaf, even-pinnate, even pinnate, abruptly pinnate |
+| 22 | `Screenshot_29-9-2026_153020_.jpeg` | Parking Orbit | `dict_parking_orbit.png` | parking orbit, geostationary orbit, transfer orbit, low earth orbit, geosynchronous transfer orbit |
+| 23 | `Screenshot_29-9-2026_153027_.jpeg` | Parted leaf | `dict_parted_leaf.png` | parted, parted leaf, partite leaf, partite |
+| 24 | `Screenshot_29-9-2026_15303_.jpeg` | Parietal structure (placentation) | `dict_parietal_placentation.png` | parietal placentation, parietal, placentation, parietal structure, ovule placentation |
+| 25 | `Screenshot_29-9-2026_153052_.jpeg` | Pascal's Triangle | `dict_pascals_triangle.png` | pascal's triangle, pascals triangle, binomial coefficients, pascal triangle |
+| 26 | `Screenshot_29-9-2026_153129_.jpeg` | Pectoral girdle | `dict_pectoral_girdle.png` | pectoral girdle, shoulder girdle, pectoral limb girdle, scapula, glenoid cavity, pectoral girdle of a mammal |
+| 27 | `Screenshot_29-9-2026_153141_.jpeg` | Peltate leaf | `dict_peltate_leaf.png` | peltate, peltate leaf, shield-shaped leaf |
+| 28 | `Screenshot_29-9-2026_153155_.jpeg` | A mammalian pelvic girdle | `dict_pelvic_girdle.png` | pelvic girdle, pelvic limb girdle, ilium, ischium, pubis, acetabulum, hip bone, os coxae |
+| 29 | `Screenshot_29-9-2026_15317_.jpeg` | Pedate leaves | `dict_pedate_leaf.png` | pedate, pedate leaf, pedate venation, pedately compound |
+| 30 | `Screenshot_29-9-2026_153222_.jpeg` | Chemical Structure of Pentaerythritol | `dict_pentaerythritol.png` | pentaerythritol, 2,2-bis(hydroxymethyl)-1,3-propanediol, tetramethylolmethane |
+| 31 | `Screenshot_29-9-2026_153229_.jpeg` | Structural formula of Pentaerythritol Tetranitrate | `dict_pentaerythritol_tetranitrate.png` | pentaerythritol tetranitrate, petn, pentrite |
+| 32 | `Screenshot_29-9-2026_153239_.jpeg` | Pentagon | `dict_pentagon.png` | pentagon, regular pentagon, pentagonal, five-sided polygon |
+| 33 | `Screenshot_29-9-2026_153256_.jpeg` | Formation of peptide bond | `dict_peptide_bond.png` | peptide bond, peptide linkage, peptide, dipeptide, formation of peptide bond |
+| 34 | `Screenshot_29-9-2026_15327_.jpeg` | Structural formula of Penicillin | `dict_penicillin.png` | penicillin, penicillin g, benzylpenicillin, beta-lactam, beta-lactam antibiotic |
+| 35 | `Screenshot_29-9-2026_153310_.jpeg` | Perfoliate leaf | `dict_perfoliate_leaf.png` | perfoliate, perfoliate leaf, perfoliatum |
+| 36 | `Screenshot_29-9-2026_153325_.jpeg` | Pericyclic Reaction | `dict_pericyclic_reaction.png` | pericyclic reaction, pericyclic reactions, cycloaddition, electrocyclic reaction, sigmatropic reaction |
+| 37 | `Screenshot_29-9-2026_153356_.jpeg` | Tangent Periodic Function / Sine and Cosine Periodic Functions | `dict_tangent_periodic_function.png`, `dict_sine_cosine_periodic_function.png` | tangent periodic function, tangent function, sine and cosine periodic functions, sine function, cosine function, periodic functions, periodic function |
+| 38 | `Screenshot_29-9-2026_153626_.jpeg` | Periodic Table of the Elements | `dict_periodic_table.png` | periodic table, periodic table of the elements, mendeleev periodic table, elements |
+| 39 | `Screenshot_29-9-2026_153645_.jpeg` | Periscope | `dict_periscope.png` | periscope, prism periscope, reflection in periscope |
+| 40 | `Screenshot_29-9-2026_15370_.jpeg` | Peristalsis of bolus in the oesophagus | `dict_peristalsis.png` | peristalsis, peristaltic movement, bolus, oesophagus |
+| 41 | `Screenshot_29-9-2026_153727_.jpeg` | Examples of permanent magnet moving-coil instrument | `dict_moving_coil_instrument.png` | permanent magnet moving-coil instrument, moving-coil galvanometer, moving coil galvanometer, galvanometer |
+| 42 | `Screenshot_29-9-2026_153742_.jpeg` | Chemical Structure of Peroxide Ion | `dict_peroxide_ion.png` | peroxide ion, peroxide, peroxides, o2 2- |
+| 43 | `Screenshot_29-9-2026_153750_.jpeg` | Chemical Structure of Peroxymonosulfuric Acid | `dict_peroxymonosulfuric_acid.png` | peroxymonosulfuric acid, caro's acid, persulfuric acid |
+| 44 | `Screenshot_29-9-2026_153758_.jpeg` | Perpendicular distance | `dict_perpendicular_distance.png` | perpendicular distance, perpendicular, shortest distance to a line |
+| 45 | `Screenshot_29-9-2026_153813_.jpeg` | Personate structure | `dict_personate.png` | personate, personate corolla, personate structure |
+| 46 | `Screenshot_29-9-2026_153830_.jpeg` | Petiole | `dict_petiole.png` | petiole, leaf stalk, petiolate |
+| 47 | `Screenshot_29-9-2026_153854_.jpeg` | Phase Diagram - Phases of Matter and Phase Transitions | `dict_phase_diagram.png` | phase diagram, phases of matter, phase transitions, triple point, critical point |
+| 48 | `Screenshot_29-9-2026_153910_.jpeg` | Phase difference of two waves | `dict_phase_difference.png` | phase difference, phase difference of two waves, phase angle, out of phase |
+| 49 | `Screenshot_29-9-2026_153927_.jpeg` | Chemical Structure of phenol or phenolic acid | `dict_phenol.png` | phenol, phenolic acid, carbolic acid, hydroxybenzene |
+| 50 | `Screenshot_29-9-2026_153939_.jpeg` | Chemical Structure of Phencyclidine | `dict_phencyclidine.png` | phencyclidine, pcp, phenylcyclohexyl piperidine |
