@@ -625,3 +625,47 @@ Source Folder: `p_diagrams/` (September 29, 2026 Pristine Author Captures)
 | 48 | `Screenshot_29-9-2026_153910_.jpeg` | Phase difference of two waves | `dict_phase_difference.png` | phase difference, phase difference of two waves, phase angle, out of phase |
 | 49 | `Screenshot_29-9-2026_153927_.jpeg` | Chemical Structure of phenol or phenolic acid | `dict_phenol.png` | phenol, phenolic acid, carbolic acid, hydroxybenzene |
 | 50 | `Screenshot_29-9-2026_153939_.jpeg` | Chemical Structure of Phencyclidine | `dict_phencyclidine.png` | phencyclidine, pcp, phenylcyclohexyl piperidine |
+
+
+---
+
+### Section P Series: Batch 2 (Completed) — Screenshots 51 to 85
+Source Folder: `p_diagrams/` (September 29, 2026 Pristine Author Captures)
+
+| # | Source Screenshot | Diagram Content / Caption | Generated Diagram File(s) | Mapped Dictionary Term(s) |
+|---|---|---|---|---|
+| 51 | `Screenshot_29-9-2026_153954_.jpeg` | Chemical Structure of Phenolphthalein | `dict_phenolphthalein.png` | phenolphthalein, ph indicator phenolphthalein, phenolphthalein indicator |
+| 52 | `Screenshot_29-9-2026_154013_.jpeg` | Chemical Structure of Phenothiazine | `dict_phenothiazine.png` | phenothiazine, thiodiphenylamine, dibenzothiazine |
+| 53 | `Screenshot_29-9-2026_154023_.jpeg` | Chemical Structure of Phenylhydrazine | `dict_phenylhydrazine.png` | phenylhydrazine, hydrazinobenzene |
+| 54 | `Screenshot_29-9-2026_154033_.jpeg` | Chemical Structure of Phenyl Methyl Ketone | `dict_acetophenone.png` | phenyl methyl ketone, acetophenone, methyl phenyl ketone, acetylbenzene |
+| 55 | `Screenshot_29-9-2026_154043_.jpeg` | Chemical Structure of Phenylthiocarbamide | `dict_phenylthiocarbamide.png` | phenylthiocarbamide, ptc, phenylthiourea |
+| 56 | `Screenshot_29-9-2026_15405_.jpeg` | Chemical Structure of Phenylethene | `dict_styrene.png` | phenylethene, styrene, vinylbenzene, ethenylbenzene |
+| 57 | `Screenshot_29-9-2026_154112_.jpeg` | Chemical Structure of Phosphoglycerate | `dict_phosphoglycerate.png` | phosphoglycerate, 3-phosphoglycerate, 3-phosphoglyceric acid, pga |
+| 58 | `Screenshot_29-9-2026_15414_.jpeg` | Phosphodiester Bond | `dict_phosphodiester_bond.png` | phosphodiester bond, phosphodiester linkage, phosphodiester |
+| 59 | `Screenshot_29-9-2026_154150_.jpeg` | Photovoltaic cell | `dict_photovoltaic_cell.png` | photovoltaic cell, solar cell, photovoltaic effect |
+| 60 | `Screenshot_29-9-2026_15420_.jpeg` | Chemical Structure of Phthalocyanine | `dict_phthalocyanine.png` | phthalocyanine, tetrabenzoporphyrazine |
+| 61 | `Screenshot_29-9-2026_154210_.jpeg` | Chemical Structure of Phthalic Acid | `dict_phthalic_acid.png` | phthalic acid, benzene-1,2-dicarboxylic acid, o-phthalic acid |
+| 62 | `Screenshot_29-9-2026_154228_.jpeg` | Physical Quantities, Symbols, and Units (Part 2) | `dict_si_derived_units.png` | si derived units, derived units, units and symbols, derived physical quantities |
+| 63 | `Screenshot_29-9-2026_154240_.jpeg` | Types of physical topologies | `dict_physical_topologies.png` | types of physical topologies, network topology, physical topology, bus topology, ring topology, star topology, mesh topology, tree topology |
+| 64 | `Screenshot_29-9-2026_154248_.jpeg` | Physical Quantity, Symbol, and Unit (Part 1) | `dict_physical_quantities.png` | physical quantities, physical quantity, base physical quantities |
+| 65 | `Screenshot_29-9-2026_154259_.jpeg` | Picoline isomers | `dict_picoline.png` | picoline, methylpyridine, alpha-picoline, beta-picoline, gamma-picoline, 2-methylpyridine, 3-methylpyridine, 4-methylpyridine |
+| 66 | `Screenshot_29-9-2026_154312_.jpeg` | Pi Molecular Orbital | `dict_pi_molecular_orbital.png` | pi molecular orbital, pi orbital, pi bond formation |
+| 67 | `Screenshot_29-9-2026_154323_.jpeg` | Chemical Structure of Picric Acid | `dict_picric_acid.png` | picric acid, 2,4,6-trinitrophenol, tnp |
+| 68 | `Screenshot_29-9-2026_154340_.jpeg` | External features of a pig | `dict_pig_external_features.png` | external features of a pig, pig anatomy, swine, pig external features |
+| 69 | `Screenshot_29-9-2026_154348_.jpeg` | Pie Chart | `dict_pie_chart.png` | pie chart, pie graph, circle chart |
+| 70 | `Screenshot_29-9-2026_15436_.jpeg` | Pi Bond | `dict_pi_bond.png` | pi bond, pi bonding, double bond pi component |
+| 71 | `Screenshot_29-9-2026_154410_.jpeg` | Pinnipalmate leaf | `dict_pinnipalmate.png` | pinnipalmate, pinnipalmate leaf, pinnipalmate venation |
+| 72 | `Screenshot_29-9-2026_154418_.jpeg` | Pinnule | `dict_pinnule.png` | pinnule, pinnules, fern pinnule |
+| 73 | `Screenshot_29-9-2026_154424_.jpeg` | Pinhole Camera | `dict_pinhole_camera.png` | pinhole camera, pinhole camera image formation, camera obscura |
+| 74 | `Screenshot_29-9-2026_15442_.jpeg` | Pinnatilobate leaf | `dict_pinnatilobate.png` | pinnatilobate, pinnatilobate leaf, pinnately lobed |
+| 75 | `Screenshot_29-9-2026_154434_.jpeg` | Odd-pinnate leaf / Even-pinnate leaf | `dict_odd_pinnate.png`, `dict_even_pinnate.png` | odd-pinnate, imparipinnate, odd-pinnate leaf, imparipinnate leaf, even-pinnate, paripinnate leaf even, even pinnate leaf |
+| 76 | `Screenshot_29-9-2026_154441_.jpeg` | Chemical Structure of Piperidine | `dict_piperidine.png` | piperidine, hexahydropyridine, azacyclohexane |
+| 77 | `Screenshot_29-9-2026_154448_.jpeg` | A section of the pistil of a flower | `dict_pistil.png` | pistil, pistil of a flower, carpel, stigma style ovary |
+| 78 | `Screenshot_29-9-2026_154459_.jpeg` | Pit of a fruit or drupe | `dict_pit.png` | pit, pit of a fruit, pit (botany), stone of a fruit, pit (drupe), drupe pit |
+| 79 | `Screenshot_29-9-2026_154532_.jpeg` | Chemical Structure of Plastoquinone | `dict_plastoquinone.png` | plastoquinone, pq, plastoquinone structure |
+| 80 | `Screenshot_29-9-2026_154546_.jpeg` | Pleiochasium cyme | `dict_pleiochasium.png` | pleiochasium, pleiochasium cyme, pleiochaxial cyme, polychasium |
+| 81 | `Screenshot_29-9-2026_15458_.jpeg` | Placenta (plants) | `dict_placenta_plants.png` | placenta (plants), plant placenta, placentation placenta |
+| 82 | `Screenshot_29-9-2026_15463_.jpeg` | Plicate flower | `dict_plicate_flower.png` | plicate flower, plicate, plicate corolla |
+| 83 | `Screenshot_29-9-2026_154726_.jpeg` | Polarization Angle (Brewster's Angle) | `dict_brewsters_angle.png` | polarization angle, brewster's angle, brewsters angle, polarisation angle, brewster angle |
+| 84 | `Screenshot_29-9-2026_15472_.jpeg` | Point of inflection | `dict_point_of_inflection.png` | point of inflection, inflection point, points of inflection |
+| 85 | `Screenshot_29-9-2026_154736_.jpeg` | Polarimeter | `dict_polarimeter.png` | polarimeter, polarimetry, optical rotation |
