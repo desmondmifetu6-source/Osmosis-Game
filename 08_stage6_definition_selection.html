@@ -3,170 +3,325 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Osmosis - Stage 5: Match Terms to Meanings</title>
+  <title>Osmosis - Stage 6: Match Terms to Meanings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
-    .l2-card {
-      padding: 3rem 2.5rem;
-      max-width: 800px;
-      margin: auto;
-      background: rgba(255, 255, 255, 0.25) !important;
-      backdrop-filter: blur(15px) !important;
-      border: 2px solid rgba(0, 0, 0, 0.2) !important;
-      border-radius: 24px !important;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+    /* ============================================================
+       STAGE 6 — Modern Spacious 2x2 Matrix Osmosis Design System
+       ============================================================ */
+
+    * { box-sizing: border-box; }
+
+    body.stage6-page {
+      background: linear-gradient(145deg, #dde3f8 0%, #ede5f8 45%, #d6eaf8 100%) !important;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #1e1b4b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
     }
 
-    .test-header {
+    /* ── Top Bar ─────────────────────────────────────────────── */
+    .s6-topbar {
+      width: 100%;
+      max-width: 1024px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2.5rem;
+      padding: 1.4rem 1.6rem 0;
     }
 
-    .test-header h2 {
-      margin: 0;
+    .s6-badge {
+      background: #1e1b4b;
+      color: #ffffff;
       font-weight: 700;
-      color: var(--text-main);
-      letter-spacing: 1px;
+      font-size: 0.95rem;
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 4px 14px rgba(30, 27, 75, 0.22);
+      white-space: nowrap;
     }
 
-    .question-area {
-      margin-bottom: 2rem;
-      text-align: center;
+    .s6-topbar-center {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      flex: 1;
+      justify-content: center;
+      padding: 0 1rem;
     }
 
-    .target-word {
-      font-size: 1.4rem;
-      color: var(--text-main);
-      font-weight: 600;
-      margin-bottom: 2rem;
-      line-height: 1.6;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.4);
-      border-radius: 16px;
-      border: 2px solid var(--accent-primary);
+    .s6-divider {
+      height: 1.5px;
+      width: 100px;
+      background: rgba(99, 102, 241, 0.3);
+      flex-shrink: 0;
+    }
+
+    .s6-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1e1b4b;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ── Main Stage Area ─────────────────────────────────────── */
+    .s6-stage {
+      width: 100%;
+      max-width: 1024px;
+      padding: 1.5rem 1.6rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.4rem;
+      flex: 1;
+    }
+
+    .s6-meta {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.2rem;
+    }
+
+    .s6-meta-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #4f46e5;
+    }
+
+    .s6-progress-badge {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #475569;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    /* ── Hero Definition Card ─────────────────────────────────── */
+    .s6-definition-card {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2.8rem 3.2rem;
+      box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.03),
+        0 12px 40px rgba(79, 70, 229, 0.07);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 2.1;
+      color: #1e1b4b;
       text-align: left;
-      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+      word-break: break-word;
     }
 
-    .options-grid {
+    /* ── 2x2 Option Answers Grid ──────────────────────────────── */
+    .s6-options-grid-2x2 {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      width: 100%;
     }
 
     .option-btn {
-      background: rgba(255, 255, 255, 0.5);
-      border: 2px solid rgba(0, 0, 0, 0.15);
-      border-radius: 14px;
-      padding: 1.25rem;
-      text-align: center;
+      background: #ffffff;
+      border: 2px solid #e8e8f0;
+      border-radius: 999px;
+      padding: 1.25rem 1.6rem;
+      font-family: inherit;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1e1b4b;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      color: var(--text-main);
-      font-size: 1.3rem;
-      font-weight: 700;
-      line-height: 1.4;
-      font-family: var(--font-main);
+      text-align: center;
+      transition: all 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      letter-spacing: 0.8px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      outline: none;
     }
 
-    .option-btn:hover {
-      background: #ffffff;
-      border-color: var(--accent-primary);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    .option-btn:hover:not(:disabled) {
+      border-color: #6366f1;
+      box-shadow: 0 8px 24px rgba(99, 102, 241, 0.18);
+      transform: translateY(-2px);
     }
 
     .option-btn.correct {
-      background: #e8f5e9;
-      border-color: #2e7d32;
-      color: #1b5e20;
-      box-shadow: 0 0 20px rgba(46, 125, 50, 0.2);
+      background: #dcfce7 !important;
+      border-color: #16a34a !important;
+      color: #14532d !important;
+      box-shadow: 0 0 20px rgba(22, 163, 74, 0.3) !important;
     }
 
     .option-btn.wrong {
-      background: #ffebee;
-      border-color: #c62828;
-      color: #b71c1c;
-      box-shadow: 0 0 20px rgba(198, 40, 40, 0.2);
+      background: #fee2e2 !important;
+      border-color: #dc2626 !important;
+      color: #7f1d1d !important;
+      animation: s6shake 0.38s ease;
     }
 
-    .feedback {
-      height: 2.5rem;
-      font-weight: 700;
-      margin-top: 1.5rem;
-      font-size: 1.25rem;
+    /* ── Feedback Message ─────────────────────────────────────── */
+    .s6-feedback {
+      min-height: 2rem;
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-align: center;
+      letter-spacing: 0.3px;
+      transition: all 0.2s ease;
+    }
+
+    .s6-feedback.success { color: #15803d; }
+    .s6-feedback.error { color: #b91c1c; }
+
+    /* ── Progression Button ──────────────────────────────────── */
+    .s6-actions {
       display: flex;
-      align-items: center;
       justify-content: center;
+      width: 100%;
     }
 
-    .feedback.success { color: #2e7d32; }
-    .feedback.error { color: #c62828; }
-
-    @media (max-width: 480px) {
-      .l2-card { padding: 2rem 1.5rem; }
-      .target-word { font-size: 1.1rem; padding: 1.5rem; }
-      .option-btn { font-size: 1.1rem; padding: 1rem; }
+    .s6-next-btn {
+      width: 100%;
+      max-width: 480px;
+      padding: 1.15rem 2rem;
+      border-radius: 16px;
+      border: none;
+      font-family: inherit;
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 22px rgba(79, 70, 229, 0.35);
+      transition: all 0.22s ease;
     }
 
+    .s6-next-btn:hover {
+      filter: brightness(1.08);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(79, 70, 229, 0.45);
+    }
+
+    .s6-next-btn.gold {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45) !important;
+    }
+
+    @keyframes s6shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      75% { transform: translateX(6px); }
+    }
 
     .floating-point {
-      position: absolute;
-      color: #4caf50;
-      font-weight: bold;
-      font-family: monospace;
-      font-size: 2rem;
+      position: fixed;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #15803d;
       pointer-events: none;
-      animation: floatUp 1s ease-out forwards;
-      z-index: 200;
-      text-shadow: 1px 1px 2px #000;
+      animation: s6pop 0.9s ease forwards;
+      z-index: 999;
     }
 
-    @keyframes floatUp {
-      0% {
-        opacity: 1;
-        transform: translateY(0) scale(1.5);
-      }
+    @keyframes s6pop {
+      0% { transform: scale(0.9); opacity: 0.7; }
+      60% { transform: scale(1.1); }
+      100% { transform: translateY(-30px); opacity: 1; }
+    }
 
-      100% {
-        opacity: 0;
-        transform: translateY(-50px) scale(1);
+    /* ── Mobile ──────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .s6-definition-card {
+        padding: 2rem 1.6rem;
+        font-size: 1.3rem;
+        line-height: 1.95;
+        border-radius: 20px;
       }
+      .s6-options-grid-2x2 {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+      .s6-title { font-size: 0.95rem; }
+      .s6-divider { display: none; }
+      .option-btn { font-size: 1.1rem; padding: 1.05rem 1.2rem; }
     }
   </style>
 </head>
 
-<body>
-  <div class="scoreboard" id="scoreboard">Score: <span id="current-score">0</span></div>
-  <div class="app-container">
+<body class="stage6-page">
 
-    <!-- Test Container -->
-    <div id="test-container" class="card l2-card">
-      <div class="test-header">
-        <h2>Stage 5: Match Terms to Meanings</h2>
-        <div id="test-progress" style="font-size:1.2rem; font-weight:bold;">1 / 26</div>
-      </div>
-      <div class="question-area">
-        <div id="target-word" class="target-word">WORD</div>
-        <div id="options-container" class="options-grid"></div>
-        <div id="test-feedback" class="feedback"></div>
-      </div>
-      <button id="next-btn" class="classic-btn blue-gradient" style="display:none; margin: auto;">Next Word</button>
+  <!-- ── Top Bar ── -->
+  <header class="s6-topbar">
+    <div class="s6-badge">Score: <span id="current-score">0</span></div>
+
+    <div class="s6-topbar-center">
+      <span class="s6-divider"></span>
+      <span class="s6-title">
+        <span>📖</span>
+        Match Term to Meaning
+      </span>
+      <span class="s6-divider"></span>
     </div>
 
-  </div>
+    <div class="s6-badge" id="global-game-timer">
+      <span>⏱</span> Time: <span id="timer-display">00:00</span>
+    </div>
+  </header>
+
+  <!-- ── Main Stage Area ── -->
+  <main class="s6-stage" id="test-container">
+
+    <div class="s6-meta">
+      <span class="s6-meta-label">Definition</span>
+      <span class="s6-progress-badge" id="test-progress">1 / 26</span>
+    </div>
+
+    <!-- Spacious Hero Definition Card (Freed from the box) -->
+    <div class="s6-definition-card" id="target-word">
+      <!-- Scientific meaning populated dynamically -->
+    </div>
+
+    <!-- 2x2 Possible Answers Matrix -->
+    <div class="s6-options-grid-2x2" id="options-container">
+      <!-- 4 option buttons dynamically populated by DistractorEngine -->
+    </div>
+
+    <!-- Live Feedback -->
+    <div class="s6-feedback" id="test-feedback"></div>
+
+    <!-- Advance Action -->
+    <div class="s6-actions">
+      <button id="next-btn" class="s6-next-btn" style="display: none;">Next Word →</button>
+    </div>
+
+  </main>
+
   <script src="core_dictionary.js"></script>
+  <script src="core_distractor_engine.js"></script>
   <script src="core_formula_renderer.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="core_shared_state.js"></script>

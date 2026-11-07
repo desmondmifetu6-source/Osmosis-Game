@@ -3,279 +3,390 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Osmosis - Stage 6: Definition Completion</title>
+  <title>Osmosis - Stage 7: Definition Completion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
-    .stage6-card {
-      padding: 3rem 2.5rem;
-      max-width: 800px;
-      margin: auto;
-      background: rgba(255, 255, 255, 0.25) !important;
-      backdrop-filter: blur(15px) !important;
-      border: 2px solid rgba(0, 0, 0, 0.2) !important;
-      border-radius: 24px !important;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+    /* ============================================================
+       STAGE 7 — Pixel-perfect match to Osmosis reference design
+       ============================================================ */
+
+    * { box-sizing: border-box; }
+
+    body.stage7-page {
+      background: linear-gradient(145deg, #dde3f8 0%, #ede5f8 45%, #d6eaf8 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #1e1b4b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
     }
 
-    .s6-header {
+    /* ── Top Bar ─────────────────────────────────────────────── */
+    .s7-topbar {
+      width: 100%;
+      max-width: 1024px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      padding: 1.4rem 1.6rem 0;
     }
 
-    .s6-header h2 {
-      margin: 0;
+    .s7-badge {
+      background: #1e1b4b;
+      color: #fff;
       font-weight: 700;
-      color: var(--text-main);
-      letter-spacing: 1px;
+      font-size: 0.95rem;
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 4px 14px rgba(30,27,75,.22);
+      white-space: nowrap;
     }
 
-    .alarming-timer {
-      font-size: 2.2rem;
-      font-weight: 800;
-      font-family: 'JetBrains Mono', monospace;
-      color: var(--accent-primary);
-      background: rgba(255, 255, 255, 0.4);
-      padding: 0.8rem 1.5rem;
-      border-radius: 12px;
-      border: 2px solid rgba(0, 0, 0, 0.1);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .revision-list {
-      max-height: 50vh;
-      overflow-y: auto;
-      margin-bottom: 2.5rem;
-      text-align: left;
-      padding-right: 1.5rem;
-      scrollbar-width: thin;
-      scrollbar-color: var(--accent-primary) rgba(255, 255, 255, 0.2);
-    }
-
-    .revision-item {
-      margin-bottom: 1.5rem;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.3);
-      border-left: 6px solid var(--accent-primary);
-      border-radius: 12px;
-      transition: all 0.2s ease;
-    }
-
-    .revision-item strong {
-      display: block;
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-      color: var(--text-main);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .revision-item p {
-      margin: 0;
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--accent-primary);
-      line-height: 1.6;
-    }
-
-    .highlight-word {
-      font-size: 3rem;
-      color: var(--text-main);
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      margin-bottom: 2.5rem;
-      border-bottom: 2px solid var(--accent-primary);
-      display: inline-block;
-      padding-bottom: 0.5rem;
-      font-weight: 800;
-    }
-
-    .meaning-fill-area {
-      font-size: 1.6rem;
-      line-height: 2.4;
-      text-align: justify;
-      color: var(--text-main);
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 20px;
-      border: 2px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .meaning-input {
-      font-size: 1.6rem;
-      font-family: inherit;
-      text-align: center;
-      font-weight: 800;
-      color: var(--accent-primary);
-      border: 2px solid rgba(0, 0, 0, 0.1);
-      background: #ffffff;
-      border-radius: 8px;
-      margin: 0 0.4rem;
-      padding: 0.2rem 0.8rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-      min-width: 120px;
-    }
-
-    .meaning-input:focus {
-      outline: none;
-      border-color: var(--accent-primary);
-      box-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
-    }
-
-    .meaning-input.wrong {
-      background: #ffebee;
-      border-color: #c62828;
-      color: #c62828;
-      animation: shake 0.4s ease;
-    }
-
-    .meaning-input.correct {
-      background: #e8f5e9;
-      border-color: #2e7d32;
-      color: #2e7d32;
-    }
-
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-4px); }
-      75% { transform: translateX(4px); }
-    }
-
-    .feedback {
-      height: 2.5rem;
-      font-weight: 700;
-      margin-top: 1.5rem;
-      font-size: 1.25rem;
+    .s7-topbar-center {
       display: flex;
       align-items: center;
+      gap: 0.9rem;
+      flex: 1;
       justify-content: center;
+      padding: 0 1rem;
     }
 
-    .feedback.success { color: #2e7d32; }
-    .feedback.error { color: #c62828; }
-
-    @media (max-width: 480px) {
-      .stage6-card { padding: 2rem 1.25rem; }
-      .highlight-word { font-size: 2rem; }
-      .meaning-fill-area { font-size: 1.2rem; line-height: 2; padding: 1.5rem; }
-      .meaning-input { font-size: 1.2rem; min-width: 80px; }
-      .revision-item strong { font-size: 1.4rem; }
-      .revision-item p { font-size: 1.1rem; }
+    .s7-divider {
+      height: 1.5px;
+      width: 100px;
+      background: rgba(99,102,241,.3);
+      flex-shrink: 0;
     }
 
-    /* Scoreboard & Floating Text */
+    .s7-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1e1b4b;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
+    /* ── Main Stage Area ─────────────────────────────────────── */
+    .s7-stage {
+      width: 100%;
+      max-width: 1024px;
+      padding: 1.8rem 1.6rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.4rem;
+      flex: 1;
+    }
+
+    /* Word + sentence meta (small, subtle, above card) */
+    .s7-meta {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.2rem;
+    }
+
+    .s7-word-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #5b52c7;
+      opacity: 0.75;
+    }
+
+    .s7-progress-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    /* ── Hero Sentence Card ───────────────────────────────────── */
+    .s7-sentence-card {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2.8rem 3.2rem;
+      box-shadow:
+        0 2px 4px rgba(0,0,0,.03),
+        0 12px 40px rgba(79,70,229,.07);
+      border: 1px solid rgba(226,232,240,.8);
+
+      /* Typography matching reference */
+      font-size: 1.75rem;
+      font-weight: 500;
+      line-height: 2.1;
+      color: #1e1b4b;
+      text-align: left;
+      word-break: break-word;
+    }
+
+    /* ── Inline Puzzle Slot (inside the sentence text) ───────── */
+    .s7-slot {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #f1f0fe;
+      border: 2px solid #c7c3f4;
+      border-radius: 14px;
+      padding: 0.28rem 1.2rem;
+      margin: 0 0.35rem;
+      color: #6366f1;
+      font-size: 1.5rem;
+      font-weight: 600;
+      cursor: default;
+      vertical-align: middle;
+      min-width: 160px;
+      justify-content: center;
+      transition: all .22s ease;
+      user-select: none;
+    }
+
+    .s7-slot .slot-icon { font-size: 1.1rem; }
+
+    .s7-slot.filled {
+      background: #e0e7ff;
+      border-color: #818cf8;
+      color: #312e81;
+      font-weight: 700;
+    }
+
+    .s7-slot.correct {
+      background: #dcfce7 !important;
+      border-color: #16a34a !important;
+      color: #14532d !important;
+    }
+
+    .s7-slot.wrong {
+      background: #fee2e2 !important;
+      border-color: #dc2626 !important;
+      color: #7f1d1d !important;
+      animation: s7shake .38s ease;
+    }
+
+    /* ── 2×2 Option Grid (OUTSIDE the card, below it) ────────── */
+    .s7-options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .s7-option-btn {
+      background: #ffffff;
+      border: 2px solid #e8e8f0;
+      border-radius: 999px;      /* full pill shape like reference */
+      padding: 1.15rem 1.5rem;
+      font-family: inherit;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1e1b4b;
+      cursor: pointer;
+      text-align: center;
+      transition: all .2s cubic-bezier(.175,.885,.32,1.275);
+      box-shadow: 0 2px 10px rgba(0,0,0,.04);
+      letter-spacing: 0.2px;
+    }
+
+    .s7-option-btn:hover:not(:disabled) {
+      border-color: #6366f1;
+      box-shadow: 0 6px 20px rgba(99,102,241,.18);
+      transform: translateY(-2px);
+    }
+
+    .s7-option-btn.selected {
+      background: #e0e7ff;
+      border-color: #4f46e5;
+      color: #312e81;
+      box-shadow: 0 4px 16px rgba(79,70,229,.2);
+    }
+
+    .s7-option-btn.correct {
+      background: #dcfce7 !important;
+      border-color: #16a34a !important;
+      color: #14532d !important;
+      pointer-events: none;
+    }
+
+    .s7-option-btn.wrong-pick {
+      background: #fee2e2 !important;
+      border-color: #dc2626 !important;
+      color: #7f1d1d !important;
+    }
+
+    .s7-option-btn:disabled,
+    .s7-option-btn.dimmed {
+      opacity: 0.38;
+      cursor: not-allowed;
+      transform: none !important;
+      pointer-events: none;
+    }
+
+    /* ── Feedback Line ───────────────────────────────────────── */
+    .s7-feedback {
+      min-height: 1.8rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.3px;
+      transition: all .2s ease;
+    }
+    .s7-feedback.ok  { color: #15803d; }
+    .s7-feedback.err { color: #b91c1c; }
+
+    /* ── Bottom Action Row ───────────────────────────────────── */
+    .s7-actions {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .s7-btn {
+      flex: 1;
+      padding: 1.1rem 1.5rem;
+      border-radius: 16px;
+      border: none;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      transition: all .22s ease;
+    }
+
+    .s7-btn-skip {
+      background: rgba(255,255,255,.75);
+      border: 1.5px solid rgba(148,163,184,.35);
+      color: #64748b;
+    }
+    .s7-btn-skip:hover:not(:disabled) {
+      background: #fff;
+      color: #1e293b;
+      transform: translateY(-1px);
+    }
+
+    .s7-btn-submit {
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      color: #fff;
+      box-shadow: 0 8px 22px rgba(79,70,229,.35);
+    }
+    .s7-btn-submit:hover:not(:disabled) {
+      filter: brightness(1.08);
+      transform: translateY(-2px);
+    }
+    .s7-btn-submit.gold {
+      background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+      box-shadow: 0 8px 25px rgba(245,158,11,.4) !important;
+    }
+
+    /* ── Animations ──────────────────────────────────────────── */
+    @keyframes s7shake {
+      0%,100% { transform: translateX(0); }
+      25%      { transform: translateX(-6px); }
+      75%      { transform: translateX(6px); }
+    }
+
+    @keyframes s7pop {
+      0%   { transform: scale(.9); opacity:.7; }
+      60%  { transform: scale(1.05); }
+      100% { transform: scale(1); opacity:1; }
+    }
 
     .floating-point {
-      position: absolute;
-      color: #4caf50;
-      font-weight: bold;
-      font-family: monospace;
-      font-size: 2rem;
-      pointer-events: none;
-      animation: floatUp 1s ease-out forwards;
-      z-index: 200;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    @keyframes floatUp {
-      0% {
-        opacity: 1;
-        transform: translateY(0) scale(1.5);
-      }
-
-      100% {
-        opacity: 0;
-        transform: translateY(-50px) scale(1);
-      }
-    }
-
-    .final-stage-banner {
       position: fixed;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      background: linear-gradient(135deg, #FFD700, #FF8C00);
-      color: #fff;
-      padding: 1.5rem 3rem;
-      border-radius: 50px;
-      font-size: 2.5rem;
+      font-size: 1.1rem;
       font-weight: 800;
-      box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);
-      z-index: 10000;
-      text-transform: uppercase;
-      text-align: center;
+      color: #15803d;
       pointer-events: none;
-      animation: popBanner 3.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-      border: 4px solid #fff;
+      animation: s7pop .9s ease forwards;
+      z-index: 999;
     }
 
-    @keyframes popBanner {
-      0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
-      15% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
-      25% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-      80% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-      100% { transform: translate(-50%, -150%) scale(0.5); opacity: 0; }
+    /* ── Mobile ──────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .s7-sentence-card {
+        padding: 2rem 1.6rem;
+        font-size: 1.3rem;
+        line-height: 1.95;
+        border-radius: 20px;
+      }
+      .s7-slot { font-size: 1.15rem; min-width: 130px; }
+      .s7-options-grid { grid-template-columns: 1fr; gap: .75rem; }
+      .s7-title { font-size: .95rem; }
+      .s7-divider { display: none; }
+      .s7-option-btn { font-size: 1.05rem; padding: 1rem 1.2rem; }
     }
   </style>
 </head>
 
-<body>
-  <div class="scoreboard" id="scoreboard">Score: <span id="current-score">0</span></div>
-  <div class="app-container">
+<body class="stage7-page">
 
-    <div class="card stage6-card" id="loading-container">
-      <h2 style="text-align:center;">Preparing Stage 6...</h2>
-      <div style="text-align:center;"><span class="spinner"></span></div>
+  <!-- ── Top Bar ── -->
+  <header class="s7-topbar">
+    <div class="s7-badge">Score: <span id="current-score">0</span></div>
+
+    <div class="s7-topbar-center">
+      <span class="s7-divider"></span>
+      <span class="s7-title">
+        <span>⚗️</span>
+        Choose the correct word
+      </span>
+      <span class="s7-divider"></span>
     </div>
 
-    <!-- Revision Container -->
-    <div id="revision-container" class="card stage6-card parchment-large" style="display: none;">
-      <div class="s6-header">
-        <h2>Stage 6: Definition Completion</h2>
-        <div id="rev-timer" class="alarming-timer">00:00</div>
-      </div>
-      <p style="font-style:italic; margin-bottom:1rem; font-size: 1.2rem;">Commit the exact phrasing of these
-        definitions to your memory.</p>
-      <div id="rev-list" class="revision-list"></div>
-      <button id="start-test-btn" class="classic-btn secondary" style="width:auto; float:right;">Proceed</button>
-      <div style="clear:both;"></div>
+    <div class="s7-badge" id="global-game-timer">
+      <span>⏱</span> Time: <span id="timer-display">00:00</span>
+    </div>
+  </header>
+
+  <!-- ── Main Stage (hidden until JS bootstraps) ── -->
+  <main class="s7-stage" id="test-container" style="display:none;">
+
+    <!-- Hidden meta holders so JS DOM references remain valid -->
+    <div class="s7-meta" style="display:none;">
+      <span class="s7-word-label" id="test-word"></span>
+      <span class="s7-progress-label" id="test-progress"></span>
     </div>
 
-    <!-- Mastery Test Container -->
-    <div id="test-container" class="card stage6-card parchment-large" style="display: none;">
-      <div class="s6-header">
-        <h2>Stage 6: Definition Completion</h2>
-        <div id="test-progress" style="font-size:1.5rem; font-weight:bold;">1/10</div>
-      </div>
-      <p style="font-style:italic; margin-bottom:2rem; text-align:center;">Fill in the missing key terminology within
-        the definition.</p>
-
-      <div style="text-align:center;">
-        <h1 id="test-word" class="highlight-word">WORD</h1>
-      </div>
-      <div id="test-meaning-container" class="meaning-fill-area"></div>
-
-      <div id="test-feedback" class="feedback" style="margin-top:2rem;"></div>
-
-      <div style="display:flex; justify-content:space-between; margin-top:1rem;">
-        <button id="skip-btn" class="classic-btn secondary" style="width:48%;">Skip / Forfeit (0 pts)</button>
-        <button id="submit-btn" class="classic-btn blue-gradient" style="width:48%;">Submit Findings</button>
-      </div>
+    <!-- The spacious hero sentence card -->
+    <div class="s7-sentence-card" id="sentence-card">
+      <!-- Sentence with inline puzzle slot injected here by JS -->
     </div>
 
-  </div>
+    <!-- 2×2 option grid — pill buttons, OUTSIDE the card -->
+    <div class="s7-options-grid" id="options-grid">
+      <!-- Dynamically populated -->
+    </div>
+
+    <!-- Feedback line -->
+    <div class="s7-feedback" id="test-feedback"></div>
+
+    <!-- Skip / Submit actions -->
+    <div class="s7-actions">
+      <button id="skip-btn"   class="s7-btn s7-btn-skip">Skip / Forfeit (0 pts)</button>
+      <button id="submit-btn" class="s7-btn s7-btn-submit">Submit Findings</button>
+    </div>
+
+  </main>
+
   <script src="core_dictionary.js"></script>
+  <script src="core_distractor_engine.js"></script>
   <script src="core_formula_renderer.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="core_shared_state.js"></script>

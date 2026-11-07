@@ -70,7 +70,7 @@ const Stage5Controller = {
           const allBtns = document.querySelectorAll('.option-btn');
           const correctWord = this.state.testSequence[this.state.testIndex];
           allBtns.forEach(b => {
-            if (b.textContent === correctWord) b.click();
+            if (b.textContent.trim().toLowerCase() === correctWord.toLowerCase()) b.click();
           });
         } else {
           if (domCache.nextBtn) domCache.nextBtn.click();
@@ -113,39 +113,46 @@ const Stage5Controller = {
     }
     if (domCache.progressEl) domCache.progressEl.textContent = `${testIndex + 1}/${testSequence.length}`;
 
-    const otherWords = Object.keys(gameData.meanings).filter(w => w !== currentWord);
-    const pool = this.shuffle(otherWords);
+    const otherWords = Object.keys(gameData.meanings || {}).filter(w => w !== currentWord);
+    let options;
+    if (typeof window.DistractorEngine !== 'undefined') {
+      options = window.DistractorEngine.getOptionsWithAnswer(currentWord, 4, {
+        exclude: otherWords
+      });
+    } else {
+      const pool = this.shuffle(otherWords);
 
-    let options = [currentWord];
-    for (let w of pool) {
-      if (options.length < 4 && !options.includes(w)) options.push(w);
-    }
+      options = [currentWord];
+      for (let w of pool) {
+        if (options.length < 4 && !options.includes(w)) options.push(w);
+      }
 
-    if (options.length < 4 && typeof window.STEMDictionary !== 'undefined') {
-      let attempts = 0;
-      while (options.length < 4 && attempts < 50) {
-        const randomLetter = window.STEMDictionary.getRandomLetter();
-        const wordsFromLetter = window.STEMDictionary.getWordsByLetter(randomLetter);
-        if (wordsFromLetter && wordsFromLetter.length > 0) {
-          const randomWordObj = wordsFromLetter[Math.floor(Math.random() * wordsFromLetter.length)];
-          if (!options.includes(randomWordObj.word)) {
-            options.push(randomWordObj.word);
+      if (options.length < 4 && typeof window.STEMDictionary !== 'undefined') {
+        let attempts = 0;
+        while (options.length < 4 && attempts < 50) {
+          const randomLetter = window.STEMDictionary.getRandomLetter();
+          const wordsFromLetter = window.STEMDictionary.getWordsByLetter(randomLetter);
+          if (wordsFromLetter && wordsFromLetter.length > 0) {
+            const randomWordObj = wordsFromLetter[Math.floor(Math.random() * wordsFromLetter.length)];
+            if (!options.includes(randomWordObj.word)) {
+              options.push(randomWordObj.word);
+            }
           }
+          attempts++;
         }
-        attempts++;
       }
-    }
 
-    const fallbackWords = ["Anomaly", "Phenomenon", "Paradox", "Catalyst"];
-    let fallbackIndex = 0;
-    while (options.length < 4) {
-      if (!options.includes(fallbackWords[fallbackIndex])) {
-        options.push(fallbackWords[fallbackIndex]);
+      const fallbackWords = ["Anomaly", "Phenomenon", "Paradox", "Catalyst"];
+      let fallbackIndex = 0;
+      while (options.length < 4) {
+        if (!options.includes(fallbackWords[fallbackIndex])) {
+          options.push(fallbackWords[fallbackIndex]);
+        }
+        fallbackIndex = (fallbackIndex + 1) % fallbackWords.length;
       }
-      fallbackIndex = (fallbackIndex + 1) % fallbackWords.length;
-    }
 
-    options = this.shuffle(options);
+      options = this.shuffle(options);
+    }
 
     if (domCache.optionsContainer) {
       domCache.optionsContainer.innerHTML = '';
@@ -153,7 +160,7 @@ const Stage5Controller = {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         btn.textContent = opt;
-        btn.onclick = () => this.handleSelection(btn, opt === currentWord);
+        btn.onclick = () => this.handleSelection(btn, opt.toLowerCase() === currentWord.toLowerCase());
         domCache.optionsContainer.appendChild(btn);
       });
     }
@@ -187,7 +194,7 @@ const Stage5Controller = {
       if (typeof AudioManager !== 'undefined') AudioManager.play('error');
 
       allBtns.forEach(b => {
-        if (b.textContent === testSequence[testIndex]) {
+        if (b.textContent.trim().toLowerCase() === testSequence[testIndex].toLowerCase()) {
           b.classList.add('correct');
         }
       });

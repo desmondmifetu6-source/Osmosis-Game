@@ -296,9 +296,16 @@ const Stage6bController = {
       if (validIndices.includes(i)) {
         const correctAns = t.toLowerCase();
 
-        // Pick 3 deceptive trick words specifically generated for this answer
-        let trickOptions = generateDeceptiveTricks(correctAns);
-        let allOptions = [correctAns, ...trickOptions].sort(() => 0.5 - Math.random());
+        // Generate deceptive trick options matching exact length and part-of-speech
+        let allOptions;
+        if (typeof window.DistractorEngine !== 'undefined') {
+          allOptions = window.DistractorEngine.getOptionsWithAnswer(correctAns, 4, {
+            exclude: [currentWord]
+          });
+        } else {
+          let trickOptions = generateDeceptiveTricks(correctAns);
+          allOptions = [correctAns, ...trickOptions].sort(() => 0.5 - Math.random());
+        }
         
         // Build Custom Dropdown UI
         const container = document.createElement('div');
