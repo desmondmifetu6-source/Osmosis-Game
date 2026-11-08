@@ -8,7 +8,9 @@
 initModal(); // Wake up the popup system
 sharedState.startTimer();
 const state = sharedState.load(); // Open the backpack
-sharedState.updateTimerUI();
+sharedState.updateTimerUI('timer-display');
+const scoreEl = document.getElementById('current-score');
+if (scoreEl) scoreEl.textContent = state.score || 0;
 
 // Built-in Security: No backpack? Back to the lobby!
 if (!state.selectedWords || state.selectedWords.length === 0) window.location.href = 'index.html';
@@ -28,7 +30,7 @@ document.getElementById('start-btn').addEventListener('click', () => {
 // Function: startRevisionPhase
 // Prints the definitions on the page and starts a 5-minute countdown clock.
 function startRevisionPhase() {
-  revisionContainer.style.display = 'block'; // Make the study desk visible
+  revisionContainer.style.display = 'flex'; // Make the study desk visible
   
   const listEl = document.getElementById('rev-list'); // The blank piece of paper
   

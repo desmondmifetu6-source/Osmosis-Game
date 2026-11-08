@@ -15,7 +15,7 @@ const Stage5Controller = {
     if (typeof initModal === 'function') initModal();
     sharedState.startTimer();
     this.state.gameData = sharedState.load();
-    sharedState.updateTimerUI();
+    sharedState.updateTimerUI('timer-display');
 
     if (!this.state.gameData.selectedWords || this.state.gameData.selectedWords.length === 0) {
       window.location.href = 'index.html';
@@ -202,7 +202,14 @@ const Stage5Controller = {
 
     if (domCache.nextBtn) {
       domCache.nextBtn.style.display = 'block';
-      domCache.nextBtn.textContent = (testIndex < testSequence.length - 1) ? 'Next Word' : 'Complete Stage';
+      if (testIndex < testSequence.length - 1) {
+        domCache.nextBtn.textContent = 'Next Word →';
+        domCache.nextBtn.className = 's6-next-btn';
+      } else {
+        domCache.nextBtn.textContent = 'Complete Stage 🏆 →';
+        domCache.nextBtn.className = 's6-next-btn gold';
+      }
+      domCache.nextBtn.focus();
     }
   },
 

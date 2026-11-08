@@ -253,21 +253,79 @@
       100% { transform: translateY(-30px); opacity: 1; }
     }
 
-    /* ── Mobile ──────────────────────────────────────────────── */
+    /* Suppress legacy global floating fixed timer */
+    #global-game-timer {
+      display: none !important;
+    }
+
+    /* ── Mobile & Responsive Spacing ───────────────────────── */
     @media (max-width: 640px) {
+      .s6-topbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.85rem 1rem 0;
+        gap: 0.6rem 0;
+      }
+      .s6-badge {
+        font-size: 0.85rem;
+        padding: 0.42rem 0.95rem;
+      }
+      .s6-topbar-center {
+        order: 3;
+        width: 100%;
+        padding: 0.2rem 0 0;
+        justify-content: center;
+        gap: 0;
+      }
+      .s6-title {
+        font-size: 0.95rem;
+        text-align: center;
+      }
+      .s6-divider {
+        display: none;
+      }
+      .s6-stage {
+        padding: 1rem 1rem 2rem;
+        gap: 1.1rem;
+      }
       .s6-definition-card {
-        padding: 2rem 1.6rem;
-        font-size: 1.3rem;
+        padding: 1.8rem 1.4rem;
+        font-size: 1.25rem;
         line-height: 1.95;
         border-radius: 20px;
       }
       .s6-options-grid-2x2 {
-        grid-template-columns: 1fr;
-        gap: 0.85rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
       }
-      .s6-title { font-size: 0.95rem; }
-      .s6-divider { display: none; }
-      .option-btn { font-size: 1.1rem; padding: 1.05rem 1.2rem; }
+      .option-btn {
+        font-size: 1.02rem;
+        padding: 0.95rem 0.75rem;
+        border-radius: 999px;
+      }
+      .s6-next-btn {
+        width: 100%;
+        padding: 1rem 1.2rem;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .s6-topbar {
+        padding: 0.75rem 0.6rem 0;
+      }
+      .s6-badge {
+        font-size: 0.78rem;
+        padding: 0.38rem 0.7rem;
+      }
+      .s6-title {
+        font-size: 0.85rem;
+      }
+      .s6-options-grid-2x2 {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -276,7 +334,7 @@
 
   <!-- ── Top Bar ── -->
   <header class="s6-topbar">
-    <div class="s6-badge">Score: <span id="current-score">0</span></div>
+    <div class="s6-badge">Score : <span id="current-score">0</span></div>
 
     <div class="s6-topbar-center">
       <span class="s6-divider"></span>
@@ -287,8 +345,8 @@
       <span class="s6-divider"></span>
     </div>
 
-    <div class="s6-badge" id="global-game-timer">
-      <span>⏱</span> Time: <span id="timer-display">00:00</span>
+    <div class="s6-badge">
+      Time : <span id="timer-display">00:00</span>
     </div>
   </header>
 

@@ -6,293 +6,516 @@
   <title>Osmosis - Stage 2: Word Reconstruction</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
-    .stage3-card {
-      padding: 3rem 2.5rem;
-      max-width: 760px;
-      margin: auto;
-      background: rgba(255, 255, 255, 0.25) !important;
-      backdrop-filter: blur(15px) !important;
-      border: 2px solid rgba(0, 0, 0, 0.2) !important;
-      border-radius: 24px !important;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+    /* ============================================================
+       STAGE 2 — Word Reconstruction (Freed from the Box)
+       ============================================================ */
+
+    * { box-sizing: border-box; }
+
+    body.stage2-page {
+      background: linear-gradient(145deg, #dde3f8 0%, #ede5f8 45%, #d6eaf8 100%) !important;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #1e1b4b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
     }
 
-    .s3-header {
+    /* ── Top Bar ─────────────────────────────────────────────── */
+    .s2-topbar {
+      width: 100%;
+      max-width: 1024px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      padding: 1.4rem 1.6rem 0;
     }
 
-    .s3-header h2 {
-      margin: 0;
+    .s2-badge {
+      background: #1e1b4b;
+      color: #ffffff;
       font-weight: 700;
-      color: var(--text-main);
-      letter-spacing: 1px;
+      font-size: 0.95rem;
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 4px 14px rgba(30, 27, 75, 0.22);
+      white-space: nowrap;
+    }
+
+    .s2-topbar-center {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      flex: 1;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    .s2-divider {
+      height: 1.5px;
+      width: 100px;
+      background: rgba(99, 102, 241, 0.3);
+      flex-shrink: 0;
+    }
+
+    .s2-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1e1b4b;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ── Main Stage Area ─────────────────────────────────────── */
+    .s2-stage {
+      width: 100%;
+      max-width: 1024px;
+      padding: 1.5rem 1.6rem 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    /* ── Loading Screen ──────────────────────────────────────── */
+    .s2-loading-card {
+      width: 100%;
+      max-width: 600px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 3.5rem 2rem;
+      box-shadow: 0 12px 40px rgba(79, 70, 229, 0.07);
+      border: 1px solid rgba(226, 232, 240, 0.85);
+      text-align: center;
+      margin: auto;
+    }
+
+    /* ── Revision Screen ─────────────────────────────────────── */
+    .s2-revision-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .s2-rev-header {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.5rem 2.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(79, 70, 229, 0.05);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .s2-rev-header h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1e1b4b;
     }
 
     .alarming-timer {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 800;
       font-family: 'JetBrains Mono', monospace;
-      color: var(--accent-primary);
-      background: rgba(255, 255, 255, 0.6);
-      padding: 0.8rem 1.5rem;
+      color: #4f46e5;
+      background: #eef2ff;
+      border: 1.5px solid #c7d2fe;
+      padding: 0.5rem 1.2rem;
       border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
     }
 
     .revision-list {
-      max-height: 45vh;
+      max-height: 52vh;
       overflow-y: auto;
-      margin-bottom: 2.5rem;
-      text-align: left;
-      padding-right: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-right: 0.5rem;
       scrollbar-width: thin;
-      scrollbar-color: var(--accent-primary) rgba(255, 255, 255, 0.2);
+      scrollbar-color: #a5b4fc transparent;
     }
 
     .revision-item {
-      margin-bottom: 1.5rem;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.3);
-      border-left: 6px solid var(--accent-primary);
-      border-radius: 12px;
-      transition: transform 0.2s ease;
-      text-align: left;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.4rem 1.8rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      border-left: 6px solid #4f46e5;
+      border: 1px solid rgba(226, 232, 240, 0.85);
+      border-left: 6px solid #4f46e5;
+      transition: all 0.2s ease;
     }
 
     .revision-item:hover {
-      transform: translateX(8px);
-      background: rgba(255, 255, 255, 0.5);
+      transform: translateX(6px);
+      box-shadow: 0 6px 18px rgba(79, 70, 229, 0.08);
     }
 
     .revision-item strong {
       display: block;
-      font-size: 1.6rem;
-      margin-bottom: 0.6rem;
-      color: var(--text-main);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #1e1b4b;
+      margin-bottom: 0.4rem;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
     }
 
     .revision-item p {
       margin: 0;
-      font-size: 1.05rem;
-      font-style: italic;
-      color: var(--text-main);
-      opacity: 0.8;
+      font-size: 1.1rem;
+      color: #475569;
       line-height: 1.6;
     }
 
-    /* Glancing guide banner */
-    .glance-banner {
+    /* ── Reconstruction Console (Active Test) ────────────────── */
+    .s2-test-wrapper {
+      width: 100%;
       display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(124, 58, 237, 0.06));
-      border: 1.5px solid rgba(79, 70, 229, 0.25);
-      border-radius: 16px;
-      padding: 1.2rem 1.5rem;
-      margin-bottom: 1.8rem;
-      text-align: left;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.4rem;
     }
 
-    .glance-banner .glance-icon {
-      font-size: 2rem;
-      flex-shrink: 0;
-      line-height: 1;
-      margin-top: 0.1rem;
+    .s2-meta {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.2rem;
     }
 
-    .glance-banner .glance-text strong {
-      display: block;
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--accent-primary);
-      margin-bottom: 0.35rem;
-      letter-spacing: 0;
-      text-transform: none;
+    .s2-meta-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #4f46e5;
     }
 
-    .glance-banner .glance-text p {
-      margin: 0;
+    .s2-progress-badge {
       font-size: 0.95rem;
-      line-height: 1.6;
-      color: #444;
-      font-style: normal;
-      opacity: 1;
+      font-weight: 800;
+      color: #475569;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 0.35rem 0.95rem;
+      border-radius: 999px;
+      border: 1px solid rgba(226, 232, 240, 0.8);
     }
 
-    .test-area {
+    /* Spacious Hero Card for Word Reconstruction */
+    .s2-hero-card {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 3.5rem 2.5rem;
+      box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.03),
+        0 20px 45px rgba(79, 70, 229, 0.08);
+      border: 1px solid rgba(226, 232, 240, 0.85);
       text-align: center;
-      margin-bottom: 2.5rem;
-      padding: 2.5rem;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 20px;
-      border: 2px solid rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .s2-instruction {
+      font-size: 1.15rem;
+      color: #64748b;
+      margin-bottom: 2rem;
+      font-weight: 500;
     }
 
     .masked-word {
       font-family: 'JetBrains Mono', monospace;
-      font-size: clamp(1.5rem, 6vw, 2.8rem);
-      letter-spacing: 0.3rem;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      letter-spacing: 0.5rem;
       text-align: center;
-      margin-bottom: 2rem;
-      color: var(--text-main);
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin: 0 0 2.5rem;
+      color: #1e1b4b;
       font-weight: 800;
+      word-break: break-all;
     }
 
     .s3-input {
       width: 100%;
-      max-width: 350px;
-      font-size: 1.5rem;
+      max-width: 480px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.8rem;
       text-align: center;
       font-weight: 800;
-      letter-spacing: 2px;
-      padding: 0.8rem;
-      border: 2px solid var(--accent-primary);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.5);
-      color: var(--text-main);
+      letter-spacing: 3px;
+      padding: 1.1rem 1.5rem;
+      border: 2.5px solid #c7d2fe;
+      border-radius: 20px;
+      background: #f8fafc;
+      color: #1e1b4b;
       text-transform: uppercase;
-      transition: all 0.3s ease;
+      outline: none;
+      transition: all 0.22s ease;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03);
     }
 
     .s3-input:focus {
-      outline: none;
       background: #ffffff;
-      border-color: var(--accent-primary);
-      box-shadow: 0 0 20px rgba(79, 70, 229, 0.15);
+      border-color: #4f46e5;
+      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
     }
 
     .feedback {
-      height: 2.5rem;
-      font-weight: 700;
+      min-height: 2.2rem;
+      font-size: 1.2rem;
+      font-weight: 800;
       margin-top: 1.5rem;
-      font-size: 1.25rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      letter-spacing: 0.3px;
     }
 
-    .feedback.success {
-      color: #2e7d32;
-      text-shadow: 0 0 10px rgba(46, 125, 50, 0.2);
+    .feedback.success { color: #15803d; }
+    .feedback.error { color: #b91c1c; }
+
+    /* Action Buttons */
+    .s2-btn-primary {
+      width: 100%;
+      max-width: 480px;
+      padding: 1.25rem 2rem;
+      border-radius: 16px;
+      border: none;
+      font-family: inherit;
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 22px rgba(79, 70, 229, 0.35);
+      transition: all 0.22s ease;
+      margin-top: 1rem;
     }
 
-    .feedback.error {
-      color: #c62828;
-      text-shadow: 0 0 10px rgba(198, 40, 40, 0.2);
+    .s2-btn-primary:hover {
+      filter: brightness(1.08);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(79, 70, 229, 0.45);
     }
 
-    .welcome-lap2 {
-      font-size: 3rem;
-      color: var(--accent-red);
-      margin-bottom: 1rem;
-      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    .s2-btn-secondary {
+      padding: 1rem 2rem;
+      border-radius: 14px;
+      border: 1.5px solid rgba(148, 163, 184, 0.4);
+      background: rgba(255, 255, 255, 0.85);
+      color: #334155;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      align-self: flex-end;
     }
 
-    /* Memory Recall specific */
-    .red-alert-theme {
-      background: var(--bg-light) !important;
-      border-color: #c62828 !important;
+    .s2-btn-secondary:hover {
+      background: #ffffff;
+      color: #0f172a;
+      border-color: #6366f1;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.15);
     }
-
-    /* Reused from stage2 */
-    .word-tile {
-      display: inline-block;
-      background: var(--bg-light);
-      color: var(--text-main);
-      padding: 0.4rem 1rem;
-      border: 1px solid #d3cbb8;
-      box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin: 0.3rem;
-    }
-
-    /* Scoreboard & Floating Text */
-
 
     .floating-point {
-      position: absolute;
-      color: #4caf50;
-      font-weight: bold;
-      font-family: monospace;
-      font-size: 2rem;
+      position: fixed;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #15803d;
       pointer-events: none;
-      animation: floatUp 1s ease-out forwards;
-      z-index: 200;
-      text-shadow: 1px 1px 2px #000;
+      animation: s2pop 0.9s ease forwards;
+      z-index: 999;
     }
 
-    @keyframes floatUp {
-      0% {
-        opacity: 1;
-        transform: translateY(0) scale(1.5);
-      }
+    @keyframes s2pop {
+      0% { transform: scale(0.9); opacity: 0.7; }
+      60% { transform: scale(1.1); }
+      100% { transform: translateY(-30px); opacity: 1; }
+    }
 
-      100% {
-        opacity: 0;
-        transform: translateY(-50px) scale(1);
+    /* Suppress legacy global floating fixed timer */
+    #global-game-timer {
+      display: none !important;
+    }
+
+    /* ── Mobile & Responsive Spacing ───────────────────────── */
+    @media (max-width: 640px) {
+      .s2-topbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.85rem 1rem 0;
+        gap: 0.6rem 0;
+      }
+      .s2-badge {
+        font-size: 0.85rem;
+        padding: 0.42rem 0.95rem;
+      }
+      .s2-topbar-center {
+        order: 3;
+        width: 100%;
+        padding: 0.2rem 0 0;
+        justify-content: center;
+        gap: 0;
+      }
+      .s2-title {
+        font-size: 0.95rem;
+        text-align: center;
+      }
+      .s2-divider {
+        display: none;
+      }
+      .s2-stage {
+        padding: 1rem 1rem 2rem;
+      }
+      .s2-hero-card {
+        padding: 2.2rem 1.4rem;
+        border-radius: 20px;
+      }
+      .masked-word {
+        font-size: 2rem;
+        letter-spacing: 0.35rem;
+        margin-bottom: 1.8rem;
+      }
+      .s3-input {
+        font-size: 1.4rem;
+        padding: 0.9rem 1rem;
+        border-radius: 16px;
+      }
+      .s2-btn-primary {
+        width: 100%;
+        padding: 1.1rem 1.5rem;
+        font-size: 1.05rem;
+      }
+      .s2-rev-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+        padding: 1.2rem 1.4rem;
+      }
+      .revision-item {
+        padding: 1.2rem 1.4rem;
+      }
+      .s2-btn-secondary {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .s2-topbar {
+        padding: 0.75rem 0.6rem 0;
+      }
+      .s2-badge {
+        font-size: 0.78rem;
+        padding: 0.38rem 0.7rem;
+      }
+      .s2-title {
+        font-size: 0.85rem;
       }
     }
   </style>
 </head>
 
-<body>
-  <div class="scoreboard" id="scoreboard">Score: <span id="current-score">0</span></div>
-  <div class="app-container">
+<body class="stage2-page">
 
-    <!-- Loading Container -->
-    <div class="card stage3-card" id="loading-container">
-      <h2 style="text-align:center;">Preparing Stage 2...</h2>
-      <div style="text-align:center;"><span class="spinner"></span></div>
+  <!-- ── Top Bar ── -->
+  <header class="s2-topbar">
+    <div class="s2-badge">Score : <span id="current-score">0</span></div>
+
+    <div class="s2-topbar-center">
+      <span class="s2-divider"></span>
+      <span class="s2-title">
+        <span>🧩</span>
+        Stage 2: Word Reconstruction
+      </span>
+      <span class="s2-divider"></span>
     </div>
 
-    <!-- Revision Container -->
-    <div id="revision-container" class="card stage3-card" style="display: none;">
-      <div class="s3-header">
-        <h2>Quick Revision</h2>
+    <div class="s2-badge">
+      Time : <span id="timer-display">00:00</span>
+    </div>
+  </header>
+
+  <!-- ── Main Stage Area ── -->
+  <main class="s2-stage">
+
+    <!-- Loading Container -->
+    <div class="s2-loading-card" id="loading-container">
+      <h2 style="font-size: 1.6rem; font-weight: 800; color: #1e1b4b; margin: 0 0 1rem;">Preparing Stage 2...</h2>
+      <div style="margin: 1.5rem 0;"><span class="spinner"></span></div>
+    </div>
+
+    <!-- Quick Revision Screen -->
+    <div id="revision-container" class="s2-revision-wrapper" style="display: none;">
+      
+      <div class="s2-rev-header">
+        <div>
+          <h2>Quick Revision</h2>
+          <p style="margin: 0.3rem 0 0; color: #64748b; font-size: 0.95rem;">Review words before beginning reconstruction.</p>
+        </div>
         <div id="rev-timer" class="alarming-timer">00:00</div>
       </div>
 
-
-
-
       <div id="rev-list" class="revision-list"></div>
-      <button id="start-test-early-btn" class="classic-btn secondary" style="width:auto; float:right;">Proceed</button>
-      <div style="clear:both;"></div>
+
+      <button id="start-test-early-btn" class="s2-btn-secondary">Proceed to Test →</button>
     </div>
 
-    <!-- Lap 1 Container -->
-    <div id="lap1-container" class="card stage3-card" style="display: none;">
-      <div class="s3-header">
-        <h2>Stage 2: Word Reconstruction</h2>
-        <div id="lap1-progress" style="font-size:1.5rem; font-weight:bold;">1/5</div>
+    <!-- Lap 1: Active Reconstruction Console -->
+    <div id="lap1-container" class="s2-test-wrapper" style="display: none;">
+      
+      <div class="s2-meta">
+        <span class="s2-meta-label">Reconstruct Word</span>
+        <span class="s2-progress-badge" id="lap1-progress">1 / 5</span>
       </div>
-      <p style="font-style:italic; margin-bottom:2rem;">Reconstruct the word by typing it completely.</p>
-      <div class="test-area">
+
+      <!-- Spacious Hero Reconstruction Card (Freed from the box) -->
+      <div class="s2-hero-card">
+        <div class="s2-instruction">Reconstruct the scientific word by typing it completely:</div>
+        
         <h1 id="lap1-word-display" class="masked-word">A _ O M</h1>
-        <input type="text" id="lap1-input" class="s3-input" autocomplete="off" autocorrect="off" autocapitalize="off"
-          spellcheck="false">
+        
+        <input type="text" id="lap1-input" class="s3-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="TYPE WORD HERE">
+        
         <div id="lap1-feedback" class="feedback"></div>
+
+        <button id="lap1-submit" class="s2-btn-primary">Submit Answer</button>
       </div>
-      <button id="lap1-submit" class="classic-btn blue-gradient">Submit Answer</button>
+
     </div>
 
-  </div>
+  </main>
+
   <script src="core_dictionary.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="core_shared_state.js"></script>

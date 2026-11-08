@@ -25,7 +25,7 @@ const Stage2Controller = {
     if (typeof initModal === 'function') initModal();
     sharedState.startTimer();
     this.state.gameData = sharedState.load();
-    sharedState.updateTimerUI();
+    sharedState.updateTimerUI('timer-display');
 
     if (!this.state.gameData.selectedWords || this.state.gameData.selectedWords.length === 0) {
       window.location.href = 'index.html';
