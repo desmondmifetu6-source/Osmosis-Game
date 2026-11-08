@@ -252,6 +252,17 @@ const Stage2Controller = {
     if (isCorrect) {
       this.triggerFeedback("Correct!", 'success');
       this.rewardPoints(CONFIG.POINTS_PER_CORRECT);
+
+      // Auto-advance smoothly after success feedback
+      setTimeout(() => {
+        this.state.currentIndex++;
+        if (this.state.currentIndex < sequence.length) {
+          this.renderCurrentQuestion();
+        } else {
+          this.finishGame();
+        }
+      }, 750);
+      return;
     } else {
       this.triggerFeedback(`Incorrect. Word was "${correctWord.toUpperCase()}"`, 'error');
     }

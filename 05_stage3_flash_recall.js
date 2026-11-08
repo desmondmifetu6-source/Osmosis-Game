@@ -16,7 +16,7 @@ const Stage3Controller = {
     if (typeof initModal === 'function') initModal();
     sharedState.startTimer();
     this.state.gameData = sharedState.load();
-    sharedState.updateTimerUI();
+    sharedState.updateTimerUI('timer-display');
 
     if (!this.state.gameData.selectedWords || this.state.gameData.selectedWords.length === 0) {
       window.location.href = 'index.html';
@@ -101,6 +101,18 @@ const Stage3Controller = {
     }
 
     if (domCache.inputEl) {
+      // Auto-validate instantly the exact millisecond the word is completed correctly
+      domCache.inputEl.addEventListener('input', () => {
+        if (this.state.answerLocked) return;
+        const { sequence, currentIndex } = this.state;
+        if (!sequence || !sequence[currentIndex]) return;
+        const val = domCache.inputEl.value.trim().toLowerCase();
+        const target = sequence[currentIndex].toLowerCase();
+        if (val.length === target.length && val === target) {
+          this.submitFlashRow();
+        }
+      });
+
       domCache.inputEl.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
           if (!this.state.answerLocked) this.submitFlashRow();
@@ -112,6 +124,22 @@ const Stage3Controller = {
     if (domCache.nextBtn) {
       domCache.nextBtn.addEventListener('click', () => this.advanceFlashRow());
     }
+
+    // Developer Hack (Alt + P)
+    document.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === 'p' && e.altKey) {
+        e.preventDefault();
+        if (!this.state.answerLocked && domCache.inputEl && !domCache.inputEl.disabled) {
+          const correct = this.state.sequence[this.state.currentIndex];
+          if (correct) {
+            domCache.inputEl.value = correct;
+            this.submitFlashRow();
+          }
+        } else if (domCache.nextBtn && domCache.nextBtn.style.display !== 'none') {
+          domCache.nextBtn.click();
+        }
+      }
+    });
   },
 
   shuffle(arr) {
@@ -211,14 +239,23 @@ const Stage3Controller = {
 
     if (typed === correct) {
       if (domCache.inputEl) domCache.inputEl.classList.add('correct');
-      this.triggerFlashFeedback('Correct.', 'success');
+      this.triggerFlashFeedback('Correct recall! (+10 pts)', 'success');
       this.rewardFlashPoints(10);
+
+      // Auto-proceed smoothly after success feedback
+      setTimeout(() => {
+        this.advanceFlashRow();
+      }, 750);
+      return;
     } else {
       if (domCache.inputEl) domCache.inputEl.classList.add('wrong');
-      this.triggerFlashFeedback(`Incorrect. It was "${correct.toUpperCase()}".`, 'error');
+      this.triggerFlashFeedback(`Incorrect. The word was "${correct.toUpperCase()}".`, 'error');
+      if (domCache.nextBtn) {
+        domCache.nextBtn.style.display = 'inline-flex';
+        domCache.nextBtn.textContent = (currentIndex >= sequence.length - 1) ? 'Complete Stage 🏆 →' : 'Next Word →';
+        domCache.nextBtn.focus();
+      }
     }
-
-    if (domCache.nextBtn) domCache.nextBtn.style.display = 'block';
   },
 
   advanceFlashRow() {
@@ -245,6 +282,18 @@ const Stage3Controller = {
 
     if (this.state.domCache.scoreEl) {
       this.state.domCache.scoreEl.textContent = this.state.gameData.score;
+    }
+
+    const ref = this.state.domCache.inputEl || this.state.domCache.scoreEl;
+    if (ref) {
+      const rect = ref.getBoundingClientRect();
+      const floater = document.createElement('div');
+      floater.className = 'floating-point';
+      floater.textContent = `+${amount}`;
+      floater.style.left = `${rect.left + rect.width / 2}px`;
+      floater.style.top = `${rect.top - 20}px`;
+      document.body.appendChild(floater);
+      setTimeout(() => floater.remove(), 1000);
     }
   },
 

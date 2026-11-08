@@ -185,6 +185,17 @@ const Stage5Controller = {
 
       this.state.stageScore += 10;
       this.updateScoreboard(10, btn);
+
+      // Snappy auto-advance: green flash + score floater, then proceed automatically
+      setTimeout(() => {
+        this.state.testIndex++;
+        if (this.state.testIndex < this.state.testSequence.length) {
+          this.renderQuestion();
+        } else {
+          this.finishStage();
+        }
+      }, 750);
+      return;
     } else {
       btn.classList.add('wrong');
       if (domCache.feedbackEl) {

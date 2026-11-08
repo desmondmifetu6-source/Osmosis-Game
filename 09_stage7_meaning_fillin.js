@@ -290,6 +290,7 @@ const Stage7Controller = {
       submitBtn.textContent = 'Submit Findings';
       submitBtn.className   = 's7-btn s7-btn-submit';
       submitBtn.disabled    = false;
+      submitBtn.style.display = 'none'; // Auto-advances on answer, no submit click needed
     }
     if (skipBtn) {
       skipBtn.disabled    = false;
@@ -326,24 +327,18 @@ const Stage7Controller = {
       fb.textContent = '';
       fb.className   = 's7-feedback';
     }
+
+    // ── AUTO-VALIDATE on every click ──────────────────────────────────
+    // Correct? → green flash then auto-advance after 850ms (no submit needed)
+    // Wrong?   → red shake, disable that button, let player retry
+    this.validate();
   },
 
   onSubmitClick() {
-    // If already answered → advance to next sentence/word
+    // Submit now only acts as a manual "Next" after answer is locked
     if (this.state.isAnswered) {
       this.advance();
-      return;
     }
-
-    // No option chosen yet
-    if (!this.state.selectedOption) {
-      this.showFeedback('Please select a word from the options below.', 'err');
-      const slot = document.getElementById('active-blank');
-      if (slot) slot.classList.add('wrong');
-      return;
-    }
-
-    this.validate();
   },
 
   validate() {
@@ -352,9 +347,10 @@ const Stage7Controller = {
     const slot      = document.getElementById('active-blank');
     const allBtns   = document.querySelectorAll('.s7-option-btn');
 
-    this.state.isAnswered = true;
-
     if (isCorrect) {
+      // ── CORRECT ──────────────────────────────────────────────────────
+      this.state.isAnswered = true;
+
       this.showFeedback('Brilliant deduction! (+10 pts)', 'ok');
       slot?.classList.add('correct');
 
@@ -364,27 +360,40 @@ const Stage7Controller = {
       });
 
       this.addScore(10);
-      if (domCache.skipBtn) domCache.skipBtn.disabled = true;
+
+      // Hide both action buttons — the advance is automatic
+      if (domCache.skipBtn)   domCache.skipBtn.style.display   = 'none';
+      if (domCache.submitBtn) domCache.submitBtn.style.display = 'none';
+
+      // Auto-advance after a brief green-flash moment
+      setTimeout(() => this.advance(), 850);
 
     } else {
-      this.showFeedback('Incorrect — try another option or skip.', 'err');
+      // ── WRONG ────────────────────────────────────────────────────────
+      this.showFeedback('Not quite — pick another option.', 'err');
       slot?.classList.add('wrong');
 
-      // Un-select the wrong pick so player can try again
+      // Shake + disable the wrong button so player can't re-pick it
       allBtns.forEach(btn => {
         if (btn.textContent.trim() === selectedOption) {
-          btn.classList.remove('selected');
           btn.classList.add('wrong-pick');
+          btn.disabled = true;
           setTimeout(() => btn.classList.remove('wrong-pick'), 600);
         }
       });
 
-      this.state.isAnswered    = false; // allow retry
-      this.state.selectedOption = null;
-      return; // don't advance button yet
-    }
+      // Reset slot to blank so player can pick again
+      if (slot) {
+        slot.innerHTML = `<span class="slot-icon">🧩</span> <span class="slot-text">Select word</span>`;
+        slot.classList.remove('filled', 'wrong');
+        // Brief wrong flash then clear
+        slot.classList.add('wrong');
+        setTimeout(() => slot.classList.remove('wrong'), 600);
+      }
 
-    this.updateAdvanceButton();
+      // Allow retry (isAnswered stays false)
+      this.state.selectedOption = null;
+    }
   },
 
   skipSentence() {
@@ -430,6 +439,7 @@ const Stage7Controller = {
       domCache.submitBtn.className   = 's7-btn s7-btn-submit';
     }
 
+    domCache.submitBtn.style.display = '';
     domCache.submitBtn.disabled = false;
     domCache.submitBtn.focus();
   },

@@ -336,6 +336,12 @@ const Stage7Controller = {
         domCache.feedbackEl.className = 'nd-feedback ok';
         domCache.feedbackEl.textContent = `Excellent! You remembered it perfectly! +${finalPts} pts`;
         if (typeof AudioManager !== 'undefined') AudioManager.play('success');
+
+        // Snappy auto-advance for flawless recall
+        setTimeout(() => {
+          this.advanceToNextCard();
+        }, 850);
+        return;
       } else if (g.wOk || g.mRatio >= 0.50) {
         domCache.feedbackEl.className = 'nd-feedback partial';
         domCache.feedbackEl.textContent = `You have partially remembered +${finalPts} pts (${pct}% match)`;

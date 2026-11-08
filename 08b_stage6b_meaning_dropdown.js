@@ -55,7 +55,13 @@ const Stage6bController = {
     const { domCache } = this.state;
 
     if (domCache.submitBtn) {
-      domCache.submitBtn.addEventListener('click', () => this.processValidation());
+      domCache.submitBtn.addEventListener('click', () => {
+        if (domCache.submitBtn.textContent.includes('Next') || domCache.submitBtn.textContent.includes('Proceed')) {
+          this.nextWord();
+        } else {
+          this.processValidation();
+        }
+      });
     }
 
     if (domCache.skipBtn) {
@@ -144,6 +150,13 @@ const Stage6bController = {
     btn.classList.add('filled');
     container.dataset.selected = optionText;
     this.closeActiveDropdown();
+
+    // Check if all blanks are filled; if so, validate immediately without forcing a submit button click
+    const dropdowns = document.querySelectorAll('.custom-dropdown-container');
+    const allFilled = Array.from(dropdowns).every(dd => (dd.dataset.selected || '').trim() !== '');
+    if (allFilled) {
+      setTimeout(() => this.processValidation(), 150);
+    }
   },
 
   renderTestCurrent() {
@@ -349,6 +362,7 @@ const Stage6bController = {
     if (domCache.submitBtn) {
       domCache.submitBtn.textContent = "Submit Findings";
       domCache.submitBtn.disabled = false;
+      domCache.submitBtn.style.display = 'none'; // Auto-advances when all blanks are filled correctly
     }
     if (domCache.skipBtn) domCache.skipBtn.disabled = false;
 
@@ -361,11 +375,6 @@ const Stage6bController = {
   processValidation() {
     const { domCache } = this.state;
     this.closeActiveDropdown();
-
-    if (domCache.submitBtn && domCache.submitBtn.textContent !== "Submit Findings") {
-      this.nextWord();
-      return;
-    }
 
     const dropdowns = document.querySelectorAll('.custom-dropdown-container');
     let allCorrect = true;
@@ -403,9 +412,12 @@ const Stage6bController = {
       this.updateScoreboard(pts);
 
       if (domCache.skipBtn) domCache.skipBtn.disabled = true;
-      if (domCache.submitBtn) domCache.submitBtn.textContent = (this.state.testIndex < this.state.testSequence.length - 1) ? "Next Word" : "Proceed";
+      if (domCache.submitBtn) domCache.submitBtn.style.display = 'none';
+
+      // Snappy auto-advance without requiring extra click
+      setTimeout(() => this.nextWord(), 750);
     } else {
-      this.triggerFeedback("Incorrect interpretation. Try again or skip.", 'error');
+      this.triggerFeedback("Incorrect interpretation. Try another choice or skip.", 'error');
     }
   },
 
@@ -433,7 +445,10 @@ const Stage6bController = {
 
     const { domCache } = this.state;
     if (domCache.skipBtn) domCache.skipBtn.disabled = true;
-    if (domCache.submitBtn) domCache.submitBtn.textContent = (this.state.testIndex < this.state.testSequence.length - 1) ? "Next Definition" : "Proceed";
+    if (domCache.submitBtn) {
+      domCache.submitBtn.style.display = '';
+      domCache.submitBtn.textContent = (this.state.testIndex < this.state.testSequence.length - 1) ? "Next Definition →" : "Proceed to Stage 7 🏆 →";
+    }
   },
 
   nextWord() {
