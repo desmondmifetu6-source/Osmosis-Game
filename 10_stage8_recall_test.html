@@ -3,273 +3,504 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Osmosis - Stage 7: Hall of Fame</title>
+  <title>Osmosis - Stage 8: Final Recall Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="core_styles.css">
   <style>
-    .recall-card {
-      padding: 3rem 2.5rem !important;
-      max-width: 650px;
-      margin: auto;
-      background: rgba(255, 255, 255, 0.35) !important;
-      backdrop-filter: blur(25px) saturate(200%) !important;
-      -webkit-backdrop-filter: blur(25px) saturate(200%) !important;
-      border: 1px solid rgba(255, 255, 255, 0.5) !important;
-      border-top: 2px solid rgba(255, 255, 255, 0.8) !important;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
-      border-radius: 36px !important;
+    /* ============================================================
+       STAGE 8 — Final Recall Test (Freed from the Box)
+       ============================================================ */
+
+    * { box-sizing: border-box; }
+
+    body.stage8-page {
+      background: linear-gradient(145deg, #dde3f8 0%, #ede5f8 45%, #d6eaf8 100%) !important;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #1e1b4b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
     }
 
-    .header {
+    /* Suppress legacy global floating fixed timer */
+    #global-game-timer {
+      display: none !important;
+    }
+
+    /* ── Top Bar ─────────────────────────────────────────────── */
+    .s8-topbar {
+      width: 100%;
+      max-width: 1024px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      padding: 1.4rem 1.6rem 0;
     }
 
-    .header h2 {
-      margin: 0;
+    .s8-badge {
+      background: #1e1b4b;
+      color: #ffffff;
       font-weight: 700;
-      color: var(--text-main);
-      letter-spacing: 1px;
+      font-size: 0.95rem;
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 4px 14px rgba(30, 27, 75, 0.22);
+      white-space: nowrap;
     }
 
+    .s8-topbar-center {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      flex: 1;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    .s8-divider {
+      height: 1.5px;
+      width: 100px;
+      background: rgba(99, 102, 241, 0.3);
+      flex-shrink: 0;
+    }
+
+    .s8-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1e1b4b;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ── Main Stage Area ─────────────────────────────────────── */
+    .s8-stage {
+      width: 100%;
+      max-width: 1024px;
+      padding: 1.5rem 1.6rem 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.4rem;
+      flex: 1;
+    }
+
+    /* ── Meta Progress Row ───────────────────────────────────── */
+    .s8-meta {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.2rem;
+    }
+
+    .s8-meta-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .s8-meta-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #4f46e5;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .s8-meta-sub {
+      font-size: 0.9rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .s8-progress-badge {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #475569;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 0.35rem 0.95rem;
+      border-radius: 999px;
+      border: 1px solid rgba(226, 232, 240, 0.85);
+    }
+
+    /* ── Spacious Flashing Memory Hero Card (Freed from the box) ── */
     .nd-memory-box {
-      min-height: 140px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
-      padding: 1.5rem 2rem;
-      margin: 1rem 0 1.5rem;
+      width: 100%;
+      min-height: 220px;
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 3.2rem 3.5rem;
+      box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.03),
+        0 20px 45px rgba(79, 70, 229, 0.08);
+      border: 1px solid rgba(226, 232, 240, 0.85);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      position: relative;
-      overflow: hidden;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
     }
 
     .nd-word {
-      font-size: clamp(2rem, 5vw, 3rem);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
       font-weight: 800;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: #0f172a;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
-      z-index: 2;
+      color: #4f46e5;
+      margin: 0 0 1.2rem;
+      word-break: break-word;
     }
 
     .nd-meaning {
-      color: #334155;
-      line-height: 1.6;
+      color: #1e1b4b;
+      line-height: 2.1;
+      font-size: 1.7rem;
+      font-weight: 500;
       max-width: 95%;
-      font-size: 1.25rem;
-      font-weight: 700;
-      z-index: 2;
+      text-align: left;
+      word-break: break-word;
     }
 
     .nd-hidden-note {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--accent-primary);
-      opacity: 0.9;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #4f46e5;
+      letter-spacing: 0.5px;
     }
 
-    .nd-input {
-      margin-bottom: 1rem;
-    }
-
-    .nd-input input,
-    .nd-input textarea {
+    /* ── Recall Inputs Section ───────────────────────────────── */
+    .nd-input-wrapper {
       width: 100%;
-      box-sizing: border-box;
-      border: 2px solid rgba(255, 255, 255, 0.6);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.6);
-      padding: 1rem 1.25rem;
-      color: #0f172a;
-      font-weight: 600;
-      font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .nd-input-group {
+      width: 100%;
+    }
+
+    .nd-input-group input {
+      width: 100%;
       font-family: inherit;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
-    }
-
-    .nd-input input:focus,
-    .nd-input textarea:focus {
+      font-size: 1.35rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #1e1b4b;
+      background: #ffffff;
+      border: 2px solid #c7d2fe;
+      border-radius: 18px;
+      padding: 1.15rem 1.5rem;
       outline: none;
-      background: rgba(255, 255, 255, 0.9);
-      border-color: #0f172a;
-      box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
+      transition: all 0.22s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
     }
 
-    .nd-input textarea {
-      min-height: 90px;
+    .nd-input-group textarea {
+      width: 100%;
+      font-family: inherit;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.7;
+      color: #1e1b4b;
+      background: #ffffff;
+      border: 2px solid #c7d2fe;
+      border-radius: 18px;
+      padding: 1.2rem 1.5rem;
+      min-height: 120px;
       resize: vertical;
-      line-height: 1.4;
+      outline: none;
+      transition: all 0.22s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
     }
 
+    .nd-input-group input:focus,
+    .nd-input-group textarea:focus {
+      border-color: #4f46e5;
+      background: #ffffff;
+      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+    }
+
+    /* ── Feedback Banner ─────────────────────────────────────── */
     .nd-feedback {
-      min-height: 2.5rem;
+      min-height: 2.2rem;
+      font-size: 1.15rem;
       font-weight: 800;
-      margin: 1rem 0;
-      font-size: 1.1rem;
       text-align: center;
-      border-radius: 12px;
-      padding: 0.5rem 1rem;
+      border-radius: 14px;
+      padding: 0.6rem 1.2rem;
+      letter-spacing: 0.3px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
     }
 
     .nd-feedback.ok {
-      background: rgba(74, 222, 128, 0.25);
-      color: #166534;
-      border: 1px solid rgba(74, 222, 128, 0.5);
+      background: #dcfce7;
+      color: #15803d;
+      border: 1.5px solid #86efac;
     }
 
     .nd-feedback.partial {
-      background: rgba(251, 191, 36, 0.25);
-      color: #92400e;
-      border: 1px solid rgba(251, 191, 36, 0.5);
+      background: #fef3c7;
+      color: #b45309;
+      border: 1.5px solid #fde68a;
     }
 
     .nd-feedback.bad {
-      background: rgba(248, 113, 113, 0.25);
-      color: #991b1b;
-      border: 1px solid rgba(248, 113, 113, 0.5);
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 1.5px solid #fca5a5;
     }
 
+    /* ── Reveal Answer Box ───────────────────────────────────── */
     .nd-reveal {
-      background: rgba(255, 255, 255, 0.55);
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      padding: 2rem;
-      margin-top: 1.5rem;
+      width: 100%;
+      background: #ffffff;
       border-radius: 20px;
+      padding: 2.2rem;
+      border: 2px solid #a5b4fc;
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08);
       display: none;
-      color: #0f172a;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
 
     .nd-reveal strong {
       display: block;
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
       font-weight: 800;
-      font-size: 1.5rem;
-      color: #0f172a;
+      font-size: 1.6rem;
+      color: #4f46e5;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
     }
 
     .nd-reveal p {
-      color: #334155;
-      font-weight: 600;
-      font-size: 1.1rem;
-      line-height: 1.6;
+      margin: 0;
+      color: #1e1b4b;
+      font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 1.8;
     }
 
-    .boss-btn {
+    /* ── Action Buttons ──────────────────────────────────────── */
+    .s8-actions {
+      display: flex;
+      gap: 1.2rem;
       width: 100%;
-      max-width: 320px;
-      background: var(--accent-primary);
-      color: #ffffff;
+    }
+
+    .s8-btn {
+      flex: 1;
+      padding: 1.15rem 1.8rem;
+      border-radius: 16px;
       border: none;
-      padding: 1.2rem 2.5rem;
-      border-radius: 12px;
-      font-size: 1.2rem;
+      font-family: inherit;
+      font-size: 1.1rem;
       font-weight: 800;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       text-transform: uppercase;
       letter-spacing: 1px;
-      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+      cursor: pointer;
+      transition: all 0.22s ease;
+      text-align: center;
     }
 
-    .boss-btn:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4);
+    .s8-btn-skip {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1.5px solid rgba(148, 163, 184, 0.4);
+      color: #475569;
     }
 
-    @media (max-width: 480px) {
-      .recall-card {
-        padding: 2rem 1.25rem;
+    .s8-btn-skip:hover {
+      background: #ffffff;
+      color: #0f172a;
+      transform: translateY(-2px);
+    }
+
+    .s8-btn-main {
+      background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 22px rgba(79, 70, 229, 0.35);
+    }
+
+    .s8-btn-main:hover:not(:disabled) {
+      filter: brightness(1.08);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(79, 70, 229, 0.45);
+    }
+
+    .s8-btn-main:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    /* ── Mobile & Responsive Spacing ───────────────────────── */
+    @media (max-width: 640px) {
+      .s8-topbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.85rem 1rem 0;
+        gap: 0.6rem 0;
       }
-
+      .s8-badge {
+        font-size: 0.85rem;
+        padding: 0.42rem 0.95rem;
+      }
+      .s8-topbar-center {
+        order: 3;
+        width: 100%;
+        padding: 0.2rem 0 0;
+        justify-content: center;
+        gap: 0;
+      }
+      .s8-title {
+        font-size: 0.95rem;
+        text-align: center;
+      }
+      .s8-divider {
+        display: none;
+      }
+      .s8-stage {
+        padding: 1rem 1rem 2rem;
+        gap: 1.1rem;
+      }
+      .nd-memory-box {
+        padding: 2rem 1.4rem;
+        border-radius: 20px;
+        min-height: 180px;
+      }
       .nd-word {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        letter-spacing: 2px;
       }
-
       .nd-meaning {
-        font-size: 1.1rem;
-      }
-
-      .nd-input input,
-      .nd-input textarea {
-        font-size: 1.1rem;
-        padding: 1rem;
-      }
-
-      .nd-reveal {
-        padding: 1.5rem;
-      }
-
-      .nd-reveal strong {
         font-size: 1.25rem;
+        line-height: 1.95;
+      }
+      .nd-input-group input {
+        font-size: 1.15rem;
+        padding: 0.95rem 1.2rem;
+      }
+      .nd-input-group textarea {
+        font-size: 1.1rem;
+        padding: 1rem 1.2rem;
+      }
+      .nd-reveal {
+        padding: 1.5rem 1.2rem;
+      }
+      .nd-reveal strong {
+        font-size: 1.3rem;
+      }
+      .nd-reveal p {
+        font-size: 1.1rem;
+      }
+      .s8-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .s8-btn {
+        width: 100%;
+        padding: 1rem 1.2rem;
+        font-size: 1rem;
       }
     }
 
-
+    @media (max-width: 380px) {
+      .s8-topbar {
+        padding: 0.75rem 0.6rem 0;
+      }
+      .s8-badge {
+        font-size: 0.78rem;
+        padding: 0.38rem 0.7rem;
+      }
+      .s8-title {
+        font-size: 0.85rem;
+      }
+    }
   </style>
 </head>
 
-<body>
-  <div class="scoreboard" id="scoreboard">Score: <span id="current-score">0</span></div>
-  <div class="app-container">
-    <div class="card recall-card">
-      <div class="header">
-        <div style="text-align: left;">
-          <h2 style="margin-bottom: 0.2rem; font-size: 1.4rem;">Final Recall Test</h2>
-          <p style="font-size: 0.9rem; color: #64748b; font-weight: 600; margin: 0;">Cognitive Consolidation Stage</p>
-        </div>
-        <div id="nd-progress"
-          style="font-size:1.5rem; font-weight:bold; color: #0f172a; background: rgba(255,255,255,0.6); padding: 0.3rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.8); white-space: nowrap;">
-          1 / 10</div>
-      </div>
-      <div id="nd-memory-box" class="nd-memory-box" style="display: none;"></div>
+<body class="stage8-page">
 
-      <div id="nd-input-wrap" style="display:none;">
-        <div class="nd-input">
-          <input type="text" id="nd-word-input" autocomplete="off" autocorrect="off" autocapitalize="off"
-            spellcheck="false" placeholder="Type the word you saw">
-        </div>
-        <div class="nd-input">
-          <textarea id="nd-meaning-input" placeholder="Type the meaning you saw" autocomplete="off" autocorrect="off"
-            autocapitalize="off" spellcheck="false"></textarea>
-        </div>
-      </div>
+  <!-- ── Top Bar ── -->
+  <header class="s8-topbar">
+    <div class="s8-badge">Score : <span id="current-score">0</span></div>
 
-      <div id="nd-feedback" class="nd-feedback" aria-live="polite"></div>
-      <div id="nd-reveal" class="nd-reveal">
-        <strong id="nd-reveal-word"></strong>
-        <p id="nd-reveal-meaning" style="margin:0;"></p>
-      </div>
+    <div class="s8-topbar-center">
+      <span class="s8-divider"></span>
+      <span class="s8-title">
+        <span>🏆</span>
+        Final Recall Test
+      </span>
+      <span class="s8-divider"></span>
+    </div>
 
-      <div style="display:flex; gap: 12px; justify-content:center; margin-top:1rem;">
-        <button id="nd-skip-btn" class="classic-btn"
-          style="flex: 1; width: auto; background: rgba(255,255,255,0.5); color: #475569; border: 1.5px solid rgba(0,0,0,0.1); box-shadow: none; backdrop-filter: blur(10px); margin-bottom: 0;">Skip</button>
-        <button id="nd-main-btn" class="classic-btn blue-gradient"
-          style="flex: 1; width: auto; margin-bottom: 0;">Continue</button>
+    <div class="s8-badge">
+      Time : <span id="timer-display">00:00</span>
+    </div>
+  </header>
+
+  <!-- ── Main Stage Area ── -->
+  <main class="s8-stage">
+
+    <div class="s8-meta">
+      <div class="s8-meta-info">
+        <span class="s8-meta-title">Final Recall Test</span>
+        <span class="s8-meta-sub">Cognitive Consolidation Stage</span>
+      </div>
+      <div id="nd-progress" class="s8-progress-badge">1 / 10</div>
+    </div>
+
+    <!-- Spacious Flashing Definition Hero Area -->
+    <div id="nd-memory-box" class="nd-memory-box" style="display: none;"></div>
+
+    <!-- Active Input Section -->
+    <div id="nd-input-wrap" class="nd-input-wrapper" style="display: none;">
+      <div class="nd-input-group">
+        <input type="text" id="nd-word-input" autocomplete="off" autocorrect="off" autocapitalize="off"
+          spellcheck="false" placeholder="Type the word you saw">
+      </div>
+      <div class="nd-input-group">
+        <textarea id="nd-meaning-input" placeholder="Type the meaning you saw" autocomplete="off" autocorrect="off"
+          autocapitalize="off" spellcheck="false"></textarea>
       </div>
     </div>
-  </div>
 
+    <!-- Feedback Message -->
+    <div id="nd-feedback" class="nd-feedback" aria-live="polite"></div>
+
+    <!-- Reveal Area on Skip / Forfeit -->
+    <div id="nd-reveal" class="nd-reveal">
+      <strong id="nd-reveal-word"></strong>
+      <p id="nd-reveal-meaning"></p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="s8-actions">
+      <button id="nd-skip-btn" class="s8-btn s8-btn-skip">Skip</button>
+      <button id="nd-main-btn" class="s8-btn s8-btn-main">Continue</button>
+    </div>
+
+  </main>
 
   <script src="core_dictionary.js"></script>
   <script src="core_distractor_engine.js"></script>
@@ -283,7 +514,6 @@
     if (skipBtn) {
       skipBtn.addEventListener('click', function () {
         if (typeof Stage7Controller !== 'undefined') {
-          // Reveal answer if in answer phase, then advance
           const sc = Stage7Controller;
           if (sc.state.phase === 'answer') {
             const word = sc.state.sequence[sc.state.idx];
@@ -302,8 +532,7 @@
         }
       });
     }
-
-
   </script>
+</body>
 
 </html>
