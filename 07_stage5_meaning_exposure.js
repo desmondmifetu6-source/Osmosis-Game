@@ -48,6 +48,7 @@ function startRevisionPhase() {
         <strong>${w}</strong>
         <div class="rev-audio-btns">
           <button type="button" class="rev-voice-btn rev-pronounce-btn" title="Pronounce word">🔊 Word</button>
+          <button type="button" class="rev-voice-btn rev-pause-btn" title="Pause / Resume reading">⏸️ Pause</button>
           <button type="button" class="rev-voice-btn rev-def-btn" title="Read meaning aloud">📖 Meaning</button>
         </div>
       </div>
@@ -56,19 +57,39 @@ function startRevisionPhase() {
     listEl.appendChild(item); // Tape the box to the piece of paper
 
     const pronounceBtn = item.querySelector('.rev-pronounce-btn');
+    const pauseBtn = item.querySelector('.rev-pause-btn');
+    const defBtn = item.querySelector('.rev-def-btn');
+
     if (pronounceBtn) {
       pronounceBtn.addEventListener('click', () => {
+        if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
         if (typeof VoiceManager !== 'undefined') {
-          VoiceManager.speak(w, { force: true });
+          VoiceManager.speak(w, { 
+            force: true,
+            onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
+          });
         }
       });
     }
 
-    const defBtn = item.querySelector('.rev-def-btn');
+    if (pauseBtn) {
+      pauseBtn.addEventListener('click', () => {
+        if (typeof VoiceManager !== 'undefined') {
+          const isPaused = VoiceManager.togglePause();
+          pauseBtn.innerHTML = isPaused ? '▶️ Resume' : '⏸️ Pause';
+        }
+      });
+    }
+
     if (defBtn) {
       defBtn.addEventListener('click', () => {
+        if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
         if (typeof VoiceManager !== 'undefined') {
-          VoiceManager.speak(defText, { force: true, rate: 0.95 });
+          VoiceManager.speak(defText, { 
+            force: true, 
+            rate: 0.95,
+            onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
+          });
         }
       });
     }

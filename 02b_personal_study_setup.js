@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var currentModalWord = '';
   var currentModalDef = '';
   var modalPronounceBtn = document.getElementById('ps-modal-pronounce-btn');
+  var modalPauseBtn = document.getElementById('ps-modal-pause-btn');
   var modalReadDefBtn = document.getElementById('ps-modal-read-def-btn');
 
   function showDiagram(word, diagramSrc, definition) {
@@ -97,8 +98,22 @@ document.addEventListener('DOMContentLoaded', function () {
   if (modalPronounceBtn) {
     modalPronounceBtn.addEventListener('click', function (e) {
       e.stopPropagation();
+      if (modalPauseBtn) modalPauseBtn.innerHTML = '⏸️ Pause';
       if (currentModalWord && typeof VoiceManager !== 'undefined') {
-        VoiceManager.speak(currentModalWord, { force: true });
+        VoiceManager.speak(currentModalWord, { 
+          force: true,
+          onend: function() { if (modalPauseBtn) modalPauseBtn.innerHTML = '⏸️ Pause'; }
+        });
+      }
+    });
+  }
+
+  if (modalPauseBtn) {
+    modalPauseBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (typeof VoiceManager !== 'undefined') {
+        var isPaused = VoiceManager.togglePause();
+        modalPauseBtn.innerHTML = isPaused ? '▶️ Resume' : '⏸️ Pause';
       }
     });
   }
@@ -106,8 +121,13 @@ document.addEventListener('DOMContentLoaded', function () {
   if (modalReadDefBtn) {
     modalReadDefBtn.addEventListener('click', function (e) {
       e.stopPropagation();
+      if (modalPauseBtn) modalPauseBtn.innerHTML = '⏸️ Pause';
       if (currentModalDef && typeof VoiceManager !== 'undefined') {
-        VoiceManager.speak(currentModalDef, { force: true, rate: 0.95 });
+        VoiceManager.speak(currentModalDef, { 
+          force: true, 
+          rate: 0.95,
+          onend: function() { if (modalPauseBtn) modalPauseBtn.innerHTML = '⏸️ Pause'; }
+        });
       }
     });
   }

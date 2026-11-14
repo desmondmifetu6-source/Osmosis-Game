@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalDef = document.getElementById('diag-modal-def');
   const modalClose = document.getElementById('diag-modal-close');
   const pronounceBtn = document.getElementById('diag-pronounce-btn');
+  const pauseBtn = document.getElementById('diag-pause-btn');
   const readDefBtn = document.getElementById('diag-read-def-btn');
 
   if (goHomeBtn) {
@@ -277,6 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeModal() {
     modalOverlay.classList.remove('active');
+    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -296,21 +298,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // Audio actions inside Modal
   pronounceBtn.addEventListener('click', () => {
     if (!currentActiveItem) return;
+    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(currentActiveItem.primaryTerm);
       u.rate = 0.9;
+      u.onend = () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; };
       window.speechSynthesis.speak(u);
     }
   });
 
+  if (pauseBtn) {
+    pauseBtn.addEventListener('click', () => {
+      if ('speechSynthesis' in window) {
+        if (window.speechSynthesis.paused) {
+          window.speechSynthesis.resume();
+          pauseBtn.innerHTML = '⏸️ Pause';
+        } else if (window.speechSynthesis.speaking) {
+          window.speechSynthesis.pause();
+          pauseBtn.innerHTML = '▶️ Resume';
+        }
+      }
+    });
+  }
+
   readDefBtn.addEventListener('click', () => {
     if (!modalDef) return;
+    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
       const textToRead = `${currentActiveItem ? currentActiveItem.primaryTerm : ''}. ${modalDef.innerText || modalDef.textContent}`;
       const u = new SpeechSynthesisUtterance(textToRead);
       u.rate = 0.95;
+      u.onend = () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; };
       window.speechSynthesis.speak(u);
     }
   });

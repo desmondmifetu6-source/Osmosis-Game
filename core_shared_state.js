@@ -623,6 +623,42 @@ const VoiceManager = {
         this.synth.cancel();
       } catch (err) {}
     }
+  },
+
+  pause: function () {
+    if (this.synth && this.synth.speaking && !this.synth.paused) {
+      try {
+        this.synth.pause();
+      } catch (err) {}
+    }
+  },
+
+  resume: function () {
+    if (this.synth && this.synth.paused) {
+      try {
+        this.synth.resume();
+      } catch (err) {}
+    }
+  },
+
+  togglePause: function () {
+    if (!this.synth) return false;
+    if (this.synth.paused) {
+      this.resume();
+      return false; // unpaused
+    } else if (this.synth.speaking) {
+      this.pause();
+      return true; // paused
+    }
+    return false;
+  },
+
+  isPaused: function () {
+    return !!(this.synth && this.synth.paused);
+  },
+
+  isSpeaking: function () {
+    return !!(this.synth && this.synth.speaking);
   }
 };
 
