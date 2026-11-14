@@ -116,9 +116,14 @@ const Stage5Controller = {
     const otherWords = Object.keys(gameData.meanings || {}).filter(w => w !== currentWord);
     let options;
     if (typeof window.DistractorEngine !== 'undefined') {
-      options = window.DistractorEngine.getOptionsWithAnswer(currentWord, 4, {
-        exclude: otherWords
-      });
+      // ✨ Semantic Gravity: distractors are domain-cousins of the correct word,
+      // not random POS-matched words. E.g. "heart" → ["liver", "kidney", "artery"]
+      options = window.DistractorEngine.getSemanticOptions(
+        currentWord,
+        correctMeaning,
+        4,
+        { exclude: otherWords }
+      );
     } else {
       const pool = this.shuffle(otherWords);
 

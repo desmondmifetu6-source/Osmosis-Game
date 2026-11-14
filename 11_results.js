@@ -40,6 +40,9 @@ const ResultsController = {
     this.renderWordsList();
     this.updateGlobalHistory();
     this.attachListeners();
+    if (this.state.gameData.multiplayerMode) {
+      this.initMultiplayer();
+    }
 
     // Play Victory Trumpet Fanfare!
     if (typeof AudioManager !== 'undefined') {

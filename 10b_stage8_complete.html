@@ -244,10 +244,10 @@
       if (badge) badge.textContent = `Final Score: ${gameData.score || 0} pts`;
     })();
 
-    // Continue button → go to results
+    // Continue button → go to results (multiplayer goes directly to multiplayer_results.html)
     document.getElementById('hof-continue-btn').addEventListener('click', () => {
       const gameData = sharedState.load();
-      const target = '11_results.html';
+      const target = (gameData.multiplayerMode && gameData.currentRoomId) ? 'multiplayer_results.html' : '11_results.html';
       if (typeof AudioManager !== 'undefined') AudioManager.play('click');
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition(target);
       else window.location.href = target;
