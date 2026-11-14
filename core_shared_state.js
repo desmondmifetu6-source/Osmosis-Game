@@ -41,20 +41,15 @@ const sharedState = {
   clearGameSession: function (keepUserAndAvatar = true) {
     let username = '';
     let avatar = '🤓';
-    const prevState = this.load();
-
-    if (prevState.multiplayerMode && prevState.currentRoomId && this.socket) {
-      try {
-        this.socket.emit('leave_room', {
-          roomId: prevState.currentRoomId,
-          username: prevState.username || localStorage.getItem('osmosis_user') || 'Guest'
-        });
-      } catch (e) {}
-    }
+    let multiplayerMode = false;
+    let currentRoomId = null;
 
     if (keepUserAndAvatar) {
-      username = prevState.username || localStorage.getItem('osmosis_user') || '';
-      avatar = prevState.avatar || localStorage.getItem('osmosis_avatar') || '🤓';
+      const state = this.load();
+      username = state.username || localStorage.getItem('osmosis_user') || '';
+      avatar = state.avatar || '🤓';
+      multiplayerMode = state.multiplayerMode || false;
+      currentRoomId = state.currentRoomId || null;
     }
 
     const cleanState = {
@@ -72,10 +67,8 @@ const sharedState = {
       sessionStartedAt: null,
       sessionEndedAt: null,
       stageScores: {},
-      personalStudyMode: false,
-      multiplayerMode: false,
-      currentRoomId: null,
-      currentStage: 1
+      multiplayerMode: multiplayerMode,
+      currentRoomId: currentRoomId
     };
 
     this.save(cleanState);
@@ -165,121 +158,18 @@ const sharedState = {
     }[tag] || tag));
   },
 
-  getSocketServerUrl: function () {
-    if (typeof window === 'undefined') return undefined;
-    return window.OSMOSIS_SERVER_URL || localStorage.getItem('osmosis_server_url') || undefined;
-  },
-
-  getCurrentStageNumber: function () {
-    if (typeof window === 'undefined') return 1;
-    const p = window.location.pathname;
-    if (p.includes('03_stage1')) return 1;
-    if (p.includes('04_stage2')) return 2;
-    if (p.includes('05_stage3')) return 3;
-    if (p.includes('06_stage4')) return 4;
-    if (p.includes('07_stage5')) return 5;
-    if (p.includes('08_stage6')) return 6;
-    if (p.includes('08b_stage6b')) return 6;
-    if (p.includes('09_stage7')) return 7;
-    if (p.includes('10_stage8')) return 8;
-    return 1;
-  },
-
-  recordWordMastery: function (word, isCorrect) {
-    if (!word) return;
-    const key = String(word).trim().toLowerCase();
-    if (!key) return;
-    try {
-      const store = JSON.parse(localStorage.getItem('osmosis_mastery_v1') || '{}');
-      const now = Date.now();
-      const prev = store[key] || {
-        word: String(word).trim(),
-        attempts: 0,
-        hits: 0,
-        misses: 0,
-        streak: 0,
-        intervalDays: 0,
-        nextReviewAt: now,
-        lastSeenAt: now
-      };
-      prev.word = String(word).trim();
-      prev.attempts += 1;
-      prev.lastSeenAt = now;
-      if (isCorrect) {
-        prev.hits += 1;
-        prev.streak += 1;
-        const intervals = [1, 3, 7, 14, 30];
-        const days = intervals[Math.min(prev.streak - 1, intervals.length - 1)];
-        prev.intervalDays = days;
-        prev.nextReviewAt = now + days * 86400000;
-      } else {
-        prev.misses += 1;
-        prev.streak = 0;
-        prev.intervalDays = 0;
-        prev.nextReviewAt = now; // Due immediately for spaced repetition
-      }
-      store[key] = prev;
-      localStorage.setItem('osmosis_mastery_v1', JSON.stringify(store));
-    } catch (e) {}
-  },
-
-  getDueReviewWords: function (limit = 5) {
-    try {
-      const store = JSON.parse(localStorage.getItem('osmosis_mastery_v1') || '{}');
-      const now = Date.now();
-      return Object.values(store)
-        .filter(item => (item.nextReviewAt || 0) <= now || item.streak === 0)
-        .sort((a, b) => {
-          // Prioritize missed/low-streak terms first, then oldest due
-          if ((a.streak || 0) !== (b.streak || 0)) return (a.streak || 0) - (b.streak || 0);
-          return (a.nextReviewAt || 0) - (b.nextReviewAt || 0);
-        })
-        .slice(0, limit);
-    } catch (e) {
-      return [];
-    }
-  },
-
-  getMasteryStats: function () {
-    try {
-      const store = JSON.parse(localStorage.getItem('osmosis_mastery_v1') || '{}');
-      const entries = Object.values(store);
-      const now = Date.now();
-      let attempts = 0;
-      let hits = 0;
-      let masteredCount = 0;
-      let dueCount = 0;
-      entries.forEach(item => {
-        attempts += item.attempts || 0;
-        hits += item.hits || 0;
-        if ((item.streak || 0) >= 2) masteredCount++;
-        if ((item.nextReviewAt || 0) <= now || item.streak === 0) dueCount++;
-      });
-      return {
-        totalTerms: entries.length,
-        masteredCount,
-        dueCount,
-        accuracyPct: attempts > 0 ? Math.round((hits / attempts) * 100) : 0,
-        entries
-      };
-    } catch (e) {
-      return { totalTerms: 0, masteredCount: 0, dueCount: 0, accuracyPct: 0, entries: [] };
-    }
-  },
-
-  syncScore: function() {
+  syncScore: function () {
     const state = this.load();
     if (state.multiplayerMode && state.currentRoomId) {
       this.reportScoreToServer(state.currentRoomId, state.score || 0);
     }
   },
 
-  reportScoreToServer: function(roomId, score) {
+  reportScoreToServer: function (roomId, score) {
     if (typeof io !== 'undefined') {
       const state = this.load();
       if (!this.socket) {
-        const serverUrl = this.getSocketServerUrl();
-        this.socket = serverUrl ? io(serverUrl) : io();
+        this.socket = io();
       }
       this.socket.off('leaderboard_update');
       this.socket.on('leaderboard_update', (data) => this.renderLeaderboard(data.players));
@@ -287,39 +177,24 @@ const sharedState = {
       this.socket.emit('update_score', {
         roomId: roomId,
         score: score,
-        username: state.username || localStorage.getItem('osmosis_user') || 'Guest',
-        time: state.totalTime || 0,
-        currentStage: this.getCurrentStageNumber(),
-        words: state.selectedWords || [],
-        meanings: state.meanings || {}
+        username: localStorage.getItem('osmosis_user') || 'Guest',
+        time: state.totalTime || 0
       });
     }
   },
 
-  initMultiplayer: function() {
+  initMultiplayer: function () {
     const state = this.load();
     if (state.multiplayerMode && state.currentRoomId && typeof io !== 'undefined') {
       if (!this.socket) {
-        const serverUrl = this.getSocketServerUrl();
-        this.socket = serverUrl ? io(serverUrl) : io();
+        this.socket = io();
       }
-
-      const stageNum = this.getCurrentStageNumber();
-      const username = state.username || localStorage.getItem('osmosis_user') || 'Guest';
 
       // Re-join the room so server knows this socket is active in this room
       this.socket.emit('join_room', {
         roomId: state.currentRoomId,
-        username: username,
-        avatar: state.avatar || localStorage.getItem('osmosis_avatar') || '🤓'
-      });
-
-      this.socket.emit('update_score', {
-        roomId: state.currentRoomId,
-        username: username,
-        score: state.score || 0,
-        time: state.totalTime || 0,
-        currentStage: stageNum
+        username: localStorage.getItem('osmosis_user') || 'Guest',
+        avatar: state.avatar || '🤓'
       });
 
       // Listen for leaderboard updates from other players
@@ -334,18 +209,12 @@ const sharedState = {
     }
   },
 
-  renderLeaderboard: function(players) {
-    if (!Array.isArray(players)) return;
-    // We don't want the floating scoreboard on results, complete, lobby, or home menu
-    const p = window.location.pathname;
-    const hideBoard =
-      p.includes('results.html') ||
-      p.includes('home_menu.html') ||
-      p.includes('stage8_complete.html') ||
-      p.includes('multiplayer_lobby.html') ||
-      p.endsWith('/');
+  renderLeaderboard: function (players) {
+    // We don't want the floating scoreboard on the results page or the home menu
+    const isResultsPage = window.location.pathname.includes('results.html');
+    const isHome = window.location.pathname.includes('home_menu.html') || window.location.pathname.endsWith('/');
 
-    if (hideBoard) {
+    if (isResultsPage || isHome) {
       const existing = document.getElementById('mp-leaderboard');
       if (existing) existing.remove();
       return;
@@ -356,11 +225,11 @@ const sharedState = {
       el = document.createElement('div');
       el.id = 'mp-leaderboard';
       el.style.cssText = `
-        position: fixed; top: 1.5rem; left: 1.5rem;
-        background: rgba(255,255,255,0.78); backdrop-filter: blur(12px);
+        position: fixed; top: 1.5rem; left: 1.5rem; 
+        background: rgba(255,255,255,0.7); backdrop-filter: blur(12px);
         padding: 8px 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.5);
         box-shadow: 0 10px 25px rgba(0,0,0,0.15); z-index: 9998;
-        min-width: 150px; font-family: var(--font-main); pointer-events: none;
+        min-width: 140px; font-family: var(--font-main); pointer-events: none;
       `;
       document.body.appendChild(el);
     }
@@ -368,21 +237,20 @@ const sharedState = {
     // Sort players by score
     const sorted = [...players].sort((a, b) => (b.score || 0) - (a.score || 0));
 
-    el.innerHTML = `<h4 style="margin:0 0 8px 0; font-size: 0.6rem; font-weight: 800; letter-spacing:0.5px; color: var(--text-secondary); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 4px; opacity: 0.7;">LIVE BATTLE</h4>`;
-    const myName = this.load().username || localStorage.getItem('osmosis_user');
-    sorted.forEach((pItem, i) => {
-      const isMe = pItem.name === myName;
+    el.innerHTML = `<h4 style="margin:0 0 8px 0; font-size: 0.6rem; font-weight: 800; letter-spacing:0.5px; color: var(--text-secondary); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 4px; opacity: 0.7;">Score board</h4>`;
+    sorted.forEach((p, i) => {
+      const isMe = p.name === localStorage.getItem('osmosis_user');
       const div = document.createElement('div');
       div.style.cssText = `
-        display: flex; justify-content: space-between; align-items: center; gap: 10px;
+        display: flex; justify-content: space-between; align-items: center;
         margin-bottom: 4px; font-size: 0.75rem;
         ${isMe ? 'color: var(--accent-primary); font-weight: 700;' : ''}
       `;
-      const escapedAvatar = this.escapeHTML(pItem.avatar || '🤓');
-      const escapedName = this.escapeHTML(pItem.name || 'Guest');
+      const escapedAvatar = this.escapeHTML(p.avatar || '🤓');
+      const escapedName = this.escapeHTML(p.name || 'Guest');
       div.innerHTML = `
         <span>${i + 1}. ${escapedAvatar} ${escapedName}</span>
-        <span style="font-family: monospace; font-weight: 800;">${Number(pItem.score) || 0}</span>
+        <span style="font-family: monospace; font-weight: 800;">${Number(p.score) || 0}</span>
       `;
       el.appendChild(div);
     });
@@ -500,7 +368,7 @@ const AudioManager = {
 
     if (!this.ctx) return;
     if (this.ctx.state === 'suspended') {
-      try { this.ctx.resume(); } catch(e) {}
+      try { this.ctx.resume(); } catch (e) { }
     }
 
     const now = this.ctx.currentTime;
@@ -510,12 +378,12 @@ const AudioManager = {
         // Triumphant "Pa-na-na-na-na-naaa!" Victory Trumpet Fanfare
         // Notes: G4 (392Hz), C5 (523.25Hz), E5 (659.25Hz), G5 (783.99Hz), E5 (659.25Hz), G5 (783.99Hz)
         const notes = [
-          { freq: 392.00,  start: 0.00, duration: 0.09, vol: 0.25 }, // Pa
-          { freq: 523.25,  start: 0.10, duration: 0.09, vol: 0.27 }, // Na
-          { freq: 659.25,  start: 0.20, duration: 0.09, vol: 0.29 }, // Na
-          { freq: 783.99,  start: 0.30, duration: 0.16, vol: 0.30 }, // Na
-          { freq: 659.25,  start: 0.48, duration: 0.10, vol: 0.27 }, // Na
-          { freq: 783.99,  start: 0.60, duration: 0.65, vol: 0.35 }  // NAAAA!
+          { freq: 392.00, start: 0.00, duration: 0.09, vol: 0.25 }, // Pa
+          { freq: 523.25, start: 0.10, duration: 0.09, vol: 0.27 }, // Na
+          { freq: 659.25, start: 0.20, duration: 0.09, vol: 0.29 }, // Na
+          { freq: 783.99, start: 0.30, duration: 0.16, vol: 0.30 }, // Na
+          { freq: 659.25, start: 0.48, duration: 0.10, vol: 0.27 }, // Na
+          { freq: 783.99, start: 0.60, duration: 0.65, vol: 0.35 }  // NAAAA!
         ];
 
         notes.forEach(n => {
@@ -672,9 +540,9 @@ const VoiceManager = {
       if (!voices || voices.length === 0) return;
       // Preference: Natural, Google, British/US English voices
       this.selectedVoice = voices.find(v => (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Serena')) && v.lang.startsWith('en')) ||
-                           voices.find(v => v.lang === 'en-GB') ||
-                           voices.find(v => v.lang.startsWith('en')) ||
-                           voices[0];
+        voices.find(v => v.lang === 'en-GB') ||
+        voices.find(v => v.lang.startsWith('en')) ||
+        voices[0];
     };
 
     findVoice();
@@ -733,7 +601,7 @@ const VoiceManager = {
 
     const utterance = new SpeechSynthesisUtterance(cleaned);
     if (this.selectedVoice) utterance.voice = this.selectedVoice;
-    
+
     // Clear, comfortable educational pacing
     utterance.rate = options.rate || 0.92;
     utterance.pitch = options.pitch || 1.0;
@@ -752,12 +620,8 @@ const VoiceManager = {
   stop: function () {
     if (this.synth) {
       try {
-        // Chromium Web Speech can stay stuck if cancel() is called while paused
-        if (this.synth.paused) {
-          this.synth.resume();
-        }
         this.synth.cancel();
-      } catch (err) {}
+      } catch (err) { }
     }
   },
 
@@ -765,7 +629,7 @@ const VoiceManager = {
     if (this.synth && this.synth.speaking && !this.synth.paused) {
       try {
         this.synth.pause();
-      } catch (err) {}
+      } catch (err) { }
     }
   },
 
@@ -773,7 +637,7 @@ const VoiceManager = {
     if (this.synth && this.synth.paused) {
       try {
         this.synth.resume();
-      } catch (err) {}
+      } catch (err) { }
     }
   },
 
@@ -795,31 +659,6 @@ const VoiceManager = {
 
   isSpeaking: function () {
     return !!(this.synth && this.synth.speaking);
-  }
-};
-
-sharedState.recordSessionResult = function (gameData) {
-  try {
-    const data = gameData || this.load();
-    if (!data || !data.selectedWords || data.selectedWords.length === 0) return false;
-    if (sessionStorage.getItem('osmosis_saved_result')) return false;
-
-    const score = Number(data.score) || 0;
-    const currentTotal = parseInt(localStorage.getItem('osmosis_total_score'), 10) || 0;
-    localStorage.setItem('osmosis_total_score', String(currentTotal + score));
-
-    const history = JSON.parse(localStorage.getItem('osmosis_history') || '[]');
-    history.push({
-      date: new Date().toLocaleDateString(),
-      score: score,
-      words: data.selectedWords,
-      mode: data.multiplayerMode ? 'multiplayer' : (data.personalStudyMode ? 'personal' : 'campaign')
-    });
-    localStorage.setItem('osmosis_history', JSON.stringify(history));
-    sessionStorage.setItem('osmosis_saved_result', 'true');
-    return true;
-  } catch (e) {
-    return false;
   }
 };
 
@@ -1004,7 +843,7 @@ window.navigateWithTransition = function navigateWithTransition(url, delayMs = 2
 function setupPageTransitions() {
   if (!document.body) return;
   document.body.classList.add('page-preload');
-  
+
   // Background elements removed for maximum performance
 
   // Background formulas removed for maximum performance
@@ -1090,31 +929,25 @@ document.addEventListener('keydown', (e) => {
 });
 
 // =====================================================================
-// Developer Cheat Codes (Gated: disabled in multiplayer & non-local prod)
+// Developer Cheat Codes (Shhh!)
 // =====================================================================
 let cheatTapCount = 0;
 let cheatTapTimeout = null;
 
-function isDevCheatsAllowed() {
-  try {
-    const st = sharedState.load();
-    if (st && st.multiplayerMode) return false; // Never allow cheats in multiplayer
-    const host = window.location.hostname;
-    const hasDebugParam = window.location.search.includes('debug=1');
-    return host === 'localhost' || host === '127.0.0.1' || hasDebugParam;
-  } catch (e) {
-    return false;
-  }
-}
-
+// Look out for fingers tapping on mobile touchscreens...
 document.addEventListener('touchstart', (e) => {
-  if (!isDevCheatsAllowed()) return;
   const touch = e.touches[0];
   const screenWidth = window.innerWidth;
 
+  // If they tap specifically in the top right corner (where it's empty)...
   if (touch.clientX > screenWidth - 100 && touch.clientY < 100) {
+
+    // If they already unlocked Dev Mode, a single corner tap auto-completes the level!
     if (sessionStorage.getItem('devMode') === 'true') {
+      // Simulate pushing "Alt + P"
       document.dispatchEvent(new KeyboardEvent('keydown', { key: 'p', altKey: true, bubbles: true }));
+
+      // Floating text saying "HACK FIRED"
       const floater = document.createElement('div');
       floater.textContent = 'HACK FIRED';
       floater.style.cssText = 'position:fixed; top:80px; right:10px; color:var(--accent-primary); font-weight:bold; font-family:monospace; font-size:1rem; z-index:9999; text-shadow:1px 1px 3px #000; animation: floatUp 0.6s ease-out forwards; pointer-events:none;';
@@ -1123,11 +956,14 @@ document.addEventListener('touchstart', (e) => {
       return;
     }
 
+    // Every tap we count it. If you tap 5 times fast... you unlock the cheat.
     cheatTapCount++;
-    if (cheatTapTimeout) clearTimeout(cheatTapTimeout);
+    if (cheatTapTimeout) clearTimeout(cheatTapTimeout); // Stop the reset timer
 
+    // Did they hit 5 times?
     if (cheatTapCount >= 5) {
-      sessionStorage.setItem('devMode', 'true');
+      sessionStorage.setItem('devMode', 'true'); // Backpack updated: You are a god now.
+
       document.dispatchEvent(new KeyboardEvent('keydown', { key: 'p', altKey: true, bubbles: true }));
       cheatTapCount = 0;
 
@@ -1138,6 +974,7 @@ document.addEventListener('touchstart', (e) => {
       document.body.appendChild(floater);
       setTimeout(() => floater.remove(), 1500);
     } else {
+      // If you are too slow (take longer than 1 second), the tap combo drops back to 0.
       cheatTapTimeout = setTimeout(() => { cheatTapCount = 0; }, 1000);
     }
   }

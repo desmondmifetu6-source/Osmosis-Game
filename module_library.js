@@ -177,7 +177,7 @@ function performSearch() {
   const diagramBox = document.getElementById('res-diagram-box');
   const diagramContent = document.getElementById('res-diagram-content');
   const diagramImg = document.getElementById('res-diagram-img');
-  
+
   let diagramSrc = null;
   const diagMap = window.DictionaryDiagrams || window.DICTIONARY_DIAGRAMS;
   if (typeof diagMap !== 'undefined') {
@@ -187,10 +187,10 @@ function performSearch() {
     const rawKey = (entry.raw || '').toLowerCase().trim();
 
     diagramSrc = diagMap[wordKey] ||
-                 diagMap[rawKey] ||
-                 diagMap[baseWordKey] ||
-                 diagMap[queryKey] ||
-                 null;
+      diagMap[rawKey] ||
+      diagMap[baseWordKey] ||
+      diagMap[queryKey] ||
+      null;
   }
 
   if (diagramSrc && !diagramSrc.startsWith('diagrams/') && !diagramSrc.startsWith('/') && !diagramSrc.startsWith('http')) {
@@ -215,8 +215,6 @@ function performSearch() {
 
   currentLoadedEntry = entry;
   resultEl.style.display = 'block';
-  if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
-  resetDictPauseBtn();
   if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
 }
 
@@ -225,19 +223,13 @@ const pronounceBtn = document.getElementById('dict-pronounce-btn');
 const pauseBtn = document.getElementById('dict-pause-btn');
 const readDefBtn = document.getElementById('dict-read-def-btn');
 
-function resetDictPauseBtn() {
-  const btn = document.getElementById('dict-pause-btn');
-  if (btn) btn.innerHTML = '⏸️ Pause';
-}
-
 if (pronounceBtn) {
   pronounceBtn.addEventListener('click', () => {
-    resetDictPauseBtn();
+    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
     if (currentLoadedEntry && typeof VoiceManager !== 'undefined') {
       VoiceManager.speak(currentLoadedEntry.word, {
         force: true,
-        onend: resetDictPauseBtn,
-        onerror: resetDictPauseBtn
+        onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
       });
     }
   });
@@ -254,13 +246,12 @@ if (pauseBtn) {
 
 if (readDefBtn) {
   readDefBtn.addEventListener('click', () => {
-    resetDictPauseBtn();
+    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
     if (currentLoadedEntry && typeof VoiceManager !== 'undefined') {
       VoiceManager.speak(currentLoadedEntry.definition, {
         force: true,
         rate: 0.95,
-        onend: resetDictPauseBtn,
-        onerror: resetDictPauseBtn
+        onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
       });
     }
   });

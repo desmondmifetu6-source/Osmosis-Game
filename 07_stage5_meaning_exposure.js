@@ -31,26 +31,21 @@ document.getElementById('start-btn').addEventListener('click', () => {
 // Prints the definitions on the page and starts a 5-minute countdown clock.
 function startRevisionPhase() {
   revisionContainer.style.display = 'flex'; // Make the study desk visible
-  
+
   const listEl = document.getElementById('rev-list'); // The blank piece of paper
-  
+
   // For every single word the player collected...
   state.selectedWords.forEach(w => {
     const item = document.createElement('div'); // Make a nice box
     item.className = 'revision-item';
     const defText = state.meanings[w] || '';
-    const formattedDef = (typeof window.formatScienceText === 'function') 
-      ? window.formatScienceText(defText) 
+    const formattedDef = (typeof window.formatScienceText === 'function')
+      ? window.formatScienceText(defText)
       : defText;
-    const resetAllPauseBtns = () => {
-      listEl.querySelectorAll('.rev-pause-btn').forEach(b => { b.innerHTML = '⏸️ Pause'; });
-    };
-
     // Write the bold Word, audio buttons, and scientific meaning
-    const safeWord = (typeof sharedState.escapeHTML === 'function') ? sharedState.escapeHTML(w) : w;
     item.innerHTML = `
       <div class="rev-word-header">
-        <strong>${safeWord}</strong>
+        <strong>${w}</strong>
         <div class="rev-audio-btns">
           <button type="button" class="rev-voice-btn rev-pronounce-btn" title="Pronounce word">🔊 Word</button>
           <button type="button" class="rev-voice-btn rev-pause-btn" title="Pause / Resume reading">⏸️ Pause</button>
@@ -67,12 +62,11 @@ function startRevisionPhase() {
 
     if (pronounceBtn) {
       pronounceBtn.addEventListener('click', () => {
-        resetAllPauseBtns();
+        if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
         if (typeof VoiceManager !== 'undefined') {
           VoiceManager.speak(w, {
             force: true,
-            onend: resetAllPauseBtns,
-            onerror: resetAllPauseBtns
+            onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
           });
         }
       });
@@ -82,21 +76,19 @@ function startRevisionPhase() {
       pauseBtn.addEventListener('click', () => {
         if (typeof VoiceManager !== 'undefined') {
           const isPaused = VoiceManager.togglePause();
-          resetAllPauseBtns();
-          if (isPaused) pauseBtn.innerHTML = '▶️ Resume';
+          pauseBtn.innerHTML = isPaused ? '▶️ Resume' : '⏸️ Pause';
         }
       });
     }
 
     if (defBtn) {
       defBtn.addEventListener('click', () => {
-        resetAllPauseBtns();
+        if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
         if (typeof VoiceManager !== 'undefined') {
           VoiceManager.speak(defText, {
             force: true,
             rate: 0.95,
-            onend: resetAllPauseBtns,
-            onerror: resetAllPauseBtns
+            onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
           });
         }
       });
@@ -107,17 +99,17 @@ function startRevisionPhase() {
       window.renderScienceText(pEl);
     }
   });
-  
+
   // The clock! 300 seconds = exactly 5 minutes.
-  let timeLeft = 300; 
+  let timeLeft = 300;
   const timeEl = document.getElementById('rev-timer'); // The visual ticking clock on screen
-  
+
   // The metronome tick function
   const tick = () => {
     const min = String(Math.floor(timeLeft / 60)).padStart(2, '0');
     const sec = String(timeLeft % 60).padStart(2, '0');
     timeEl.textContent = `${min}:${sec}`;
-    
+
     // If 5 minutes pass and they are still staring at the screen...
     if (timeLeft <= 0) {
       clearInterval(globalTimerInt); // Smash the metronome
@@ -125,10 +117,10 @@ function startRevisionPhase() {
     }
     timeLeft--; // Subtract 1 second
   };
-  
+
   tick(); // Tick once manually
   globalTimerInt = setInterval(tick, 1000); // Tick automatically every 1 second
-  
+
   // What if the player is super smart, finishes reading in 30 seconds, and clicks the button?
   document.getElementById('start-test-btn').addEventListener('click', () => {
     clearInterval(globalTimerInt); // Smash the clock early

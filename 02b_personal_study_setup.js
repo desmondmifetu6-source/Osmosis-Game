@@ -18,20 +18,20 @@ document.addEventListener('DOMContentLoaded', function () {
   var selectedWords = [];   // array of { word, definition }
 
   // DOM refs
-  var input       = document.getElementById('ps-search-input');
-  var dropdown    = document.getElementById('ps-autocomplete-dropdown');
-  var chipsEl     = document.getElementById('ps-chips');
-  var emptyHint   = document.getElementById('ps-empty-hint');
-  var counterEl   = document.getElementById('ps-counter');
-  var beginBtn    = document.getElementById('ps-begin-btn');
-  var backBtn     = document.getElementById('ps-back-btn');
+  var input = document.getElementById('ps-search-input');
+  var dropdown = document.getElementById('ps-autocomplete-dropdown');
+  var chipsEl = document.getElementById('ps-chips');
+  var emptyHint = document.getElementById('ps-empty-hint');
+  var counterEl = document.getElementById('ps-counter');
+  var beginBtn = document.getElementById('ps-begin-btn');
+  var backBtn = document.getElementById('ps-back-btn');
 
   // Modal DOM refs
-  var modalEl     = document.getElementById('ps-diagram-modal');
+  var modalEl = document.getElementById('ps-diagram-modal');
   var modalWordEl = document.getElementById('ps-modal-word');
-  var modalImgEl  = document.getElementById('ps-modal-img');
-  var modalDefEl  = document.getElementById('ps-modal-def');
-  var modalBackBtn= document.getElementById('ps-modal-back-btn');
+  var modalImgEl = document.getElementById('ps-modal-img');
+  var modalDefEl = document.getElementById('ps-modal-def');
+  var modalBackBtn = document.getElementById('ps-modal-back-btn');
 
   function navigate(url) {
     if (typeof window.navigateWithTransition === 'function') navigateWithTransition(url);
@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var baseWordKey = wKey.replace(/\(.*?\)/g, '').trim();
 
     return window.DictionaryDiagrams[wKey] ||
-           (rawKey && window.DictionaryDiagrams[rawKey]) ||
-           window.DictionaryDiagrams[baseWordKey] ||
-           null;
+      (rawKey && window.DictionaryDiagrams[rawKey]) ||
+      window.DictionaryDiagrams[baseWordKey] ||
+      null;
   }
 
   // ── Diagram Modal Display ──────────────────────────────────────────
@@ -58,13 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var modalPauseBtn = document.getElementById('ps-modal-pause-btn');
   var modalReadDefBtn = document.getElementById('ps-modal-read-def-btn');
 
-  function resetModalPauseBtn() {
-    if (modalPauseBtn) modalPauseBtn.innerHTML = '⏸️ Pause';
-  }
-
   function showDiagram(word, diagramSrc, definition) {
     if (!modalEl) return;
-    resetModalPauseBtn();
     currentModalWord = word || '';
     currentModalDef = definition || '';
     if (modalWordEl) modalWordEl.textContent = (word || 'DEFINITION').toUpperCase();
@@ -94,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function closeDiagramModal() {
     if (!modalEl) return;
-    resetModalPauseBtn();
     if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
     modalEl.classList.remove('active');
     if (modalImgEl) modalImgEl.removeAttribute('src');
@@ -104,12 +98,11 @@ document.addEventListener('DOMContentLoaded', function () {
   if (modalPronounceBtn) {
     modalPronounceBtn.addEventListener('click', function (e) {
       e.stopPropagation();
-      resetModalPauseBtn();
+      if (modalPauseBtn) modalPauseBtn.innerHTML = '⏸️ Pause';
       if (currentModalWord && typeof VoiceManager !== 'undefined') {
         VoiceManager.speak(currentModalWord, {
           force: true,
-          onend: resetModalPauseBtn,
-          onerror: resetModalPauseBtn
+          onend: function () { if (modalPauseBtn) modalPauseBtn.innerHTML = '⏸️ Pause'; }
         });
       }
     });
@@ -128,13 +121,12 @@ document.addEventListener('DOMContentLoaded', function () {
   if (modalReadDefBtn) {
     modalReadDefBtn.addEventListener('click', function (e) {
       e.stopPropagation();
-      resetModalPauseBtn();
+      if (modalPauseBtn) modalPauseBtn.innerHTML = '⏸️ Pause';
       if (currentModalDef && typeof VoiceManager !== 'undefined') {
         VoiceManager.speak(currentModalDef, {
           force: true,
           rate: 0.95,
-          onend: resetModalPauseBtn,
-          onerror: resetModalPauseBtn
+          onend: function () { if (modalPauseBtn) modalPauseBtn.innerHTML = '⏸️ Pause'; }
         });
       }
     });
@@ -357,35 +349,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (typeof AudioManager !== 'undefined') AudioManager.play('success');
     navigate('04_stage2_word_fillin.html');
   });
-
-  // ── Spaced Repetition Quick-Load ───────────────────────────────────
-  var reviewBanner  = document.getElementById('ps-review-banner');
-  var reviewText    = document.getElementById('ps-review-text');
-  var loadReviewBtn = document.getElementById('ps-load-review-btn');
-  if (reviewBanner && loadReviewBtn && typeof sharedState.getDueReviewWords === 'function') {
-    var dueItems = sharedState.getDueReviewWords(MAX_WORDS);
-    if (dueItems.length > 0) {
-      reviewBanner.style.display = 'flex';
-      if (reviewText) {
-        reviewText.textContent = dueItems.length + ' term' + (dueItems.length === 1 ? '' : 's') + ' due for active recall.';
-      }
-      loadReviewBtn.addEventListener('click', function () {
-        dueItems.forEach(function (item) {
-          if (selectedWords.length >= MAX_WORDS) return;
-          var def = '';
-          if (typeof STEMDictionary !== 'undefined' && typeof STEMDictionary.getEntry === 'function') {
-            var entry = STEMDictionary.getEntry(item.word);
-            if (entry && entry.definition) def = entry.definition;
-          }
-          if (!def && typeof DictionaryLogic !== 'undefined') {
-            def = DictionaryLogic.fetchMeaning(item.word);
-          }
-          addWord(item.word, def || '');
-        });
-        reviewBanner.style.display = 'none';
-      });
-    }
-  }
 
   // ── Back button ────────────────────────────────────────────────────
 
