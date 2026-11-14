@@ -685,9 +685,18 @@ const DictionaryLogic = {
   // You give the librarian a word, and it hands you back the scientific definition.
   fetchMeaning: function (word) {
     if (!word || typeof window.STEMDictionary === 'undefined') return "Error: Dictionary offline.";
-    const firstLetter = word.charAt(0).toUpperCase();
-    const wordsArray = window.STEMDictionary.getWordsByLetter(firstLetter);
-    const found = wordsArray.find(w => w.word.toLowerCase() === word.toLowerCase());
+
+    // 1. Direct O(1) dictionary entry lookup (handles synonyms, hyphens, and multi-word terms)
+    if (typeof window.STEMDictionary.getEntry === 'function') {
+      const entry = window.STEMDictionary.getEntry(word);
+      if (entry && entry.definition) return entry.definition;
+    }
+
+    // 2. Fallback to letter bucket search
+    const cleanWord = String(word).trim();
+    const firstLetter = cleanWord.charAt(0).toUpperCase();
+    const wordsArray = window.STEMDictionary.getWordsByLetter(firstLetter) || [];
+    const found = wordsArray.find(w => w.word.toLowerCase() === cleanWord.toLowerCase());
     return found ? found.definition : "Error: Definition not found in dictionary.";
   }
 };
