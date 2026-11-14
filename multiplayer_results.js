@@ -3,7 +3,11 @@
 // =====================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (typeof sharedState.stopTimer === 'function') sharedState.stopTimer();
   const gameData = sharedState.load();
+  if (typeof sharedState.recordSessionResult === 'function') {
+    sharedState.recordSessionResult(gameData);
+  }
   const cardsList = document.getElementById('cards-list');
   const modalOverlay = document.getElementById('modal-overlay');
   const modalX = document.getElementById('modal-x');
@@ -15,11 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Navigation ──
   homeBtn.addEventListener('click', () => {
+    if (typeof sharedState.clearGameSession === 'function') sharedState.clearGameSession(true);
     if (typeof window.navigateWithTransition === 'function') navigateWithTransition('01_home_menu.html');
     else window.location.href = '01_home_menu.html';
   });
 
   playBtn.addEventListener('click', () => {
+    if (typeof sharedState.clearGameSession === 'function') sharedState.clearGameSession(true);
     if (typeof window.navigateWithTransition === 'function') navigateWithTransition('multiplayer_lobby.html');
     else window.location.href = 'multiplayer_lobby.html';
   });
@@ -50,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const def = meanings[word] || 'Definition not available.';
         const row = document.createElement('div');
         row.className = 'modal-word-row';
-        row.innerHTML = `<div class="modal-word-name">${word}</div><div class="modal-word-def">${def}</div>`;
+        row.innerHTML = `<div class="modal-word-name">${sharedState.escapeHTML(word)}</div><div class="modal-word-def">${sharedState.escapeHTML(def)}</div>`;
         modalBody.appendChild(row);
       });
     }
@@ -102,16 +108,18 @@ document.addEventListener('DOMContentLoaded', () => {
       card.className = `player-card ${rankClass}`;
       card.style.animationDelay = `${i * 0.05}s`;
 
+      const safeAvatar = sharedState.escapeHTML(avatar);
+      const safeName = sharedState.escapeHTML(player.name || 'Player');
       card.innerHTML = `
         <div class="rank-badge">
           ${medal ? `<span class="rank-medal">${medal}</span>` : `<span class="rank-num">#${rank}</span>`}
         </div>
 
-        <div class="card-avatar">${avatar}</div>
+        <div class="card-avatar">${safeAvatar}</div>
 
         <div class="card-info">
           <div class="card-name">
-            ${player.name}
+            ${safeName}
             ${isWinner ? '<span class="winner-tag">Winner</span>' : ''}
           </div>
           <div class="card-meta">
@@ -119,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="meta-item">⏱ ${timeStr}</span>
               <span class="meta-item">📚 ${player.words ? player.words.length : 0} words</span>
             ` : `
-              <span class="in-progress-dot">Playing Stage ${player.currentStage || 1} • Live</span>
+              <span class="in-progress-dot">Playing Stage ${Number(player.currentStage) || 1} • Live</span>
             `}
           </div>
         </div>
@@ -169,7 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Real-Time Socket Connection & Live Updates ──
   if (typeof io !== 'undefined' && gameData.currentRoomId) {
-    const socket = io();
+    const serverUrl = (typeof sharedState.getSocketServerUrl === 'function') ? sharedState.getSocketServerUrl() : undefined;
+    const socket = serverUrl ? io(serverUrl) : io();
 
     // Rejoin room
     socket.emit('join_room', {
@@ -186,6 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
       time: initialTime,
       words: gameData.selectedWords || [],
       meanings: gameData.meanings || {},
+      currentStage: 8,
       isFinished: true
     });
 

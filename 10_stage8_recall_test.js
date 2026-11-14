@@ -322,6 +322,9 @@ const Stage7Controller = {
     }
 
     // Final grading (either perfect on first try, or any result on second try)
+    if (typeof sharedState.recordWordMastery === 'function') {
+      sharedState.recordWordMastery(word, isPerfect || (g.wOk && g.mRatio >= 0.50));
+    }
     let finalPts = g.pts;
     if (isSecondChance) finalPts = Math.round(finalPts / 2);
 

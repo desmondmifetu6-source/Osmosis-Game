@@ -15,6 +15,11 @@ const LoginController = {
   },
 
   init() {
+    const urlRoom = (new URLSearchParams(window.location.search).get('room') || '').trim().toUpperCase();
+    if (urlRoom) {
+      sessionStorage.setItem('osmosis_pending_room', urlRoom);
+    }
+
     const splash = document.getElementById('intro-splash');
     if (splash) {
       if (!sessionStorage.getItem('osmosis_splash_seen')) {
@@ -143,10 +148,15 @@ const LoginController = {
     freshData.avatar = avatar;
     sharedState.save(freshData);
 
+    const pendingRoom = sessionStorage.getItem('osmosis_pending_room');
+    const targetPage = pendingRoom
+      ? `multiplayer_lobby.html?room=${encodeURIComponent(pendingRoom)}`
+      : '01_home_menu.html';
+
     if (typeof window.navigateWithTransition === 'function') {
-      navigateWithTransition('01_home_menu.html');
+      navigateWithTransition(targetPage);
     } else {
-      window.location.href = '01_home_menu.html';
+      window.location.href = targetPage;
     }
   }
 };

@@ -17,162 +17,217 @@ const io = new Server(server, {
 // Serve the game files from the current directory
 app.use(express.static(__dirname));
 
+app.get('/health', (_req, res) => {
+  res.json({ ok: true, rooms: Object.keys(rooms).length });
+});
+
 // Room Data Storage (in-memory)
 const rooms = {};
+const disconnectTimers = new Map(); // key: `${roomId}:${username}` -> timeoutId
+const DISCONNECT_GRACE_MS = 25000;
+
+function clearGraceTimer(roomId, username) {
+  const key = `${roomId}:${username}`;
+  if (disconnectTimers.has(key)) {
+    clearTimeout(disconnectTimers.get(key));
+    disconnectTimers.delete(key);
+  }
+}
 
 io.on('connection', (socket) => {
   console.log('A player connected:', socket.id);
 
   // 1. HOST: Create a Room
   socket.on('create_room', (data) => {
-    const roomId = data.roomId;
+    const roomId = String(data?.roomId || '').trim().toUpperCase();
+    const username = String(data?.username || 'Player').trim();
+    if (!roomId) return;
+
+    clearGraceTimer(roomId, username);
     rooms[roomId] = {
-      players: [{ id: socket.id, name: data.username, avatar: data.avatar || '🤓' }],
+      players: [{
+        id: socket.id,
+        name: username,
+        avatar: data?.avatar || '🤓',
+        score: 0,
+        time: 0,
+        currentStage: 0,
+        isFinished: false,
+        connected: true
+      }],
       status: 'waiting'
     };
     socket.join(roomId);
-    console.log(`[ROOM CREATED] ID: ${roomId} | Host: ${data.username} | Socket: ${socket.id}`);
+    socket.emit('room_created', { roomId, players: rooms[roomId].players });
+    console.log(`[ROOM CREATED] ID: ${roomId} | Host: ${username} | Socket: ${socket.id}`);
   });
 
-  // 2. GUEST: Join a Room
+  // 2. GUEST / RECONNECT: Join a Room
   socket.on('join_room', (data) => {
-    const roomId = data.roomId;
-    console.log(`[JOIN ATTEMPT] ID: ${roomId} | User: ${data.username} | Socket: ${socket.id}`);
-    
-    if (rooms[roomId]) {
-      // 10 Player Limit
-      if (rooms[roomId].players.length >= 10 && !rooms[roomId].players.some(p => p.name === data.username)) {
+    const roomId = String(data?.roomId || '').trim().toUpperCase();
+    const username = String(data?.username || 'Guest').trim();
+    console.log(`[JOIN ATTEMPT] ID: ${roomId} | User: ${username} | Socket: ${socket.id}`);
+
+    const room = rooms[roomId];
+    if (!room) {
+      console.warn(`[JOIN FAILED] ID: ${roomId} not found. Active rooms:`, Object.keys(rooms));
+      socket.emit('error_message', `Room not found (${roomId}). Check the code!`);
+      return;
+    }
+
+    clearGraceTimer(roomId, username);
+
+    // Check if player is already in the room by socket ID OR by name (for MPA page transitions)
+    let player = room.players.find(p => p.id === socket.id || p.name === username);
+    const isNewPlayer = !player;
+
+    if (isNewPlayer) {
+      if (room.players.length >= 10) {
         socket.emit('error_message', "Room is full! Max 10 players.");
         return;
       }
-
-      // Check if player is already in the room by name OR socket ID (for stage transitions & reconnects)
-      let player = rooms[roomId].players.find(p => p.name === data.username || p.id === socket.id);
-      
-      if (!player) {
-        player = { 
-          id: socket.id, 
-          name: data.username, 
-          avatar: data.avatar || '🤓',
-          score: 0,
-          time: 0,
-          connected: true,
-          isFinished: false
-        };
-        rooms[roomId].players.push(player);
-      } else {
-        // Reconnect existing player: update socket ID, mark connected
-        player.id = socket.id;
-        player.connected = true;
-        if (data.avatar) player.avatar = data.avatar;
-      }
-      
-      socket.join(roomId);
-      
-      // Send the current room leaderboard directly to the joining/reconnecting player immediately
-      socket.emit('leaderboard_update', {
-        players: rooms[roomId].players
-      });
-
-      // Tell everyone in the room that a player arrived / reconnected
-      io.to(roomId).emit('player_joined', {
-        players: rooms[roomId].players,
-        message: `${data.username} connected!`
-      });
-      
-      console.log(`[JOIN SUCCESS] ID: ${roomId} | User: ${data.username} | Total Players: ${rooms[roomId].players.length}`);
+      player = {
+        id: socket.id,
+        name: username,
+        avatar: data?.avatar || '🤓',
+        score: 0,
+        time: 0,
+        currentStage: 1,
+        isFinished: false,
+        connected: true
+      };
+      room.players.push(player);
     } else {
-      console.warn(`[JOIN FAILED] ID: ${roomId} not found. Active rooms:`, Object.keys(rooms));
-      socket.emit('error_message', `Room not found (${roomId}). Check the code!`);
+      player.id = socket.id;
+      player.connected = true;
+      if (data?.avatar) player.avatar = data.avatar;
     }
+
+    socket.join(roomId);
+
+    if (isNewPlayer || room.status === 'waiting') {
+      io.to(roomId).emit('player_joined', {
+        players: room.players,
+        message: `${username} joined the link!`
+      });
+    }
+
+    // Always push latest leaderboard to everyone in the room on join/reconnect
+    io.to(roomId).emit('leaderboard_update', {
+      players: room.players
+    });
+
+    console.log(`[JOIN SUCCESS] ID: ${roomId} | User: ${username} | Reconnect: ${!isNewPlayer}`);
   });
 
   // 3. BATTLE: Update Score
   socket.on('update_score', (data) => {
-    const roomId = data.roomId;
-    if (rooms[roomId]) {
-      // Find by username first (rock-solid across page transitions), then by socket ID
-      let player = rooms[roomId].players.find(p => p.name === data.username) ||
-                   rooms[roomId].players.find(p => p.id === socket.id);
-      
-      if (player) {
-        player.score = (data.score !== undefined) ? data.score : (player.score || 0);
-        player.time = data.time || player.time || 0;
-        if (data.words) player.words = data.words;
-        if (data.meanings) player.meanings = data.meanings;
-        if (data.isFinished !== undefined) player.isFinished = data.isFinished;
-        if (data.currentStage !== undefined) player.currentStage = data.currentStage;
-        player.connected = true;
-        player.id = socket.id; // Sync latest socket ID
+    const roomId = String(data?.roomId || '').trim().toUpperCase();
+    const room = rooms[roomId];
+    if (!room) return;
 
-        io.to(roomId).emit('leaderboard_update', {
-          players: rooms[roomId].players
-        });
-      }
+    let player = room.players.find(p => p.id === socket.id);
+    if (!player && data?.username) {
+      player = room.players.find(p => p.name === data.username);
+    }
+
+    if (player) {
+      clearGraceTimer(roomId, player.name);
+      player.id = socket.id;
+      player.connected = true;
+      if (data.score !== undefined) player.score = Number(data.score) || 0;
+      if (data.time !== undefined) player.time = Number(data.time) || 0;
+      if (data.words) player.words = data.words;
+      if (data.meanings) player.meanings = data.meanings;
+      if (data.isFinished !== undefined) player.isFinished = !!data.isFinished;
+      if (data.currentStage !== undefined) player.currentStage = data.currentStage;
+
+      io.to(roomId).emit('leaderboard_update', {
+        players: room.players
+      });
     }
   });
 
   // 4. START GAME: Host starts for everyone
   socket.on('start_game', (roomId) => {
-    if (rooms[roomId]) {
-      rooms[roomId].status = 'playing';
-      io.to(roomId).emit('game_started');
-      console.log(`[GAME STARTED] Room: ${roomId}`);
+    const cleanRoomId = String(roomId || '').trim().toUpperCase();
+    if (rooms[cleanRoomId]) {
+      rooms[cleanRoomId].status = 'playing';
+      io.to(cleanRoomId).emit('game_started');
+      console.log(`[GAME STARTED] Room: ${cleanRoomId}`);
+    }
+  });
+
+  // 5. EXPLICIT LEAVE: Player intentionally exits multiplayer
+  socket.on('leave_room', (data) => {
+    const roomId = String(data?.roomId || '').trim().toUpperCase();
+    const room = rooms[roomId];
+    if (!room) return;
+    const idx = room.players.findIndex(p => p.id === socket.id || (data?.username && p.name === data.username));
+    if (idx !== -1) {
+      const removed = room.players.splice(idx, 1)[0];
+      clearGraceTimer(roomId, removed.name);
+      socket.leave(roomId);
+      if (room.players.length === 0) {
+        delete rooms[roomId];
+      } else {
+        io.to(roomId).emit('player_left', {
+          players: room.players,
+          message: `${removed.name} left the room.`
+        });
+        io.to(roomId).emit('leaderboard_update', { players: room.players });
+      }
     }
   });
 
   socket.on('disconnect', () => {
     console.log(`[DISCONNECT] Socket: ${socket.id}`);
-    
-    for (const roomId in rooms) {
+
+    for (const roomId of Object.keys(rooms)) {
       const room = rooms[roomId];
       const player = room.players.find(p => p.id === socket.id);
       if (player) {
         player.connected = false;
-        player.lastSeen = Date.now();
-        console.log(`[DISCONNECT] Player ${player.name} went offline in Room: ${roomId} (game status: ${room.status})`);
+        const key = `${roomId}:${player.name}`;
+        clearGraceTimer(roomId, player.name);
 
-        // If the game has already started or finished, DO NOT delete the player!
-        // In a multi-page web app, players disconnect temporarily between stage navigation.
-        // Keeping their records guarantees all final scores appear on the leaderboard!
-        if (room.status === 'playing' || room.status === 'finished') {
-          // Broadcast status without deleting their score or profile
-          io.to(roomId).emit('leaderboard_update', {
-            players: room.players
-          });
-        } else {
-          // If still waiting in lobby, remove player after a 10s grace window
-          setTimeout(() => {
-            if (room.status === 'waiting' && !player.connected) {
-              const idx = room.players.findIndex(p => p.name === player.name && !p.connected);
-              if (idx !== -1) {
-                room.players.splice(idx, 1);
-                io.to(roomId).emit('player_left', {
-                  players: room.players,
-                  message: `${player.name} left the lobby.`
-                });
-                io.to(roomId).emit('leaderboard_update', {
-                  players: room.players
-                });
-                if (room.players.length === 0) {
-                  delete rooms[roomId];
-                  console.log(`[ROOM DELETED] Lobby ${roomId} was empty.`);
-                }
-              }
-            }
-          }, 10000);
-        }
+        // Grace window preserves rooms & scores during MPA HTML page transitions
+        const timer = setTimeout(() => {
+          disconnectTimers.delete(key);
+          const activeRoom = rooms[roomId];
+          if (!activeRoom) return;
+          const idx = activeRoom.players.findIndex(p => p.name === player.name && !p.connected);
+          if (idx === -1) return;
+
+          const removedPlayer = activeRoom.players.splice(idx, 1)[0];
+          console.log(`[GRACE EXPIRED] Removed player: ${removedPlayer.name} from Room: ${roomId}`);
+
+          if (activeRoom.players.length === 0) {
+            delete rooms[roomId];
+            console.log(`[ROOM DELETED] Room ${roomId} is empty.`);
+          } else {
+            io.to(roomId).emit('player_left', {
+              players: activeRoom.players,
+              message: `${removedPlayer.name} disconnected.`
+            });
+            io.to(roomId).emit('leaderboard_update', {
+              players: activeRoom.players
+            });
+          }
+        }, DISCONNECT_GRACE_MS);
+
+        disconnectTimers.set(key, timer);
       }
     }
   });
 });
 
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`
   ==========================================
   OSMOSIS MULTIPLAYER SERVER IS LIVE!
-  URL: http://localhost:${PORT}
+  URL: http://0.0.0.0:${PORT}
   ==========================================
   `);
 });

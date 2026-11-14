@@ -1,7 +1,7 @@
 // =====================================================================
 // FILE: sw.js (Osmosis Service Worker - Offline & PWA Engine)
 // =====================================================================
-const CACHE_NAME = 'osmosis-core-v1';
+const CACHE_NAME = 'osmosis-core-v2';
 
 // Core Application Shell: essential files for full offline play
 const PRECACHE_ASSETS = [
@@ -16,6 +16,8 @@ const PRECACHE_ASSETS = [
   './core_dictionary.js',
   './core_dictionary_diagrams.js',
   './core_formula_renderer.js',
+  './core_distractor_engine.js',
+  './core_diagram_data.js',
   './assets/icon-192.png',
   './assets/icon-512.png',
   './assets/osmosis-favicon.svg',
@@ -39,10 +41,16 @@ const PRECACHE_ASSETS = [
   './08b_stage6b_meaning_dropdown.js',
   './09_stage7_meaning_fillin.html',
   './09_stage7_meaning_fillin.js',
+  './10_stage8_hall_of_fame_intro.html',
   './10_stage8_recall_test.html',
   './10_stage8_recall_test.js',
+  './10b_stage8_complete.html',
   './11_results.html',
   './11_results.js',
+  './multiplayer_lobby.html',
+  './multiplayer_lobby.js',
+  './multiplayer_results.html',
+  './multiplayer_results.js',
   './module_diagram_hub.html',
   './module_diagram_hub.js',
   './module_diagram_study.html',
@@ -51,6 +59,10 @@ const PRECACHE_ASSETS = [
   './module_word_hunt.js',
   './module_library.html',
   './module_library.js',
+  './module_archives.html',
+  './module_archives.js',
+  './module_profile.html',
+  './module_profile.js',
   './module_about.html'
 ];
 

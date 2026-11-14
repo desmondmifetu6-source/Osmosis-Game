@@ -42,10 +42,15 @@ function startRevisionPhase() {
     const formattedDef = (typeof window.formatScienceText === 'function') 
       ? window.formatScienceText(defText) 
       : defText;
+    const resetAllPauseBtns = () => {
+      listEl.querySelectorAll('.rev-pause-btn').forEach(b => { b.innerHTML = '⏸️ Pause'; });
+    };
+
     // Write the bold Word, audio buttons, and scientific meaning
+    const safeWord = (typeof sharedState.escapeHTML === 'function') ? sharedState.escapeHTML(w) : w;
     item.innerHTML = `
       <div class="rev-word-header">
-        <strong>${w}</strong>
+        <strong>${safeWord}</strong>
         <div class="rev-audio-btns">
           <button type="button" class="rev-voice-btn rev-pronounce-btn" title="Pronounce word">🔊 Word</button>
           <button type="button" class="rev-voice-btn rev-pause-btn" title="Pause / Resume reading">⏸️ Pause</button>
@@ -62,11 +67,12 @@ function startRevisionPhase() {
 
     if (pronounceBtn) {
       pronounceBtn.addEventListener('click', () => {
-        if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
+        resetAllPauseBtns();
         if (typeof VoiceManager !== 'undefined') {
-          VoiceManager.speak(w, { 
+          VoiceManager.speak(w, {
             force: true,
-            onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
+            onend: resetAllPauseBtns,
+            onerror: resetAllPauseBtns
           });
         }
       });
@@ -76,19 +82,21 @@ function startRevisionPhase() {
       pauseBtn.addEventListener('click', () => {
         if (typeof VoiceManager !== 'undefined') {
           const isPaused = VoiceManager.togglePause();
-          pauseBtn.innerHTML = isPaused ? '▶️ Resume' : '⏸️ Pause';
+          resetAllPauseBtns();
+          if (isPaused) pauseBtn.innerHTML = '▶️ Resume';
         }
       });
     }
 
     if (defBtn) {
       defBtn.addEventListener('click', () => {
-        if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
+        resetAllPauseBtns();
         if (typeof VoiceManager !== 'undefined') {
-          VoiceManager.speak(defText, { 
-            force: true, 
+          VoiceManager.speak(defText, {
+            force: true,
             rate: 0.95,
-            onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
+            onend: resetAllPauseBtns,
+            onerror: resetAllPauseBtns
           });
         }
       });

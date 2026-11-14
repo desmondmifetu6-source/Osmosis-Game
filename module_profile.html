@@ -13,19 +13,23 @@
     .history-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-family: var(--font-serif); font-weight: bold; }
     .history-stats { color: var(--accent-primary); text-shadow: 1px 1px 0px rgba(0,0,0,0.5); }
     .history-words { font-size: 0.9rem; color: var(--text-secondary); font-style: italic; }
+    .profile-stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.25rem 0 1.5rem; }
+    .profile-stat-box { background: rgba(79,70,229,0.08); border: 1px solid rgba(79,70,229,0.2); border-radius: 14px; padding: 0.9rem; text-align: center; }
+    .profile-stat-val { font-size: 1.45rem; font-weight: 800; color: var(--accent-primary); }
+    .profile-stat-lbl { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
   </style>
 </head>
 <body>
   <div class="app-container">
     <div class="card history-card">
       <h2 style="text-align:center;">Your Record</h2>
+      <div id="profile-stats" class="profile-stats-grid"></div>
       <div id="history-list" style="margin-bottom:2rem;">
         <!-- History populated here -->
       </div>
       <button id="go-home-btn" class="classic-btn blue-gradient">Return to Menu</button>
     </div>
   </div>
-  <script src="core_dictionary.js"></script>
   <script src="core_shared_state.js"></script>
   <script src="module_profile.js"></script>
 </body>

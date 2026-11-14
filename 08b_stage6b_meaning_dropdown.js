@@ -405,6 +405,11 @@ const Stage6bController = {
       return;
     }
 
+    const currentWord = this.state.testSequence[this.state.testIndex];
+    if (typeof sharedState.recordWordMastery === 'function' && currentWord) {
+      sharedState.recordWordMastery(currentWord, allCorrect);
+    }
+
     if (allCorrect) {
       this.triggerFeedback("Correct!", 'success');
       const pts = 10;

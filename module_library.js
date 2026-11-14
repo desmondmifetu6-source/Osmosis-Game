@@ -215,6 +215,8 @@ function performSearch() {
 
   currentLoadedEntry = entry;
   resultEl.style.display = 'block';
+  if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
+  resetDictPauseBtn();
   if (typeof AudioManager !== 'undefined') AudioManager.play('chip');
 }
 
@@ -223,13 +225,19 @@ const pronounceBtn = document.getElementById('dict-pronounce-btn');
 const pauseBtn = document.getElementById('dict-pause-btn');
 const readDefBtn = document.getElementById('dict-read-def-btn');
 
+function resetDictPauseBtn() {
+  const btn = document.getElementById('dict-pause-btn');
+  if (btn) btn.innerHTML = '⏸️ Pause';
+}
+
 if (pronounceBtn) {
   pronounceBtn.addEventListener('click', () => {
-    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
+    resetDictPauseBtn();
     if (currentLoadedEntry && typeof VoiceManager !== 'undefined') {
-      VoiceManager.speak(currentLoadedEntry.word, { 
+      VoiceManager.speak(currentLoadedEntry.word, {
         force: true,
-        onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
+        onend: resetDictPauseBtn,
+        onerror: resetDictPauseBtn
       });
     }
   });
@@ -246,12 +254,13 @@ if (pauseBtn) {
 
 if (readDefBtn) {
   readDefBtn.addEventListener('click', () => {
-    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
+    resetDictPauseBtn();
     if (currentLoadedEntry && typeof VoiceManager !== 'undefined') {
-      VoiceManager.speak(currentLoadedEntry.definition, { 
-        force: true, 
+      VoiceManager.speak(currentLoadedEntry.definition, {
+        force: true,
         rate: 0.95,
-        onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
+        onend: resetDictPauseBtn,
+        onerror: resetDictPauseBtn
       });
     }
   });

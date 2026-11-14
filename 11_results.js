@@ -12,20 +12,24 @@ const ResultsController = {
   },
 
   init() {
-    // Add socket.io client dynamically if in multiplayer
+    if (typeof initModal === 'function') initModal();
+    sharedState.stopTimer();
+
+    const globalTimer = document.getElementById('global-game-timer');
+    if (globalTimer) globalTimer.style.display = 'none';
+
     this.state.gameData = sharedState.load();
+    this.state.targetScore = this.state.gameData.score || 0;
+    if (this.state.gameData.selectedWords && this.state.gameData.selectedWords.length > 0) {
+      this.updateGlobalHistory();
+    }
+
     if (this.state.gameData.multiplayerMode && this.state.gameData.currentRoomId) {
       // Multiplayer players get their own dedicated results page
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition('multiplayer_results.html');
       else window.location.href = 'multiplayer_results.html';
       return;
     }
-
-    if (typeof initModal === 'function') initModal();
-    sharedState.stopTimer();
-
-    const globalTimer = document.getElementById('global-game-timer');
-    if (globalTimer) globalTimer.style.display = 'none';
 
     this.state.gameData = sharedState.load();
     if (!this.state.gameData.selectedWords || this.state.gameData.selectedWords.length === 0) {
@@ -40,9 +44,6 @@ const ResultsController = {
     this.renderWordsList();
     this.updateGlobalHistory();
     this.attachListeners();
-    if (this.state.gameData.multiplayerMode) {
-      this.initMultiplayer();
-    }
 
     // Play Victory Trumpet Fanfare!
     if (typeof AudioManager !== 'undefined') {
@@ -312,6 +313,10 @@ const ResultsController = {
   },
 
   updateGlobalHistory() {
+    if (typeof sharedState.recordSessionResult === 'function') {
+      sharedState.recordSessionResult(this.state.gameData);
+      return;
+    }
     if (!sessionStorage.getItem('osmosis_saved_result')) {
       const currentTotal = parseInt(localStorage.getItem('osmosis_total_score')) || 0;
       localStorage.setItem('osmosis_total_score', currentTotal + this.state.targetScore);
@@ -346,6 +351,24 @@ const ResultsController = {
           if (typeof window.navigateWithTransition === 'function') navigateWithTransition(targetUrl);
           else window.location.href = targetUrl;
         }, 100);
+      });
+    }
+
+    const shareBtn = document.getElementById('share-score-btn');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', async () => {
+        const wordsCount = (gameData.selectedWords || []).length;
+        const text = `I just scored ${gameData.score || 0} pts mastering ${wordsCount} STEM terms on Osmosis! Can you beat my score?`;
+        const url = window.location.href.replace(/11_results\.html.*$/i, 'index.html');
+        try {
+          if (navigator.share) {
+            await navigator.share({ title: 'Osmosis STEM Score', text, url });
+          } else if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(`${text} ${url}`);
+            shareBtn.textContent = '✓ Copied!';
+            setTimeout(() => { shareBtn.textContent = '📤 Share Score'; }, 2000);
+          }
+        } catch (e) {}
       });
     }
 

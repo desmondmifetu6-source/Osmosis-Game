@@ -115,15 +115,17 @@ const Stage5Controller = {
 
     const otherWords = Object.keys(gameData.meanings || {}).filter(w => w !== currentWord);
     let options;
-    if (typeof window.DistractorEngine !== 'undefined') {
-      // ✨ Semantic Gravity: distractors are domain-cousins of the correct word,
-      // not random POS-matched words. E.g. "heart" → ["liver", "kidney", "artery"]
+    if (typeof window.DistractorEngine !== 'undefined' && typeof window.DistractorEngine.getSemanticOptions === 'function') {
       options = window.DistractorEngine.getSemanticOptions(
         currentWord,
         correctMeaning,
         4,
         { exclude: otherWords }
       );
+    } else if (typeof window.DistractorEngine !== 'undefined') {
+      options = window.DistractorEngine.getOptionsWithAnswer(currentWord, 4, {
+        exclude: otherWords
+      });
     } else {
       const pool = this.shuffle(otherWords);
 
@@ -179,6 +181,10 @@ const Stage5Controller = {
     allBtns.forEach(b => b.style.pointerEvents = 'none');
 
     const { domCache, testSequence, testIndex } = this.state;
+    const currentWord = testSequence[testIndex];
+    if (typeof sharedState.recordWordMastery === 'function' && currentWord) {
+      sharedState.recordWordMastery(currentWord, isCorrect);
+    }
 
     if (isCorrect) {
       btn.classList.add('correct');

@@ -32,18 +32,51 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentRoomId = generateRoomCode();
   if (roomIdEl) roomIdEl.textContent = currentRoomId;
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const invitedRoom = (urlParams.get('room') || sessionStorage.getItem('osmosis_pending_room') || '').trim().toUpperCase();
+  if (invitedRoom) sessionStorage.removeItem('osmosis_pending_room');
+
+  // Copy Challenge Link button
+  const copyInviteBtn = document.getElementById('copy-invite-btn');
+  const inviteStatus = document.getElementById('invite-status');
+  if (copyInviteBtn) {
+    copyInviteBtn.addEventListener('click', async () => {
+      const basePath = window.location.href.replace(/multiplayer_lobby\.html.*$/i, '');
+      const inviteUrl = `${basePath}index.html?room=${encodeURIComponent(currentRoomId)}`;
+      try {
+        if (navigator.share) {
+          await navigator.share({
+            title: 'Osmosis STEM Battle',
+            text: `Join my Osmosis STEM battle! Room: ${currentRoomId}`,
+            url: inviteUrl
+          });
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(inviteUrl);
+          if (inviteStatus) inviteStatus.textContent = `Copied invite link for ${currentRoomId}!`;
+          copyInviteBtn.textContent = '✓ Link Copied!';
+          setTimeout(() => { copyInviteBtn.textContent = '🔗 Copy Challenge Link'; }, 2000);
+        }
+      } catch (e) {
+        if (inviteStatus) inviteStatus.textContent = `Room Code: ${currentRoomId}`;
+      }
+    });
+  }
+
   // 2. Initialize Connection (with safety)
   let socket;
   try {
     if (typeof io !== 'undefined') {
-      socket = io();
+      const serverUrl = (typeof sharedState.getSocketServerUrl === 'function') ? sharedState.getSocketServerUrl() : undefined;
+      socket = serverUrl ? io(serverUrl) : io();
 
-      // Auto-host on load
-      socket.emit('create_room', {
-        roomId: currentRoomId,
-        username: gameData.username || 'Player',
-        avatar: gameData.avatar || '🤓'
-      });
+      // Auto-host unless joining via ?room= invite link
+      if (!invitedRoom) {
+        socket.emit('create_room', {
+          roomId: currentRoomId,
+          username: gameData.username || 'Player',
+          avatar: gameData.avatar || '🤓'
+        });
+      }
 
       // Server Listeners
       socket.on('player_joined', (data) => {
@@ -54,14 +87,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const joinInput = document.getElementById('join-code-input');
 
         // Update Host UI
-        if (extraPlayers) {
-          extraPlayers.innerHTML = ''; // Clear "Waiting..."
+        if (extraPlayers && Array.isArray(data.players)) {
+          extraPlayers.innerHTML = '';
           data.players.forEach(p => {
             if (p.name !== gameData.username) {
               const div = document.createElement('div');
               div.className = 'player-entry';
-              const pAvatar = p.avatar || '🤓';
-              div.innerHTML = `<span class="player-name">${pAvatar} ${p.name}</span><span class="player-status">Connected</span>`;
+              const pAvatar = sharedState.escapeHTML(p.avatar || '🤓');
+              const pName = sharedState.escapeHTML(p.name || 'Player');
+              div.innerHTML = `<span class="player-name">${pAvatar} ${pName}</span><span class="player-status">Connected</span>`;
               extraPlayers.appendChild(div);
             }
           });
@@ -73,14 +107,15 @@ document.addEventListener('DOMContentLoaded', () => {
           if (joinInput) joinInput.style.display = 'none';
           if (guestStatus) guestStatus.style.display = 'block';
 
-          if (guestPlayerList) {
+          if (guestPlayerList && Array.isArray(data.players)) {
             guestPlayerList.innerHTML = '';
             data.players.forEach(p => {
               const div = document.createElement('div');
               div.className = 'player-entry';
-              const pAvatar = p.avatar || '🤓';
+              const pAvatar = sharedState.escapeHTML(p.avatar || '🤓');
+              const pName = sharedState.escapeHTML(p.name || 'Player');
               const isMe = p.name === gameData.username;
-              div.innerHTML = `<span class="player-name">${pAvatar} ${p.name} ${isMe ? '(You)' : ''}</span><span class="player-status">Connected</span>`;
+              div.innerHTML = `<span class="player-name">${pAvatar} ${pName} ${isMe ? '(You)' : ''}</span><span class="player-status">Connected</span>`;
               guestPlayerList.appendChild(div);
             });
           }
@@ -94,12 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       socket.on('error_message', (msg) => {
-        alert(msg);
+        if (typeof showModal === 'function') showModal('Room Notice', msg);
+        else console.warn('Room Notice:', msg);
         const confirmJoinBtn = document.getElementById('confirm-join-btn');
         if (confirmJoinBtn) {
           confirmJoinBtn.textContent = "Establish Link";
           confirmJoinBtn.disabled = false;
+          confirmJoinBtn.style.display = '';
         }
+        const joinInput = document.getElementById('join-code-input');
+        if (joinInput) joinInput.style.display = '';
       });
 
       socket.on('game_started', () => {
@@ -126,27 +165,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Handle Join Confirmation
       const confirmJoinBtn = document.getElementById('confirm-join-btn');
-      if (confirmJoinBtn) {
-        confirmJoinBtn.addEventListener('click', () => {
-          const code = document.getElementById('join-code-input').value.trim().toUpperCase();
-          if (code.length < 6) return alert("Enter a valid 6-char code.");
-
+      function attemptJoin(code) {
+        const clean = String(code || '').trim().toUpperCase();
+        if (clean.length < 6) {
+          if (typeof showModal === 'function') showModal('Invalid Code', 'Enter a valid 6-character room code.');
+          return;
+        }
+        if (confirmJoinBtn) {
           confirmJoinBtn.textContent = "Connecting...";
           confirmJoinBtn.disabled = true;
-
-          currentRoomId = code;
-          socket.emit('join_room', {
-            roomId: code,
-            username: gameData.username || 'Guest',
-            avatar: gameData.avatar || '🤓'
-          });
+        }
+        currentRoomId = clean;
+        socket.emit('join_room', {
+          roomId: clean,
+          username: gameData.username || 'Guest',
+          avatar: gameData.avatar || '🤓'
         });
+      }
+
+      if (confirmJoinBtn) {
+        confirmJoinBtn.addEventListener('click', () => {
+          attemptJoin(document.getElementById('join-code-input').value);
+        });
+      }
+
+      // Auto-join if invited via ?room=CODE
+      if (invitedRoom && invitedRoom.length >= 6 && modeJoin && modeHost && hostSection && joinSection) {
+        modeJoin.classList.add('active');
+        modeHost.classList.remove('active');
+        hostSection.style.display = 'none';
+        joinSection.style.display = 'block';
+        const joinInput = document.getElementById('join-code-input');
+        if (joinInput) joinInput.value = invitedRoom;
+        attemptJoin(invitedRoom);
       }
     } else {
       console.warn("Socket.io not loaded. Multiplayer features disabled.");
       if (startBtn) {
         startBtn.textContent = "Server Offline";
         startBtn.disabled = true;
+      }
+      if (inviteStatus) {
+        inviteStatus.textContent = "Live multiplayer server offline on static hosting. Run Node server for live rooms.";
       }
     }
   } catch (err) {

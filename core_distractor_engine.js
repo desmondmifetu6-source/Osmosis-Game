@@ -203,6 +203,17 @@
         candidates = candidates.concat(generalCandidates);
       }
 
+      // 5. Tier 5: Guaranteed safety pad so MCQ always renders full option count
+      if (candidates.length < count) {
+        const extraFallbacks = [
+          'molecule', 'reaction', 'catalyst', 'spectrum', 'velocity', 'gradient',
+          'membrane', 'organism', 'electron', 'compound', 'solution', 'function'
+        ].filter(filterCandidate);
+        for (const ef of extraFallbacks) {
+          if (!candidates.includes(ef)) candidates.push(ef);
+        }
+      }
+
       // Shuffle candidates using Fisher-Yates
       for (let i = candidates.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -247,23 +258,11 @@
     },
 
     // =====================================================================
-    // SEMANTIC DISTRACTOR ENGINE — "Semantic Gravity" Algorithm
-    // Architect: Desmond Mifetu & Co-Chief Developer
+    // SEMANTIC DISTRACTOR ENGINE — Word-Boundary Tokenized "Semantic Gravity"
     // =====================================================================
-    // Strategy: Instead of matching by POS+length (which gives random-feeling
-    // distractors like "synthesis" for "heart"), we extract high-signal content
-    // words from the correct word's definition, then score EVERY other dictionary
-    // entry by how many of those signals appear in its own definition.
-    //
-    // Result: "heart" → ["liver", "kidney", "artery", "lung"]
-    //         "photosynthesis" → ["respiration", "chlorophyll", "transpiration"]
-    //         "atom" → ["electron", "neutron", "proton", "molecule"]
-    // =====================================================================
-
-    // Per-session cache to avoid re-scoring the entire dictionary on every question
     _semanticCache: {},
+    _semanticEntries: null,
 
-    // Extended stopword list for keyword extraction
     _SEMANTIC_STOPWORDS: new Set([
       'the','a','an','is','are','was','were','be','been','being','have','has',
       'had','do','does','did','will','would','could','should','may','might',
@@ -279,193 +278,157 @@
       'found','called','known','made','form','forms','type','types','process',
       'processes','system','systems','part','parts','include','includes',
       'including','example','examples','result','results','cause','causes',
-      'produce','produces','allow','allows','make','makes','well','often',
-      'without','within','around','along','across','term','refers','used',
+      'produce','produces','allow','allows','make','makes','well',
+      'without','within','around','along','across','term','refers',
       'containing','contained','related','similar','different','same','another',
       'one','two','three','four','five','six','many','much','few','several',
-      'occurs','occur','occur','occur','present','common','important','main',
+      'occurs','occur','present','common','important','main',
       'major','small','large','long','short','high','low','new','old','given',
-      'point','using','use','where','they','there','here','based','consists'
+      'point','using','use','there','here','based','consists'
     ]),
 
-    /**
-     * Extracts high-signal semantic keywords from a definition string.
-     * These keywords represent the domain fingerprint of the word.
-     *
-     * @param {string} definition The word's definition text
-     * @returns {string[]} Array of meaningful content words, longest/rarest first
-     */
     _extractSemanticKeywords(definition) {
       if (!definition) return [];
-
-      // Strip HTML tags, then extract alphabetic word tokens
-      const cleanDef = definition.replace(/<\/?[^>]+(>|$)/g, ' ');
+      const cleanDef = String(definition).replace(/<\/?[^>]+(>|$)/g, ' ');
       const tokens = cleanDef.match(/\b[a-zA-Z]{4,}\b/g) || [];
-
-      const stopwords = this._SEMANTIC_STOPWORDS;
       const seen = new Set();
       const keywords = [];
 
       for (const token of tokens) {
         const lower = token.toLowerCase();
-        if (stopwords.has(lower) || seen.has(lower)) continue;
+        if (this._SEMANTIC_STOPWORDS.has(lower) || seen.has(lower)) continue;
         seen.add(lower);
         keywords.push(lower);
       }
 
-      // Sort by length descending — longer words are more domain-specific
-      // (e.g. "circulatory" beats "organ", "muscular" beats "pump")
+      // Longer terms carry stronger domain signal
       keywords.sort((a, b) => b.length - a.length);
-
-      // Keep the top 8 most specific keywords
       return keywords.slice(0, 8);
     },
 
-    /**
-     * Scores a candidate word's definition against a set of semantic keywords.
-     * Returns the number of keyword matches found in the candidate's definition.
-     *
-     * @param {string} candidateDef The candidate word's definition
-     * @param {string[]} keywords   Keywords extracted from the correct word's definition
-     * @returns {number} Semantic relevance score
-     */
-    _scoreSemanticMatch(candidateDef, keywords) {
-      if (!candidateDef || !keywords.length) return 0;
-      const cleanDef = candidateDef.toLowerCase().replace(/<\/?[^>]+(>|$)/g, ' ');
-      let score = 0;
-      for (const kw of keywords) {
-        // Use a word-boundary check so "cell" doesn't match "cellular" accidentally
-        if (cleanDef.includes(kw)) score++;
+    _ensureSemanticIndex() {
+      if (this._semanticEntries) return;
+      this._ensureIndex();
+
+      const dictRef = (typeof window !== 'undefined' && window.STEMDictionary) ||
+                      (typeof global !== 'undefined' && global.STEMDictionary);
+      const allEntries = (dictRef && typeof dictRef.getAllWords === 'function')
+        ? dictRef.getAllWords()
+        : [];
+
+      const prepared = [];
+      for (let i = 0; i < allEntries.length; i++) {
+        const entry = allEntries[i];
+        if (!entry || !entry.word) continue;
+        const candidateWord = entry.word.trim().toLowerCase();
+        if (!/^[a-z]+$/i.test(candidateWord) || candidateWord.length < 3) continue;
+
+        const rawDef = String(entry.definition || entry.raw_headword || '')
+          .replace(/<\/?[^>]+(>|$)/g, ' ')
+          .toLowerCase();
+        const defTokens = rawDef.match(/\b[a-z]{3,}\b/g);
+        if (!defTokens || defTokens.length === 0) continue;
+
+        prepared.push({
+          word: candidateWord,
+          tokens: new Set(defTokens)
+        });
       }
-      return score;
+      this._semanticEntries = prepared;
     },
 
-    /**
-     * ✨ MAIN SEMANTIC API ✨
-     * Generates a shuffled array of [correctWord + 3 semantically-related distractors].
-     *
-     * Uses the "Semantic Gravity" algorithm:
-     *   Tier 1 — Words scoring ≥ 2 keyword matches (strong domain cousins)
-     *   Tier 2 — Words scoring ≥ 1 keyword match (loose domain relatives)
-     *   Tier 3 — POS+length fallback via getOptionsWithAnswer() (safety net)
-     *
-     * @param {string} correctWord  The correct answer word
-     * @param {string} definition   The definition shown to the user
-     * @param {number} totalCount   Total options including correct (default: 4)
-     * @param {object} opts         { exclude: string[] }
-     * @returns {string[]} Shuffled array with correctWord + (totalCount-1) distractors
-     */
     getSemanticOptions(correctWord, definition, totalCount = 4, opts = {}) {
       if (!correctWord) return this.getOptionsWithAnswer(correctWord, totalCount, opts);
 
       const neededDistractors = totalCount - 1;
-      const lowerCorrect = correctWord.toLowerCase();
-      const cacheKey = lowerCorrect;
-
-      // Build exclude set — never use the correct word or any user-specified exclusions
+      const rawTarget = String(correctWord).trim();
+      const lowerCorrect = rawTarget.toLowerCase();
       const excludeSet = new Set((opts.exclude || []).map(w => String(w).toLowerCase()));
       excludeSet.add(lowerCorrect);
 
-      // ── Keyword Extraction ──────────────────────────────────────────────
-      // Pull semantic keywords from this word's definition. This is the
-      // "domain fingerprint" we use to find relatives.
       const keywords = this._extractSemanticKeywords(definition);
 
-      let semanticDistractors = [];
-
-      // ── Semantic Scoring (with cache) ───────────────────────────────────
-      // We cache the scored candidates per correctWord to keep the UI snappy.
-      // On cache miss, we score the full dictionary once and store results.
-      if (!this._semanticCache[cacheKey]) {
-        this._ensureIndex(); // Makes sure _allWordsList is populated
-
-        // Get all dictionary entries that have definitions — we need them for scoring
-        let allEntries = [];
-        const dictRef = (typeof window !== 'undefined' && window.STEMDictionary) ||
-                        (typeof global !== 'undefined' && global.STEMDictionary);
-
-        if (dictRef && typeof dictRef.getAllWords === 'function') {
-          allEntries = dictRef.getAllWords();
-        }
-
-        // Score every entry in the dictionary
+      if (!this._semanticCache[lowerCorrect]) {
+        this._ensureSemanticIndex();
         const scored = [];
-        for (const entry of allEntries) {
-          if (!entry || !entry.word) continue;
-          const candidateWord = entry.word.trim().toLowerCase();
+        const entries = this._semanticEntries || [];
 
-          // Must be a clean alphabetic single-word, 3+ chars, not the correct word
-          if (!/^[a-z]+$/i.test(candidateWord) || candidateWord.length < 3) continue;
-          if (candidateWord === lowerCorrect) continue;
-
-          const score = this._scoreSemanticMatch(
-            entry.definition || entry.raw_headword || '',
-            keywords
-          );
-
-          if (score > 0) {
-            scored.push({ word: candidateWord, score });
+        if (keywords.length > 0) {
+          for (let i = 0; i < entries.length; i++) {
+            const item = entries[i];
+            if (item.word === lowerCorrect) continue;
+            let score = 0;
+            for (let k = 0; k < keywords.length; k++) {
+              if (item.tokens.has(keywords[k])) score++;
+            }
+            if (score > 0) {
+              scored.push({ word: item.word, score });
+            }
           }
+
+          const correctLen = lowerCorrect.length;
+          scored.sort((a, b) => {
+            if (b.score !== a.score) return b.score - a.score;
+            return Math.abs(a.word.length - correctLen) - Math.abs(b.word.length - correctLen);
+          });
         }
 
-        // Sort by score descending, then by word length similarity to correct word
-        // (closer in length = more visually plausible distractor)
-        const correctLen = lowerCorrect.length;
-        scored.sort((a, b) => {
-          if (b.score !== a.score) return b.score - a.score;
-          return Math.abs(a.word.length - correctLen) - Math.abs(b.word.length - correctLen);
-        });
-
-        // Cache the sorted candidates (store word + score for flexible thresholding)
-        this._semanticCache[cacheKey] = scored;
+        this._semanticCache[lowerCorrect] = scored;
       }
 
-      const cachedCandidates = this._semanticCache[cacheKey];
+      const cachedCandidates = this._semanticCache[lowerCorrect];
+      const stemRoot = lowerCorrect.slice(0, Math.max(3, lowerCorrect.length - 3));
+      const isTooClose = (w) => {
+        if (lowerCorrect.length >= 4 && w.startsWith(stemRoot) && Math.abs(w.length - lowerCorrect.length) <= 2) return true;
+        if (w.length >= 4 && (lowerCorrect.startsWith(w) || w.startsWith(lowerCorrect))) return true;
+        return false;
+      };
 
-      // ── Tier 1: Strong semantic match (score ≥ 2) ──────────────────────
-      const tier1 = cachedCandidates
-        .filter(c => c.score >= 2 && !excludeSet.has(c.word))
-        .map(c => c.word);
+      // Tier 1: Strong semantic domain cousins (score >= 2)
+      let semanticDistractors = cachedCandidates
+        .filter(c => c.score >= 2 && !excludeSet.has(c.word) && !isTooClose(c.word))
+        .map(c => c.word)
+        .slice(0, neededDistractors);
 
-      semanticDistractors = tier1.slice(0, neededDistractors);
-
-      // ── Tier 2: Loose semantic match (score ≥ 1) ───────────────────────
+      // Tier 2: Loose semantic relatives (score >= 1)
       if (semanticDistractors.length < neededDistractors) {
-        const alreadyPicked = new Set(semanticDistractors);
+        const picked = new Set(semanticDistractors);
         const tier2 = cachedCandidates
-          .filter(c => c.score >= 1 && !excludeSet.has(c.word) && !alreadyPicked.has(c.word))
-          .map(c => c.word);
-
-        const needed = neededDistractors - semanticDistractors.length;
-        semanticDistractors = semanticDistractors.concat(tier2.slice(0, needed));
+          .filter(c => c.score >= 1 && !excludeSet.has(c.word) && !picked.has(c.word) && !isTooClose(c.word))
+          .map(c => c.word)
+          .slice(0, neededDistractors - semanticDistractors.length);
+        semanticDistractors = semanticDistractors.concat(tier2);
       }
 
-      // ── Tier 3: POS+length fallback (safety net) ────────────────────────
-      // If even Tier 2 didn't give us enough candidates (very rare edge case),
-      // fall back gracefully to the existing morphological engine.
+      // Tier 3: POS + length morphological safety net
       if (semanticDistractors.length < neededDistractors) {
-        const alreadyPicked = new Set(semanticDistractors);
+        const picked = new Set(semanticDistractors.map(w => w.toLowerCase()));
         const posDistractors = this.getDistractors(correctWord, neededDistractors, {
-          exclude: [...excludeSet, ...semanticDistractors]
+          exclude: [...excludeSet, ...semanticDistractors],
+          preserveCase: false
         });
         for (const pd of posDistractors) {
-          if (!alreadyPicked.has(pd.toLowerCase()) && semanticDistractors.length < neededDistractors) {
+          if (!picked.has(pd.toLowerCase()) && semanticDistractors.length < neededDistractors) {
             semanticDistractors.push(pd);
-            alreadyPicked.add(pd.toLowerCase());
+            picked.add(pd.toLowerCase());
           }
         }
       }
 
-      // ── Assemble & Shuffle ──────────────────────────────────────────────
-      // Combine correct word + distractors, then Fisher-Yates shuffle so the
-      // correct answer lands in a random position every time
-      const finalOptions = [correctWord, ...semanticDistractors.slice(0, neededDistractors)];
+      // Match casing of target word
+      const isUpper = rawTarget === rawTarget.toUpperCase() && rawTarget.length > 1;
+      const isTitle = rawTarget.length > 0 && rawTarget[0] === rawTarget[0].toUpperCase() && rawTarget.slice(1) === rawTarget.slice(1).toLowerCase();
+      semanticDistractors = semanticDistractors.slice(0, neededDistractors).map(w => {
+        if (isUpper) return w.toUpperCase();
+        if (isTitle) return w.charAt(0).toUpperCase() + w.slice(1);
+        return w.toLowerCase();
+      });
 
+      const finalOptions = [correctWord, ...semanticDistractors];
       for (let i = finalOptions.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [finalOptions[i], finalOptions[j]] = [finalOptions[j], finalOptions[i]];
       }
-
       return finalOptions;
     },
 

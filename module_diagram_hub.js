@@ -276,10 +276,17 @@ document.addEventListener('DOMContentLoaded', () => {
     modalOverlay.classList.add('active');
   }
 
+  function resetHubPauseBtn() {
+    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
+  }
+
   function closeModal() {
     modalOverlay.classList.remove('active');
-    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
-    if ('speechSynthesis' in window) {
+    resetHubPauseBtn();
+    if (typeof VoiceManager !== 'undefined') {
+      VoiceManager.stop();
+    } else if ('speechSynthesis' in window) {
+      if (window.speechSynthesis.paused) window.speechSynthesis.resume();
       window.speechSynthesis.cancel();
     }
   }
@@ -295,22 +302,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Audio actions inside Modal
+  // Audio actions inside Modal (via VoiceManager for natural voice + LaTeX math cleanup)
   pronounceBtn.addEventListener('click', () => {
     if (!currentActiveItem) return;
-    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
-    if ('speechSynthesis' in window) {
+    resetHubPauseBtn();
+    if (typeof VoiceManager !== 'undefined') {
+      VoiceManager.speak(currentActiveItem.primaryTerm, {
+        force: true,
+        rate: 0.9,
+        onend: resetHubPauseBtn,
+        onerror: resetHubPauseBtn
+      });
+    } else if ('speechSynthesis' in window) {
+      if (window.speechSynthesis.paused) window.speechSynthesis.resume();
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(currentActiveItem.primaryTerm);
       u.rate = 0.9;
-      u.onend = () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; };
+      u.onend = resetHubPauseBtn;
+      u.onerror = resetHubPauseBtn;
       window.speechSynthesis.speak(u);
     }
   });
 
   if (pauseBtn) {
     pauseBtn.addEventListener('click', () => {
-      if ('speechSynthesis' in window) {
+      if (typeof VoiceManager !== 'undefined') {
+        const isPaused = VoiceManager.togglePause();
+        pauseBtn.innerHTML = isPaused ? '▶️ Resume' : '⏸️ Pause';
+      } else if ('speechSynthesis' in window) {
         if (window.speechSynthesis.paused) {
           window.speechSynthesis.resume();
           pauseBtn.innerHTML = '⏸️ Pause';
@@ -324,13 +343,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   readDefBtn.addEventListener('click', () => {
     if (!modalDef) return;
-    if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause';
-    if ('speechSynthesis' in window) {
+    resetHubPauseBtn();
+    const rawDef = modalDef.getAttribute('data-raw-content') || modalDef.innerText || modalDef.textContent || '';
+    const textToRead = `${currentActiveItem ? currentActiveItem.primaryTerm + '. ' : ''}${rawDef}`;
+    if (typeof VoiceManager !== 'undefined') {
+      VoiceManager.speak(textToRead, {
+        force: true,
+        rate: 0.95,
+        onend: resetHubPauseBtn,
+        onerror: resetHubPauseBtn
+      });
+    } else if ('speechSynthesis' in window) {
+      if (window.speechSynthesis.paused) window.speechSynthesis.resume();
       window.speechSynthesis.cancel();
-      const textToRead = `${currentActiveItem ? currentActiveItem.primaryTerm : ''}. ${modalDef.innerText || modalDef.textContent}`;
       const u = new SpeechSynthesisUtterance(textToRead);
       u.rate = 0.95;
-      u.onend = () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; };
+      u.onend = resetHubPauseBtn;
+      u.onerror = resetHubPauseBtn;
       window.speechSynthesis.speak(u);
     }
   });

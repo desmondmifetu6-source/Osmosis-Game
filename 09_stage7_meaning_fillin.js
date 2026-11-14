@@ -347,6 +347,11 @@ const Stage7Controller = {
     const slot      = document.getElementById('active-blank');
     const allBtns   = document.querySelectorAll('.s7-option-btn');
 
+    const currentWord = this.state.testSequence[this.state.testIndex];
+    if (typeof sharedState.recordWordMastery === 'function' && currentWord) {
+      sharedState.recordWordMastery(currentWord, isCorrect);
+    }
+
     if (isCorrect) {
       // ── CORRECT ──────────────────────────────────────────────────────
       this.state.isAnswered = true;
