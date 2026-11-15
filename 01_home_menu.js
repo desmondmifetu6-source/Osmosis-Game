@@ -134,4 +134,26 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 8. Check for Latest Update Button
+  const checkUpdateBtn = document.getElementById('check-update-btn');
+  if (checkUpdateBtn) {
+    checkUpdateBtn.addEventListener('click', async () => {
+      const origHtml = checkUpdateBtn.innerHTML;
+      checkUpdateBtn.innerHTML = '<span>⏳ Checking for updates...</span>';
+      checkUpdateBtn.style.pointerEvents = 'none';
+
+      if (typeof window.OsmosisUpdater !== 'undefined' && typeof window.OsmosisUpdater.checkUpdateManual === 'function') {
+        await window.OsmosisUpdater.checkUpdateManual(checkUpdateBtn, origHtml);
+      } else {
+        setTimeout(() => {
+          checkUpdateBtn.innerHTML = '<span>✅ Osmosis is Up to Date!</span>';
+          setTimeout(() => {
+            checkUpdateBtn.innerHTML = origHtml;
+            checkUpdateBtn.style.pointerEvents = 'auto';
+          }, 2000);
+        }, 800);
+      }
+    });
+  }
 });

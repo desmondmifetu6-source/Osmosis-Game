@@ -364,6 +364,48 @@
     checkUpdate: () => {
       if (swRegistration) swRegistration.update().catch(() => {});
       return checkServerVersion();
+    },
+    checkUpdateManual: async (btnEl, originalHtml) => {
+      let updateFound = false;
+      try {
+        if (swRegistration) {
+          await swRegistration.update().catch(() => {});
+          if (swRegistration.waiting) {
+            updateFound = true;
+            showUpdateBanner(swRegistration.waiting);
+          }
+        }
+
+        const res = await fetch(`/api/version?t=${Date.now()}`, { cache: 'no-store' });
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.version) {
+            window._latestServerVersion = data.version;
+            const current = localStorage.getItem('osmosis_active_version');
+            if (current && String(current) !== String(data.version)) {
+              updateFound = true;
+              showUpdateBanner(waitingWorker);
+            }
+          }
+        }
+      } catch (err) {
+        console.warn('[PWA] Manual update check error:', err);
+      }
+
+      if (btnEl) {
+        if (updateFound) {
+          btnEl.innerHTML = '<span>⚡ New Update Ready!</span>';
+        } else {
+          btnEl.innerHTML = '<span>✅ Osmosis is Up to Date!</span>';
+        }
+        setTimeout(() => {
+          if (btnEl) {
+            btnEl.innerHTML = originalHtml || '🔄 Check for Latest Update';
+            btnEl.style.pointerEvents = 'auto';
+          }
+        }, 2500);
+      }
+      return updateFound;
     }
   };
   window.triggerOsmosisInstall = promptInstall;
