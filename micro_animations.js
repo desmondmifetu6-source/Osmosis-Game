@@ -228,7 +228,15 @@
     document.head.appendChild(style);
   }
 
-  // ── 3. Lottie Data Preloader ───────────────────────────────────────
+  // ── 3. Page Identity (declared early — used by preloader + observer guards) ──
+  const pageName = window.location.pathname.split('/').pop().split('?')[0];
+
+  // ── 4. Lottie Data Preloader ───────────────────────────────────────
+  // ⚡ PERF FIX: Only preload Lottie assets on pages that actually use them.
+  // Home menu and setup pages never show Lottie animations — skip the CDN fetch entirely.
+  const LOTTIE_PAGES = /^(03_|04_|05_|06_|07_|08_|09_|10_|11_results|multiplayer_results|module_word_hunt)/i;
+  const needsLottie = LOTTIE_PAGES.test(pageName);
+
   let lottieCorrectData = null;
   let lottieChickData = null;
   let correctAnimEl = null;
@@ -236,6 +244,9 @@
   let correctAnimTimer = null;
 
   function preloadAssets() {
+    // ⚡ PERF FIX: Skip all network fetches + CDN script injection on non-game pages.
+    if (!needsLottie) return;
+
     fetch(ANIM_PATH + 'successfully-done.json')
       .then(r => r.json())
       .then(d => { lottieCorrectData = d; })
@@ -417,8 +428,6 @@
   }
 
   // ── 8. Page Specific Embeds (Hall of Fame & Results) ────────────────
-  const pageName = window.location.pathname.split('/').pop().split('?')[0];
-
   function runPageSpecific() {
     // ── Hall of Fame (10b_stage8_complete.html) retains its original trophy without tick replacement ──
 
@@ -489,48 +498,73 @@
     };
 
     hookAudio();
-    let pollCount = 0;
-    const pollInterval = setInterval(() => {
-      hookAudio();
-      if (window.AudioManager && window.AudioManager._juiceHooked) clearInterval(pollInterval);
-      if (++pollCount > 30) clearInterval(pollInterval);
-    }, 120);
+    // ⚡ PERF FIX: Only poll for AudioManager on game pages. Poll limit reduced: 15 × 150ms = 2.25s max.
+    if (needsLottie) {
+      let pollCount = 0;
+      const pollInterval = setInterval(() => {
+        hookAudio();
+        if (window.AudioManager && window.AudioManager._juiceHooked) clearInterval(pollInterval);
+        if (++pollCount > 15) clearInterval(pollInterval);
+      }, 150);
+    }
 
     // Dynamic DOM Mutation Observer for direct clicks, option selections, and classes
-    const observer = new MutationObserver((mutations) => {
-      for (const m of mutations) {
-        const target = m.target;
-        if (m.type === 'attributes' && m.attributeName === 'class' && target && target.nodeType === 1) {
-          const cls = (typeof target.className === 'string')
-            ? target.className
-            : (target.className && target.className.baseVal ? target.className.baseVal : '');
-          if (!cls) continue;
+    // ⚡ PERF FIX: Only run on actual game stage pages — not on home/menu/results.
+    const GAME_PAGES = /^(03_|04_|05_|06_|07_|08_|09_|10_|module_word_hunt|stage)/i;
+    if (GAME_PAGES.test(pageName)) {
+      let mutationScheduled = false;
+      let pendingMutations = [];
 
-          if ((cls.includes('correct') || cls.includes('answered-correct')) && !target._juiceFired) {
-            target._juiceFired = true;
-            bounce(target);
-            addRipple(target, false);
-            flashCorrect();
-            const r = target.getBoundingClientRect();
-            spawnScoreFloater(10, r.left + r.width / 2 - 45, r.top - 20, false);
-            setTimeout(() => { target._juiceFired = false; }, 600);
-          } else if ((cls.includes('wrong') || cls.includes('wrong-pick')) && !target._juiceWrongFired) {
-            target._juiceWrongFired = true;
-            shake(target);
-            addRipple(target, true);
-            const r = target.getBoundingClientRect();
-            spawnScoreFloater(0, r.left + r.width / 2 - 45, r.top - 20, true);
-            setTimeout(() => { target._juiceWrongFired = false; }, 600);
-          }
+      const observer = new MutationObserver((mutations) => {
+        // ⚡ PERF FIX: Batch process via rAF instead of running synchronously on every mutation.
+        pendingMutations.push(...mutations);
+        if (!mutationScheduled) {
+          mutationScheduled = true;
+          requestAnimationFrame(() => {
+            const batch = pendingMutations.splice(0);
+            mutationScheduled = false;
+            for (const m of batch) {
+              const target = m.target;
+              if (m.type === 'attributes' && m.attributeName === 'class' && target && target.nodeType === 1) {
+                const cls = (typeof target.className === 'string')
+                  ? target.className
+                  : (target.className && target.className.baseVal ? target.className.baseVal : '');
+                if (!cls) continue;
+
+                if ((cls.includes('correct') || cls.includes('answered-correct')) && !target._juiceFired) {
+                  target._juiceFired = true;
+                  bounce(target);
+                  addRipple(target, false);
+                  flashCorrect();
+                  const r = target.getBoundingClientRect();
+                  spawnScoreFloater(10, r.left + r.width / 2 - 45, r.top - 20, false);
+                  setTimeout(() => { target._juiceFired = false; }, 600);
+                } else if ((cls.includes('wrong') || cls.includes('wrong-pick')) && !target._juiceWrongFired) {
+                  target._juiceWrongFired = true;
+                  shake(target);
+                  addRipple(target, true);
+                  const r = target.getBoundingClientRect();
+                  spawnScoreFloater(0, r.left + r.width / 2 - 45, r.top - 20, true);
+                  setTimeout(() => { target._juiceWrongFired = false; }, 600);
+                }
+              }
+            }
+          });
         }
-      }
-    });
+      });
 
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ['class'],
-      subtree: true
-    });
+      observer.observe(document.body, {
+        attributes: true,
+        attributeFilter: ['class'],
+        subtree: true
+      });
+
+      // Disconnect observer when page is hidden to save CPU while backgrounded
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) observer.disconnect();
+        else observer.observe(document.body, { attributes: true, attributeFilter: ['class'], subtree: true });
+      });
+    }
   }
 
   // ── 10. Bootstrap ──────────────────────────────────────────────────

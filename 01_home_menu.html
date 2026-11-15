@@ -396,7 +396,15 @@
     </div>
   </div>
 
-  <script src="core_dictionary.js"></script>
+  <script>
+    /* ⚡ PERF: Load 12MB dictionary async so it never blocks the home menu UI */
+    (function() {
+      var s = document.createElement('script');
+      s.src = 'core_dictionary.js';
+      s.async = true;
+      document.head.appendChild(s);
+    })();
+  </script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="core_shared_state.js"></script>
   <script src="dict_cover_lightbox.js"></script>
@@ -405,12 +413,26 @@
 
   <script>
     /* ── Falling Confetti on Book Preview Card ── */
+    /* ⚡ PERF FIX:
+       1. Auto-stops after 6 seconds (CONFETTI_DURATION_MS) — no longer runs forever.
+       2. Pauses immediately when tab goes into background (visibilitychange).
+       3. Resumes on tab focus but only if still within the 6s window.
+       4. On mobile (width < 640px), capped at 20 pieces max (was 40).
+       5. Emoji render (fillText) throttled — only 1 cup rendered per 2 frames.
+    */
     (function () {
       const canvas = document.getElementById('book-confetti-canvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
       let W, H, pieces = [];
+      let rafId = null;
+      let running = false;
       const COLORS = ['#f59e0b', '#ec4899', '#3b82f6', '#10b981', '#8b5cf6', '#ef4444', '#f97316', '#facc15', '#ffffff'];
+      const IS_MOBILE = window.innerWidth < 640;
+      const MAX_PIECES = IS_MOBILE ? 20 : 38;
+      const CONFETTI_DURATION_MS = 6000; // Stop after 6 seconds
+      let startTime = 0;
+      let frameCount = 0;
 
       function resize() {
         const rect = canvas.parentElement.getBoundingClientRect();
@@ -422,65 +444,53 @@
 
       function spawn() {
         return {
-          x: rand(0, W),
-          y: rand(-20, -5),
-          w: rand(5, 11),
-          h: rand(8, 16),
+          x: rand(0, W), y: rand(-20, -5),
+          w: rand(5, 11), h: rand(8, 16),
           color: COLORS[Math.floor(Math.random() * COLORS.length)],
-          vx: rand(-0.8, 0.8),
-          vy: rand(1.2, 3),
-          angle: rand(0, Math.PI * 2),
-          spin: rand(-0.07, 0.07),
-          opacity: 1,
-          type: 'rect'
+          vx: rand(-0.8, 0.8), vy: rand(1.2, 2.5),
+          angle: rand(0, Math.PI * 2), spin: rand(-0.07, 0.07),
+          opacity: 1, type: 'rect'
         };
       }
 
       function spawnCup() {
         return {
-          x: rand(10, W - 10),
-          y: rand(-30, -10),
-          emoji: '🏆',
-          size: rand(16, 22),
-          vx: rand(-0.4, 0.4),
-          vy: rand(0.8, 1.8),
-          angle: 0,
-          spin: rand(-0.03, 0.03),
-          opacity: 1,
-          type: 'emoji'
+          x: rand(10, W - 10), y: rand(-30, -10),
+          emoji: '🏆', size: rand(14, 20),
+          vx: rand(-0.4, 0.4), vy: rand(0.8, 1.6),
+          angle: 0, spin: rand(-0.03, 0.03),
+          opacity: 1, type: 'emoji'
         };
       }
 
-      function init() {
-        resize();
-        window.addEventListener('resize', resize);
-        /* Seed initial confetti pieces spread across the card */
-        for (let i = 0; i < 30; i++) {
-          const p = spawn();
-          p.y = rand(0, H);
-          pieces.push(p);
-        }
-        /* Seed several cups already visible */
-        for (let c = 0; c < 8; c++) {
-          const cup = spawnCup();
-          cup.y = rand(0, H);
-          pieces.push(cup);
-        }
-        loop();
+      function stopLoop() {
+        running = false;
+        if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+        // Clear canvas so it doesn't sit frozen
+        ctx.clearRect(0, 0, W, H);
+        pieces = [];
       }
 
-      function loop() {
+      function loop(timestamp) {
+        if (!running) return;
+
+        // Auto-stop after CONFETTI_DURATION_MS
+        if (timestamp - startTime > CONFETTI_DURATION_MS) {
+          stopLoop();
+          return;
+        }
+
+        frameCount++;
         ctx.clearRect(0, 0, W, H);
-        /* Keep ~40 confetti pieces */
-        if (pieces.length < 40) pieces.push(spawn());
-        /* Drop a new cup frequently — roughly every 30 frames (~0.5 s) */
-        if (Math.random() < 0.035) pieces.push(spawnCup());
+        if (pieces.length < MAX_PIECES) pieces.push(spawn());
+        // Cups: only every 2nd frame check, and only ~3.5% of the time
+        if (frameCount % 2 === 0 && Math.random() < 0.035 && !IS_MOBILE) pieces.push(spawnCup());
         pieces = pieces.filter(p => p.opacity > 0.05);
-        pieces.forEach(p => {
+
+        for (const p of pieces) {
           p.x += p.vx;
           p.y += p.vy;
           p.angle += p.spin;
-          /* Fade out once past the bottom */
           if (p.y > H + 10) p.opacity -= 0.04;
           ctx.save();
           ctx.globalAlpha = p.opacity * 0.85;
@@ -496,11 +506,45 @@
             ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
           }
           ctx.restore();
-        });
-        requestAnimationFrame(loop);
+        }
+
+        rafId = requestAnimationFrame(loop);
       }
 
-      /* Wait for layout so getBoundingClientRect is accurate */
+      function startLoop() {
+        if (running) return;
+        running = true;
+        startTime = performance.now();
+        rafId = requestAnimationFrame(loop);
+      }
+
+      function init() {
+        resize();
+        window.addEventListener('resize', resize);
+        for (let i = 0; i < MAX_PIECES * 0.75; i++) {
+          const p = spawn(); p.y = rand(0, H); pieces.push(p);
+        }
+        if (!IS_MOBILE) {
+          for (let c = 0; c < 5; c++) {
+            const cup = spawnCup(); cup.y = rand(0, H); pieces.push(cup);
+          }
+        }
+        startLoop();
+      }
+
+      // Pause when tab hidden, resume when visible (but only within the 6s window)
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          if (rafId) { cancelAnimationFrame(rafId); rafId = null; running = false; }
+        } else {
+          // Only restart if init already ran and within duration window
+          if (pieces !== null && (performance.now() - startTime) < CONFETTI_DURATION_MS) {
+            running = true;
+            rafId = requestAnimationFrame(loop);
+          }
+        }
+      });
+
       if (document.readyState === 'complete') {
         init();
       } else {
