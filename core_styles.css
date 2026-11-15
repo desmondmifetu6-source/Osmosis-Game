@@ -134,16 +134,16 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 .classic-btn.primary, 
 .continue-btn-gold,
 .boss-btn {
-  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  color: #000;
-  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
 }
 
 .classic-btn.primary:hover:not(:disabled),
 .continue-btn-gold:hover:not(:disabled),
 .boss-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #FFE033 0%, #FFB833 100%);
-  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
 }
 
 /* Premium Blue-Purple Gradient (The 'Saved' Style) */

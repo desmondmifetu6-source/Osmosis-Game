@@ -57,7 +57,9 @@ const Stage7Controller = {
       revealEl: document.getElementById('nd-reveal'),
       revealWordEl: document.getElementById('nd-reveal-word'),
       revealMeaningEl: document.getElementById('nd-reveal-meaning'),
-      mainBtn: document.getElementById('nd-main-btn')
+      mainBtn: document.getElementById('nd-main-btn'),
+      audioBtn: document.getElementById('nd-audio-btn'),
+      revealAudioBtn: document.getElementById('nd-reveal-audio-btn')
     };
   },
 
@@ -72,6 +74,26 @@ const Stage7Controller = {
 
     if (domCache.mainBtn) {
       domCache.mainBtn.addEventListener('click', () => this.handleMainAction());
+    }
+
+    if (domCache.audioBtn) {
+      domCache.audioBtn.addEventListener('click', () => {
+        const { sequence, idx } = this.state;
+        const word = sequence && sequence[idx];
+        if (word && typeof VoiceManager !== 'undefined') {
+          VoiceManager.speak(word, { force: true });
+        }
+      });
+    }
+
+    if (domCache.revealAudioBtn) {
+      domCache.revealAudioBtn.addEventListener('click', () => {
+        const { sequence, idx } = this.state;
+        const word = sequence && sequence[idx];
+        if (word && typeof VoiceManager !== 'undefined') {
+          VoiceManager.speak(word, { force: true });
+        }
+      });
     }
   },
 
@@ -142,6 +164,7 @@ const Stage7Controller = {
     if (this.state.isFinishing) return;
     this.state.isFinishing = true;
 
+    if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
     sharedState.save(this.state.gameData);
     const stageScore = Math.max(0, (this.state.gameData.score || 0) - this.state.stageStartScore);
 
@@ -183,6 +206,14 @@ const Stage7Controller = {
 
     const word = sequence[idx];
     const meaning = this.getWordMeaning(word);
+
+    // Auto-pronounce word as card flashes
+    if (typeof VoiceManager !== 'undefined' && word) {
+      VoiceManager.speak(word);
+    }
+    if (domCache.audioBtn) {
+      domCache.audioBtn.style.display = 'inline-flex';
+    }
 
     this.setProgress();
 
@@ -231,6 +262,7 @@ const Stage7Controller = {
   },
 
   advanceToNextCard() {
+    if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
     this.state.isSecondChance = false;
     this.state.idx += 1;
     if (this.state.idx >= this.state.sequence.length) {
@@ -261,6 +293,14 @@ const Stage7Controller = {
 
   triggerFlashSequence(word, meaning) {
     const { domCache, idx, sequence } = this.state;
+
+    // Auto-pronounce word as card re-flashes
+    if (typeof VoiceManager !== 'undefined' && word) {
+      VoiceManager.speak(word);
+    }
+    if (domCache.audioBtn) {
+      domCache.audioBtn.style.display = 'inline-flex';
+    }
 
     // Flash logic
     if (domCache.inputWrapEl) domCache.inputWrapEl.style.display = 'none';

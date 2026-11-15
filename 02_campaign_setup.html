@@ -119,24 +119,23 @@
     .boss-btn {
       width: 100%;
       max-width: 320px;
-      background: var(--accent-primary);
+      background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
       color: #ffffff;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.3);
       padding: 1.2rem 2.5rem;
-      border-radius: 12px;
+      border-radius: 14px;
       font-size: 1.2rem;
       font-weight: 700;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       text-transform: uppercase;
       letter-spacing: 1px;
-      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+      box-shadow: 0 10px 25px rgba(234, 88, 12, 0.35);
+      touch-action: manipulation;
     }
 
-    .boss-btn:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 15px 35px rgba(79, 70, 229, 0.4);
-      filter: brightness(1.1);
+    .boss-btn:active {
+      opacity: 0.9;
     }
 
     @media (max-width: 480px) {
