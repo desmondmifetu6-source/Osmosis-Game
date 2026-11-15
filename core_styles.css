@@ -11,7 +11,11 @@
   --font-main: 'Inter', system-ui, sans-serif;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: var(--font-main);
@@ -35,8 +39,8 @@ body.page-leave {
 }
 
 .app-container {
-  width: 100%; 
-  max-width: 600px; 
+  width: 100%;
+  max-width: 600px;
   padding: 1rem;
   margin: auto;
   position: relative;
@@ -53,51 +57,85 @@ body.page-leave {
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
   border-radius: 24px !important;
-  padding: 2.5rem; text-align: center;
-  position: relative; max-height: 90vh; overflow-y: auto;
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-.card::-webkit-scrollbar { width: 6px; }
-.card::-webkit-scrollbar-track { background: transparent; }
-.card::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 3px; }
+.card::-webkit-scrollbar {
+  width: 6px;
+}
 
-h1, h2, h3 {
+.card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+h1,
+h2,
+h3 {
   font-family: var(--font-main);
-  font-weight: 700; margin-bottom: 1.5rem; color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
 }
 
 h1.logo {
-  font-size: clamp(1.8rem, 10vw, 3.5rem); 
-  text-transform: uppercase; 
-  letter-spacing: clamp(2px, 1vw, 5px); 
-  margin-right: -4px; /* Offset to center text with letter-spacing */
+  font-size: clamp(1.8rem, 10vw, 3.5rem);
+  text-transform: uppercase;
+  letter-spacing: clamp(2px, 1vw, 5px);
+  margin-right: -4px;
+  /* Offset to center text with letter-spacing */
   color: var(--text-main);
   line-height: 1;
   width: 100%;
 }
 
-input[type="text"], textarea {
-  width: 100%; padding: 1rem; font-family: var(--font-main); font-size: 1.1rem;
-  background: var(--surface-white); border: 2px solid rgba(0,0,0,0.2); border-radius: 12px;
-  color: var(--text-main); margin-bottom: 2rem; outline: none; text-align: center;
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  background: var(--surface-white);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  outline: none;
+  text-align: center;
   transition: all 0.2s ease;
 }
 
-input[type="text"]:focus, textarea:focus {
-  border-color: var(--accent-primary); box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+input[type="text"]:focus,
+textarea:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
   background: var(--surface-white);
 }
 
-input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secondary); opacity: 0.6; }
+input[type="text"]::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
 
 /* The Family Standard: Main Action Button */
-.classic-btn, .solo-btn-elegant {
+.classic-btn,
+.solo-btn-elegant {
   font-family: var(--font-main);
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: 0.5px;
   padding: 1.2rem 2.5rem;
-  background: #1a237e; /* Default Deep Blue */
+  background: #1a237e;
+  /* Default Deep Blue */
   color: #ffffff;
   border: none;
   border-radius: 14px;
@@ -130,8 +168,8 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   box-shadow: none;
 }
 
-/* Premium Gold Variant (for high-impact moments) */
-.classic-btn.primary, 
+/* Premium Orange Variant (for high-impact moments) */
+.classic-btn.primary,
 .continue-btn-gold,
 .boss-btn {
   background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
@@ -216,24 +254,35 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Legacy Support / Specific Overrides */
-.solo-btn-elegant {
-  /* This now inherits from .classic-btn via the shared selector above */
-}
+/* .solo-btn-elegant inherits fully from .classic-btn via the shared selector above */
 
 .spinner {
-  display: inline-block; width: 40px; height: 40px;
-  border: 3px solid rgba(79, 70, 229, 0.2); border-radius: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(79, 70, 229, 0.2);
+  border-radius: 50%;
   border-top-color: var(--accent-primary);
   animation: spin 1s linear infinite;
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 #modal-overlay {
-  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.45); z-index: 10000;
-  display: flex; justify-content: center; align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   -webkit-transform: translate3d(0, 0, 0);
@@ -241,7 +290,10 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-#modal-overlay.hidden { display: none; }
+
+#modal-overlay.hidden {
+  display: none;
+}
 
 .modal-card {
   animation: springSlideUp 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
@@ -252,8 +304,15 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 }
 
 @keyframes springSlideUp {
-  0% { opacity: 0; transform: translateY(35px) scale(0.9); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0% {
+    opacity: 0;
+    transform: translateY(35px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Global Floating Timer */
@@ -261,7 +320,8 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   position: fixed;
   top: 1.5rem;
   right: 2rem;
-  background: rgba(26, 35, 126, 0.85); /* Deep Blue */
+  background: rgba(26, 35, 126, 0.85);
+  /* Deep Blue */
   backdrop-filter: blur(10px);
   color: #fff;
   padding: 0.5rem 1.2rem;
@@ -271,7 +331,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   font-weight: 800;
   z-index: 10000;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(255,255,255,0.4);
+  border: 2px solid rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -291,6 +351,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
     padding: 0.4rem 0.8rem;
     font-size: 1rem;
   }
+
   .scoreboard {
     top: 1rem;
     right: auto;
@@ -298,23 +359,49 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
     padding: 0.4rem 0.8rem;
     font-size: 1rem;
   }
+
   #global-game-timer::before {
     content: "TIME: ";
   }
 }
 
 @media (max-width: 480px) {
-  .app-container { padding: 0.5rem; }
-  .card { 
-    padding: 2rem 1.2rem !important; 
-    border-radius: 16px !important; 
-    margin-top: 1rem; 
+  .app-container {
+    padding: 0.5rem;
   }
-  h2 { font-size: 1.1rem !important; margin-bottom: 0.8rem !important; }
-  h3 { font-size: 1rem !important; margin-bottom: 0.6rem !important; }
-  p { font-size: 0.9rem !important; }
-  .classic-btn { padding: 0.7rem 1rem !important; font-size: 0.95rem !important; margin-bottom: 0.6rem !important; }
-  input[type="text"], textarea { font-size: 0.95rem !important; padding: 0.7rem !important; margin-bottom: 1rem !important; }
+
+  .card {
+    padding: 2rem 1.2rem !important;
+    border-radius: 16px !important;
+    margin-top: 1rem;
+  }
+
+  h2 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  p {
+    font-size: 0.9rem !important;
+  }
+
+  .classic-btn {
+    padding: 0.7rem 1rem !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  input[type="text"],
+  textarea {
+    font-size: 0.95rem !important;
+    padding: 0.7rem !important;
+    margin-bottom: 1rem !important;
+  }
 }
 
 /* Toast Notifications */
@@ -335,7 +422,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   border-left: 5px solid var(--accent-green);
   padding: 1rem 1.5rem;
   border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   font-family: var(--font-main);
   font-weight: 600;
   font-size: 1.1rem;
@@ -345,8 +432,15 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(100%); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .toast.fade-out {
@@ -354,14 +448,32 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; transform: translateX(0); }
-  to { opacity: 0; transform: translateY(-20px); }
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes scorePop {
-  0% { transform: scale(1); color: #ffeb3b; }
-  50% { transform: scale(1.3); color: #fff; }
-  100% { transform: scale(1); color: #fff; }
+  0% {
+    transform: scale(1);
+    color: #ffeb3b;
+  }
+
+  50% {
+    transform: scale(1.3);
+    color: #fff;
+  }
+
+  100% {
+    transform: scale(1);
+    color: #fff;
+  }
 }
 
 /* Scoreboard & Floating Text */
@@ -369,12 +481,12 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   position: fixed;
   top: 1.5rem;
   left: 2rem;
-  background: rgba(26, 35, 126, 0.85); /* Deep Blue */
+  background: rgba(26, 35, 126, 0.85);
+  /* Deep Blue */
   backdrop-filter: blur(10px);
   color: #fff;
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
-  border: 1px solid rgba(255,255,255,0.2);
   font-family: 'Courier New', Courier, monospace;
   font-size: 1rem;
   font-weight: 800;
@@ -385,7 +497,7 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
   align-items: center;
   gap: 8px;
   pointer-events: none;
-  border: 2px solid rgba(255,255,255,0.4);
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .floating-point {
@@ -401,8 +513,15 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 }
 
 @keyframes floatUpPoint {
-  0% { opacity: 1; transform: translateY(0) scale(1.5); }
-  100% { opacity: 0; transform: translateY(-80px) scale(1); }
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) scale(1);
+  }
 }
 
 /* ===== Long Word / Definition Overflow Protection ===== */
@@ -417,7 +536,9 @@ input[type="text"]::placeholder, textarea::placeholder { color: var(--text-secon
 .nd-meaning,
 .meaning-fill-area,
 .word-tile,
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   overflow-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
@@ -759,8 +880,14 @@ body.dict-cover-page.library-page .app-container {
   line-height: 0;
   position: relative;
 }
-.stem-chem-badge sub { bottom: -0.22em; }
-.stem-chem-badge sup { top: -0.45em; }
+
+.stem-chem-badge sub {
+  bottom: -0.22em;
+}
+
+.stem-chem-badge sup {
+  top: -0.45em;
+}
 
 /* Scientific Notation */
 .stem-sci-notation {
@@ -852,7 +979,7 @@ body.dict-cover-page.library-page .app-container {
   text-align: center;
 }
 
-.katex-display > .katex {
+.katex-display>.katex {
   font-size: 1.2em;
 }
 
@@ -1267,14 +1394,13 @@ body.dict-cover-page .stem-sci-notation {
   .study-card {
     padding: 1.5rem 1rem !important;
   }
+
   .study-header-bar {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .personal-study-grid {
     grid-template-columns: 1fr;
   }
 }
-
-
-
