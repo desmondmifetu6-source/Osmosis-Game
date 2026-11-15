@@ -158,14 +158,31 @@ const Stage7Controller = {
     });
   },
 
+  getWordMeaning(word) {
+    const { gameData } = this.state;
+    let meaning = (gameData.meanings && gameData.meanings[word]) ? gameData.meanings[word] : '';
+    if (!meaning || String(meaning).startsWith('Error:')) {
+      if (typeof DictionaryLogic !== 'undefined') {
+        const recovered = DictionaryLogic.fetchMeaning(word);
+        if (recovered && !String(recovered).startsWith('Error:')) {
+          meaning = recovered;
+          if (!gameData.meanings) gameData.meanings = {};
+          gameData.meanings[word] = recovered;
+          sharedState.save(gameData);
+        }
+      }
+    }
+    return String(meaning).startsWith('Error:') ? '' : meaning;
+  },
+
   showFlashCard() {
     // This is the magical "Flash!" moment. We bring up the flashcard, 
     // show you the word and its meaning, and start our 5-second countdown timer!
     // Stare at it and memorize it before it disappears!
-    const { domCache, sequence, idx, gameData } = this.state;
+    const { domCache, sequence, idx } = this.state;
 
     const word = sequence[idx];
-    const meaning = (gameData.meanings && gameData.meanings[word]) ? gameData.meanings[word] : '';
+    const meaning = this.getWordMeaning(word);
 
     this.setProgress();
 
@@ -270,9 +287,9 @@ const Stage7Controller = {
   },
 
   submitAnswer() {
-    const { domCache, sequence, idx, gameData, isSecondChance } = this.state;
+    const { domCache, sequence, idx, isSecondChance } = this.state;
     const word = sequence[idx];
-    const meaning = (gameData.meanings && gameData.meanings[word]) ? gameData.meanings[word] : '';
+    const meaning = this.getWordMeaning(word);
     const userWord = domCache.wordInput ? domCache.wordInput.value : '';
     const userMeaning = domCache.meaningInput ? domCache.meaningInput.value : '';
 

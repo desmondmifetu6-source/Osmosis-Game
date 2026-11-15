@@ -100,7 +100,20 @@ const Stage5Controller = {
 
     const currentWord = testSequence[testIndex];
     if (!gameData.meanings) gameData.meanings = {};
-    const correctMeaning = gameData.meanings[currentWord] || "Definition not found.";
+    let correctMeaning = gameData.meanings[currentWord];
+    if (!correctMeaning || String(correctMeaning).startsWith('Error:')) {
+      if (typeof DictionaryLogic !== 'undefined') {
+        const fresh = DictionaryLogic.fetchMeaning(currentWord);
+        if (fresh && !String(fresh).startsWith('Error:')) {
+          correctMeaning = fresh;
+          gameData.meanings[currentWord] = fresh;
+          sharedState.save(gameData);
+        }
+      }
+    }
+    if (!correctMeaning || String(correctMeaning).startsWith('Error:')) {
+      correctMeaning = "Definition not found.";
+    }
 
     if (domCache.targetWordEl) {
       if (typeof window.renderScienceText === 'function') {

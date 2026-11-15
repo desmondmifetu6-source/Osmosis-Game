@@ -84,11 +84,14 @@ const Stage2Controller = {
   },
 
   async loadMeanings() {
-    if (!this.state.meanings) this.state.meanings = {};
-    for (let w of this.state.gameData.selectedWords) {
-      if (!this.state.meanings[w]) {
+    if (!this.state.meanings) this.state.meanings = this.state.gameData.meanings || {};
+    for (let w of (this.state.gameData.selectedWords || [])) {
+      if (!this.state.meanings[w] || String(this.state.meanings[w]).startsWith("Error:")) {
         try {
-          this.state.meanings[w] = typeof DictionaryLogic !== 'undefined' ? DictionaryLogic.fetchMeaning(w) : "Definition unavailable";
+          const def = typeof DictionaryLogic !== 'undefined' ? DictionaryLogic.fetchMeaning(w) : "Definition unavailable";
+          if (def && !String(def).startsWith("Error:")) {
+            this.state.meanings[w] = def;
+          }
         } catch (e) {
           this.state.meanings[w] = "Definition unavailable";
         }

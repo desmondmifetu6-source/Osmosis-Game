@@ -328,6 +328,20 @@ const Stage1Controller = {
     }
 
     let usedCount = gameData.usedLetters ? gameData.usedLetters.length : 1;
+
+    // Ensure all selected words have their definitions pre-loaded
+    if (!gameData.meanings) gameData.meanings = {};
+    if (typeof DictionaryLogic !== 'undefined') {
+      (gameData.selectedWords || []).forEach(w => {
+        if (!gameData.meanings[w] || String(gameData.meanings[w]).startsWith("Error:")) {
+          const def = DictionaryLogic.fetchMeaning(w);
+          if (def && !String(def).startsWith("Error:")) {
+            gameData.meanings[w] = def;
+          }
+        }
+      });
+    }
+
     sharedState.save(gameData);
 
     // If we've completed all letters...
@@ -350,6 +364,18 @@ const Stage1Controller = {
     if (gameData.selectedWords.length === 0) {
       if (typeof showModal === 'function') showModal('Wait', 'Select at least 1 word before skipping.');
       return;
+    }
+
+    if (!gameData.meanings) gameData.meanings = {};
+    if (typeof DictionaryLogic !== 'undefined') {
+      (gameData.selectedWords || []).forEach(w => {
+        if (!gameData.meanings[w] || String(gameData.meanings[w]).startsWith("Error:")) {
+          const def = DictionaryLogic.fetchMeaning(w);
+          if (def && !String(def).startsWith("Error:")) {
+            gameData.meanings[w] = def;
+          }
+        }
+      });
     }
 
     sharedState.save(gameData);

@@ -38,7 +38,18 @@ function startRevisionPhase() {
   state.selectedWords.forEach(w => {
     const item = document.createElement('div'); // Make a nice box
     item.className = 'revision-item';
-    const defText = state.meanings[w] || '';
+    let defText = state.meanings && state.meanings[w] ? state.meanings[w] : '';
+    if (!defText || String(defText).startsWith("Error:")) {
+      if (typeof DictionaryLogic !== 'undefined') {
+        const fetched = DictionaryLogic.fetchMeaning(w);
+        if (fetched && !String(fetched).startsWith("Error:")) {
+          defText = fetched;
+          if (!state.meanings) state.meanings = {};
+          state.meanings[w] = fetched;
+          sharedState.save(state);
+        }
+      }
+    }
     const formattedDef = (typeof window.formatScienceText === 'function')
       ? window.formatScienceText(defText)
       : defText;

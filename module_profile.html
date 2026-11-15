@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,6 +17,17 @@
     .profile-stat-box { background: rgba(79,70,229,0.08); border: 1px solid rgba(79,70,229,0.2); border-radius: 14px; padding: 0.9rem; text-align: center; }
     .profile-stat-val { font-size: 1.45rem; font-weight: 800; color: var(--accent-primary); }
     .profile-stat-lbl { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+    @media (max-width: 480px) {
+      .history-card { padding: 1.5rem 1rem !important; border-radius: 20px !important; }
+      .profile-stats-grid { gap: 0.5rem; margin: 1rem 0 1.25rem; }
+      .profile-stat-box { padding: 0.75rem 0.5rem; }
+      .profile-stat-val { font-size: 1.25rem; }
+      .profile-stat-lbl { font-size: 0.68rem; }
+      .history-header { font-size: 0.95rem; }
+      .history-item { padding: 0.75rem 0.25rem; }
+      #go-home-btn { width: 100%; min-height: 48px; }
+    }
   </style>
 </head>
 <body>

@@ -20,11 +20,34 @@ const sharedState = {
   load: function () {
     // We open the backpack and look for 'gameState'.
     // If we find it, we read it. If it's completely empty (||), we create a brand new, empty save file!
-    return JSON.parse(sessionStorage.getItem('gameState')) || {
+    const state = JSON.parse(sessionStorage.getItem('gameState')) || {
       username: '', letters: [], length: 0, wordsPool: [],
       selectedWords: [], meanings: {}, score: 0, usedLetters: [],
       startTime: null, totalTime: 0, sessionStartedAt: null, sessionEndedAt: null, stageScores: {}
     };
+
+    // Self-Healing Engine: If definitions previously failed to load (e.g. offline dictionary glitch),
+    // and STEMDictionary is now available, auto-repair the definitions immediately!
+    if (state.meanings && typeof window !== 'undefined' && typeof window.STEMDictionary !== 'undefined') {
+      let repaired = false;
+      const words = state.selectedWords && state.selectedWords.length ? state.selectedWords : Object.keys(state.meanings);
+      for (const w of words) {
+        if (!state.meanings[w] || (typeof state.meanings[w] === 'string' && state.meanings[w].startsWith('Error:'))) {
+          if (typeof DictionaryLogic !== 'undefined' && typeof DictionaryLogic.fetchMeaning === 'function') {
+            const fresh = DictionaryLogic.fetchMeaning(w);
+            if (fresh && !fresh.startsWith('Error:')) {
+              state.meanings[w] = fresh;
+              repaired = true;
+            }
+          }
+        }
+      }
+      if (repaired) {
+        sessionStorage.setItem('gameState', JSON.stringify(state));
+      }
+    }
+
+    return state;
   },
 
   // Function: save

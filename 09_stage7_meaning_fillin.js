@@ -7,29 +7,29 @@
 const Stage7Controller = {
 
   state: {
-    gameData:       null,
-    domCache:       {},
-    testSequence:   [],
-    testIndex:      0,
-    sentences:      [],
-    sentenceIndex:  0,
-    currentBlank:   null,
+    gameData: null,
+    domCache: {},
+    testSequence: [],
+    testIndex: 0,
+    sentences: [],
+    sentenceIndex: 0,
+    currentBlank: null,
     selectedOption: null,
-    isAnswered:     false,
-    stageScore:     0,
-    isAdvancing:    false
+    isAnswered: false,
+    stageScore: 0,
+    isAdvancing: false
   },
 
   // Words we never blank out — they're too generic to test
   STOP_WORDS: new Set([
-    'that','with','this','have','they','their','them','what','which',
-    'when','where','who','whom','whose','why','how','some','such',
-    'than','very','will','just','should','also','into','only','about',
-    'many','then','would','like','these','because','could','been',
-    'much','even','from','were','there','used','part','made','each',
-    'other','another','called','known','forms','type','types','form',
-    'most','more','both','between','during','through','under','after',
-    'before','while','since','still','often','found','using','make'
+    'that', 'with', 'this', 'have', 'they', 'their', 'them', 'what', 'which',
+    'when', 'where', 'who', 'whom', 'whose', 'why', 'how', 'some', 'such',
+    'than', 'very', 'will', 'just', 'should', 'also', 'into', 'only', 'about',
+    'many', 'then', 'would', 'like', 'these', 'because', 'could', 'been',
+    'much', 'even', 'from', 'were', 'there', 'used', 'part', 'made', 'each',
+    'other', 'another', 'called', 'known', 'forms', 'type', 'types', 'form',
+    'most', 'more', 'both', 'between', 'during', 'through', 'under', 'after',
+    'before', 'while', 'since', 'still', 'often', 'found', 'using', 'make'
   ]),
 
   // ── Bootstrap ───────────────────────────────────────────────────
@@ -53,15 +53,15 @@ const Stage7Controller = {
 
   cacheDOM() {
     this.state.domCache = {
-      scoreEl:       document.getElementById('current-score'),
+      scoreEl: document.getElementById('current-score'),
       testContainer: document.getElementById('test-container'),
-      testWord:      document.getElementById('test-word'),
-      testProgress:  document.getElementById('test-progress'),
-      sentenceCard:  document.getElementById('sentence-card'),
-      optionsGrid:   document.getElementById('options-grid'),
-      submitBtn:     document.getElementById('submit-btn'),
-      skipBtn:       document.getElementById('skip-btn'),
-      feedback:      document.getElementById('test-feedback')
+      testWord: document.getElementById('test-word'),
+      testProgress: document.getElementById('test-progress'),
+      sentenceCard: document.getElementById('sentence-card'),
+      optionsGrid: document.getElementById('options-grid'),
+      submitBtn: document.getElementById('submit-btn'),
+      skipBtn: document.getElementById('skip-btn'),
+      feedback: document.getElementById('test-feedback')
     };
   },
 
@@ -107,20 +107,25 @@ const Stage7Controller = {
     // Ensure meanings are loaded for every selected word
     if (!gameData.meanings) gameData.meanings = {};
     for (const w of gameData.selectedWords) {
-      if (!gameData.meanings[w]) {
-        gameData.meanings[w] =
+      if (!gameData.meanings[w] || String(gameData.meanings[w]).startsWith("Error:")) {
+        const fresh =
           typeof DictionaryLogic !== 'undefined'
             ? DictionaryLogic.fetchMeaning(w)
             : (typeof STEMDictionary !== 'undefined'
-                ? (STEMDictionary.getMeaning ? STEMDictionary.getMeaning(w) : 'Definition unavailable')
-                : 'Definition unavailable');
+              ? (STEMDictionary.getMeaning ? STEMDictionary.getMeaning(w) : 'Definition unavailable')
+              : 'Definition unavailable');
+        if (fresh && !String(fresh).startsWith("Error:")) {
+          gameData.meanings[w] = fresh;
+        } else if (!gameData.meanings[w]) {
+          gameData.meanings[w] = 'Definition unavailable';
+        }
       }
     }
     sharedState.save(gameData);
 
     // Shuffle word order for variety
     this.state.testSequence = [...gameData.selectedWords].sort(() => 0.5 - Math.random());
-    this.state.testIndex    = 0;
+    this.state.testIndex = 0;
 
     if (domCache.testContainer) {
       domCache.testContainer.style.display = 'flex';
@@ -139,9 +144,9 @@ const Stage7Controller = {
       return;
     }
 
-    const word        = testSequence[testIndex];
-    const rawMeaning  = gameData.meanings[word] || '';
-    this.state.sentences     = this.segmentDefinition(rawMeaning);
+    const word = testSequence[testIndex];
+    const rawMeaning = gameData.meanings[word] || '';
+    this.state.sentences = this.segmentDefinition(rawMeaning);
     this.state.sentenceIndex = 0;
 
     this.renderSentence();
@@ -196,13 +201,13 @@ const Stage7Controller = {
       return;
     }
 
-    this.state.isAnswered    = false;
+    this.state.isAnswered = false;
     this.state.selectedOption = null;
 
     const sentence = sentences[sentenceIndex];
 
     // Tokenise — keeping non-word chars (spaces, commas, etc.) as separate tokens
-    const tokens     = sentence.split(/(\b[a-zA-Z]{3,}\b)/);
+    const tokens = sentence.split(/(\b[a-zA-Z]{3,}\b)/);
     const candidates = [];
 
     tokens.forEach((t, i) => {
@@ -230,14 +235,14 @@ const Stage7Controller = {
 
     // Blank out the longest / most significant word
     candidates.sort((a, b) => b.length - a.length);
-    const chosen     = candidates[0];
+    const chosen = candidates[0];
     const targetWord = chosen.word;
 
     // ── Generate 4 same-length / same-POS options ──
     let options = [];
     if (typeof window.DistractorEngine !== 'undefined') {
       options = window.DistractorEngine.getOptionsWithAnswer(targetWord, 4, {
-        exclude:      [currentWord],
+        exclude: [currentWord],
         preserveCase: false
       });
     } else {
@@ -252,7 +257,7 @@ const Stage7Controller = {
     tokens.forEach((t, i) => {
       if (i === chosen.index) {
         cardHtml += `<span class="s7-slot" id="active-blank" data-expected="${this.esc(targetWord.toLowerCase())}">` +
-                    `<span class="slot-icon">🧩</span> <span class="slot-text">Select word</span></span>`;
+          `<span class="slot-icon">🧩</span> <span class="slot-text">Select word</span></span>`;
       } else {
         cardHtml += this.esc(t);
       }
@@ -265,7 +270,7 @@ const Stage7Controller = {
       domCache.optionsGrid.innerHTML = '';
       options.forEach(opt => {
         const btn = document.createElement('button');
-        btn.type      = 'button';
+        btn.type = 'button';
         btn.className = 's7-option-btn';
         btn.textContent = opt.toLowerCase();
         btn.addEventListener('click', e => {
@@ -277,7 +282,7 @@ const Stage7Controller = {
     }
 
     // ── Update subtle meta labels ──
-    if (domCache.testWord)     domCache.testWord.textContent     = currentWord.toUpperCase();
+    if (domCache.testWord) domCache.testWord.textContent = currentWord.toUpperCase();
     if (domCache.testProgress) domCache.testProgress.textContent = `Sentence ${sentenceIndex + 1} of ${sentences.length}`;
 
     // ── Reset action bar ──
@@ -288,17 +293,17 @@ const Stage7Controller = {
     const { submitBtn, skipBtn, feedback } = this.state.domCache;
     if (submitBtn) {
       submitBtn.textContent = 'Submit Findings';
-      submitBtn.className   = 's7-btn s7-btn-submit';
-      submitBtn.disabled    = false;
+      submitBtn.className = 's7-btn s7-btn-submit';
+      submitBtn.disabled = false;
       submitBtn.style.display = 'none'; // Auto-advances on answer, no submit click needed
     }
     if (skipBtn) {
-      skipBtn.disabled    = false;
+      skipBtn.disabled = false;
       skipBtn.style.display = '';
     }
     if (feedback) {
       feedback.textContent = '';
-      feedback.className   = 's7-feedback';
+      feedback.className = 's7-feedback';
     }
   },
 
@@ -325,7 +330,7 @@ const Stage7Controller = {
     const fb = this.state.domCache.feedback;
     if (fb?.classList.contains('err')) {
       fb.textContent = '';
-      fb.className   = 's7-feedback';
+      fb.className = 's7-feedback';
     }
 
     // ── AUTO-VALIDATE on every click ──────────────────────────────────
@@ -344,8 +349,8 @@ const Stage7Controller = {
   validate() {
     const { selectedOption, currentBlank, domCache } = this.state;
     const isCorrect = selectedOption === currentBlank.expected.toLowerCase();
-    const slot      = document.getElementById('active-blank');
-    const allBtns   = document.querySelectorAll('.s7-option-btn');
+    const slot = document.getElementById('active-blank');
+    const allBtns = document.querySelectorAll('.s7-option-btn');
 
     const currentWord = this.state.testSequence[this.state.testIndex];
     if (typeof sharedState.recordWordMastery === 'function' && currentWord) {
@@ -361,13 +366,13 @@ const Stage7Controller = {
 
       allBtns.forEach(btn => {
         if (btn.textContent.trim() === selectedOption) btn.classList.add('correct');
-        else                                             btn.classList.add('dimmed');
+        else btn.classList.add('dimmed');
       });
 
       this.addScore(10);
 
       // Hide both action buttons — the advance is automatic
-      if (domCache.skipBtn)   domCache.skipBtn.style.display   = 'none';
+      if (domCache.skipBtn) domCache.skipBtn.style.display = 'none';
       if (domCache.submitBtn) domCache.submitBtn.style.display = 'none';
 
       // Auto-advance after a brief green-flash moment
@@ -406,7 +411,7 @@ const Stage7Controller = {
     this.state.isAnswered = true;
 
     const expected = this.state.currentBlank.expected.toLowerCase();
-    const slot     = document.getElementById('active-blank');
+    const slot = document.getElementById('active-blank');
     if (slot) {
       slot.innerHTML =
         `<span class="slot-icon">💡</span> <span class="slot-text">${this.esc(expected)}</span>`;
@@ -416,7 +421,7 @@ const Stage7Controller = {
 
     document.querySelectorAll('.s7-option-btn').forEach(btn => {
       if (btn.textContent.trim() === expected) btn.classList.add('correct');
-      else                                      btn.classList.add('dimmed');
+      else btn.classList.add('dimmed');
     });
 
     this.showFeedback('Term revealed — no points awarded.', 'err');
@@ -431,17 +436,17 @@ const Stage7Controller = {
     if (!domCache.submitBtn) return;
 
     const lastSentence = sentenceIndex >= sentences.length - 1;
-    const lastWord     = testIndex >= testSequence.length - 1;
+    const lastWord = testIndex >= testSequence.length - 1;
 
     if (lastSentence && lastWord) {
       domCache.submitBtn.textContent = 'Proceed to Final Stage 🏆 →';
-      domCache.submitBtn.className   = 's7-btn s7-btn-submit gold';
+      domCache.submitBtn.className = 's7-btn s7-btn-submit gold';
     } else if (lastSentence) {
       domCache.submitBtn.textContent = 'Next Word →';
-      domCache.submitBtn.className   = 's7-btn s7-btn-submit';
+      domCache.submitBtn.className = 's7-btn s7-btn-submit';
     } else {
       domCache.submitBtn.textContent = 'Next Sentence →';
-      domCache.submitBtn.className   = 's7-btn s7-btn-submit';
+      domCache.submitBtn.className = 's7-btn s7-btn-submit';
     }
 
     domCache.submitBtn.style.display = '';
@@ -452,7 +457,7 @@ const Stage7Controller = {
   advance() {
     const { sentenceIndex, sentences, testIndex, testSequence } = this.state;
     const lastSentence = sentenceIndex >= sentences.length - 1;
-    const lastWord     = testIndex >= testSequence.length - 1;
+    const lastWord = testIndex >= testSequence.length - 1;
 
     if (lastSentence && lastWord) {
       this.finishStage();
@@ -493,14 +498,14 @@ const Stage7Controller = {
     const fb = this.state.domCache.feedback;
     if (fb) {
       fb.textContent = msg;
-      fb.className   = `s7-feedback ${type}`;
+      fb.className = `s7-feedback ${type}`;
     }
     if (typeof AudioManager !== 'undefined') AudioManager.play(type);
   },
 
   addScore(pts) {
-    this.state.stageScore       += pts;
-    this.state.gameData.score    = (this.state.gameData.score || 0) + pts;
+    this.state.stageScore += pts;
+    this.state.gameData.score = (this.state.gameData.score || 0) + pts;
     if (this.state.domCache.scoreEl) {
       this.state.domCache.scoreEl.textContent = this.state.gameData.score;
     }
@@ -508,12 +513,12 @@ const Stage7Controller = {
     // Floating +10 effect
     const submitBtn = this.state.domCache.submitBtn;
     if (submitBtn) {
-      const rect    = submitBtn.getBoundingClientRect();
+      const rect = submitBtn.getBoundingClientRect();
       const floater = document.createElement('div');
-      floater.className   = 'floating-point';
+      floater.className = 'floating-point';
       floater.textContent = `+${pts}`;
-      floater.style.left  = `${rect.left + rect.width / 2}px`;
-      floater.style.top   = `${rect.top - 24}px`;
+      floater.style.left = `${rect.left + rect.width / 2}px`;
+      floater.style.top = `${rect.top - 24}px`;
       document.body.appendChild(floater);
       setTimeout(() => floater.remove(), 1000);
     }

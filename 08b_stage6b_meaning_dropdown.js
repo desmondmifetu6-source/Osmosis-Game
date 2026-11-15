@@ -99,8 +99,13 @@ const Stage6bController = {
 
     if (!gameData.meanings) gameData.meanings = {};
     for (let w of gameData.selectedWords) {
-      if (!gameData.meanings[w]) {
-        gameData.meanings[w] = typeof DictionaryLogic !== 'undefined' ? DictionaryLogic.fetchMeaning(w) : "Definition unavailable";
+      if (!gameData.meanings[w] || String(gameData.meanings[w]).startsWith("Error:")) {
+        const fresh = typeof DictionaryLogic !== 'undefined' ? DictionaryLogic.fetchMeaning(w) : "Definition unavailable";
+        if (fresh && !String(fresh).startsWith("Error:")) {
+          gameData.meanings[w] = fresh;
+        } else if (!gameData.meanings[w]) {
+          gameData.meanings[w] = "Definition unavailable";
+        }
       }
     }
     sharedState.save(gameData);
