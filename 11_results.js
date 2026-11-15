@@ -297,18 +297,253 @@ const ResultsController = {
     }, interval);
   },
 
+  _activeSpeechIndex: -1,
+  _readAllPlaylist: [],
+  _playlistCurrentIndex: 0,
+  _isReadingAll: false,
+
+  stopAnySpeech() {
+    this._isReadingAll = false;
+    this._readAllPlaylist = [];
+    if (window.VoiceManager && typeof window.VoiceManager.stop === 'function') {
+      window.VoiceManager.stop();
+    } else if (typeof window !== 'undefined' && window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+    this.clearSpeakingHighlights();
+    this.updateToolbarState(false);
+  },
+
+  clearSpeakingHighlights() {
+    document.querySelectorAll('.word-card.speaking').forEach(c => c.classList.remove('speaking'));
+    document.querySelectorAll('.word-action-btn.active-speaking').forEach(b => {
+      b.classList.remove('active-speaking');
+      if (b.dataset.origHtml) b.innerHTML = b.dataset.origHtml;
+    });
+    this._activeSpeechIndex = -1;
+  },
+
+  setCardSpeaking(idx, activeBtn) {
+    this.clearSpeakingHighlights();
+    const card = document.getElementById(`hof-word-card-${idx}`);
+    if (card) {
+      card.classList.add('speaking');
+      try {
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } catch (_) {}
+    }
+    if (activeBtn) {
+      activeBtn.classList.add('active-speaking');
+      if (!activeBtn.dataset.origHtml) activeBtn.dataset.origHtml = activeBtn.innerHTML;
+      activeBtn.innerHTML = '<span>⏹️</span> Stop';
+    }
+    this._activeSpeechIndex = idx;
+    this.updateToolbarState(true);
+  },
+
+  speakWordOnly(word, idx) {
+    const btn = document.getElementById(`pronounce-btn-${idx}`);
+    if (this._activeSpeechIndex === idx && btn && btn.classList.contains('active-speaking')) {
+      this.stopAnySpeech();
+      return;
+    }
+
+    this.stopAnySpeech();
+    this.setCardSpeaking(idx, btn);
+
+    this.executeSpeech(word, () => {
+      this.clearSpeakingHighlights();
+      this.updateToolbarState(false);
+    });
+  },
+
+  speakWordAndMeaning(word, meaning, idx) {
+    const btn = document.getElementById(`meaning-btn-${idx}`);
+    if (this._activeSpeechIndex === idx && btn && btn.classList.contains('active-speaking')) {
+      this.stopAnySpeech();
+      return;
+    }
+
+    this.stopAnySpeech();
+    this.setCardSpeaking(idx, btn);
+
+    const speechText = `${word}. Definition: ${meaning}`;
+    this.executeSpeech(speechText, () => {
+      this.clearSpeakingHighlights();
+      this.updateToolbarState(false);
+    });
+  },
+
+  executeSpeech(text, onComplete) {
+    // If background audio is playing, duck/pause it gently
+    if (typeof AudioManager !== 'undefined' && typeof AudioManager.pauseBackground === 'function') {
+      try { AudioManager.pauseBackground(); } catch (_) {}
+    }
+
+    const finish = () => {
+      if (typeof AudioManager !== 'undefined' && typeof AudioManager.resumeBackground === 'function') {
+        try { AudioManager.resumeBackground(); } catch (_) {}
+      }
+      if (onComplete) onComplete();
+    };
+
+    if (window.VoiceManager && typeof window.VoiceManager.speak === 'function') {
+      window.VoiceManager.speak(text, {
+        force: true,
+        rate: 0.90,
+        pitch: 1.0,
+        onend: finish,
+        onerror: finish
+      });
+    } else if (typeof window !== 'undefined' && window.speechSynthesis) {
+      try {
+        window.speechSynthesis.cancel();
+        setTimeout(() => {
+          const u = new SpeechSynthesisUtterance(text);
+          u.rate = 0.90;
+          u.onend = finish;
+          u.onerror = finish;
+          window.speechSynthesis.speak(u);
+        }, 35);
+      } catch (_) {
+        finish();
+      }
+    } else {
+      finish();
+    }
+  },
+
+  setupSpeechToolbar(words, meanings) {
+    const readAllBtn = document.getElementById('read-all-btn');
+    const stopBtn = document.getElementById('stop-speech-btn');
+
+    if (readAllBtn) {
+      readAllBtn.onclick = () => {
+        if (this._isReadingAll) {
+          this.stopAnySpeech();
+          return;
+        }
+        this.startReadAllPlaylist(words, meanings);
+      };
+    }
+
+    if (stopBtn) {
+      stopBtn.onclick = () => {
+        this.stopAnySpeech();
+      };
+    }
+  },
+
+  startReadAllPlaylist(words, meanings) {
+    this.stopAnySpeech();
+    if (!words || words.length === 0) return;
+
+    this._isReadingAll = true;
+    this._readAllPlaylist = words.map((w, idx) => ({
+      word: w,
+      meaning: (meanings && meanings[w]) ? meanings[w] : "Definition captured strictly in memory.",
+      idx: idx
+    }));
+    this._playlistCurrentIndex = 0;
+    this.updateToolbarState(true);
+    this.playNextInPlaylist();
+  },
+
+  playNextInPlaylist() {
+    if (!this._isReadingAll || this._playlistCurrentIndex >= this._readAllPlaylist.length) {
+      this.stopAnySpeech();
+      return;
+    }
+
+    const item = this._readAllPlaylist[this._playlistCurrentIndex];
+    const meaningBtn = document.getElementById(`meaning-btn-${item.idx}`);
+    this.setCardSpeaking(item.idx, meaningBtn);
+
+    const speechText = `${item.word}. ${item.meaning}`;
+    this.executeSpeech(speechText, () => {
+      this._playlistCurrentIndex++;
+      if (this._isReadingAll) {
+        setTimeout(() => this.playNextInPlaylist(), 500);
+      }
+    });
+  },
+
+  updateToolbarState(isPlaying) {
+    const readAllBtn = document.getElementById('read-all-btn');
+    const stopBtn = document.getElementById('stop-speech-btn');
+    if (!readAllBtn || !stopBtn) return;
+
+    if (isPlaying) {
+      stopBtn.style.display = 'inline-flex';
+      if (this._isReadingAll) {
+        readAllBtn.innerHTML = '<span class="audio-icon">⏸️</span><span class="audio-text">Reading All...</span>';
+      }
+    } else {
+      stopBtn.style.display = 'none';
+      readAllBtn.innerHTML = '<span class="audio-icon">🔊</span><span class="audio-text">Read All Words & Meanings</span>';
+    }
+  },
+
   renderWordsList() {
     const { domCache, gameData } = this.state;
     if (!domCache.wordsList) return;
 
     domCache.wordsList.innerHTML = '';
-    gameData.selectedWords.forEach(word => {
+    const words = gameData.selectedWords || [];
+
+    if (words.length === 0) {
+      domCache.wordsList.innerHTML = '<p style="text-align:center; color:#aaa; font-style:italic;">No words recorded in this session.</p>';
+      return;
+    }
+
+    words.forEach((word, idx) => {
       const item = document.createElement('div');
       item.className = 'word-card';
-      const meaning = gameData.meanings && gameData.meanings[word] ? gameData.meanings[word] : "Definition captured strictly in memory.";
+      item.id = `hof-word-card-${idx}`;
+      const meaning = (gameData.meanings && gameData.meanings[word]) ? gameData.meanings[word] : "Definition captured strictly in memory.";
 
-      item.innerHTML = `<h4>${word}</h4><p>${meaning}</p>`;
+      item.innerHTML = `
+        <div class="word-card-top">
+          <h4>${word}</h4>
+          <div class="word-audio-actions">
+            <button class="word-action-btn pronounce-btn" id="pronounce-btn-${idx}" title="Pronounce '${word}'">
+              <span class="action-icon">🔊</span> Pronounce
+            </button>
+            <button class="word-action-btn meaning-btn" id="meaning-btn-${idx}" title="Read meaning of '${word}'">
+              <span class="action-icon">📖</span> Read Meaning
+            </button>
+          </div>
+        </div>
+        <p>${meaning}</p>
+      `;
+
+      // Pronounce word only
+      const pronounceBtn = item.querySelector(`#pronounce-btn-${idx}`);
+      if (pronounceBtn) {
+        pronounceBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.speakWordOnly(word, idx);
+        });
+      }
+
+      // Read word + meaning
+      const meaningBtn = item.querySelector(`#meaning-btn-${idx}`);
+      if (meaningBtn) {
+        meaningBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.speakWordAndMeaning(word, meaning, idx);
+        });
+      }
+
       domCache.wordsList.appendChild(item);
+    });
+
+    this.setupSpeechToolbar(words, gameData.meanings || {});
+
+    // Ensure speech stops on page departure
+    window.addEventListener('beforeunload', () => this.stopAnySpeech());
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) this.stopAnySpeech();
     });
   },
 
@@ -337,6 +572,7 @@ const ResultsController = {
 
     if (domCache.playAgainBtn) {
       domCache.playAgainBtn.addEventListener('click', () => {
+        this.stopAnySpeech();
         if (typeof AudioManager !== 'undefined') AudioManager.play('click');
 
         const isPersonalStudy = gameData.personalStudyMode;
@@ -374,6 +610,7 @@ const ResultsController = {
 
     if (domCache.goHomeBtn) {
       domCache.goHomeBtn.addEventListener('click', () => {
+        this.stopAnySpeech();
         if (typeof AudioManager !== 'undefined') AudioManager.play('click');
 
         if (typeof sharedState.clearGameSession === 'function') {

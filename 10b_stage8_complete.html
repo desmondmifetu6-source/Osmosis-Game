@@ -197,6 +197,142 @@
         font-size: 1.4rem;
       }
     }
+  
+    /* ── Mastered Words Review & Audio in Hall of Fame ── */
+    .hof-words-section {
+      margin: 1.5rem 0 2rem;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1.5px solid rgba(255, 215, 0, 0.45);
+      border-radius: 16px;
+      padding: 1.25rem 1rem;
+      text-align: left;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    .hof-words-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.35);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .hof-words-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #1e1b4b;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .hof-mini-speech-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: linear-gradient(135deg, #ffd700 0%, #f59e0b 100%);
+      color: #000000;
+      font-weight: 800;
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .hof-mini-speech-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(245, 158, 11, 0.4);
+    }
+
+    .hof-mini-speech-btn.speaking {
+      background: #ef4444 !important;
+      color: #ffffff !important;
+    }
+
+    .hof-words-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-height: 260px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .hof-word-item {
+      background: rgba(255, 255, 255, 0.65);
+      border-left: 3.5px solid #4f46e5;
+      border-radius: 8px;
+      padding: 0.75rem 0.85rem;
+      transition: all 0.25s ease;
+    }
+
+    .hof-word-item.speaking {
+      border-left-color: #ffd700;
+      background: rgba(255, 250, 230, 0.95);
+      box-shadow: 0 4px 14px rgba(255, 215, 0, 0.3);
+      transform: translateX(4px);
+    }
+
+    .hof-word-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    .hof-word-name {
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #1e1b4b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hof-word-btns {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .hof-item-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: rgba(79, 70, 229, 0.1);
+      border: 1px solid rgba(79, 70, 229, 0.25);
+      color: #4338ca;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .hof-item-btn:hover {
+      background: rgba(79, 70, 229, 0.2);
+    }
+
+    .hof-item-btn.speaking {
+      background: #4f46e5;
+      color: #ffffff;
+    }
+
+    .hof-word-meaning {
+      font-size: 0.82rem;
+      color: #334155;
+      line-height: 1.45;
+      margin: 0;
+    }
+
   </style>
 </head>
 
@@ -227,6 +363,20 @@
     <!-- Score badge (filled by JS) -->
     <div class="hof-score-badge" id="hof-score-display">Loading score...</div>
 
+    <!-- Words Mastered (Pronounce & Read Meaning) -->
+    <div class="hof-words-section" id="hof-words-section" style="display: none;">
+      <div class="hof-words-header">
+        <h3 class="hof-words-title">📚 Mastered Words</h3>
+        <button id="hof-read-all-btn" class="hof-mini-speech-btn" title="Read all words and meanings aloud">
+          <span class="icon">🔊</span> Read All
+        </button>
+      </div>
+      <div class="hof-words-list" id="hof-words-list">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+
     <br>
 
     <!-- Continue Button -->
@@ -252,6 +402,204 @@
       if (typeof window.navigateWithTransition === 'function') navigateWithTransition(target);
       else window.location.href = target;
     });
+
+    
+    // ── Hall of Fame Words Pronounce & Meaning Engine ──────────────
+    (function () {
+      const gameData = sharedState.load();
+      const words = gameData.selectedWords || [];
+      const meanings = gameData.meanings || {};
+      const section = document.getElementById('hof-words-section');
+      const list = document.getElementById('hof-words-list');
+      const readAllBtn = document.getElementById('hof-read-all-btn');
+
+      if (!words || words.length === 0 || !section || !list) return;
+
+      section.style.display = 'block';
+      list.innerHTML = '';
+
+      let activeSpeechIndex = -1;
+      let isReadingAll = false;
+      let readAllIndex = 0;
+
+      function stopSpeech() {
+        isReadingAll = false;
+        if (window.VoiceManager && typeof window.VoiceManager.stop === 'function') {
+          window.VoiceManager.stop();
+        } else if (typeof window !== 'undefined' && window.speechSynthesis) {
+          window.speechSynthesis.cancel();
+        }
+        clearHighlights();
+        if (readAllBtn) {
+          readAllBtn.innerHTML = '<span>🔊</span> Read All';
+          readAllBtn.classList.remove('speaking');
+        }
+      }
+
+      function clearHighlights() {
+        document.querySelectorAll('.hof-word-item.speaking').forEach(el => el.classList.remove('speaking'));
+        document.querySelectorAll('.hof-item-btn.speaking').forEach(el => {
+          el.classList.remove('speaking');
+          if (el.dataset.origText) el.innerHTML = el.dataset.origText;
+        });
+        activeSpeechIndex = -1;
+      }
+
+      function highlightItem(idx, btn) {
+        clearHighlights();
+        const item = document.getElementById('hof-item-' + idx);
+        if (item) {
+          item.classList.add('speaking');
+          try { item.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } catch (_) {}
+        }
+        if (btn) {
+          btn.classList.add('speaking');
+          if (!btn.dataset.origText) btn.dataset.origText = btn.innerHTML;
+          btn.innerHTML = '<span>⏹️</span> Stop';
+        }
+        activeSpeechIndex = idx;
+      }
+
+      function executeSpeak(text, onComplete) {
+        if (typeof AudioManager !== 'undefined' && typeof AudioManager.pauseBackground === 'function') {
+          try { AudioManager.pauseBackground(); } catch (_) {}
+        }
+        const finish = () => {
+          if (typeof AudioManager !== 'undefined' && typeof AudioManager.resumeBackground === 'function') {
+            try { AudioManager.resumeBackground(); } catch (_) {}
+          }
+          if (onComplete) onComplete();
+        };
+
+        if (window.VoiceManager && typeof window.VoiceManager.speak === 'function') {
+          window.VoiceManager.speak(text, {
+            force: true,
+            rate: 0.90,
+            pitch: 1.0,
+            onend: finish,
+            onerror: finish
+          });
+        } else if (typeof window !== 'undefined' && window.speechSynthesis) {
+          try {
+            window.speechSynthesis.cancel();
+            setTimeout(() => {
+              const u = new SpeechSynthesisUtterance(text);
+              u.rate = 0.90;
+              u.onend = finish;
+              u.onerror = finish;
+              window.speechSynthesis.speak(u);
+            }, 35);
+          } catch (_) {
+            finish();
+          }
+        } else {
+          finish();
+        }
+      }
+
+      words.forEach((word, idx) => {
+        const item = document.createElement('div');
+        item.className = 'hof-word-item';
+        item.id = 'hof-item-' + idx;
+        const meaning = meanings[word] || 'Definition captured strictly in memory.';
+
+        item.innerHTML = `
+          <div class="hof-word-item-top">
+            <span class="hof-word-name">${word}</span>
+            <div class="hof-word-btns">
+              <button class="hof-item-btn" id="hof-pronounce-${idx}" title="Pronounce word">
+                <span>🔊</span> Pronounce
+              </button>
+              <button class="hof-item-btn" id="hof-meaning-${idx}" title="Read meaning">
+                <span>📖</span> Meaning
+              </button>
+            </div>
+          </div>
+          <p class="hof-word-meaning">${meaning}</p>
+        `;
+
+        // Pronounce only
+        const pronounceBtn = item.querySelector('#hof-pronounce-' + idx);
+        if (pronounceBtn) {
+          pronounceBtn.onclick = (e) => {
+            e.stopPropagation();
+            if (activeSpeechIndex === idx && pronounceBtn.classList.contains('speaking')) {
+              stopSpeech();
+              return;
+            }
+            stopSpeech();
+            highlightItem(idx, pronounceBtn);
+            executeSpeak(word, () => {
+              clearHighlights();
+            });
+          };
+        }
+
+        // Read word + meaning
+        const meaningBtn = item.querySelector('#hof-meaning-' + idx);
+        if (meaningBtn) {
+          meaningBtn.onclick = (e) => {
+            e.stopPropagation();
+            if (activeSpeechIndex === idx && meaningBtn.classList.contains('speaking')) {
+              stopSpeech();
+              return;
+            }
+            stopSpeech();
+            highlightItem(idx, meaningBtn);
+            executeSpeak(`${word}. Definition: ${meaning}`, () => {
+              clearHighlights();
+            });
+          };
+        }
+
+        list.appendChild(item);
+      });
+
+      // Read All Playlist
+      if (readAllBtn) {
+        readAllBtn.onclick = () => {
+          if (isReadingAll) {
+            stopSpeech();
+            return;
+          }
+          stopSpeech();
+          isReadingAll = true;
+          readAllIndex = 0;
+          readAllBtn.innerHTML = '<span>⏸️</span> Stop';
+          readAllBtn.classList.add('speaking');
+          playNext();
+        };
+      }
+
+      function playNext() {
+        if (!isReadingAll || readAllIndex >= words.length) {
+          stopSpeech();
+          return;
+        }
+
+        const currentWord = words[readAllIndex];
+        const currentMeaning = meanings[currentWord] || 'Definition captured strictly in memory.';
+        const meaningBtn = document.getElementById('hof-meaning-' + readAllIndex);
+        highlightItem(readAllIndex, meaningBtn);
+
+        executeSpeak(`${currentWord}. ${currentMeaning}`, () => {
+          readAllIndex++;
+          if (isReadingAll) {
+            setTimeout(playNext, 500);
+          }
+        });
+      }
+
+      // Stop speech if user leaves page or clicks continue
+      const continueBtn = document.getElementById('hof-continue-btn');
+      if (continueBtn) {
+        continueBtn.addEventListener('click', stopSpeech);
+      }
+      window.addEventListener('beforeunload', stopSpeech);
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopSpeech();
+      });
+    })();
 
     // ── Confetti ──────────────────────────────────────────────
     (function () {

@@ -618,6 +618,139 @@
         padding: 0.7rem 0.2rem;
       }
     }
+  
+    /* ── Speech Toolbar & Audio Buttons ── */
+    .hof-speech-toolbar {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hof-audio-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      border: 1.5px solid rgba(255, 215, 0, 0.45);
+      background: rgba(255, 215, 0, 0.12);
+      color: #ffd700;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .hof-audio-pill-btn:hover {
+      background: rgba(255, 215, 0, 0.25);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.25);
+    }
+
+    .hof-audio-pill-btn.stop {
+      border-color: rgba(239, 68, 68, 0.5);
+      background: rgba(239, 68, 68, 0.18);
+      color: #fca5a5;
+    }
+
+    .hof-audio-pill-btn.stop:hover {
+      background: rgba(239, 68, 68, 0.3);
+      box-shadow: 0 6px 18px rgba(239, 68, 68, 0.3);
+    }
+
+    .word-card.speaking {
+      border-left-color: #6366f1 !important;
+      background: rgba(99, 102, 241, 0.2) !important;
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3) !important;
+      transform: scale(1.01) translateX(10px) !important;
+    }
+
+    .word-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .word-audio-actions {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .word-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #f1f5f9;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.45rem 0.9rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .word-action-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .word-action-btn.active-speaking {
+      background: #6366f1 !important;
+      border-color: #818cf8 !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4) !important;
+    }
+
+    .word-action-btn.pronounce-btn:hover {
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+    .word-action-btn.meaning-btn:hover {
+      border-color: #ffd700;
+      color: #ffd700;
+    }
+
+    @media (max-width: 480px) {
+      .hof-speech-toolbar {
+        margin-bottom: 1.2rem;
+      }
+      .hof-audio-pill-btn {
+        font-size: 0.82rem;
+        padding: 0.6rem 1.1rem;
+        width: 100%;
+        justify-content: center;
+      }
+      .word-card-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .word-audio-actions {
+        width: 100%;
+      }
+      .word-action-btn {
+        flex: 1;
+        justify-content: center;
+        font-size: 0.76rem;
+        padding: 0.4rem 0.5rem;
+      }
+    }
+
   </style>
 </head>
 
@@ -667,6 +800,19 @@
     <!-- Learning Achieved -->
     <div class="learning-section">
       <h3 class="section-title" style="margin-bottom: 2rem;">Learning Achieved</h3>
+      
+      <!-- Speech Master Toolbar -->
+      <div class="hof-speech-toolbar" id="hof-speech-toolbar">
+        <button id="read-all-btn" class="hof-audio-pill-btn primary" title="Read all words and meanings aloud">
+          <span class="audio-icon">🔊</span>
+          <span class="audio-text">Read All Words & Meanings</span>
+        </button>
+        <button id="stop-speech-btn" class="hof-audio-pill-btn stop" style="display: none;" title="Stop reading">
+          <span class="audio-icon">⏹️</span>
+          <span class="audio-text">Stop Audio</span>
+        </button>
+      </div>
+
       <div id="res-words-list">
         <!-- Javascript will populate word cards here -->
       </div>
