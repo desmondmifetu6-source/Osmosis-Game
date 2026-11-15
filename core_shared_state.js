@@ -600,6 +600,7 @@ const VoiceManager = {
     if (!this.isEnabled() && !options.force) return;
 
     this.init();
+    const wasSpeaking = !!(this.synth.speaking || this.synth.pending || this._isPaused);
     // Stop any in-flight or paused speech, clearing Chrome queue locks
     this.stop();
 
@@ -640,15 +641,32 @@ const VoiceManager = {
     };
 
     utterance.onerror = (e) => {
+      // Normal cancellation / interruption should not trigger error handlers
+      if (e && (e.error === 'canceled' || e.error === 'interrupted')) {
+        return;
+      }
       this._isPaused = false;
       this._currentUtterance = null;
       if (options.onerror) options.onerror(e);
     };
 
-    try {
-      this.synth.speak(utterance);
-    } catch (err) {
-      console.warn('VoiceManager speak error:', err);
+    const doSpeak = () => {
+      try {
+        if (this.synth.paused) {
+          this.synth.resume();
+        }
+        this.synth.speak(utterance);
+      } catch (err) {
+        console.warn('VoiceManager speak error:', err);
+        if (options.onerror) options.onerror(err);
+      }
+    };
+
+    // If previous speech was cancelled, give Chrome/Safari audio thread 35ms to clear queue
+    if (wasSpeaking) {
+      setTimeout(doSpeak, 35);
+    } else {
+      doSpeak();
     }
   },
 
@@ -733,6 +751,11 @@ const VoiceManager = {
 
 if (typeof window !== 'undefined') {
   window.VoiceManager = VoiceManager;
+  try {
+    VoiceManager.init();
+  } catch (e) {
+    console.warn('VoiceManager init caught:', e);
+  }
 }
 
 // =====================================================================

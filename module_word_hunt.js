@@ -1466,6 +1466,10 @@ document.addEventListener('DOMContentLoaded', () => {
       defTag.className = meta.source === 'Due Review' ? 'meta-tag review' : 'meta-tag';
     }
 
+    if (defSpeakBtn) {
+      defSpeakBtn.innerHTML = '🔊 Read Aloud';
+    }
+
     if (typeof window.renderScienceText === 'function') {
       defDesc.removeAttribute('data-raw-content');
       defDesc.setAttribute('data-raw-content', defText);
@@ -1479,15 +1483,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (defSpeakBtn) {
     defSpeakBtn.addEventListener('click', () => {
-      const word = defTitle.textContent;
-      const def = wordDefinitions[word] || '';
+      const word = (defTitle.textContent || '').trim();
+      const def = wordDefinitions[word] || wordDefinitions[word.toUpperCase()] || (defDesc ? defDesc.textContent : '') || 'A scientific term.';
+
+      // If already speaking, clicking toggles off
+      if (typeof VoiceManager !== 'undefined' && VoiceManager.isSpeaking()) {
+        VoiceManager.stop();
+        ForestAudioEngine.duck(false);
+        defSpeakBtn.innerHTML = '🔊 Read Aloud';
+        return;
+      }
+
+      defSpeakBtn.innerHTML = '⏹️ Stop';
+      ForestAudioEngine.duck(true);
+
+      const onDone = () => {
+        ForestAudioEngine.duck(false);
+        if (defSpeakBtn) defSpeakBtn.innerHTML = '🔊 Read Aloud';
+      };
+
       if (typeof VoiceManager !== 'undefined') {
-        ForestAudioEngine.duck(true);
         VoiceManager.speak(`${word}. ${def}`, {
           force: true,
-          onend: () => ForestAudioEngine.duck(false),
-          onerror: () => ForestAudioEngine.duck(false)
+          rate: 0.92,
+          onend: onDone,
+          onerror: (err) => {
+            console.warn('VoiceManager read aloud caught:', err);
+            onDone();
+          }
         });
+      } else if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        // Direct browser fallback
+        try {
+          if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+          window.speechSynthesis.cancel();
+          const cleanText = (def || '').replace(/<\/?[^>]+(>|$)/g, ' ').replace(/\$+/g, '').trim();
+          const u = new SpeechSynthesisUtterance(`${word}. ${cleanText}`);
+          u.rate = 0.92;
+          u.onend = onDone;
+          u.onerror = onDone;
+          window.speechSynthesis.speak(u);
+        } catch (e) {
+          console.warn('Direct speech error:', e);
+          onDone();
+        }
+      } else {
+        onDone();
       }
     });
   }
@@ -1497,12 +1538,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (typeof VoiceManager !== 'undefined') {
         VoiceManager.stop();
         ForestAudioEngine.duck(false);
+      } else if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+        try { window.speechSynthesis.cancel(); } catch (e) {}
       }
+      if (defSpeakBtn) defSpeakBtn.innerHTML = '🔊 Read Aloud';
       if (typeof AudioManager !== 'undefined') AudioManager.play('click');
       defOverlay.classList.remove('active');
 
-      const word = defTitle.textContent;
-      const def = wordDefinitions[word] || 'A scientific term.';
+      const word = (defTitle.textContent || '').trim();
+      const def = wordDefinitions[word] || (defDesc ? defDesc.textContent : '') || 'A scientific term.';
       startStage7MeaningTest(word, def);
     });
   }
@@ -1875,6 +1919,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (bookContinueBtn) {
     bookContinueBtn.addEventListener('click', () => {
+      if (typeof VoiceManager !== 'undefined') VoiceManager.stop();
       if (typeof AudioManager !== 'undefined') AudioManager.play('click');
       bookOverlay.classList.remove('active');
     });
