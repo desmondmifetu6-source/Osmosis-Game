@@ -14,11 +14,19 @@ const io = new Server(server, {
   }
 });
 
+// Server build / start timestamp for real-time version checking
+const SERVER_START_TIME = Date.now();
+
 // Serve the game files from the current directory
 app.use(express.static(__dirname));
 
 app.get('/health', (_req, res) => {
   res.json({ ok: true, rooms: Object.keys(rooms).length });
+});
+
+app.get('/api/version', (_req, res) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.json({ version: SERVER_START_TIME });
 });
 
 // Room Data Storage (in-memory)
@@ -36,6 +44,9 @@ function clearGraceTimer(roomId, username) {
 
 io.on('connection', (socket) => {
   console.log('A player connected:', socket.id);
+
+  // Broadcast current server version to client for instant update notification
+  socket.emit('server_info', { version: SERVER_START_TIME });
 
   // 1. HOST: Create a Room
   socket.on('create_room', (data) => {
@@ -226,8 +237,9 @@ const PORT = process.env.PORT || 3000;
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`
   ==========================================
-  OSMOSIS MULTIPLAYER SERVER IS LIVE!
-  URL: http://0.0.0.0:${PORT}
+  🌟 OSMOSIS STEM MULTIPLAYER IS LIVE!
+  👉 Local:   http://localhost:${PORT}
+  👉 Network: http://0.0.0.0:${PORT}
   ==========================================
   `);
 });

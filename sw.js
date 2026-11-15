@@ -66,6 +66,13 @@ const PRECACHE_ASSETS = [
   './module_about.html'
 ];
 
+// Listen for skipWaiting messages from client
+self.addEventListener('message', (event) => {
+  if (event.data && (event.data.action === 'skipWaiting' || event.data === 'skipWaiting')) {
+    self.skipWaiting();
+  }
+});
+
 // 1. INSTALL: Pre-cache the shell
 self.addEventListener('install', (event) => {
   event.waitUntil(

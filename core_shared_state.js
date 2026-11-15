@@ -979,3 +979,20 @@ document.addEventListener('touchstart', (e) => {
     }
   }
 });
+
+// Automatically load PWA & Realtime Update Engine if not already present
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const initPwaEngine = () => {
+    if (!window.OsmosisUpdater && !document.querySelector('script[src*="pwa_installer.js"]')) {
+      const pwaScript = document.createElement('script');
+      pwaScript.src = 'pwa_installer.js';
+      pwaScript.defer = true;
+      document.body.appendChild(pwaScript);
+    }
+  };
+  if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', initPwaEngine);
+  } else {
+    initPwaEngine();
+  }
+}
