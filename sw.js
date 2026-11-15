@@ -1,7 +1,7 @@
 // =====================================================================
 // FILE: sw.js (Osmosis Service Worker - Offline & PWA Engine)
 // =====================================================================
-const CACHE_NAME = 'osmosis-core-v3';
+const CACHE_NAME = 'osmosis-core-v4';
 
 // Core Application Shell: essential files for full offline play
 const PRECACHE_ASSETS = [
@@ -20,6 +20,7 @@ const PRECACHE_ASSETS = [
   './micro_animations/Success Loader.mp4',
   './micro_animations/Successfully Done.mp4',
   './core_dictionary.js',
+  './hunt_dictionary.js',
   './core_dictionary_diagrams.js',
   './core_formula_renderer.js',
   './core_distractor_engine.js',
@@ -27,6 +28,7 @@ const PRECACHE_ASSETS = [
   './assets/icon-192.png',
   './assets/icon-512.png',
   './assets/osmosis-favicon.svg',
+  './assets/forest_canopy_backdrop.jpg',
   './02_campaign_setup.html',
   './02_campaign_setup.js',
   './02b_personal_study_setup.html',
@@ -79,15 +81,13 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// 1. INSTALL: Pre-cache the shell
+// 1. INSTALL: Pre-cache the shell cleanly
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
-      console.log('[Service Worker] Pre-caching Osmosis Application Shell...');
-      // Use individual adds so a single missing asset does not abort the entire precache
       for (const asset of PRECACHE_ASSETS) {
         try {
-          await cache.add(asset);
+          await cache.add(new Request(asset, { cache: 'reload' }));
         } catch (err) {
           console.warn('[Service Worker] Could not pre-cache:', asset, err.message);
         }
@@ -97,14 +97,13 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// 2. ACTIVATE: Clean up obsolete caches
+// 2. ACTIVATE: Purge obsolete caches & take immediate control
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
       return Promise.all(
         keys.map((key) => {
           if (key !== CACHE_NAME) {
-            console.log('[Service Worker] Purging legacy cache:', key);
             return caches.delete(key);
           }
         })
@@ -113,48 +112,63 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// 3. FETCH: Smart caching strategy (Stale-While-Revalidate with offline fallback)
+// 3. FETCH: Network-First for HTML/JS/CSS so updates ship immediately;
+//           Stale-While-Revalidate for heavy static media assets.
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   const url = new URL(request.url);
 
-  // Bypass Socket.io and POST/PUT/DELETE requests for real-time multiplayer integrity
   if (request.method !== 'GET' || url.pathname.includes('/socket.io/')) {
     return;
   }
 
-  // Handle same-origin requests & Google fonts
+  const isCodeOrPage =
+    request.mode === 'navigate' ||
+    url.pathname === '/' ||
+    url.pathname.endsWith('.html') ||
+    url.pathname.endsWith('.js') ||
+    url.pathname.endsWith('.css');
+
+  if (isCodeOrPage && url.origin === self.location.origin) {
+    event.respondWith(
+      fetch(request, { cache: 'no-cache' })
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const copy = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+          }
+          return networkResponse;
+        })
+        .catch(() => {
+          return caches.match(request, { ignoreSearch: true }).then((cached) => {
+            if (cached) return cached;
+            if (request.headers.get('accept') && request.headers.get('accept').includes('text/html')) {
+              return caches.match('./01_home_menu.html') || caches.match('./index.html');
+            }
+          });
+        })
+    );
+    return;
+  }
+
   event.respondWith(
     caches.match(request).then((cachedResponse) => {
       if (cachedResponse) {
-        // Return cached immediately, fetch fresh copy in the background (Stale-While-Revalidate)
         fetch(request).then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(request, networkResponse.clone());
-            });
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, networkResponse.clone()));
           }
-        }).catch(() => {/* Silent offline catch */});
+        }).catch(() => {});
         return cachedResponse;
       }
 
-      // If not in cache, fetch from network and cache dynamically (e.g. diagrams, audio)
       return fetch(request).then((networkResponse) => {
         if (!networkResponse || networkResponse.status !== 200 || networkResponse.type === 'opaque') {
           return networkResponse;
         }
-
-        const responseToCache = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(request, responseToCache);
-        });
-
+        const copy = networkResponse.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
         return networkResponse;
-      }).catch(() => {
-        // Fallback for HTML navigation when offline
-        if (request.headers.get('accept') && request.headers.get('accept').includes('text/html')) {
-          return caches.match('./01_home_menu.html') || caches.match('./index.html');
-        }
       });
     })
   );

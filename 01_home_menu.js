@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'diagram-btn': 'module_diagram_hub.html',
     'profile-btn': 'module_profile.html',
     'library-btn': 'module_library.html',
-    'wordhunt-btn': 'module_word_hunt.html',
+    'wordhunt-btn': 'module_word_hunt.html?v=2.0',
     'about-btn': 'module_about.html'
   };
 

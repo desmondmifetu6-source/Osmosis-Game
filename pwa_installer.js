@@ -221,7 +221,7 @@
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker
-        .register('./sw.js')
+        .register('./sw.js', { updateViaCache: 'none' })
         .then((reg) => {
           swRegistration = reg;
           console.log('[PWA] Service Worker registered with scope:', reg.scope);

@@ -18,7 +18,13 @@ const io = new Server(server, {
 const SERVER_START_TIME = Date.now();
 
 // Serve the game files from the current directory
-app.use(express.static(__dirname));
+app.use(express.static(__dirname, {
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html') || filePath.endsWith('.js') || filePath.endsWith('.css')) {
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    }
+  }
+}));
 
 app.get('/health', (_req, res) => {
   res.json({ ok: true, rooms: Object.keys(rooms).length });
