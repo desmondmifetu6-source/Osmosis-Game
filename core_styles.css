@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   background: linear-gradient(135deg, #e0c3fc 0%, #c2e9fb 50%, #a1c4fd 100%) fixed;
-  transition: opacity 0.22s ease;
+  transition: opacity 0.1s ease;
 }
 
 /* Decorative shapes, gears, and grids removed for performance */

@@ -567,6 +567,339 @@ const ResultsController = {
     }
   },
 
+  
+  openShareModal() {
+    const modal = document.getElementById('share-card-modal');
+    if (!modal) return;
+
+    const { gameData } = this.state;
+    const username = gameData.username || localStorage.getItem('osmosis_user') || 'Scholar';
+    const avatar = gameData.avatar || '🤓';
+    const score = gameData.score || 0;
+    const words = gameData.selectedWords || [];
+    const wordsCount = words.length || 8;
+
+    let totalTimeSecs = (gameData.totalTime || 0) / 1000;
+    let rateOfAssimilation = 0;
+    if (totalTimeSecs > 0) rateOfAssimilation = (score / totalTimeSecs).toFixed(1);
+    else if (score > 0) rateOfAssimilation = score.toFixed(1);
+
+    const totalMins = Math.floor(totalTimeSecs / 60);
+    const totalSecs = Math.floor(totalTimeSecs % 60);
+    const timeFormatted = totalMins > 0 ? `${totalMins}m ${totalSecs}s` : `${totalSecs}s`;
+
+    // Populate Modal Elements
+    const scoreEl = document.getElementById('cert-score');
+    const wordsEl = document.getElementById('cert-words-count');
+    const accuracyEl = document.getElementById('cert-accuracy');
+
+    if (scoreEl) scoreEl.textContent = typeof score === 'number' ? score.toLocaleString() : score;
+    if (wordsEl) wordsEl.textContent = wordsCount;
+    if (accuracyEl) accuracyEl.textContent = '100%';
+
+    modal.classList.add('active');
+
+    // Close logic
+    const closeBtn = document.getElementById('share-modal-close');
+    if (closeBtn) closeBtn.onclick = () => modal.classList.remove('active');
+    modal.onclick = (e) => {
+      if (e.target === modal) modal.classList.remove('active');
+    };
+
+    const shareDataPayload = {
+      username, avatar, score, rate: rateOfAssimilation, timeStr: timeFormatted, words, wordsCount
+    };
+
+    // Ivory "Share Score" button on the card
+    const cardTrigger = document.getElementById('card-share-trigger-btn');
+    if (cardTrigger) {
+      cardTrigger.onclick = async () => {
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: 'Osmosis STEM Game Score',
+              text: `⭐ I scored ${score.toLocaleString()} points in Osmosis STEM! Words Mastered: ${words.join(', ')}. Can you beat my score?`,
+              url: 'https://osmosis-game.web.app'
+            });
+            return;
+          } catch (_) {}
+        }
+        this.generateAndDownloadShareCard(shareDataPayload, cardTrigger);
+      };
+    }
+
+    // Download Image Button
+    const downloadBtn = document.getElementById('download-cert-btn');
+    if (downloadBtn) {
+      downloadBtn.onclick = () => this.generateAndDownloadShareCard(shareDataPayload, downloadBtn);
+    }
+
+    // WhatsApp Button
+    const waBtn = document.getElementById('whatsapp-share-btn');
+    if (waBtn) {
+      waBtn.onclick = () => {
+        const wordsList = words.join(', ');
+        const waText = `🏆 OSMOSIS STEM LEARNING ACHIEVEMENT 🏆\n\n⭐ Score: ${score.toLocaleString()} points\n📖 Words Treated: ${wordsCount}\n✅ Accuracy: 100%\nConcepts: ${wordsList}\n\nPlay Osmosis STEM Game here:\nhttps://osmosis-game.web.app`;
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(waText)}`, '_blank');
+      };
+    }
+
+    // Copy Summary Button
+    const copyBtn = document.getElementById('copy-summary-btn');
+    if (copyBtn) {
+      copyBtn.onclick = async () => {
+        const wordsList = words.join(', ');
+        const summary = `⭐ Osmosis Score: ${score.toLocaleString()} pts | 📖 Words Treated: ${wordsCount} | ✅ Accuracy: 100% | Concepts: ${wordsList} | https://osmosis-game.web.app`;
+        try {
+          if (navigator.clipboard) await navigator.clipboard.writeText(summary);
+          copyBtn.innerHTML = '<span>✓</span> Copied!';
+          setTimeout(() => { copyBtn.innerHTML = '<span>📋</span> Copy Text'; }, 2000);
+        } catch (_) {}
+      };
+    }
+  },
+
+  generateAndDownloadShareCard(data, triggerBtn) {
+    const origHtml = triggerBtn.innerHTML;
+    triggerBtn.innerHTML = '<span>⏳</span> Rendering...';
+    triggerBtn.style.pointerEvents = 'none';
+
+    try {
+      // 1000 x 1150 High-Res Square-format Social Card
+      const W = 1000;
+      const H = 1150;
+      const canvas = document.createElement('canvas');
+      canvas.width = W;
+      canvas.height = H;
+      const ctx = canvas.getContext('2d');
+
+      // ── 1. Room Ambient Background (Cozy Study Room Vibe) ──
+      const bgGrad = ctx.createRadialGradient(W / 2, H * 0.35, 100, W / 2, H / 2, 750);
+      bgGrad.addColorStop(0, '#1d2a54');
+      bgGrad.addColorStop(0.5, '#121a36');
+      bgGrad.addColorStop(1, '#090d1c');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, W, H);
+
+      // Subtle Atom Orbits in Top-Right
+      ctx.save();
+      ctx.strokeStyle = 'rgba(147, 197, 253, 0.12)';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.ellipse(820, 200, 110, 42, Math.PI / 4, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.ellipse(820, 200, 110, 42, -Math.PI / 4, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.ellipse(820, 200, 110, 42, 0, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+
+      // ── 2. Top Golden Trophy Glow & Floating Trophy ──
+      const trophyY = 165;
+      const haloGrad = ctx.createRadialGradient(W / 2, trophyY, 20, W / 2, trophyY, 170);
+      haloGrad.addColorStop(0, 'rgba(251, 191, 36, 0.45)');
+      haloGrad.addColorStop(0.6, 'rgba(251, 191, 36, 0.12)');
+      haloGrad.addColorStop(1, 'transparent');
+      ctx.fillStyle = haloGrad;
+      ctx.fillRect(W / 2 - 200, trophyY - 180, 400, 360);
+
+      // Sparkles around trophy
+      ctx.font = '32px serif';
+      ctx.fillStyle = '#fbbf24';
+      ctx.fillText('✦', W / 2 - 130, trophyY - 10);
+      ctx.font = '28px serif';
+      ctx.fillText('★', W / 2 + 115, trophyY - 35);
+      ctx.font = '20px serif';
+      ctx.fillText('✦', W / 2 + 130, trophyY + 25);
+
+      // Trophy Emoji Icon
+      ctx.font = '100px serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('🏆', W / 2, trophyY);
+
+      // ── 3. Frosted Acrylic Card Body ──
+      const cX = 90, cY = 245, cW = W - 180, cH = 800, cR = 56;
+      ctx.save();
+      ctx.beginPath();
+      ctx.roundRect(cX, cY, cW, cH, cR);
+
+      // Translucent frosted glass fill
+      const glassGrad = ctx.createLinearGradient(cX, cY, cX + cW, cY + cH);
+      glassGrad.addColorStop(0, 'rgba(255, 255, 255, 0.18)');
+      glassGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.08)');
+      glassGrad.addColorStop(1, 'rgba(255, 255, 255, 0.04)');
+      ctx.fillStyle = glassGrad;
+      ctx.fill();
+
+      // Crisp glass border highlight
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.45)';
+      ctx.lineWidth = 3.5;
+      ctx.stroke();
+      ctx.restore();
+
+      // ── 4. Pill Header: —— Your Score —— ──
+      const pillY = cY + 68;
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.moveTo(cX + 55, pillY);
+      ctx.lineTo(W / 2 - 165, pillY);
+      ctx.moveTo(W / 2 + 165, pillY);
+      ctx.lineTo(cX + cW - 55, pillY);
+      ctx.stroke();
+
+      // "Your Score" pill
+      ctx.save();
+      const pW = 300, pH = 56, pR = 28;
+      ctx.beginPath();
+      ctx.roundRect(W / 2 - pW / 2, pillY - pH / 2, pW, pH, pR);
+      const pillGrad = ctx.createLinearGradient(0, pillY - pH / 2, 0, pillY + pH / 2);
+      pillGrad.addColorStop(0, '#3957b0');
+      pillGrad.addColorStop(1, '#20326d');
+      ctx.fillStyle = pillGrad;
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.restore();
+
+      ctx.font = 'bold 26px -apple-system, sans-serif';
+      ctx.fillStyle = '#ffffff';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('Your Score', W / 2, pillY);
+
+      // ── 5. Star + Giant Score + points ──
+      const scoreY = pillY + 115;
+      ctx.font = '64px serif';
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('⭐', W / 2 - 120, scoreY);
+
+      ctx.font = '900 96px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      ctx.fillStyle = '#ffffff';
+      ctx.textAlign = 'center';
+      const scoreStr = typeof data.score === 'number' ? data.score.toLocaleString() : (data.score || '860');
+      ctx.fillText(scoreStr, W / 2, scoreY);
+
+      ctx.font = '600 30px -apple-system, sans-serif';
+      ctx.fillStyle = '#cbd5e1';
+      ctx.textAlign = 'left';
+      ctx.fillText('points', W / 2 + 125, scoreY + 18);
+
+      // ── 6. Two Metric Cards: Words Treated & Accuracy ──
+      const cardGridY = scoreY + 95;
+      const cardW = 370, cardH = 175, cardR = 32;
+      const leftCardX = cX + 35;
+      const rightCardX = cX + cW - 35 - cardW;
+
+      // Left Box: Words Treated
+      ctx.save();
+      ctx.beginPath();
+      ctx.roundRect(leftCardX, cardGridY, cardW, cardH, cardR);
+      ctx.fillStyle = 'rgba(20, 32, 68, 0.42)';
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.25)';
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+      ctx.restore();
+
+      ctx.font = '44px serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('📖', leftCardX + cardW / 2, cardGridY + 48);
+      ctx.font = 'bold 44px -apple-system, sans-serif';
+      ctx.fillStyle = '#ffffff';
+      ctx.fillText(String(data.wordsCount || 8), leftCardX + cardW / 2, cardGridY + 106);
+      ctx.font = '600 18px -apple-system, sans-serif';
+      ctx.fillStyle = '#cbd5e1';
+      ctx.fillText('Words Treated', leftCardX + cardW / 2, cardGridY + 144);
+
+      // Right Box: Accuracy
+      ctx.save();
+      ctx.beginPath();
+      ctx.roundRect(rightCardX, cardGridY, cardW, cardH, cardR);
+      ctx.fillStyle = 'rgba(20, 32, 68, 0.42)';
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.25)';
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+      ctx.restore();
+
+      ctx.font = '44px serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('✅', rightCardX + cardW / 2, cardGridY + 48);
+      ctx.font = 'bold 44px -apple-system, sans-serif';
+      ctx.fillStyle = '#ffffff';
+      ctx.fillText('100%', rightCardX + cardW / 2, cardGridY + 106);
+      ctx.font = '600 18px -apple-system, sans-serif';
+      ctx.fillStyle = '#cbd5e1';
+      ctx.fillText('Accuracy', rightCardX + cardW / 2, cardGridY + 144);
+
+      // ── 7. Motivational Lines ──
+      const motivY = cardGridY + cardH + 75;
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(W / 2 - 180, motivY - 14);
+      ctx.lineTo(W / 2 - 95, motivY - 14);
+      ctx.moveTo(W / 2 + 95, motivY - 14);
+      ctx.lineTo(W / 2 + 180, motivY - 14);
+      ctx.stroke();
+
+      ctx.font = 'bold 28px -apple-system, sans-serif';
+      ctx.fillStyle = '#ffffff';
+      ctx.textAlign = 'center';
+      ctx.fillText('Great job!', W / 2, motivY - 14);
+
+      ctx.font = 'italic 21px -apple-system, sans-serif';
+      ctx.fillStyle = '#cbd5e1';
+      ctx.fillText('Keep learning, keep growing.', W / 2, motivY + 22);
+
+      // ── 8. Ivory Pill Button: Share Score ──
+      const btnY = motivY + 75;
+      const bW = cW - 80, bH = 76, bR = 38;
+      const btnX = cX + 40;
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.roundRect(btnX, btnY, bW, bH, bR);
+      ctx.fillStyle = '#fef3c7';
+      ctx.fill();
+      ctx.restore();
+
+      ctx.font = 'bold 28px -apple-system, sans-serif';
+      ctx.fillStyle = '#1e293b';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('🔗  |  Share Score', W / 2, btnY + bH / 2);
+
+      // ── 9. Watermark Footer ──
+      ctx.font = '14px -apple-system, sans-serif';
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+      ctx.textAlign = 'center';
+      ctx.fillText('OSMOSIS STEM RAPID LEARNING GAME • NaCCA • CSIR • GAST ENDORSED', W / 2, H - 42);
+
+      // ── 10. Trigger PNG Download ──
+      const url = canvas.toDataURL('image/png');
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Osmosis_Score_${scoreStr}.png`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      triggerBtn.innerHTML = '<span>✅</span> Downloaded!';
+      setTimeout(() => { triggerBtn.innerHTML = origHtml; triggerBtn.style.pointerEvents = 'auto'; }, 2000);
+    } catch (err) {
+      console.warn('Canvas export failed:', err);
+      triggerBtn.innerHTML = origHtml;
+      triggerBtn.style.pointerEvents = 'auto';
+    }
+  },
+
   attachListeners() {
     const { domCache, gameData } = this.state;
 

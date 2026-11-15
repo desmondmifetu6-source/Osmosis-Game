@@ -911,10 +911,15 @@ function applyOsmosisFavicon() {
 // We don't want pages slamming into each other instantly. 
 // This creates a tiny half-second delay to show a beautiful fading animation
 // BEFORE we throw you into the next webpage (URL).
-window.navigateWithTransition = function navigateWithTransition(url, delayMs = 220) {
+window.navigateWithTransition = function navigateWithTransition(url, delayMs = 90) {
   if (!url) return;
   const isResults = url.includes('results');
-  const actualDelay = isResults ? 700 : delayMs;
+  const actualDelay = isResults ? 280 : delayMs;
+
+  // Pre-warm target URL immediately in memory/cache
+  if (typeof window.prefetchUrl === 'function') {
+    window.prefetchUrl(url);
+  }
 
   if (typeof AudioManager !== 'undefined') {
     AudioManager.init();
@@ -924,11 +929,67 @@ window.navigateWithTransition = function navigateWithTransition(url, delayMs = 2
       AudioManager.play('warp');
     }
   }
-  if (document.body) document.body.classList.add('page-leave'); // Trigger the fade-out CSS animation!
+  if (document.body) document.body.classList.add('page-leave');
   setTimeout(() => {
-    window.location.href = url; // Actually move to the new page
+    window.location.href = url;
   }, actualDelay);
 };
+
+// High-Speed Instant Page Prefetcher
+window.prefetchUrl = function prefetchUrl(url) {
+  if (!url || typeof document === 'undefined') return;
+  if (document.querySelector(`link[rel="prefetch"][href="${url}"]`)) return;
+  try {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = url;
+    document.head.appendChild(link);
+  } catch (_) {}
+};
+
+// Sequential Next-Stage Prefetching & Universal Touch Pre-warming
+document.addEventListener('DOMContentLoaded', () => {
+  const nextStageMap = {
+    '01_home_menu.html': ['02_campaign_setup.html', '02b_personal_study_setup.html'],
+    '02_campaign_setup.html': ['03_stage1_word_selection.html'],
+    '02b_personal_study_setup.html': ['03_stage1_word_selection.html'],
+    '03_stage1_word_selection.html': ['04_stage2_word_fillin.html'],
+    '04_stage2_word_fillin.html': ['05_stage3_flash_recall.html'],
+    '05_stage3_flash_recall.html': ['06_stage4_self_recall.html'],
+    '06_stage4_self_recall.html': ['07_stage5_meaning_exposure.html'],
+    '07_stage5_meaning_exposure.html': ['08_stage6_definition_selection.html', '08b_stage6b_meaning_dropdown.html'],
+    '08_stage6_definition_selection.html': ['09_stage7_meaning_fillin.html'],
+    '08b_stage6b_meaning_dropdown.html': ['09_stage7_meaning_fillin.html'],
+    '09_stage7_meaning_fillin.html': ['10_stage8_recall_test.html', '10b_stage8_complete.html'],
+    '10_stage8_recall_test.html': ['10b_stage8_complete.html', '11_results.html']
+  };
+
+  const currentFile = window.location.pathname.split('/').pop() || '01_home_menu.html';
+  if (nextStageMap[currentFile]) {
+    const runPrefetch = () => {
+      nextStageMap[currentFile].forEach(u => window.prefetchUrl(u));
+    };
+    if ('requestIdleCallback' in window) requestIdleCallback(runPrefetch, { timeout: 1200 });
+    else setTimeout(runPrefetch, 350);
+  }
+
+  // Pre-warm on pointerenter and touchstart
+  document.addEventListener('pointerenter', (e) => {
+    const target = e.target && e.target.closest && e.target.closest('a[href], button[data-href], [onclick*=".html"]');
+    if (target) {
+      const href = target.getAttribute('href') || target.getAttribute('data-href');
+      if (href && href.endsWith('.html')) window.prefetchUrl(href);
+    }
+  }, { passive: true, capture: true });
+
+  document.addEventListener('touchstart', (e) => {
+    const target = e.target && e.target.closest && e.target.closest('a[href], button[data-href], [onclick*=".html"]');
+    if (target) {
+      const href = target.getAttribute('href') || target.getAttribute('data-href');
+      if (href && href.endsWith('.html')) window.prefetchUrl(href);
+    }
+  }, { passive: true, capture: true });
+});
 
 // Function: setupPageTransitions
 // The opposite of the above! It handles the fade-IN animation when a new page first loads.

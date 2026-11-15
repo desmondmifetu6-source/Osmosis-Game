@@ -1,7 +1,7 @@
 // =====================================================================
 // FILE: sw.js (Osmosis Service Worker - Offline & PWA Engine)
 // =====================================================================
-const CACHE_NAME = 'osmosis-core-v4';
+const CACHE_NAME = 'osmosis-core-v5';
 
 // Core Application Shell: essential files for full offline play
 const PRECACHE_ASSETS = [
@@ -114,61 +114,49 @@ self.addEventListener('activate', (event) => {
 
 // 3. FETCH: Network-First for HTML/JS/CSS so updates ship immediately;
 //           Stale-While-Revalidate for heavy static media assets.
+// 3. FETCH: Instant Stale-While-Revalidate (0ms Cache Response with background refresh)
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   const url = new URL(request.url);
 
+  // Skip socket.io and non-GET requests
   if (request.method !== 'GET' || url.pathname.includes('/socket.io/')) {
     return;
   }
 
-  const isCodeOrPage =
-    request.mode === 'navigate' ||
-    url.pathname === '/' ||
-    url.pathname.endsWith('.html') ||
-    url.pathname.endsWith('.js') ||
-    url.pathname.endsWith('.css');
-
-  if (isCodeOrPage && url.origin === self.location.origin) {
-    event.respondWith(
-      fetch(request, { cache: 'no-cache' })
-        .then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200) {
-            const copy = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
-          }
-          return networkResponse;
-        })
-        .catch(() => {
-          return caches.match(request, { ignoreSearch: true }).then((cached) => {
-            if (cached) return cached;
-            if (request.headers.get('accept') && request.headers.get('accept').includes('text/html')) {
-              return caches.match('./01_home_menu.html') || caches.match('./index.html');
-            }
-          });
-        })
-    );
+  // Cross-origin requests (e.g. external CDNs): let browser handle
+  if (url.origin !== self.location.origin) {
     return;
   }
 
+  // Stale-While-Revalidate Strategy for ALL Same-Origin Assets (HTML, JS, CSS, Media)
+  // 1. Return cached copy immediately (0ms instant page transitions)
+  // 2. Fetch fresh copy in background and update the cache silently
   event.respondWith(
-    caches.match(request).then((cachedResponse) => {
-      if (cachedResponse) {
-        fetch(request).then((networkResponse) => {
+    caches.match(request, { ignoreSearch: true }).then((cachedResponse) => {
+      const fetchPromise = fetch(request)
+        .then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
-            caches.open(CACHE_NAME).then((cache) => cache.put(request, networkResponse.clone()));
+            const clone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
           }
-        }).catch(() => {});
+          return networkResponse;
+        })
+        .catch(() => null);
+
+      // Return cached version immediately if available (Instantaneous Transition!)
+      if (cachedResponse) {
         return cachedResponse;
       }
 
-      return fetch(request).then((networkResponse) => {
-        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type === 'opaque') {
-          return networkResponse;
+      // If not in cache, wait for network response
+      return fetchPromise.then((networkResponse) => {
+        if (networkResponse) return networkResponse;
+
+        // Offline Fallback for navigation requests
+        if (request.mode === 'navigate' || (request.headers.get('accept') && request.headers.get('accept').includes('text/html'))) {
+          return caches.match('./01_home_menu.html') || caches.match('./index.html');
         }
-        const copy = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
-        return networkResponse;
       });
     })
   );
