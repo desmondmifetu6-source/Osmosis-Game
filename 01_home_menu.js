@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 4. Standard Navigation Buttons
   const routes = {
-    'diagram-btn': 'module_diagram_hub.html',
     'profile-btn': 'module_profile.html',
     'library-btn': 'module_library.html',
     'about-btn': 'module_about.html'
