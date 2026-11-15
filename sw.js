@@ -1,7 +1,7 @@
 // =====================================================================
 // FILE: sw.js (Osmosis Service Worker - Offline & PWA Engine)
 // =====================================================================
-const CACHE_NAME = 'osmosis-core-v2';
+const CACHE_NAME = 'osmosis-core-v3';
 
 // Core Application Shell: essential files for full offline play
 const PRECACHE_ASSETS = [
@@ -13,6 +13,12 @@ const PRECACHE_ASSETS = [
   './manifest.json',
   './core_styles.css',
   './core_shared_state.js',
+  './micro_animations.js',
+  './micro_animations/successfully-done.json',
+  './micro_animations/hatching-chick.json',
+  './micro_animations/Done.mp4',
+  './micro_animations/Success Loader.mp4',
+  './micro_animations/Successfully Done.mp4',
   './core_dictionary.js',
   './core_dictionary_diagrams.js',
   './core_formula_renderer.js',
