@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'diagram-btn': 'module_diagram_hub.html',
     'profile-btn': 'module_profile.html',
     'library-btn': 'module_library.html',
-    'wordhunt-btn': 'module_word_hunt.html?v=2.0',
     'about-btn': 'module_about.html'
   };
 
@@ -88,6 +87,29 @@ document.addEventListener('DOMContentLoaded', () => {
         sharedState.clearGameSession(true);
       }
       navigate('02b_personal_study_setup.html');
+    });
+  }
+
+  // 5c. STEM Hunt Logic — show popup first
+  const wordhuntBtn = document.getElementById('wordhunt-btn');
+  const huntOverlay = document.getElementById('hunt-popup-overlay');
+  const huntContinueBtn = document.getElementById('hunt-popup-continue');
+
+  if (wordhuntBtn && huntOverlay) {
+    wordhuntBtn.addEventListener('click', () => {
+      huntOverlay.classList.add('active');
+    });
+
+    huntOverlay.addEventListener('click', (e) => {
+      if (e.target === huntOverlay) {
+        huntOverlay.classList.remove('active');
+      }
+    });
+  }
+
+  if (huntContinueBtn) {
+    huntContinueBtn.addEventListener('click', () => {
+      navigate('module_word_hunt.html?v=2.0');
     });
   }
 
