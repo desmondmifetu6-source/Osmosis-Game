@@ -88,7 +88,8 @@ function startRevisionPhase() {
           VoiceManager.speak(defText, {
             force: true,
             rate: 0.95,
-            onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
+            onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; },
+            onerror: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
           });
         }
       });

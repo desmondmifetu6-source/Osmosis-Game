@@ -530,6 +530,12 @@ const VoiceManager = {
   synth: typeof window !== 'undefined' ? window.speechSynthesis : null,
   enabledKey: 'osmosis_voice_enabled',
   selectedVoice: null,
+  _currentUtterance: null,
+  _currentText: '',
+  _currentOptions: null,
+  _lastCharIndex: 0,
+  _isPaused: false,
+  _resumeWatchdog: null,
 
   init: function () {
     if (!this.synth) return;
@@ -594,12 +600,22 @@ const VoiceManager = {
     if (!this.isEnabled() && !options.force) return;
 
     this.init();
-    this.stop(); // Stop previous speech immediately
+    // Stop any in-flight or paused speech, clearing Chrome queue locks
+    this.stop();
 
-    const cleaned = this.cleanTextForSpeech(text);
+    const cleaned = options._isContinuation ? text : this.cleanTextForSpeech(text);
     if (!cleaned) return;
 
+    if (!options._isContinuation) {
+      this._currentText = cleaned;
+      this._currentOptions = options;
+      this._lastCharIndex = 0;
+    }
+    this._isPaused = false;
+
     const utterance = new SpeechSynthesisUtterance(cleaned);
+    this._currentUtterance = utterance; // Keep reference to prevent GC in Chrome
+
     if (this.selectedVoice) utterance.voice = this.selectedVoice;
 
     // Clear, comfortable educational pacing
@@ -607,8 +623,27 @@ const VoiceManager = {
     utterance.pitch = options.pitch || 1.0;
     utterance.volume = options.volume || 1.0;
 
-    if (options.onend) utterance.onend = options.onend;
-    if (options.onerror) utterance.onerror = options.onerror;
+    utterance.onboundary = (e) => {
+      if (typeof e.charIndex === 'number' && e.charIndex > 0) {
+        if (options._isContinuation) {
+          this._lastCharIndex += e.charIndex;
+        } else {
+          this._lastCharIndex = e.charIndex;
+        }
+      }
+    };
+
+    utterance.onend = (e) => {
+      this._isPaused = false;
+      this._currentUtterance = null;
+      if (options.onend) options.onend(e);
+    };
+
+    utterance.onerror = (e) => {
+      this._isPaused = false;
+      this._currentUtterance = null;
+      if (options.onerror) options.onerror(e);
+    };
 
     try {
       this.synth.speak(utterance);
@@ -618,35 +653,69 @@ const VoiceManager = {
   },
 
   stop: function () {
+    this._isPaused = false;
+    this._currentUtterance = null;
+    if (this._resumeWatchdog) {
+      clearTimeout(this._resumeWatchdog);
+      this._resumeWatchdog = null;
+    }
     if (this.synth) {
       try {
+        // Critical: unpause first before cancelling so Chrome resets its paused lock
+        if (this.synth.paused) {
+          this.synth.resume();
+        }
         this.synth.cancel();
       } catch (err) { }
     }
   },
 
   pause: function () {
-    if (this.synth && this.synth.speaking && !this.synth.paused) {
-      try {
-        this.synth.pause();
-      } catch (err) { }
-    }
+    if (!this.synth) return;
+    this._isPaused = true;
+    try {
+      this.synth.pause();
+    } catch (err) { }
   },
 
   resume: function () {
-    if (this.synth && this.synth.paused) {
-      try {
-        this.synth.resume();
-      } catch (err) { }
-    }
+    if (!this.synth) return;
+    this._isPaused = false;
+
+    try {
+      this.synth.resume();
+    } catch (err) { }
+
+    // Chrome Watchdog: Chrome on Windows frequently fails to resume paused audio
+    if (this._resumeWatchdog) clearTimeout(this._resumeWatchdog);
+    this._resumeWatchdog = setTimeout(() => {
+      if (this._isPaused) return; // Still paused, do nothing
+
+      // Check if Chrome synth is stalled or frozen in paused state
+      if (!this.synth.speaking || this.synth.paused) {
+        try {
+          if (this.synth.paused) this.synth.resume();
+          this.synth.cancel();
+        } catch (e) { }
+
+        // Seamlessly continue from the paused word/character
+        if (this._currentText && this._lastCharIndex < this._currentText.length) {
+          const remainingText = this._currentText.slice(this._lastCharIndex);
+          if (remainingText.trim()) {
+            const nextOpts = Object.assign({}, this._currentOptions, { _isContinuation: true });
+            this.speak(remainingText, nextOpts);
+          }
+        }
+      }
+    }, 150);
   },
 
   togglePause: function () {
     if (!this.synth) return false;
-    if (this.synth.paused) {
+    if (this.isPaused()) {
       this.resume();
-      return false; // unpaused
-    } else if (this.synth.speaking) {
+      return false; // unpaused / playing
+    } else if (this.isSpeaking()) {
       this.pause();
       return true; // paused
     }
@@ -654,11 +723,11 @@ const VoiceManager = {
   },
 
   isPaused: function () {
-    return !!(this.synth && this.synth.paused);
+    return this._isPaused || !!(this.synth && this.synth.paused);
   },
 
   isSpeaking: function () {
-    return !!(this.synth && this.synth.speaking);
+    return !!(this.synth && this.synth.speaking) || this._isPaused;
   }
 };
 

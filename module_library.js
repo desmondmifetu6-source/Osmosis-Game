@@ -229,7 +229,8 @@ if (pronounceBtn) {
     if (currentLoadedEntry && typeof VoiceManager !== 'undefined') {
       VoiceManager.speak(currentLoadedEntry.word, {
         force: true,
-        onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
+        onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; },
+        onerror: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
       });
     }
   });
@@ -251,7 +252,8 @@ if (readDefBtn) {
       VoiceManager.speak(currentLoadedEntry.definition, {
         force: true,
         rate: 0.95,
-        onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
+        onend: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; },
+        onerror: () => { if (pauseBtn) pauseBtn.innerHTML = '⏸️ Pause'; }
       });
     }
   });
