@@ -43,6 +43,9 @@
       color: #f8fafc;
       background-color: var(--forest-deep);
       -webkit-tap-highlight-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     /* ── Real-Time Forest Backdrop Layers ─────────────────────── */
@@ -1163,14 +1166,145 @@
       100% { transform: translate(102px, 0); opacity: 0; }
     }
 
-    @media (max-width: 480px) {
-      .hunt-shell { padding: 6px 8px max(6px, env(safe-area-inset-bottom)); gap: 6px; }
-      .duo-header-bar { padding: 6px 12px; border-radius: 14px; }
-      .words-card { border-radius: 14px; }
-      .words-header { padding: 6px 10px; }
-      .grid-card { padding: 8px; border-radius: 18px; }
-      .dock-btn { min-width: 44px; padding: 5px 7px; }
-      .s7-options-grid { grid-template-columns: 1fr; }
+    /* ── Mobile 3:4 Screen Ratio Constraint & Full Responsiveness ── */
+    @media (max-width: 768px), (max-aspect-ratio: 4/5) {
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hunt-shell {
+        width: min(100vw, calc(100dvh * 0.75));
+        height: min(100dvh, calc(100vw * (4 / 3)));
+        max-width: min(100vw, calc(100dvh * 0.75));
+        max-height: min(100dvh, calc(100vw * (4 / 3)));
+        aspect-ratio: 3 / 4;
+        margin: auto;
+        padding: max(4px, env(safe-area-inset-top)) 8px max(4px, env(safe-area-inset-bottom));
+        gap: 4px;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+        box-sizing: border-box;
+      }
+
+      .duo-header-bar {
+        padding: 4px 10px;
+        border-radius: 12px;
+        gap: 8px;
+        min-height: 34px;
+      }
+
+      .hud-metric {
+        font-size: 0.85rem;
+        gap: 3px;
+      }
+
+      .hud-xp-row {
+        font-size: 0.65rem;
+        margin-bottom: 2px;
+      }
+
+      .hud-xp-track {
+        height: 6px;
+      }
+
+      .hunt-arena {
+        gap: 4px;
+      }
+
+      .notebook {
+        gap: 4px;
+      }
+
+      .words-card {
+        border-radius: 14px;
+      }
+
+      .words-header {
+        padding: 4px 10px;
+      }
+
+      .header-lvl {
+        font-size: 0.68rem;
+        padding: 2px 6px;
+      }
+
+      .header-title {
+        font-size: 0.84rem;
+      }
+
+      .combo-meter {
+        font-size: 0.68rem;
+        padding: 1px 5px;
+      }
+
+      #hunt-score {
+        font-size: 0.82rem;
+      }
+
+      .words-subbar {
+        padding: 2px 10px 0;
+        font-size: 0.65rem;
+      }
+
+      #hunt-pool-label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        max-width: 100%;
+      }
+
+      .words-list-container {
+        padding: 3px 8px 5px;
+        gap: 3px 6px;
+      }
+
+      .hunt-word {
+        font-size: clamp(0.68rem, 2vw, 0.82rem);
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+
+      .grid-card {
+        padding: 6px;
+        border-radius: 16px;
+      }
+
+      .bottom-bar {
+        padding: 3px 6px;
+        border-radius: 14px;
+        gap: 2px;
+      }
+
+      .dock-btn {
+        min-width: 38px;
+        min-height: 38px;
+        padding: 3px 5px;
+        border-radius: 10px;
+      }
+
+      .dock-icon {
+        font-size: 0.95rem;
+      }
+
+      .dock-label {
+        font-size: 0.58rem;
+      }
+
+      .s7-options-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .def-popup {
+        padding: 1.2rem 1rem;
+        border-radius: 20px;
+      }
+
+      .win-card {
+        padding: 1.3rem 1.1rem;
+        border-radius: 22px;
+      }
     }
   </style>
 </head>

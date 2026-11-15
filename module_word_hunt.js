@@ -615,13 +615,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!huntArena || !wordsCard || !gridWrapper) return;
     const arenaRect = huntArena.getBoundingClientRect();
     const wordsRect = wordsCard.getBoundingClientRect();
-    const availW = arenaRect.width - 24;
-    const availH = arenaRect.height - wordsRect.height - 36;
-    const squarePx = Math.max(210, Math.min(540, Math.floor(Math.min(availW, availH))));
+    const gridCard = gridWrapper.closest('.grid-card');
+
+    let cardPadW = 20;
+    let cardPadH = 20;
+    if (gridCard) {
+      const cardStyle = window.getComputedStyle(gridCard);
+      cardPadW = (parseFloat(cardStyle.paddingLeft) || 6) + (parseFloat(cardStyle.paddingRight) || 6) +
+                 (parseFloat(cardStyle.borderLeftWidth) || 1.5) + (parseFloat(cardStyle.borderRightWidth) || 1.5);
+      cardPadH = (parseFloat(cardStyle.paddingTop) || 6) + (parseFloat(cardStyle.paddingBottom) || 6) +
+                 (parseFloat(cardStyle.borderTopWidth) || 1.5) + (parseFloat(cardStyle.borderBottomWidth) || 1.5);
+    }
+
+    const availW = Math.max(160, arenaRect.width - cardPadW - 6);
+    const availH = Math.max(160, arenaRect.height - wordsRect.height - cardPadH - 8);
+    const squarePx = Math.max(170, Math.min(540, Math.floor(Math.min(availW, availH))));
 
     document.documentElement.style.setProperty('--grid-size-px', `${squarePx}px`);
     const cellPx = squarePx / Math.max(gridSize, 6);
-    const fontPx = Math.max(14, Math.min(30, Math.floor(cellPx * 0.52)));
+    const fontPx = Math.max(12, Math.min(30, Math.floor(cellPx * 0.54)));
     document.documentElement.style.setProperty('--cell-font-px', `${fontPx}px`);
 
     requestAnimationFrame(() => {
