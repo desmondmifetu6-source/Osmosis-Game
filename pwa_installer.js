@@ -30,10 +30,6 @@
         0% { transform: translate(-50%, 80px); opacity: 0; }
         100% { transform: translate(-50%, 0); opacity: 1; }
       }
-      @keyframes osmosisPulseGlow {
-        0%, 100% { box-shadow: 0 0 12px rgba(168, 85, 247, 0.4), 0 14px 34px rgba(0, 0, 0, 0.55); }
-        50% { box-shadow: 0 0 24px rgba(168, 85, 247, 0.8), 0 16px 40px rgba(0, 0, 0, 0.65); }
-      }
       .osmosis-update-banner {
         position: fixed;
         bottom: 24px;
@@ -44,12 +40,11 @@
         align-items: center;
         gap: 14px;
         padding: 10px 18px;
-        background: linear-gradient(135deg, rgba(24, 16, 47, 0.96), rgba(15, 23, 42, 0.96));
-        border: 1.5px solid rgba(168, 85, 247, 0.55);
+        background: #0f172a;
+        border: 1.5px solid #334155;
         border-radius: 999px;
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        animation: osmosisSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards, osmosisPulseGlow 3s infinite ease-in-out;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        animation: osmosisSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         color: #fff;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         user-select: none;
@@ -63,8 +58,7 @@
         width: 36px;
         height: 36px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #a855f7, #6366f1);
-        box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+        background: #4f46e5;
         font-size: 19px;
         flex-shrink: 0;
       }

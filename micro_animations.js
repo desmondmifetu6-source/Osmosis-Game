@@ -40,56 +40,55 @@
     const style = document.createElement('style');
     style.id = 'osmosis-juice-styles';
     style.textContent = `
-      /* ── Correct Checkmark Burst ── */
+      /* ── Correct Checkmark Burst (Clean, crisp, no glow) ── */
       #osmosis-correct-anim {
         position: fixed;
         top: 48%;
         left: 50%;
         transform: translate(-50%, -50%) scale(0.6);
-        width: 170px;
-        height: 170px;
+        width: 160px;
+        height: 160px;
         z-index: 999999;
         pointer-events: none;
         opacity: 0;
         transition: opacity 0.12s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
-        filter: drop-shadow(0 0 28px rgba(16, 185, 129, 0.85));
       }
       #osmosis-correct-anim.anim-visible {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1.05);
+        transform: translate(-50%, -50%) scale(1);
       }
       #osmosis-correct-anim.anim-out {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(1.3);
-        transition: opacity 0.22s ease, transform 0.22s ease;
+        transform: translate(-50%, -50%) scale(1.25);
+        transition: opacity 0.2s ease, transform 0.2s ease;
       }
 
       /* ── Fallback SVG Checkmark when offline ── */
       .osmosis-fallback-svg {
         width: 100%;
         height: 100%;
-        animation: osmosisSvgPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        animation: osmosisSvgPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
       }
       @keyframes osmosisSvgPop {
-        0%   { transform: scale(0.4) rotate(-15deg); opacity: 0; }
-        100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        0%   { transform: scale(0.5); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
       }
 
-      /* ── Floating Score Badge ── */
+      /* ── Floating Score Badge (Clean, flat, no neon glow) ── */
       .osmosis-score-floater {
         position: fixed;
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        font-weight: 900;
-        font-size: 1.65rem;
+        font-weight: 800;
+        font-size: 1.45rem;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         color: #10b981;
-        background: rgba(15, 23, 42, 0.85);
+        background: #0f172a;
         padding: 6px 14px;
         border-radius: 999px;
-        border: 1.5px solid rgba(16, 185, 129, 0.6);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px rgba(16, 185, 129, 0.4);
+        border: 1.5px solid #10b981;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
         pointer-events: none;
         z-index: 1000000;
         user-select: none;
@@ -97,8 +96,8 @@
       }
       .osmosis-score-floater.wrong {
         color: #ef4444;
-        border-color: rgba(239, 68, 68, 0.6);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px rgba(239, 68, 68, 0.4);
+        border-color: #ef4444;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
         animation: osmosisFloatUpWrong 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
       @keyframes osmosisFloatUp {
@@ -176,12 +175,12 @@
       }
       .osmosis-portal-video-box {
         position: relative;
-        width: 200px;
-        height: 200px;
+        width: 190px;
+        height: 190px;
         border-radius: 50%;
         overflow: hidden;
-        box-shadow: 0 0 40px rgba(99, 102, 241, 0.7), inset 0 0 20px rgba(99, 102, 241, 0.4);
-        border: 3px solid rgba(139, 92, 246, 0.7);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        border: 2.5px solid #6366f1;
         animation: osmosisPopIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
       }
       .osmosis-portal-video {
@@ -193,10 +192,9 @@
         margin-top: 1.25rem;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-weight: 800;
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         letter-spacing: 1px;
         color: #ffffff;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
         text-transform: uppercase;
       }
       @keyframes osmosisPopIn {
@@ -204,31 +202,7 @@
         100% { transform: scale(1);   opacity: 1; }
       }
 
-      /* ── Hall of Fame Video Box ── */
-      .osmosis-hof-card {
-        margin: 0.8rem auto 1.2rem;
-        width: 190px;
-        height: 190px;
-        border-radius: 28px;
-        overflow: hidden;
-        position: relative;
-        box-shadow: 0 12px 35px rgba(245, 158, 11, 0.45), 0 0 25px rgba(245, 158, 11, 0.3);
-        border: 2.5px solid rgba(251, 191, 36, 0.8);
-        background: #000;
-        animation: osmosisHofEntry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-      }
-      .osmosis-hof-card video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      @keyframes osmosisHofEntry {
-        0%   { transform: scale(0.3) rotate(-10deg); opacity: 0; }
-        70%  { transform: scale(1.08) rotate(3deg); opacity: 1; }
-        100% { transform: scale(1) rotate(0deg); opacity: 1; }
-      }
-
-      /* ── Results Hatching Chick Display ── */
+      /* ── Results Hatching Chick Display (Clean, no glow) ── */
       .osmosis-chick-box {
         display: flex;
         flex-direction: column;
@@ -238,10 +212,9 @@
         position: relative;
       }
       .osmosis-chick-container {
-        width: 150px;
-        height: 150px;
-        filter: drop-shadow(0 6px 20px rgba(245, 158, 11, 0.55));
-        animation: osmosisHofEntry 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s both;
+        width: 140px;
+        height: 140px;
+        animation: osmosisPopIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s both;
       }
       .osmosis-chick-caption {
         font-size: 0.85rem;
@@ -447,24 +420,9 @@
   const pageName = window.location.pathname.split('/').pop().split('?')[0];
 
   function runPageSpecific() {
-    // ── A. Hall of Fame (10b_stage8_complete.html) ──
-    if (pageName === '10b_stage8_complete.html') {
-      const trophyEl = document.querySelector('.hof-trophy');
-      if (trophyEl && !document.getElementById('osmosis-hof-card-wrap')) {
-        const hofWrap = document.createElement('div');
-        hofWrap.id = 'osmosis-hof-card-wrap';
-        hofWrap.className = 'osmosis-hof-card';
-        hofWrap.innerHTML = `
-          <video autoplay muted playsinline loop>
-            <source src="${ANIM_PATH}Successfully Done.mp4" type="video/mp4">
-          </video>
-        `;
-        trophyEl.style.display = 'none'; // Replace static emoji with the grand celebration video
-        trophyEl.parentNode.insertBefore(hofWrap, trophyEl);
-      }
-    }
+    // ── Hall of Fame (10b_stage8_complete.html) retains its original trophy without tick replacement ──
 
-    // ── B. Final Results (11_results.html & multiplayer_results.html) ──
+    // ── Final Results (11_results.html & multiplayer_results.html) ──
     if (pageName === '11_results.html' || pageName === 'multiplayer_results.html') {
       const scoreHost = document.getElementById('res-score');
       const avatarHost = document.getElementById('player-avatar-display');
